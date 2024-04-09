@@ -1,0 +1,437 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 1
+
+
+   1              		.file	"adc.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.ADC3powerUpInit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	ADC3powerUpInit
+  13              	ADC3powerUpInit:
+  14              	.LFB2:
+  15              		.file 1 "adc.c"
+   1:adc.c         **** #include "adc.h"
+   2:adc.c         **** #include "gd32vf103.h"
+   3:adc.c         **** 
+   4:adc.c         **** void ADC3powerUpInit(int tmp) {
+  16              		.loc 1 4 31
+  17              		.cfi_startproc
+  18              	.LVL0:
+   5:adc.c         ****     rcu_periph_clock_enable(RCU_GPIOA);
+  19              		.loc 1 5 5
+   4:adc.c         ****     rcu_periph_clock_enable(RCU_GPIOA);
+  20              		.loc 1 4 31 is_stmt 0
+  21 0000 4111     		addi	sp,sp,-16
+  22              	.LCFI0:
+  23              		.cfi_def_cfa_offset 16
+  24 0002 26C2     		sw	s1,4(sp)
+  25              		.cfi_offset 9, -12
+  26 0004 AA84     		mv	s1,a0
+  27              		.loc 1 5 5
+  28 0006 13052060 		li	a0,1538
+  29              	.LVL1:
+   4:adc.c         ****     rcu_periph_clock_enable(RCU_GPIOA);
+  30              		.loc 1 4 31
+  31 000a 06C6     		sw	ra,12(sp)
+  32 000c 22C4     		sw	s0,8(sp)
+  33              		.cfi_offset 1, -4
+  34              		.cfi_offset 8, -8
+  35              		.loc 1 5 5
+  36 000e 97000000 		call	rcu_periph_clock_enable
+  36      E7800000 
+  37              	.LVL2:
+   6:adc.c         ****     rcu_periph_clock_enable(RCU_ADC0);
+  38              		.loc 1 6 5 is_stmt 1
+  39 0016 13059060 		li	a0,1545
+  40 001a 97000000 		call	rcu_periph_clock_enable
+  40      E7800000 
+  41              	.LVL3:
+   7:adc.c         ****     rcu_adc_clock_config(RCU_CKADC_CKAPB2_DIV8);
+  42              		.loc 1 7 5
+  43 0022 0D45     		li	a0,3
+  44 0024 97000000 		call	rcu_adc_clock_config
+  44      E7800000 
+  45              	.LVL4:
+   8:adc.c         **** 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 2
+
+
+   9:adc.c         ****     gpio_init(GPIOA, GPIO_MODE_AIN, GPIO_MODE_OUT_PP, GPIO_PIN_3);
+  46              		.loc 1 9 5
+  47 002c 37150140 		li	a0,1073811456
+  48 0030 A146     		li	a3,8
+  49 0032 4146     		li	a2,16
+  50 0034 8145     		li	a1,0
+  51 0036 13050580 		addi	a0,a0,-2048
+  52 003a 97000000 		call	gpio_init
+  52      E7800000 
+  53              	.LVL5:
+  10:adc.c         **** 
+  11:adc.c         ****     adc_deinit(ADC0);                                                   // Reset...
+  54              		.loc 1 11 5
+  55 0042 37240140 		li	s0,1073815552
+  56 0046 13050440 		addi	a0,s0,1024
+  57 004a 97000000 		call	adc_deinit
+  57      E7800000 
+  58              	.LVL6:
+  12:adc.c         ****     adc_mode_config(ADC_MODE_FREE);                                     // ADC0 & ADC1 runs indep.
+  59              		.loc 1 12 5
+  60 0052 0145     		li	a0,0
+  61 0054 97000000 		call	adc_mode_config
+  61      E7800000 
+  62              	.LVL7:
+  13:adc.c         ****     adc_special_function_config(ADC0, ADC_CONTINUOUS_MODE, DISABLE);    // Trigger each sample
+  63              		.loc 1 13 5
+  64 005c 0146     		li	a2,0
+  65 005e 8945     		li	a1,2
+  66 0060 13050440 		addi	a0,s0,1024
+  67 0064 97000000 		call	adc_special_function_config
+  67      E7800000 
+  68              	.LVL8:
+  14:adc.c         ****     adc_special_function_config(ADC0, ADC_SCAN_MODE, DISABLE);          // Scan mode disable
+  69              		.loc 1 14 5
+  70 006c 0146     		li	a2,0
+  71 006e 93050010 		li	a1,256
+  72 0072 13050440 		addi	a0,s0,1024
+  73 0076 97000000 		call	adc_special_function_config
+  73      E7800000 
+  74              	.LVL9:
+  15:adc.c         ****     adc_data_alignment_config(ADC0, ADC_DATAALIGN_RIGHT);               // Align ADC value right
+  75              		.loc 1 15 5
+  76 007e 8145     		li	a1,0
+  77 0080 13050440 		addi	a0,s0,1024
+  78 0084 97000000 		call	adc_data_alignment_config
+  78      E7800000 
+  79              	.LVL10:
+  16:adc.c         ****     adc_channel_length_config(ADC0, ADC_REGULAR_CHANNEL, 1);            // Convert one channel
+  80              		.loc 1 16 5
+  81 008c 0546     		li	a2,1
+  82 008e 8545     		li	a1,1
+  83 0090 13050440 		addi	a0,s0,1024
+  84 0094 97000000 		call	adc_channel_length_config
+  84      E7800000 
+  85              	.LVL11:
+  17:adc.c         **** 
+  18:adc.c         ****     adc_regular_channel_config(ADC0, 0, ADC_CHANNEL_3, 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 3
+
+
+  86              		.loc 1 18 5
+  87 009c 8946     		li	a3,2
+  88 009e 0D46     		li	a2,3
+  89 00a0 8145     		li	a1,0
+  90 00a2 13050440 		addi	a0,s0,1024
+  91 00a6 97000000 		call	adc_regular_channel_config
+  91      E7800000 
+  92              	.LVL12:
+  19:adc.c         ****                                ADC_SAMPLETIME_13POINT5);                // Conv. takes 13.5us
+  20:adc.c         ****     adc_external_trigger_source_config(ADC0, ADC_REGULAR_CHANNEL, 
+  93              		.loc 1 20 5
+  94 00ae 37060E00 		li	a2,917504
+  95 00b2 8545     		li	a1,1
+  96 00b4 13050440 		addi	a0,s0,1024
+  97 00b8 97000000 		call	adc_external_trigger_source_config
+  97      E7800000 
+  98              	.LVL13:
+  21:adc.c         ****                                        ADC0_1_EXTTRIG_REGULAR_NONE);    // SW Trigger
+  22:adc.c         ****     adc_external_trigger_config(ADC0, ADC_REGULAR_CHANNEL, ENABLE);     // Enable trigger
+  99              		.loc 1 22 5
+ 100 00c0 0546     		li	a2,1
+ 101 00c2 8545     		li	a1,1
+ 102 00c4 13050440 		addi	a0,s0,1024
+ 103 00c8 97000000 		call	adc_external_trigger_config
+ 103      E7800000 
+ 104              	.LVL14:
+  23:adc.c         **** 
+  24:adc.c         ****     if (tmp) {                                                          // Add Ch16 Temp?
+ 105              		.loc 1 24 5
+ 106              		.loc 1 24 8 is_stmt 0
+ 107 00d0 9DCC     		beq	s1,zero,.L2
+  25:adc.c         ****         adc_special_function_config(ADC0, ADC_INSERTED_CHANNEL_AUTO, ENABLE);
+ 108              		.loc 1 25 9 is_stmt 1
+ 109 00d2 0546     		li	a2,1
+ 110 00d4 93050040 		li	a1,1024
+ 111 00d8 13050440 		addi	a0,s0,1024
+ 112 00dc 97000000 		call	adc_special_function_config
+ 112      E7800000 
+ 113              	.LVL15:
+  26:adc.c         ****         adc_channel_length_config(ADC0, ADC_INSERTED_CHANNEL, 1);
+ 114              		.loc 1 26 9
+ 115 00e4 0546     		li	a2,1
+ 116 00e6 8945     		li	a1,2
+ 117 00e8 13050440 		addi	a0,s0,1024
+ 118 00ec 97000000 		call	adc_channel_length_config
+ 118      E7800000 
+ 119              	.LVL16:
+  27:adc.c         ****         adc_tempsensor_vrefint_enable();
+ 120              		.loc 1 27 9
+ 121 00f4 97000000 		call	adc_tempsensor_vrefint_enable
+ 121      E7800000 
+ 122              	.LVL17:
+  28:adc.c         ****         adc_inserted_channel_config(ADC0, 0, ADC_CHANNEL_16, ADC_SAMPLETIME_239POINT5);
+ 123              		.loc 1 28 9
+ 124 00fc 9D46     		li	a3,7
+ 125 00fe 4146     		li	a2,16
+ 126 0100 8145     		li	a1,0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 4
+
+
+ 127 0102 13050440 		addi	a0,s0,1024
+ 128 0106 97000000 		call	adc_inserted_channel_config
+ 128      E7800000 
+ 129              	.LVL18:
+ 130              	.L2:
+  29:adc.c         ****     }
+  30:adc.c         **** 
+  31:adc.c         ****     adc_enable(ADC0);                                                   // ...enable!...
+ 131              		.loc 1 31 5
+ 132 010e 37240140 		li	s0,1073815552
+ 133 0112 13050440 		addi	a0,s0,1024
+ 134 0116 97000000 		call	adc_enable
+ 134      E7800000 
+ 135              	.LVL19:
+  32:adc.c         ****     //delay_1ms(1);
+  33:adc.c         ****     for (int i=0; i<0xFFFF; i++);                                       // ...wait 1ms...
+ 136              		.loc 1 33 5
+ 137              		.loc 1 33 10
+  34:adc.c         ****     adc_calibration_enable(ADC0);                                       // ...calibrate...
+ 138              		.loc 1 34 5
+ 139 011e 13050440 		addi	a0,s0,1024
+ 140 0122 97000000 		call	adc_calibration_enable
+ 140      E7800000 
+ 141              	.LVL20:
+  35:adc.c         ****     //delay_1ms(1);                                                     // ...wait 1ms...
+  36:adc.c         ****     for (int i=0; i<0xFFFF; i++);
+ 142              		.loc 1 36 5
+ 143              		.loc 1 36 10
+  37:adc.c         ****     adc_software_trigger_enable(ADC0, ADC_REGULAR_CHANNEL);             // ...trigger 1:st conv!
+ 144              		.loc 1 37 5
+ 145 012a 13050440 		addi	a0,s0,1024
+  38:adc.c         **** }...
+ 146              		.loc 1 38 1 is_stmt 0
+ 147 012e 2244     		lw	s0,8(sp)
+ 148              		.cfi_restore 8
+ 149 0130 B240     		lw	ra,12(sp)
+ 150              		.cfi_restore 1
+ 151 0132 9244     		lw	s1,4(sp)
+ 152              		.cfi_restore 9
+ 153              	.LVL21:
+  37:adc.c         ****     adc_software_trigger_enable(ADC0, ADC_REGULAR_CHANNEL);             // ...trigger 1:st conv!
+ 154              		.loc 1 37 5
+ 155 0134 8545     		li	a1,1
+ 156              		.loc 1 38 1
+ 157 0136 4101     		addi	sp,sp,16
+ 158              	.LCFI1:
+ 159              		.cfi_def_cfa_offset 0
+  37:adc.c         ****     adc_software_trigger_enable(ADC0, ADC_REGULAR_CHANNEL);             // ...trigger 1:st conv!
+ 160              		.loc 1 37 5
+ 161 0138 17030000 		tail	adc_software_trigger_enable
+ 161      67000300 
+ 162              	.LVL22:
+ 163              		.cfi_endproc
+ 164              	.LFE2:
+ 166              		.text
+ 167              	.Letext0:
+ 168              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 5
+
+
+ 169              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 170              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
+ 171              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
+ 172              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
+ 173              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_adc.h"
+ 174              		.file 8 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 adc.c
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:13     .text.ADC3powerUpInit:0000000000000000 ADC3powerUpInit
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:17     .text.ADC3powerUpInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:19     .text.ADC3powerUpInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:20     .text.ADC3powerUpInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:21     .text.ADC3powerUpInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:23     .text.ADC3powerUpInit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:25     .text.ADC3powerUpInit:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:28     .text.ADC3powerUpInit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:31     .text.ADC3powerUpInit:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:33     .text.ADC3powerUpInit:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:34     .text.ADC3powerUpInit:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:36     .text.ADC3powerUpInit:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:39     .text.ADC3powerUpInit:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:43     .text.ADC3powerUpInit:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:47     .text.ADC3powerUpInit:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:55     .text.ADC3powerUpInit:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:60     .text.ADC3powerUpInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:64     .text.ADC3powerUpInit:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:70     .text.ADC3powerUpInit:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:76     .text.ADC3powerUpInit:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:81     .text.ADC3powerUpInit:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:87     .text.ADC3powerUpInit:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:94     .text.ADC3powerUpInit:00000000000000ae .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:100    .text.ADC3powerUpInit:00000000000000c0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:106    .text.ADC3powerUpInit:00000000000000d0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:107    .text.ADC3powerUpInit:00000000000000d0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:109    .text.ADC3powerUpInit:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:115    .text.ADC3powerUpInit:00000000000000e4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:121    .text.ADC3powerUpInit:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:124    .text.ADC3powerUpInit:00000000000000fc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:132    .text.ADC3powerUpInit:000000000000010e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:137    .text.ADC3powerUpInit:000000000000011e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:138    .text.ADC3powerUpInit:000000000000011e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:139    .text.ADC3powerUpInit:000000000000011e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:143    .text.ADC3powerUpInit:000000000000012a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:144    .text.ADC3powerUpInit:000000000000012a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:145    .text.ADC3powerUpInit:000000000000012a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:147    .text.ADC3powerUpInit:000000000000012e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:148    .text.ADC3powerUpInit:0000000000000130 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:150    .text.ADC3powerUpInit:0000000000000132 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:152    .text.ADC3powerUpInit:0000000000000134 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:155    .text.ADC3powerUpInit:0000000000000134 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:157    .text.ADC3powerUpInit:0000000000000136 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:159    .text.ADC3powerUpInit:0000000000000138 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:161    .text.ADC3powerUpInit:0000000000000138 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:163    .text.ADC3powerUpInit:0000000000000140 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:166    .text.ADC3powerUpInit:0000000000000140 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:130    .text.ADC3powerUpInit:000000000000010e .L2
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:908    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1227   .debug_str:0000000000000000 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1257   .debug_str:0000000000000143 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1361   .debug_str:00000000000003f8 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1219   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1225   .debug_line:0000000000000000 .Ldebug_line0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 7
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1317   .debug_str:000000000000029e .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1311   .debug_str:0000000000000272 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1371   .debug_str:0000000000000485 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1301   .debug_str:0000000000000231 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1259   .debug_str:0000000000000149 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1323   .debug_str:00000000000002cd .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1277   .debug_str:00000000000001b4 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1253   .debug_str:0000000000000130 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1339   .debug_str:0000000000000359 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1251   .debug_str:0000000000000122 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1313   .debug_str:000000000000027e .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1261   .debug_str:0000000000000153 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1315   .debug_str:0000000000000295 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1229   .debug_str:0000000000000088 .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1265   .debug_str:0000000000000164 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1369   .debug_str:000000000000047e .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1263   .debug_str:000000000000015b .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1331   .debug_str:000000000000030e .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1367   .debug_str:0000000000000476 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1365   .debug_str:000000000000046d .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1353   .debug_str:00000000000003bc .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1287   .debug_str:00000000000001e3 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1289   .debug_str:00000000000001ee .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1291   .debug_str:00000000000001f9 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1293   .debug_str:0000000000000204 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1295   .debug_str:000000000000020f .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1297   .debug_str:000000000000021a .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1275   .debug_str:00000000000001aa .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1281   .debug_str:00000000000001c6 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1283   .debug_str:00000000000001cf .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1349   .debug_str:00000000000003a6 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1351   .debug_str:00000000000003b1 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1355   .debug_str:00000000000003c6 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1357   .debug_str:00000000000003d0 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1325   .debug_str:00000000000002e0 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1327   .debug_str:00000000000002e9 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1267   .debug_str:000000000000016c .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1269   .debug_str:0000000000000175 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1309   .debug_str:0000000000000269 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1321   .debug_str:00000000000002c5 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1335   .debug_str:000000000000032e .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1255   .debug_str:000000000000013b .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1231   .debug_str:0000000000000098 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1237   .debug_str:00000000000000ba .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1239   .debug_str:00000000000000c4 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1241   .debug_str:00000000000000ce .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1243   .debug_str:00000000000000d8 .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1245   .debug_str:00000000000000e2 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1305   .debug_str:0000000000000257 .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1307   .debug_str:0000000000000260 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1285   .debug_str:00000000000001d8 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1279   .debug_str:00000000000001bd .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1347   .debug_str:000000000000039b .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1299   .debug_str:0000000000000225 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1235   .debug_str:00000000000000aa .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:14     .text.ADC3powerUpInit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:164    .text.ADC3powerUpInit:0000000000000140 .LFE2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 8
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1170   .debug_loc:0000000000000000 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1188   .debug_loc:000000000000002c .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:37     .text.ADC3powerUpInit:0000000000000016 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:41     .text.ADC3powerUpInit:0000000000000022 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:45     .text.ADC3powerUpInit:000000000000002c .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:53     .text.ADC3powerUpInit:0000000000000042 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:58     .text.ADC3powerUpInit:0000000000000052 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:62     .text.ADC3powerUpInit:000000000000005c .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:68     .text.ADC3powerUpInit:000000000000006c .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:74     .text.ADC3powerUpInit:000000000000007e .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:79     .text.ADC3powerUpInit:000000000000008c .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:85     .text.ADC3powerUpInit:000000000000009c .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:92     .text.ADC3powerUpInit:00000000000000ae .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:98     .text.ADC3powerUpInit:00000000000000c0 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:104    .text.ADC3powerUpInit:00000000000000d0 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:113    .text.ADC3powerUpInit:00000000000000e4 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:119    .text.ADC3powerUpInit:00000000000000f4 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:122    .text.ADC3powerUpInit:00000000000000fc .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:129    .text.ADC3powerUpInit:000000000000010e .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:135    .text.ADC3powerUpInit:000000000000011e .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:141    .text.ADC3powerUpInit:000000000000012a .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:162    .text.ADC3powerUpInit:0000000000000140 .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1303   .debug_str:000000000000023f .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1363   .debug_str:0000000000000458 .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1345   .debug_str:0000000000000391 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1233   .debug_str:000000000000009f .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1271   .debug_str:000000000000017e .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1249   .debug_str:0000000000000106 .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1319   .debug_str:00000000000002ab .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1247   .debug_str:00000000000000ec .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1343   .debug_str:0000000000000376 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1337   .debug_str:0000000000000336 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1273   .debug_str:000000000000018e .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1359   .debug_str:00000000000003da .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1373   .debug_str:000000000000048f .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1341   .debug_str:000000000000036b .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1333   .debug_str:0000000000000317 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:1329   .debug_str:00000000000002f2 .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:22     .text.ADC3powerUpInit:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:158    .text.ADC3powerUpInit:0000000000000138 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:18     .text.ADC3powerUpInit:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:29     .text.ADC3powerUpInit:000000000000000a .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:153    .text.ADC3powerUpInit:0000000000000134 .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s:176    .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+rcu_periph_clock_enable
+rcu_adc_clock_config
+gpio_init
+adc_deinit
+adc_mode_config
+adc_special_function_config
+adc_data_alignment_config
+adc_channel_length_config
+adc_regular_channel_config
+adc_external_trigger_source_config
+adc_external_trigger_config
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccVG1AP7.s 			page 9
+
+
+adc_tempsensor_vrefint_enable
+adc_inserted_channel_config
+adc_enable
+adc_calibration_enable
+adc_software_trigger_enable

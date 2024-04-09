@@ -1,0 +1,1722 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 1
+
+
+   1              		.file	"system_gd32vf103.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.SystemInit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	SystemInit
+  13              	SystemInit:
+  14              	.LFB3:
+  15              		.file 1 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c"
+   1:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+   2:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \file    system_gd32vf103.c
+   3:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief   RISC-V Device Peripheral Access Layer Source File for
+   4:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****              GD32VF103 Device Series
+   5:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+   6:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \version 2019-06-05, V1.0.0, firmware for GD32VF103
+   7:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \version 2020-08-04, V1.1.0, firmware for GD32VF103
+   8:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+   9:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  10:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*
+  11:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     Copyright (c) 2020, GigaDevice Semiconductor Inc.
+  12:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  13:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     Redistribution and use in source and binary forms, with or without modification,
+  14:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** are permitted provided that the following conditions are met:
+  15:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  16:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     1. Redistributions of source code must retain the above copyright notice, this
+  17:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****        list of conditions and the following disclaimer.
+  18:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     2. Redistributions in binary form must reproduce the above copyright notice,
+  19:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****        this list of conditions and the following disclaimer in the documentation
+  20:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****        and/or other materials provided with the distribution.
+  21:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     3. Neither the name of the copyright holder nor the names of its contributors
+  22:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****        may be used to endorse or promote products derived from this software without
+  23:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****        specific prior written permission.
+  24:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  25:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  26:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  27:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+  28:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+  29:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+  30:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  31:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  32:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  33:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  34:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** OF SUCH DAMAGE.
+  35:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+  36:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  37:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /* This file refers the RISC-V standard, some adjustments are made according to GigaDevice chips */
+  38:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  39:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #include "gd32vf103.h"
+  40:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  41:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /* system frequency define */
+  42:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define __IRC8M           (IRC8M_VALUE)            /* internal 8 MHz RC oscillator frequency */
+  43:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define __HXTAL           (HXTAL_VALUE)            /* high speed crystal oscillator frequency */
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 2
+
+
+  44:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define __SYS_OSC_CLK     (__IRC8M)                /* main oscillator frequency */
+  45:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  46:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /* select a system clock by uncommenting the following line */
+  47:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /* use IRC8M */
+  48:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_48M_PLL_IRC8M            (uint32_t)(48000000)
+  49:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_72M_PLL_IRC8M            (uint32_t)(72000000)
+  50:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_108M_PLL_IRC8M           (uint32_t)(108000000)
+  51:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  52:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /********************************************************************/
+  53:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_HXTAL                    (HXTAL_VALUE)
+  54:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_24M_PLL_HXTAL            (uint32_t)(24000000)
+  55:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /********************************************************************/
+  56:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  57:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_36M_PLL_HXTAL            (uint32_t)(36000000)
+  58:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_48M_PLL_HXTAL            (uint32_t)(48000000)
+  59:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_56M_PLL_HXTAL            (uint32_t)(56000000)
+  60:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_72M_PLL_HXTAL            (uint32_t)(72000000)
+  61:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** //#define __SYSTEM_CLOCK_96M_PLL_HXTAL            (uint32_t)(96000000)
+  62:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define __SYSTEM_CLOCK_108M_PLL_HXTAL           (uint32_t)(108000000)
+  63:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  64:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define SEL_IRC8M       0x00U
+  65:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define SEL_HXTAL       0x01U
+  66:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define SEL_PLL         0x02U
+  67:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  68:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /* set the system clock frequency and declare the system clock configuration function */
+  69:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #ifdef __SYSTEM_CLOCK_48M_PLL_IRC8M
+  70:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_48M_PLL_IRC8M;
+  71:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_48m_irc8m(void);
+  72:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_IRC8M)
+  73:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_72M_PLL_IRC8M;
+  74:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_72m_irc8m(void);
+  75:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_IRC8M)
+  76:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_108M_PLL_IRC8M;
+  77:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_108m_irc8m(void);
+  78:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  79:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_HXTAL)
+  80:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_HXTAL;
+  81:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_hxtal(void);
+  82:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_24M_PLL_HXTAL)
+  83:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_24M_PLL_HXTAL;
+  84:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_24m_hxtal(void);
+  85:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_36M_PLL_HXTAL)
+  86:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_36M_PLL_HXTAL;
+  87:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_36m_hxtal(void);
+  88:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_48M_PLL_HXTAL)
+  89:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_48M_PLL_HXTAL;
+  90:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_48m_hxtal(void);
+  91:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_56M_PLL_HXTAL)
+  92:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_56M_PLL_HXTAL;
+  93:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_56m_hxtal(void);
+  94:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_HXTAL)
+  95:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_72M_PLL_HXTAL;
+  96:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_72m_hxtal(void);
+  97:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_96M_PLL_HXTAL)
+  98:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_96M_PLL_HXTAL;
+  99:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_96m_hxtal(void);
+ 100:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_HXTAL)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 3
+
+
+ 101:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_108M_PLL_HXTAL;
+ 102:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_108m_hxtal(void);
+ 103:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #else
+ 104:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = IRC8M_VALUE;
+ 105:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #endif /* __SYSTEM_CLOCK_48M_PLL_IRC8M */
+ 106:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 107:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /* configure the system clock */
+ 108:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_config(void);
+ 109:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 110:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 111:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock
+ 112:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 113:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 114:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 115:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 116:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_config(void)
+ 117:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 118:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #ifdef __SYSTEM_CLOCK_HXTAL
+ 119:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_hxtal();
+ 120:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_24M_PLL_HXTAL)
+ 121:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_24m_hxtal();
+ 122:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_36M_PLL_HXTAL)
+ 123:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_36m_hxtal();
+ 124:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_48M_PLL_HXTAL)
+ 125:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_48m_hxtal();
+ 126:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_56M_PLL_HXTAL)
+ 127:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_56m_hxtal();
+ 128:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_HXTAL)
+ 129:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_72m_hxtal();
+ 130:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_96M_PLL_HXTAL)
+ 131:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_96m_hxtal();
+ 132:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_HXTAL)
+ 133:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_108m_hxtal();
+ 134:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 135:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_48M_PLL_IRC8M)
+ 136:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_48m_irc8m();
+ 137:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_IRC8M)
+ 138:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_72m_irc8m();
+ 139:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_IRC8M)
+ 140:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_108m_irc8m();
+ 141:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #endif /* __SYSTEM_CLOCK_HXTAL */
+ 142:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 143:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 144:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 145:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      setup the microcontroller system, initialize the system
+ 146:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 147:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 148:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 149:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 150:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** void SystemInit(void)
+ 151:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+  16              		.loc 1 151 1
+  17              		.cfi_startproc
+ 152:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* reset the RCC clock configuration to the default reset state */
+ 153:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable IRC8M */
+ 154:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_IRC8MEN;
+  18              		.loc 1 154 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 4
+
+
+  19              		.loc 1 154 13 is_stmt 0
+  20 0000 B7170240 		li	a5,1073876992
+  21 0004 9843     		lw	a4,0(a5)
+ 155:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+ 156:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* reset SCS, AHBPSC, APB1PSC, APB2PSC, ADCPSC, CKOUT0SEL bits */
+ 157:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_SCS | RCU_CFG0_AHBPSC | RCU_CFG0_APB1PSC | RCU_CFG0_APB2PSC |
+  22              		.loc 1 157 14
+  23 0006 B706FFE0 		li	a3,-520159232
+  24 000a B106     		addi	a3,a3,12
+ 154:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+  25              		.loc 1 154 13
+  26 000c 13671700 		ori	a4,a4,1
+  27 0010 98C3     		sw	a4,0(a5)
+  28              		.loc 1 157 5 is_stmt 1
+  29              		.loc 1 157 14 is_stmt 0
+  30 0012 D843     		lw	a4,4(a5)
+  31 0014 758F     		and	a4,a4,a3
+  32 0016 D8C3     		sw	a4,4(a5)
+ 158:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                   RCU_CFG0_ADCPSC | RCU_CFG0_ADCPSC_2 | RCU_CFG0_CKOUT0SEL);
+ 159:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 160:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* reset HXTALEN, CKMEN, PLLEN bits */
+ 161:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL &= ~(RCU_CTL_HXTALEN | RCU_CTL_CKMEN | RCU_CTL_PLLEN);
+  33              		.loc 1 161 5 is_stmt 1
+  34              		.loc 1 161 13 is_stmt 0
+  35 0018 9843     		lw	a4,0(a5)
+  36 001a B706F7FE 		li	a3,-17367040
+  37 001e FD16     		addi	a3,a3,-1
+  38 0020 758F     		and	a4,a4,a3
+  39 0022 98C3     		sw	a4,0(a5)
+ 162:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 163:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* Reset HXTALBPS bit */
+ 164:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL &= ~(RCU_CTL_HXTALBPS);
+  40              		.loc 1 164 5 is_stmt 1
+  41              		.loc 1 164 13 is_stmt 0
+  42 0024 9843     		lw	a4,0(a5)
+  43 0026 B706FCFF 		li	a3,-262144
+  44 002a FD16     		addi	a3,a3,-1
+  45 002c 758F     		and	a4,a4,a3
+  46 002e 98C3     		sw	a4,0(a5)
+ 165:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 166:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* reset PLLSEL, PREDV0_LSB, PLLMF, USBFSPSC bits */
+ 167:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+ 168:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLSEL | RCU_CFG0_PREDV0_LSB | RCU_CFG0_PLLMF |
+  47              		.loc 1 168 5 is_stmt 1
+  48              		.loc 1 168 14 is_stmt 0
+  49 0030 D843     		lw	a4,4(a5)
+  50 0032 B70601DF 		li	a3,-553582592
+  51 0036 FD16     		addi	a3,a3,-1
+  52 0038 758F     		and	a4,a4,a3
+  53 003a D8C3     		sw	a4,4(a5)
+ 169:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                   RCU_CFG0_USBFSPSC | RCU_CFG0_PLLMF_4);
+ 170:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG1 = 0x00000000U;
+  54              		.loc 1 170 5 is_stmt 1
+  55              		.loc 1 170 14 is_stmt 0
+  56 003c 23A60702 		sw	zero,44(a5)
+ 171:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 172:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* Reset HXTALEN, CKMEN, PLLEN, PLL1EN and PLL2EN bits */
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 5
+
+
+ 173:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN)
+  57              		.loc 1 173 5 is_stmt 1
+  58              		.loc 1 173 13 is_stmt 0
+  59 0040 9843     		lw	a4,0(a5)
+  60 0042 B706F7EA 		li	a3,-352911360
+  61 0046 FD16     		addi	a3,a3,-1
+  62 0048 758F     		and	a4,a4,a3
+  63 004a 98C3     		sw	a4,0(a5)
+ 174:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* disable all interrupts */
+ 175:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_INT = 0x00FF0000U;
+  64              		.loc 1 175 5 is_stmt 1
+  65              		.loc 1 175 13 is_stmt 0
+  66 004c 3707FF00 		li	a4,16711680
+  67 0050 98C7     		sw	a4,8(a5)
+ 176:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 177:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* Configure the System clock source, PLL Multiplier, AHB/APBx prescalers and Flash settings */
+ 178:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     system_clock_config();
+  68              		.loc 1 178 5 is_stmt 1
+ 133:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+  69              		.loc 1 133 5
+  70              	.LBB8:
+  71              	.LBB9:
+  72              	.LBB10:
+ 179:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 180:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 181:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 182:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      update the SystemCoreClock with current core clock retrieved from cpu registers
+ 183:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 184:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 185:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 186:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 187:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** void SystemCoreClockUpdate(void)
+ 188:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 189:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t scss;
+ 190:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t pllsel, predv0sel, pllmf, ck_src;
+ 191:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t predv0, predv1, pll1mf;
+ 192:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 193:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     scss = GET_BITS(RCU_CFG0, 2, 3);
+ 194:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 195:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     switch (scss)
+ 196:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     {
+ 197:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* IRC8M is selected as CK_SYS */
+ 198:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         case SEL_IRC8M:
+ 199:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             SystemCoreClock = IRC8M_VALUE;
+ 200:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             break;
+ 201:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             
+ 202:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* HXTAL is selected as CK_SYS */
+ 203:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         case SEL_HXTAL:
+ 204:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             SystemCoreClock = HXTAL_VALUE;
+ 205:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             break;
+ 206:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             
+ 207:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* PLL is selected as CK_SYS */
+ 208:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         case SEL_PLL:
+ 209:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             /* PLL clock source selection, HXTAL or IRC8M/2 */
+ 210:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             pllsel = (RCU_CFG0 & RCU_CFG0_PLLSEL);
+ 211:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 212:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 6
+
+
+ 213:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             if(RCU_PLLSRC_IRC8M_DIV2 == pllsel){
+ 214:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* PLL clock source is IRC8M/2 */
+ 215:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 ck_src = IRC8M_VALUE / 2U;
+ 216:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }else{
+ 217:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* PLL clock source is HXTAL */
+ 218:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 ck_src = HXTAL_VALUE;
+ 219:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 220:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 predv0sel = (RCU_CFG1 & RCU_CFG1_PREDV0SEL);
+ 221:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 222:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* source clock use PLL1 */
+ 223:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 if(RCU_PREDV0SRC_CKPLL1 == predv0sel){
+ 224:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     predv1 = ((RCU_CFG1 & RCU_CFG1_PREDV1) >> 4) + 1U;
+ 225:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 226:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 227:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                         pll1mf = 20U;
+ 228:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     }
+ 229:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     ck_src = (ck_src / predv1) * pll1mf;
+ 230:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 }
+ 231:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 predv0 = (RCU_CFG1 & RCU_CFG1_PREDV0) + 1U;
+ 232:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 ck_src /= predv0;
+ 233:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 234:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 235:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             /* PLL multiplication factor */
+ 236:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             pllmf = GET_BITS(RCU_CFG0, 18, 21);
+ 237:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 238:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             if((RCU_CFG0 & RCU_CFG0_PLLMF_4)){
+ 239:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 240:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 241:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 242:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             if(pllmf >= 15U){
+ 243:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf += 1U;
+ 244:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }else{
+ 245:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf += 2U;
+ 246:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 247:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 248:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             SystemCoreClock = ck_src * pllmf;
+ 249:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 250:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             if(15U == pllmf){
+ 251:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* PLL source clock multiply by 6.5 */
+ 252:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 SystemCoreClock = ck_src * 6U + ck_src / 2U;
+ 253:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 254:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 255:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             break;
+ 256:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 257:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* IRC8M is selected as CK_SYS */
+ 258:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         default:
+ 259:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             SystemCoreClock = IRC8M_VALUE;
+ 260:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             break;
+ 261:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 262:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 263:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 264:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #ifdef __SYSTEM_CLOCK_HXTAL
+ 265:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 266:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock to HXTAL
+ 267:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 268:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 269:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 7
+
+
+ 270:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 271:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_hxtal(void)
+ 272:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 273:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 274:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 275:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+ 276:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable HXTAL */
+ 277:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 278:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+ 279:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 280:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
+ 281:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+ 282:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 283:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 284:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+ 285:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* if fail */
+ 286:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 287:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while(1){
+ 288:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 289:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 290:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+ 291:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 292:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 293:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 294:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 295:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 296:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 297:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+ 298:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select HXTAL as system clock */
+ 299:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 300:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_HXTAL;
+ 301:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     
+ 302:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is selected as system clock */
+ 303:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0 == (RCU_CFG0 & RCU_SCSS_HXTAL)){
+ 304:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 305:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 306:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 307:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_24M_PLL_HXTAL)
+ 308:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 309:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock to 24M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 310:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 311:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 312:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 313:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 314:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_24m_hxtal(void)
+ 315:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 316:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 317:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 318:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 319:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable HXTAL */
+ 320:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 321:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 322:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 323:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
+ 324:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+ 325:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 326:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 8
+
+
+ 327:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 328:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* if fail */
+ 329:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 330:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while(1){
+ 331:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 332:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 333:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 334:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* HXTAL is stable */
+ 335:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 336:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 337:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 338:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 339:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 340:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 341:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 342:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 6 = 24 MHz */
+ 343:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 344:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL6);
+ 345:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 346:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 347:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 348:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 349:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 350:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 351:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* enable PLL1 */
+ 352:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 353:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 354:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 355:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 356:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 357:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 358:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 359:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 360:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 361:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 362:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable PLL */
+ 363:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 364:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 365:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 366:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 367:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 368:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 369:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select PLL as system clock */
+ 370:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 371:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 372:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 373:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 374:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 375:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 376:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 377:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 378:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_36M_PLL_HXTAL)
+ 379:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 380:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock to 36M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 381:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 382:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 383:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 9
+
+
+ 384:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 385:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_36m_hxtal(void)
+ 386:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 387:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 388:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 389:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 390:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable HXTAL */
+ 391:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 392:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 393:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 394:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
+ 395:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+ 396:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 397:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 398:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 399:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* if fail */
+ 400:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 401:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while(1){
+ 402:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 403:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 404:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 405:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* HXTAL is stable */
+ 406:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 407:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 408:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 409:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 410:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 411:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 412:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 413:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 9 = 36 MHz */
+ 414:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 415:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL9);
+ 416:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 417:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 418:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 419:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 420:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 421:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 422:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* enable PLL1 */
+ 423:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 424:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 425:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 426:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 427:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 428:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 429:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 430:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 431:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 432:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 433:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable PLL */
+ 434:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 435:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 436:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 437:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 438:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 439:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 440:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select PLL as system clock */
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 10
+
+
+ 441:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 442:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 443:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 444:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 445:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 446:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 447:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 448:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 449:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_48M_PLL_HXTAL)
+ 450:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 451:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock to 48M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 452:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 453:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 454:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 455:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 456:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_48m_hxtal(void)
+ 457:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 458:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 459:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 460:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 461:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable HXTAL */
+ 462:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 463:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 464:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 465:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
+ 466:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+ 467:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 468:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 469:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 470:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* if fail */
+ 471:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 472:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while(1){
+ 473:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 474:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 475:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 476:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* HXTAL is stable */
+ 477:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 478:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 479:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 480:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 481:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 482:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 483:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 484:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 12 = 48 MHz */
+ 485:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 486:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL12);
+ 487:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 488:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 489:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 490:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 491:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 492:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 493:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 494:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* enable PLL1 */
+ 495:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 496:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 497:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 11
+
+
+ 498:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 499:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 500:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 501:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 502:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 503:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 504:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 505:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 506:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 507:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable PLL */
+ 508:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 509:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 510:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 511:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 512:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 513:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 514:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select PLL as system clock */
+ 515:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 516:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 517:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 518:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 519:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 520:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 521:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 522:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 523:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_56M_PLL_HXTAL)
+ 524:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 525:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock to 56M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 526:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 527:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 528:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 529:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 530:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_56m_hxtal(void)
+ 531:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 532:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 533:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 534:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 535:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable HXTAL */
+ 536:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 537:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 538:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 539:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
+ 540:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+ 541:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 542:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 543:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 544:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* if fail */
+ 545:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 546:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while(1){
+ 547:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 548:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 549:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 550:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* HXTAL is stable */
+ 551:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 552:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 553:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 554:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 12
+
+
+ 555:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 556:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 557:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 558:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 14 = 56 MHz */
+ 559:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 560:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL14);
+ 561:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 562:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 563:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 564:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 565:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 566:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 567:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 568:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* enable PLL1 */
+ 569:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 570:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 571:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 572:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 573:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 574:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 575:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 576:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 577:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 578:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 579:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable PLL */
+ 580:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 581:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 582:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 583:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 584:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 585:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 586:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select PLL as system clock */
+ 587:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 588:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 589:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 590:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 591:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 592:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 593:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 594:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 595:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_72M_PLL_HXTAL)
+ 596:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 597:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock to 72M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 598:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 599:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 600:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 601:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 602:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_72m_hxtal(void)
+ 603:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 604:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 605:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 606:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 607:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable HXTAL */
+ 608:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 609:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 610:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 611:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 13
+
+
+ 612:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+ 613:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 614:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 615:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 616:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* if fail */
+ 617:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 618:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while(1){
+ 619:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 620:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 621:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 622:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* HXTAL is stable */
+ 623:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 624:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 625:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 626:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 627:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 628:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 629:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 630:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 18 = 72 MHz */ 
+ 631:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 632:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL18);
+ 633:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 634:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 635:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 636:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 637:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 638:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 639:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 640:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 641:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* enable PLL1 */
+ 642:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 643:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 644:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 645:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 646:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 647:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 648:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 649:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 650:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 651:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 652:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable PLL */
+ 653:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 654:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 655:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 656:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 657:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 658:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 659:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select PLL as system clock */
+ 660:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 661:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 662:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 663:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 664:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 665:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 666:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 667:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 668:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_96M_PLL_HXTAL)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 14
+
+
+ 669:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 670:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock to 96M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) a
+ 671:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 672:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 673:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 674:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 675:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_96m_hxtal(void)
+ 676:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 677:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t timeout = 0U;
+ 678:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+ 679:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 680:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable HXTAL */
+ 681:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 682:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 683:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 684:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
+ 685:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+ 686:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 687:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 688:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 689:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* if fail */
+ 690:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 691:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while(1){
+ 692:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 693:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 694:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 695:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* HXTAL is stable */
+ 696:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 697:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 698:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 699:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 700:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 701:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 702:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 703:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 704:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 705:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* CK_PLL = (CK_PREDIV0) * 24 = 96 MHz */
+ 706:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 707:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL24);
+ 708:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 709:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 710:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV1 | RCU_CFG1_PREDV0);
+ 711:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PLL1_MUL8 | RCU_PREDV1_DIV5 | RCU_PREDV0_DIV10);
+ 712:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* enable PLL1 */
+ 713:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
+ 714:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* wait till PLL1 is ready */
+ 715:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
+ 716:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 717:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 718:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 719:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* CK_PLL = (CK_PREDIV0) * 24 = 96 MHz */
+ 720:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 721:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL24);
+ 722:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 723:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 724:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
+ 725:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 15
+
+
+ 726:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 727:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable PLL */
+ 728:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 729:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 730:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is stable */
+ 731:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 732:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 733:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 734:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select PLL as system clock */
+ 735:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 736:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 737:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 738:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 739:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 740:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 741:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
+ 742:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 743:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_HXTAL)
+ 744:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
+ 745:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \brief      configure the system clock to 108M by PLL which selects HXTAL(MD/HD/XD:8M; CL:25M) 
+ 746:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
+ 747:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
+ 748:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
+ 749:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
+ 750:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 751:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_108m_hxtal(void)
+ 752:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** {
+ 753:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t timeout   = 0U;
+  73              		.loc 1 753 5
+  74              	.LVL0:
+ 754:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t stab_flag = 0U;
+  75              		.loc 1 754 5
+ 755:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 756:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable HXTAL */
+ 757:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+  76              		.loc 1 757 5
+  77              		.loc 1 757 13 is_stmt 0
+  78 0052 9443     		lw	a3,0(a5)
+  79 0054 4167     		li	a4,65536
+  80 0056 D98E     		or	a3,a3,a4
+  81 0058 94C3     		sw	a3,0(a5)
+  82 005a 9307F7FF 		addi	a5,a4,-1
+ 758:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 759:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 760:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
+ 761:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+ 762:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+  83              		.loc 1 762 22
+  84 005e 37170240 		li	a4,1073876992
+  85              	.LVL1:
+  86              	.L3:
+ 760:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
+  87              		.loc 1 760 5 is_stmt 1
+ 761:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+  88              		.loc 1 761 9
+  89              		.loc 1 762 9
+  90              		.loc 1 762 22 is_stmt 0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 16
+
+
+  91 0062 1443     		lw	a3,0(a4)
+  92              	.LVL2:
+ 763:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+  93              		.loc 1 763 5
+  94 0064 1396E600 		slli	a2,a3,14
+  95 0068 63440600 		blt	a2,zero,.L2
+  96 006c FD17     		addi	a5,a5,-1
+  97              	.LVL3:
+  98              		.loc 1 763 30
+  99 006e F5FB     		bne	a5,zero,.L3
+ 100              	.LVL4:
+ 101              	.L2:
+ 764:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 765:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* if fail */
+ 766:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 102              		.loc 1 766 5 is_stmt 1
+ 103              		.loc 1 766 15 is_stmt 0
+ 104 0070 B7170240 		li	a5,1073876992
+ 105 0074 9843     		lw	a4,0(a5)
+ 106              		.loc 1 766 7
+ 107 0076 9316E700 		slli	a3,a4,14
+ 108              	.LVL5:
+ 109 007a 63C30600 		blt	a3,zero,.L4
+ 110              	.L5:
+ 767:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while(1){
+ 111              		.loc 1 767 9 is_stmt 1
+ 768:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
+ 112              		.loc 1 768 9
+ 113 007e 01A0     		j	.L5
+ 114              	.L4:
+ 769:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 770:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 771:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* HXTAL is stable */
+ 772:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* AHB = SYSCLK */
+ 773:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 115              		.loc 1 773 5
+ 116              		.loc 1 773 14 is_stmt 0
+ 117 0080 D843     		lw	a4,4(a5)
+ 774:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 775:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
+ 776:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 777:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV2;
+ 778:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 779:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* CK_PLL = (CK_PREDIV0) * 27 = 108 MHz */ 
+ 780:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~(RCU_CFG0_PLLMF | RCU_CFG0_PLLMF_4);
+ 118              		.loc 1 780 14
+ 119 0082 B706C4DF 		li	a3,-540803072
+ 120 0086 FD16     		addi	a3,a3,-1
+ 773:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
+ 121              		.loc 1 773 14
+ 122 0088 D8C3     		sw	a4,4(a5)
+ 775:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 123              		.loc 1 775 5 is_stmt 1
+ 775:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
+ 124              		.loc 1 775 14 is_stmt 0
+ 125 008a D843     		lw	a4,4(a5)
+ 126 008c D8C3     		sw	a4,4(a5)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 17
+
+
+ 777:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 127              		.loc 1 777 5 is_stmt 1
+ 777:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 128              		.loc 1 777 14 is_stmt 0
+ 129 008e D843     		lw	a4,4(a5)
+ 130 0090 13670740 		ori	a4,a4,1024
+ 131 0094 D8C3     		sw	a4,4(a5)
+ 132              		.loc 1 780 5 is_stmt 1
+ 133              		.loc 1 780 14 is_stmt 0
+ 134 0096 D843     		lw	a4,4(a5)
+ 135 0098 758F     		and	a4,a4,a3
+ 136 009a D8C3     		sw	a4,4(a5)
+ 781:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= (RCU_PLLSRC_HXTAL | RCU_PLL_MUL27);
+ 137              		.loc 1 781 5 is_stmt 1
+ 138              		.loc 1 781 14 is_stmt 0
+ 139 009c D843     		lw	a4,4(a5)
+ 140 009e B7062920 		li	a3,539557888
+ 141 00a2 558F     		or	a4,a4,a3
+ 142 00a4 D8C3     		sw	a4,4(a5)
+ 782:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 783:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     if(HXTAL_VALUE==25000000){
+ 143              		.loc 1 783 5 is_stmt 1
+ 784:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* CK_PREDIV0 = (CK_HXTAL)/5 *8 /10 = 4 MHz */
+ 785:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 786:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_CKPLL1 | RCU_PREDV1_DIV5 | RCU_PLL1_MUL8 | RCU_PREDV0_DIV10);
+ 787:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 788:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* enable PLL1 */
+ 789:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL1EN;
+ 790:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 791:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
+ 792:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		}
+ 793:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 794:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* enable PLL1 */
+ 795:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL2EN;
+ 796:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 797:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
+ 798:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		}
+ 799:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }else if(HXTAL_VALUE==8000000){
+ 144              		.loc 1 799 11
+ 800:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
+ 145              		.loc 1 800 3
+ 146              		.loc 1 800 12 is_stmt 0
+ 147 00a6 D857     		lw	a4,44(a5)
+ 148 00a8 BD76     		li	a3,-69632
+ 149 00aa 758F     		and	a4,a4,a3
+ 150 00ac D8D7     		sw	a4,44(a5)
+ 801:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 | RCU_PREDV1_DIV2 | RCU_PLL1_MUL20 | RCU_PLL2_
+ 151              		.loc 1 801 3 is_stmt 1
+ 152              		.loc 1 801 12 is_stmt 0
+ 153 00ae D857     		lw	a4,44(a5)
+ 154 00b0 C166     		li	a3,65536
+ 155 00b2 938616F1 		addi	a3,a3,-239
+ 156 00b6 558F     		or	a4,a4,a3
+ 157 00b8 D8D7     		sw	a4,44(a5)
+ 802:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 803:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* enable PLL1 */
+ 804:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL1EN;
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 18
+
+
+ 158              		.loc 1 804 3 is_stmt 1
+ 159              		.loc 1 804 11 is_stmt 0
+ 160 00ba 9843     		lw	a4,0(a5)
+ 161 00bc B7060004 		li	a3,67108864
+ 162 00c0 558F     		or	a4,a4,a3
+ 163 00c2 98C3     		sw	a4,0(a5)
+ 805:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 806:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		while(0U == (RCU_CTL & RCU_CTL_PLL1STB)){
+ 164              		.loc 1 806 3 is_stmt 1
+ 165              		.loc 1 806 16 is_stmt 0
+ 166 00c4 B7170240 		li	a5,1073876992
+ 167              	.L6:
+ 807:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		}
+ 168              		.loc 1 807 3 is_stmt 1
+ 806:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		}
+ 169              		.loc 1 806 16 is_stmt 0
+ 170 00c8 9843     		lw	a4,0(a5)
+ 806:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		}
+ 171              		.loc 1 806 8
+ 172 00ca 93164700 		slli	a3,a4,4
+ 173 00ce E3DD06FE 		bge	a3,zero,.L6
+ 808:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 809:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* enable PLL2 */
+ 810:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL2EN;
+ 174              		.loc 1 810 3 is_stmt 1
+ 175              		.loc 1 810 11 is_stmt 0
+ 176 00d2 9843     		lw	a4,0(a5)
+ 177 00d4 B7060010 		li	a3,268435456
+ 178 00d8 558F     		or	a4,a4,a3
+ 179 00da 98C3     		sw	a4,0(a5)
+ 811:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* wait till PLL1 is ready */
+ 812:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		while(0U == (RCU_CTL & RCU_CTL_PLL2STB)){
+ 180              		.loc 1 812 3 is_stmt 1
+ 181              		.loc 1 812 16 is_stmt 0
+ 182 00dc B7170240 		li	a5,1073876992
+ 183              	.L7:
+ 813:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		}
+ 184              		.loc 1 813 3 is_stmt 1
+ 812:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		}
+ 185              		.loc 1 812 16 is_stmt 0
+ 186 00e0 9843     		lw	a4,0(a5)
+ 812:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		}
+ 187              		.loc 1 812 8
+ 188 00e2 93162700 		slli	a3,a4,2
+ 189 00e6 E3DD06FE 		bge	a3,zero,.L7
+ 814:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 815:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 816:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable PLL */
+ 817:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 190              		.loc 1 817 5 is_stmt 1
+ 191              		.loc 1 817 13 is_stmt 0
+ 192 00ea 9843     		lw	a4,0(a5)
+ 193 00ec B7060001 		li	a3,16777216
+ 194 00f0 558F     		or	a4,a4,a3
+ 195 00f2 98C3     		sw	a4,0(a5)
+ 818:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 819:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is stable */
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 19
+
+
+ 820:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 196              		.loc 1 820 5 is_stmt 1
+ 197              		.loc 1 820 18 is_stmt 0
+ 198 00f4 B7170240 		li	a5,1073876992
+ 199              	.L8:
+ 821:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 200              		.loc 1 821 5 is_stmt 1
+ 820:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 201              		.loc 1 820 18 is_stmt 0
+ 202 00f8 9843     		lw	a4,0(a5)
+ 820:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 203              		.loc 1 820 10
+ 204 00fa 93166700 		slli	a3,a4,6
+ 205 00fe E3DD06FE 		bge	a3,zero,.L8
+ 822:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 823:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select PLL as system clock */
+ 824:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 206              		.loc 1 824 5 is_stmt 1
+ 207              		.loc 1 824 14 is_stmt 0
+ 208 0102 D843     		lw	a4,4(a5)
+ 209 0104 719B     		andi	a4,a4,-4
+ 210 0106 D8C3     		sw	a4,4(a5)
+ 825:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLL;
+ 211              		.loc 1 825 5 is_stmt 1
+ 212              		.loc 1 825 14 is_stmt 0
+ 213 0108 D843     		lw	a4,4(a5)
+ 214 010a 13672700 		ori	a4,a4,2
+ 215 010e D8C3     		sw	a4,4(a5)
+ 826:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 827:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is selected as system clock */
+ 828:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLL)){
+ 216              		.loc 1 828 5 is_stmt 1
+ 217              		.loc 1 828 18 is_stmt 0
+ 218 0110 37170240 		li	a4,1073876992
+ 219              	.L9:
+ 829:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 220              		.loc 1 829 5 is_stmt 1
+ 828:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 221              		.loc 1 828 18 is_stmt 0
+ 222 0114 5C43     		lw	a5,4(a4)
+ 828:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 223              		.loc 1 828 27
+ 224 0116 A18B     		andi	a5,a5,8
+ 828:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
+ 225              		.loc 1 828 10
+ 226 0118 F5DF     		beq	a5,zero,.L9
+ 227              	.LBE10:
+ 228              	.LBE9:
+ 229              	.LBE8:
+ 179:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 230              		.loc 1 179 1
+ 231 011a 8280     		ret
+ 232              		.cfi_endproc
+ 233              	.LFE3:
+ 235              		.section	.text.SystemCoreClockUpdate,"ax",@progbits
+ 236              		.align	1
+ 237              		.globl	SystemCoreClockUpdate
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 20
+
+
+ 239              	SystemCoreClockUpdate:
+ 240              	.LFB4:
+ 188:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t scss;
+ 241              		.loc 1 188 1 is_stmt 1
+ 242              		.cfi_startproc
+ 189:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t pllsel, predv0sel, pllmf, ck_src;
+ 243              		.loc 1 189 5
+ 190:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     uint32_t predv0, predv1, pll1mf;
+ 244              		.loc 1 190 5
+ 191:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 245              		.loc 1 191 5
+ 193:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 246              		.loc 1 193 5
+ 193:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 247              		.loc 1 193 12 is_stmt 0
+ 248 0000 37170240 		li	a4,1073876992
+ 249 0004 5C43     		lw	a5,4(a4)
+ 250 0006 37060000 		lui	a2,%hi(.LANCHOR0)
+ 195:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     {
+ 251              		.loc 1 195 5
+ 252 000a 8546     		li	a3,1
+ 193:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 253              		.loc 1 193 12
+ 254 000c 8983     		srli	a5,a5,2
+ 193:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 255              		.loc 1 193 10
+ 256 000e 8D8B     		andi	a5,a5,3
+ 257              	.LVL6:
+ 195:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     {
+ 258              		.loc 1 195 5 is_stmt 1
+ 259 0010 13060600 		addi	a2,a2,%lo(.LANCHOR0)
+ 260 0014 6386D700 		beq	a5,a3,.L20
+ 261 0018 81C7     		beq	a5,zero,.L20
+ 262 001a 8946     		li	a3,2
+ 263 001c 6388D700 		beq	a5,a3,.L21
+ 264              	.L20:
+ 199:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             break;
+ 265              		.loc 1 199 13
+ 199:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             break;
+ 266              		.loc 1 199 29 is_stmt 0
+ 267 0020 B7177A00 		li	a5,7999488
+ 268              	.LVL7:
+ 269 0024 93870720 		addi	a5,a5,512
+ 270              	.L36:
+ 252:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 271              		.loc 1 252 33
+ 272 0028 1CC2     		sw	a5,0(a2)
+ 262:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 273              		.loc 1 262 1
+ 274 002a 8280     		ret
+ 275              	.LVL8:
+ 276              	.L21:
+ 210:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 277              		.loc 1 210 13 is_stmt 1
+ 210:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 278              		.loc 1 210 23 is_stmt 0
+ 279 002c 5C43     		lw	a5,4(a4)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 21
+
+
+ 280              	.LVL9:
+ 213:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* PLL clock source is IRC8M/2 */
+ 281              		.loc 1 213 13 is_stmt 1
+ 213:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* PLL clock source is IRC8M/2 */
+ 282              		.loc 1 213 15 is_stmt 0
+ 283 002e 9396F700 		slli	a3,a5,15
+ 284 0032 63DB0606 		bge	a3,zero,.L31
+ 218:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 285              		.loc 1 218 17 is_stmt 1
+ 286              	.LVL10:
+ 220:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 287              		.loc 1 220 17
+ 220:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 288              		.loc 1 220 30 is_stmt 0
+ 289 0036 5C57     		lw	a5,44(a4)
+ 290              	.LVL11:
+ 223:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     predv1 = ((RCU_CFG1 & RCU_CFG1_PREDV1) >> 4) + 1U;
+ 291              		.loc 1 223 17 is_stmt 1
+ 223:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     predv1 = ((RCU_CFG1 & RCU_CFG1_PREDV1) >> 4) + 1U;
+ 292              		.loc 1 223 19 is_stmt 0
+ 293 0038 9396F700 		slli	a3,a5,15
+ 294 003c 63D10606 		bge	a3,zero,.L32
+ 224:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 295              		.loc 1 224 21 is_stmt 1
+ 224:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 296              		.loc 1 224 32 is_stmt 0
+ 297 0040 5C57     		lw	a5,44(a4)
+ 298              	.LVL12:
+ 225:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 299              		.loc 1 225 32
+ 300 0042 5857     		lw	a4,44(a4)
+ 224:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 301              		.loc 1 224 60
+ 302 0044 9183     		srli	a5,a5,4
+ 303 0046 BD8B     		andi	a5,a5,15
+ 225:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 304              		.loc 1 225 60
+ 305 0048 2183     		srli	a4,a4,8
+ 224:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     pll1mf = ((RCU_CFG1 & RCU_CFG1_PLL1MF) >> 8) + 2U;
+ 306              		.loc 1 224 28
+ 307 004a 93861700 		addi	a3,a5,1
+ 308              	.LVL13:
+ 225:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 309              		.loc 1 225 21 is_stmt 1
+ 225:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 310              		.loc 1 225 60 is_stmt 0
+ 311 004e 9377F700 		andi	a5,a4,15
+ 225:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     if(17U == pll1mf){
+ 312              		.loc 1 225 28
+ 313 0052 13872700 		addi	a4,a5,2
+ 314              	.LVL14:
+ 226:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                         pll1mf = 20U;
+ 315              		.loc 1 226 21 is_stmt 1
+ 226:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                         pll1mf = 20U;
+ 316              		.loc 1 226 23 is_stmt 0
+ 317 0056 C547     		li	a5,17
+ 318 0058 6313F700 		bne	a4,a5,.L25
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 22
+
+
+ 227:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     }
+ 319              		.loc 1 227 32
+ 320 005c 5147     		li	a4,20
+ 321              	.LVL15:
+ 322              	.L25:
+ 229:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 }
+ 323              		.loc 1 229 21 is_stmt 1
+ 229:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 }
+ 324              		.loc 1 229 38 is_stmt 0
+ 325 005e B7177A00 		li	a5,7999488
+ 326 0062 93870720 		addi	a5,a5,512
+ 327 0066 B3D7D702 		divu	a5,a5,a3
+ 229:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 }
+ 328              		.loc 1 229 28
+ 329 006a B387E702 		mul	a5,a5,a4
+ 330              	.LVL16:
+ 331              	.L24:
+ 231:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 ck_src /= predv0;
+ 332              		.loc 1 231 17 is_stmt 1
+ 231:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 ck_src /= predv0;
+ 333              		.loc 1 231 27 is_stmt 0
+ 334 006e 37170240 		li	a4,1073876992
+ 335 0072 5857     		lw	a4,44(a4)
+ 336              	.LVL17:
+ 232:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 337              		.loc 1 232 17 is_stmt 1
+ 231:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 ck_src /= predv0;
+ 338              		.loc 1 231 36 is_stmt 0
+ 339 0074 3D8B     		andi	a4,a4,15
+ 340              	.LVL18:
+ 231:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 ck_src /= predv0;
+ 341              		.loc 1 231 24
+ 342 0076 0507     		addi	a4,a4,1
+ 343              	.LVL19:
+ 232:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 344              		.loc 1 232 24
+ 345 0078 B3D7E702 		divu	a5,a5,a4
+ 346              	.LVL20:
+ 347              	.L23:
+ 236:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 348              		.loc 1 236 13 is_stmt 1
+ 236:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 349              		.loc 1 236 21 is_stmt 0
+ 350 007c B7160240 		li	a3,1073876992
+ 351 0080 D842     		lw	a4,4(a3)
+ 238:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 352              		.loc 1 238 17
+ 353 0082 D442     		lw	a3,4(a3)
+ 236:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 354              		.loc 1 236 21
+ 355 0084 4983     		srli	a4,a4,18
+ 238:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 356              		.loc 1 238 15
+ 357 0086 93952600 		slli	a1,a3,2
+ 236:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 358              		.loc 1 236 19
+ 359 008a 3D8B     		andi	a4,a4,15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 23
+
+
+ 360              	.LVL21:
+ 238:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 361              		.loc 1 238 13 is_stmt 1
+ 238:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf |= 0x10U;
+ 362              		.loc 1 238 15 is_stmt 0
+ 363 008c 63D30502 		bge	a1,zero,.L26
+ 239:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 364              		.loc 1 239 17 is_stmt 1
+ 239:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 365              		.loc 1 239 23 is_stmt 0
+ 366 0090 13670701 		ori	a4,a4,16
+ 367              	.LVL22:
+ 242:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf += 1U;
+ 368              		.loc 1 242 13 is_stmt 1
+ 369              	.L27:
+ 243:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }else{
+ 370              		.loc 1 243 17
+ 243:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }else{
+ 371              		.loc 1 243 23 is_stmt 0
+ 372 0094 0507     		addi	a4,a4,1
+ 373              	.LVL23:
+ 248:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 374              		.loc 1 248 13 is_stmt 1
+ 250:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* PLL source clock multiply by 6.5 */
+ 375              		.loc 1 250 13
+ 376              	.L29:
+ 248:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 377              		.loc 1 248 38 is_stmt 0
+ 378 0096 3307F702 		mul	a4,a4,a5
+ 379              	.LVL24:
+ 248:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 380              		.loc 1 248 29
+ 381 009a 18C2     		sw	a4,0(a2)
+ 382 009c 8280     		ret
+ 383              	.LVL25:
+ 384              	.L32:
+ 218:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 385              		.loc 1 218 24
+ 386 009e B7177A00 		li	a5,7999488
+ 387              	.LVL26:
+ 388 00a2 93870720 		addi	a5,a5,512
+ 389 00a6 E1B7     		j	.L24
+ 390              	.LVL27:
+ 391              	.L31:
+ 215:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }else{
+ 392              		.loc 1 215 24
+ 393 00a8 B7173D00 		li	a5,4001792
+ 394              	.LVL28:
+ 395 00ac 93870790 		addi	a5,a5,-1792
+ 396 00b0 F1B7     		j	.L23
+ 397              	.LVL29:
+ 398              	.L26:
+ 242:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf += 1U;
+ 399              		.loc 1 242 13 is_stmt 1
+ 242:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf += 1U;
+ 400              		.loc 1 242 15 is_stmt 0
+ 401 00b2 BD46     		li	a3,15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 24
+
+
+ 402 00b4 E300D7FE 		beq	a4,a3,.L27
+ 245:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 403              		.loc 1 245 17 is_stmt 1
+ 245:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 404              		.loc 1 245 23 is_stmt 0
+ 405 00b8 0907     		addi	a4,a4,2
+ 406              	.LVL30:
+ 248:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
+ 407              		.loc 1 248 13 is_stmt 1
+ 250:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* PLL source clock multiply by 6.5 */
+ 408              		.loc 1 250 13
+ 250:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 /* PLL source clock multiply by 6.5 */
+ 409              		.loc 1 250 15 is_stmt 0
+ 410 00ba E31ED7FC 		bne	a4,a3,.L29
+ 252:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 411              		.loc 1 252 17 is_stmt 1
+ 252:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 412              		.loc 1 252 42 is_stmt 0
+ 413 00be 1947     		li	a4,6
+ 414              	.LVL31:
+ 415 00c0 3387E702 		mul	a4,a5,a4
+ 252:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 416              		.loc 1 252 56
+ 417 00c4 8583     		srli	a5,a5,1
+ 418              	.LVL32:
+ 252:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             }
+ 419              		.loc 1 252 47
+ 420 00c6 BA97     		add	a5,a4,a5
+ 421 00c8 85B7     		j	.L36
+ 422              		.cfi_endproc
+ 423              	.LFE4:
+ 425              		.globl	SystemCoreClock
+ 426              		.section	.sdata.SystemCoreClock,"aw"
+ 427              		.align	2
+ 428              		.set	.LANCHOR0,. + 0
+ 431              	SystemCoreClock:
+ 432 0000 00F36F06 		.word	108000000
+ 433              		.text
+ 434              	.Letext0:
+ 435              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 436              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 437              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 system_gd32vf103.c
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:13     .text.SystemInit:0000000000000000 SystemInit
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:17     .text.SystemInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:18     .text.SystemInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:19     .text.SystemInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:20     .text.SystemInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:23     .text.SystemInit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:26     .text.SystemInit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:29     .text.SystemInit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:30     .text.SystemInit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:34     .text.SystemInit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:35     .text.SystemInit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:41     .text.SystemInit:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:42     .text.SystemInit:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:48     .text.SystemInit:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:49     .text.SystemInit:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:55     .text.SystemInit:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:56     .text.SystemInit:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:58     .text.SystemInit:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:59     .text.SystemInit:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:65     .text.SystemInit:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:66     .text.SystemInit:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:69     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:73     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:75     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:76     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:77     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:78     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:84     .text.SystemInit:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:88     .text.SystemInit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:89     .text.SystemInit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:90     .text.SystemInit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:91     .text.SystemInit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:94     .text.SystemInit:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:99     .text.SystemInit:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:103    .text.SystemInit:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:104    .text.SystemInit:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:107    .text.SystemInit:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:112    .text.SystemInit:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:113    .text.SystemInit:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:116    .text.SystemInit:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:117    .text.SystemInit:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:119    .text.SystemInit:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:122    .text.SystemInit:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:124    .text.SystemInit:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:125    .text.SystemInit:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:128    .text.SystemInit:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:129    .text.SystemInit:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:133    .text.SystemInit:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:134    .text.SystemInit:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:138    .text.SystemInit:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:139    .text.SystemInit:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:144    .text.SystemInit:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:145    .text.SystemInit:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:146    .text.SystemInit:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:147    .text.SystemInit:00000000000000a6 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 26
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:152    .text.SystemInit:00000000000000ae .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:153    .text.SystemInit:00000000000000ae .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:159    .text.SystemInit:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:160    .text.SystemInit:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:165    .text.SystemInit:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:166    .text.SystemInit:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:169    .text.SystemInit:00000000000000c8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:170    .text.SystemInit:00000000000000c8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:172    .text.SystemInit:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:175    .text.SystemInit:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:176    .text.SystemInit:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:181    .text.SystemInit:00000000000000dc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:182    .text.SystemInit:00000000000000dc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:185    .text.SystemInit:00000000000000e0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:186    .text.SystemInit:00000000000000e0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:188    .text.SystemInit:00000000000000e2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:191    .text.SystemInit:00000000000000ea .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:192    .text.SystemInit:00000000000000ea .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:197    .text.SystemInit:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:198    .text.SystemInit:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:201    .text.SystemInit:00000000000000f8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:202    .text.SystemInit:00000000000000f8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:204    .text.SystemInit:00000000000000fa .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:207    .text.SystemInit:0000000000000102 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:208    .text.SystemInit:0000000000000102 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:212    .text.SystemInit:0000000000000108 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:213    .text.SystemInit:0000000000000108 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:217    .text.SystemInit:0000000000000110 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:218    .text.SystemInit:0000000000000110 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:221    .text.SystemInit:0000000000000114 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:222    .text.SystemInit:0000000000000114 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:224    .text.SystemInit:0000000000000116 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:226    .text.SystemInit:0000000000000118 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:231    .text.SystemInit:000000000000011a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:232    .text.SystemInit:000000000000011c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:239    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:242    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:243    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:244    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:245    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:246    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:247    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:248    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:252    .text.SystemCoreClockUpdate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:254    .text.SystemCoreClockUpdate:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:256    .text.SystemCoreClockUpdate:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:259    .text.SystemCoreClockUpdate:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:266    .text.SystemCoreClockUpdate:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:267    .text.SystemCoreClockUpdate:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:272    .text.SystemCoreClockUpdate:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:274    .text.SystemCoreClockUpdate:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:278    .text.SystemCoreClockUpdate:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:279    .text.SystemCoreClockUpdate:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:282    .text.SystemCoreClockUpdate:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:283    .text.SystemCoreClockUpdate:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:287    .text.SystemCoreClockUpdate:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:288    .text.SystemCoreClockUpdate:0000000000000036 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 27
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:289    .text.SystemCoreClockUpdate:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:292    .text.SystemCoreClockUpdate:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:293    .text.SystemCoreClockUpdate:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:296    .text.SystemCoreClockUpdate:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:297    .text.SystemCoreClockUpdate:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:300    .text.SystemCoreClockUpdate:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:302    .text.SystemCoreClockUpdate:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:305    .text.SystemCoreClockUpdate:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:307    .text.SystemCoreClockUpdate:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:310    .text.SystemCoreClockUpdate:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:311    .text.SystemCoreClockUpdate:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:313    .text.SystemCoreClockUpdate:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:316    .text.SystemCoreClockUpdate:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:317    .text.SystemCoreClockUpdate:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:320    .text.SystemCoreClockUpdate:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:324    .text.SystemCoreClockUpdate:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:325    .text.SystemCoreClockUpdate:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:329    .text.SystemCoreClockUpdate:000000000000006a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:333    .text.SystemCoreClockUpdate:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:334    .text.SystemCoreClockUpdate:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:338    .text.SystemCoreClockUpdate:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:339    .text.SystemCoreClockUpdate:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:342    .text.SystemCoreClockUpdate:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:345    .text.SystemCoreClockUpdate:0000000000000078 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:349    .text.SystemCoreClockUpdate:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:350    .text.SystemCoreClockUpdate:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:353    .text.SystemCoreClockUpdate:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:355    .text.SystemCoreClockUpdate:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:357    .text.SystemCoreClockUpdate:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:359    .text.SystemCoreClockUpdate:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:362    .text.SystemCoreClockUpdate:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:363    .text.SystemCoreClockUpdate:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:365    .text.SystemCoreClockUpdate:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:366    .text.SystemCoreClockUpdate:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:370    .text.SystemCoreClockUpdate:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:371    .text.SystemCoreClockUpdate:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:372    .text.SystemCoreClockUpdate:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:375    .text.SystemCoreClockUpdate:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:377    .text.SystemCoreClockUpdate:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:378    .text.SystemCoreClockUpdate:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:381    .text.SystemCoreClockUpdate:000000000000009a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:386    .text.SystemCoreClockUpdate:000000000000009e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:393    .text.SystemCoreClockUpdate:00000000000000a8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:400    .text.SystemCoreClockUpdate:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:401    .text.SystemCoreClockUpdate:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:404    .text.SystemCoreClockUpdate:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:405    .text.SystemCoreClockUpdate:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:408    .text.SystemCoreClockUpdate:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:409    .text.SystemCoreClockUpdate:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:410    .text.SystemCoreClockUpdate:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:412    .text.SystemCoreClockUpdate:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:413    .text.SystemCoreClockUpdate:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:417    .text.SystemCoreClockUpdate:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:420    .text.SystemCoreClockUpdate:00000000000000c6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:422    .text.SystemCoreClockUpdate:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:431    .sdata.SystemCoreClock:0000000000000000 SystemCoreClock
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:428    .sdata.SystemCoreClock:0000000000000000 .LANCHOR0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 28
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:235    .text.SystemInit:000000000000011c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:426    .text.SystemCoreClockUpdate:00000000000000ca .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:101    .text.SystemInit:0000000000000070 .L2
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:86     .text.SystemInit:0000000000000062 .L3
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:114    .text.SystemInit:0000000000000080 .L4
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:110    .text.SystemInit:000000000000007e .L5
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:167    .text.SystemInit:00000000000000c8 .L6
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:183    .text.SystemInit:00000000000000e0 .L7
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:199    .text.SystemInit:00000000000000f8 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:219    .text.SystemInit:0000000000000114 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:264    .text.SystemCoreClockUpdate:0000000000000020 .L20
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:276    .text.SystemCoreClockUpdate:000000000000002c .L21
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:391    .text.SystemCoreClockUpdate:00000000000000a8 .L31
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:384    .text.SystemCoreClockUpdate:000000000000009e .L32
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:322    .text.SystemCoreClockUpdate:000000000000005e .L25
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:398    .text.SystemCoreClockUpdate:00000000000000b2 .L26
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:331    .text.SystemCoreClockUpdate:000000000000006e .L24
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:347    .text.SystemCoreClockUpdate:000000000000007c .L23
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:369    .text.SystemCoreClockUpdate:0000000000000094 .L27
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:376    .text.SystemCoreClockUpdate:0000000000000096 .L29
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:270    .text.SystemCoreClockUpdate:0000000000000028 .L36
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:691    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1165   .debug_str:00000000000001e3 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1123   .debug_str:000000000000004b .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1155   .debug_str:0000000000000155 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1099   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1107   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1137   .debug_str:00000000000000dd .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1175   .debug_str:000000000000028f .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1109   .debug_str:0000000000000000 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1131   .debug_str:00000000000000bd .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1157   .debug_str:00000000000001b5 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1133   .debug_str:00000000000000cb .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1127   .debug_str:000000000000009f .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1169   .debug_str:0000000000000274 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1129   .debug_str:00000000000000b2 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1125   .debug_str:000000000000008d .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1147   .debug_str:0000000000000119 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1139   .debug_str:00000000000000ea .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1141   .debug_str:0000000000000101 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1161   .debug_str:00000000000001c6 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1167   .debug_str:000000000000026b .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1151   .debug_str:000000000000012f .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1173   .debug_str:0000000000000283 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1121   .debug_str:0000000000000033 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1149   .debug_str:0000000000000127 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1119   .debug_str:0000000000000029 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1153   .debug_str:000000000000013f .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:240    .text.SystemCoreClockUpdate:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:423    .text.SystemCoreClockUpdate:00000000000000ca .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1143   .debug_str:0000000000000109 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:917    .debug_loc:0000000000000000 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1159   .debug_str:00000000000001bf .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:928    .debug_loc:000000000000001e .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1111   .debug_str:000000000000000a .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:951    .debug_loc:0000000000000048 .LLST4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s 			page 29
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1171   .debug_str:000000000000027d .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:974    .debug_loc:0000000000000072 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1135   .debug_str:00000000000000d6 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:985    .debug_loc:0000000000000090 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1113   .debug_str:0000000000000014 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1008   .debug_loc:00000000000000ce .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1115   .debug_str:000000000000001b .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1025   .debug_loc:00000000000000f2 .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1117   .debug_str:0000000000000022 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1032   .debug_loc:0000000000000105 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1145   .debug_str:000000000000010e .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:14     .text.SystemInit:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:233    .text.SystemInit:000000000000011c .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:70     .text.SystemInit:0000000000000052 .LBB8
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:229    .text.SystemInit:000000000000011a .LBE8
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:71     .text.SystemInit:0000000000000052 .LBB9
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:228    .text.SystemInit:000000000000011a .LBE9
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:72     .text.SystemInit:0000000000000052 .LBB10
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:227    .text.SystemInit:000000000000011a .LBE10
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1039   .debug_loc:0000000000000118 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1066   .debug_loc:000000000000014e .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:1163   .debug_str:00000000000001cf .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:257    .text.SystemCoreClockUpdate:0000000000000010 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:268    .text.SystemCoreClockUpdate:0000000000000024 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:275    .text.SystemCoreClockUpdate:000000000000002c .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:280    .text.SystemCoreClockUpdate:000000000000002e .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:290    .text.SystemCoreClockUpdate:0000000000000038 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:390    .text.SystemCoreClockUpdate:00000000000000a8 .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:394    .text.SystemCoreClockUpdate:00000000000000ac .LVL28
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:298    .text.SystemCoreClockUpdate:0000000000000042 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:383    .text.SystemCoreClockUpdate:000000000000009e .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:387    .text.SystemCoreClockUpdate:00000000000000a2 .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:360    .text.SystemCoreClockUpdate:000000000000008c .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:379    .text.SystemCoreClockUpdate:000000000000009a .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:397    .text.SystemCoreClockUpdate:00000000000000b2 .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:414    .text.SystemCoreClockUpdate:00000000000000c0 .LVL31
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:286    .text.SystemCoreClockUpdate:0000000000000036 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:330    .text.SystemCoreClockUpdate:000000000000006e .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:418    .text.SystemCoreClockUpdate:00000000000000c6 .LVL32
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:336    .text.SystemCoreClockUpdate:0000000000000074 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:340    .text.SystemCoreClockUpdate:0000000000000076 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:343    .text.SystemCoreClockUpdate:0000000000000078 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:346    .text.SystemCoreClockUpdate:000000000000007c .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:308    .text.SystemCoreClockUpdate:000000000000004e .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:314    .text.SystemCoreClockUpdate:0000000000000056 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:74     .text.SystemInit:0000000000000052 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:85     .text.SystemInit:0000000000000062 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:97     .text.SystemInit:000000000000006e .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:100    .text.SystemInit:0000000000000070 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:92     .text.SystemInit:0000000000000064 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:108    .text.SystemInit:000000000000007a .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccGS3qNf.s:439    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS

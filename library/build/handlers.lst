@@ -1,0 +1,354 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s 			page 1
+
+
+   1              		.file	"handlers.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.handle_nmi,"ax",@progbits
+  10              		.align	1
+  11              		.weak	handle_nmi
+  13              	handle_nmi:
+  14              	.LFB5:
+  15              		.file 1 "./../../firmware/RISCV/env_Eclipse/handlers.c"
+   1:./../../firmware/RISCV/env_Eclipse/handlers.c **** //See LICENSE for license details.
+   2:./../../firmware/RISCV/env_Eclipse/handlers.c **** #include <stdint.h>
+   3:./../../firmware/RISCV/env_Eclipse/handlers.c **** #include <stdio.h>
+   4:./../../firmware/RISCV/env_Eclipse/handlers.c **** #include <unistd.h>
+   5:./../../firmware/RISCV/env_Eclipse/handlers.c **** #include "riscv_encoding.h"
+   6:./../../firmware/RISCV/env_Eclipse/handlers.c **** #include "n200_func.h"
+   7:./../../firmware/RISCV/env_Eclipse/handlers.c **** 
+   8:./../../firmware/RISCV/env_Eclipse/handlers.c **** __attribute__((weak)) uintptr_t handle_nmi()
+   9:./../../firmware/RISCV/env_Eclipse/handlers.c **** {
+  16              		.loc 1 9 1
+  17              		.cfi_startproc
+  10:./../../firmware/RISCV/env_Eclipse/handlers.c ****   write(1, "nmi\n", 5);
+  18              		.loc 1 10 3
+  19 0000 B7050000 		lui	a1,%hi(.LC0)
+   9:./../../firmware/RISCV/env_Eclipse/handlers.c ****   write(1, "nmi\n", 5);
+  20              		.loc 1 9 1 is_stmt 0
+  21 0004 4111     		addi	sp,sp,-16
+  22              	.LCFI0:
+  23              		.cfi_def_cfa_offset 16
+  24              		.loc 1 10 3
+  25 0006 1546     		li	a2,5
+  26 0008 93850500 		addi	a1,a1,%lo(.LC0)
+  27 000c 0545     		li	a0,1
+   9:./../../firmware/RISCV/env_Eclipse/handlers.c ****   write(1, "nmi\n", 5);
+  28              		.loc 1 9 1
+  29 000e 06C6     		sw	ra,12(sp)
+  30              		.cfi_offset 1, -4
+  31              		.loc 1 10 3
+  32 0010 97000000 		call	write
+  32      E7800000 
+  33              	.LVL0:
+  11:./../../firmware/RISCV/env_Eclipse/handlers.c ****   _exit(1);
+  34              		.loc 1 11 3 is_stmt 1
+  35 0018 0545     		li	a0,1
+  36 001a 97000000 		call	_exit
+  36      E7800000 
+  37              	.LVL1:
+  38              		.cfi_endproc
+  39              	.LFE5:
+  41              		.section	.text.handle_trap,"ax",@progbits
+  42              		.align	1
+  43              		.weak	handle_trap
+  45              	handle_trap:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s 			page 2
+
+
+  46              	.LFB6:
+  12:./../../firmware/RISCV/env_Eclipse/handlers.c ****   return 0;
+  13:./../../firmware/RISCV/env_Eclipse/handlers.c **** }
+  14:./../../firmware/RISCV/env_Eclipse/handlers.c **** 
+  15:./../../firmware/RISCV/env_Eclipse/handlers.c **** 
+  16:./../../firmware/RISCV/env_Eclipse/handlers.c **** __attribute__((weak)) uintptr_t handle_trap(uintptr_t mcause, uintptr_t sp)
+  17:./../../firmware/RISCV/env_Eclipse/handlers.c **** {
+  47              		.loc 1 17 1
+  48              		.cfi_startproc
+  49              	.LVL2:
+  18:./../../firmware/RISCV/env_Eclipse/handlers.c ****   if((mcause & 0xFFF) == 0xFFF) {
+  50              		.loc 1 18 3
+  17:./../../firmware/RISCV/env_Eclipse/handlers.c ****   if((mcause & 0xFFF) == 0xFFF) {
+  51              		.loc 1 17 1 is_stmt 0
+  52 0000 4111     		addi	sp,sp,-16
+  53              	.LCFI1:
+  54              		.cfi_def_cfa_offset 16
+  55              		.loc 1 18 14
+  56 0002 9347F5FF 		not	a5,a0
+  17:./../../firmware/RISCV/env_Eclipse/handlers.c ****   if((mcause & 0xFFF) == 0xFFF) {
+  57              		.loc 1 17 1
+  58 0006 22C4     		sw	s0,8(sp)
+  59 0008 06C6     		sw	ra,12(sp)
+  60              		.cfi_offset 8, -8
+  61              		.cfi_offset 1, -4
+  62              		.loc 1 18 5
+  63 000a 13974701 		slli	a4,a5,20
+  17:./../../firmware/RISCV/env_Eclipse/handlers.c ****   if((mcause & 0xFFF) == 0xFFF) {
+  64              		.loc 1 17 1
+  65 000e 2A84     		mv	s0,a0
+  66              		.loc 1 18 5
+  67 0010 09E7     		bne	a4,zero,.L4
+  19:./../../firmware/RISCV/env_Eclipse/handlers.c ****       handle_nmi();
+  68              		.loc 1 19 7 is_stmt 1
+  69 0012 97000000 		call	handle_nmi
+  69      E7800000 
+  70              	.LVL3:
+  71              	.L4:
+  20:./../../firmware/RISCV/env_Eclipse/handlers.c ****   }
+  21:./../../firmware/RISCV/env_Eclipse/handlers.c ****   write(1, "trap\n", 5);
+  72              		.loc 1 21 3
+  73 001a B7050000 		lui	a1,%hi(.LC1)
+  74 001e 1546     		li	a2,5
+  75 0020 93850500 		addi	a1,a1,%lo(.LC1)
+  76 0024 0545     		li	a0,1
+  77 0026 97000000 		call	write
+  77      E7800000 
+  78              	.LVL4:
+  22:./../../firmware/RISCV/env_Eclipse/handlers.c ****   //printf("In trap handler, the mcause is %d\n", mcause);
+  23:./../../firmware/RISCV/env_Eclipse/handlers.c ****   //printf("In trap handler, the mepc is 0x%x\n", read_csr(mepc));
+  24:./../../firmware/RISCV/env_Eclipse/handlers.c ****   //printf("In trap handler, the mtval is 0x%x\n", read_csr(mbadaddr));
+  25:./../../firmware/RISCV/env_Eclipse/handlers.c ****   _exit(mcause);
+  79              		.loc 1 25 3
+  80 002e 2285     		mv	a0,s0
+  81 0030 97000000 		call	_exit
+  81      E7800000 
+  82              	.LVL5:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s 			page 3
+
+
+  83              		.cfi_endproc
+  84              	.LFE6:
+  86              		.section	.rodata.handle_nmi.str1.4,"aMS",@progbits,1
+  87              		.align	2
+  88              	.LC0:
+  89 0000 6E6D690A 		.string	"nmi\n"
+  89      00
+  90              		.section	.rodata.handle_trap.str1.4,"aMS",@progbits,1
+  91              		.align	2
+  92              	.LC1:
+  93 0000 74726170 		.string	"trap\n"
+  93      0A00
+  94              		.text
+  95              	.Letext0:
+  96              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+  97              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+  98              		.file 4 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+  99              		.file 5 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 100              		.file 6 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 101              		.file 7 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 102              		.file 8 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 handlers.c
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:13     .text.handle_nmi:0000000000000000 handle_nmi
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:17     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:18     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:19     .text.handle_nmi:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:21     .text.handle_nmi:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:23     .text.handle_nmi:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:25     .text.handle_nmi:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:29     .text.handle_nmi:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:30     .text.handle_nmi:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:32     .text.handle_nmi:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:35     .text.handle_nmi:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:38     .text.handle_nmi:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:45     .text.handle_trap:0000000000000000 handle_trap
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:48     .text.handle_trap:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:50     .text.handle_trap:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:51     .text.handle_trap:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:52     .text.handle_trap:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:54     .text.handle_trap:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:56     .text.handle_trap:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:58     .text.handle_trap:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:60     .text.handle_trap:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:61     .text.handle_trap:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:63     .text.handle_trap:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:65     .text.handle_trap:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:67     .text.handle_trap:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:69     .text.handle_trap:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:73     .text.handle_trap:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:80     .text.handle_trap:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:83     .text.handle_trap:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:41     .text.handle_nmi:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:86     .text.handle_trap:0000000000000038 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:88     .rodata.handle_nmi.str1.4:0000000000000000 .LC0
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:92     .rodata.handle_trap.str1.4:0000000000000000 .LC1
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:71     .text.handle_trap:000000000000001a .L4
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:1676   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2535   .debug_str:00000000000004ab .LASF131
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2347   .debug_str:0000000000000134 .LASF132
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2331   .debug_str:0000000000000088 .LASF133
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2297   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2305   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2343   .debug_str:0000000000000122 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2467   .debug_str:000000000000037f .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2473   .debug_str:000000000000039b .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2413   .debug_str:0000000000000280 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2359   .debug_str:000000000000018f .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2405   .debug_str:000000000000025a .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2341   .debug_str:0000000000000114 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2327   .debug_str:0000000000000068 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2487   .debug_str:00000000000003d6 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2397   .debug_str:0000000000000236 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2311   .debug_str:0000000000000012 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2447   .debug_str:0000000000000320 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2427   .debug_str:00000000000002cb .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2459   .debug_str:0000000000000356 .LASF13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s 			page 5
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2519   .debug_str:000000000000046e .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2555   .debug_str:000000000000058b .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2423   .debug_str:00000000000002bd .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2399   .debug_str:0000000000000243 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2511   .debug_str:000000000000044c .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2513   .debug_str:0000000000000454 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2483   .debug_str:00000000000003c3 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2541   .debug_str:0000000000000541 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2463   .debug_str:0000000000000367 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2383   .debug_str:00000000000001f9 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2387   .debug_str:000000000000020a .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2531   .debug_str:0000000000000498 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2503   .debug_str:000000000000042f .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2381   .debug_str:00000000000001f3 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2549   .debug_str:0000000000000576 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2395   .debug_str:0000000000000231 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2337   .debug_str:0000000000000105 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2525   .debug_str:0000000000000482 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2349   .debug_str:0000000000000162 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2579   .debug_str:00000000000005f6 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2453   .debug_str:000000000000033a .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2441   .debug_str:0000000000000306 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2551   .debug_str:000000000000057b .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2475   .debug_str:00000000000003a5 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2565   .debug_str:00000000000005b6 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2353   .debug_str:0000000000000171 .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2377   .debug_str:00000000000001e6 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2307   .debug_str:0000000000000000 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2537   .debug_str:0000000000000533 .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2363   .debug_str:000000000000019f .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2455   .debug_str:0000000000000343 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2495   .debug_str:00000000000003ff .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2379   .debug_str:00000000000001ee .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2477   .debug_str:00000000000003af .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2465   .debug_str:0000000000000379 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2309   .debug_str:000000000000000c .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2485   .debug_str:00000000000003ce .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2361   .debug_str:0000000000000198 .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2407   .debug_str:000000000000026c .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2329   .debug_str:000000000000007f .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2355   .debug_str:000000000000017f .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2391   .debug_str:0000000000000221 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2439   .debug_str:00000000000002ff .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2515   .debug_str:000000000000045c .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2569   .debug_str:00000000000005d0 .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2345   .debug_str:000000000000012e .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2561   .debug_str:00000000000005a8 .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2367   .debug_str:00000000000001ae .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2371   .debug_str:00000000000001bf .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2321   .debug_str:0000000000000042 .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2431   .debug_str:00000000000002dd .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2317   .debug_str:000000000000002d .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2433   .debug_str:00000000000002e3 .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2505   .debug_str:0000000000000437 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2521   .debug_str:0000000000000476 .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2365   .debug_str:00000000000001a7 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2401   .debug_str:000000000000024a .LASF70
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s 			page 6
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2385   .debug_str:0000000000000202 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2493   .debug_str:00000000000003fa .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2313   .debug_str:000000000000001c .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2501   .debug_str:0000000000000416 .LASF74
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2497   .debug_str:0000000000000404 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2457   .debug_str:000000000000034b .LASF76
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2499   .debug_str:000000000000040c .LASF77
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2421   .debug_str:00000000000002b5 .LASF78
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2393   .debug_str:0000000000000227 .LASF79
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2577   .debug_str:00000000000005f1 .LASF80
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2461   .debug_str:000000000000035d .LASF81
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2403   .debug_str:0000000000000252 .LASF82
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2369   .debug_str:00000000000001b7 .LASF83
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2469   .debug_str:000000000000038d .LASF84
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2415   .debug_str:0000000000000293 .LASF85
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2559   .debug_str:000000000000059e .LASF86
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2357   .debug_str:0000000000000187 .LASF87
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2351   .debug_str:000000000000016c .LASF88
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2523   .debug_str:000000000000047d .LASF89
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2481   .debug_str:00000000000003bc .LASF90
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2553   .debug_str:0000000000000585 .LASF91
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2409   .debug_str:0000000000000272 .LASF92
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2479   .debug_str:00000000000003b6 .LASF93
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2507   .debug_str:000000000000043e .LASF94
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2509   .debug_str:0000000000000446 .LASF95
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2529   .debug_str:0000000000000492 .LASF96
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2539   .debug_str:000000000000053c .LASF97
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2547   .debug_str:0000000000000569 .LASF98
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2533   .debug_str:000000000000049e .LASF99
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2419   .debug_str:00000000000002a8 .LASF100
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2567   .debug_str:00000000000005c1 .LASF101
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2389   .debug_str:0000000000000212 .LASF102
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2489   .debug_str:00000000000003e2 .LASF103
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2571   .debug_str:00000000000005d7 .LASF104
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2491   .debug_str:00000000000003ed .LASF105
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2575   .debug_str:00000000000005e3 .LASF106
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2335   .debug_str:00000000000000f7 .LASF107
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2557   .debug_str:0000000000000594 .LASF108
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2417   .debug_str:000000000000029c .LASF109
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2543   .debug_str:0000000000000549 .LASF110
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2375   .debug_str:00000000000001d8 .LASF111
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2333   .debug_str:00000000000000e8 .LASF112
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2373   .debug_str:00000000000001c7 .LASF113
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2323   .debug_str:0000000000000048 .LASF114
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2325   .debug_str:0000000000000057 .LASF115
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2471   .debug_str:0000000000000392 .LASF116
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2451   .debug_str:0000000000000333 .LASF117
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2443   .debug_str:0000000000000310 .LASF118
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2563   .debug_str:00000000000005ae .LASF119
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2435   .debug_str:00000000000002eb .LASF134
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2517   .debug_str:0000000000000462 .LASF120
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2545   .debug_str:0000000000000556 .LASF121
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2425   .debug_str:00000000000002c3 .LASF122
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2445   .debug_str:0000000000000319 .LASF123
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2449   .debug_str:000000000000032c .LASF124
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2527   .debug_str:000000000000048b .LASF125
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2573   .debug_str:00000000000005dc .LASF126
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s 			page 7
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2437   .debug_str:00000000000002f6 .LASF127
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2319   .debug_str:0000000000000036 .LASF135
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:46     .text.handle_trap:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:84     .text.handle_trap:0000000000000038 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2231   .debug_loc:0000000000000000 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2411   .debug_str:0000000000000279 .LASF128
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2244   .debug_loc:0000000000000020 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2255   .debug_loc:000000000000003e .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:70     .text.handle_trap:000000000000001a .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:78     .text.handle_trap:000000000000002e .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:82     .text.handle_trap:0000000000000038 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2429   .debug_str:00000000000002d2 .LASF136
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:14     .text.handle_nmi:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:39     .text.handle_nmi:0000000000000022 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2269   .debug_loc:000000000000005f .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:33     .text.handle_nmi:0000000000000018 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:37     .text.handle_nmi:0000000000000022 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2315   .debug_str:0000000000000027 .LASF129
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:2339   .debug_str:000000000000010e .LASF130
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:53     .text.handle_trap:0000000000000002 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:49     .text.handle_trap:0000000000000000 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:22     .text.handle_nmi:0000000000000006 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccdGQesG.s:104    .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+write
+_exit

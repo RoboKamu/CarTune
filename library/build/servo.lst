@@ -1,0 +1,990 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 1
+
+
+   1              		.file	"servo.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.T1_init_PWM,"ax",@progbits
+  10              		.align	1
+  11              		.globl	T1_init_PWM
+  13              	T1_init_PWM:
+  14              	.LFB2:
+  15              		.file 1 "servo.c"
+   1:servo.c       **** #include "servo.h"
+   2:servo.c       **** 
+   3:servo.c       **** #define SERVO_MAX_DEG     180                           // max servo rotation in deg (Servo in use:
+   4:servo.c       **** #define SERVO_PERIOD      20000                         // 20ms pwm period
+   5:servo.c       **** #define DUTY_LOWER        0.025                         // lower range of duty cycle: 0.5/20 = 2.5 
+   6:servo.c       **** #define DUTY_UPPER        0.120                         // Upper range of duty cycle: 2.4/20 = 12.5
+   7:servo.c       **** 
+   8:servo.c       **** #define SERVO_MIN_VAL (DUTY_LOWER*SERVO_PERIOD)         // servos minimun pulse value
+   9:servo.c       **** #define SERVO_MAX_VAL (DUTY_UPPER*SERVO_PERIOD)         // servos maximum pulse value
+  10:servo.c       **** 
+  11:servo.c       **** uint32_t map();
+  12:servo.c       **** 
+  13:servo.c       **** /*
+  14:servo.c       **** Notering för initiering: 
+  15:servo.c       ****     - SG90 kräver parametrarna; power&signal ~5V, duty cycle 1-2 ms, PWM period 20ms(signalfrekven
+  16:servo.c       ****     - För att uppnå detta defineras prescalar till 108, så klockan räknar upp ett steg på 1MHz
+  17:servo.c       ****       detta är för att processors arbetsfrekvens är 108 MHz (108Mhz / 108 = 1Mhz).
+  18:servo.c       ****     - För att beräkna signalfrekvens divideras klockan med bestämda perioden (1MHz / 20000 =50Hz
+  19:servo.c       ****     - Slutligen för duty cycle beräknas vilka pulsvärden som ger önskad pulsbredd.
+  20:servo.c       ****       I det här fallet är undre gränsen 0.5ms och övre 2.4ms, beräknas med ({duty cycle} / {PW
+  21:servo.c       ****       ex: -90deg har duty cycle 0.5ms ((0.5/20)*20000=500) och därmed har duty value 500  
+  22:servo.c       **** 
+  23:servo.c       **** */
+  24:servo.c       **** void T1_init_PWM(uint16_t ch){
+  16              		.loc 1 24 30
+  17              		.cfi_startproc
+  18              	.LVL0:
+  25:servo.c       ****     timer_oc_parameter_struct timer_ocinitpara;
+  19              		.loc 1 25 5
+  26:servo.c       ****     timer_parameter_struct timer_initpara;
+  20              		.loc 1 26 5
+  27:servo.c       ****     rcu_periph_clock_enable(RCU_GPIOA);
+  21              		.loc 1 27 5
+  24:servo.c       ****     timer_oc_parameter_struct timer_ocinitpara;
+  22              		.loc 1 24 30 is_stmt 0
+  23 0000 3971     		addi	sp,sp,-64
+  24              	.LCFI0:
+  25              		.cfi_def_cfa_offset 64
+  26 0002 22DC     		sw	s0,56(sp)
+  27              		.cfi_offset 8, -8
+  28 0004 2A84     		mv	s0,a0
+  29              		.loc 1 27 5
+  30 0006 13052060 		li	a0,1538
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 2
+
+
+  31              	.LVL1:
+  24:servo.c       ****     timer_oc_parameter_struct timer_ocinitpara;
+  32              		.loc 1 24 30
+  33 000a 06DE     		sw	ra,60(sp)
+  34 000c 4ED6     		sw	s3,44(sp)
+  35 000e 26DA     		sw	s1,52(sp)
+  36 0010 4AD8     		sw	s2,48(sp)
+  37              		.cfi_offset 1, -4
+  38              		.cfi_offset 19, -20
+  39              		.cfi_offset 9, -12
+  40              		.cfi_offset 18, -16
+  41              		.loc 1 27 5
+  42 0012 97000000 		call	rcu_periph_clock_enable
+  42      E7800000 
+  43              	.LVL2:
+  28:servo.c       ****     rcu_periph_clock_enable(RCU_AF);
+  44              		.loc 1 28 5 is_stmt 1
+  45 001a 13050060 		li	a0,1536
+  46 001e 93791400 		andi	s3,s0,1
+  47 0022 97000000 		call	rcu_periph_clock_enable
+  47      E7800000 
+  48              	.LVL3:
+  29:servo.c       ****     if (ch&0x1) gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_0);
+  49              		.loc 1 29 5
+  50              		.loc 1 29 8 is_stmt 0
+  51 002a 638D0900 		beq	s3,zero,.L2
+  52              		.loc 1 29 17 is_stmt 1 discriminator 1
+  53 002e 37150140 		li	a0,1073811456
+  54 0032 8546     		li	a3,1
+  55 0034 0D46     		li	a2,3
+  56 0036 E145     		li	a1,24
+  57 0038 13050580 		addi	a0,a0,-2048
+  58 003c 97000000 		call	gpio_init
+  58      E7800000 
+  59              	.LVL4:
+  60              	.L2:
+  30:servo.c       ****     if (ch&0x2) gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_1);
+  61              		.loc 1 30 5
+  62 0044 13792400 		andi	s2,s0,2
+  63              		.loc 1 30 8 is_stmt 0
+  64 0048 630D0900 		beq	s2,zero,.L3
+  65              		.loc 1 30 17 is_stmt 1 discriminator 1
+  66 004c 37150140 		li	a0,1073811456
+  67 0050 8946     		li	a3,2
+  68 0052 0D46     		li	a2,3
+  69 0054 E145     		li	a1,24
+  70 0056 13050580 		addi	a0,a0,-2048
+  71 005a 97000000 		call	gpio_init
+  71      E7800000 
+  72              	.LVL5:
+  73              	.L3:
+  31:servo.c       ****     if (ch&0x4) gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_2);
+  74              		.loc 1 31 5
+  75 0062 93744400 		andi	s1,s0,4
+  76              		.loc 1 31 8 is_stmt 0
+  77 0066 81CC     		beq	s1,zero,.L4
+  78              		.loc 1 31 17 is_stmt 1 discriminator 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 3
+
+
+  79 0068 37150140 		li	a0,1073811456
+  80 006c 9146     		li	a3,4
+  81 006e 0D46     		li	a2,3
+  82 0070 E145     		li	a1,24
+  83 0072 13050580 		addi	a0,a0,-2048
+  84 0076 97000000 		call	gpio_init
+  84      E7800000 
+  85              	.LVL6:
+  86              	.L4:
+  32:servo.c       ****     if (ch&0x8) gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_3);
+  87              		.loc 1 32 5
+  88 007e 2188     		andi	s0,s0,8
+  89              		.loc 1 32 8 is_stmt 0
+  90 0080 01CC     		beq	s0,zero,.L5
+  91              		.loc 1 32 17 is_stmt 1 discriminator 1
+  92 0082 37150140 		li	a0,1073811456
+  93 0086 A146     		li	a3,8
+  94 0088 0D46     		li	a2,3
+  95 008a E145     		li	a1,24
+  96 008c 13050580 		addi	a0,a0,-2048
+  97 0090 97000000 		call	gpio_init
+  97      E7800000 
+  98              	.LVL7:
+  99              	.L5:
+  33:servo.c       ****     rcu_periph_clock_enable(RCU_TIMER1);
+ 100              		.loc 1 33 5
+ 101 0098 13050070 		li	a0,1792
+ 102 009c 97000000 		call	rcu_periph_clock_enable
+ 102      E7800000 
+ 103              	.LVL8:
+  34:servo.c       **** 
+  35:servo.c       ****     timer_deinit(TIMER1);
+ 104              		.loc 1 35 5
+ 105 00a4 37050040 		li	a0,1073741824
+ 106 00a8 97000000 		call	timer_deinit
+ 106      E7800000 
+ 107              	.LVL9:
+  36:servo.c       ****     timer_struct_para_init(&timer_initpara);
+ 108              		.loc 1 36 5
+ 109 00b0 0808     		addi	a0,sp,16
+ 110 00b2 97000000 		call	timer_struct_para_init
+ 110      E7800000 
+ 111              	.LVL10:
+  37:servo.c       ****     timer_initpara.prescaler         = 108;
+ 112              		.loc 1 37 5
+  38:servo.c       ****     timer_initpara.alignedmode       = TIMER_COUNTER_EDGE;
+ 113              		.loc 1 38 5
+  39:servo.c       ****     timer_initpara.counterdirection  = TIMER_COUNTER_UP;
+ 114              		.loc 1 39 5
+  37:servo.c       ****     timer_initpara.prescaler         = 108;
+ 115              		.loc 1 37 38 is_stmt 0
+ 116 00ba 9307C006 		li	a5,108
+ 117 00be 3EC8     		sw	a5,16(sp)
+  40:servo.c       ****     timer_initpara.period            = SERVO_PERIOD;                   
+ 118              		.loc 1 40 38
+ 119 00c0 9567     		li	a5,20480
+ 120 00c2 938707E2 		addi	a5,a5,-480
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 4
+
+
+  41:servo.c       ****     timer_initpara.clockdivision     = TIMER_CKDIV_DIV1;
+  42:servo.c       ****     timer_initpara.repetitioncounter = 0;
+  43:servo.c       ****     timer_init(TIMER1, &timer_initpara);
+ 121              		.loc 1 43 5
+ 122 00c6 0C08     		addi	a1,sp,16
+ 123 00c8 37050040 		li	a0,1073741824
+  40:servo.c       ****     timer_initpara.period            = SERVO_PERIOD;                   
+ 124              		.loc 1 40 38
+ 125 00cc 3ECC     		sw	a5,24(sp)
+  39:servo.c       ****     timer_initpara.period            = SERVO_PERIOD;                   
+ 126              		.loc 1 39 38
+ 127 00ce 231A0100 		sh	zero,20(sp)
+  40:servo.c       ****     timer_initpara.period            = SERVO_PERIOD;                   
+ 128              		.loc 1 40 5 is_stmt 1
+  41:servo.c       ****     timer_initpara.clockdivision     = TIMER_CKDIV_DIV1;
+ 129              		.loc 1 41 5
+  41:servo.c       ****     timer_initpara.clockdivision     = TIMER_CKDIV_DIV1;
+ 130              		.loc 1 41 38 is_stmt 0
+ 131 00d2 231E0100 		sh	zero,28(sp)
+  42:servo.c       ****     timer_init(TIMER1, &timer_initpara);
+ 132              		.loc 1 42 5 is_stmt 1
+  42:servo.c       ****     timer_init(TIMER1, &timer_initpara);
+ 133              		.loc 1 42 38 is_stmt 0
+ 134 00d6 230F0100 		sb	zero,30(sp)
+ 135              		.loc 1 43 5 is_stmt 1
+ 136 00da 97000000 		call	timer_init
+ 136      E7800000 
+ 137              	.LVL11:
+  44:servo.c       **** 
+  45:servo.c       ****     timer_channel_output_struct_para_init(&timer_ocinitpara);
+ 138              		.loc 1 45 5
+ 139 00e2 4800     		addi	a0,sp,4
+ 140 00e4 97000000 		call	timer_channel_output_struct_para_init
+ 140      E7800000 
+ 141              	.LVL12:
+  46:servo.c       ****     timer_ocinitpara.outputstate  = TIMER_CCX_ENABLE;
+ 142              		.loc 1 46 5
+  47:servo.c       ****     timer_ocinitpara.outputnstate = TIMER_CCXN_DISABLE;
+ 143              		.loc 1 47 5
+  48:servo.c       ****     timer_ocinitpara.ocpolarity   = TIMER_OC_POLARITY_HIGH;
+ 144              		.loc 1 48 5
+  49:servo.c       ****     timer_ocinitpara.ocnpolarity  = TIMER_OCN_POLARITY_HIGH;
+ 145              		.loc 1 49 5
+  50:servo.c       ****     timer_ocinitpara.ocidlestate  = TIMER_OC_IDLE_STATE_LOW;
+ 146              		.loc 1 50 5
+  51:servo.c       ****     timer_ocinitpara.ocnidlestate = TIMER_OCN_IDLE_STATE_LOW;
+ 147              		.loc 1 51 5
+  46:servo.c       ****     timer_ocinitpara.outputnstate = TIMER_CCXN_DISABLE;
+ 148              		.loc 1 46 35 is_stmt 0
+ 149 00ec 8547     		li	a5,1
+ 150 00ee 3EC2     		sw	a5,4(sp)
+  48:servo.c       ****     timer_ocinitpara.ocnpolarity  = TIMER_OCN_POLARITY_HIGH;
+ 151              		.loc 1 48 35
+ 152 00f0 02C4     		sw	zero,8(sp)
+  50:servo.c       ****     timer_ocinitpara.ocnidlestate = TIMER_OCN_IDLE_STATE_LOW;
+ 153              		.loc 1 50 35
+ 154 00f2 02C6     		sw	zero,12(sp)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 5
+
+
+  52:servo.c       ****     if (ch&0x1) timer_channel_output_config(TIMER1,TIMER_CH_0,&timer_ocinitpara);
+ 155              		.loc 1 52 5 is_stmt 1
+ 156              		.loc 1 52 8 is_stmt 0
+ 157 00f4 638A0900 		beq	s3,zero,.L6
+ 158              		.loc 1 52 17 is_stmt 1 discriminator 1
+ 159 00f8 5000     		addi	a2,sp,4
+ 160 00fa 8145     		li	a1,0
+ 161 00fc 37050040 		li	a0,1073741824
+ 162 0100 97000000 		call	timer_channel_output_config
+ 162      E7800000 
+ 163              	.LVL13:
+ 164              	.L6:
+  53:servo.c       ****     if (ch&0x2) timer_channel_output_config(TIMER1,TIMER_CH_1,&timer_ocinitpara);
+ 165              		.loc 1 53 5
+ 166              		.loc 1 53 8 is_stmt 0
+ 167 0108 630A0900 		beq	s2,zero,.L7
+ 168              		.loc 1 53 17 is_stmt 1 discriminator 1
+ 169 010c 5000     		addi	a2,sp,4
+ 170 010e 8545     		li	a1,1
+ 171 0110 37050040 		li	a0,1073741824
+ 172 0114 97000000 		call	timer_channel_output_config
+ 172      E7800000 
+ 173              	.LVL14:
+ 174              	.L7:
+  54:servo.c       ****     if (ch&0x4) timer_channel_output_config(TIMER2,TIMER_CH_2,&timer_ocinitpara);
+ 175              		.loc 1 54 5
+ 176              		.loc 1 54 8 is_stmt 0
+ 177 011c 99C8     		beq	s1,zero,.L8
+ 178              		.loc 1 54 17 is_stmt 1 discriminator 1
+ 179 011e 37050040 		li	a0,1073741824
+ 180 0122 5000     		addi	a2,sp,4
+ 181 0124 8945     		li	a1,2
+ 182 0126 13050540 		addi	a0,a0,1024
+ 183 012a 97000000 		call	timer_channel_output_config
+ 183      E7800000 
+ 184              	.LVL15:
+ 185              	.L8:
+  55:servo.c       ****     if (ch&0x8) timer_channel_output_config(TIMER1,TIMER_CH_3,&timer_ocinitpara);
+ 186              		.loc 1 55 5
+ 187              		.loc 1 55 8 is_stmt 0
+ 188 0132 09C8     		beq	s0,zero,.L9
+ 189              		.loc 1 55 17 is_stmt 1 discriminator 1
+ 190 0134 5000     		addi	a2,sp,4
+ 191 0136 8D45     		li	a1,3
+ 192 0138 37050040 		li	a0,1073741824
+ 193 013c 97000000 		call	timer_channel_output_config
+ 193      E7800000 
+ 194              	.LVL16:
+ 195              	.L9:
+  56:servo.c       **** 
+  57:servo.c       ****     if (ch&0x1) {
+ 196              		.loc 1 57 5
+ 197              		.loc 1 57 8 is_stmt 0
+ 198 0144 638D0902 		beq	s3,zero,.L10
+  58:servo.c       ****         timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_0,11999);
+ 199              		.loc 1 58 9 is_stmt 1
+ 200 0148 0D66     		li	a2,12288
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 6
+
+
+ 201 014a 1306F6ED 		addi	a2,a2,-289
+ 202 014e 8145     		li	a1,0
+ 203 0150 37050040 		li	a0,1073741824
+ 204 0154 97000000 		call	timer_channel_output_pulse_value_config
+ 204      E7800000 
+ 205              	.LVL17:
+  59:servo.c       ****         timer_channel_output_mode_config(TIMER1,TIMER_CH_0,TIMER_OC_MODE_PWM0);
+ 206              		.loc 1 59 9
+ 207 015c 13060006 		li	a2,96
+ 208 0160 8145     		li	a1,0
+ 209 0162 37050040 		li	a0,1073741824
+ 210 0166 97000000 		call	timer_channel_output_mode_config
+ 210      E7800000 
+ 211              	.LVL18:
+  60:servo.c       ****         timer_channel_output_shadow_config(TIMER1,TIMER_CH_0,TIMER_OC_SHADOW_DISABLE);
+ 212              		.loc 1 60 9
+ 213 016e 0146     		li	a2,0
+ 214 0170 8145     		li	a1,0
+ 215 0172 37050040 		li	a0,1073741824
+ 216 0176 97000000 		call	timer_channel_output_shadow_config
+ 216      E7800000 
+ 217              	.LVL19:
+ 218              	.L10:
+  61:servo.c       ****     }
+  62:servo.c       ****     if (ch&0x2) {
+ 219              		.loc 1 62 5
+ 220              		.loc 1 62 8 is_stmt 0
+ 221 017e 630D0902 		beq	s2,zero,.L11
+  63:servo.c       ****         timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_1,11999);
+ 222              		.loc 1 63 9 is_stmt 1
+ 223 0182 0D66     		li	a2,12288
+ 224 0184 1306F6ED 		addi	a2,a2,-289
+ 225 0188 8545     		li	a1,1
+ 226 018a 37050040 		li	a0,1073741824
+ 227 018e 97000000 		call	timer_channel_output_pulse_value_config
+ 227      E7800000 
+ 228              	.LVL20:
+  64:servo.c       ****         timer_channel_output_mode_config(TIMER1,TIMER_CH_1,TIMER_OC_MODE_PWM0);
+ 229              		.loc 1 64 9
+ 230 0196 13060006 		li	a2,96
+ 231 019a 8545     		li	a1,1
+ 232 019c 37050040 		li	a0,1073741824
+ 233 01a0 97000000 		call	timer_channel_output_mode_config
+ 233      E7800000 
+ 234              	.LVL21:
+  65:servo.c       ****         timer_channel_output_shadow_config(TIMER1,TIMER_CH_1,TIMER_OC_SHADOW_DISABLE);
+ 235              		.loc 1 65 9
+ 236 01a8 0146     		li	a2,0
+ 237 01aa 8545     		li	a1,1
+ 238 01ac 37050040 		li	a0,1073741824
+ 239 01b0 97000000 		call	timer_channel_output_shadow_config
+ 239      E7800000 
+ 240              	.LVL22:
+ 241              	.L11:
+  66:servo.c       ****     }
+  67:servo.c       ****     if (ch&0x4) {
+ 242              		.loc 1 67 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 7
+
+
+ 243              		.loc 1 67 8 is_stmt 0
+ 244 01b8 85CC     		beq	s1,zero,.L12
+  68:servo.c       ****         timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_2,11999);
+ 245              		.loc 1 68 9 is_stmt 1
+ 246 01ba 0D66     		li	a2,12288
+ 247 01bc 1306F6ED 		addi	a2,a2,-289
+ 248 01c0 8945     		li	a1,2
+ 249 01c2 37050040 		li	a0,1073741824
+ 250 01c6 97000000 		call	timer_channel_output_pulse_value_config
+ 250      E7800000 
+ 251              	.LVL23:
+  69:servo.c       ****         timer_channel_output_mode_config(TIMER1,TIMER_CH_2,TIMER_OC_MODE_PWM0);
+ 252              		.loc 1 69 9
+ 253 01ce 13060006 		li	a2,96
+ 254 01d2 8945     		li	a1,2
+ 255 01d4 37050040 		li	a0,1073741824
+ 256 01d8 97000000 		call	timer_channel_output_mode_config
+ 256      E7800000 
+ 257              	.LVL24:
+  70:servo.c       ****         timer_channel_output_shadow_config(TIMER1,TIMER_CH_2,TIMER_OC_SHADOW_DISABLE);
+ 258              		.loc 1 70 9
+ 259 01e0 0146     		li	a2,0
+ 260 01e2 8945     		li	a1,2
+ 261 01e4 37050040 		li	a0,1073741824
+ 262 01e8 97000000 		call	timer_channel_output_shadow_config
+ 262      E7800000 
+ 263              	.LVL25:
+ 264              	.L12:
+  71:servo.c       ****     }
+  72:servo.c       ****     if (ch&0x8) {
+ 265              		.loc 1 72 5
+ 266              		.loc 1 72 8 is_stmt 0
+ 267 01f0 05CC     		beq	s0,zero,.L13
+  73:servo.c       ****         timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_3,11999);
+ 268              		.loc 1 73 9 is_stmt 1
+ 269 01f2 0D66     		li	a2,12288
+ 270 01f4 1306F6ED 		addi	a2,a2,-289
+ 271 01f8 8D45     		li	a1,3
+ 272 01fa 37050040 		li	a0,1073741824
+ 273 01fe 97000000 		call	timer_channel_output_pulse_value_config
+ 273      E7800000 
+ 274              	.LVL26:
+  74:servo.c       ****         timer_channel_output_mode_config(TIMER1,TIMER_CH_3,TIMER_OC_MODE_PWM0);
+ 275              		.loc 1 74 9
+ 276 0206 13060006 		li	a2,96
+ 277 020a 8D45     		li	a1,3
+ 278 020c 37050040 		li	a0,1073741824
+ 279 0210 97000000 		call	timer_channel_output_mode_config
+ 279      E7800000 
+ 280              	.LVL27:
+  75:servo.c       ****         timer_channel_output_shadow_config(TIMER1,TIMER_CH_3,TIMER_OC_SHADOW_DISABLE);
+ 281              		.loc 1 75 9
+ 282 0218 0146     		li	a2,0
+ 283 021a 8D45     		li	a1,3
+ 284 021c 37050040 		li	a0,1073741824
+ 285 0220 97000000 		call	timer_channel_output_shadow_config
+ 285      E7800000 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 8
+
+
+ 286              	.LVL28:
+ 287              	.L13:
+  76:servo.c       ****     }
+  77:servo.c       ****     
+  78:servo.c       ****     timer_auto_reload_shadow_enable(TIMER1);
+ 288              		.loc 1 78 5
+ 289 0228 37050040 		li	a0,1073741824
+ 290 022c 97000000 		call	timer_auto_reload_shadow_enable
+ 290      E7800000 
+ 291              	.LVL29:
+  79:servo.c       ****     timer_enable(TIMER1);
+ 292              		.loc 1 79 5
+ 293 0234 37050040 		li	a0,1073741824
+ 294 0238 97000000 		call	timer_enable
+ 294      E7800000 
+ 295              	.LVL30:
+  80:servo.c       **** }
+ 296              		.loc 1 80 1 is_stmt 0
+ 297 0240 F250     		lw	ra,60(sp)
+ 298              		.cfi_restore 1
+ 299 0242 6254     		lw	s0,56(sp)
+ 300              		.cfi_restore 8
+ 301 0244 D254     		lw	s1,52(sp)
+ 302              		.cfi_restore 9
+ 303 0246 4259     		lw	s2,48(sp)
+ 304              		.cfi_restore 18
+ 305 0248 B259     		lw	s3,44(sp)
+ 306              		.cfi_restore 19
+ 307 024a 2161     		addi	sp,sp,64
+ 308              	.LCFI1:
+ 309              		.cfi_def_cfa_offset 0
+ 310 024c 8280     		jr	ra
+ 311              		.cfi_endproc
+ 312              	.LFE2:
+ 314              		.section	.text.__init_servo,"ax",@progbits
+ 315              		.align	1
+ 316              		.globl	__init_servo
+ 318              	__init_servo:
+ 319              	.LFB3:
+  81:servo.c       **** 
+  82:servo.c       **** // intitialize servo struct based on timer channel
+  83:servo.c       **** Servo __init_servo(uint16_t ch){
+ 320              		.loc 1 83 32 is_stmt 1
+ 321              		.cfi_startproc
+ 322              	.LVL31:
+  84:servo.c       ****     Servo init_servo = { .channel=ch, .val=-1 };
+ 323              		.loc 1 84 5
+  85:servo.c       ****     return init_servo;           
+ 324              		.loc 1 85 5
+  83:servo.c       ****     Servo init_servo = { .channel=ch, .val=-1 };
+ 325              		.loc 1 83 32 is_stmt 0
+ 326 0000 4111     		addi	sp,sp,-16
+ 327              	.LCFI2:
+ 328              		.cfi_def_cfa_offset 16
+ 329              		.loc 1 85 12
+ 330 0002 2314A100 		sh	a0,8(sp)
+ 331              	.LVL32:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 9
+
+
+  86:servo.c       **** }
+ 332              		.loc 1 86 1
+ 333 0006 2245     		lw	a0,8(sp)
+ 334              	.LVL33:
+ 335 0008 FD55     		li	a1,-1
+ 336 000a 4101     		addi	sp,sp,16
+ 337              	.LCFI3:
+ 338              		.cfi_def_cfa_offset 0
+ 339              	.LVL34:
+ 340 000c 8280     		jr	ra
+ 341              		.cfi_endproc
+ 342              	.LFE3:
+ 344              		.section	.text.servo_write,"ax",@progbits
+ 345              		.align	1
+ 346              		.globl	servo_write
+ 348              	servo_write:
+ 349              	.LFB4:
+  87:servo.c       **** 
+  88:servo.c       **** // sets the servo to a specified angle between from 0 to max degrees from timer1
+  89:servo.c       **** void servo_write(Servo motor){
+ 350              		.loc 1 89 30 is_stmt 1
+ 351              		.cfi_startproc
+ 352              	.LVL35:
+  90:servo.c       ****     if (motor.val >= 0 && motor.val <= SERVO_MAX_DEG){
+ 353              		.loc 1 90 5
+  89:servo.c       ****     if (motor.val >= 0 && motor.val <= SERVO_MAX_DEG){
+ 354              		.loc 1 89 30 is_stmt 0
+ 355 0000 4111     		addi	sp,sp,-16
+ 356              	.LCFI4:
+ 357              		.cfi_def_cfa_offset 16
+  89:servo.c       ****     if (motor.val >= 0 && motor.val <= SERVO_MAX_DEG){
+ 358              		.loc 1 89 30
+ 359 0002 2AC4     		sw	a0,8(sp)
+ 360              		.loc 1 90 8
+ 361 0004 1306400B 		li	a2,180
+ 362 0008 6363B602 		bgtu	a1,a2,.L53
+  91:servo.c       ****         // send the corresponding PWM value of the angle 
+  92:servo.c       ****         /* < Koden når här men servo rör sig inte om 2 stycken är initierade >*/
+  93:servo.c       ****         timer_channel_output_pulse_value_config(TIMER1, motor.channel, 
+ 363              		.loc 1 93 9 is_stmt 1
+ 364              	.LVL36:
+ 365              	.LBB4:
+ 366              	.LBB5:
+  94:servo.c       ****                                                 map(motor.val, 0, SERVO_MAX_DEG, SERVO_MIN_VAL, SER
+  95:servo.c       ****         //timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_2, map(angle, 0, SERVO_MAX_DEG, S
+  96:servo.c       ****     }
+  97:servo.c       **** }
+  98:servo.c       **** 
+  99:servo.c       **** // remap a value from one range to the other
+ 100:servo.c       **** uint32_t map(int value, int inMin, int inMax, int outMin, int outMax){               
+ 101:servo.c       ****     return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+ 367              		.loc 1 101 5
+ 368              		.loc 1 101 28 is_stmt 0
+ 369 000c 9307C076 		li	a5,1900
+ 370 0010 B385F502 		mul	a1,a1,a5
+ 371              	.LVL37:
+ 372              	.LBE5:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 10
+
+
+ 373              	.LBE4:
+  93:servo.c       ****                                                 map(motor.val, 0, SERVO_MAX_DEG, SERVO_MIN_VAL, SER
+ 374              		.loc 1 93 9
+ 375 0014 37050040 		li	a0,1073741824
+ 376              	.LBB7:
+ 377              	.LBB6:
+ 378              		.loc 1 101 48
+ 379 0018 33C6C502 		div	a2,a1,a2
+ 380              	.LBE6:
+ 381              	.LBE7:
+  93:servo.c       ****                                                 map(motor.val, 0, SERVO_MAX_DEG, SERVO_MIN_VAL, SER
+ 382              		.loc 1 93 9
+ 383 001c 83558100 		lhu	a1,8(sp)
+  97:servo.c       **** 
+ 384              		.loc 1 97 1
+ 385 0020 4101     		addi	sp,sp,16
+ 386              	.LCFI5:
+ 387              		.cfi_remember_state
+ 388              		.cfi_def_cfa_offset 0
+  93:servo.c       ****                                                 map(motor.val, 0, SERVO_MAX_DEG, SERVO_MIN_VAL, SER
+ 389              		.loc 1 93 9
+ 390 0022 1306461F 		addi	a2,a2,500
+ 391 0026 17030000 		tail	timer_channel_output_pulse_value_config
+ 391      67000300 
+ 392              	.LVL38:
+ 393              	.L53:
+ 394              	.LCFI6:
+ 395              		.cfi_restore_state
+  97:servo.c       **** 
+ 396              		.loc 1 97 1
+ 397 002e 4101     		addi	sp,sp,16
+ 398              	.LCFI7:
+ 399              		.cfi_def_cfa_offset 0
+ 400 0030 8280     		jr	ra
+ 401              		.cfi_endproc
+ 402              	.LFE4:
+ 404              		.section	.text.map,"ax",@progbits
+ 405              		.align	1
+ 406              		.globl	map
+ 408              	map:
+ 409              	.LFB5:
+ 100:servo.c       ****     return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+ 410              		.loc 1 100 70 is_stmt 1
+ 411              		.cfi_startproc
+ 412              	.LVL39:
+ 413              		.loc 1 101 5
+ 414              		.loc 1 101 19 is_stmt 0
+ 415 0000 0D8D     		sub	a0,a0,a1
+ 416              	.LVL40:
+ 417              		.loc 1 101 38
+ 418 0002 158F     		sub	a4,a4,a3
+ 419              	.LVL41:
+ 420              		.loc 1 101 28
+ 421 0004 3305E502 		mul	a0,a0,a4
+ 422              		.loc 1 101 57
+ 423 0008 0D8E     		sub	a2,a2,a1
+ 424              	.LVL42:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 11
+
+
+ 425              		.loc 1 101 48
+ 426 000a 3345C502 		div	a0,a0,a2
+ 102:servo.c       **** }...
+ 427              		.loc 1 102 1
+ 428 000e 3695     		add	a0,a0,a3
+ 429 0010 8280     		ret
+ 430              		.cfi_endproc
+ 431              	.LFE5:
+ 433              		.text
+ 434              	.Letext0:
+ 435              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 436              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 437              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_timer.h"
+ 438              		.file 5 "servo.h"
+ 439              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
+ 440              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
+ 441              		.file 8 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 servo.c
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:13     .text.T1_init_PWM:0000000000000000 T1_init_PWM
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:17     .text.T1_init_PWM:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:19     .text.T1_init_PWM:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:20     .text.T1_init_PWM:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:21     .text.T1_init_PWM:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:22     .text.T1_init_PWM:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:23     .text.T1_init_PWM:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:25     .text.T1_init_PWM:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:27     .text.T1_init_PWM:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:30     .text.T1_init_PWM:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:33     .text.T1_init_PWM:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:37     .text.T1_init_PWM:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:38     .text.T1_init_PWM:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:39     .text.T1_init_PWM:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:40     .text.T1_init_PWM:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:42     .text.T1_init_PWM:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:45     .text.T1_init_PWM:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:50     .text.T1_init_PWM:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:51     .text.T1_init_PWM:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:53     .text.T1_init_PWM:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:62     .text.T1_init_PWM:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:64     .text.T1_init_PWM:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:66     .text.T1_init_PWM:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:75     .text.T1_init_PWM:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:77     .text.T1_init_PWM:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:79     .text.T1_init_PWM:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:88     .text.T1_init_PWM:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:90     .text.T1_init_PWM:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:92     .text.T1_init_PWM:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:101    .text.T1_init_PWM:0000000000000098 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:105    .text.T1_init_PWM:00000000000000a4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:109    .text.T1_init_PWM:00000000000000b0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:113    .text.T1_init_PWM:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:114    .text.T1_init_PWM:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:115    .text.T1_init_PWM:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:116    .text.T1_init_PWM:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:119    .text.T1_init_PWM:00000000000000c0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:122    .text.T1_init_PWM:00000000000000c6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:125    .text.T1_init_PWM:00000000000000cc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:127    .text.T1_init_PWM:00000000000000ce .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:129    .text.T1_init_PWM:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:130    .text.T1_init_PWM:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:131    .text.T1_init_PWM:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:133    .text.T1_init_PWM:00000000000000d6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:134    .text.T1_init_PWM:00000000000000d6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:136    .text.T1_init_PWM:00000000000000da .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:139    .text.T1_init_PWM:00000000000000e2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:143    .text.T1_init_PWM:00000000000000ec .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:144    .text.T1_init_PWM:00000000000000ec .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:145    .text.T1_init_PWM:00000000000000ec .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:146    .text.T1_init_PWM:00000000000000ec .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:147    .text.T1_init_PWM:00000000000000ec .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:148    .text.T1_init_PWM:00000000000000ec .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:149    .text.T1_init_PWM:00000000000000ec .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:152    .text.T1_init_PWM:00000000000000f0 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 13
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:154    .text.T1_init_PWM:00000000000000f2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:156    .text.T1_init_PWM:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:157    .text.T1_init_PWM:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:159    .text.T1_init_PWM:00000000000000f8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:166    .text.T1_init_PWM:0000000000000108 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:167    .text.T1_init_PWM:0000000000000108 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:169    .text.T1_init_PWM:000000000000010c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:176    .text.T1_init_PWM:000000000000011c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:177    .text.T1_init_PWM:000000000000011c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:179    .text.T1_init_PWM:000000000000011e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:187    .text.T1_init_PWM:0000000000000132 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:188    .text.T1_init_PWM:0000000000000132 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:190    .text.T1_init_PWM:0000000000000134 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:197    .text.T1_init_PWM:0000000000000144 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:198    .text.T1_init_PWM:0000000000000144 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:200    .text.T1_init_PWM:0000000000000148 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:207    .text.T1_init_PWM:000000000000015c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:213    .text.T1_init_PWM:000000000000016e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:220    .text.T1_init_PWM:000000000000017e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:221    .text.T1_init_PWM:000000000000017e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:223    .text.T1_init_PWM:0000000000000182 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:230    .text.T1_init_PWM:0000000000000196 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:236    .text.T1_init_PWM:00000000000001a8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:243    .text.T1_init_PWM:00000000000001b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:244    .text.T1_init_PWM:00000000000001b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:246    .text.T1_init_PWM:00000000000001ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:253    .text.T1_init_PWM:00000000000001ce .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:259    .text.T1_init_PWM:00000000000001e0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:266    .text.T1_init_PWM:00000000000001f0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:267    .text.T1_init_PWM:00000000000001f0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:269    .text.T1_init_PWM:00000000000001f2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:276    .text.T1_init_PWM:0000000000000206 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:282    .text.T1_init_PWM:0000000000000218 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:289    .text.T1_init_PWM:0000000000000228 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:293    .text.T1_init_PWM:0000000000000234 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:297    .text.T1_init_PWM:0000000000000240 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:298    .text.T1_init_PWM:0000000000000242 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:300    .text.T1_init_PWM:0000000000000244 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:302    .text.T1_init_PWM:0000000000000246 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:304    .text.T1_init_PWM:0000000000000248 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:306    .text.T1_init_PWM:000000000000024a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:309    .text.T1_init_PWM:000000000000024c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:311    .text.T1_init_PWM:000000000000024e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:318    .text.__init_servo:0000000000000000 __init_servo
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:321    .text.__init_servo:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:323    .text.__init_servo:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:324    .text.__init_servo:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:325    .text.__init_servo:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:326    .text.__init_servo:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:328    .text.__init_servo:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:330    .text.__init_servo:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:333    .text.__init_servo:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:338    .text.__init_servo:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:341    .text.__init_servo:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:348    .text.servo_write:0000000000000000 servo_write
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:351    .text.servo_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:353    .text.servo_write:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 14
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:354    .text.servo_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:355    .text.servo_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:357    .text.servo_write:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:359    .text.servo_write:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:361    .text.servo_write:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:367    .text.servo_write:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:368    .text.servo_write:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:369    .text.servo_write:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:375    .text.servo_write:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:379    .text.servo_write:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:383    .text.servo_write:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:385    .text.servo_write:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:387    .text.servo_write:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:388    .text.servo_write:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:390    .text.servo_write:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:395    .text.servo_write:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:397    .text.servo_write:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:399    .text.servo_write:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:401    .text.servo_write:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:408    .text.map:0000000000000000 map
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:411    .text.map:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:413    .text.map:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:414    .text.map:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:415    .text.map:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:418    .text.map:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:421    .text.map:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:423    .text.map:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:426    .text.map:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:428    .text.map:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:430    .text.map:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:314    .text.T1_init_PWM:000000000000024e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:344    .text.__init_servo:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:404    .text.servo_write:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:433    .text.map:0000000000000012 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:60     .text.T1_init_PWM:0000000000000044 .L2
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:73     .text.T1_init_PWM:0000000000000062 .L3
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:86     .text.T1_init_PWM:000000000000007e .L4
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:99     .text.T1_init_PWM:0000000000000098 .L5
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:164    .text.T1_init_PWM:0000000000000108 .L6
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:174    .text.T1_init_PWM:000000000000011c .L7
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:185    .text.T1_init_PWM:0000000000000132 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:195    .text.T1_init_PWM:0000000000000144 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:218    .text.T1_init_PWM:000000000000017e .L10
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:241    .text.T1_init_PWM:00000000000001b8 .L11
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:264    .text.T1_init_PWM:00000000000001f0 .L12
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:287    .text.T1_init_PWM:0000000000000228 .L13
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:393    .text.servo_write:000000000000002e .L53
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:1699   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2421   .debug_str:0000000000000000 .LASF92
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2435   .debug_str:00000000000000c0 .LASF93
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2597   .debug_str:00000000000004e3 .LASF94
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2401   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2419   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2533   .debug_str:000000000000034b .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2527   .debug_str:000000000000031f .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2613   .debug_str:000000000000059c .LASF4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 15
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2517   .debug_str:00000000000002df .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2493   .debug_str:0000000000000226 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2445   .debug_str:00000000000000f1 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2555   .debug_str:00000000000003e4 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2481   .debug_str:00000000000001e9 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2441   .debug_str:00000000000000de .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2567   .debug_str:0000000000000424 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2439   .debug_str:00000000000000d0 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2529   .debug_str:000000000000032b .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2459   .debug_str:0000000000000178 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2535   .debug_str:0000000000000358 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2531   .debug_str:0000000000000342 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2559   .debug_str:00000000000003fd .LASF95
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2463   .debug_str:000000000000018c .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2561   .debug_str:000000000000040d .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2607   .debug_str:000000000000056b .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2603   .debug_str:0000000000000556 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2585   .debug_str:0000000000000488 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2499   .debug_str:0000000000000263 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2501   .debug_str:000000000000026e .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2503   .debug_str:0000000000000279 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2505   .debug_str:0000000000000284 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2507   .debug_str:000000000000028f .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2509   .debug_str:000000000000029a .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2477   .debug_str:00000000000001d4 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2485   .debug_str:00000000000001fb .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2487   .debug_str:0000000000000204 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2581   .debug_str:0000000000000472 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2583   .debug_str:000000000000047d .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2587   .debug_str:0000000000000492 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2589   .debug_str:000000000000049c .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2549   .debug_str:00000000000003c1 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2551   .debug_str:00000000000003ca .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2471   .debug_str:00000000000001b6 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2473   .debug_str:00000000000001bf .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2525   .debug_str:0000000000000316 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2523   .debug_str:000000000000030e .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2609   .debug_str:0000000000000573 .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2443   .debug_str:00000000000000e9 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2565   .debug_str:000000000000041d .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2425   .debug_str:000000000000008e .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2427   .debug_str:0000000000000098 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2429   .debug_str:00000000000000a2 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2431   .debug_str:00000000000000ac .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2433   .debug_str:00000000000000b6 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2521   .debug_str:0000000000000305 .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2467   .debug_str:00000000000001a1 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2497   .debug_str:0000000000000258 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2483   .debug_str:00000000000001f2 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2579   .debug_str:0000000000000467 .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2539   .debug_str:0000000000000372 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2489   .debug_str:000000000000020d .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2553   .debug_str:00000000000003d3 .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2563   .debug_str:0000000000000416 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2451   .debug_str:0000000000000139 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2591   .debug_str:00000000000004a6 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2449   .debug_str:0000000000000122 .LASF58
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 16
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2469   .debug_str:00000000000001aa .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2575   .debug_str:0000000000000454 .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2595   .debug_str:00000000000004d8 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2605   .debug_str:000000000000055f .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2465   .debug_str:0000000000000195 .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2569   .debug_str:0000000000000436 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2547   .debug_str:00000000000003a7 .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2511   .debug_str:00000000000002a5 .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2423   .debug_str:0000000000000088 .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2437   .debug_str:00000000000000c8 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2453   .debug_str:0000000000000147 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2599   .debug_str:0000000000000543 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2577   .debug_str:0000000000000461 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2571   .debug_str:0000000000000443 .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2541   .debug_str:000000000000037c .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2475   .debug_str:00000000000001c8 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:349    .text.servo_write:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:402    .text.servo_write:0000000000000032 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2210   .debug_loc:0000000000000000 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2557   .debug_str:00000000000003f7 .LASF74
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2238   .debug_loc:0000000000000044 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:365    .text.servo_write:000000000000000c .LBB4
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:392    .text.servo_write:000000000000002e .LVL38
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2543   .debug_str:0000000000000383 .LASF96
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:319    .text.__init_servo:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:342    .text.__init_servo:000000000000000e .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2257   .debug_loc:000000000000006a .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2275   .debug_loc:0000000000000096 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2515   .debug_str:00000000000002d4 .LASF77
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2292   .debug_loc:00000000000000c1 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2461   .debug_str:0000000000000180 .LASF76
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:14     .text.T1_init_PWM:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:312    .text.T1_init_PWM:000000000000024e .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2308   .debug_loc:00000000000000dd .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2326   .debug_loc:000000000000010a .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2537   .debug_str:0000000000000361 .LASF78
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2455   .debug_str:000000000000014d .LASF79
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:43     .text.T1_init_PWM:000000000000001a .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:48     .text.T1_init_PWM:000000000000002a .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:59     .text.T1_init_PWM:0000000000000044 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:72     .text.T1_init_PWM:0000000000000062 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:85     .text.T1_init_PWM:000000000000007e .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:98     .text.T1_init_PWM:0000000000000098 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:103    .text.T1_init_PWM:00000000000000a4 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:107    .text.T1_init_PWM:00000000000000b0 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:111    .text.T1_init_PWM:00000000000000ba .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:137    .text.T1_init_PWM:00000000000000e2 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:141    .text.T1_init_PWM:00000000000000ec .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:163    .text.T1_init_PWM:0000000000000108 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:173    .text.T1_init_PWM:000000000000011c .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:184    .text.T1_init_PWM:0000000000000132 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:194    .text.T1_init_PWM:0000000000000144 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:205    .text.T1_init_PWM:000000000000015c .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:211    .text.T1_init_PWM:000000000000016e .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:217    .text.T1_init_PWM:000000000000017e .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:228    .text.T1_init_PWM:0000000000000196 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:234    .text.T1_init_PWM:00000000000001a8 .LVL21
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 17
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:240    .text.T1_init_PWM:00000000000001b8 .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:251    .text.T1_init_PWM:00000000000001ce .LVL23
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:257    .text.T1_init_PWM:00000000000001e0 .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:263    .text.T1_init_PWM:00000000000001f0 .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:274    .text.T1_init_PWM:0000000000000206 .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:280    .text.T1_init_PWM:0000000000000218 .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:286    .text.T1_init_PWM:0000000000000228 .LVL28
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:291    .text.T1_init_PWM:0000000000000234 .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:295    .text.T1_init_PWM:0000000000000240 .LVL30
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:409    .text.map:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:431    .text.map:0000000000000012 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2340   .debug_loc:000000000000012b .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2354   .debug_loc:000000000000014c .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2368   .debug_loc:000000000000016d .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2495   .debug_str:0000000000000230 .LASF80
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2519   .debug_str:00000000000002ed .LASF81
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2573   .debug_str:000000000000044a .LASF82
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2601   .debug_str:0000000000000549 .LASF83
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2545   .debug_str:0000000000000390 .LASF84
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2479   .debug_str:00000000000001de .LASF85
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2447   .debug_str:00000000000000fc .LASF86
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2457   .debug_str:000000000000015c .LASF87
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2611   .debug_str:000000000000057b .LASF88
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2513   .debug_str:00000000000002b1 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2593   .debug_str:00000000000004b8 .LASF90
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:2491   .debug_str:0000000000000219 .LASF91
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:356    .text.servo_write:0000000000000002 .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:386    .text.servo_write:0000000000000022 .LCFI5
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:394    .text.servo_write:000000000000002e .LCFI6
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:398    .text.servo_write:0000000000000030 .LCFI7
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:352    .text.servo_write:0000000000000000 .LVL35
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:371    .text.servo_write:0000000000000014 .LVL37
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:327    .text.__init_servo:0000000000000002 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:337    .text.__init_servo:000000000000000c .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:322    .text.__init_servo:0000000000000000 .LVL31
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:334    .text.__init_servo:0000000000000008 .LVL33
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:339    .text.__init_servo:000000000000000c .LVL34
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:331    .text.__init_servo:0000000000000006 .LVL32
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:24     .text.T1_init_PWM:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:308    .text.T1_init_PWM:000000000000024c .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:18     .text.T1_init_PWM:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:31     .text.T1_init_PWM:000000000000000a .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:412    .text.map:0000000000000000 .LVL39
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:416    .text.map:0000000000000002 .LVL40
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:424    .text.map:000000000000000a .LVL42
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:419    .text.map:0000000000000004 .LVL41
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:443    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:373    .text.servo_write:0000000000000014 .LBE4
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:376    .text.servo_write:0000000000000018 .LBB7
+C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s:381    .text.servo_write:000000000000001c .LBE7
+
+UNDEFINED SYMBOLS
+rcu_periph_clock_enable
+gpio_init
+timer_deinit
+timer_struct_para_init
+timer_init
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRxzLoE.s 			page 18
+
+
+timer_channel_output_struct_para_init
+timer_channel_output_config
+timer_channel_output_pulse_value_config
+timer_channel_output_mode_config
+timer_channel_output_shadow_config
+timer_auto_reload_shadow_enable
+timer_enable

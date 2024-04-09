@@ -1,0 +1,724 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 1
+
+
+   1              		.file	"gd32vf103_exmc.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.exmc_norsram_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	exmc_norsram_deinit
+  13              	exmc_norsram_deinit:
+  14              	.LFB2:
+  15              		.file 1 "./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c"
+   1:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /*!
+   2:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \file    gd32vf103_exmc.c
+   3:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \brief   EXMC driver
+   4:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+   5:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \version 2019-06-05, V1.0.0, firmware for GD32VF103
+   6:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \version 2020-08-04, V1.1.0, firmware for GD32VF103
+   7:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** */
+   8:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+   9:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /*
+  10:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     Copyright (c) 2020, GigaDevice Semiconductor Inc.
+  11:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  12:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     Redistribution and use in source and binary forms, with or without modification,
+  13:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** are permitted provided that the following conditions are met:
+  14:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  15:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     1. Redistributions of source code must retain the above copyright notice, this
+  16:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****        list of conditions and the following disclaimer.
+  17:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     2. Redistributions in binary form must reproduce the above copyright notice,
+  18:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****        this list of conditions and the following disclaimer in the documentation
+  19:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****        and/or other materials provided with the distribution.
+  20:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     3. Neither the name of the copyright holder nor the names of its contributors
+  21:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****        may be used to endorse or promote products derived from this software without
+  22:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****        specific prior written permission.
+  23:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  24:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  26:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+  27:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+  28:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+  29:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  30:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  31:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  32:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  33:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** OF SUCH DAMAGE.
+  34:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** */
+  35:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  36:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #include "gd32vf103_exmc.h"
+  37:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  38:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /* EXMC bank0 register reset value */
+  39:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define BANK0_SNCTL0_REGION_RESET         ((uint32_t)0x000030DAU)
+  40:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define BANK0_SNTCFG_RESET                ((uint32_t)0x0FFFFFFFU)
+  41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /* EXMC register bit offset */
+  43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNCTL_NRMUX_OFFSET                ((uint32_t)1U)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 2
+
+
+  44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNCTL_WREN_OFFSET                 ((uint32_t)12U)
+  45:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNCTL_NRWTEN_OFFSET               ((uint32_t)13U)
+  46:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNCTL_ASYNCWAIT_OFFSET            ((uint32_t)15U)
+  47:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  48:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNTCFG_AHLD_OFFSET                ((uint32_t)4U)
+  49:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNTCFG_DSET_OFFSET                ((uint32_t)8U)
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNTCFG_BUSLAT_OFFSET              ((uint32_t)16U)
+  51:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /*!
+  53:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \brief      deinitialize EXMC NOR/SRAM region
+  54:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[in]  norsram_region: select the region of bank0
+  55:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****       \arg        EXMC_BANK0_NORSRAM_REGIONx(x=0)
+  56:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[out] none
+  57:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \retval     none
+  58:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** */
+  59:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** void exmc_norsram_deinit(uint32_t norsram_region)
+  60:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** {
+  16              		.loc 1 60 1
+  17              		.cfi_startproc
+  18              	.LVL0:
+  61:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     /* reset the registers */
+  62:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     if(EXMC_BANK0_NORSRAM_REGION0 == norsram_region){
+  19              		.loc 1 62 5
+  20              		.loc 1 62 7 is_stmt 0
+  21 0000 19E5     		bne	a0,zero,.L2
+  63:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****         EXMC_SNCTL(norsram_region) = BANK0_SNCTL0_REGION_RESET;
+  22              		.loc 1 63 9 is_stmt 1
+  23              		.loc 1 63 36 is_stmt 0
+  24 0002 8D67     		li	a5,12288
+  25 0004 370700A0 		li	a4,-1610612736
+  26 0008 9387A70D 		addi	a5,a5,218
+  27 000c 1CC3     		sw	a5,0(a4)
+  28              	.L2:
+  64:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     }
+  65:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     EXMC_SNTCFG(norsram_region) = BANK0_SNTCFG_RESET;
+  29              		.loc 1 66 5 is_stmt 1
+  30 000e B70700A0 		li	a5,-1610612736
+  31 0012 9107     		addi	a5,a5,4
+  32 0014 0E05     		slli	a0,a0,3
+  33              	.LVL1:
+  34 0016 3E95     		add	a0,a0,a5
+  35              		.loc 1 66 33 is_stmt 0
+  36 0018 B7070010 		li	a5,268435456
+  37 001c FD17     		addi	a5,a5,-1
+  38 001e 1CC1     		sw	a5,0(a0)
+  67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** }
+  39              		.loc 1 67 1
+  40 0020 8280     		ret
+  41              		.cfi_endproc
+  42              	.LFE2:
+  44              		.section	.text.exmc_norsram_struct_para_init,"ax",@progbits
+  45              		.align	1
+  46              		.globl	exmc_norsram_struct_para_init
+  48              	exmc_norsram_struct_para_init:
+  49              	.LFB3:
+  68:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 3
+
+
+  69:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /*!
+  70:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \brief      initialize the structure exmc_norsram_parameter_struct
+  71:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[in]  none
+  72:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[out] exmc_norsram_init_struct: the initialized structure exmc_norsram_parameter_struct p
+  73:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \retval     none
+  74:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** */
+  75:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** void exmc_norsram_struct_para_init(exmc_norsram_parameter_struct* exmc_norsram_init_struct)
+  76:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** {
+  50              		.loc 1 76 1 is_stmt 1
+  51              		.cfi_startproc
+  52              	.LVL2:
+  77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     /* configure the structure with default value */
+  78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->norsram_region = EXMC_BANK0_NORSRAM_REGION0;
+  53              		.loc 1 78 5
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->address_data_mux = ENABLE;
+  54              		.loc 1 79 48 is_stmt 0
+  55 0000 8547     		li	a5,1
+  56 0002 5CCD     		sw	a5,28(a0)
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->memory_type = EXMC_MEMORY_TYPE_SRAM;
+  81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->databus_width = EXMC_NOR_DATABUS_WIDTH_16B;
+  82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->nwait_polarity = EXMC_NWAIT_POLARITY_LOW;
+  83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->memory_write = ENABLE;
+  57              		.loc 1 83 44
+  58 0004 5CC5     		sw	a5,12(a0)
+  84:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->nwait_signal = ENABLE;
+  59              		.loc 1 84 44
+  60 0006 1CC5     		sw	a5,8(a0)
+  85:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->asyn_wait = DISABLE;
+  86:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  87:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     /* read/write timing configure */
+  88:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->read_write_timing->asyn_address_setuptime = 0xFU;
+  61              		.loc 1 88 29
+  62 0008 1C51     		lw	a5,32(a0)
+  81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->nwait_polarity = EXMC_NWAIT_POLARITY_LOW;
+  63              		.loc 1 81 45
+  64 000a 4147     		li	a4,16
+  65 000c 58C9     		sw	a4,20(a0)
+  78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->address_data_mux = ENABLE;
+  66              		.loc 1 78 46
+  67 000e 23200500 		sw	zero,0(a0)
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->memory_type = EXMC_MEMORY_TYPE_SRAM;
+  68              		.loc 1 79 5 is_stmt 1
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->databus_width = EXMC_NOR_DATABUS_WIDTH_16B;
+  69              		.loc 1 80 5
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->databus_width = EXMC_NOR_DATABUS_WIDTH_16B;
+  70              		.loc 1 80 43 is_stmt 0
+  71 0012 232C0500 		sw	zero,24(a0)
+  81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->nwait_polarity = EXMC_NWAIT_POLARITY_LOW;
+  72              		.loc 1 81 5 is_stmt 1
+  82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->memory_write = ENABLE;
+  73              		.loc 1 82 5
+  82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->memory_write = ENABLE;
+  74              		.loc 1 82 46 is_stmt 0
+  75 0016 23280500 		sw	zero,16(a0)
+  83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->nwait_signal = ENABLE;
+  76              		.loc 1 83 5 is_stmt 1
+  84:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->asyn_wait = DISABLE;
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 4
+
+
+  77              		.loc 1 84 5
+  85:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  78              		.loc 1 85 5
+  85:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  79              		.loc 1 85 41 is_stmt 0
+  80 001a 23220500 		sw	zero,4(a0)
+  81              		.loc 1 88 5 is_stmt 1
+  82              		.loc 1 88 73 is_stmt 0
+  83 001e 3D47     		li	a4,15
+  89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime = 0xFU;
+  90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime = 0xFFU;
+  84              		.loc 1 90 70
+  85 0020 9306F00F 		li	a3,255
+  88:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime = 0xFU;
+  86              		.loc 1 88 73
+  87 0024 D8C7     		sw	a4,12(a5)
+  89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime = 0xFU;
+  88              		.loc 1 89 5 is_stmt 1
+  89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime = 0xFU;
+  89              		.loc 1 89 72 is_stmt 0
+  90 0026 98C7     		sw	a4,8(a5)
+  91              		.loc 1 90 5 is_stmt 1
+  92              		.loc 1 90 70 is_stmt 0
+  93 0028 D4C3     		sw	a3,4(a5)
+  91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->read_write_timing->bus_latency = 0xFU;
+  94              		.loc 1 91 5 is_stmt 1
+  95              		.loc 1 91 62 is_stmt 0
+  96 002a 98C3     		sw	a4,0(a5)
+  92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** }
+  97              		.loc 1 92 1
+  98 002c 8280     		ret
+  99              		.cfi_endproc
+ 100              	.LFE3:
+ 102              		.section	.text.exmc_norsram_init,"ax",@progbits
+ 103              		.align	1
+ 104              		.globl	exmc_norsram_init
+ 106              	exmc_norsram_init:
+ 107              	.LFB4:
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+  94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /*!
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \brief      initialize EXMC NOR/SRAM region
+  96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[in]  exmc_norsram_parameter_struct: configure the EXMC NOR/SRAM parameter
+  97:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   norsram_region: EXMC_BANK0_NORSRAM_REGIONx,x=0
+  98:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   asyn_wait: ENABLE or DISABLE
+  99:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   nwait_signal: ENABLE or DISABLE
+ 100:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   memory_write: ENABLE or DISABLE
+ 101:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   nwait_polarity: EXMC_NWAIT_POLARITY_LOW,EXMC_NWAIT_POLARITY_HIGH
+ 102:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   databus_width: EXMC_NOR_DATABUS_WIDTH_8B,EXMC_NOR_DATABUS_WIDTH_16B
+ 103:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   memory_type: EXMC_MEMORY_TYPE_SRAM,EXMC_MEMORY_TYPE_PSRAM,EXMC_MEMORY_TYPE_NOR
+ 104:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   address_data_mux: ENABLE
+ 105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                   read_write_timing: structure exmc_norsram_timing_parameter_struct set the time
+ 106:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[out] none
+ 107:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \retval     none
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** */
+ 109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** void exmc_norsram_init(exmc_norsram_parameter_struct* exmc_norsram_init_struct)
+ 110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** {
+ 108              		.loc 1 110 1 is_stmt 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 5
+
+
+ 109              		.cfi_startproc
+ 110              	.LVL3:
+ 111:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     uint32_t snctl = 0x00000000U, sntcfg = 0x00000000U;
+ 111              		.loc 1 111 5
+ 112:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 113:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     /* get the register value */
+ 114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     snctl = EXMC_SNCTL(exmc_norsram_init_struct->norsram_region);
+ 112              		.loc 1 114 5
+ 113              		.loc 1 114 13 is_stmt 0
+ 114 0000 1C41     		lw	a5,0(a0)
+ 115 0002 37060014 		li	a2,335544320
+ 115:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 116:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     /* clear relative bits */
+ 117:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     snctl &= ((uint32_t)~(EXMC_SNCTL_NREN | EXMC_SNCTL_NRTP | EXMC_SNCTL_NRW | EXMC_SNCTL_NRWTPOL |
+ 116              		.loc 1 117 11
+ 117 0006 5577     		li	a4,-45056
+ 114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 118              		.loc 1 114 13
+ 119 0008 3E96     		add	a2,a2,a5
+ 120 000a 0E06     		slli	a2,a2,3
+ 114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 121              		.loc 1 114 11
+ 122 000c 1C42     		lw	a5,0(a2)
+ 123              	.LVL4:
+ 124              		.loc 1 117 5 is_stmt 1
+ 125              		.loc 1 117 11 is_stmt 0
+ 126 000e 130717D8 		addi	a4,a4,-639
+ 118:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                           EXMC_SNCTL_WREN | EXMC_SNCTL_NRWTEN | EXMC_SNCTL_ASYNCWAIT | EXMC_SNCTL_N
+ 119:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     snctl |= (uint32_t)((uint32_t)exmc_norsram_init_struct->address_data_mux << SNCTL_NRMUX_OFFSET)
+ 121:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->memory_type |
+ 127              		.loc 1 121 49
+ 128 0012 0C4D     		lw	a1,24(a0)
+ 117:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                           EXMC_SNCTL_WREN | EXMC_SNCTL_NRWTEN | EXMC_SNCTL_ASYNCWAIT | EXMC_SNCTL_N
+ 129              		.loc 1 117 11
+ 130 0014 7D8F     		and	a4,a5,a4
+ 131              	.LVL5:
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->memory_type |
+ 132              		.loc 1 120 5 is_stmt 1
+ 122:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->databus_width |
+ 133              		.loc 1 122 65 is_stmt 0
+ 134 0016 5C49     		lw	a5,20(a0)
+ 135 0018 1449     		lw	a3,16(a0)
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->nwait_polarity |
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        ((uint32_t)exmc_norsram_init_struct->memory_write << SNCTL_WREN_OFFSET) |
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        ((uint32_t)exmc_norsram_init_struct->nwait_signal << SNCTL_NRWTEN_OFFSET) |
+ 126:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        ((uint32_t)exmc_norsram_init_struct->asyn_wait << SNCTL_ASYNCWAIT_OFFSET);
+ 127:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     sntcfg = (uint32_t)((exmc_norsram_init_struct->read_write_timing->asyn_address_setuptime - 1U )
+ 136              		.loc 1 128 50
+ 137 001a 03280502 		lw	a6,32(a0)
+ 122:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->databus_width |
+ 138              		.loc 1 122 65
+ 139 001e CD8F     		or	a5,a1,a5
+ 140 0020 D58F     		or	a5,a5,a3
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->memory_type |
+ 141              		.loc 1 120 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 6
+
+
+ 142 0022 544D     		lw	a3,28(a0)
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime - 1U )
+ 130:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime - 1U ) <
+ 143              		.loc 1 130 123
+ 144 0024 C168     		li	a7,65536
+ 145 0026 FD18     		addi	a7,a7,-1
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->memory_type |
+ 146              		.loc 1 120 14
+ 147 0028 8606     		slli	a3,a3,1
+ 122:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->nwait_polarity |
+ 148              		.loc 1 122 65
+ 149 002a D58F     		or	a5,a5,a3
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        ((uint32_t)exmc_norsram_init_struct->nwait_signal << SNCTL_NRWTEN_OFFSET) |
+ 150              		.loc 1 124 74
+ 151 002c 5445     		lw	a3,12(a0)
+ 152 002e B206     		slli	a3,a3,12
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        ((uint32_t)exmc_norsram_init_struct->memory_write << SNCTL_WREN_OFFSET) |
+ 153              		.loc 1 123 66
+ 154 0030 D58F     		or	a5,a5,a3
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        ((uint32_t)exmc_norsram_init_struct->asyn_wait << SNCTL_ASYNCWAIT_OFFSET);
+ 155              		.loc 1 125 74
+ 156 0032 1445     		lw	a3,8(a0)
+ 157 0034 B606     		slli	a3,a3,13
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        ((uint32_t)exmc_norsram_init_struct->nwait_signal << SNCTL_NRWTEN_OFFSET) |
+ 158              		.loc 1 124 96
+ 159 0036 D58F     		or	a5,a5,a3
+ 126:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 160              		.loc 1 126 71
+ 161 0038 5441     		lw	a3,4(a0)
+ 162 003a BE06     		slli	a3,a3,15
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        ((uint32_t)exmc_norsram_init_struct->asyn_wait << SNCTL_ASYNCWAIT_OFFSET);
+ 163              		.loc 1 125 98
+ 164 003c D58F     		or	a5,a5,a3
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->memory_type |
+ 165              		.loc 1 120 11
+ 166 003e D98F     		or	a5,a5,a4
+ 167              	.LVL6:
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime - 1U )
+ 168              		.loc 1 128 5 is_stmt 1
+ 169              		.loc 1 130 92 is_stmt 0
+ 170 0040 83264800 		lw	a3,4(a6)
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime - 1U ) <
+ 171              		.loc 1 129 94
+ 172 0044 03278800 		lw	a4,8(a6)
+ 173              		.loc 1 130 92
+ 174 0048 FD16     		addi	a3,a3,-1
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime - 1U ) <
+ 175              		.loc 1 129 94
+ 176 004a 7D17     		addi	a4,a4,-1
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime - 1U ) <
+ 177              		.loc 1 129 101
+ 178 004c 1207     		slli	a4,a4,4
+ 179              		.loc 1 130 99
+ 180 004e A206     		slli	a3,a3,8
+ 181              		.loc 1 130 123
+ 182 0050 B3F61601 		and	a3,a3,a7
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime - 1U ) <
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 7
+
+
+ 183              		.loc 1 129 125
+ 184 0054 1377F70F 		andi	a4,a4,255
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime - 1U ) <
+ 185              		.loc 1 129 146
+ 186 0058 558F     		or	a4,a4,a3
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime - 1U )
+ 187              		.loc 1 128 94
+ 188 005a 8326C800 		lw	a3,12(a6)
+ 189 005e FD16     		addi	a3,a3,-1
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime - 1U )
+ 190              		.loc 1 128 14
+ 191 0060 BD8A     		andi	a3,a3,15
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime - 1U ) <
+ 192              		.loc 1 129 146
+ 193 0062 558F     		or	a4,a4,a3
+ 131:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->bus_latency - 1U ) << SNTCFG
+ 194              		.loc 1 131 84
+ 195 0064 83260800 		lw	a3,0(a6)
+ 196              		.loc 1 131 117
+ 197 0068 37080F00 		li	a6,983040
+ 198              		.loc 1 131 84
+ 199 006c FD16     		addi	a3,a3,-1
+ 200              		.loc 1 131 91
+ 201 006e C206     		slli	a3,a3,16
+ 202              		.loc 1 131 117
+ 203 0070 B3F60601 		and	a3,a3,a6
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_address_holdtime - 1U )
+ 204              		.loc 1 128 12
+ 205 0074 558F     		or	a4,a4,a3
+ 206              	.LVL7:
+ 132:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 133:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     /* nor flash access enable */
+ 134:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     if(EXMC_MEMORY_TYPE_NOR == exmc_norsram_init_struct->memory_type){
+ 207              		.loc 1 134 5 is_stmt 1
+ 208              		.loc 1 134 7 is_stmt 0
+ 209 0076 A146     		li	a3,8
+ 210 0078 6394D500 		bne	a1,a3,.L5
+ 135:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****         snctl |= (uint32_t)EXMC_SNCTL_NREN;
+ 211              		.loc 1 135 9 is_stmt 1
+ 212              		.loc 1 135 15 is_stmt 0
+ 213 007c 93E70704 		ori	a5,a5,64
+ 214              	.LVL8:
+ 215              	.L5:
+ 136:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     }
+ 137:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 138:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     /* configure the registers */
+ 139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     EXMC_SNCTL(exmc_norsram_init_struct->norsram_region) = snctl;
+ 216              		.loc 1 139 5 is_stmt 1
+ 217              		.loc 1 139 58 is_stmt 0
+ 218 0080 1CC2     		sw	a5,0(a2)
+ 140:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     EXMC_SNTCFG(exmc_norsram_init_struct->norsram_region) = sntcfg;
+ 219              		.loc 1 140 5 is_stmt 1
+ 220 0082 1C41     		lw	a5,0(a0)
+ 221              	.LVL9:
+ 222 0084 B70600A0 		li	a3,-1610612736
+ 223 0088 9106     		addi	a3,a3,4
+ 224 008a 8E07     		slli	a5,a5,3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 8
+
+
+ 225 008c B697     		add	a5,a5,a3
+ 226              		.loc 1 140 59 is_stmt 0
+ 227 008e 98C3     		sw	a4,0(a5)
+ 228              	.LVL10:
+ 141:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** }
+ 229              		.loc 1 141 1
+ 230 0090 8280     		ret
+ 231              		.cfi_endproc
+ 232              	.LFE4:
+ 234              		.section	.text.exmc_norsram_enable,"ax",@progbits
+ 235              		.align	1
+ 236              		.globl	exmc_norsram_enable
+ 238              	exmc_norsram_enable:
+ 239              	.LFB5:
+ 142:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 143:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /*!
+ 144:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \brief      enable EXMC NOR/PSRAM bank region
+ 145:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[in]  norsram_region: specify the region of NOR/PSRAM bank
+ 146:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****       \arg        EXMC_BANK0_NORSRAM_REGIONx(x=0)
+ 147:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[out] none
+ 148:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \retval     none
+ 149:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** */
+ 150:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** void exmc_norsram_enable(uint32_t norsram_region)
+ 151:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** {
+ 240              		.loc 1 151 1 is_stmt 1
+ 241              		.cfi_startproc
+ 242              	.LVL11:
+ 152:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     EXMC_SNCTL(norsram_region) |= (uint32_t)EXMC_SNCTL_NRBKEN;
+ 243              		.loc 1 152 5
+ 244              		.loc 1 152 32 is_stmt 0
+ 245 0000 B7070014 		li	a5,335544320
+ 246 0004 3E95     		add	a0,a0,a5
+ 247              	.LVL12:
+ 248 0006 0E05     		slli	a0,a0,3
+ 249              	.LVL13:
+ 250 0008 1C41     		lw	a5,0(a0)
+ 251 000a 93E71700 		ori	a5,a5,1
+ 252 000e 1CC1     		sw	a5,0(a0)
+ 153:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** }
+ 253              		.loc 1 153 1
+ 254 0010 8280     		ret
+ 255              		.cfi_endproc
+ 256              	.LFE5:
+ 258              		.section	.text.exmc_norsram_disable,"ax",@progbits
+ 259              		.align	1
+ 260              		.globl	exmc_norsram_disable
+ 262              	exmc_norsram_disable:
+ 263              	.LFB6:
+ 154:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
+ 155:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /*!
+ 156:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \brief      disable EXMC NOR/PSRAM bank region
+ 157:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[in]  norsram_region: specify the region of NOR/PSRAM bank
+ 158:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****       \arg        EXMC_BANK0_NORSRAM_REGIONx(x=0)
+ 159:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \param[out] none
+ 160:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \retval     none
+ 161:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** */
+ 162:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** void exmc_norsram_disable(uint32_t norsram_region)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 9
+
+
+ 163:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** {
+ 264              		.loc 1 163 1 is_stmt 1
+ 265              		.cfi_startproc
+ 266              	.LVL14:
+ 164:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     EXMC_SNCTL(norsram_region) &= ~(uint32_t)EXMC_SNCTL_NRBKEN;
+ 267              		.loc 1 164 5
+ 268              		.loc 1 164 32 is_stmt 0
+ 269 0000 B7070014 		li	a5,335544320
+ 270 0004 3E95     		add	a0,a0,a5
+ 271              	.LVL15:
+ 272 0006 0E05     		slli	a0,a0,3
+ 273              	.LVL16:
+ 274 0008 1C41     		lw	a5,0(a0)
+ 275 000a F99B     		andi	a5,a5,-2
+ 276 000c 1CC1     		sw	a5,0(a0)
+ 165:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** }
+ 277              		.loc 1 165 1
+ 278 000e 8280     		ret
+ 279              		.cfi_endproc
+ 280              	.LFE6:
+ 282              		.text
+ 283              	.Letext0:
+ 284              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 285              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 286              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
+ 287              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_exmc.h"
+ 288              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_exmc.c
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:13     .text.exmc_norsram_deinit:0000000000000000 exmc_norsram_deinit
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:17     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:19     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:20     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:21     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:23     .text.exmc_norsram_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:24     .text.exmc_norsram_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:30     .text.exmc_norsram_deinit:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:36     .text.exmc_norsram_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:40     .text.exmc_norsram_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:41     .text.exmc_norsram_deinit:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:48     .text.exmc_norsram_struct_para_init:0000000000000000 exmc_norsram_struct_para_init
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:51     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:53     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:54     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:55     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:58     .text.exmc_norsram_struct_para_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:60     .text.exmc_norsram_struct_para_init:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:62     .text.exmc_norsram_struct_para_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:64     .text.exmc_norsram_struct_para_init:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:67     .text.exmc_norsram_struct_para_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:69     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:70     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:71     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:73     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:74     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:75     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:77     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:78     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:79     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:80     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:82     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:83     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:85     .text.exmc_norsram_struct_para_init:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:87     .text.exmc_norsram_struct_para_init:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:89     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:90     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:92     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:93     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:95     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:96     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:98     .text.exmc_norsram_struct_para_init:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:99     .text.exmc_norsram_struct_para_init:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:106    .text.exmc_norsram_init:0000000000000000 exmc_norsram_init
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:109    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:111    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:112    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:113    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:114    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:117    .text.exmc_norsram_init:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:119    .text.exmc_norsram_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:122    .text.exmc_norsram_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:125    .text.exmc_norsram_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:126    .text.exmc_norsram_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:128    .text.exmc_norsram_init:0000000000000012 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 11
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:130    .text.exmc_norsram_init:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:133    .text.exmc_norsram_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:134    .text.exmc_norsram_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:137    .text.exmc_norsram_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:139    .text.exmc_norsram_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:142    .text.exmc_norsram_init:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:144    .text.exmc_norsram_init:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:147    .text.exmc_norsram_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:149    .text.exmc_norsram_init:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:151    .text.exmc_norsram_init:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:154    .text.exmc_norsram_init:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:156    .text.exmc_norsram_init:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:159    .text.exmc_norsram_init:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:161    .text.exmc_norsram_init:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:164    .text.exmc_norsram_init:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:166    .text.exmc_norsram_init:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:169    .text.exmc_norsram_init:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:170    .text.exmc_norsram_init:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:172    .text.exmc_norsram_init:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:174    .text.exmc_norsram_init:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:176    .text.exmc_norsram_init:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:178    .text.exmc_norsram_init:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:180    .text.exmc_norsram_init:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:182    .text.exmc_norsram_init:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:184    .text.exmc_norsram_init:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:186    .text.exmc_norsram_init:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:188    .text.exmc_norsram_init:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:191    .text.exmc_norsram_init:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:193    .text.exmc_norsram_init:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:195    .text.exmc_norsram_init:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:197    .text.exmc_norsram_init:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:199    .text.exmc_norsram_init:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:201    .text.exmc_norsram_init:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:203    .text.exmc_norsram_init:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:205    .text.exmc_norsram_init:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:208    .text.exmc_norsram_init:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:209    .text.exmc_norsram_init:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:212    .text.exmc_norsram_init:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:213    .text.exmc_norsram_init:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:217    .text.exmc_norsram_init:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:218    .text.exmc_norsram_init:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:220    .text.exmc_norsram_init:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:227    .text.exmc_norsram_init:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:230    .text.exmc_norsram_init:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:231    .text.exmc_norsram_init:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:238    .text.exmc_norsram_enable:0000000000000000 exmc_norsram_enable
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:241    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:243    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:244    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:245    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:254    .text.exmc_norsram_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:255    .text.exmc_norsram_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:262    .text.exmc_norsram_disable:0000000000000000 exmc_norsram_disable
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:265    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:267    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:268    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:269    .text.exmc_norsram_disable:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 12
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:278    .text.exmc_norsram_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:279    .text.exmc_norsram_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:44     .text.exmc_norsram_deinit:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:102    .text.exmc_norsram_struct_para_init:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:234    .text.exmc_norsram_init:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:258    .text.exmc_norsram_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:282    .text.exmc_norsram_disable:0000000000000010 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:28     .text.exmc_norsram_deinit:000000000000000e .L2
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:215    .text.exmc_norsram_init:0000000000000080 .L5
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:665    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1112   .debug_str:00000000000002c1 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1056   .debug_str:000000000000005b .LASF38
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1106   .debug_str:0000000000000240 .LASF39
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1030   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1044   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1084   .debug_str:0000000000000160 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1062   .debug_str:00000000000000b8 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1064   .debug_str:00000000000000c4 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1108   .debug_str:00000000000002a0 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1070   .debug_str:00000000000000f8 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1116   .debug_str:0000000000000352 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1078   .debug_str:0000000000000142 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1066   .debug_str:00000000000000d2 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1046   .debug_str:0000000000000000 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1086   .debug_str:000000000000016d .LASF8
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1114   .debug_str:0000000000000349 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1100   .debug_str:00000000000001fc .LASF40
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1124   .debug_str:000000000000037f .LASF11
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1060   .debug_str:00000000000000b1 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1126   .debug_str:0000000000000387 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1122   .debug_str:0000000000000373 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1088   .debug_str:0000000000000184 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1096   .debug_str:00000000000001dc .LASF16
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1104   .debug_str:000000000000022a .LASF17
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1110   .debug_str:00000000000002aa .LASF18
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1092   .debug_str:00000000000001a5 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1058   .debug_str:00000000000000a2 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1074   .debug_str:000000000000011f .LASF21
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1080   .debug_str:000000000000014d .LASF22
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1128   .debug_str:0000000000000395 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1050   .debug_str:000000000000002c .LASF24
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1054   .debug_str:000000000000004d .LASF25
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1098   .debug_str:00000000000001f0 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1120   .debug_str:0000000000000362 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1052   .debug_str:000000000000003b .LASF28
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1102   .debug_str:000000000000020c .LASF29
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1090   .debug_str:0000000000000190 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:263    .text.exmc_norsram_disable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:280    .text.exmc_norsram_disable:0000000000000010 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:918    .debug_loc:0000000000000000 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1072   .debug_str:000000000000010b .LASF31
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:239    .text.exmc_norsram_enable:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:256    .text.exmc_norsram_enable:0000000000000012 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:938    .debug_loc:0000000000000032 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1094   .debug_str:00000000000001ca .LASF32
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:107    .text.exmc_norsram_init:0000000000000000 .LFB4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s 			page 13
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:232    .text.exmc_norsram_init:0000000000000092 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1076   .debug_str:0000000000000129 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1082   .debug_str:000000000000015a .LASF34
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:958    .debug_loc:0000000000000064 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1118   .debug_str:000000000000035b .LASF35
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:983    .debug_loc:00000000000000a5 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1048   .debug_str:000000000000000e .LASF36
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:49     .text.exmc_norsram_struct_para_init:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:100    .text.exmc_norsram_struct_para_init:000000000000002e .LFE3
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:1068   .debug_str:00000000000000e4 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:14     .text.exmc_norsram_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:42     .text.exmc_norsram_deinit:0000000000000022 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:995    .debug_loc:00000000000000c4 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:266    .text.exmc_norsram_disable:0000000000000000 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:271    .text.exmc_norsram_disable:0000000000000006 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:273    .text.exmc_norsram_disable:0000000000000008 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:242    .text.exmc_norsram_enable:0000000000000000 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:247    .text.exmc_norsram_enable:0000000000000006 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:249    .text.exmc_norsram_enable:0000000000000008 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:110    .text.exmc_norsram_init:0000000000000000 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:123    .text.exmc_norsram_init:000000000000000e .LVL4
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:131    .text.exmc_norsram_init:0000000000000016 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:167    .text.exmc_norsram_init:0000000000000040 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:221    .text.exmc_norsram_init:0000000000000084 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:228    .text.exmc_norsram_init:0000000000000090 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:206    .text.exmc_norsram_init:0000000000000076 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:18     .text.exmc_norsram_deinit:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:33     .text.exmc_norsram_deinit:0000000000000016 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\cc76cM3h.s:290    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS
