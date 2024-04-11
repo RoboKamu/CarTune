@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "lio make",
+            "type": "shell",
+            "command": "mingw32-make",
+            "problemMatcher": []
+        },
+        {
+            "label": "lio make dfu",
+            "type": "shell",
+            "command": "mingw32-make dfu",
+            "problemMatcher": []
+        },
+        {
+            "label": "lio make clean",
+            "type": "shell",
+            "command": "mingw32-make clean",
+            "problemMatcher": []
+        },
+        {
+            "label": "lio make debug",
+            "type": "shell",
+            "command": "mingw32-make debug",
+            "problemMatcher": []
+        },
+        {
+            "label": "lio make debug dfu",
+            "type": "shell",
+            "command": "mingw32-make debug download",
+            "problemMatcher": []
+        }
+    ]
+  }
