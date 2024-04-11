@@ -1,0 +1,34 @@
+{
+    "env": {
+        "myDefaultIncludePath": [
+            "${workspaceFolder}"
+        ],
+        "firmware_path": "./../../firmware"
+    },
+    "configurations": [
+        {
+            "name": "GD32V Firmware Package",
+            "intelliSenseMode": "${default}",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/../../firmware/GD32VF103_standard_peripheral/Include",
+                "${workspaceFolder}/../../firmware/GD32VF103_standard_peripheral",
+                "${workspaceFolder}/../../firmware/RISCV/drivers",
+                "${workspaceFolder}/lib/**",
+                "./../../firmware/debugger/lib/**",
+                "./../../firmware/debugger/"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compilerPath": "${workspaceFolder}/../../compiler/bin/riscv64-unknown-elf-gcc",
+            "compilerArgs": [
+                "-march=rv32imac",
+                "-mabi=ilp32",
+                "-mcmodel=medlow",
+                ""
+            ],
+            "defines": ["HXTAL_VALUE=8000000"]
+        }
+    ],
+    "version": 4
+}
