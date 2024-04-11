@@ -1,3 +1,10 @@
+# GUIDE 
+Guide delen är bara hjälpmedel för processen, tas bort sen.
+<br />
+Momenterna som finns på taiga är gjort till "branches". Jobba på din branch men ändringar i main.c filen är bara för relevant kod som implementeras i slutprodukt. Så i början kommer bara alla prototyper ni jobbar med nu vara externa c resp. header filer som kommer inkluderas in i main.c i framtiden. Dessa filer för protyper gör du i respektive branch. När du har gjort klart din protyp och vill addera färdiga kodfilerna intill main branchen ska du göra en pull requst. Tryck då på din branch resp. {contribute} -> {pull request} -> skriv kommentar, så inspekteras den. Ser den bra ut så adderas den till main branchen och denna moment avklarad, YIPPIE!
+<br />
+<br />
+NEDAN BEHÅLLS NÄR DEN ÄR KLAR OCH SKA BLI PUBLIC: <br />
 # Projekt-grupp7
 Programkod: TIELA1 <br />
 Authors: - <br />
