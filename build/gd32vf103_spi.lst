@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 1
 
 
    1              		.file	"gd32vf103_spi.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** 
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** /* I2S clock source selection, multiplication and division mask */
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** #define I2S1_CLOCK_SEL                  ((uint32_t)0x00020000U)  /* I2S1 clock source selection */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** #define I2S2_CLOCK_SEL                  ((uint32_t)0x00040000U)  /* I2S2 clock source selection */
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
   70:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****         rcu_periph_reset_disable(RCU_SPI1RST);
   41              		.loc 1 70 9
   42 002c 1305E040 		li	a0,1038
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 3
 
 
   43 0030 09A8     		j	.L8
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
   79              		.cfi_restore 1
   80 0062 4101     		addi	sp,sp,16
   81              	.LCFI3:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 4
 
 
   82              		.cfi_def_cfa_offset 0
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  123              	spi_init:
  124              	.LFB4:
   98:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 5
 
 
   99:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** /*!
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  141              	.LVL13:
  123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     /* select SPI transfer mode */
  142              		.loc 1 123 5 is_stmt 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 6
 
 
  125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     /* select SPI frame size */
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  142:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** 
  143:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** /*!
  144:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     \brief      enable SPI
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 7
 
 
  145:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  165:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** /*!
  166:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     \brief      initialize I2S parameter 
  167:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     \param[in]  spi_periph: SPIx(x=1,2)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 8
 
 
  168:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     \param[in]  mode: I2S operation mode
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  200:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     /* select I2S polarity */
  201:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     reg |= (uint32_t)ckpl;
  247              		.loc 1 201 5 is_stmt 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 9
 
 
  248              		.loc 1 201 9 is_stmt 0
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  270              	.LVL26:
  236:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     uint32_t i2sdiv = 2U, i2sof = 0U;
  271              		.loc 1 236 5
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 10
 
 
  237:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     uint32_t clks = 0U;
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  306              		.loc 1 252 15 is_stmt 0
  307 0024 37170240 		li	a4,1073876992
  308 0028 5C57     		lw	a5,44(a4)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 11
 
 
  309              		.loc 1 252 24
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  343 004a 3D89     		andi	a0,a0,15
  267:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****         /* calculate I2S clock based on PLL2 and PREDV1 */
  344              		.loc 1 267 18
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 12
 
 
  345 004c 13071500 		addi	a4,a0,1
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  373              		.loc 1 287 5 is_stmt 1
  287:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     i2sof  = (clks & 0x00000001U);
  374              		.loc 1 287 10 is_stmt 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 13
 
 
  375 007a 2944     		li	s0,10
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  299:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** 
  300:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     /* clear SPI_I2SCTL_DTLEN and SPI_I2SCTL_CHLEN bits */
  301:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     SPI_I2SCTL(spi_periph) &= (uint32_t)(~(SPI_I2SCTL_DTLEN | SPI_I2SCTL_CHLEN));
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 14
 
 
  415              		.loc 1 301 5 is_stmt 1
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  272:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     }
  459              		.loc 1 272 9 is_stmt 1
  272:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     }
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 15
 
 
  460              		.loc 1 272 20 is_stmt 0
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  499 0002 93E70740 		ori	a5,a5,1024
  500 0006 5CCD     		sw	a5,28(a0)
  315:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** }
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 16
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 16
 
 
  501              		.loc 1 315 1
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  538 0006 5CC1     		sw	a5,4(a0)
  337:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** }
  539              		.loc 1 337 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 17
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 17
 
 
  540 0008 8280     		ret
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  359:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** }
  577              		.loc 1 359 1
  578 0008 8280     		ret
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 18
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 18
 
 
  579              		.cfi_endproc
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  611              		.loc 1 385 30 is_stmt 0
  612 0000 5C41     		lw	a5,4(a0)
  384:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     if(SPI_DMA_TRANSMIT == dma){
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 19
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 19
 
 
  613              		.loc 1 384 7
@@ -1138,7 +1138,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  647 0004 F59B     		andi	a5,a5,-3
  648              	.L42:
  405:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     }else{
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 20
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 20
 
 
  406:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****         SPI_CTL1(spi_periph) &= (uint32_t)(~SPI_CTL1_DMAREN);
@@ -1198,7 +1198,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  426:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** }
  683              		.loc 1 426 1
  684 0012 8280     		ret
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 21
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 21
 
 
  685              		.cfi_endproc
@@ -1258,7 +1258,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  720 0004 4181     		srli	a0,a0,16
  721 0006 8280     		ret
  722              		.cfi_endproc
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 22
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 22
 
 
  723              	.LFE19:
@@ -1318,7 +1318,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  756              	.LFE20:
  758              		.section	.text.spi_crc_polynomial_set,"ax",@progbits
  759              		.align	1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 23
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 23
 
 
  760              		.globl	spi_crc_polynomial_set
@@ -1378,7 +1378,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  791              		.loc 1 496 23 is_stmt 0
  792 0000 0849     		lw	a0,16(a0)
  793              	.LVL74:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 24
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 24
 
 
  497:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** }
@@ -1438,7 +1438,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  830              		.loc 1 518 5
  831              		.loc 1 518 26 is_stmt 0
  832 0000 1C41     		lw	a5,0(a0)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 25
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 25
 
 
  833 0002 7977     		li	a4,-8192
@@ -1498,7 +1498,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  542:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** uint16_t spi_crc_get(uint32_t spi_periph,uint8_t crc)
  543:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** {
  868              		.loc 1 543 1 is_stmt 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 26
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 26
 
 
  869              		.cfi_startproc
@@ -1558,7 +1558,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  907 0006 5CC1     		sw	a5,4(a0)
  560:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** }
  908              		.loc 1 560 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 27
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 27
 
 
  909 0008 8280     		ret
@@ -1618,7 +1618,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  582:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** }
  946              		.loc 1 582 1
  947 0008 8280     		ret
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 28
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 28
 
 
  948              		.cfi_endproc
@@ -1678,7 +1678,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  610:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     switch(interrupt){
  979              		.loc 1 610 5
  980 0000 8547     		li	a5,1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 29
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 29
 
 
  981 0002 638CF500 		beq	a1,a5,.L64
@@ -1738,7 +1738,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  1017              	.LFB32:
  627:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** 
  628:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c **** /*!
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 30
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 30
 
 
  629:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     \brief      disable SPI and I2S interrupt 
@@ -1798,7 +1798,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  649:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****         break;
  1041              		.loc 1 649 30 is_stmt 0
  1042 001a 5C41     		lw	a5,4(a0)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 31
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 31
 
 
  1043 001c 93F7F7FB 		andi	a5,a5,-65
@@ -1858,7 +1858,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  1075 000e 93860600 		addi	a3,a3,%lo(.L78)
  1076 0012 8A05     		slli	a1,a1,2
  1077              	.LVL91:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 32
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 32
 
 
  1078 0014 B695     		add	a1,a1,a3
@@ -1918,7 +1918,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  709:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
  710:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****         break;
  711:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     /* SPI/I2S format error interrupt */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 33
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 33
 
 
  712:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     case SPI_I2S_INT_FLAG_FERR:
@@ -1978,7 +1978,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  714:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****         break;
  1135              		.loc 1 714 14 is_stmt 0
  1136 0036 13770702 		andi	a4,a4,32
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 34
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 34
 
 
  1137              	.LVL100:
@@ -2038,7 +2038,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  731:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****                 one or more parameters can be selected which are shown as below:
  732:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****       \arg        SPI_FLAG_TBE: transmit buffer empty flag
  733:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****       \arg        SPI_FLAG_RBNE: receive buffer not empty flag
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 35
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 35
 
 
  734:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****       \arg        SPI_FLAG_TRANS: transmit on-going flag
@@ -2098,7 +2098,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  766:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c ****     SPI_STAT(spi_periph) &= (uint32_t)(~SPI_FLAG_CRCERR);
  1200              		.loc 1 766 5
  1201              		.loc 1 766 26 is_stmt 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 36
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 36
 
 
  1202 0000 1C45     		lw	a5,8(a0)
@@ -2117,879 +2117,879 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 1
  1215              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
  1216              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_spi.h"
  1217              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 37
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 37
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_spi.c
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:13     .text.spi_i2s_deinit:0000000000000000 spi_i2s_deinit
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:17     .text.spi_i2s_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:19     .text.spi_i2s_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:20     .text.spi_i2s_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:21     .text.spi_i2s_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:23     .text.spi_i2s_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:25     .text.spi_i2s_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:27     .text.spi_i2s_deinit:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:28     .text.spi_i2s_deinit:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:30     .text.spi_i2s_deinit:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:37     .text.spi_i2s_deinit:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:42     .text.spi_i2s_deinit:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:47     .text.spi_i2s_deinit:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:52     .text.spi_i2s_deinit:000000000000003e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:55     .text.spi_i2s_deinit:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:56     .text.spi_i2s_deinit:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:57     .text.spi_i2s_deinit:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:60     .text.spi_i2s_deinit:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:62     .text.spi_i2s_deinit:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:66     .text.spi_i2s_deinit:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:68     .text.spi_i2s_deinit:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:73     .text.spi_i2s_deinit:000000000000005a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:78     .text.spi_i2s_deinit:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:79     .text.spi_i2s_deinit:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:82     .text.spi_i2s_deinit:0000000000000064 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:84     .text.spi_i2s_deinit:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:91     .text.spi_struct_para_init:0000000000000000 spi_struct_para_init
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:94     .text.spi_struct_para_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:96     .text.spi_struct_para_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:97     .text.spi_struct_para_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:98     .text.spi_struct_para_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:100    .text.spi_struct_para_init:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:101    .text.spi_struct_para_init:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:103    .text.spi_struct_para_init:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:104    .text.spi_struct_para_init:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:106    .text.spi_struct_para_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:107    .text.spi_struct_para_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:109    .text.spi_struct_para_init:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:110    .text.spi_struct_para_init:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:112    .text.spi_struct_para_init:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:113    .text.spi_struct_para_init:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:115    .text.spi_struct_para_init:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:116    .text.spi_struct_para_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:123    .text.spi_init:0000000000000000 spi_init
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:126    .text.spi_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:128    .text.spi_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:129    .text.spi_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:130    .text.spi_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:131    .text.spi_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:134    .text.spi_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:135    .text.spi_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:138    .text.spi_init:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:140    .text.spi_init:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:143    .text.spi_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:144    .text.spi_init:000000000000000c .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 38
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:13     .text.spi_i2s_deinit:0000000000000000 spi_i2s_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:17     .text.spi_i2s_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:19     .text.spi_i2s_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:20     .text.spi_i2s_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:21     .text.spi_i2s_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:23     .text.spi_i2s_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:25     .text.spi_i2s_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:27     .text.spi_i2s_deinit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:28     .text.spi_i2s_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:30     .text.spi_i2s_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:37     .text.spi_i2s_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:42     .text.spi_i2s_deinit:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:47     .text.spi_i2s_deinit:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:52     .text.spi_i2s_deinit:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:55     .text.spi_i2s_deinit:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:56     .text.spi_i2s_deinit:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:57     .text.spi_i2s_deinit:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:60     .text.spi_i2s_deinit:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:62     .text.spi_i2s_deinit:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:66     .text.spi_i2s_deinit:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:68     .text.spi_i2s_deinit:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:73     .text.spi_i2s_deinit:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:78     .text.spi_i2s_deinit:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:79     .text.spi_i2s_deinit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:82     .text.spi_i2s_deinit:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:84     .text.spi_i2s_deinit:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:91     .text.spi_struct_para_init:0000000000000000 spi_struct_para_init
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:94     .text.spi_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:96     .text.spi_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:97     .text.spi_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:98     .text.spi_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:100    .text.spi_struct_para_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:101    .text.spi_struct_para_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:103    .text.spi_struct_para_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:104    .text.spi_struct_para_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:106    .text.spi_struct_para_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:107    .text.spi_struct_para_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:109    .text.spi_struct_para_init:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:110    .text.spi_struct_para_init:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:112    .text.spi_struct_para_init:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:113    .text.spi_struct_para_init:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:115    .text.spi_struct_para_init:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:116    .text.spi_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:123    .text.spi_init:0000000000000000 spi_init
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:126    .text.spi_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:128    .text.spi_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:129    .text.spi_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:130    .text.spi_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:131    .text.spi_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:134    .text.spi_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:135    .text.spi_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:138    .text.spi_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:140    .text.spi_init:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:143    .text.spi_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:144    .text.spi_init:000000000000000c .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 38
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:145    .text.spi_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:146    .text.spi_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:147    .text.spi_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:148    .text.spi_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:149    .text.spi_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:150    .text.spi_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:166    .text.spi_init:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:167    .text.spi_init:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:169    .text.spi_init:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:170    .text.spi_init:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:178    .text.spi_init:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:179    .text.spi_init:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:186    .text.spi_enable:0000000000000000 spi_enable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:189    .text.spi_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:191    .text.spi_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:192    .text.spi_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:193    .text.spi_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:197    .text.spi_enable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:198    .text.spi_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:205    .text.spi_disable:0000000000000000 spi_disable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:208    .text.spi_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:210    .text.spi_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:211    .text.spi_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:212    .text.spi_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:216    .text.spi_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:217    .text.spi_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:224    .text.i2s_init:0000000000000000 i2s_init
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:227    .text.i2s_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:229    .text.i2s_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:230    .text.i2s_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:231    .text.i2s_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:232    .text.i2s_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:235    .text.i2s_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:236    .text.i2s_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:237    .text.i2s_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:238    .text.i2s_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:239    .text.i2s_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:248    .text.i2s_init:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:249    .text.i2s_init:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:255    .text.i2s_init:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:256    .text.i2s_init:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:258    .text.i2s_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:259    .text.i2s_init:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:266    .text.i2s_psc_config:0000000000000000 i2s_psc_config
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:269    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:271    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:272    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:273    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:274    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:275    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:276    .text.i2s_psc_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:278    .text.i2s_psc_config:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:282    .text.i2s_psc_config:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:283    .text.i2s_psc_config:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:284    .text.i2s_psc_config:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:286    .text.i2s_psc_config:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:288    .text.i2s_psc_config:000000000000000a .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 39
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:145    .text.spi_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:146    .text.spi_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:147    .text.spi_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:148    .text.spi_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:149    .text.spi_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:150    .text.spi_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:166    .text.spi_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:167    .text.spi_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:169    .text.spi_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:170    .text.spi_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:178    .text.spi_init:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:179    .text.spi_init:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:186    .text.spi_enable:0000000000000000 spi_enable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:189    .text.spi_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:191    .text.spi_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:192    .text.spi_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:193    .text.spi_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:197    .text.spi_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:198    .text.spi_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:205    .text.spi_disable:0000000000000000 spi_disable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:208    .text.spi_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:210    .text.spi_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:211    .text.spi_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:212    .text.spi_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:216    .text.spi_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:217    .text.spi_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:224    .text.i2s_init:0000000000000000 i2s_init
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:227    .text.i2s_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:229    .text.i2s_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:230    .text.i2s_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:231    .text.i2s_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:232    .text.i2s_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:235    .text.i2s_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:236    .text.i2s_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:237    .text.i2s_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:238    .text.i2s_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:239    .text.i2s_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:248    .text.i2s_init:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:249    .text.i2s_init:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:255    .text.i2s_init:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:256    .text.i2s_init:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:258    .text.i2s_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:259    .text.i2s_init:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:266    .text.i2s_psc_config:0000000000000000 i2s_psc_config
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:269    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:271    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:272    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:273    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:274    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:275    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:276    .text.i2s_psc_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:278    .text.i2s_psc_config:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:282    .text.i2s_psc_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:283    .text.i2s_psc_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:284    .text.i2s_psc_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:286    .text.i2s_psc_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:288    .text.i2s_psc_config:000000000000000a .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 39
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:290    .text.i2s_psc_config:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:292    .text.i2s_psc_config:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:293    .text.i2s_psc_config:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:295    .text.i2s_psc_config:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:298    .text.i2s_psc_config:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:301    .text.i2s_psc_config:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:306    .text.i2s_psc_config:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:307    .text.i2s_psc_config:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:310    .text.i2s_psc_config:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:312    .text.i2s_psc_config:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:314    .text.i2s_psc_config:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:315    .text.i2s_psc_config:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:318    .text.i2s_psc_config:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:320    .text.i2s_psc_config:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:322    .text.i2s_psc_config:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:325    .text.i2s_psc_config:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:326    .text.i2s_psc_config:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:328    .text.i2s_psc_config:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:330    .text.i2s_psc_config:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:331    .text.i2s_psc_config:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:335    .text.i2s_psc_config:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:336    .text.i2s_psc_config:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:340    .text.i2s_psc_config:0000000000000048 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:341    .text.i2s_psc_config:0000000000000048 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:345    .text.i2s_psc_config:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:348    .text.i2s_psc_config:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:353    .text.i2s_psc_config:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:357    .text.i2s_psc_config:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:358    .text.i2s_psc_config:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:361    .text.i2s_psc_config:000000000000006a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:362    .text.i2s_psc_config:000000000000006a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:366    .text.i2s_psc_config:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:369    .text.i2s_psc_config:0000000000000072 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:371    .text.i2s_psc_config:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:374    .text.i2s_psc_config:000000000000007a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:375    .text.i2s_psc_config:000000000000007a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:378    .text.i2s_psc_config:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:381    .text.i2s_psc_config:000000000000007e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:384    .text.i2s_psc_config:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:385    .text.i2s_psc_config:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:386    .text.i2s_psc_config:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:389    .text.i2s_psc_config:0000000000000086 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:392    .text.i2s_psc_config:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:393    .text.i2s_psc_config:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:394    .text.i2s_psc_config:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:396    .text.i2s_psc_config:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:399    .text.i2s_psc_config:000000000000008e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:401    .text.i2s_psc_config:0000000000000092 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:404    .text.i2s_psc_config:0000000000000094 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:408    .text.i2s_psc_config:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:409    .text.i2s_psc_config:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:412    .text.i2s_psc_config:0000000000000098 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:414    .text.i2s_psc_config:000000000000009a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:416    .text.i2s_psc_config:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:417    .text.i2s_psc_config:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:420    .text.i2s_psc_config:000000000000009e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:421    .text.i2s_psc_config:00000000000000a0 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 40
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:290    .text.i2s_psc_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:292    .text.i2s_psc_config:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:293    .text.i2s_psc_config:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:295    .text.i2s_psc_config:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:298    .text.i2s_psc_config:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:301    .text.i2s_psc_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:306    .text.i2s_psc_config:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:307    .text.i2s_psc_config:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:310    .text.i2s_psc_config:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:312    .text.i2s_psc_config:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:314    .text.i2s_psc_config:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:315    .text.i2s_psc_config:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:318    .text.i2s_psc_config:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:320    .text.i2s_psc_config:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:322    .text.i2s_psc_config:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:325    .text.i2s_psc_config:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:326    .text.i2s_psc_config:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:328    .text.i2s_psc_config:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:330    .text.i2s_psc_config:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:331    .text.i2s_psc_config:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:335    .text.i2s_psc_config:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:336    .text.i2s_psc_config:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:340    .text.i2s_psc_config:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:341    .text.i2s_psc_config:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:345    .text.i2s_psc_config:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:348    .text.i2s_psc_config:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:353    .text.i2s_psc_config:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:357    .text.i2s_psc_config:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:358    .text.i2s_psc_config:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:361    .text.i2s_psc_config:000000000000006a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:362    .text.i2s_psc_config:000000000000006a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:366    .text.i2s_psc_config:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:369    .text.i2s_psc_config:0000000000000072 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:371    .text.i2s_psc_config:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:374    .text.i2s_psc_config:000000000000007a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:375    .text.i2s_psc_config:000000000000007a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:378    .text.i2s_psc_config:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:381    .text.i2s_psc_config:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:384    .text.i2s_psc_config:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:385    .text.i2s_psc_config:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:386    .text.i2s_psc_config:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:389    .text.i2s_psc_config:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:392    .text.i2s_psc_config:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:393    .text.i2s_psc_config:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:394    .text.i2s_psc_config:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:396    .text.i2s_psc_config:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:399    .text.i2s_psc_config:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:401    .text.i2s_psc_config:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:404    .text.i2s_psc_config:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:408    .text.i2s_psc_config:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:409    .text.i2s_psc_config:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:412    .text.i2s_psc_config:0000000000000098 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:414    .text.i2s_psc_config:000000000000009a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:416    .text.i2s_psc_config:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:417    .text.i2s_psc_config:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:420    .text.i2s_psc_config:000000000000009e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:421    .text.i2s_psc_config:00000000000000a0 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 40
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:422    .text.i2s_psc_config:00000000000000a0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:424    .text.i2s_psc_config:00000000000000a2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:426    .text.i2s_psc_config:00000000000000a2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:429    .text.i2s_psc_config:00000000000000a6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:430    .text.i2s_psc_config:00000000000000a6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:434    .text.i2s_psc_config:00000000000000ac .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:435    .text.i2s_psc_config:00000000000000ae .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:439    .text.i2s_psc_config:00000000000000b0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:444    .text.i2s_psc_config:00000000000000b2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:446    .text.i2s_psc_config:00000000000000b2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:447    .text.i2s_psc_config:00000000000000b2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:450    .text.i2s_psc_config:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:456    .text.i2s_psc_config:00000000000000bc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:460    .text.i2s_psc_config:00000000000000c2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:461    .text.i2s_psc_config:00000000000000c2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:470    .text.i2s_psc_config:00000000000000d0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:471    .text.i2s_psc_config:00000000000000d0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:473    .text.i2s_psc_config:00000000000000d2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:474    .text.i2s_psc_config:00000000000000d2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:480    .text.i2s_psc_config:00000000000000d6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:481    .text.i2s_psc_config:00000000000000d6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:484    .text.i2s_psc_config:00000000000000da .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:491    .text.i2s_enable:0000000000000000 i2s_enable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:494    .text.i2s_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:496    .text.i2s_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:497    .text.i2s_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:498    .text.i2s_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:502    .text.i2s_enable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:503    .text.i2s_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:510    .text.i2s_disable:0000000000000000 i2s_disable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:513    .text.i2s_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:515    .text.i2s_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:516    .text.i2s_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:517    .text.i2s_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:521    .text.i2s_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:522    .text.i2s_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:529    .text.spi_nss_output_enable:0000000000000000 spi_nss_output_enable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:532    .text.spi_nss_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:534    .text.spi_nss_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:535    .text.spi_nss_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:536    .text.spi_nss_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:540    .text.spi_nss_output_enable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:541    .text.spi_nss_output_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:548    .text.spi_nss_output_disable:0000000000000000 spi_nss_output_disable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:551    .text.spi_nss_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:553    .text.spi_nss_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:554    .text.spi_nss_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:555    .text.spi_nss_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:559    .text.spi_nss_output_disable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:560    .text.spi_nss_output_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:567    .text.spi_nss_internal_high:0000000000000000 spi_nss_internal_high
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:570    .text.spi_nss_internal_high:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:572    .text.spi_nss_internal_high:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:573    .text.spi_nss_internal_high:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:574    .text.spi_nss_internal_high:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:578    .text.spi_nss_internal_high:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:579    .text.spi_nss_internal_high:000000000000000a .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 41
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:422    .text.i2s_psc_config:00000000000000a0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:424    .text.i2s_psc_config:00000000000000a2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:426    .text.i2s_psc_config:00000000000000a2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:429    .text.i2s_psc_config:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:430    .text.i2s_psc_config:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:434    .text.i2s_psc_config:00000000000000ac .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:435    .text.i2s_psc_config:00000000000000ae .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:439    .text.i2s_psc_config:00000000000000b0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:444    .text.i2s_psc_config:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:446    .text.i2s_psc_config:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:447    .text.i2s_psc_config:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:450    .text.i2s_psc_config:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:456    .text.i2s_psc_config:00000000000000bc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:460    .text.i2s_psc_config:00000000000000c2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:461    .text.i2s_psc_config:00000000000000c2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:470    .text.i2s_psc_config:00000000000000d0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:471    .text.i2s_psc_config:00000000000000d0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:473    .text.i2s_psc_config:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:474    .text.i2s_psc_config:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:480    .text.i2s_psc_config:00000000000000d6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:481    .text.i2s_psc_config:00000000000000d6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:484    .text.i2s_psc_config:00000000000000da .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:491    .text.i2s_enable:0000000000000000 i2s_enable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:494    .text.i2s_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:496    .text.i2s_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:497    .text.i2s_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:498    .text.i2s_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:502    .text.i2s_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:503    .text.i2s_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:510    .text.i2s_disable:0000000000000000 i2s_disable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:513    .text.i2s_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:515    .text.i2s_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:516    .text.i2s_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:517    .text.i2s_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:521    .text.i2s_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:522    .text.i2s_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:529    .text.spi_nss_output_enable:0000000000000000 spi_nss_output_enable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:532    .text.spi_nss_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:534    .text.spi_nss_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:535    .text.spi_nss_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:536    .text.spi_nss_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:540    .text.spi_nss_output_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:541    .text.spi_nss_output_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:548    .text.spi_nss_output_disable:0000000000000000 spi_nss_output_disable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:551    .text.spi_nss_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:553    .text.spi_nss_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:554    .text.spi_nss_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:555    .text.spi_nss_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:559    .text.spi_nss_output_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:560    .text.spi_nss_output_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:567    .text.spi_nss_internal_high:0000000000000000 spi_nss_internal_high
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:570    .text.spi_nss_internal_high:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:572    .text.spi_nss_internal_high:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:573    .text.spi_nss_internal_high:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:574    .text.spi_nss_internal_high:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:578    .text.spi_nss_internal_high:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:579    .text.spi_nss_internal_high:000000000000000a .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 41
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:586    .text.spi_nss_internal_low:0000000000000000 spi_nss_internal_low
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:589    .text.spi_nss_internal_low:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:591    .text.spi_nss_internal_low:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:592    .text.spi_nss_internal_low:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:593    .text.spi_nss_internal_low:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:597    .text.spi_nss_internal_low:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:598    .text.spi_nss_internal_low:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:605    .text.spi_dma_enable:0000000000000000 spi_dma_enable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:608    .text.spi_dma_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:610    .text.spi_dma_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:611    .text.spi_dma_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:612    .text.spi_dma_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:614    .text.spi_dma_enable:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:616    .text.spi_dma_enable:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:617    .text.spi_dma_enable:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:620    .text.spi_dma_enable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:622    .text.spi_dma_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:625    .text.spi_dma_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:626    .text.spi_dma_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:628    .text.spi_dma_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:635    .text.spi_dma_disable:0000000000000000 spi_dma_disable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:638    .text.spi_dma_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:640    .text.spi_dma_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:641    .text.spi_dma_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:642    .text.spi_dma_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:644    .text.spi_dma_disable:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:646    .text.spi_dma_disable:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:647    .text.spi_dma_disable:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:650    .text.spi_dma_disable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:652    .text.spi_dma_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:655    .text.spi_dma_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:656    .text.spi_dma_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:658    .text.spi_dma_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:665    .text.spi_i2s_data_frame_format_config:0000000000000000 spi_i2s_data_frame_format_config
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:668    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:670    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:671    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:672    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:678    .text.spi_i2s_data_frame_format_config:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:679    .text.spi_i2s_data_frame_format_config:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:684    .text.spi_i2s_data_frame_format_config:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:685    .text.spi_i2s_data_frame_format_config:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:692    .text.spi_i2s_data_transmit:0000000000000000 spi_i2s_data_transmit
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:695    .text.spi_i2s_data_transmit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:697    .text.spi_i2s_data_transmit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:698    .text.spi_i2s_data_transmit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:699    .text.spi_i2s_data_transmit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:701    .text.spi_i2s_data_transmit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:702    .text.spi_i2s_data_transmit:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:709    .text.spi_i2s_data_receive:0000000000000000 spi_i2s_data_receive
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:712    .text.spi_i2s_data_receive:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:714    .text.spi_i2s_data_receive:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:715    .text.spi_i2s_data_receive:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:716    .text.spi_i2s_data_receive:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:719    .text.spi_i2s_data_receive:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:722    .text.spi_i2s_data_receive:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:729    .text.spi_bidirectional_transfer_config:0000000000000000 spi_bidirectional_transfer_config
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 42
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:586    .text.spi_nss_internal_low:0000000000000000 spi_nss_internal_low
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:589    .text.spi_nss_internal_low:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:591    .text.spi_nss_internal_low:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:592    .text.spi_nss_internal_low:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:593    .text.spi_nss_internal_low:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:597    .text.spi_nss_internal_low:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:598    .text.spi_nss_internal_low:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:605    .text.spi_dma_enable:0000000000000000 spi_dma_enable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:608    .text.spi_dma_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:610    .text.spi_dma_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:611    .text.spi_dma_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:612    .text.spi_dma_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:614    .text.spi_dma_enable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:616    .text.spi_dma_enable:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:617    .text.spi_dma_enable:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:620    .text.spi_dma_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:622    .text.spi_dma_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:625    .text.spi_dma_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:626    .text.spi_dma_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:628    .text.spi_dma_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:635    .text.spi_dma_disable:0000000000000000 spi_dma_disable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:638    .text.spi_dma_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:640    .text.spi_dma_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:641    .text.spi_dma_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:642    .text.spi_dma_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:644    .text.spi_dma_disable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:646    .text.spi_dma_disable:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:647    .text.spi_dma_disable:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:650    .text.spi_dma_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:652    .text.spi_dma_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:655    .text.spi_dma_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:656    .text.spi_dma_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:658    .text.spi_dma_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:665    .text.spi_i2s_data_frame_format_config:0000000000000000 spi_i2s_data_frame_format_config
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:668    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:670    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:671    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:672    .text.spi_i2s_data_frame_format_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:678    .text.spi_i2s_data_frame_format_config:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:679    .text.spi_i2s_data_frame_format_config:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:684    .text.spi_i2s_data_frame_format_config:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:685    .text.spi_i2s_data_frame_format_config:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:692    .text.spi_i2s_data_transmit:0000000000000000 spi_i2s_data_transmit
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:695    .text.spi_i2s_data_transmit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:697    .text.spi_i2s_data_transmit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:698    .text.spi_i2s_data_transmit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:699    .text.spi_i2s_data_transmit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:701    .text.spi_i2s_data_transmit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:702    .text.spi_i2s_data_transmit:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:709    .text.spi_i2s_data_receive:0000000000000000 spi_i2s_data_receive
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:712    .text.spi_i2s_data_receive:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:714    .text.spi_i2s_data_receive:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:715    .text.spi_i2s_data_receive:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:716    .text.spi_i2s_data_receive:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:719    .text.spi_i2s_data_receive:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:722    .text.spi_i2s_data_receive:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:729    .text.spi_bidirectional_transfer_config:0000000000000000 spi_bidirectional_transfer_config
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 42
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:732    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:734    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:735    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:736    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:739    .text.spi_bidirectional_transfer_config:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:740    .text.spi_bidirectional_transfer_config:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:744    .text.spi_bidirectional_transfer_config:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:746    .text.spi_bidirectional_transfer_config:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:749    .text.spi_bidirectional_transfer_config:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:750    .text.spi_bidirectional_transfer_config:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:755    .text.spi_bidirectional_transfer_config:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:762    .text.spi_crc_polynomial_set:0000000000000000 spi_crc_polynomial_set
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:765    .text.spi_crc_polynomial_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:767    .text.spi_crc_polynomial_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:768    .text.spi_crc_polynomial_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:769    .text.spi_crc_polynomial_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:774    .text.spi_crc_polynomial_set:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:775    .text.spi_crc_polynomial_set:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:777    .text.spi_crc_polynomial_set:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:778    .text.spi_crc_polynomial_set:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:785    .text.spi_crc_polynomial_get:0000000000000000 spi_crc_polynomial_get
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:788    .text.spi_crc_polynomial_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:790    .text.spi_crc_polynomial_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:791    .text.spi_crc_polynomial_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:792    .text.spi_crc_polynomial_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:795    .text.spi_crc_polynomial_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:798    .text.spi_crc_polynomial_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:805    .text.spi_crc_on:0000000000000000 spi_crc_on
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:808    .text.spi_crc_on:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:810    .text.spi_crc_on:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:811    .text.spi_crc_on:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:812    .text.spi_crc_on:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:817    .text.spi_crc_on:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:818    .text.spi_crc_on:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:825    .text.spi_crc_off:0000000000000000 spi_crc_off
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:828    .text.spi_crc_off:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:830    .text.spi_crc_off:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:831    .text.spi_crc_off:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:832    .text.spi_crc_off:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:838    .text.spi_crc_off:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:839    .text.spi_crc_off:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:846    .text.spi_crc_next:0000000000000000 spi_crc_next
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:849    .text.spi_crc_next:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:851    .text.spi_crc_next:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:852    .text.spi_crc_next:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:853    .text.spi_crc_next:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:858    .text.spi_crc_next:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:859    .text.spi_crc_next:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:866    .text.spi_crc_get:0000000000000000 spi_crc_get
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:869    .text.spi_crc_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:871    .text.spi_crc_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:872    .text.spi_crc_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:873    .text.spi_crc_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:875    .text.spi_crc_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:876    .text.spi_crc_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:880    .text.spi_crc_get:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:883    .text.spi_crc_get:0000000000000008 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 43
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:732    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:734    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:735    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:736    .text.spi_bidirectional_transfer_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:739    .text.spi_bidirectional_transfer_config:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:740    .text.spi_bidirectional_transfer_config:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:744    .text.spi_bidirectional_transfer_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:746    .text.spi_bidirectional_transfer_config:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:749    .text.spi_bidirectional_transfer_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:750    .text.spi_bidirectional_transfer_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:755    .text.spi_bidirectional_transfer_config:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:762    .text.spi_crc_polynomial_set:0000000000000000 spi_crc_polynomial_set
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:765    .text.spi_crc_polynomial_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:767    .text.spi_crc_polynomial_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:768    .text.spi_crc_polynomial_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:769    .text.spi_crc_polynomial_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:774    .text.spi_crc_polynomial_set:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:775    .text.spi_crc_polynomial_set:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:777    .text.spi_crc_polynomial_set:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:778    .text.spi_crc_polynomial_set:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:785    .text.spi_crc_polynomial_get:0000000000000000 spi_crc_polynomial_get
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:788    .text.spi_crc_polynomial_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:790    .text.spi_crc_polynomial_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:791    .text.spi_crc_polynomial_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:792    .text.spi_crc_polynomial_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:795    .text.spi_crc_polynomial_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:798    .text.spi_crc_polynomial_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:805    .text.spi_crc_on:0000000000000000 spi_crc_on
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:808    .text.spi_crc_on:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:810    .text.spi_crc_on:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:811    .text.spi_crc_on:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:812    .text.spi_crc_on:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:817    .text.spi_crc_on:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:818    .text.spi_crc_on:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:825    .text.spi_crc_off:0000000000000000 spi_crc_off
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:828    .text.spi_crc_off:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:830    .text.spi_crc_off:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:831    .text.spi_crc_off:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:832    .text.spi_crc_off:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:838    .text.spi_crc_off:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:839    .text.spi_crc_off:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:846    .text.spi_crc_next:0000000000000000 spi_crc_next
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:849    .text.spi_crc_next:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:851    .text.spi_crc_next:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:852    .text.spi_crc_next:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:853    .text.spi_crc_next:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:858    .text.spi_crc_next:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:859    .text.spi_crc_next:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:866    .text.spi_crc_get:0000000000000000 spi_crc_get
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:869    .text.spi_crc_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:871    .text.spi_crc_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:872    .text.spi_crc_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:873    .text.spi_crc_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:875    .text.spi_crc_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:876    .text.spi_crc_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:880    .text.spi_crc_get:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:883    .text.spi_crc_get:0000000000000008 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 43
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:887    .text.spi_crc_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:888    .text.spi_crc_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:891    .text.spi_crc_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:898    .text.spi_ti_mode_enable:0000000000000000 spi_ti_mode_enable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:901    .text.spi_ti_mode_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:903    .text.spi_ti_mode_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:904    .text.spi_ti_mode_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:905    .text.spi_ti_mode_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:909    .text.spi_ti_mode_enable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:910    .text.spi_ti_mode_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:917    .text.spi_ti_mode_disable:0000000000000000 spi_ti_mode_disable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:920    .text.spi_ti_mode_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:922    .text.spi_ti_mode_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:923    .text.spi_ti_mode_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:924    .text.spi_ti_mode_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:928    .text.spi_ti_mode_disable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:929    .text.spi_ti_mode_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:936    .text.spi_nssp_mode_enable:0000000000000000 spi_nssp_mode_enable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:939    .text.spi_nssp_mode_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:941    .text.spi_nssp_mode_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:942    .text.spi_nssp_mode_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:943    .text.spi_nssp_mode_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:947    .text.spi_nssp_mode_enable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:948    .text.spi_nssp_mode_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:955    .text.spi_nssp_mode_disable:0000000000000000 spi_nssp_mode_disable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:958    .text.spi_nssp_mode_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:960    .text.spi_nssp_mode_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:961    .text.spi_nssp_mode_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:962    .text.spi_nssp_mode_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:966    .text.spi_nssp_mode_disable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:967    .text.spi_nssp_mode_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:974    .text.spi_i2s_interrupt_enable:0000000000000000 spi_i2s_interrupt_enable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:977    .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:979    .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:980    .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:988    .text.spi_i2s_interrupt_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:989    .text.spi_i2s_interrupt_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:993    .text.spi_i2s_interrupt_enable:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:995    .text.spi_i2s_interrupt_enable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:996    .text.spi_i2s_interrupt_enable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:999    .text.spi_i2s_interrupt_enable:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1000   .text.spi_i2s_interrupt_enable:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1005   .text.spi_i2s_interrupt_enable:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1006   .text.spi_i2s_interrupt_enable:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1009   .text.spi_i2s_interrupt_enable:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1016   .text.spi_i2s_interrupt_disable:0000000000000000 spi_i2s_interrupt_disable
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1019   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1021   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1022   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1030   .text.spi_i2s_interrupt_disable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1031   .text.spi_i2s_interrupt_disable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1035   .text.spi_i2s_interrupt_disable:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1037   .text.spi_i2s_interrupt_disable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1038   .text.spi_i2s_interrupt_disable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1041   .text.spi_i2s_interrupt_disable:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1042   .text.spi_i2s_interrupt_disable:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1047   .text.spi_i2s_interrupt_disable:0000000000000022 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 44
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:887    .text.spi_crc_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:888    .text.spi_crc_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:891    .text.spi_crc_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:898    .text.spi_ti_mode_enable:0000000000000000 spi_ti_mode_enable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:901    .text.spi_ti_mode_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:903    .text.spi_ti_mode_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:904    .text.spi_ti_mode_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:905    .text.spi_ti_mode_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:909    .text.spi_ti_mode_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:910    .text.spi_ti_mode_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:917    .text.spi_ti_mode_disable:0000000000000000 spi_ti_mode_disable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:920    .text.spi_ti_mode_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:922    .text.spi_ti_mode_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:923    .text.spi_ti_mode_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:924    .text.spi_ti_mode_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:928    .text.spi_ti_mode_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:929    .text.spi_ti_mode_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:936    .text.spi_nssp_mode_enable:0000000000000000 spi_nssp_mode_enable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:939    .text.spi_nssp_mode_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:941    .text.spi_nssp_mode_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:942    .text.spi_nssp_mode_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:943    .text.spi_nssp_mode_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:947    .text.spi_nssp_mode_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:948    .text.spi_nssp_mode_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:955    .text.spi_nssp_mode_disable:0000000000000000 spi_nssp_mode_disable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:958    .text.spi_nssp_mode_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:960    .text.spi_nssp_mode_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:961    .text.spi_nssp_mode_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:962    .text.spi_nssp_mode_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:966    .text.spi_nssp_mode_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:967    .text.spi_nssp_mode_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:974    .text.spi_i2s_interrupt_enable:0000000000000000 spi_i2s_interrupt_enable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:977    .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:979    .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:980    .text.spi_i2s_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:988    .text.spi_i2s_interrupt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:989    .text.spi_i2s_interrupt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:993    .text.spi_i2s_interrupt_enable:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:995    .text.spi_i2s_interrupt_enable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:996    .text.spi_i2s_interrupt_enable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:999    .text.spi_i2s_interrupt_enable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1000   .text.spi_i2s_interrupt_enable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1005   .text.spi_i2s_interrupt_enable:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1006   .text.spi_i2s_interrupt_enable:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1009   .text.spi_i2s_interrupt_enable:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1016   .text.spi_i2s_interrupt_disable:0000000000000000 spi_i2s_interrupt_disable
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1019   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1021   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1022   .text.spi_i2s_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1030   .text.spi_i2s_interrupt_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1031   .text.spi_i2s_interrupt_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1035   .text.spi_i2s_interrupt_disable:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1037   .text.spi_i2s_interrupt_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1038   .text.spi_i2s_interrupt_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1041   .text.spi_i2s_interrupt_disable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1042   .text.spi_i2s_interrupt_disable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1047   .text.spi_i2s_interrupt_disable:0000000000000022 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 44
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1048   .text.spi_i2s_interrupt_disable:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1051   .text.spi_i2s_interrupt_disable:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1058   .text.spi_i2s_interrupt_flag_get:0000000000000000 spi_i2s_interrupt_flag_get
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1061   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1063   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1064   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1065   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1068   .text.spi_i2s_interrupt_flag_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1069   .text.spi_i2s_interrupt_flag_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1072   .text.spi_i2s_interrupt_flag_get:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1095   .text.spi_i2s_interrupt_flag_get:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1096   .text.spi_i2s_interrupt_flag_get:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1099   .text.spi_i2s_interrupt_flag_get:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1100   .text.spi_i2s_interrupt_flag_get:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1104   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1105   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1106   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1108   .text.spi_i2s_interrupt_flag_get:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1112   .text.spi_i2s_interrupt_flag_get:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1118   .text.spi_i2s_interrupt_flag_get:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1119   .text.spi_i2s_interrupt_flag_get:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1122   .text.spi_i2s_interrupt_flag_get:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1123   .text.spi_i2s_interrupt_flag_get:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1126   .text.spi_i2s_interrupt_flag_get:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1129   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1130   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1134   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1135   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1136   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1139   .text.spi_i2s_interrupt_flag_get:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1142   .text.spi_i2s_interrupt_flag_get:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1143   .text.spi_i2s_interrupt_flag_get:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1146   .text.spi_i2s_interrupt_flag_get:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1149   .text.spi_i2s_interrupt_flag_get:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1150   .text.spi_i2s_interrupt_flag_get:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1153   .text.spi_i2s_interrupt_flag_get:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1156   .text.spi_i2s_interrupt_flag_get:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1157   .text.spi_i2s_interrupt_flag_get:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1160   .text.spi_i2s_interrupt_flag_get:0000000000000048 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1163   .text.spi_i2s_interrupt_flag_get:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1164   .text.spi_i2s_interrupt_flag_get:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1167   .text.spi_i2s_interrupt_flag_get:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1174   .text.spi_i2s_flag_get:0000000000000000 spi_i2s_flag_get
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1177   .text.spi_i2s_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1179   .text.spi_i2s_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1180   .text.spi_i2s_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1181   .text.spi_i2s_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1184   .text.spi_i2s_flag_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1186   .text.spi_i2s_flag_get:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1188   .text.spi_i2s_flag_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1195   .text.spi_crc_error_clear:0000000000000000 spi_crc_error_clear
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1198   .text.spi_crc_error_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1200   .text.spi_crc_error_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1201   .text.spi_crc_error_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1202   .text.spi_crc_error_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1206   .text.spi_crc_error_clear:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1207   .text.spi_crc_error_clear:0000000000000008 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 45
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1048   .text.spi_i2s_interrupt_disable:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1051   .text.spi_i2s_interrupt_disable:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1058   .text.spi_i2s_interrupt_flag_get:0000000000000000 spi_i2s_interrupt_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1061   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1063   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1064   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1065   .text.spi_i2s_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1068   .text.spi_i2s_interrupt_flag_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1069   .text.spi_i2s_interrupt_flag_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1072   .text.spi_i2s_interrupt_flag_get:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1095   .text.spi_i2s_interrupt_flag_get:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1096   .text.spi_i2s_interrupt_flag_get:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1099   .text.spi_i2s_interrupt_flag_get:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1100   .text.spi_i2s_interrupt_flag_get:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1104   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1105   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1106   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1108   .text.spi_i2s_interrupt_flag_get:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1112   .text.spi_i2s_interrupt_flag_get:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1118   .text.spi_i2s_interrupt_flag_get:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1119   .text.spi_i2s_interrupt_flag_get:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1122   .text.spi_i2s_interrupt_flag_get:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1123   .text.spi_i2s_interrupt_flag_get:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1126   .text.spi_i2s_interrupt_flag_get:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1129   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1130   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1134   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1135   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1136   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1139   .text.spi_i2s_interrupt_flag_get:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1142   .text.spi_i2s_interrupt_flag_get:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1143   .text.spi_i2s_interrupt_flag_get:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1146   .text.spi_i2s_interrupt_flag_get:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1149   .text.spi_i2s_interrupt_flag_get:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1150   .text.spi_i2s_interrupt_flag_get:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1153   .text.spi_i2s_interrupt_flag_get:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1156   .text.spi_i2s_interrupt_flag_get:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1157   .text.spi_i2s_interrupt_flag_get:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1160   .text.spi_i2s_interrupt_flag_get:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1163   .text.spi_i2s_interrupt_flag_get:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1164   .text.spi_i2s_interrupt_flag_get:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1167   .text.spi_i2s_interrupt_flag_get:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1174   .text.spi_i2s_flag_get:0000000000000000 spi_i2s_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1177   .text.spi_i2s_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1179   .text.spi_i2s_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1180   .text.spi_i2s_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1181   .text.spi_i2s_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1184   .text.spi_i2s_flag_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1186   .text.spi_i2s_flag_get:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1188   .text.spi_i2s_flag_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1195   .text.spi_crc_error_clear:0000000000000000 spi_crc_error_clear
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1198   .text.spi_crc_error_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1200   .text.spi_crc_error_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1201   .text.spi_crc_error_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1202   .text.spi_crc_error_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1206   .text.spi_crc_error_clear:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1207   .text.spi_crc_error_clear:0000000000000008 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 45
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:87     .text.spi_i2s_deinit:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:119    .text.spi_struct_para_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:182    .text.spi_init:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:201    .text.spi_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:220    .text.spi_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:262    .text.i2s_init:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:487    .text.i2s_psc_config:00000000000000da .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:506    .text.i2s_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:525    .text.i2s_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:544    .text.spi_nss_output_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:563    .text.spi_nss_output_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:582    .text.spi_nss_internal_high:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:601    .text.spi_nss_internal_low:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:631    .text.spi_dma_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:661    .text.spi_dma_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:688    .text.spi_i2s_data_frame_format_config:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:705    .text.spi_i2s_data_transmit:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:725    .text.spi_i2s_data_receive:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:758    .text.spi_bidirectional_transfer_config:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:781    .text.spi_crc_polynomial_set:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:801    .text.spi_crc_polynomial_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:821    .text.spi_crc_on:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:842    .text.spi_crc_off:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:862    .text.spi_crc_next:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:894    .text.spi_crc_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:913    .text.spi_ti_mode_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:932    .text.spi_ti_mode_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:951    .text.spi_nssp_mode_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:970    .text.spi_nssp_mode_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1012   .text.spi_i2s_interrupt_enable:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1054   .text.spi_i2s_interrupt_disable:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1170   .text.spi_i2s_interrupt_flag_get:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1191   .text.spi_i2s_flag_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1210   .text.spi_crc_error_clear:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:87     .text.spi_i2s_deinit:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:119    .text.spi_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:182    .text.spi_init:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:201    .text.spi_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:220    .text.spi_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:262    .text.i2s_init:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:487    .text.i2s_psc_config:00000000000000da .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:506    .text.i2s_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:525    .text.i2s_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:544    .text.spi_nss_output_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:563    .text.spi_nss_output_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:582    .text.spi_nss_internal_high:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:601    .text.spi_nss_internal_low:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:631    .text.spi_dma_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:661    .text.spi_dma_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:688    .text.spi_i2s_data_frame_format_config:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:705    .text.spi_i2s_data_transmit:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:725    .text.spi_i2s_data_receive:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:758    .text.spi_bidirectional_transfer_config:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:781    .text.spi_crc_polynomial_set:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:801    .text.spi_crc_polynomial_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:821    .text.spi_crc_on:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:842    .text.spi_crc_off:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:862    .text.spi_crc_next:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:894    .text.spi_crc_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:913    .text.spi_ti_mode_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:932    .text.spi_ti_mode_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:951    .text.spi_nssp_mode_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:970    .text.spi_nssp_mode_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1012   .text.spi_i2s_interrupt_enable:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1054   .text.spi_i2s_interrupt_disable:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1170   .text.spi_i2s_interrupt_flag_get:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1191   .text.spi_i2s_flag_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1210   .text.spi_crc_error_clear:0000000000000008 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:64     .text.spi_i2s_deinit:000000000000004e .L2
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:45     .text.spi_i2s_deinit:0000000000000032 .L3
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:76     .text.spi_i2s_deinit:0000000000000060 .L6
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:53     .text.spi_i2s_deinit:0000000000000042 .L8
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:303    .text.i2s_psc_config:0000000000000024 .L15
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:454    .text.i2s_psc_config:00000000000000bc .L16
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:442    .text.i2s_psc_config:00000000000000b2 .L17
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:468    .text.i2s_psc_config:00000000000000d0 .L20
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:406    .text.i2s_psc_config:0000000000000096 .L23
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:333    .text.i2s_psc_config:0000000000000042 .L18
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:355    .text.i2s_psc_config:0000000000000062 .L19
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:478    .text.i2s_psc_config:00000000000000d6 .L22
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:364    .text.i2s_psc_config:000000000000006c .L28
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:623    .text.spi_dma_enable:000000000000000c .L36
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:618    .text.spi_dma_enable:0000000000000008 .L38
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:653    .text.spi_dma_disable:000000000000000a .L40
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:648    .text.spi_dma_disable:0000000000000006 .L42
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:747    .text.spi_bidirectional_transfer_config:000000000000000e .L47
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:742    .text.spi_bidirectional_transfer_config:000000000000000a .L49
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:885    .text.spi_crc_get:000000000000000a .L56
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:878    .text.spi_crc_get:0000000000000004 .L58
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:997    .text.spi_i2s_interrupt_enable:000000000000001a .L64
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 46
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:64     .text.spi_i2s_deinit:000000000000004e .L2
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:45     .text.spi_i2s_deinit:0000000000000032 .L3
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:76     .text.spi_i2s_deinit:0000000000000060 .L6
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:53     .text.spi_i2s_deinit:0000000000000042 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:303    .text.i2s_psc_config:0000000000000024 .L15
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:454    .text.i2s_psc_config:00000000000000bc .L16
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:442    .text.i2s_psc_config:00000000000000b2 .L17
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:468    .text.i2s_psc_config:00000000000000d0 .L20
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:406    .text.i2s_psc_config:0000000000000096 .L23
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:333    .text.i2s_psc_config:0000000000000042 .L18
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:355    .text.i2s_psc_config:0000000000000062 .L19
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:478    .text.i2s_psc_config:00000000000000d6 .L22
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:364    .text.i2s_psc_config:000000000000006c .L28
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:623    .text.spi_dma_enable:000000000000000c .L36
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:618    .text.spi_dma_enable:0000000000000008 .L38
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:653    .text.spi_dma_disable:000000000000000a .L40
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:648    .text.spi_dma_disable:0000000000000006 .L42
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:747    .text.spi_bidirectional_transfer_config:000000000000000e .L47
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:742    .text.spi_bidirectional_transfer_config:000000000000000a .L49
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:885    .text.spi_crc_get:000000000000000a .L56
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:878    .text.spi_crc_get:0000000000000004 .L58
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:997    .text.spi_i2s_interrupt_enable:000000000000001a .L64
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 46
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:986    .text.spi_i2s_interrupt_enable:0000000000000010 .L65
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1003   .text.spi_i2s_interrupt_enable:0000000000000022 .L66
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:991    .text.spi_i2s_interrupt_enable:0000000000000016 .L68
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1039   .text.spi_i2s_interrupt_disable:000000000000001a .L70
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1028   .text.spi_i2s_interrupt_disable:0000000000000010 .L71
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1045   .text.spi_i2s_interrupt_disable:0000000000000022 .L72
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1033   .text.spi_i2s_interrupt_disable:0000000000000016 .L74
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1084   .rodata.spi_i2s_interrupt_flag_get:0000000000000000 .L78
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1103   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L76
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1110   .text.spi_i2s_interrupt_flag_get:0000000000000026 .L75
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1133   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L89
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1093   .text.spi_i2s_interrupt_flag_get:000000000000001a .L84
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1116   .text.spi_i2s_interrupt_flag_get:000000000000002a .L83
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1127   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L82
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1140   .text.spi_i2s_interrupt_flag_get:000000000000003c .L81
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1147   .text.spi_i2s_interrupt_flag_get:0000000000000042 .L80
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1154   .text.spi_i2s_interrupt_flag_get:0000000000000046 .L79
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1161   .text.spi_i2s_interrupt_flag_get:000000000000004a .L77
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:2588   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4022   .debug_str:0000000000000484 .LASF118
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4008   .debug_str:00000000000003f3 .LASF119
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4070   .debug_str:0000000000000621 .LASF120
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3790   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3862   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3880   .debug_str:000000000000006f .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4098   .debug_str:0000000000000750 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4060   .debug_str:00000000000005e3 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4080   .debug_str:00000000000006c4 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4030   .debug_str:0000000000000524 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3930   .debug_str:00000000000001cf .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4100   .debug_str:000000000000075c .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4036   .debug_str:000000000000054d .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4082   .debug_str:00000000000006d2 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4076   .debug_str:000000000000069d .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3986   .debug_str:0000000000000359 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3924   .debug_str:000000000000019b .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3972   .debug_str:0000000000000308 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4018   .debug_str:000000000000046d .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3908   .debug_str:000000000000011f .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3866   .debug_str:0000000000000009 .LASF121
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4048   .debug_str:00000000000005a2 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3896   .debug_str:00000000000000c8 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3974   .debug_str:0000000000000310 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3948   .debug_str:0000000000000252 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4096   .debug_str:0000000000000742 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3980   .debug_str:0000000000000336 .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3872   .debug_str:000000000000003c .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4020   .debug_str:0000000000000476 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3918   .debug_str:0000000000000168 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4090   .debug_str:0000000000000712 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3886   .debug_str:000000000000008c .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4028   .debug_str:0000000000000518 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4072   .debug_str:0000000000000685 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3956   .debug_str:0000000000000281 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4066   .debug_str:0000000000000607 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3950   .debug_str:0000000000000260 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4086   .debug_str:00000000000006f2 .LASF31
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 47
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:986    .text.spi_i2s_interrupt_enable:0000000000000010 .L65
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1003   .text.spi_i2s_interrupt_enable:0000000000000022 .L66
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:991    .text.spi_i2s_interrupt_enable:0000000000000016 .L68
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1039   .text.spi_i2s_interrupt_disable:000000000000001a .L70
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1028   .text.spi_i2s_interrupt_disable:0000000000000010 .L71
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1045   .text.spi_i2s_interrupt_disable:0000000000000022 .L72
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1033   .text.spi_i2s_interrupt_disable:0000000000000016 .L74
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1084   .rodata.spi_i2s_interrupt_flag_get:0000000000000000 .L78
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1103   .text.spi_i2s_interrupt_flag_get:0000000000000020 .L76
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1110   .text.spi_i2s_interrupt_flag_get:0000000000000026 .L75
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1133   .text.spi_i2s_interrupt_flag_get:0000000000000036 .L89
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1093   .text.spi_i2s_interrupt_flag_get:000000000000001a .L84
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1116   .text.spi_i2s_interrupt_flag_get:000000000000002a .L83
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1127   .text.spi_i2s_interrupt_flag_get:0000000000000032 .L82
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1140   .text.spi_i2s_interrupt_flag_get:000000000000003c .L81
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1147   .text.spi_i2s_interrupt_flag_get:0000000000000042 .L80
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1154   .text.spi_i2s_interrupt_flag_get:0000000000000046 .L79
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1161   .text.spi_i2s_interrupt_flag_get:000000000000004a .L77
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:2588   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4022   .debug_str:0000000000000484 .LASF118
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4008   .debug_str:00000000000003f3 .LASF119
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4070   .debug_str:0000000000000621 .LASF120
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3790   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3862   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3880   .debug_str:000000000000006f .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4098   .debug_str:0000000000000750 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4060   .debug_str:00000000000005e3 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4080   .debug_str:00000000000006c4 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4030   .debug_str:0000000000000524 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3930   .debug_str:00000000000001cf .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4100   .debug_str:000000000000075c .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4036   .debug_str:000000000000054d .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4082   .debug_str:00000000000006d2 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4076   .debug_str:000000000000069d .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3986   .debug_str:0000000000000359 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3924   .debug_str:000000000000019b .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3972   .debug_str:0000000000000308 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4018   .debug_str:000000000000046d .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3908   .debug_str:000000000000011f .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3866   .debug_str:0000000000000009 .LASF121
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4048   .debug_str:00000000000005a2 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3896   .debug_str:00000000000000c8 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3974   .debug_str:0000000000000310 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3948   .debug_str:0000000000000252 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4096   .debug_str:0000000000000742 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3980   .debug_str:0000000000000336 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3872   .debug_str:000000000000003c .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4020   .debug_str:0000000000000476 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3918   .debug_str:0000000000000168 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4090   .debug_str:0000000000000712 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3886   .debug_str:000000000000008c .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4028   .debug_str:0000000000000518 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4072   .debug_str:0000000000000685 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3956   .debug_str:0000000000000281 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4066   .debug_str:0000000000000607 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3950   .debug_str:0000000000000260 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4086   .debug_str:00000000000006f2 .LASF31
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 47
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3966   .debug_str:00000000000002e4 .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4038   .debug_str:0000000000000556 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3932   .debug_str:00000000000001da .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4102   .debug_str:000000000000076f .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3990   .debug_str:000000000000037c .LASF36
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3874   .debug_str:000000000000004a .LASF37
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4032   .debug_str:000000000000052e .LASF38
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3976   .debug_str:000000000000031d .LASF39
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3868   .debug_str:0000000000000019 .LASF40
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4014   .debug_str:0000000000000454 .LASF41
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3906   .debug_str:0000000000000112 .LASF42
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4068   .debug_str:0000000000000614 .LASF43
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3946   .debug_str:0000000000000246 .LASF44
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4092   .debug_str:000000000000071f .LASF45
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4062   .debug_str:00000000000005ed .LASF46
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3994   .debug_str:0000000000000396 .LASF47
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3910   .debug_str:0000000000000128 .LASF48
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4004   .debug_str:00000000000003e7 .LASF49
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3942   .debug_str:0000000000000233 .LASF50
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4052   .debug_str:00000000000005ad .LASF51
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4054   .debug_str:00000000000005b5 .LASF52
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4016   .debug_str:0000000000000461 .LASF53
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3922   .debug_str:000000000000018f .LASF54
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3878   .debug_str:0000000000000064 .LASF55
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3952   .debug_str:000000000000026d .LASF56
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3884   .debug_str:0000000000000085 .LASF57
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4084   .debug_str:00000000000006dd .LASF58
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3984   .debug_str:0000000000000350 .LASF59
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3964   .debug_str:00000000000002cf .LASF60
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4088   .debug_str:00000000000006fe .LASF68
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1196   .text.spi_crc_error_clear:0000000000000000 .LFB35
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1208   .text.spi_crc_error_clear:0000000000000008 .LFE35
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3914   .debug_str:000000000000013c .LASF61
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3928   .debug_str:00000000000001be .LASF63
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1175   .text.spi_i2s_flag_get:0000000000000000 .LFB34
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1189   .text.spi_i2s_flag_get:000000000000000a .LFE34
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3114   .debug_loc:0000000000000000 .LLST22
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4050   .debug_str:00000000000005a8 .LASF62
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3888   .debug_str:0000000000000098 .LASF64
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1059   .text.spi_i2s_interrupt_flag_get:0000000000000000 .LFB33
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1168   .text.spi_i2s_interrupt_flag_get:0000000000000050 .LFE33
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3128   .debug_loc:0000000000000021 .LLST19
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4074   .debug_str:0000000000000693 .LASF65
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3146   .debug_loc:000000000000004d .LLST20
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3890   .debug_str:00000000000000b3 .LASF66
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3160   .debug_loc:000000000000006e .LLST21
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3892   .debug_str:00000000000000b8 .LASF67
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3958   .debug_str:000000000000028f .LASF69
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1017   .text.spi_i2s_interrupt_disable:0000000000000000 .LFB32
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1052   .text.spi_i2s_interrupt_disable:000000000000002a .LFE32
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3920   .debug_str:0000000000000176 .LASF70
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:975    .text.spi_i2s_interrupt_enable:0000000000000000 .LFB31
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1010   .text.spi_i2s_interrupt_enable:000000000000002a .LFE31
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3870   .debug_str:0000000000000026 .LASF71
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:956    .text.spi_nssp_mode_disable:0000000000000000 .LFB30
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:968    .text.spi_nssp_mode_disable:0000000000000008 .LFE30
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4034   .debug_str:0000000000000538 .LASF72
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 48
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3966   .debug_str:00000000000002e4 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4038   .debug_str:0000000000000556 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3932   .debug_str:00000000000001da .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4102   .debug_str:000000000000076f .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3990   .debug_str:000000000000037c .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3874   .debug_str:000000000000004a .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4032   .debug_str:000000000000052e .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3976   .debug_str:000000000000031d .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3868   .debug_str:0000000000000019 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4014   .debug_str:0000000000000454 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3906   .debug_str:0000000000000112 .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4068   .debug_str:0000000000000614 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3946   .debug_str:0000000000000246 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4092   .debug_str:000000000000071f .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4062   .debug_str:00000000000005ed .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3994   .debug_str:0000000000000396 .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3910   .debug_str:0000000000000128 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4004   .debug_str:00000000000003e7 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3942   .debug_str:0000000000000233 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4052   .debug_str:00000000000005ad .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4054   .debug_str:00000000000005b5 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4016   .debug_str:0000000000000461 .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3922   .debug_str:000000000000018f .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3878   .debug_str:0000000000000064 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3952   .debug_str:000000000000026d .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3884   .debug_str:0000000000000085 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4084   .debug_str:00000000000006dd .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3984   .debug_str:0000000000000350 .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3964   .debug_str:00000000000002cf .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4088   .debug_str:00000000000006fe .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1196   .text.spi_crc_error_clear:0000000000000000 .LFB35
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1208   .text.spi_crc_error_clear:0000000000000008 .LFE35
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3914   .debug_str:000000000000013c .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3928   .debug_str:00000000000001be .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1175   .text.spi_i2s_flag_get:0000000000000000 .LFB34
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1189   .text.spi_i2s_flag_get:000000000000000a .LFE34
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3114   .debug_loc:0000000000000000 .LLST22
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4050   .debug_str:00000000000005a8 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3888   .debug_str:0000000000000098 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1059   .text.spi_i2s_interrupt_flag_get:0000000000000000 .LFB33
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1168   .text.spi_i2s_interrupt_flag_get:0000000000000050 .LFE33
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3128   .debug_loc:0000000000000021 .LLST19
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4074   .debug_str:0000000000000693 .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3146   .debug_loc:000000000000004d .LLST20
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3890   .debug_str:00000000000000b3 .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3160   .debug_loc:000000000000006e .LLST21
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3892   .debug_str:00000000000000b8 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3958   .debug_str:000000000000028f .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1017   .text.spi_i2s_interrupt_disable:0000000000000000 .LFB32
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1052   .text.spi_i2s_interrupt_disable:000000000000002a .LFE32
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3920   .debug_str:0000000000000176 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:975    .text.spi_i2s_interrupt_enable:0000000000000000 .LFB31
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1010   .text.spi_i2s_interrupt_enable:000000000000002a .LFE31
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3870   .debug_str:0000000000000026 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:956    .text.spi_nssp_mode_disable:0000000000000000 .LFB30
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:968    .text.spi_nssp_mode_disable:0000000000000008 .LFE30
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4034   .debug_str:0000000000000538 .LASF72
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 48
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:937    .text.spi_nssp_mode_enable:0000000000000000 .LFB29
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:949    .text.spi_nssp_mode_enable:000000000000000a .LFE29
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3934   .debug_str:00000000000001e6 .LASF73
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:918    .text.spi_ti_mode_disable:0000000000000000 .LFB28
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:930    .text.spi_ti_mode_disable:0000000000000008 .LFE28
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3996   .debug_str:00000000000003a2 .LASF74
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:899    .text.spi_ti_mode_enable:0000000000000000 .LFB27
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:911    .text.spi_ti_mode_enable:000000000000000a .LFE27
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3926   .debug_str:00000000000001b2 .LASF75
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:867    .text.spi_crc_get:0000000000000000 .LFB26
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:892    .text.spi_crc_get:000000000000000e .LFE26
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3171   .debug_loc:000000000000008c .LLST18
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3902   .debug_str:00000000000000ef .LASF76
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:847    .text.spi_crc_next:0000000000000000 .LFB25
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:860    .text.spi_crc_next:000000000000000a .LFE25
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3978   .debug_str:000000000000032a .LASF77
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:826    .text.spi_crc_off:0000000000000000 .LFB24
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:840    .text.spi_crc_off:000000000000000c .LFE24
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3894   .debug_str:00000000000000bd .LASF78
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:806    .text.spi_crc_on:0000000000000000 .LFB23
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:819    .text.spi_crc_on:000000000000000a .LFE23
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3962   .debug_str:00000000000002b8 .LASF79
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:786    .text.spi_crc_polynomial_get:0000000000000000 .LFB22
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:799    .text.spi_crc_polynomial_get:0000000000000008 .LFE22
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3196   .debug_loc:00000000000000c6 .LLST17
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3900   .debug_str:00000000000000d8 .LASF80
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:763    .text.spi_crc_polynomial_set:0000000000000000 .LFB21
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:779    .text.spi_crc_polynomial_set:000000000000000c .LFE21
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4042   .debug_str:0000000000000578 .LASF81
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4002   .debug_str:00000000000003c5 .LASF82
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:730    .text.spi_bidirectional_transfer_config:0000000000000000 .LFB20
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:756    .text.spi_bidirectional_transfer_config:0000000000000018 .LFE20
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4104   .debug_str:000000000000077b .LASF83
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4078   .debug_str:00000000000006af .LASF84
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:710    .text.spi_i2s_data_receive:0000000000000000 .LFB19
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:723    .text.spi_i2s_data_receive:0000000000000008 .LFE19
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3210   .debug_loc:00000000000000e7 .LLST16
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3904   .debug_str:00000000000000fc .LASF85
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:693    .text.spi_i2s_data_transmit:0000000000000000 .LFB18
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:703    .text.spi_i2s_data_transmit:0000000000000004 .LFE18
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3968   .debug_str:00000000000002f0 .LASF86
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3916   .debug_str:0000000000000147 .LASF87
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:666    .text.spi_i2s_data_frame_format_config:0000000000000000 .LFB17
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:686    .text.spi_i2s_data_frame_format_config:0000000000000014 .LFE17
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4056   .debug_str:00000000000005bd .LASF88
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3224   .debug_loc:0000000000000108 .LLST15
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4012   .debug_str:0000000000000444 .LASF89
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:636    .text.spi_dma_disable:0000000000000000 .LFB16
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:659    .text.spi_dma_disable:000000000000000e .LFE16
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3876   .debug_str:0000000000000055 .LASF90
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:606    .text.spi_dma_enable:0000000000000000 .LFB15
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:629    .text.spi_dma_enable:0000000000000012 .LFE15
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3988   .debug_str:0000000000000367 .LASF91
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:587    .text.spi_nss_internal_low:0000000000000000 .LFB14
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:599    .text.spi_nss_internal_low:000000000000000a .LFE14
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4046   .debug_str:000000000000058c .LASF92
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:568    .text.spi_nss_internal_high:0000000000000000 .LFB13
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 49
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:937    .text.spi_nssp_mode_enable:0000000000000000 .LFB29
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:949    .text.spi_nssp_mode_enable:000000000000000a .LFE29
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3934   .debug_str:00000000000001e6 .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:918    .text.spi_ti_mode_disable:0000000000000000 .LFB28
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:930    .text.spi_ti_mode_disable:0000000000000008 .LFE28
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3996   .debug_str:00000000000003a2 .LASF74
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:899    .text.spi_ti_mode_enable:0000000000000000 .LFB27
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:911    .text.spi_ti_mode_enable:000000000000000a .LFE27
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3926   .debug_str:00000000000001b2 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:867    .text.spi_crc_get:0000000000000000 .LFB26
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:892    .text.spi_crc_get:000000000000000e .LFE26
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3171   .debug_loc:000000000000008c .LLST18
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3902   .debug_str:00000000000000ef .LASF76
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:847    .text.spi_crc_next:0000000000000000 .LFB25
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:860    .text.spi_crc_next:000000000000000a .LFE25
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3978   .debug_str:000000000000032a .LASF77
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:826    .text.spi_crc_off:0000000000000000 .LFB24
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:840    .text.spi_crc_off:000000000000000c .LFE24
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3894   .debug_str:00000000000000bd .LASF78
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:806    .text.spi_crc_on:0000000000000000 .LFB23
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:819    .text.spi_crc_on:000000000000000a .LFE23
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3962   .debug_str:00000000000002b8 .LASF79
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:786    .text.spi_crc_polynomial_get:0000000000000000 .LFB22
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:799    .text.spi_crc_polynomial_get:0000000000000008 .LFE22
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3196   .debug_loc:00000000000000c6 .LLST17
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3900   .debug_str:00000000000000d8 .LASF80
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:763    .text.spi_crc_polynomial_set:0000000000000000 .LFB21
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:779    .text.spi_crc_polynomial_set:000000000000000c .LFE21
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4042   .debug_str:0000000000000578 .LASF81
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4002   .debug_str:00000000000003c5 .LASF82
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:730    .text.spi_bidirectional_transfer_config:0000000000000000 .LFB20
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:756    .text.spi_bidirectional_transfer_config:0000000000000018 .LFE20
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4104   .debug_str:000000000000077b .LASF83
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4078   .debug_str:00000000000006af .LASF84
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:710    .text.spi_i2s_data_receive:0000000000000000 .LFB19
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:723    .text.spi_i2s_data_receive:0000000000000008 .LFE19
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3210   .debug_loc:00000000000000e7 .LLST16
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3904   .debug_str:00000000000000fc .LASF85
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:693    .text.spi_i2s_data_transmit:0000000000000000 .LFB18
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:703    .text.spi_i2s_data_transmit:0000000000000004 .LFE18
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3968   .debug_str:00000000000002f0 .LASF86
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3916   .debug_str:0000000000000147 .LASF87
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:666    .text.spi_i2s_data_frame_format_config:0000000000000000 .LFB17
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:686    .text.spi_i2s_data_frame_format_config:0000000000000014 .LFE17
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4056   .debug_str:00000000000005bd .LASF88
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3224   .debug_loc:0000000000000108 .LLST15
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4012   .debug_str:0000000000000444 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:636    .text.spi_dma_disable:0000000000000000 .LFB16
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:659    .text.spi_dma_disable:000000000000000e .LFE16
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3876   .debug_str:0000000000000055 .LASF90
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:606    .text.spi_dma_enable:0000000000000000 .LFB15
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:629    .text.spi_dma_enable:0000000000000012 .LFE15
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3988   .debug_str:0000000000000367 .LASF91
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:587    .text.spi_nss_internal_low:0000000000000000 .LFB14
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:599    .text.spi_nss_internal_low:000000000000000a .LFE14
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4046   .debug_str:000000000000058c .LASF92
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:568    .text.spi_nss_internal_high:0000000000000000 .LFB13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 49
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:580    .text.spi_nss_internal_high:000000000000000a .LFE13
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4094   .debug_str:000000000000072b .LASF93
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:549    .text.spi_nss_output_disable:0000000000000000 .LFB12
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:561    .text.spi_nss_output_disable:0000000000000008 .LFE12
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4040   .debug_str:0000000000000562 .LASF94
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:530    .text.spi_nss_output_enable:0000000000000000 .LFB11
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:542    .text.spi_nss_output_enable:000000000000000a .LFE11
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3938   .debug_str:0000000000000212 .LASF95
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:511    .text.i2s_disable:0000000000000000 .LFB10
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:523    .text.i2s_disable:000000000000000a .LFE10
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4106   .debug_str:000000000000078e .LASF96
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:492    .text.i2s_enable:0000000000000000 .LFB9
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:504    .text.i2s_enable:000000000000000a .LFE9
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3960   .debug_str:00000000000002a9 .LASF97
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:267    .text.i2s_psc_config:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:485    .text.i2s_psc_config:00000000000000da .LFE8
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3238   .debug_loc:0000000000000129 .LLST6
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3261   .debug_loc:0000000000000161 .LLST7
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4064   .debug_str:00000000000005fb .LASF98
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3283   .debug_loc:0000000000000198 .LLST8
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3982   .debug_str:0000000000000344 .LASF99
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3305   .debug_loc:00000000000001cf .LLST9
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4000   .debug_str:00000000000003be .LASF100
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3335   .debug_loc:0000000000000215 .LLST10
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4024   .debug_str:000000000000050c .LASF101
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3365   .debug_loc:000000000000025b .LLST11
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3912   .debug_str:0000000000000136 .LASF102
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3382   .debug_loc:0000000000000286 .LLST12
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4026   .debug_str:0000000000000513 .LASF103
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3423   .debug_loc:00000000000002e5 .LLST13
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3998   .debug_str:00000000000003b5 .LASF104
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3467   .debug_loc:0000000000000355 .LLST14
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:462    .text.i2s_psc_config:00000000000000ca .LVL52
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3882   .debug_str:000000000000007c .LASF105
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:225    .text.i2s_init:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:260    .text.i2s_init:000000000000001c .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3898   .debug_str:00000000000000d3 .LASF106
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3508   .debug_loc:00000000000003b4 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3864   .debug_str:0000000000000000 .LASF107
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4006   .debug_str:00000000000003ee .LASF108
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3522   .debug_loc:00000000000003d5 .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3536   .debug_loc:00000000000003f6 .LLST5
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3944   .debug_str:000000000000023a .LASF109
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:206    .text.spi_disable:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:218    .text.spi_disable:000000000000000a .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4010   .debug_str:0000000000000439 .LASF110
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:187    .text.spi_enable:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:199    .text.spi_enable:000000000000000a .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3954   .debug_str:0000000000000278 .LASF111
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:124    .text.spi_init:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:180    .text.spi_init:0000000000000036 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4044   .debug_str:0000000000000581 .LASF112
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3563   .debug_loc:000000000000042d .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3940   .debug_str:000000000000021e .LASF113
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:92     .text.spi_struct_para_init:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:117    .text.spi_struct_para_init:000000000000001a .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3992   .debug_str:0000000000000387 .LASF114
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 50
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:580    .text.spi_nss_internal_high:000000000000000a .LFE13
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4094   .debug_str:000000000000072b .LASF93
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:549    .text.spi_nss_output_disable:0000000000000000 .LFB12
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:561    .text.spi_nss_output_disable:0000000000000008 .LFE12
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4040   .debug_str:0000000000000562 .LASF94
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:530    .text.spi_nss_output_enable:0000000000000000 .LFB11
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:542    .text.spi_nss_output_enable:000000000000000a .LFE11
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3938   .debug_str:0000000000000212 .LASF95
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:511    .text.i2s_disable:0000000000000000 .LFB10
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:523    .text.i2s_disable:000000000000000a .LFE10
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4106   .debug_str:000000000000078e .LASF96
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:492    .text.i2s_enable:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:504    .text.i2s_enable:000000000000000a .LFE9
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3960   .debug_str:00000000000002a9 .LASF97
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:267    .text.i2s_psc_config:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:485    .text.i2s_psc_config:00000000000000da .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3238   .debug_loc:0000000000000129 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3261   .debug_loc:0000000000000161 .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4064   .debug_str:00000000000005fb .LASF98
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3283   .debug_loc:0000000000000198 .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3982   .debug_str:0000000000000344 .LASF99
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3305   .debug_loc:00000000000001cf .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4000   .debug_str:00000000000003be .LASF100
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3335   .debug_loc:0000000000000215 .LLST10
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4024   .debug_str:000000000000050c .LASF101
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3365   .debug_loc:000000000000025b .LLST11
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3912   .debug_str:0000000000000136 .LASF102
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3382   .debug_loc:0000000000000286 .LLST12
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4026   .debug_str:0000000000000513 .LASF103
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3423   .debug_loc:00000000000002e5 .LLST13
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3998   .debug_str:00000000000003b5 .LASF104
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3467   .debug_loc:0000000000000355 .LLST14
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:462    .text.i2s_psc_config:00000000000000ca .LVL52
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3882   .debug_str:000000000000007c .LASF105
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:225    .text.i2s_init:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:260    .text.i2s_init:000000000000001c .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3898   .debug_str:00000000000000d3 .LASF106
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3508   .debug_loc:00000000000003b4 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3864   .debug_str:0000000000000000 .LASF107
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4006   .debug_str:00000000000003ee .LASF108
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3522   .debug_loc:00000000000003d5 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3536   .debug_loc:00000000000003f6 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3944   .debug_str:000000000000023a .LASF109
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:206    .text.spi_disable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:218    .text.spi_disable:000000000000000a .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4010   .debug_str:0000000000000439 .LASF110
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:187    .text.spi_enable:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:199    .text.spi_enable:000000000000000a .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3954   .debug_str:0000000000000278 .LASF111
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:124    .text.spi_init:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:180    .text.spi_init:0000000000000036 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4044   .debug_str:0000000000000581 .LASF112
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3563   .debug_loc:000000000000042d .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3940   .debug_str:000000000000021e .LASF113
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:92     .text.spi_struct_para_init:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:117    .text.spi_struct_para_init:000000000000001a .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3992   .debug_str:0000000000000387 .LASF114
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 50
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:14     .text.spi_i2s_deinit:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:85     .text.spi_i2s_deinit:0000000000000066 .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3643   .debug_loc:00000000000004ac .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3671   .debug_loc:00000000000004f0 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:40     .text.spi_i2s_deinit:000000000000002c .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:50     .text.spi_i2s_deinit:000000000000003e .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:63     .text.spi_i2s_deinit:000000000000004e .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:71     .text.spi_i2s_deinit:000000000000005a .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3970   .debug_str:00000000000002f5 .LASF115
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:3936   .debug_str:00000000000001fa .LASF116
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:4058   .debug_str:00000000000005ca .LASF117
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1178   .text.spi_i2s_flag_get:0000000000000000 .LVL105
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1182   .text.spi_i2s_flag_get:0000000000000002 .LVL106
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1062   .text.spi_i2s_interrupt_flag_get:0000000000000000 .LVL88
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1113   .text.spi_i2s_interrupt_flag_get:0000000000000028 .LVL95
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1115   .text.spi_i2s_interrupt_flag_get:000000000000002a .LVL96
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1077   .text.spi_i2s_interrupt_flag_get:0000000000000014 .LVL91
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1066   .text.spi_i2s_interrupt_flag_get:0000000000000002 .LVL89
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1109   .text.spi_i2s_interrupt_flag_get:0000000000000026 .LVL94
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1165   .text.spi_i2s_interrupt_flag_get:000000000000004e .LVL104
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:870    .text.spi_crc_get:0000000000000000 .LVL78
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:877    .text.spi_crc_get:0000000000000004 .LVL79
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:884    .text.spi_crc_get:000000000000000a .LVL80
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:889    .text.spi_crc_get:000000000000000c .LVL81
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:789    .text.spi_crc_polynomial_get:0000000000000000 .LVL73
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:793    .text.spi_crc_polynomial_get:0000000000000002 .LVL74
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:713    .text.spi_i2s_data_receive:0000000000000000 .LVL69
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:717    .text.spi_i2s_data_receive:0000000000000002 .LVL70
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:669    .text.spi_i2s_data_frame_format_config:0000000000000000 .LVL66
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:681    .text.spi_i2s_data_frame_format_config:0000000000000010 .LVL67
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:277    .text.i2s_psc_config:0000000000000002 .LCFI4
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:438    .text.i2s_psc_config:00000000000000b0 .LCFI5
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:443    .text.i2s_psc_config:00000000000000b2 .LCFI6
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:270    .text.i2s_psc_config:0000000000000000 .LVL26
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:316    .text.i2s_psc_config:0000000000000030 .LVL29
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:436    .text.i2s_psc_config:00000000000000ae .LVL48
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:441    .text.i2s_psc_config:00000000000000b2 .LVL49
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:299    .text.i2s_psc_config:000000000000001c .LVL27
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:376    .text.i2s_psc_config:000000000000007c .LVL38
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:354    .text.i2s_psc_config:0000000000000062 .LVL35
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:467    .text.i2s_psc_config:00000000000000d0 .LVL54
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:390    .text.i2s_psc_config:0000000000000088 .LVL42
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:410    .text.i2s_psc_config:0000000000000098 .LVL46
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:382    .text.i2s_psc_config:0000000000000082 .LVL40
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:387    .text.i2s_psc_config:0000000000000086 .LVL41
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:397    .text.i2s_psc_config:000000000000008e .LVL43
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:402    .text.i2s_psc_config:0000000000000094 .LVL44
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:405    .text.i2s_psc_config:0000000000000096 .LVL45
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:418    .text.i2s_psc_config:000000000000009e .LVL47
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:304    .text.i2s_psc_config:0000000000000024 .LVL28
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:323    .text.i2s_psc_config:0000000000000038 .LVL30
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:372    .text.i2s_psc_config:000000000000007a .LVL37
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:379    .text.i2s_psc_config:000000000000007e .LVL39
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:451    .text.i2s_psc_config:00000000000000ba .LVL50
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:453    .text.i2s_psc_config:00000000000000bc .LVL51
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:338    .text.i2s_psc_config:0000000000000048 .LVL32
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:342    .text.i2s_psc_config:000000000000004a .LVL33
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s 			page 51
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:14     .text.spi_i2s_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:85     .text.spi_i2s_deinit:0000000000000066 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3643   .debug_loc:00000000000004ac .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3671   .debug_loc:00000000000004f0 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:40     .text.spi_i2s_deinit:000000000000002c .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:50     .text.spi_i2s_deinit:000000000000003e .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:63     .text.spi_i2s_deinit:000000000000004e .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:71     .text.spi_i2s_deinit:000000000000005a .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3970   .debug_str:00000000000002f5 .LASF115
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:3936   .debug_str:00000000000001fa .LASF116
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:4058   .debug_str:00000000000005ca .LASF117
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1178   .text.spi_i2s_flag_get:0000000000000000 .LVL105
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1182   .text.spi_i2s_flag_get:0000000000000002 .LVL106
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1062   .text.spi_i2s_interrupt_flag_get:0000000000000000 .LVL88
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1113   .text.spi_i2s_interrupt_flag_get:0000000000000028 .LVL95
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1115   .text.spi_i2s_interrupt_flag_get:000000000000002a .LVL96
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1077   .text.spi_i2s_interrupt_flag_get:0000000000000014 .LVL91
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1066   .text.spi_i2s_interrupt_flag_get:0000000000000002 .LVL89
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1109   .text.spi_i2s_interrupt_flag_get:0000000000000026 .LVL94
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1165   .text.spi_i2s_interrupt_flag_get:000000000000004e .LVL104
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:870    .text.spi_crc_get:0000000000000000 .LVL78
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:877    .text.spi_crc_get:0000000000000004 .LVL79
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:884    .text.spi_crc_get:000000000000000a .LVL80
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:889    .text.spi_crc_get:000000000000000c .LVL81
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:789    .text.spi_crc_polynomial_get:0000000000000000 .LVL73
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:793    .text.spi_crc_polynomial_get:0000000000000002 .LVL74
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:713    .text.spi_i2s_data_receive:0000000000000000 .LVL69
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:717    .text.spi_i2s_data_receive:0000000000000002 .LVL70
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:669    .text.spi_i2s_data_frame_format_config:0000000000000000 .LVL66
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:681    .text.spi_i2s_data_frame_format_config:0000000000000010 .LVL67
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:277    .text.i2s_psc_config:0000000000000002 .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:438    .text.i2s_psc_config:00000000000000b0 .LCFI5
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:443    .text.i2s_psc_config:00000000000000b2 .LCFI6
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:270    .text.i2s_psc_config:0000000000000000 .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:316    .text.i2s_psc_config:0000000000000030 .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:436    .text.i2s_psc_config:00000000000000ae .LVL48
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:441    .text.i2s_psc_config:00000000000000b2 .LVL49
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:299    .text.i2s_psc_config:000000000000001c .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:376    .text.i2s_psc_config:000000000000007c .LVL38
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:354    .text.i2s_psc_config:0000000000000062 .LVL35
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:467    .text.i2s_psc_config:00000000000000d0 .LVL54
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:390    .text.i2s_psc_config:0000000000000088 .LVL42
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:410    .text.i2s_psc_config:0000000000000098 .LVL46
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:382    .text.i2s_psc_config:0000000000000082 .LVL40
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:387    .text.i2s_psc_config:0000000000000086 .LVL41
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:397    .text.i2s_psc_config:000000000000008e .LVL43
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:402    .text.i2s_psc_config:0000000000000094 .LVL44
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:405    .text.i2s_psc_config:0000000000000096 .LVL45
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:418    .text.i2s_psc_config:000000000000009e .LVL47
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:304    .text.i2s_psc_config:0000000000000024 .LVL28
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:323    .text.i2s_psc_config:0000000000000038 .LVL30
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:372    .text.i2s_psc_config:000000000000007a .LVL37
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:379    .text.i2s_psc_config:000000000000007e .LVL39
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:451    .text.i2s_psc_config:00000000000000ba .LVL50
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:453    .text.i2s_psc_config:00000000000000bc .LVL51
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:338    .text.i2s_psc_config:0000000000000048 .LVL32
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:342    .text.i2s_psc_config:000000000000004a .LVL33
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s 			page 51
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:346    .text.i2s_psc_config:0000000000000050 .LVL34
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:363    .text.i2s_psc_config:000000000000006c .LVL36
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:465    .text.i2s_psc_config:00000000000000ce .LVL53
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:475    .text.i2s_psc_config:00000000000000d4 .LVL55
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:477    .text.i2s_psc_config:00000000000000d6 .LVL56
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:482    .text.i2s_psc_config:00000000000000d8 .LVL57
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:228    .text.i2s_init:0000000000000000 .LVL20
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:250    .text.i2s_init:0000000000000012 .LVL24
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:244    .text.i2s_init:000000000000000c .LVL23
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:233    .text.i2s_init:0000000000000002 .LVL21
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:242    .text.i2s_init:000000000000000a .LVL22
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:253    .text.i2s_init:0000000000000018 .LVL25
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:127    .text.spi_init:0000000000000000 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:132    .text.spi_init:0000000000000002 .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:141    .text.spi_init:000000000000000c .LVL13
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:153    .text.spi_init:0000000000000012 .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:164    .text.spi_init:0000000000000026 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:171    .text.spi_init:000000000000002a .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:176    .text.spi_init:0000000000000034 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:22     .text.spi_i2s_deinit:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:59     .text.spi_i2s_deinit:0000000000000046 .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:65     .text.spi_i2s_deinit:000000000000004e .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:81     .text.spi_i2s_deinit:0000000000000064 .LCFI3
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:18     .text.spi_i2s_deinit:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:38     .text.spi_i2s_deinit:0000000000000024 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:44     .text.spi_i2s_deinit:0000000000000032 .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:48     .text.spi_i2s_deinit:0000000000000036 .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:69     .text.spi_i2s_deinit:0000000000000052 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:75     .text.spi_i2s_deinit:0000000000000060 .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccyRhLKC.s:1219   .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:346    .text.i2s_psc_config:0000000000000050 .LVL34
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:363    .text.i2s_psc_config:000000000000006c .LVL36
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:465    .text.i2s_psc_config:00000000000000ce .LVL53
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:475    .text.i2s_psc_config:00000000000000d4 .LVL55
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:477    .text.i2s_psc_config:00000000000000d6 .LVL56
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:482    .text.i2s_psc_config:00000000000000d8 .LVL57
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:228    .text.i2s_init:0000000000000000 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:250    .text.i2s_init:0000000000000012 .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:244    .text.i2s_init:000000000000000c .LVL23
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:233    .text.i2s_init:0000000000000002 .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:242    .text.i2s_init:000000000000000a .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:253    .text.i2s_init:0000000000000018 .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:127    .text.spi_init:0000000000000000 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:132    .text.spi_init:0000000000000002 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:141    .text.spi_init:000000000000000c .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:153    .text.spi_init:0000000000000012 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:164    .text.spi_init:0000000000000026 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:171    .text.spi_init:000000000000002a .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:176    .text.spi_init:0000000000000034 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:22     .text.spi_i2s_deinit:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:59     .text.spi_i2s_deinit:0000000000000046 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:65     .text.spi_i2s_deinit:000000000000004e .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:81     .text.spi_i2s_deinit:0000000000000064 .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:18     .text.spi_i2s_deinit:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:38     .text.spi_i2s_deinit:0000000000000024 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:44     .text.spi_i2s_deinit:0000000000000032 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:48     .text.spi_i2s_deinit:0000000000000036 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:69     .text.spi_i2s_deinit:0000000000000052 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:75     .text.spi_i2s_deinit:0000000000000060 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccc8gDRh.s:1219   .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

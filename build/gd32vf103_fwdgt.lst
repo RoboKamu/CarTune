@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 1
 
 
    1              		.file	"gd32vf103_fwdgt.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c **** #define RLD_RLD(regval)             (BITS(0,11) & ((uint32_t)(regval) << 0))
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c **** 
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c **** /*!
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     \brief      enable write access to FWDGT_PSC and FWDGT_RLD
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 1
   66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     \brief      start the free watchdog timer counter
   67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     \param[in]  none
   68:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     \param[out] none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 3
 
 
   69:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     \retval     none
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 1
   89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     \param[in]  reload_value: specify reload value(0x0000 - 0x0FFF)
   90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     \param[in]  prescaler_div: FWDGT prescaler value
   91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****                 only one parameter can be selected which is shown as below:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 4
 
 
   92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****       \arg        FWDGT_PSC_DIV4: FWDGT prescaler set to 4
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 1
  122              	.L8:
  113:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     
  114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     if((uint32_t)RESET != flag_status){
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 5
 
 
  115:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****         return ERROR;
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 1
  160              		.loc 1 129 17
  161 0040 5181     		srli	a0,a0,20
  130:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     /* reload the counter */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 6
 
 
  131:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     FWDGT_CTL = FWDGT_KEY_RELOAD;
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 1
  143:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c ****     \retval     FlagStatus: SET or RESET
  144:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c **** */
  145:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c **** FlagStatus fwdgt_flag_get(uint16_t flag)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 7
 
 
  146:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_fwdgt.c **** {
@@ -389,187 +389,187 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 1
  219              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  220              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
  221              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_fwdgt.c
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:13     .text.fwdgt_write_enable:0000000000000000 fwdgt_write_enable
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:17     .text.fwdgt_write_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:18     .text.fwdgt_write_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:19     .text.fwdgt_write_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:20     .text.fwdgt_write_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:25     .text.fwdgt_write_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:26     .text.fwdgt_write_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:33     .text.fwdgt_write_disable:0000000000000000 fwdgt_write_disable
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:36     .text.fwdgt_write_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:37     .text.fwdgt_write_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:38     .text.fwdgt_write_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:39     .text.fwdgt_write_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:42     .text.fwdgt_write_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:43     .text.fwdgt_write_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:50     .text.fwdgt_enable:0000000000000000 fwdgt_enable
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:53     .text.fwdgt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:54     .text.fwdgt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:55     .text.fwdgt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:56     .text.fwdgt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:61     .text.fwdgt_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:62     .text.fwdgt_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:69     .text.fwdgt_counter_reload:0000000000000000 fwdgt_counter_reload
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:72     .text.fwdgt_counter_reload:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:73     .text.fwdgt_counter_reload:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:74     .text.fwdgt_counter_reload:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:75     .text.fwdgt_counter_reload:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:80     .text.fwdgt_counter_reload:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:81     .text.fwdgt_counter_reload:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:88     .text.fwdgt_config:0000000000000000 fwdgt_config
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:91     .text.fwdgt_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:93     .text.fwdgt_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:94     .text.fwdgt_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:95     .text.fwdgt_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:96     .text.fwdgt_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:97     .text.fwdgt_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:104    .text.fwdgt_config:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:108    .text.fwdgt_config:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:109    .text.fwdgt_config:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:110    .text.fwdgt_config:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:114    .text.fwdgt_config:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:117    .text.fwdgt_config:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:120    .text.fwdgt_config:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:124    .text.fwdgt_config:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:125    .text.fwdgt_config:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:129    .text.fwdgt_config:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:130    .text.fwdgt_config:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:133    .text.fwdgt_config:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:137    .text.fwdgt_config:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:138    .text.fwdgt_config:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:139    .text.fwdgt_config:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:144    .text.fwdgt_config:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:147    .text.fwdgt_config:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:150    .text.fwdgt_config:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:154    .text.fwdgt_config:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:155    .text.fwdgt_config:000000000000003a .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 9
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:13     .text.fwdgt_write_enable:0000000000000000 fwdgt_write_enable
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:17     .text.fwdgt_write_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:18     .text.fwdgt_write_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:19     .text.fwdgt_write_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:20     .text.fwdgt_write_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:25     .text.fwdgt_write_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:26     .text.fwdgt_write_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:33     .text.fwdgt_write_disable:0000000000000000 fwdgt_write_disable
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:36     .text.fwdgt_write_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:37     .text.fwdgt_write_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:38     .text.fwdgt_write_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:39     .text.fwdgt_write_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:42     .text.fwdgt_write_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:43     .text.fwdgt_write_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:50     .text.fwdgt_enable:0000000000000000 fwdgt_enable
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:53     .text.fwdgt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:54     .text.fwdgt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:55     .text.fwdgt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:56     .text.fwdgt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:61     .text.fwdgt_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:62     .text.fwdgt_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:69     .text.fwdgt_counter_reload:0000000000000000 fwdgt_counter_reload
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:72     .text.fwdgt_counter_reload:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:73     .text.fwdgt_counter_reload:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:74     .text.fwdgt_counter_reload:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:75     .text.fwdgt_counter_reload:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:80     .text.fwdgt_counter_reload:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:81     .text.fwdgt_counter_reload:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:88     .text.fwdgt_config:0000000000000000 fwdgt_config
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:91     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:93     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:94     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:95     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:96     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:97     .text.fwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:104    .text.fwdgt_config:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:108    .text.fwdgt_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:109    .text.fwdgt_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:110    .text.fwdgt_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:114    .text.fwdgt_config:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:117    .text.fwdgt_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:120    .text.fwdgt_config:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:124    .text.fwdgt_config:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:125    .text.fwdgt_config:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:129    .text.fwdgt_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:130    .text.fwdgt_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:133    .text.fwdgt_config:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:137    .text.fwdgt_config:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:138    .text.fwdgt_config:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:139    .text.fwdgt_config:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:144    .text.fwdgt_config:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:147    .text.fwdgt_config:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:150    .text.fwdgt_config:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:154    .text.fwdgt_config:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:155    .text.fwdgt_config:000000000000003a .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 9
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:158    .text.fwdgt_config:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:161    .text.fwdgt_config:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:163    .text.fwdgt_config:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:165    .text.fwdgt_config:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:167    .text.fwdgt_config:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:168    .text.fwdgt_config:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:171    .text.fwdgt_config:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:172    .text.fwdgt_config:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:174    .text.fwdgt_config:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:178    .text.fwdgt_config:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:179    .text.fwdgt_config:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:182    .text.fwdgt_config:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:188    .text.fwdgt_config:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:189    .text.fwdgt_config:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:191    .text.fwdgt_config:000000000000005a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:198    .text.fwdgt_flag_get:0000000000000000 fwdgt_flag_get
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:201    .text.fwdgt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:203    .text.fwdgt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:204    .text.fwdgt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:205    .text.fwdgt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:208    .text.fwdgt_flag_get:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:211    .text.fwdgt_flag_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:213    .text.fwdgt_flag_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:29     .text.fwdgt_write_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:46     .text.fwdgt_write_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:65     .text.fwdgt_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:84     .text.fwdgt_counter_reload:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:194    .text.fwdgt_config:000000000000005a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:216    .text.fwdgt_flag_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:158    .text.fwdgt_config:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:161    .text.fwdgt_config:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:163    .text.fwdgt_config:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:165    .text.fwdgt_config:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:167    .text.fwdgt_config:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:168    .text.fwdgt_config:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:171    .text.fwdgt_config:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:172    .text.fwdgt_config:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:174    .text.fwdgt_config:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:178    .text.fwdgt_config:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:179    .text.fwdgt_config:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:182    .text.fwdgt_config:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:188    .text.fwdgt_config:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:189    .text.fwdgt_config:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:191    .text.fwdgt_config:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:198    .text.fwdgt_flag_get:0000000000000000 fwdgt_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:201    .text.fwdgt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:203    .text.fwdgt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:204    .text.fwdgt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:205    .text.fwdgt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:208    .text.fwdgt_flag_get:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:211    .text.fwdgt_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:213    .text.fwdgt_flag_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:29     .text.fwdgt_write_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:46     .text.fwdgt_write_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:65     .text.fwdgt_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:84     .text.fwdgt_counter_reload:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:194    .text.fwdgt_config:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:216    .text.fwdgt_flag_get:000000000000000e .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:176    .text.fwdgt_config:0000000000000050 .L6
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:106    .text.fwdgt_config:0000000000000016 .L7
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:186    .text.fwdgt_config:0000000000000056 .L10
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:135    .text.fwdgt_config:0000000000000030 .L11
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:122    .text.fwdgt_config:0000000000000020 .L8
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:180    .text.fwdgt_config:0000000000000052 .L13
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:152    .text.fwdgt_config:000000000000003a .L12
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:489    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:921    .debug_str:000000000000020c .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:917    .debug_str:00000000000001bb .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:863    .debug_str:0000000000000000 .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:845    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:861    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:903    .debug_str:000000000000015f .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:929    .debug_str:00000000000002af .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:865    .debug_str:0000000000000064 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:875    .debug_str:00000000000000a9 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:915    .debug_str:00000000000001b1 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:889    .debug_str:0000000000000105 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:873    .debug_str:0000000000000096 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:869    .debug_str:0000000000000078 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:895    .debug_str:000000000000012f .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:891    .debug_str:0000000000000110 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:909    .debug_str:000000000000018b .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:905    .debug_str:000000000000016c .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:907    .debug_str:0000000000000183 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:919    .debug_str:0000000000000203 .LASF13
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 10
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:176    .text.fwdgt_config:0000000000000050 .L6
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:106    .text.fwdgt_config:0000000000000016 .L7
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:186    .text.fwdgt_config:0000000000000056 .L10
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:135    .text.fwdgt_config:0000000000000030 .L11
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:122    .text.fwdgt_config:0000000000000020 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:180    .text.fwdgt_config:0000000000000052 .L13
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:152    .text.fwdgt_config:000000000000003a .L12
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:489    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:921    .debug_str:000000000000020c .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:917    .debug_str:00000000000001bb .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:863    .debug_str:0000000000000000 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:845    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:861    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:903    .debug_str:000000000000015f .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:929    .debug_str:00000000000002af .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:865    .debug_str:0000000000000064 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:875    .debug_str:00000000000000a9 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:915    .debug_str:00000000000001b1 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:889    .debug_str:0000000000000105 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:873    .debug_str:0000000000000096 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:869    .debug_str:0000000000000078 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:895    .debug_str:000000000000012f .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:891    .debug_str:0000000000000110 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:909    .debug_str:000000000000018b .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:905    .debug_str:000000000000016c .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:907    .debug_str:0000000000000183 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:919    .debug_str:0000000000000203 .LASF13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 10
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:923    .debug_str:0000000000000294 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:913    .debug_str:00000000000001a1 .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:931    .debug_str:00000000000002bb .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:879    .debug_str:00000000000000bf .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:925    .debug_str:000000000000029d .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:877    .debug_str:00000000000000b7 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:867    .debug_str:000000000000006e .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:927    .debug_str:00000000000002a3 .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:933    .debug_str:00000000000002c1 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:199    .text.fwdgt_flag_get:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:214    .text.fwdgt_flag_get:000000000000000e .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:899    .debug_str:000000000000014e .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:712    .debug_loc:0000000000000000 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:893    .debug_str:0000000000000122 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:89     .text.fwdgt_config:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:192    .text.fwdgt_config:000000000000005a .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:885    .debug_str:00000000000000e5 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:726    .debug_loc:0000000000000021 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:883    .debug_str:00000000000000d7 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:911    .debug_str:0000000000000199 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:755    .debug_loc:0000000000000066 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:901    .debug_str:0000000000000153 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:802    .debug_loc:00000000000000d8 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:871    .debug_str:0000000000000081 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:70     .text.fwdgt_counter_reload:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:82     .text.fwdgt_counter_reload:000000000000000e .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:881    .debug_str:00000000000000ca .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:51     .text.fwdgt_enable:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:63     .text.fwdgt_enable:000000000000000e .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:897    .debug_str:000000000000013a .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:34     .text.fwdgt_write_disable:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:44     .text.fwdgt_write_disable:000000000000000a .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:887    .debug_str:00000000000000f2 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:14     .text.fwdgt_write_enable:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:27     .text.fwdgt_write_enable:000000000000000e .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:202    .text.fwdgt_flag_get:0000000000000000 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:209    .text.fwdgt_flag_get:0000000000000008 .LVL19
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:92     .text.fwdgt_config:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:156    .text.fwdgt_config:000000000000003c .LVL13
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:175    .text.fwdgt_config:0000000000000050 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:183    .text.fwdgt_config:0000000000000054 .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:185    .text.fwdgt_config:0000000000000056 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:105    .text.fwdgt_config:0000000000000016 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:112    .text.fwdgt_config:000000000000001a .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:115    .text.fwdgt_config:000000000000001c .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:118    .text.fwdgt_config:000000000000001e .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:121    .text.fwdgt_config:0000000000000020 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:128    .text.fwdgt_config:0000000000000026 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:134    .text.fwdgt_config:0000000000000030 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:142    .text.fwdgt_config:0000000000000034 .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:145    .text.fwdgt_config:0000000000000036 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:148    .text.fwdgt_config:0000000000000038 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:151    .text.fwdgt_config:000000000000003a .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:140    .text.fwdgt_config:0000000000000032 .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:159    .text.fwdgt_config:0000000000000040 .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s:223    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:923    .debug_str:0000000000000294 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:913    .debug_str:00000000000001a1 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:931    .debug_str:00000000000002bb .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:879    .debug_str:00000000000000bf .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:925    .debug_str:000000000000029d .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:877    .debug_str:00000000000000b7 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:867    .debug_str:000000000000006e .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:927    .debug_str:00000000000002a3 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:933    .debug_str:00000000000002c1 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:199    .text.fwdgt_flag_get:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:214    .text.fwdgt_flag_get:000000000000000e .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:899    .debug_str:000000000000014e .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:712    .debug_loc:0000000000000000 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:893    .debug_str:0000000000000122 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:89     .text.fwdgt_config:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:192    .text.fwdgt_config:000000000000005a .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:885    .debug_str:00000000000000e5 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:726    .debug_loc:0000000000000021 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:883    .debug_str:00000000000000d7 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:911    .debug_str:0000000000000199 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:755    .debug_loc:0000000000000066 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:901    .debug_str:0000000000000153 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:802    .debug_loc:00000000000000d8 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:871    .debug_str:0000000000000081 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:70     .text.fwdgt_counter_reload:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:82     .text.fwdgt_counter_reload:000000000000000e .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:881    .debug_str:00000000000000ca .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:51     .text.fwdgt_enable:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:63     .text.fwdgt_enable:000000000000000e .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:897    .debug_str:000000000000013a .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:34     .text.fwdgt_write_disable:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:44     .text.fwdgt_write_disable:000000000000000a .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:887    .debug_str:00000000000000f2 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:14     .text.fwdgt_write_enable:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:27     .text.fwdgt_write_enable:000000000000000e .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:202    .text.fwdgt_flag_get:0000000000000000 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:209    .text.fwdgt_flag_get:0000000000000008 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:92     .text.fwdgt_config:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:156    .text.fwdgt_config:000000000000003c .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:175    .text.fwdgt_config:0000000000000050 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:183    .text.fwdgt_config:0000000000000054 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:185    .text.fwdgt_config:0000000000000056 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:105    .text.fwdgt_config:0000000000000016 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:112    .text.fwdgt_config:000000000000001a .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:115    .text.fwdgt_config:000000000000001c .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:118    .text.fwdgt_config:000000000000001e .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:121    .text.fwdgt_config:0000000000000020 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:128    .text.fwdgt_config:0000000000000026 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:134    .text.fwdgt_config:0000000000000030 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:142    .text.fwdgt_config:0000000000000034 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:145    .text.fwdgt_config:0000000000000036 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:148    .text.fwdgt_config:0000000000000038 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:151    .text.fwdgt_config:000000000000003a .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:140    .text.fwdgt_config:0000000000000032 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:159    .text.fwdgt_config:0000000000000040 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s:223    .debug_info:0000000000000000 .Ldebug_info0
 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccI1LKW9.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccTryD6g.s 			page 11
 
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 1
 
 
    1              		.file	"gd32vf103_crc.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief      deinit CRC calculation unit
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[out] none
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 1
   52              	.LFE3:
   54              		.section	.text.crc_data_register_read,"ax",@progbits
   55              		.align	1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 3
 
 
   56              		.globl	crc_data_register_read
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 1
   88              		.loc 1 88 5 is_stmt 1
   89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** }
   89              		.loc 1 89 1 is_stmt 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 4
 
 
   90 0006 1375F50F 		andi	a0,a0,0xff
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 1
  126              		.loc 1 111 5 is_stmt 1
  127              		.loc 1 111 13 is_stmt 0
  128 0006 8843     		lw	a0,0(a5)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 5
 
 
  129              	.LVL4:
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 1
  165              		.loc 1 125 25 is_stmt 0 discriminator 3
  166 0012 13972700 		slli	a4,a5,2
  167 0016 2A97     		add	a4,a0,a4
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 6
 
 
  168 0018 1843     		lw	a4,0(a4)
@@ -317,154 +317,154 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 1
  180              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  181              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  182              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_crc.c
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:13     .text.crc_deinit:0000000000000000 crc_deinit
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:17     .text.crc_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:18     .text.crc_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:19     .text.crc_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:20     .text.crc_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:24     .text.crc_deinit:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:25     .text.crc_deinit:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:27     .text.crc_deinit:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:28     .text.crc_deinit:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:31     .text.crc_deinit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:32     .text.crc_deinit:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:39     .text.crc_data_register_reset:0000000000000000 crc_data_register_reset
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:42     .text.crc_data_register_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:43     .text.crc_data_register_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:44     .text.crc_data_register_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:45     .text.crc_data_register_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:50     .text.crc_data_register_reset:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:51     .text.crc_data_register_reset:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:58     .text.crc_data_register_read:0000000000000000 crc_data_register_read
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:61     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:62     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:63     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:64     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:65     .text.crc_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:69     .text.crc_data_register_read:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:70     .text.crc_data_register_read:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:71     .text.crc_data_register_read:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:78     .text.crc_free_data_register_read:0000000000000000 crc_free_data_register_read
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:81     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:82     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:83     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:84     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:85     .text.crc_free_data_register_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:89     .text.crc_free_data_register_read:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:90     .text.crc_free_data_register_read:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:92     .text.crc_free_data_register_read:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:99     .text.crc_free_data_register_write:0000000000000000 crc_free_data_register_write
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:102    .text.crc_free_data_register_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:104    .text.crc_free_data_register_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:105    .text.crc_free_data_register_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:106    .text.crc_free_data_register_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:109    .text.crc_free_data_register_write:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:110    .text.crc_free_data_register_write:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:117    .text.crc_single_data_calculate:0000000000000000 crc_single_data_calculate
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:120    .text.crc_single_data_calculate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:122    .text.crc_single_data_calculate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:123    .text.crc_single_data_calculate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:124    .text.crc_single_data_calculate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:127    .text.crc_single_data_calculate:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:128    .text.crc_single_data_calculate:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:131    .text.crc_single_data_calculate:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:132    .text.crc_single_data_calculate:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:139    .text.crc_block_data_calculate:0000000000000000 crc_block_data_calculate
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:142    .text.crc_block_data_calculate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:144    .text.crc_block_data_calculate:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 8
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:13     .text.crc_deinit:0000000000000000 crc_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:17     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:18     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:19     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:20     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:24     .text.crc_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:25     .text.crc_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:27     .text.crc_deinit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:28     .text.crc_deinit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:31     .text.crc_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:32     .text.crc_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:39     .text.crc_data_register_reset:0000000000000000 crc_data_register_reset
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:42     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:43     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:44     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:45     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:50     .text.crc_data_register_reset:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:51     .text.crc_data_register_reset:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:58     .text.crc_data_register_read:0000000000000000 crc_data_register_read
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:61     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:62     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:63     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:64     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:65     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:69     .text.crc_data_register_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:70     .text.crc_data_register_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:71     .text.crc_data_register_read:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:78     .text.crc_free_data_register_read:0000000000000000 crc_free_data_register_read
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:81     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:82     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:83     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:84     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:85     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:89     .text.crc_free_data_register_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:90     .text.crc_free_data_register_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:92     .text.crc_free_data_register_read:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:99     .text.crc_free_data_register_write:0000000000000000 crc_free_data_register_write
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:102    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:104    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:105    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:106    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:109    .text.crc_free_data_register_write:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:110    .text.crc_free_data_register_write:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:117    .text.crc_single_data_calculate:0000000000000000 crc_single_data_calculate
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:120    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:122    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:123    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:124    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:127    .text.crc_single_data_calculate:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:128    .text.crc_single_data_calculate:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:131    .text.crc_single_data_calculate:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:132    .text.crc_single_data_calculate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:139    .text.crc_block_data_calculate:0000000000000000 crc_block_data_calculate
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:142    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:144    .text.crc_block_data_calculate:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 8
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:145    .text.crc_block_data_calculate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:146    .text.crc_block_data_calculate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:147    .text.crc_block_data_calculate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:149    .text.crc_block_data_calculate:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:153    .text.crc_block_data_calculate:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:155    .text.crc_block_data_calculate:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:156    .text.crc_block_data_calculate:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:161    .text.crc_block_data_calculate:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:165    .text.crc_block_data_calculate:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:166    .text.crc_block_data_calculate:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:170    .text.crc_block_data_calculate:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:173    .text.crc_block_data_calculate:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:175    .text.crc_block_data_calculate:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:35     .text.crc_deinit:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:54     .text.crc_data_register_reset:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:74     .text.crc_data_register_read:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:95     .text.crc_free_data_register_read:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:113    .text.crc_free_data_register_write:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:135    .text.crc_single_data_calculate:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:178    .text.crc_block_data_calculate:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:145    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:146    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:147    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:149    .text.crc_block_data_calculate:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:153    .text.crc_block_data_calculate:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:155    .text.crc_block_data_calculate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:156    .text.crc_block_data_calculate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:161    .text.crc_block_data_calculate:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:165    .text.crc_block_data_calculate:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:166    .text.crc_block_data_calculate:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:170    .text.crc_block_data_calculate:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:173    .text.crc_block_data_calculate:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:175    .text.crc_block_data_calculate:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:35     .text.crc_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:54     .text.crc_data_register_reset:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:74     .text.crc_data_register_read:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:95     .text.crc_free_data_register_read:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:113    .text.crc_free_data_register_write:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:135    .text.crc_single_data_calculate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:178    .text.crc_block_data_calculate:0000000000000020 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:163    .text.crc_block_data_calculate:0000000000000012 .L9
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:151    .text.crc_block_data_calculate:0000000000000006 .L8
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:437    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:817    .debug_str:00000000000001f0 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:805    .debug_str:0000000000000164 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:767    .debug_str:0000000000000000 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:747    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:765    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:789    .debug_str:00000000000000f2 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:825    .debug_str:0000000000000296 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:769    .debug_str:0000000000000064 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:783    .debug_str:00000000000000bd .LASF2
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:815    .debug_str:00000000000001e6 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:779    .debug_str:00000000000000a4 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:821    .debug_str:0000000000000281 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:787    .debug_str:00000000000000e7 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:777    .debug_str:0000000000000092 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:807    .debug_str:00000000000001aa .LASF9
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:795    .debug_str:000000000000010f .LASF10
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:797    .debug_str:0000000000000126 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:819    .debug_str:0000000000000278 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:809    .debug_str:00000000000001b8 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:823    .debug_str:000000000000028a .LASF13
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:803    .debug_str:000000000000014b .LASF16
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:140    .text.crc_block_data_calculate:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:176    .text.crc_block_data_calculate:0000000000000020 .LFE8
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:781    .debug_str:00000000000000b7 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:676    .debug_loc:0000000000000000 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:775    .debug_str:000000000000008d .LASF15
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:811    .debug_str:00000000000001c8 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:694    .debug_loc:000000000000002c .LLST2
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:771    .debug_str:000000000000006e .LASF17
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:118    .text.crc_single_data_calculate:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:133    .text.crc_single_data_calculate:000000000000000a .LFE7
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:799    .debug_str:000000000000012e .LASF18
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:710    .debug_loc:0000000000000056 .LLST0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s 			page 9
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:163    .text.crc_block_data_calculate:0000000000000012 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:151    .text.crc_block_data_calculate:0000000000000006 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:437    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:817    .debug_str:00000000000001f0 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:805    .debug_str:0000000000000164 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:767    .debug_str:0000000000000000 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:747    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:765    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:789    .debug_str:00000000000000f2 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:825    .debug_str:0000000000000296 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:769    .debug_str:0000000000000064 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:783    .debug_str:00000000000000bd .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:815    .debug_str:00000000000001e6 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:779    .debug_str:00000000000000a4 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:821    .debug_str:0000000000000281 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:787    .debug_str:00000000000000e7 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:777    .debug_str:0000000000000092 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:807    .debug_str:00000000000001aa .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:795    .debug_str:000000000000010f .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:797    .debug_str:0000000000000126 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:819    .debug_str:0000000000000278 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:809    .debug_str:00000000000001b8 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:823    .debug_str:000000000000028a .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:803    .debug_str:000000000000014b .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:140    .text.crc_block_data_calculate:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:176    .text.crc_block_data_calculate:0000000000000020 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:781    .debug_str:00000000000000b7 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:676    .debug_loc:0000000000000000 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:775    .debug_str:000000000000008d .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:811    .debug_str:00000000000001c8 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:694    .debug_loc:000000000000002c .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:771    .debug_str:000000000000006e .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:118    .text.crc_single_data_calculate:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:133    .text.crc_single_data_calculate:000000000000000a .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:799    .debug_str:000000000000012e .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:710    .debug_loc:0000000000000056 .LLST0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s 			page 9
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:829    .debug_str:00000000000002ad .LASF31
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:100    .text.crc_free_data_register_write:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:111    .text.crc_free_data_register_write:0000000000000008 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:791    .debug_str:00000000000000ff .LASF19
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:785    .debug_str:00000000000000cb .LASF20
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:79     .text.crc_free_data_register_read:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:93     .text.crc_free_data_register_read:000000000000000c .LFE5
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:793    .debug_str:0000000000000109 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:801    .debug_str:0000000000000134 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:59     .text.crc_data_register_read:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:72     .text.crc_data_register_read:0000000000000008 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:773    .debug_str:0000000000000088 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:813    .debug_str:00000000000001ce .LASF25
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:40     .text.crc_data_register_reset:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:52     .text.crc_data_register_reset:000000000000000e .LFE3
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:827    .debug_str:00000000000002a2 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:14     .text.crc_deinit:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:33     .text.crc_deinit:0000000000000012 .LFE2
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:143    .text.crc_block_data_calculate:0000000000000000 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:159    .text.crc_block_data_calculate:0000000000000010 .LVL8
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:162    .text.crc_block_data_calculate:0000000000000012 .LVL9
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:150    .text.crc_block_data_calculate:0000000000000006 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:157    .text.crc_block_data_calculate:000000000000000e .LVL7
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:121    .text.crc_single_data_calculate:0000000000000000 .LVL3
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:129    .text.crc_single_data_calculate:0000000000000008 .LVL4
-C:\Users\Karzan\AppData\Local\Temp\cc2atJ2g.s:184    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:829    .debug_str:00000000000002ad .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:100    .text.crc_free_data_register_write:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:111    .text.crc_free_data_register_write:0000000000000008 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:791    .debug_str:00000000000000ff .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:785    .debug_str:00000000000000cb .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:79     .text.crc_free_data_register_read:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:93     .text.crc_free_data_register_read:000000000000000c .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:793    .debug_str:0000000000000109 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:801    .debug_str:0000000000000134 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:59     .text.crc_data_register_read:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:72     .text.crc_data_register_read:0000000000000008 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:773    .debug_str:0000000000000088 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:813    .debug_str:00000000000001ce .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:40     .text.crc_data_register_reset:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:52     .text.crc_data_register_reset:000000000000000e .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:827    .debug_str:00000000000002a2 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:14     .text.crc_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:33     .text.crc_deinit:0000000000000012 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:143    .text.crc_block_data_calculate:0000000000000000 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:159    .text.crc_block_data_calculate:0000000000000010 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:162    .text.crc_block_data_calculate:0000000000000012 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:150    .text.crc_block_data_calculate:0000000000000006 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:157    .text.crc_block_data_calculate:000000000000000e .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:121    .text.crc_single_data_calculate:0000000000000000 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:129    .text.crc_single_data_calculate:0000000000000008 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccU3sYrs.s:184    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

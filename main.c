@@ -59,22 +59,20 @@ int main(void)
     mpu6500_install(I2C0);
     
     /* Initialize LCD */
-    //Lcd_SetType(LCD_INVERTED);
-    //Lcd_Init();
-    //LCD_Clear(BLACK);                         
-
-    //t5omsi();                                 // Initialize timer5 1kHz
+    Lcd_SetType(LCD_INVERTED);
+    Lcd_Init();
+    LCD_Clear(BLACK);
     
+    t5omsi();                                 // Initialize timer5 1kHz
+
     mpu6500_getAccel(&vec_temp);
-    //float moe_temp = 100/(pow(vec.x + vec.y + vec.z, 2));
+    int s=0;
     float abs_x, abs_y, abs_z;
-    int idle=0, s=0;
     while(1){
         /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
         mpu6500_getAccel(&vec);
 
         /* Do some fancy math to make a nice display */
-        
 
         /* Green if pointing up, red if down */
         line_color = (vec.z < 0) ? RED : GREEN;
@@ -89,19 +87,18 @@ int main(void)
         /* Wait for LCD to finish drawing */
         LCD_Wait_On_Queue();
 
-        //if (t5expq()) {                     // Manage periodic tasks
-        //  idle++;
-          //if (idle==5000) {
-          //  abs_x=abs(vec.x);
-          //  abs_y=abs(vec.y);
-          //  abs_z=abs(vec.z);
-//
-          //  if (abs_x >= abs_y && abs_x >= abs_z) LCD_ShowString(10, 10, "x prio", WHITE);
-          //  else if (abs_y >= abs_x && abs_y >= abs_z) LCD_ShowString(10, 10, "y prio", WHITE);
-          //  else LCD_ShowString(10, 10, "z prio", WHITE);
-          //  idle=0;
-          //}
-        //} 
-
+        if (t5expq()){
+            s++;
+            if (s==10){
+                abs_x=abs(vec.x);
+                abs_y=abs(vec.y);
+                abs_z=abs(vec.z);
+                if (abs_x >= abs_y && abs_x >= abs_z) LCD_ShowString(10, 10, "x prio", WHITE);
+                else if (abs_y >= abs_x && abs_y >= abs_z) LCD_ShowString(10, 10, "y prio", WHITE);
+                else LCD_ShowString(10, 10, "z prio", WHITE);
+                s=0;
+            }
+        }
     }
 }
+

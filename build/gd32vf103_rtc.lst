@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 1
 
 
    1              		.file	"gd32vf103_rtc.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /* RTC register high bits offset */
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** #define RTC_HIGH_BITS_OFFSET       ((uint32_t)16U)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
   52              	rtc_counter_set:
   53              	.LFB4:
   66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 3
 
 
   67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
   85 0020 4181     		srli	a0,a0,16
   79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
   86              		.loc 1 79 14
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 4
 
 
   87 0022 23AEA780 		sw	a0,-2020(a5)
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  125 0010 37370040 		li	a4,1073754112
   94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC prescaler low bits */
   95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_PSCL = (psc & RTC_LOW_BITS_MASK);
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 5
 
 
   96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     while(RESET == (RTC_CTL & RTC_CTL_LWOFF)){
  161              		.loc 1 108 5
  162              		.loc 1 108 21 is_stmt 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 6
 
 
  163 0000 37370040 		li	a4,1073754112
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
  198              		.loc 1 123 10 discriminator 1
  199 0014 EDDF     		beq	a5,zero,.L12
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 7
 
 
  125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  235 0016 13570501 		srli	a4,a0,16
  139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
  236              		.loc 1 139 24
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 8
 
 
  237 001a 4205     		slli	a0,a0,16
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  273              		.loc 1 154 14 is_stmt 0
  274 0008 83A78781 		lw	a5,-2024(a5)
  275              	.LVL14:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 9
 
 
  155:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     return temp;
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  314 0014 5D8D     		or	a0,a5,a0
  315              	.LVL20:
  316 0016 8280     		ret
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 10
 
 
  317              		.cfi_endproc
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  199:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_ALARM: alarm interrupt flag
  200:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_OVERFLOW: overflow interrupt flag
  201:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_RSYN: registers synchronized flag
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 11
 
 
  202:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  213:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to get
  214:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****                 only one parameter can be selected which is shown as below:
  215:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_SECOND: second interrupt flag
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 12
 
 
  216:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_ALARM: alarm interrupt flag
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  405              		.loc 1 259 1
  406 000e 8280     		ret
  407              		.cfi_endproc
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 13
 
 
  408              	.LFE15:
@@ -766,334 +766,334 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 1
  438              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  439              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
  440              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_rtc.c
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:13     .text.rtc_configuration_mode_enter:0000000000000000 rtc_configuration_mode_enter
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:17     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:18     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:19     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:20     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:25     .text.rtc_configuration_mode_enter:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:26     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:33     .text.rtc_configuration_mode_exit:0000000000000000 rtc_configuration_mode_exit
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:36     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:37     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:38     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:39     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:44     .text.rtc_configuration_mode_exit:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:45     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:52     .text.rtc_counter_set:0000000000000000 rtc_counter_set
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:55     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:57     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:58     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:59     .text.rtc_counter_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:61     .text.rtc_counter_set:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:63     .text.rtc_counter_set:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:65     .text.rtc_counter_set:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:67     .text.rtc_counter_set:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:70     .text.rtc_counter_set:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:71     .text.rtc_counter_set:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:73     .text.rtc_counter_set:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:75     .text.rtc_counter_set:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:76     .text.rtc_counter_set:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:78     .text.rtc_counter_set:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:80     .text.rtc_counter_set:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:82     .text.rtc_counter_set:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:84     .text.rtc_counter_set:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:85     .text.rtc_counter_set:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:87     .text.rtc_counter_set:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:89     .text.rtc_counter_set:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:90     .text.rtc_counter_set:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:92     .text.rtc_counter_set:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:95     .text.rtc_counter_set:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:97     .text.rtc_counter_set:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:104    .text.rtc_prescaler_set:0000000000000000 rtc_prescaler_set
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:107    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:109    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:110    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:111    .text.rtc_prescaler_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:113    .text.rtc_prescaler_set:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:115    .text.rtc_prescaler_set:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:117    .text.rtc_prescaler_set:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:119    .text.rtc_prescaler_set:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:122    .text.rtc_prescaler_set:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:123    .text.rtc_prescaler_set:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:125    .text.rtc_prescaler_set:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:127    .text.rtc_prescaler_set:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:128    .text.rtc_prescaler_set:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:130    .text.rtc_prescaler_set:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:133    .text.rtc_prescaler_set:000000000000001c .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 15
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:13     .text.rtc_configuration_mode_enter:0000000000000000 rtc_configuration_mode_enter
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:17     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:18     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:19     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:20     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:25     .text.rtc_configuration_mode_enter:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:26     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:33     .text.rtc_configuration_mode_exit:0000000000000000 rtc_configuration_mode_exit
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:36     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:37     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:38     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:39     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:44     .text.rtc_configuration_mode_exit:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:45     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:52     .text.rtc_counter_set:0000000000000000 rtc_counter_set
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:55     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:57     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:58     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:59     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:61     .text.rtc_counter_set:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:63     .text.rtc_counter_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:65     .text.rtc_counter_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:67     .text.rtc_counter_set:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:70     .text.rtc_counter_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:71     .text.rtc_counter_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:73     .text.rtc_counter_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:75     .text.rtc_counter_set:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:76     .text.rtc_counter_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:78     .text.rtc_counter_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:80     .text.rtc_counter_set:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:82     .text.rtc_counter_set:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:84     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:85     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:87     .text.rtc_counter_set:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:89     .text.rtc_counter_set:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:90     .text.rtc_counter_set:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:92     .text.rtc_counter_set:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:95     .text.rtc_counter_set:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:97     .text.rtc_counter_set:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:104    .text.rtc_prescaler_set:0000000000000000 rtc_prescaler_set
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:107    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:109    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:110    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:111    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:113    .text.rtc_prescaler_set:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:115    .text.rtc_prescaler_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:117    .text.rtc_prescaler_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:119    .text.rtc_prescaler_set:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:122    .text.rtc_prescaler_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:123    .text.rtc_prescaler_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:125    .text.rtc_prescaler_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:127    .text.rtc_prescaler_set:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:128    .text.rtc_prescaler_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:130    .text.rtc_prescaler_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:133    .text.rtc_prescaler_set:000000000000001c .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 15
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:135    .text.rtc_prescaler_set:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:137    .text.rtc_prescaler_set:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:138    .text.rtc_prescaler_set:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:140    .text.rtc_prescaler_set:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:142    .text.rtc_prescaler_set:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:143    .text.rtc_prescaler_set:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:145    .text.rtc_prescaler_set:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:148    .text.rtc_prescaler_set:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:150    .text.rtc_prescaler_set:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:157    .text.rtc_lwoff_wait:0000000000000000 rtc_lwoff_wait
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:160    .text.rtc_lwoff_wait:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:161    .text.rtc_lwoff_wait:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:162    .text.rtc_lwoff_wait:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:163    .text.rtc_lwoff_wait:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:166    .text.rtc_lwoff_wait:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:167    .text.rtc_lwoff_wait:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:169    .text.rtc_lwoff_wait:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:171    .text.rtc_lwoff_wait:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:173    .text.rtc_lwoff_wait:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:174    .text.rtc_lwoff_wait:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:181    .text.rtc_register_sync_wait:0000000000000000 rtc_register_sync_wait
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:184    .text.rtc_register_sync_wait:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:185    .text.rtc_register_sync_wait:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:186    .text.rtc_register_sync_wait:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:187    .text.rtc_register_sync_wait:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:193    .text.rtc_register_sync_wait:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:194    .text.rtc_register_sync_wait:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:195    .text.rtc_register_sync_wait:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:197    .text.rtc_register_sync_wait:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:199    .text.rtc_register_sync_wait:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:201    .text.rtc_register_sync_wait:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:202    .text.rtc_register_sync_wait:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:209    .text.rtc_alarm_config:0000000000000000 rtc_alarm_config
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:212    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:214    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:215    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:216    .text.rtc_alarm_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:218    .text.rtc_alarm_config:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:220    .text.rtc_alarm_config:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:222    .text.rtc_alarm_config:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:224    .text.rtc_alarm_config:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:227    .text.rtc_alarm_config:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:228    .text.rtc_alarm_config:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:230    .text.rtc_alarm_config:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:232    .text.rtc_alarm_config:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:233    .text.rtc_alarm_config:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:235    .text.rtc_alarm_config:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:237    .text.rtc_alarm_config:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:239    .text.rtc_alarm_config:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:241    .text.rtc_alarm_config:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:242    .text.rtc_alarm_config:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:244    .text.rtc_alarm_config:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:246    .text.rtc_alarm_config:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:247    .text.rtc_alarm_config:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:249    .text.rtc_alarm_config:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:252    .text.rtc_alarm_config:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:254    .text.rtc_alarm_config:0000000000000030 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 16
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:135    .text.rtc_prescaler_set:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:137    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:138    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:140    .text.rtc_prescaler_set:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:142    .text.rtc_prescaler_set:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:143    .text.rtc_prescaler_set:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:145    .text.rtc_prescaler_set:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:148    .text.rtc_prescaler_set:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:150    .text.rtc_prescaler_set:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:157    .text.rtc_lwoff_wait:0000000000000000 rtc_lwoff_wait
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:160    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:161    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:162    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:163    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:166    .text.rtc_lwoff_wait:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:167    .text.rtc_lwoff_wait:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:169    .text.rtc_lwoff_wait:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:171    .text.rtc_lwoff_wait:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:173    .text.rtc_lwoff_wait:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:174    .text.rtc_lwoff_wait:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:181    .text.rtc_register_sync_wait:0000000000000000 rtc_register_sync_wait
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:184    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:185    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:186    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:187    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:193    .text.rtc_register_sync_wait:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:194    .text.rtc_register_sync_wait:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:195    .text.rtc_register_sync_wait:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:197    .text.rtc_register_sync_wait:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:199    .text.rtc_register_sync_wait:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:201    .text.rtc_register_sync_wait:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:202    .text.rtc_register_sync_wait:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:209    .text.rtc_alarm_config:0000000000000000 rtc_alarm_config
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:212    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:214    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:215    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:216    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:218    .text.rtc_alarm_config:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:220    .text.rtc_alarm_config:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:222    .text.rtc_alarm_config:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:224    .text.rtc_alarm_config:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:227    .text.rtc_alarm_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:228    .text.rtc_alarm_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:230    .text.rtc_alarm_config:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:232    .text.rtc_alarm_config:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:233    .text.rtc_alarm_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:235    .text.rtc_alarm_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:237    .text.rtc_alarm_config:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:239    .text.rtc_alarm_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:241    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:242    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:244    .text.rtc_alarm_config:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:246    .text.rtc_alarm_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:247    .text.rtc_alarm_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:249    .text.rtc_alarm_config:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:252    .text.rtc_alarm_config:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:254    .text.rtc_alarm_config:0000000000000030 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 16
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:261    .text.rtc_counter_get:0000000000000000 rtc_counter_get
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:264    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:265    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:267    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:268    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:269    .text.rtc_counter_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:273    .text.rtc_counter_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:274    .text.rtc_counter_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:277    .text.rtc_counter_get:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:278    .text.rtc_counter_get:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:281    .text.rtc_counter_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:284    .text.rtc_counter_get:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:291    .text.rtc_divider_get:0000000000000000 rtc_divider_get
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:294    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:295    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:297    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:298    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:299    .text.rtc_divider_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:302    .text.rtc_divider_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:304    .text.rtc_divider_get:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:306    .text.rtc_divider_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:309    .text.rtc_divider_get:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:310    .text.rtc_divider_get:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:313    .text.rtc_divider_get:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:314    .text.rtc_divider_get:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:317    .text.rtc_divider_get:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:324    .text.rtc_flag_get:0000000000000000 rtc_flag_get
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:327    .text.rtc_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:329    .text.rtc_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:330    .text.rtc_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:331    .text.rtc_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:334    .text.rtc_flag_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:337    .text.rtc_flag_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:339    .text.rtc_flag_get:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:346    .text.rtc_flag_clear:0000000000000000 rtc_flag_clear
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:349    .text.rtc_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:351    .text.rtc_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:352    .text.rtc_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:353    .text.rtc_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:356    .text.rtc_flag_clear:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:359    .text.rtc_flag_clear:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:363    .text.rtc_flag_clear:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:364    .text.rtc_flag_clear:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:371    .text.rtc_interrupt_flag_get:0000000000000000 rtc_interrupt_flag_get
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:373    .text.rtc_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:375    .text.rtc_interrupt_flag_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:382    .text.rtc_interrupt_flag_clear:0000000000000000 rtc_interrupt_flag_clear
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:384    .text.rtc_interrupt_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:386    .text.rtc_interrupt_flag_clear:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:393    .text.rtc_interrupt_enable:0000000000000000 rtc_interrupt_enable
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:396    .text.rtc_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:398    .text.rtc_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:399    .text.rtc_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:400    .text.rtc_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:406    .text.rtc_interrupt_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:407    .text.rtc_interrupt_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:414    .text.rtc_interrupt_disable:0000000000000000 rtc_interrupt_disable
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 17
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:261    .text.rtc_counter_get:0000000000000000 rtc_counter_get
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:264    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:265    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:267    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:268    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:269    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:273    .text.rtc_counter_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:274    .text.rtc_counter_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:277    .text.rtc_counter_get:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:278    .text.rtc_counter_get:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:281    .text.rtc_counter_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:284    .text.rtc_counter_get:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:291    .text.rtc_divider_get:0000000000000000 rtc_divider_get
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:294    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:295    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:297    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:298    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:299    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:302    .text.rtc_divider_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:304    .text.rtc_divider_get:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:306    .text.rtc_divider_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:309    .text.rtc_divider_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:310    .text.rtc_divider_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:313    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:314    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:317    .text.rtc_divider_get:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:324    .text.rtc_flag_get:0000000000000000 rtc_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:327    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:329    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:330    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:331    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:334    .text.rtc_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:337    .text.rtc_flag_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:339    .text.rtc_flag_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:346    .text.rtc_flag_clear:0000000000000000 rtc_flag_clear
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:349    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:351    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:352    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:353    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:356    .text.rtc_flag_clear:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:359    .text.rtc_flag_clear:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:363    .text.rtc_flag_clear:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:364    .text.rtc_flag_clear:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:371    .text.rtc_interrupt_flag_get:0000000000000000 rtc_interrupt_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:373    .text.rtc_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:375    .text.rtc_interrupt_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:382    .text.rtc_interrupt_flag_clear:0000000000000000 rtc_interrupt_flag_clear
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:384    .text.rtc_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:386    .text.rtc_interrupt_flag_clear:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:393    .text.rtc_interrupt_enable:0000000000000000 rtc_interrupt_enable
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:396    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:398    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:399    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:400    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:406    .text.rtc_interrupt_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:407    .text.rtc_interrupt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:414    .text.rtc_interrupt_disable:0000000000000000 rtc_interrupt_disable
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 17
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:417    .text.rtc_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:419    .text.rtc_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:420    .text.rtc_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:421    .text.rtc_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:424    .text.rtc_interrupt_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:427    .text.rtc_interrupt_disable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:431    .text.rtc_interrupt_disable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:432    .text.rtc_interrupt_disable:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:29     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:48     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:100    .text.rtc_counter_set:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:153    .text.rtc_prescaler_set:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:177    .text.rtc_lwoff_wait:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:205    .text.rtc_register_sync_wait:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:257    .text.rtc_alarm_config:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:287    .text.rtc_counter_get:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:320    .text.rtc_divider_get:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:342    .text.rtc_flag_get:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:367    .text.rtc_flag_clear:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:410    .text.rtc_interrupt_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:435    .text.rtc_interrupt_disable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:417    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:419    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:420    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:421    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:424    .text.rtc_interrupt_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:427    .text.rtc_interrupt_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:431    .text.rtc_interrupt_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:432    .text.rtc_interrupt_disable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:29     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:48     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:100    .text.rtc_counter_set:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:153    .text.rtc_prescaler_set:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:177    .text.rtc_lwoff_wait:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:205    .text.rtc_register_sync_wait:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:257    .text.rtc_alarm_config:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:287    .text.rtc_counter_get:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:320    .text.rtc_divider_get:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:342    .text.rtc_flag_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:367    .text.rtc_flag_clear:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:410    .text.rtc_interrupt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:435    .text.rtc_interrupt_disable:0000000000000014 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:164    .text.rtc_lwoff_wait:0000000000000004 .L8
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:192    .text.rtc_register_sync_wait:000000000000000e .L12
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:842    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1594   .debug_str:000000000000025f .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1574   .debug_str:0000000000000188 .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1536   .debug_str:0000000000000011 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1502   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1532   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1582   .debug_str:00000000000001ee .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1602   .debug_str:0000000000000305 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1572   .debug_str:000000000000017a .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1592   .debug_str:0000000000000255 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1554   .debug_str:00000000000000f3 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1598   .debug_str:00000000000002f0 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1578   .debug_str:00000000000001de .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1566   .debug_str:000000000000015d .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1556   .debug_str:0000000000000106 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1584   .debug_str:00000000000001fb .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1596   .debug_str:00000000000002e7 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1590   .debug_str:0000000000000245 .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1570   .debug_str:0000000000000174 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1560   .debug_str:000000000000011e .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1600   .debug_str:00000000000002f9 .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1544   .debug_str:00000000000000a5 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:415    .text.rtc_interrupt_disable:0000000000000000 .LFB16
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:433    .text.rtc_interrupt_disable:0000000000000014 .LFE16
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1558   .debug_str:0000000000000114 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1238   .debug_loc:0000000000000000 .LLST11
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1550   .debug_str:00000000000000ce .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:394    .text.rtc_interrupt_enable:0000000000000000 .LFB15
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:408    .text.rtc_interrupt_enable:0000000000000010 .LFE15
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1259   .debug_loc:000000000000002f .LLST10
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1604   .debug_str:0000000000000311 .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1580   .debug_str:00000000000001e9 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1562   .debug_str:0000000000000129 .LASF36
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 18
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:164    .text.rtc_lwoff_wait:0000000000000004 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:192    .text.rtc_register_sync_wait:000000000000000e .L12
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:842    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1594   .debug_str:000000000000025f .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1574   .debug_str:0000000000000188 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1536   .debug_str:0000000000000011 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1502   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1532   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1582   .debug_str:00000000000001ee .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1602   .debug_str:0000000000000305 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1572   .debug_str:000000000000017a .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1592   .debug_str:0000000000000255 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1554   .debug_str:00000000000000f3 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1598   .debug_str:00000000000002f0 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1578   .debug_str:00000000000001de .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1566   .debug_str:000000000000015d .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1556   .debug_str:0000000000000106 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1584   .debug_str:00000000000001fb .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1596   .debug_str:00000000000002e7 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1590   .debug_str:0000000000000245 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1570   .debug_str:0000000000000174 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1560   .debug_str:000000000000011e .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1600   .debug_str:00000000000002f9 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1544   .debug_str:00000000000000a5 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:415    .text.rtc_interrupt_disable:0000000000000000 .LFB16
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:433    .text.rtc_interrupt_disable:0000000000000014 .LFE16
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1558   .debug_str:0000000000000114 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1238   .debug_loc:0000000000000000 .LLST11
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1550   .debug_str:00000000000000ce .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:394    .text.rtc_interrupt_enable:0000000000000000 .LFB15
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:408    .text.rtc_interrupt_enable:0000000000000010 .LFE15
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1259   .debug_loc:000000000000002f .LLST10
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1604   .debug_str:0000000000000311 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1580   .debug_str:00000000000001e9 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1562   .debug_str:0000000000000129 .LASF36
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 18
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1538   .debug_str:0000000000000075 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:347    .text.rtc_flag_clear:0000000000000000 .LFB12
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:365    .text.rtc_flag_clear:0000000000000014 .LFE12
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1273   .debug_loc:0000000000000050 .LLST9
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1548   .debug_str:00000000000000c1 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:325    .text.rtc_flag_get:0000000000000000 .LFB11
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:340    .text.rtc_flag_get:0000000000000010 .LFE11
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1294   .debug_loc:000000000000007f .LLST8
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1576   .debug_str:00000000000001ce .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:292    .text.rtc_divider_get:0000000000000000 .LFB10
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:318    .text.rtc_divider_get:0000000000000018 .LFE10
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1568   .debug_str:000000000000016f .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1308   .debug_loc:00000000000000a0 .LLST7
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1606   .debug_str:000000000000032a .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:262    .text.rtc_counter_get:0000000000000000 .LFB9
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:285    .text.rtc_counter_get:0000000000000012 .LFE9
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1333   .debug_loc:00000000000000da .LLST6
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1534   .debug_str:0000000000000000 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:210    .text.rtc_alarm_config:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:255    .text.rtc_alarm_config:0000000000000030 .LFE8
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1360   .debug_loc:0000000000000116 .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1546   .debug_str:00000000000000bb .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1378   .debug_loc:0000000000000142 .LLST5
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:225    .text.rtc_alarm_config:000000000000000e .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:253    .text.rtc_alarm_config:0000000000000030 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1588   .debug_str:000000000000022e .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:182    .text.rtc_register_sync_wait:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:203    .text.rtc_register_sync_wait:0000000000000018 .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1540   .debug_str:0000000000000084 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:158    .text.rtc_lwoff_wait:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:175    .text.rtc_lwoff_wait:0000000000000010 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1542   .debug_str:0000000000000093 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:105    .text.rtc_prescaler_set:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:151    .text.rtc_prescaler_set:0000000000000032 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1395   .debug_loc:000000000000016d .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1413   .debug_loc:0000000000000199 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:120    .text.rtc_prescaler_set:000000000000000e .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:149    .text.rtc_prescaler_set:0000000000000032 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1552   .debug_str:00000000000000e3 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:53     .text.rtc_counter_set:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:98     .text.rtc_counter_set:0000000000000030 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1430   .debug_loc:00000000000001c4 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1448   .debug_loc:00000000000001f0 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:68     .text.rtc_counter_set:000000000000000e .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:96     .text.rtc_counter_set:0000000000000030 .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1586   .debug_str:0000000000000212 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:34     .text.rtc_configuration_mode_exit:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:46     .text.rtc_configuration_mode_exit:0000000000000010 .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:1564   .debug_str:0000000000000140 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:14     .text.rtc_configuration_mode_enter:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:27     .text.rtc_configuration_mode_enter:0000000000000012 .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:418    .text.rtc_interrupt_disable:0000000000000000 .LVL28
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:425    .text.rtc_interrupt_disable:000000000000000c .LVL29
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:428    .text.rtc_interrupt_disable:000000000000000e .LVL30
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:397    .text.rtc_interrupt_enable:0000000000000000 .LVL26
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:403    .text.rtc_interrupt_enable:000000000000000a .LVL27
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:350    .text.rtc_flag_clear:0000000000000000 .LVL23
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s 			page 19
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1538   .debug_str:0000000000000075 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:347    .text.rtc_flag_clear:0000000000000000 .LFB12
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:365    .text.rtc_flag_clear:0000000000000014 .LFE12
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1273   .debug_loc:0000000000000050 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1548   .debug_str:00000000000000c1 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:325    .text.rtc_flag_get:0000000000000000 .LFB11
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:340    .text.rtc_flag_get:0000000000000010 .LFE11
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1294   .debug_loc:000000000000007f .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1576   .debug_str:00000000000001ce .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:292    .text.rtc_divider_get:0000000000000000 .LFB10
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:318    .text.rtc_divider_get:0000000000000018 .LFE10
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1568   .debug_str:000000000000016f .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1308   .debug_loc:00000000000000a0 .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1606   .debug_str:000000000000032a .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:262    .text.rtc_counter_get:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:285    .text.rtc_counter_get:0000000000000012 .LFE9
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1333   .debug_loc:00000000000000da .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1534   .debug_str:0000000000000000 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:210    .text.rtc_alarm_config:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:255    .text.rtc_alarm_config:0000000000000030 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1360   .debug_loc:0000000000000116 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1546   .debug_str:00000000000000bb .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1378   .debug_loc:0000000000000142 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:225    .text.rtc_alarm_config:000000000000000e .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:253    .text.rtc_alarm_config:0000000000000030 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1588   .debug_str:000000000000022e .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:182    .text.rtc_register_sync_wait:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:203    .text.rtc_register_sync_wait:0000000000000018 .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1540   .debug_str:0000000000000084 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:158    .text.rtc_lwoff_wait:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:175    .text.rtc_lwoff_wait:0000000000000010 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1542   .debug_str:0000000000000093 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:105    .text.rtc_prescaler_set:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:151    .text.rtc_prescaler_set:0000000000000032 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1395   .debug_loc:000000000000016d .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1413   .debug_loc:0000000000000199 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:120    .text.rtc_prescaler_set:000000000000000e .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:149    .text.rtc_prescaler_set:0000000000000032 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1552   .debug_str:00000000000000e3 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:53     .text.rtc_counter_set:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:98     .text.rtc_counter_set:0000000000000030 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1430   .debug_loc:00000000000001c4 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1448   .debug_loc:00000000000001f0 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:68     .text.rtc_counter_set:000000000000000e .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:96     .text.rtc_counter_set:0000000000000030 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1586   .debug_str:0000000000000212 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:34     .text.rtc_configuration_mode_exit:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:46     .text.rtc_configuration_mode_exit:0000000000000010 .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:1564   .debug_str:0000000000000140 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:14     .text.rtc_configuration_mode_enter:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:27     .text.rtc_configuration_mode_enter:0000000000000012 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:418    .text.rtc_interrupt_disable:0000000000000000 .LVL28
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:425    .text.rtc_interrupt_disable:000000000000000c .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:428    .text.rtc_interrupt_disable:000000000000000e .LVL30
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:397    .text.rtc_interrupt_enable:0000000000000000 .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:403    .text.rtc_interrupt_enable:000000000000000a .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:350    .text.rtc_flag_clear:0000000000000000 .LVL23
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s 			page 19
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:357    .text.rtc_flag_clear:000000000000000c .LVL24
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:360    .text.rtc_flag_clear:000000000000000e .LVL25
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:328    .text.rtc_flag_get:0000000000000000 .LVL21
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:335    .text.rtc_flag_get:000000000000000a .LVL22
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:296    .text.rtc_divider_get:0000000000000000 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:307    .text.rtc_divider_get:0000000000000010 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:311    .text.rtc_divider_get:0000000000000014 .LVL19
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:315    .text.rtc_divider_get:0000000000000016 .LVL20
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:266    .text.rtc_counter_get:0000000000000000 .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:271    .text.rtc_counter_get:0000000000000008 .LVL13
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:275    .text.rtc_counter_get:000000000000000c .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:279    .text.rtc_counter_get:000000000000000e .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:282    .text.rtc_counter_get:0000000000000010 .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:217    .text.rtc_alarm_config:0000000000000002 .LCFI4
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:248    .text.rtc_alarm_config:0000000000000028 .LCFI5
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:213    .text.rtc_alarm_config:0000000000000000 .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:250    .text.rtc_alarm_config:0000000000000028 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:112    .text.rtc_prescaler_set:0000000000000002 .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:144    .text.rtc_prescaler_set:000000000000002a .LCFI3
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:108    .text.rtc_prescaler_set:0000000000000000 .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:146    .text.rtc_prescaler_set:000000000000002a .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:60     .text.rtc_counter_set:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:91     .text.rtc_counter_set:0000000000000028 .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:56     .text.rtc_counter_set:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:93     .text.rtc_counter_set:0000000000000028 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccudeYts.s:442    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:357    .text.rtc_flag_clear:000000000000000c .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:360    .text.rtc_flag_clear:000000000000000e .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:328    .text.rtc_flag_get:0000000000000000 .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:335    .text.rtc_flag_get:000000000000000a .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:296    .text.rtc_divider_get:0000000000000000 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:307    .text.rtc_divider_get:0000000000000010 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:311    .text.rtc_divider_get:0000000000000014 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:315    .text.rtc_divider_get:0000000000000016 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:266    .text.rtc_counter_get:0000000000000000 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:271    .text.rtc_counter_get:0000000000000008 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:275    .text.rtc_counter_get:000000000000000c .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:279    .text.rtc_counter_get:000000000000000e .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:282    .text.rtc_counter_get:0000000000000010 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:217    .text.rtc_alarm_config:0000000000000002 .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:248    .text.rtc_alarm_config:0000000000000028 .LCFI5
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:213    .text.rtc_alarm_config:0000000000000000 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:250    .text.rtc_alarm_config:0000000000000028 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:112    .text.rtc_prescaler_set:0000000000000002 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:144    .text.rtc_prescaler_set:000000000000002a .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:108    .text.rtc_prescaler_set:0000000000000000 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:146    .text.rtc_prescaler_set:000000000000002a .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:60     .text.rtc_counter_set:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:91     .text.rtc_counter_set:0000000000000028 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:56     .text.rtc_counter_set:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:93     .text.rtc_counter_set:0000000000000028 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccCbjhbM.s:442    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

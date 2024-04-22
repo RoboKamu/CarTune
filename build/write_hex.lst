@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s 			page 1
 
 
    1              		.file	"write_hex.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 1
   43              		.cfi_offset 9, -12
   44              		.cfi_offset 18, -16
   45              		.cfi_offset 20, -24
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s 			page 2
 
 
   46              		.cfi_offset 21, -28
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 1
   86              		.loc 1 16 5 discriminator 2
   87 004a 0546     		li	a2,1
   88 004c 9305F100 		addi	a1,sp,15
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s 			page 3
 
 
   89 0050 4A85     		mv	a0,s2
@@ -178,138 +178,138 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 1
  138 0000 307800   		.string	"0x"
  139              		.text
  140              	.Letext0:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s 			page 4
 
 
  141              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  142              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  143              		.file 4 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 write_hex.c
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:13     .text.write_hex:0000000000000000 write_hex
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:17     .text.write_hex:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:19     .text.write_hex:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:20     .text.write_hex:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:21     .text.write_hex:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:22     .text.write_hex:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:23     .text.write_hex:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:24     .text.write_hex:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:26     .text.write_hex:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:28     .text.write_hex:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:31     .text.write_hex:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:36     .text.write_hex:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:42     .text.write_hex:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:43     .text.write_hex:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:44     .text.write_hex:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:45     .text.write_hex:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:46     .text.write_hex:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:47     .text.write_hex:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:49     .text.write_hex:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:51     .text.write_hex:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:56     .text.write_hex:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:57     .text.write_hex:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:59     .text.write_hex:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:62     .text.write_hex:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:67     .text.write_hex:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:68     .text.write_hex:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:69     .text.write_hex:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:71     .text.write_hex:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:73     .text.write_hex:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:75     .text.write_hex:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:78     .text.write_hex:000000000000003e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:79     .text.write_hex:000000000000003e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:81     .text.write_hex:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:85     .text.write_hex:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:87     .text.write_hex:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:93     .text.write_hex:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:95     .text.write_hex:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:99     .text.write_hex:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:101    .text.write_hex:0000000000000064 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:102    .text.write_hex:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:103    .text.write_hex:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:105    .text.write_hex:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:107    .text.write_hex:000000000000006a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:109    .text.write_hex:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:112    .text.write_hex:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:115    .text.write_hex:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:117    .text.write_hex:0000000000000072 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:120    .text.write_hex:0000000000000074 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:125    .text.write_hex:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:128    .text.write_hex:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:132    .text.write_hex:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:135    .text.write_hex:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:13     .text.write_hex:0000000000000000 write_hex
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:17     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:19     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:20     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:21     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:22     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:23     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:24     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:26     .text.write_hex:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:28     .text.write_hex:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:31     .text.write_hex:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:36     .text.write_hex:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:42     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:43     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:44     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:45     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:46     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:47     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:49     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:51     .text.write_hex:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:56     .text.write_hex:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:57     .text.write_hex:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:59     .text.write_hex:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:62     .text.write_hex:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:67     .text.write_hex:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:68     .text.write_hex:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:69     .text.write_hex:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:71     .text.write_hex:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:73     .text.write_hex:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:75     .text.write_hex:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:78     .text.write_hex:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:79     .text.write_hex:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:81     .text.write_hex:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:85     .text.write_hex:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:87     .text.write_hex:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:93     .text.write_hex:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:95     .text.write_hex:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:99     .text.write_hex:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:101    .text.write_hex:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:102    .text.write_hex:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:103    .text.write_hex:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:105    .text.write_hex:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:107    .text.write_hex:000000000000006a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:109    .text.write_hex:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:112    .text.write_hex:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:115    .text.write_hex:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:117    .text.write_hex:0000000000000072 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:120    .text.write_hex:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:125    .text.write_hex:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:128    .text.write_hex:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:132    .text.write_hex:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:135    .text.write_hex:000000000000007c .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:137    .rodata.write_hex.str1.4:0000000000000000 .LC0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:123    .text.write_hex:0000000000000076 .L2
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 6
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:137    .rodata.write_hex.str1.4:0000000000000000 .LC0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:123    .text.write_hex:0000000000000076 .L2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s 			page 6
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:64     .text.write_hex:000000000000002e .L4
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:83     .text.write_hex:0000000000000046 .L7
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:385    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:817    .debug_str:000000000000015e .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:791    .debug_str:00000000000000c1 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:773    .debug_str:0000000000000000 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:757    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:771    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:823    .debug_str:00000000000001fb .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:775    .debug_str:0000000000000064 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:783    .debug_str:0000000000000087 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:813    .debug_str:000000000000014c .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:789    .debug_str:00000000000000ae .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:819    .debug_str:00000000000001e6 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:787    .debug_str:000000000000009c .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:809    .debug_str:0000000000000139 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:803    .debug_str:0000000000000113 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:797    .debug_str:00000000000000f9 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:805    .debug_str:000000000000012a .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:811    .debug_str:0000000000000147 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:821    .debug_str:00000000000001ef .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:815    .debug_str:0000000000000156 .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:799    .debug_str:0000000000000106 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:785    .debug_str:0000000000000095 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:779    .debug_str:0000000000000076 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:807    .debug_str:0000000000000132 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:793    .debug_str:00000000000000ea .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:781    .debug_str:000000000000007d .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:14     .text.write_hex:0000000000000000 .LFB0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:133    .text.write_hex:000000000000007c .LFE0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:631    .debug_loc:0000000000000000 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:654    .debug_loc:0000000000000038 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:676    .debug_loc:000000000000006f .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:698    .debug_loc:00000000000000a6 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:777    .debug_str:000000000000006e .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:801    .debug_str:000000000000010d .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:706    .debug_loc:00000000000000ba .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:96     .text.write_hex:0000000000000060 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:53     .text.write_hex:0000000000000028 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:795    .debug_str:00000000000000f3 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:25     .text.write_hex:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:119    .text.write_hex:0000000000000074 .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:124    .text.write_hex:0000000000000076 .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:18     .text.write_hex:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:110    .text.write_hex:000000000000006c .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:122    .text.write_hex:0000000000000076 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:32     .text.write_hex:000000000000000a .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:113    .text.write_hex:000000000000006e .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:63     .text.write_hex:000000000000002e .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:76     .text.write_hex:000000000000003e .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:82     .text.write_hex:0000000000000046 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:91     .text.write_hex:0000000000000054 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:129    .text.write_hex:000000000000007a .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:145    .debug_info:0000000000000000 .Ldebug_info0
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:55     .text.write_hex:0000000000000028 .LBB2
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:60     .text.write_hex:000000000000002c .LBE2
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:65     .text.write_hex:000000000000002e .LBB3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s 			page 7
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:64     .text.write_hex:000000000000002e .L4
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:83     .text.write_hex:0000000000000046 .L7
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:385    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:817    .debug_str:000000000000015e .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:791    .debug_str:00000000000000c1 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:773    .debug_str:0000000000000000 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:757    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:771    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:823    .debug_str:00000000000001fb .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:775    .debug_str:0000000000000064 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:783    .debug_str:0000000000000087 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:813    .debug_str:000000000000014c .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:789    .debug_str:00000000000000ae .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:819    .debug_str:00000000000001e6 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:787    .debug_str:000000000000009c .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:809    .debug_str:0000000000000139 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:803    .debug_str:0000000000000113 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:797    .debug_str:00000000000000f9 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:805    .debug_str:000000000000012a .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:811    .debug_str:0000000000000147 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:821    .debug_str:00000000000001ef .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:815    .debug_str:0000000000000156 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:799    .debug_str:0000000000000106 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:785    .debug_str:0000000000000095 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:779    .debug_str:0000000000000076 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:807    .debug_str:0000000000000132 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:793    .debug_str:00000000000000ea .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:781    .debug_str:000000000000007d .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:14     .text.write_hex:0000000000000000 .LFB0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:133    .text.write_hex:000000000000007c .LFE0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:631    .debug_loc:0000000000000000 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:654    .debug_loc:0000000000000038 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:676    .debug_loc:000000000000006f .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:698    .debug_loc:00000000000000a6 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:777    .debug_str:000000000000006e .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:801    .debug_str:000000000000010d .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:706    .debug_loc:00000000000000ba .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:96     .text.write_hex:0000000000000060 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:53     .text.write_hex:0000000000000028 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:795    .debug_str:00000000000000f3 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:25     .text.write_hex:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:119    .text.write_hex:0000000000000074 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:124    .text.write_hex:0000000000000076 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:18     .text.write_hex:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:110    .text.write_hex:000000000000006c .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:122    .text.write_hex:0000000000000076 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:32     .text.write_hex:000000000000000a .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:113    .text.write_hex:000000000000006e .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:63     .text.write_hex:000000000000002e .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:76     .text.write_hex:000000000000003e .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:82     .text.write_hex:0000000000000046 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:91     .text.write_hex:0000000000000054 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:129    .text.write_hex:000000000000007a .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:145    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:55     .text.write_hex:0000000000000028 .LBB2
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:60     .text.write_hex:000000000000002c .LBE2
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:65     .text.write_hex:000000000000002e .LBB3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s 			page 7
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:97     .text.write_hex:0000000000000060 .LBE3
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:126    .text.write_hex:0000000000000076 .LBB4
-C:\Users\Karzan\AppData\Local\Temp\ccj6gvAF.s:131    .text.write_hex:000000000000007c .LBE4
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:97     .text.write_hex:0000000000000060 .LBE3
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:126    .text.write_hex:0000000000000076 .LBB4
+C:\Users\Karzan\AppData\Local\Temp\ccoc78GI.s:131    .text.write_hex:000000000000007c .LBE4
 
 UNDEFINED SYMBOLS
 write

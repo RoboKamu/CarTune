@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 1
 
 
    1              		.file	"gd32vf103_bkp.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c **** /*!
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \brief      reset BKP registers
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \param[in]  none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \param[out] none
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
   47              		.loc 1 64 1 is_stmt 1
   48              		.cfi_startproc
   49              	.LVL2:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 3
 
 
   65:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     if((register_number >= BKP_DATA_10) && (register_number <= BKP_DATA_41)){
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
   76:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \param[in]  register_number: refer to bkp_data_register_enum
   77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****                 only one parameter can be selected which is shown as below:
   78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****       \arg        BKP_DATA_x(x = 0..41): bkp data register number x
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 4
 
 
   79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \param[out] none
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  126              		.loc 1 89 11 is_stmt 1
   89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****         data = BKP_DATA0_9((uint32_t)register_number - 1U);
  127              		.loc 1 89 46 is_stmt 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 5
 
 
  128 0022 1307F5FF 		addi	a4,a0,-1
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c **** /*!
  109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \brief      disable RTC clock calibration output
  110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \param[in]  none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 6
 
 
  111:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \param[out] none
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  209              	bkp_rtc_signal_output_disable:
  210              	.LFB8:
  129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 7
 
 
  130:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c **** /*!
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  241 0004 8357C7C2 		lhu	a5,-980(a4)
  242 0008 C207     		slli	a5,a5,16
  243 000a C183     		srli	a5,a5,16
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 8
 
 
  244              	.LVL12:
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  279 000c C207     		slli	a5,a5,16
  280 000e C183     		srli	a5,a5,16
  281              	.LVL17:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 9
 
 
  174:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     ctl &= (uint16_t)~BKP_OCTL_RCCV;
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  191:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \brief      disable tamper detection
  192:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \param[in]  none
  193:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \param[out] none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 10
 
 
  194:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \retval     none
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  216:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     ctl &= (uint16_t)~BKP_TPCTL_TPAL;
  357              		.loc 1 216 5 is_stmt 1
  358              		.loc 1 216 9 is_stmt 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 11
 
 
  359 000c F59B     		andi	a5,a5,-3
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  236:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c ****     \retval     none
  237:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c **** */
  238:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c **** void bkp_interrupt_disable(void)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 12
 
 
  239:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c **** {
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  437              		.globl	bkp_flag_clear
  439              	bkp_flag_clear:
  440              	.LFB17:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 13
 
 
  257:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_bkp.c **** 
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  471              		.cfi_endproc
  472              	.LFE18:
  474              		.section	.text.bkp_interrupt_flag_clear,"ax",@progbits
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 14
 
 
  475              		.align	1
@@ -816,402 +816,402 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 1
  498              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_bkp.h"
  499              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
  500              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_bkp.c
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:13     .text.bkp_deinit:0000000000000000 bkp_deinit
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:17     .text.bkp_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:18     .text.bkp_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:19     .text.bkp_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:20     .text.bkp_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:22     .text.bkp_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:24     .text.bkp_deinit:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:26     .text.bkp_deinit:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:29     .text.bkp_deinit:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:30     .text.bkp_deinit:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:31     .text.bkp_deinit:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:34     .text.bkp_deinit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:36     .text.bkp_deinit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:38     .text.bkp_deinit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:45     .text.bkp_data_write:0000000000000000 bkp_data_write
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:48     .text.bkp_data_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:50     .text.bkp_data_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:51     .text.bkp_data_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:52     .text.bkp_data_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:54     .text.bkp_data_write:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:57     .text.bkp_data_write:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:61     .text.bkp_data_write:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:65     .text.bkp_data_write:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:68     .text.bkp_data_write:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:69     .text.bkp_data_write:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:73     .text.bkp_data_write:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:74     .text.bkp_data_write:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:76     .text.bkp_data_write:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:79     .text.bkp_data_write:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:82     .text.bkp_data_write:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:89     .text.bkp_data_read:0000000000000000 bkp_data_read
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:92     .text.bkp_data_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:94     .text.bkp_data_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:95     .text.bkp_data_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:96     .text.bkp_data_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:97     .text.bkp_data_read:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:99     .text.bkp_data_read:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:101    .text.bkp_data_read:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:103    .text.bkp_data_read:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:105    .text.bkp_data_read:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:106    .text.bkp_data_read:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:111    .text.bkp_data_read:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:115    .text.bkp_data_read:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:121    .text.bkp_data_read:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:122    .text.bkp_data_read:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:123    .text.bkp_data_read:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:127    .text.bkp_data_read:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:128    .text.bkp_data_read:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:130    .text.bkp_data_read:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:132    .text.bkp_data_read:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:135    .text.bkp_data_read:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:137    .text.bkp_data_read:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:138    .text.bkp_data_read:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:141    .text.bkp_data_read:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:148    .text.bkp_rtc_calibration_output_enable:0000000000000000 bkp_rtc_calibration_output_enable
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 16
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:13     .text.bkp_deinit:0000000000000000 bkp_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:17     .text.bkp_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:18     .text.bkp_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:19     .text.bkp_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:20     .text.bkp_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:22     .text.bkp_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:24     .text.bkp_deinit:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:26     .text.bkp_deinit:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:29     .text.bkp_deinit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:30     .text.bkp_deinit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:31     .text.bkp_deinit:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:34     .text.bkp_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:36     .text.bkp_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:38     .text.bkp_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:45     .text.bkp_data_write:0000000000000000 bkp_data_write
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:48     .text.bkp_data_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:50     .text.bkp_data_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:51     .text.bkp_data_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:52     .text.bkp_data_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:54     .text.bkp_data_write:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:57     .text.bkp_data_write:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:61     .text.bkp_data_write:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:65     .text.bkp_data_write:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:68     .text.bkp_data_write:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:69     .text.bkp_data_write:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:73     .text.bkp_data_write:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:74     .text.bkp_data_write:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:76     .text.bkp_data_write:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:79     .text.bkp_data_write:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:82     .text.bkp_data_write:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:89     .text.bkp_data_read:0000000000000000 bkp_data_read
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:92     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:94     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:95     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:96     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:97     .text.bkp_data_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:99     .text.bkp_data_read:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:101    .text.bkp_data_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:103    .text.bkp_data_read:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:105    .text.bkp_data_read:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:106    .text.bkp_data_read:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:111    .text.bkp_data_read:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:115    .text.bkp_data_read:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:121    .text.bkp_data_read:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:122    .text.bkp_data_read:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:123    .text.bkp_data_read:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:127    .text.bkp_data_read:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:128    .text.bkp_data_read:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:130    .text.bkp_data_read:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:132    .text.bkp_data_read:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:135    .text.bkp_data_read:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:137    .text.bkp_data_read:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:138    .text.bkp_data_read:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:141    .text.bkp_data_read:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:148    .text.bkp_rtc_calibration_output_enable:0000000000000000 bkp_rtc_calibration_output_enable
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 16
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:151    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:152    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:153    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:154    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:159    .text.bkp_rtc_calibration_output_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:160    .text.bkp_rtc_calibration_output_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:167    .text.bkp_rtc_calibration_output_disable:0000000000000000 bkp_rtc_calibration_output_disable
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:170    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:171    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:172    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:173    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:182    .text.bkp_rtc_calibration_output_disable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:183    .text.bkp_rtc_calibration_output_disable:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:190    .text.bkp_rtc_signal_output_enable:0000000000000000 bkp_rtc_signal_output_enable
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:193    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:194    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:195    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:196    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:201    .text.bkp_rtc_signal_output_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:202    .text.bkp_rtc_signal_output_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:209    .text.bkp_rtc_signal_output_disable:0000000000000000 bkp_rtc_signal_output_disable
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:212    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:213    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:214    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:215    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:224    .text.bkp_rtc_signal_output_disable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:225    .text.bkp_rtc_signal_output_disable:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:232    .text.bkp_rtc_output_select:0000000000000000 bkp_rtc_output_select
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:235    .text.bkp_rtc_output_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:237    .text.bkp_rtc_output_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:238    .text.bkp_rtc_output_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:239    .text.bkp_rtc_output_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:240    .text.bkp_rtc_output_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:246    .text.bkp_rtc_output_select:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:247    .text.bkp_rtc_output_select:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:250    .text.bkp_rtc_output_select:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:251    .text.bkp_rtc_output_select:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:254    .text.bkp_rtc_output_select:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:255    .text.bkp_rtc_output_select:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:257    .text.bkp_rtc_output_select:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:258    .text.bkp_rtc_output_select:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:265    .text.bkp_rtc_calibration_value_set:0000000000000000 bkp_rtc_calibration_value_set
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:268    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:270    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:271    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:272    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:273    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:276    .text.bkp_rtc_calibration_value_set:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:279    .text.bkp_rtc_calibration_value_set:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:283    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:284    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:285    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:288    .text.bkp_rtc_calibration_value_set:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:291    .text.bkp_rtc_calibration_value_set:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:292    .text.bkp_rtc_calibration_value_set:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:294    .text.bkp_rtc_calibration_value_set:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:295    .text.bkp_rtc_calibration_value_set:000000000000001c .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 17
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:151    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:152    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:153    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:154    .text.bkp_rtc_calibration_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:159    .text.bkp_rtc_calibration_output_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:160    .text.bkp_rtc_calibration_output_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:167    .text.bkp_rtc_calibration_output_disable:0000000000000000 bkp_rtc_calibration_output_disable
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:170    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:171    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:172    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:173    .text.bkp_rtc_calibration_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:182    .text.bkp_rtc_calibration_output_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:183    .text.bkp_rtc_calibration_output_disable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:190    .text.bkp_rtc_signal_output_enable:0000000000000000 bkp_rtc_signal_output_enable
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:193    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:194    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:195    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:196    .text.bkp_rtc_signal_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:201    .text.bkp_rtc_signal_output_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:202    .text.bkp_rtc_signal_output_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:209    .text.bkp_rtc_signal_output_disable:0000000000000000 bkp_rtc_signal_output_disable
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:212    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:213    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:214    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:215    .text.bkp_rtc_signal_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:224    .text.bkp_rtc_signal_output_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:225    .text.bkp_rtc_signal_output_disable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:232    .text.bkp_rtc_output_select:0000000000000000 bkp_rtc_output_select
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:235    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:237    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:238    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:239    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:240    .text.bkp_rtc_output_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:246    .text.bkp_rtc_output_select:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:247    .text.bkp_rtc_output_select:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:250    .text.bkp_rtc_output_select:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:251    .text.bkp_rtc_output_select:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:254    .text.bkp_rtc_output_select:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:255    .text.bkp_rtc_output_select:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:257    .text.bkp_rtc_output_select:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:258    .text.bkp_rtc_output_select:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:265    .text.bkp_rtc_calibration_value_set:0000000000000000 bkp_rtc_calibration_value_set
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:268    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:270    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:271    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:272    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:273    .text.bkp_rtc_calibration_value_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:276    .text.bkp_rtc_calibration_value_set:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:279    .text.bkp_rtc_calibration_value_set:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:283    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:284    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:285    .text.bkp_rtc_calibration_value_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:288    .text.bkp_rtc_calibration_value_set:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:291    .text.bkp_rtc_calibration_value_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:292    .text.bkp_rtc_calibration_value_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:294    .text.bkp_rtc_calibration_value_set:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:295    .text.bkp_rtc_calibration_value_set:000000000000001c .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 17
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:302    .text.bkp_tamper_detection_enable:0000000000000000 bkp_tamper_detection_enable
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:305    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:306    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:307    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:308    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:313    .text.bkp_tamper_detection_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:314    .text.bkp_tamper_detection_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:321    .text.bkp_tamper_detection_disable:0000000000000000 bkp_tamper_detection_disable
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:324    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:325    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:326    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:327    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:336    .text.bkp_tamper_detection_disable:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:337    .text.bkp_tamper_detection_disable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:344    .text.bkp_tamper_active_level_set:0000000000000000 bkp_tamper_active_level_set
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:347    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:349    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:350    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:351    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:352    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:358    .text.bkp_tamper_active_level_set:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:359    .text.bkp_tamper_active_level_set:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:362    .text.bkp_tamper_active_level_set:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:363    .text.bkp_tamper_active_level_set:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:366    .text.bkp_tamper_active_level_set:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:367    .text.bkp_tamper_active_level_set:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:369    .text.bkp_tamper_active_level_set:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:370    .text.bkp_tamper_active_level_set:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:377    .text.bkp_interrupt_enable:0000000000000000 bkp_interrupt_enable
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:380    .text.bkp_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:381    .text.bkp_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:382    .text.bkp_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:383    .text.bkp_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:388    .text.bkp_interrupt_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:389    .text.bkp_interrupt_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:396    .text.bkp_interrupt_disable:0000000000000000 bkp_interrupt_disable
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:399    .text.bkp_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:400    .text.bkp_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:401    .text.bkp_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:402    .text.bkp_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:411    .text.bkp_interrupt_disable:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:412    .text.bkp_interrupt_disable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:419    .text.bkp_flag_get:0000000000000000 bkp_flag_get
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:422    .text.bkp_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:423    .text.bkp_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:424    .text.bkp_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:425    .text.bkp_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:428    .text.bkp_flag_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:430    .text.bkp_flag_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:432    .text.bkp_flag_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:439    .text.bkp_flag_clear:0000000000000000 bkp_flag_clear
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:442    .text.bkp_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:443    .text.bkp_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:444    .text.bkp_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:445    .text.bkp_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:450    .text.bkp_flag_clear:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:451    .text.bkp_flag_clear:0000000000000012 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 18
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:302    .text.bkp_tamper_detection_enable:0000000000000000 bkp_tamper_detection_enable
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:305    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:306    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:307    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:308    .text.bkp_tamper_detection_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:313    .text.bkp_tamper_detection_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:314    .text.bkp_tamper_detection_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:321    .text.bkp_tamper_detection_disable:0000000000000000 bkp_tamper_detection_disable
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:324    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:325    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:326    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:327    .text.bkp_tamper_detection_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:336    .text.bkp_tamper_detection_disable:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:337    .text.bkp_tamper_detection_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:344    .text.bkp_tamper_active_level_set:0000000000000000 bkp_tamper_active_level_set
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:347    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:349    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:350    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:351    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:352    .text.bkp_tamper_active_level_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:358    .text.bkp_tamper_active_level_set:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:359    .text.bkp_tamper_active_level_set:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:362    .text.bkp_tamper_active_level_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:363    .text.bkp_tamper_active_level_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:366    .text.bkp_tamper_active_level_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:367    .text.bkp_tamper_active_level_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:369    .text.bkp_tamper_active_level_set:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:370    .text.bkp_tamper_active_level_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:377    .text.bkp_interrupt_enable:0000000000000000 bkp_interrupt_enable
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:380    .text.bkp_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:381    .text.bkp_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:382    .text.bkp_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:383    .text.bkp_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:388    .text.bkp_interrupt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:389    .text.bkp_interrupt_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:396    .text.bkp_interrupt_disable:0000000000000000 bkp_interrupt_disable
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:399    .text.bkp_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:400    .text.bkp_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:401    .text.bkp_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:402    .text.bkp_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:411    .text.bkp_interrupt_disable:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:412    .text.bkp_interrupt_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:419    .text.bkp_flag_get:0000000000000000 bkp_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:422    .text.bkp_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:423    .text.bkp_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:424    .text.bkp_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:425    .text.bkp_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:428    .text.bkp_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:430    .text.bkp_flag_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:432    .text.bkp_flag_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:439    .text.bkp_flag_clear:0000000000000000 bkp_flag_clear
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:442    .text.bkp_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:443    .text.bkp_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:444    .text.bkp_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:445    .text.bkp_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:450    .text.bkp_flag_clear:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:451    .text.bkp_flag_clear:0000000000000012 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 18
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:458    .text.bkp_interrupt_flag_get:0000000000000000 bkp_interrupt_flag_get
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:461    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:462    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:463    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:464    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:467    .text.bkp_interrupt_flag_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:469    .text.bkp_interrupt_flag_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:471    .text.bkp_interrupt_flag_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:478    .text.bkp_interrupt_flag_clear:0000000000000000 bkp_interrupt_flag_clear
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:481    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:482    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:483    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:484    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:489    .text.bkp_interrupt_flag_clear:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:490    .text.bkp_interrupt_flag_clear:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:41     .text.bkp_deinit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:85     .text.bkp_data_write:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:144    .text.bkp_data_read:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:163    .text.bkp_rtc_calibration_output_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:186    .text.bkp_rtc_calibration_output_disable:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:205    .text.bkp_rtc_signal_output_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:228    .text.bkp_rtc_signal_output_disable:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:261    .text.bkp_rtc_output_select:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:298    .text.bkp_rtc_calibration_value_set:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:317    .text.bkp_tamper_detection_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:340    .text.bkp_tamper_detection_disable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:373    .text.bkp_tamper_active_level_set:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:392    .text.bkp_interrupt_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:415    .text.bkp_interrupt_disable:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:435    .text.bkp_flag_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:454    .text.bkp_flag_clear:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:474    .text.bkp_interrupt_flag_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:493    .text.bkp_interrupt_flag_clear:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:458    .text.bkp_interrupt_flag_get:0000000000000000 bkp_interrupt_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:461    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:462    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:463    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:464    .text.bkp_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:467    .text.bkp_interrupt_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:469    .text.bkp_interrupt_flag_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:471    .text.bkp_interrupt_flag_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:478    .text.bkp_interrupt_flag_clear:0000000000000000 bkp_interrupt_flag_clear
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:481    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:482    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:483    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:484    .text.bkp_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:489    .text.bkp_interrupt_flag_clear:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:490    .text.bkp_interrupt_flag_clear:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:41     .text.bkp_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:85     .text.bkp_data_write:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:144    .text.bkp_data_read:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:163    .text.bkp_rtc_calibration_output_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:186    .text.bkp_rtc_calibration_output_disable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:205    .text.bkp_rtc_signal_output_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:228    .text.bkp_rtc_signal_output_disable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:261    .text.bkp_rtc_output_select:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:298    .text.bkp_rtc_calibration_value_set:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:317    .text.bkp_tamper_detection_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:340    .text.bkp_tamper_detection_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:373    .text.bkp_tamper_active_level_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:392    .text.bkp_interrupt_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:415    .text.bkp_interrupt_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:435    .text.bkp_flag_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:454    .text.bkp_flag_clear:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:474    .text.bkp_interrupt_flag_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:493    .text.bkp_interrupt_flag_clear:0000000000000012 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:71     .text.bkp_data_write:000000000000001c .L4
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:67     .text.bkp_data_write:000000000000001a .L3
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:59     .text.bkp_data_write:0000000000000012 .L6
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:125    .text.bkp_data_read:0000000000000022 .L8
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:119    .text.bkp_data_read:0000000000000020 .L9
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:109    .text.bkp_data_read:0000000000000014 .L11
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1109   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1783   .debug_str:0000000000000032 .LASF85
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1799   .debug_str:0000000000000125 .LASF86
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1917   .debug_str:00000000000004b6 .LASF87
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1737   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1777   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1881   .debug_str:00000000000003c7 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1785   .debug_str:00000000000000ba .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1839   .debug_str:0000000000000288 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1853   .debug_str:000000000000030a .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1827   .debug_str:0000000000000211 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1797   .debug_str:000000000000011a .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1905   .debug_str:0000000000000456 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1833   .debug_str:0000000000000247 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1927   .debug_str:0000000000000566 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1921   .debug_str:000000000000053c .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1831   .debug_str:0000000000000239 .LASF10
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 19
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:71     .text.bkp_data_write:000000000000001c .L4
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:67     .text.bkp_data_write:000000000000001a .L3
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:59     .text.bkp_data_write:0000000000000012 .L6
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:125    .text.bkp_data_read:0000000000000022 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:119    .text.bkp_data_read:0000000000000020 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:109    .text.bkp_data_read:0000000000000014 .L11
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1109   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1783   .debug_str:0000000000000032 .LASF85
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1799   .debug_str:0000000000000125 .LASF86
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1917   .debug_str:00000000000004b6 .LASF87
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1737   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1777   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1881   .debug_str:00000000000003c7 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1785   .debug_str:00000000000000ba .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1839   .debug_str:0000000000000288 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1853   .debug_str:000000000000030a .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1827   .debug_str:0000000000000211 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1797   .debug_str:000000000000011a .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1905   .debug_str:0000000000000456 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1833   .debug_str:0000000000000247 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1927   .debug_str:0000000000000566 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1921   .debug_str:000000000000053c .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1831   .debug_str:0000000000000239 .LASF10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 19
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1875   .debug_str:0000000000000390 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1935   .debug_str:000000000000058c .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1883   .debug_str:00000000000003d4 .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1877   .debug_str:00000000000003a7 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1911   .debug_str:000000000000048b .LASF88
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1933   .debug_str:0000000000000586 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1943   .debug_str:00000000000005c1 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1849   .debug_str:00000000000002e1 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1885   .debug_str:00000000000003dd .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1887   .debug_str:00000000000003e8 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1889   .debug_str:00000000000003f3 .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1891   .debug_str:00000000000003fe .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1893   .debug_str:0000000000000409 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1895   .debug_str:0000000000000414 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1823   .debug_str:00000000000001e9 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1899   .debug_str:0000000000000435 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1901   .debug_str:0000000000000440 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1903   .debug_str:000000000000044b .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1939   .debug_str:00000000000005a9 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1941   .debug_str:00000000000005b5 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1793   .debug_str:0000000000000104 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1945   .debug_str:00000000000005cc .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1947   .debug_str:00000000000005d8 .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1949   .debug_str:00000000000005e4 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1951   .debug_str:00000000000005f0 .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1953   .debug_str:00000000000005fc .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1955   .debug_str:0000000000000608 .LASF36
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1957   .debug_str:0000000000000614 .LASF37
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1803   .debug_str:0000000000000171 .LASF38
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1805   .debug_str:000000000000017d .LASF39
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1807   .debug_str:0000000000000189 .LASF40
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1809   .debug_str:0000000000000195 .LASF41
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1811   .debug_str:00000000000001a1 .LASF42
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1813   .debug_str:00000000000001ad .LASF43
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1815   .debug_str:00000000000001b9 .LASF44
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1817   .debug_str:00000000000001c5 .LASF45
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1819   .debug_str:00000000000001d1 .LASF46
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1821   .debug_str:00000000000001dd .LASF47
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1855   .debug_str:0000000000000318 .LASF48
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1857   .debug_str:0000000000000324 .LASF49
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1859   .debug_str:0000000000000330 .LASF50
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1861   .debug_str:000000000000033c .LASF51
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1863   .debug_str:0000000000000348 .LASF52
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1865   .debug_str:0000000000000354 .LASF53
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1867   .debug_str:0000000000000360 .LASF54
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1869   .debug_str:000000000000036c .LASF55
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1871   .debug_str:0000000000000378 .LASF56
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1873   .debug_str:0000000000000384 .LASF57
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1923   .debug_str:000000000000054e .LASF58
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1925   .debug_str:000000000000055a .LASF59
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1909   .debug_str:0000000000000474 .LASF60
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1789   .debug_str:00000000000000db .LASF61
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:479    .text.bkp_interrupt_flag_clear:0000000000000000 .LFB19
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:491    .text.bkp_interrupt_flag_clear:0000000000000012 .LFE19
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1879   .debug_str:00000000000003b0 .LASF63
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:459    .text.bkp_interrupt_flag_get:0000000000000000 .LFB18
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:472    .text.bkp_interrupt_flag_get:000000000000000e .LFE18
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 20
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1875   .debug_str:0000000000000390 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1935   .debug_str:000000000000058c .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1883   .debug_str:00000000000003d4 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1877   .debug_str:00000000000003a7 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1911   .debug_str:000000000000048b .LASF88
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1933   .debug_str:0000000000000586 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1943   .debug_str:00000000000005c1 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1849   .debug_str:00000000000002e1 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1885   .debug_str:00000000000003dd .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1887   .debug_str:00000000000003e8 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1889   .debug_str:00000000000003f3 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1891   .debug_str:00000000000003fe .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1893   .debug_str:0000000000000409 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1895   .debug_str:0000000000000414 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1823   .debug_str:00000000000001e9 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1899   .debug_str:0000000000000435 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1901   .debug_str:0000000000000440 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1903   .debug_str:000000000000044b .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1939   .debug_str:00000000000005a9 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1941   .debug_str:00000000000005b5 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1793   .debug_str:0000000000000104 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1945   .debug_str:00000000000005cc .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1947   .debug_str:00000000000005d8 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1949   .debug_str:00000000000005e4 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1951   .debug_str:00000000000005f0 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1953   .debug_str:00000000000005fc .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1955   .debug_str:0000000000000608 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1957   .debug_str:0000000000000614 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1803   .debug_str:0000000000000171 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1805   .debug_str:000000000000017d .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1807   .debug_str:0000000000000189 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1809   .debug_str:0000000000000195 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1811   .debug_str:00000000000001a1 .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1813   .debug_str:00000000000001ad .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1815   .debug_str:00000000000001b9 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1817   .debug_str:00000000000001c5 .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1819   .debug_str:00000000000001d1 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1821   .debug_str:00000000000001dd .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1855   .debug_str:0000000000000318 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1857   .debug_str:0000000000000324 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1859   .debug_str:0000000000000330 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1861   .debug_str:000000000000033c .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1863   .debug_str:0000000000000348 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1865   .debug_str:0000000000000354 .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1867   .debug_str:0000000000000360 .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1869   .debug_str:000000000000036c .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1871   .debug_str:0000000000000378 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1873   .debug_str:0000000000000384 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1923   .debug_str:000000000000054e .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1925   .debug_str:000000000000055a .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1909   .debug_str:0000000000000474 .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1789   .debug_str:00000000000000db .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:479    .text.bkp_interrupt_flag_clear:0000000000000000 .LFB19
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:491    .text.bkp_interrupt_flag_clear:0000000000000012 .LFE19
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1879   .debug_str:00000000000003b0 .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:459    .text.bkp_interrupt_flag_get:0000000000000000 .LFB18
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:472    .text.bkp_interrupt_flag_get:000000000000000e .LFE18
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 20
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1929   .debug_str:0000000000000571 .LASF62
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:440    .text.bkp_flag_clear:0000000000000000 .LFB17
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:452    .text.bkp_flag_clear:0000000000000012 .LFE17
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1843   .debug_str:00000000000002a8 .LASF64
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:420    .text.bkp_flag_get:0000000000000000 .LFB16
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:433    .text.bkp_flag_get:000000000000000e .LFE16
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1897   .debug_str:000000000000041f .LASF65
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:397    .text.bkp_interrupt_disable:0000000000000000 .LFB15
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:413    .text.bkp_interrupt_disable:0000000000000018 .LFE15
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1787   .debug_str:00000000000000c6 .LASF66
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:378    .text.bkp_interrupt_enable:0000000000000000 .LFB14
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:390    .text.bkp_interrupt_enable:0000000000000012 .LFE14
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1835   .debug_str:0000000000000250 .LASF69
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:345    .text.bkp_tamper_active_level_set:0000000000000000 .LFB13
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:371    .text.bkp_tamper_active_level_set:0000000000000016 .LFE13
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1931   .debug_str:0000000000000580 .LASF71
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1521   .debug_loc:0000000000000000 .LLST8
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1535   .debug_loc:0000000000000021 .LLST9
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1851   .debug_str:00000000000002ed .LASF67
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:322    .text.bkp_tamper_detection_disable:0000000000000000 .LFB12
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:338    .text.bkp_tamper_detection_disable:0000000000000018 .LFE12
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1837   .debug_str:000000000000026c .LASF68
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:303    .text.bkp_tamper_detection_enable:0000000000000000 .LFB11
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:315    .text.bkp_tamper_detection_enable:0000000000000012 .LFE11
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1829   .debug_str:000000000000021b .LASF70
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:266    .text.bkp_rtc_calibration_value_set:0000000000000000 .LFB10
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:296    .text.bkp_rtc_calibration_value_set:000000000000001c .LFE10
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1801   .debug_str:000000000000016b .LASF72
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1551   .debug_loc:000000000000004b .LLST6
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1565   .debug_loc:000000000000006c .LLST7
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1915   .debug_str:00000000000004a0 .LASF73
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:233    .text.bkp_rtc_output_select:0000000000000000 .LFB9
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:259    .text.bkp_rtc_output_select:0000000000000018 .LFE9
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1795   .debug_str:0000000000000110 .LASF74
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1581   .debug_loc:000000000000008f .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1595   .debug_loc:00000000000000b0 .LLST5
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1845   .debug_str:00000000000002b5 .LASF75
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:210    .text.bkp_rtc_signal_output_disable:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:226    .text.bkp_rtc_signal_output_disable:000000000000001a .LFE8
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1825   .debug_str:00000000000001f4 .LASF76
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:191    .text.bkp_rtc_signal_output_enable:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:203    .text.bkp_rtc_signal_output_enable:0000000000000012 .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1781   .debug_str:000000000000000f .LASF77
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:168    .text.bkp_rtc_calibration_output_disable:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:184    .text.bkp_rtc_calibration_output_disable:000000000000001a .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1919   .debug_str:000000000000051a .LASF78
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:149    .text.bkp_rtc_calibration_output_enable:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:161    .text.bkp_rtc_calibration_output_enable:0000000000000012 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1847   .debug_str:00000000000002d3 .LASF89
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:90     .text.bkp_data_read:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:142    .text.bkp_data_read:0000000000000038 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1791   .debug_str:00000000000000f4 .LASF79
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1611   .debug_loc:00000000000000da .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1913   .debug_str:000000000000049b .LASF80
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1637   .debug_loc:000000000000011c .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1779   .debug_str:0000000000000000 .LASF81
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:46     .text.bkp_data_write:0000000000000000 .LFB3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s 			page 21
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1929   .debug_str:0000000000000571 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:440    .text.bkp_flag_clear:0000000000000000 .LFB17
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:452    .text.bkp_flag_clear:0000000000000012 .LFE17
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1843   .debug_str:00000000000002a8 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:420    .text.bkp_flag_get:0000000000000000 .LFB16
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:433    .text.bkp_flag_get:000000000000000e .LFE16
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1897   .debug_str:000000000000041f .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:397    .text.bkp_interrupt_disable:0000000000000000 .LFB15
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:413    .text.bkp_interrupt_disable:0000000000000018 .LFE15
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1787   .debug_str:00000000000000c6 .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:378    .text.bkp_interrupt_enable:0000000000000000 .LFB14
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:390    .text.bkp_interrupt_enable:0000000000000012 .LFE14
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1835   .debug_str:0000000000000250 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:345    .text.bkp_tamper_active_level_set:0000000000000000 .LFB13
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:371    .text.bkp_tamper_active_level_set:0000000000000016 .LFE13
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1931   .debug_str:0000000000000580 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1521   .debug_loc:0000000000000000 .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1535   .debug_loc:0000000000000021 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1851   .debug_str:00000000000002ed .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:322    .text.bkp_tamper_detection_disable:0000000000000000 .LFB12
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:338    .text.bkp_tamper_detection_disable:0000000000000018 .LFE12
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1837   .debug_str:000000000000026c .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:303    .text.bkp_tamper_detection_enable:0000000000000000 .LFB11
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:315    .text.bkp_tamper_detection_enable:0000000000000012 .LFE11
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1829   .debug_str:000000000000021b .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:266    .text.bkp_rtc_calibration_value_set:0000000000000000 .LFB10
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:296    .text.bkp_rtc_calibration_value_set:000000000000001c .LFE10
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1801   .debug_str:000000000000016b .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1551   .debug_loc:000000000000004b .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1565   .debug_loc:000000000000006c .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1915   .debug_str:00000000000004a0 .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:233    .text.bkp_rtc_output_select:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:259    .text.bkp_rtc_output_select:0000000000000018 .LFE9
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1795   .debug_str:0000000000000110 .LASF74
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1581   .debug_loc:000000000000008f .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1595   .debug_loc:00000000000000b0 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1845   .debug_str:00000000000002b5 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:210    .text.bkp_rtc_signal_output_disable:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:226    .text.bkp_rtc_signal_output_disable:000000000000001a .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1825   .debug_str:00000000000001f4 .LASF76
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:191    .text.bkp_rtc_signal_output_enable:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:203    .text.bkp_rtc_signal_output_enable:0000000000000012 .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1781   .debug_str:000000000000000f .LASF77
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:168    .text.bkp_rtc_calibration_output_disable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:184    .text.bkp_rtc_calibration_output_disable:000000000000001a .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1919   .debug_str:000000000000051a .LASF78
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:149    .text.bkp_rtc_calibration_output_enable:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:161    .text.bkp_rtc_calibration_output_enable:0000000000000012 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1847   .debug_str:00000000000002d3 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:90     .text.bkp_data_read:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:142    .text.bkp_data_read:0000000000000038 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1791   .debug_str:00000000000000f4 .LASF79
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1611   .debug_loc:00000000000000da .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1913   .debug_str:000000000000049b .LASF80
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1637   .debug_loc:000000000000011c .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1779   .debug_str:0000000000000000 .LASF81
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:46     .text.bkp_data_write:0000000000000000 .LFB3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s 			page 21
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:83     .text.bkp_data_write:0000000000000030 .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1654   .debug_loc:0000000000000147 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1907   .debug_str:0000000000000469 .LASF82
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:14     .text.bkp_deinit:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:39     .text.bkp_deinit:0000000000000018 .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1672   .debug_loc:0000000000000173 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:27     .text.bkp_deinit:000000000000000c .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:37     .text.bkp_deinit:0000000000000018 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1937   .debug_str:0000000000000594 .LASF83
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:1841   .debug_str:0000000000000292 .LASF84
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:348    .text.bkp_tamper_active_level_set:0000000000000000 .LVL20
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:364    .text.bkp_tamper_active_level_set:0000000000000010 .LVL23
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:356    .text.bkp_tamper_active_level_set:000000000000000c .LVL21
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:269    .text.bkp_rtc_calibration_value_set:0000000000000000 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:277    .text.bkp_rtc_calibration_value_set:000000000000000c .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:281    .text.bkp_rtc_calibration_value_set:0000000000000010 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:286    .text.bkp_rtc_calibration_value_set:0000000000000014 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:289    .text.bkp_rtc_calibration_value_set:0000000000000016 .LVL19
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:236    .text.bkp_rtc_output_select:0000000000000000 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:252    .text.bkp_rtc_output_select:0000000000000012 .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:244    .text.bkp_rtc_output_select:000000000000000c .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:93     .text.bkp_data_read:0000000000000000 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:107    .text.bkp_data_read:0000000000000010 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:112    .text.bkp_data_read:0000000000000016 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:124    .text.bkp_data_read:0000000000000022 .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:133    .text.bkp_data_read:000000000000002a .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:118    .text.bkp_data_read:0000000000000020 .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:49     .text.bkp_data_write:0000000000000000 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:62     .text.bkp_data_write:0000000000000014 .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:70     .text.bkp_data_write:000000000000001c .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:21     .text.bkp_deinit:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:33     .text.bkp_deinit:0000000000000010 .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccMWhNMz.s:502    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:83     .text.bkp_data_write:0000000000000030 .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1654   .debug_loc:0000000000000147 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1907   .debug_str:0000000000000469 .LASF82
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:14     .text.bkp_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:39     .text.bkp_deinit:0000000000000018 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1672   .debug_loc:0000000000000173 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:27     .text.bkp_deinit:000000000000000c .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:37     .text.bkp_deinit:0000000000000018 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1937   .debug_str:0000000000000594 .LASF83
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:1841   .debug_str:0000000000000292 .LASF84
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:348    .text.bkp_tamper_active_level_set:0000000000000000 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:364    .text.bkp_tamper_active_level_set:0000000000000010 .LVL23
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:356    .text.bkp_tamper_active_level_set:000000000000000c .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:269    .text.bkp_rtc_calibration_value_set:0000000000000000 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:277    .text.bkp_rtc_calibration_value_set:000000000000000c .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:281    .text.bkp_rtc_calibration_value_set:0000000000000010 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:286    .text.bkp_rtc_calibration_value_set:0000000000000014 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:289    .text.bkp_rtc_calibration_value_set:0000000000000016 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:236    .text.bkp_rtc_output_select:0000000000000000 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:252    .text.bkp_rtc_output_select:0000000000000012 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:244    .text.bkp_rtc_output_select:000000000000000c .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:93     .text.bkp_data_read:0000000000000000 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:107    .text.bkp_data_read:0000000000000010 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:112    .text.bkp_data_read:0000000000000016 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:124    .text.bkp_data_read:0000000000000022 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:133    .text.bkp_data_read:000000000000002a .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:118    .text.bkp_data_read:0000000000000020 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:49     .text.bkp_data_write:0000000000000000 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:62     .text.bkp_data_write:0000000000000014 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:70     .text.bkp_data_write:000000000000001c .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:21     .text.bkp_deinit:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:33     .text.bkp_deinit:0000000000000010 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccJEc4Nf.s:502    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_bkp_reset_enable
