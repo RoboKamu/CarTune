@@ -1,0 +1,360 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s 			page 1
+
+
+   1              		.file	"gd32vf103_dbg.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.dbg_id_get,"ax",@progbits
+  10              		.align	1
+  11              		.globl	dbg_id_get
+  13              	dbg_id_get:
+  14              	.LFB2:
+  15              		.file 1 "./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c"
+   1:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** /*!
+   2:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \file    gd32vf103_dbg.c
+   3:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \brief   DBG driver
+   4:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+   5:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \version 2019-06-05, V1.0.0, firmware for GD32VF103
+   6:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \version 2020-08-04, V1.1.0, firmware for GD32VF103
+   7:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** */
+   8:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+   9:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** /*
+  10:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     Copyright (c) 2020, GigaDevice Semiconductor Inc.
+  11:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  12:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  13:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** are permitted provided that the following conditions are met:
+  14:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  15:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  16:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****        list of conditions and the following disclaimer.
+  17:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  18:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****        this list of conditions and the following disclaimer in the documentation 
+  19:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****        and/or other materials provided with the distribution.
+  20:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  21:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****        may be used to endorse or promote products derived from this software without 
+  22:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****        specific prior written permission.
+  23:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  24:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  25:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  26:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  27:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  28:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  29:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  30:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  31:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  32:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  33:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** OF SUCH DAMAGE.
+  34:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** */
+  35:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  36:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** #include "gd32vf103_dbg.h"
+  37:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  38:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** /*!
+  39:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \brief      read DBG_ID code register
+  40:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[in]  none
+  41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[out] none
+  42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \retval     DBG_ID code
+  43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** */
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s 			page 2
+
+
+  44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** uint32_t dbg_id_get(void)
+  45:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** {
+  16              		.loc 1 45 1
+  17              		.cfi_startproc
+  46:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     return DBG_ID;
+  18              		.loc 1 46 5
+  19              		.loc 1 46 12 is_stmt 0
+  20 0000 B72704E0 		li	a5,-536600576
+  21 0004 8843     		lw	a0,0(a5)
+  47:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** }
+  22              		.loc 1 47 1
+  23 0006 8280     		ret
+  24              		.cfi_endproc
+  25              	.LFE2:
+  27              		.section	.text.dbg_low_power_enable,"ax",@progbits
+  28              		.align	1
+  29              		.globl	dbg_low_power_enable
+  31              	dbg_low_power_enable:
+  32              	.LFB3:
+  48:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  49:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** /*!
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \brief      enable low power behavior when the mcu is in debug mode
+  51:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[in]  dbg_low_power:
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
+  53:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: keep debugger connection during sleep mode
+  54:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: keep debugger connection during deepsleep mode
+  55:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: keep debugger connection during standby mode
+  56:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[out] none
+  57:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \retval     none
+  58:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** */
+  59:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** void dbg_low_power_enable(uint32_t dbg_low_power)
+  60:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** {
+  33              		.loc 1 60 1 is_stmt 1
+  34              		.cfi_startproc
+  35              	.LVL0:
+  61:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     DBG_CTL |= dbg_low_power;
+  36              		.loc 1 61 5
+  37              		.loc 1 61 13 is_stmt 0
+  38 0000 372704E0 		li	a4,-536600576
+  39 0004 5C43     		lw	a5,4(a4)
+  40 0006 5D8D     		or	a0,a5,a0
+  41              	.LVL1:
+  42 0008 48C3     		sw	a0,4(a4)
+  62:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** }
+  43              		.loc 1 62 1
+  44 000a 8280     		ret
+  45              		.cfi_endproc
+  46              	.LFE3:
+  48              		.section	.text.dbg_low_power_disable,"ax",@progbits
+  49              		.align	1
+  50              		.globl	dbg_low_power_disable
+  52              	dbg_low_power_disable:
+  53              	.LFB4:
+  63:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  64:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** /*!
+  65:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \brief      disable low power behavior when the mcu is in debug mode
+  66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[in]  dbg_low_power:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s 			page 3
+
+
+  67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
+  68:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: donot keep debugger connection during sleep mode
+  69:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: donot keep debugger connection during deepsleep mode
+  70:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: donot keep debugger connection during standby mode
+  71:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[out] none
+  72:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \retval     none
+  73:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** */
+  74:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** void dbg_low_power_disable(uint32_t dbg_low_power)
+  75:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** {
+  54              		.loc 1 75 1 is_stmt 1
+  55              		.cfi_startproc
+  56              	.LVL2:
+  76:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     DBG_CTL &= ~dbg_low_power;
+  57              		.loc 1 76 5
+  58              		.loc 1 76 13 is_stmt 0
+  59 0000 B72704E0 		li	a5,-536600576
+  60 0004 D843     		lw	a4,4(a5)
+  61              		.loc 1 76 16
+  62 0006 1345F5FF 		not	a0,a0
+  63              	.LVL3:
+  64              		.loc 1 76 13
+  65 000a 798D     		and	a0,a0,a4
+  66              	.LVL4:
+  67 000c C8C3     		sw	a0,4(a5)
+  77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** }
+  68              		.loc 1 77 1
+  69 000e 8280     		ret
+  70              		.cfi_endproc
+  71              	.LFE4:
+  73              		.section	.text.dbg_periph_enable,"ax",@progbits
+  74              		.align	1
+  75              		.globl	dbg_periph_enable
+  77              	dbg_periph_enable:
+  78              	.LFB5:
+  78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** /*!
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \brief      enable peripheral behavior when the mcu is in debug mode
+  81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[in]  dbg_periph: refer to dbg_periph_enum
+  82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
+  83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_FWDGT_HOLD : debug FWDGT kept when core is halted
+  84:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_WWDGT_HOLD : debug WWDGT kept when core is halted
+  85:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_CANx_HOLD (x=0,1): hold CANx counter when core is halted
+  86:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_I2Cx_HOLD (x=0,1): hold I2Cx smbus when core is halted
+  87:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_TIMERx_HOLD (x=0,1,2,3,4,5,6): hold TIMERx counter when core is halted
+  88:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[out] none
+  89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \retval     none
+  90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** */
+  91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** void dbg_periph_enable(dbg_periph_enum dbg_periph)
+  92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** {
+  79              		.loc 1 92 1 is_stmt 1
+  80              		.cfi_startproc
+  81              	.LVL5:
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     DBG_CTL |= (uint32_t)dbg_periph;
+  82              		.loc 1 93 5
+  83              		.loc 1 93 13 is_stmt 0
+  84 0000 372704E0 		li	a4,-536600576
+  85 0004 5C43     		lw	a5,4(a4)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s 			page 4
+
+
+  86 0006 5D8D     		or	a0,a5,a0
+  87              	.LVL6:
+  88 0008 48C3     		sw	a0,4(a4)
+  94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** }
+  89              		.loc 1 94 1
+  90 000a 8280     		ret
+  91              		.cfi_endproc
+  92              	.LFE5:
+  94              		.section	.text.dbg_periph_disable,"ax",@progbits
+  95              		.align	1
+  96              		.globl	dbg_periph_disable
+  98              	dbg_periph_disable:
+  99              	.LFB6:
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** 
+  96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** /*!
+  97:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \brief      disable peripheral behavior when the mcu is in debug mode
+  98:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[in]  dbg_periph: refer to dbg_periph_enum
+  99:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
+ 100:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_FWDGT_HOLD : debug FWDGT kept when core is halted
+ 101:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_WWDGT_HOLD : debug WWDGT kept when core is halted
+ 102:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_CANx_HOLD (x=0,1): hold CAN0 counter when core is halted
+ 103:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_I2Cx_HOLD (x=0,1): hold I2Cx smbus when core is halted
+ 104:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****       \arg        DBG_TIMERx_HOLD (x=0,1,2,3,4,5,6): hold TIMERx counter when core is halted
+ 105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[out] none
+ 106:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \retval     none
+ 107:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** */
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** void dbg_periph_disable(dbg_periph_enum dbg_periph)
+ 109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** {
+ 100              		.loc 1 109 1 is_stmt 1
+ 101              		.cfi_startproc
+ 102              	.LVL7:
+ 110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     DBG_CTL &= ~(uint32_t)dbg_periph;
+ 103              		.loc 1 110 5
+ 104              		.loc 1 110 13 is_stmt 0
+ 105 0000 B72704E0 		li	a5,-536600576
+ 106 0004 D843     		lw	a4,4(a5)
+ 107              		.loc 1 110 16
+ 108 0006 1345F5FF 		not	a0,a0
+ 109              	.LVL8:
+ 110              		.loc 1 110 13
+ 111 000a 798D     		and	a0,a0,a4
+ 112              	.LVL9:
+ 113 000c C8C3     		sw	a0,4(a5)
+ 111:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** }
+ 114              		.loc 1 111 1
+ 115 000e 8280     		ret
+ 116              		.cfi_endproc
+ 117              	.LFE6:
+ 119              		.text
+ 120              	.Letext0:
+ 121              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 122              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 123              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_dbg.h"
+ 124              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_dbg.c
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:13     .text.dbg_id_get:0000000000000000 dbg_id_get
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:17     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:18     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:19     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:20     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:23     .text.dbg_id_get:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:24     .text.dbg_id_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:31     .text.dbg_low_power_enable:0000000000000000 dbg_low_power_enable
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:34     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:36     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:37     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:38     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:44     .text.dbg_low_power_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:45     .text.dbg_low_power_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:52     .text.dbg_low_power_disable:0000000000000000 dbg_low_power_disable
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:55     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:57     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:58     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:59     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:62     .text.dbg_low_power_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:65     .text.dbg_low_power_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:69     .text.dbg_low_power_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:70     .text.dbg_low_power_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:77     .text.dbg_periph_enable:0000000000000000 dbg_periph_enable
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:80     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:82     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:83     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:84     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:90     .text.dbg_periph_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:91     .text.dbg_periph_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:98     .text.dbg_periph_disable:0000000000000000 dbg_periph_disable
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:101    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:103    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:104    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:105    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:108    .text.dbg_periph_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:111    .text.dbg_periph_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:115    .text.dbg_periph_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:116    .text.dbg_periph_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:27     .text.dbg_id_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:48     .text.dbg_low_power_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:73     .text.dbg_low_power_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:94     .text.dbg_periph_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:119    .text.dbg_periph_disable:0000000000000010 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:362    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:714    .debug_str:00000000000001fc .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:726    .debug_str:00000000000002c8 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:660    .debug_str:000000000000000b .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:642    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:656    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:698    .debug_str:0000000000000182 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:722    .debug_str:00000000000002ac .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:680    .debug_str:00000000000000f3 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:712    .debug_str:00000000000001f2 .LASF3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s 			page 6
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:686    .debug_str:0000000000000121 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:668    .debug_str:0000000000000098 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:692    .debug_str:0000000000000154 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:684    .debug_str:000000000000010f .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:708    .debug_str:00000000000001d4 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:702    .debug_str:000000000000019d .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:716    .debug_str:0000000000000284 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:710    .debug_str:00000000000001e2 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:720    .debug_str:00000000000002a0 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:678    .debug_str:00000000000000e4 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:670    .debug_str:00000000000000a1 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:724    .debug_str:00000000000002b8 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:690    .debug_str:0000000000000144 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:706    .debug_str:00000000000001c4 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:662    .debug_str:000000000000006f .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:666    .debug_str:000000000000008a .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:672    .debug_str:00000000000000b0 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:700    .debug_str:000000000000018f .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:688    .debug_str:0000000000000134 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:704    .debug_str:00000000000001b4 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:728    .debug_str:000000000000030e .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:682    .debug_str:0000000000000101 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:674    .debug_str:00000000000000be .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:718    .debug_str:000000000000028d .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:99     .text.dbg_periph_disable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:117    .text.dbg_periph_disable:0000000000000010 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:658    .debug_str:0000000000000000 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:551    .debug_loc:0000000000000000 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:730    .debug_str:000000000000031e .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:78     .text.dbg_periph_enable:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:92     .text.dbg_periph_enable:000000000000000c .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:572    .debug_loc:000000000000002f .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:676    .debug_str:00000000000000ce .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:53     .text.dbg_low_power_disable:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:71     .text.dbg_low_power_disable:0000000000000010 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:696    .debug_str:0000000000000174 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:586    .debug_loc:0000000000000050 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:694    .debug_str:000000000000015f .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:32     .text.dbg_low_power_enable:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:46     .text.dbg_low_power_enable:000000000000000c .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:607    .debug_loc:000000000000007f .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:664    .debug_str:000000000000007f .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:14     .text.dbg_id_get:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:25     .text.dbg_id_get:0000000000000008 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:102    .text.dbg_periph_disable:0000000000000000 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:109    .text.dbg_periph_disable:000000000000000a .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:112    .text.dbg_periph_disable:000000000000000c .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:81     .text.dbg_periph_enable:0000000000000000 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:87     .text.dbg_periph_enable:0000000000000008 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:56     .text.dbg_low_power_disable:0000000000000000 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:63     .text.dbg_low_power_disable:000000000000000a .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:66     .text.dbg_low_power_disable:000000000000000c .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:35     .text.dbg_low_power_enable:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:41     .text.dbg_low_power_enable:0000000000000008 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s:126    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcX6gG.s 			page 7
+
+
