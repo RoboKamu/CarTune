@@ -63,11 +63,14 @@ int main(void){
   t5omsi();                                 // Initialize timer5 1kHz
 
   mpu6500_getAccel(&vec_temp);
-  int s=0, c=0, v;
+  int s=0, c=0, v, v_temp;
   float abs_x, abs_y, abs_z;
   while(1){
     /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
     mpu6500_getAccel(&vec);
+    
+    // calculate the temporary vector magnitude
+    v_temp = newtonSqrt(vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z);
 
     /* Do some fancy math to make a nice display */
 
@@ -79,20 +82,28 @@ int main(void){
     LCD_DrawLine(160/2, 80/2, (160/2)+(vec_temp.y)/(4096/28), (80/2)+(vec_temp.x/(4096/28)),BLACK);
     /* Draw new line, scaled to the unit circle */
     LCD_DrawLine(160/2, 80/2, (160/2)+(vec.y)/(4096/28), (80/2)+(vec.x/(4096/28)),line_color);
+
+    if (t5expq()){
+      s++; 
+      if (s%10==0){                                                       // every 10th ms..
+        v = newtonSqrt(vec.x*vec.x + vec.y*vec.y + vec.z*vec.z);        // ..calculate the magnitude of 3 vectors..
+        LCD_ShowNum1(1, 1, v, 6, RED);                                  // ..and display size!
+        //LCD_ShowNum1(10, 10, newtonSqrt(100000000), 8, WHITE);
+        if (v_temp <= v+10 && v_temp >= v-10) c++;                      // if the magnitude change is within 50 units, note    
+      }
+      if (s==1000){                                                     // once n seconds has pased, check status
+        if (c >= 70)                                                    // if 70% of time there is negligible movement..  
+          LCD_ShowString(1, 21, "ON ", YELLOW);                         // ..set status to on.. 
+        else LCD_ShowString(1, 21, "OFF", YELLOW);                      // ..otherwise off! 
+        c=0; s=0;
+      }
+      LCD_ShowNum(1, 41, c, 3, WHITE);
+    }
+
     /* Store the last vector so it can be erased */
     vec_temp = vec;
     /* Wait for LCD to finish drawing */
     LCD_Wait_On_Queue();
-
-    if (t5expq()){
-      s++; 
-      if (s==10){                                                       // every 50th ms..
-        v = newtonSqrt(vec.x*vec.x + vec.y*vec.y + vec.z*vec.z);        // ..calculate the magnitude of 3 vectors..
-        LCD_ShowNum1(1, 10, v, 6, RED);                                // ..and display size!
-        //LCD_ShowNum1(10, 10, newtonSqrt(100000000), 8, WHITE);
-        s=0;
-      }
-    }
   }
 }
 
