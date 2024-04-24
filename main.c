@@ -89,15 +89,15 @@ int main(void){
         v = newtonSqrt(vec.x*vec.x + vec.y*vec.y + vec.z*vec.z);        // ..calculate the magnitude of 3 vectors..
         LCD_ShowNum1(1, 1, v, 6, RED);                                  // ..and display size!
         //LCD_ShowNum1(10, 10, newtonSqrt(100000000), 8, WHITE);
-        if (v_temp <= v+10 && v_temp >= v-10) c++;                      // if the magnitude change is within 50 units, note    
+        if (v_temp <= v+10 && v_temp >= v-10) c++;                      // increment counter c if the magnitude change is within 10 units   
       }
-      if (s==1000){                                                     // once n seconds has pased, check status
-        if (c >= 70)                                                    // if 70% of time there is negligible movement..  
+      if (s==1000){                                                     // once n seconds has passed, check status
+        if (c >= 60)                                                    // if 70% of time there is negligible movement..  
           LCD_ShowString(1, 21, "ON ", YELLOW);                         // ..set status to on.. 
         else LCD_ShowString(1, 21, "OFF", YELLOW);                      // ..otherwise off! 
-        c=0; s=0;
+        c=0; s=0;                                                       
       }
-      LCD_ShowNum(1, 41, c, 3, WHITE);
+      LCD_ShowNum(1, 41, c, 3, WHITE);                                                
     }
 
     /* Store the last vector so it can be erased */
