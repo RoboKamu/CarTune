@@ -75,26 +75,26 @@ int main(void){
     /* Do some fancy math to make a nice display */
 
     /* Green if pointing up, red if down */
-    line_color = (vec.z < 0) ? RED : GREEN;
-    /* Draw a unit circle (1G) */
-    Draw_Circle(160/2, 80/2, 28, BLUE);
-    /* Erase last line */
-    LCD_DrawLine(160/2, 80/2, (160/2)+(vec_temp.y)/(4096/28), (80/2)+(vec_temp.x/(4096/28)),BLACK);
-    /* Draw new line, scaled to the unit circle */
-    LCD_DrawLine(160/2, 80/2, (160/2)+(vec.y)/(4096/28), (80/2)+(vec.x/(4096/28)),line_color);
+    //line_color = (vec.z < 0) ? RED : GREEN;
+    ///* Draw a unit circle (1G) */
+    //Draw_Circle(160/2, 80/2, 28, BLUE);
+    ///* Erase last line */
+    //LCD_DrawLine(160/2, 80/2, (160/2)+(vec_temp.y)/(4096/28), (80/2)+(vec_temp.x/(4096/28)),BLACK);
+    ///* Draw new line, scaled to the unit circle */
+    //LCD_DrawLine(160/2, 80/2, (160/2)+(vec.y)/(4096/28), (80/2)+(vec.x/(4096/28)),line_color);
 
     if (t5expq()){
       s++; 
-      if (s%10==0){                                                       // every 10th ms..
-        v = newtonSqrt(vec.x*vec.x + vec.y*vec.y + vec.z*vec.z);        // ..calculate the magnitude of 3 vectors..
-        LCD_ShowNum1(1, 1, v, 6, RED);                                  // ..and display size!
+      if (s%10==0){                                                      // every 10th ms..
+        v = newtonSqrt(vec.x*vec.x + vec.y*vec.y + vec.z*vec.z);         // ..calculate the magnitude of 3 vectors..
+        LCD_ShowNum1(1, 1, v, 7, RED);                                   // ..and display size!
         //LCD_ShowNum1(10, 10, newtonSqrt(100000000), 8, WHITE);
-        if (v_temp <= v+10 && v_temp >= v-10) c++;                      // increment counter c if the magnitude change is within 10 units   
+        if (v_temp <= v+10 && v_temp >= v-10) c++;                       // increment counter c if the magnitude change is within 10 units   
       }
-      if (s==1000){                                                     // once n seconds has passed, check status
-        if (c >= 60)                                                    // if 70% of time there is negligible movement..  
-          LCD_ShowString(1, 21, "ON ", YELLOW);                         // ..set status to on.. 
-        else LCD_ShowString(1, 21, "OFF", YELLOW);                      // ..otherwise off! 
+      if (s==1000){                                                      // once 1 seconds has passed, check status
+        if (c >= 60)                                                    // if 60% of time there is negligible movement..  
+          LCD_ShowString(1, 21, "ON ", YELLOW);                          // ..set status to on.. 
+        else LCD_ShowString(1, 21, "OFF", YELLOW);                       // ..otherwise off! 
         c=0; s=0;                                                       
       }
       LCD_ShowNum(1, 41, c, 3, WHITE);                                                
