@@ -26,7 +26,8 @@ build/main.o: main.c \
  ../../firmware/RISCV/drivers/n200_func.h \
  ../../firmware/RISCV/drivers/n200_timer.h \
  ../../firmware/RISCV/drivers/n200_eclic.h \
- ../../firmware/RISCV/drivers/riscv_const.h drivers.h adc.h servo.h
+ ../../firmware/RISCV/drivers/riscv_const.h drivers.h lcd.h delay.h \
+ gd32v_mpu6500_if.h mpu6500_driver.h mpu6500_registers.h
 
 ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h:
 
@@ -86,6 +87,12 @@ build/main.o: main.c \
 
 drivers.h:
 
-adc.h:
+lcd.h:
 
-servo.h:
+delay.h:
+
+gd32v_mpu6500_if.h:
+
+mpu6500_driver.h:
+
+mpu6500_registers.h:

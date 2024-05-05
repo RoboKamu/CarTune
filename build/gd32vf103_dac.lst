@@ -1,0 +1,2040 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 1
+
+
+   1              		.file	"gd32vf103_dac.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.dac_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	dac_deinit
+  13              	dac_deinit:
+  14              	.LFB2:
+  15              		.file 1 "./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c"
+   1:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+   2:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \file    gd32vf103_dac.c
+   3:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief   DAC driver
+   4:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+   5:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \version 2019-06-05, V1.0.0, firmware for GD32VF103
+   6:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \version 2020-08-04, V1.1.0, firmware for GD32VF103
+   7:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+   8:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+   9:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*
+  10:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     Copyright (c) 2020, GigaDevice Semiconductor Inc.
+  11:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  12:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  13:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** are permitted provided that the following conditions are met:
+  14:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  15:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  16:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****        list of conditions and the following disclaimer.
+  17:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  18:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****        this list of conditions and the following disclaimer in the documentation 
+  19:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****        and/or other materials provided with the distribution.
+  20:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  21:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****        may be used to endorse or promote products derived from this software without 
+  22:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****        specific prior written permission.
+  23:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  24:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  25:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  26:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  27:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  28:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  29:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  30:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  31:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  32:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  33:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** OF SUCH DAMAGE.
+  34:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+  35:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  36:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** #include "gd32vf103_dac.h"
+  37:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  38:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /* DAC register bit offset */
+  39:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** #define DAC1_REG_OFFSET           ((uint32_t)16U)
+  40:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** #define DH_12BIT_OFFSET           ((uint32_t)16U)
+  41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** #define DH_8BIT_OFFSET            ((uint32_t)8U)
+  42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 2
+
+
+  44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      deinitialize DAC
+  45:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  none
+  46:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+  47:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+  48:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+  49:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_deinit(void)
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+  16              		.loc 1 50 1
+  17              		.cfi_startproc
+  51:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     rcu_periph_reset_enable(RCU_DACRST);
+  18              		.loc 1 51 5
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     rcu_periph_reset_enable(RCU_DACRST);
+  19              		.loc 1 50 1 is_stmt 0
+  20 0000 4111     		addi	sp,sp,-16
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 16
+  23              		.loc 1 51 5
+  24 0002 1305D041 		li	a0,1053
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     rcu_periph_reset_enable(RCU_DACRST);
+  25              		.loc 1 50 1
+  26 0006 06C6     		sw	ra,12(sp)
+  27              		.cfi_offset 1, -4
+  28              		.loc 1 51 5
+  29 0008 97000000 		call	rcu_periph_reset_enable
+  29      E7800000 
+  30              	.LVL0:
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     rcu_periph_reset_disable(RCU_DACRST);
+  31              		.loc 1 52 5 is_stmt 1
+  53:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+  32              		.loc 1 53 1 is_stmt 0
+  33 0010 B240     		lw	ra,12(sp)
+  34              		.cfi_restore 1
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     rcu_periph_reset_disable(RCU_DACRST);
+  35              		.loc 1 52 5
+  36 0012 1305D041 		li	a0,1053
+  37              		.loc 1 53 1
+  38 0016 4101     		addi	sp,sp,16
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_offset 0
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     rcu_periph_reset_disable(RCU_DACRST);
+  41              		.loc 1 52 5
+  42 0018 17030000 		tail	rcu_periph_reset_disable
+  42      67000300 
+  43              	.LVL1:
+  44              		.cfi_endproc
+  45              	.LFE2:
+  47              		.section	.text.dac_enable,"ax",@progbits
+  48              		.align	1
+  49              		.globl	dac_enable
+  51              	dac_enable:
+  52              	.LFB3:
+  54:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  55:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+  56:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      enable DAC
+  57:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+  58:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+  59:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 3
+
+
+  60:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+  61:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_enable(uint32_t dac_periph)
+  62:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+  53              		.loc 1 62 1 is_stmt 1
+  54              		.cfi_startproc
+  55              	.LVL2:
+  63:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+  56              		.loc 1 63 5
+  64:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DEN0;
+  57              		.loc 1 64 17 is_stmt 0
+  58 0000 37770040 		li	a4,1073770496
+  59 0004 83270740 		lw	a5,1024(a4)
+  63:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+  60              		.loc 1 63 7
+  61 0008 11E5     		bne	a0,zero,.L4
+  62              		.loc 1 64 9 is_stmt 1
+  63              		.loc 1 64 17 is_stmt 0
+  64 000a 93E71700 		ori	a5,a5,1
+  65              	.L6:
+  65:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+  66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DEN1;
+  66              		.loc 1 66 17
+  67 000e 2320F740 		sw	a5,1024(a4)
+  67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+  68:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** } 
+  68              		.loc 1 68 1
+  69 0012 8280     		ret
+  70              	.L4:
+  66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+  71              		.loc 1 66 9 is_stmt 1
+  66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+  72              		.loc 1 66 17 is_stmt 0
+  73 0014 C166     		li	a3,65536
+  74 0016 D58F     		or	a5,a5,a3
+  75 0018 DDBF     		j	.L6
+  76              		.cfi_endproc
+  77              	.LFE3:
+  79              		.section	.text.dac_disable,"ax",@progbits
+  80              		.align	1
+  81              		.globl	dac_disable
+  83              	dac_disable:
+  84              	.LFB4:
+  69:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  70:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+  71:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      disable DAC
+  72:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+  73:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+  74:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+  75:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+  76:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_disable(uint32_t dac_periph)
+  77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+  85              		.loc 1 77 1 is_stmt 1
+  86              		.cfi_startproc
+  87              	.LVL3:
+  78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+  88              		.loc 1 78 5
+  89              		.loc 1 78 7 is_stmt 0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 4
+
+
+  90 0000 09E9     		bne	a0,zero,.L8
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DEN0;
+  91              		.loc 1 79 9 is_stmt 1
+  92              		.loc 1 79 17 is_stmt 0
+  93 0002 37770040 		li	a4,1073770496
+  94 0006 83270740 		lw	a5,1024(a4)
+  95 000a F99B     		andi	a5,a5,-2
+  96 000c 2320F740 		sw	a5,1024(a4)
+  97 0010 8280     		ret
+  98              	.L8:
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+  81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DEN1;
+  99              		.loc 1 81 9 is_stmt 1
+ 100              		.loc 1 81 17 is_stmt 0
+ 101 0012 B7760040 		li	a3,1073770496
+ 102 0016 83A70640 		lw	a5,1024(a3)
+ 103 001a 4177     		li	a4,-65536
+ 104 001c 7D17     		addi	a4,a4,-1
+ 105 001e F98F     		and	a5,a5,a4
+ 106 0020 23A0F640 		sw	a5,1024(a3)
+  82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+  83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 107              		.loc 1 83 1
+ 108 0024 8280     		ret
+ 109              		.cfi_endproc
+ 110              	.LFE4:
+ 112              		.section	.text.dac_dma_enable,"ax",@progbits
+ 113              		.align	1
+ 114              		.globl	dac_dma_enable
+ 116              	dac_dma_enable:
+ 117              	.LFB5:
+  84:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+  85:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+  86:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      enable DAC DMA function
+  87:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+  88:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+  89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+  90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+  91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_dma_enable(uint32_t dac_periph)
+  92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 118              		.loc 1 92 1 is_stmt 1
+ 119              		.cfi_startproc
+ 120              	.LVL4:
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 121              		.loc 1 93 5
+  94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DDMAEN0;
+ 122              		.loc 1 94 17 is_stmt 0
+ 123 0000 37770040 		li	a4,1073770496
+ 124 0004 83270740 		lw	a5,1024(a4)
+ 125 0008 8566     		li	a3,4096
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 126              		.loc 1 93 7
+ 127 000a 19C1     		beq	a0,zero,.L13
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+  96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DDMAEN1;
+ 128              		.loc 1 96 9 is_stmt 1
+ 129              		.loc 1 96 17 is_stmt 0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 5
+
+
+ 130 000c B7060010 		li	a3,268435456
+ 131              	.L13:
+ 132 0010 D58F     		or	a5,a5,a3
+ 133 0012 2320F740 		sw	a5,1024(a4)
+  97:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+  98:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 134              		.loc 1 98 1
+ 135 0016 8280     		ret
+ 136              		.cfi_endproc
+ 137              	.LFE5:
+ 139              		.section	.text.dac_dma_disable,"ax",@progbits
+ 140              		.align	1
+ 141              		.globl	dac_dma_disable
+ 143              	dac_dma_disable:
+ 144              	.LFB6:
+  99:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 100:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 101:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      disable DAC DMA function
+ 102:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 103:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 104:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 106:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_dma_disable(uint32_t dac_periph)
+ 107:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 145              		.loc 1 107 1 is_stmt 1
+ 146              		.cfi_startproc
+ 147              	.LVL5:
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 148              		.loc 1 108 5
+ 109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DDMAEN0;
+ 149              		.loc 1 109 17 is_stmt 0
+ 150 0000 B7760040 		li	a3,1073770496
+ 151 0004 83A70640 		lw	a5,1024(a3)
+ 152 0008 7D77     		li	a4,-4096
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 153              		.loc 1 108 7
+ 154 000a 19C1     		beq	a0,zero,.L17
+ 110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 111:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DDMAEN1;
+ 155              		.loc 1 111 9 is_stmt 1
+ 156              		.loc 1 111 17 is_stmt 0
+ 157 000c 370700F0 		li	a4,-268435456
+ 158              	.L17:
+ 159 0010 7D17     		addi	a4,a4,-1
+ 160 0012 F98F     		and	a5,a5,a4
+ 161 0014 23A0F640 		sw	a5,1024(a3)
+ 112:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 113:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 162              		.loc 1 113 1
+ 163 0018 8280     		ret
+ 164              		.cfi_endproc
+ 165              	.LFE6:
+ 167              		.section	.text.dac_output_buffer_enable,"ax",@progbits
+ 168              		.align	1
+ 169              		.globl	dac_output_buffer_enable
+ 171              	dac_output_buffer_enable:
+ 172              	.LFB7:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 6
+
+
+ 114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 115:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 116:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      enable DAC output buffer
+ 117:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 118:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 119:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 121:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_output_buffer_enable(uint32_t dac_periph)
+ 122:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 173              		.loc 1 122 1 is_stmt 1
+ 174              		.cfi_startproc
+ 175              	.LVL6:
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 176              		.loc 1 123 5
+ 177              		.loc 1 123 7 is_stmt 0
+ 178 0000 09E9     		bne	a0,zero,.L19
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DBOFF0;
+ 179              		.loc 1 124 9 is_stmt 1
+ 180              		.loc 1 124 17 is_stmt 0
+ 181 0002 37770040 		li	a4,1073770496
+ 182 0006 83270740 		lw	a5,1024(a4)
+ 183 000a F59B     		andi	a5,a5,-3
+ 184 000c 2320F740 		sw	a5,1024(a4)
+ 185 0010 8280     		ret
+ 186              	.L19:
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 126:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DBOFF1;
+ 187              		.loc 1 126 9 is_stmt 1
+ 188              		.loc 1 126 17 is_stmt 0
+ 189 0012 B7760040 		li	a3,1073770496
+ 190 0016 83A70640 		lw	a5,1024(a3)
+ 191 001a 0177     		li	a4,-131072
+ 192 001c 7D17     		addi	a4,a4,-1
+ 193 001e F98F     		and	a5,a5,a4
+ 194 0020 23A0F640 		sw	a5,1024(a3)
+ 127:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 195              		.loc 1 128 1
+ 196 0024 8280     		ret
+ 197              		.cfi_endproc
+ 198              	.LFE7:
+ 200              		.section	.text.dac_output_buffer_disable,"ax",@progbits
+ 201              		.align	1
+ 202              		.globl	dac_output_buffer_disable
+ 204              	dac_output_buffer_disable:
+ 205              	.LFB8:
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 130:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 131:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      disable DAC output buffer
+ 132:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 133:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 134:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 135:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 136:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_output_buffer_disable(uint32_t dac_periph)
+ 137:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 206              		.loc 1 137 1 is_stmt 1
+ 207              		.cfi_startproc
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 7
+
+
+ 208              	.LVL7:
+ 138:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 209              		.loc 1 138 5
+ 139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DBOFF0;
+ 210              		.loc 1 139 17 is_stmt 0
+ 211 0000 37770040 		li	a4,1073770496
+ 212 0004 83270740 		lw	a5,1024(a4)
+ 138:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 213              		.loc 1 138 7
+ 214 0008 11E5     		bne	a0,zero,.L22
+ 215              		.loc 1 139 9 is_stmt 1
+ 216              		.loc 1 139 17 is_stmt 0
+ 217 000a 93E72700 		ori	a5,a5,2
+ 218              	.L24:
+ 140:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 141:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DBOFF1;
+ 219              		.loc 1 141 17
+ 220 000e 2320F740 		sw	a5,1024(a4)
+ 142:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 143:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 221              		.loc 1 143 1
+ 222 0012 8280     		ret
+ 223              	.L22:
+ 141:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 224              		.loc 1 141 9 is_stmt 1
+ 141:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 225              		.loc 1 141 17 is_stmt 0
+ 226 0014 B7060200 		li	a3,131072
+ 227 0018 D58F     		or	a5,a5,a3
+ 228 001a D5BF     		j	.L24
+ 229              		.cfi_endproc
+ 230              	.LFE8:
+ 232              		.section	.text.dac_output_value_get,"ax",@progbits
+ 233              		.align	1
+ 234              		.globl	dac_output_value_get
+ 236              	dac_output_value_get:
+ 237              	.LFB9:
+ 144:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 145:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 146:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      get DAC output value
+ 147:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 148:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 149:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     DAC output data
+ 150:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 151:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** uint16_t dac_output_value_get(uint32_t dac_periph)
+ 152:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 238              		.loc 1 152 1 is_stmt 1
+ 239              		.cfi_startproc
+ 240              	.LVL8:
+ 153:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     uint16_t data = 0U;
+ 241              		.loc 1 153 5
+ 154:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 242              		.loc 1 154 5
+ 155:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* store the DAC0 output value */
+ 156:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         data = (uint16_t)DAC0_DO;
+ 243              		.loc 1 156 26 is_stmt 0
+ 244 0000 B7770040 		li	a5,1073770496
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 8
+
+
+ 154:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 245              		.loc 1 154 7
+ 246 0004 11E5     		bne	a0,zero,.L26
+ 247              		.loc 1 156 9 is_stmt 1
+ 248              		.loc 1 156 26 is_stmt 0
+ 249 0006 03A5C742 		lw	a0,1068(a5)
+ 250              	.LVL9:
+ 251              	.L28:
+ 157:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 158:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* store the DAC1 output value */
+ 159:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         data = (uint16_t)DAC1_DO;
+ 252              		.loc 1 159 14
+ 253 000a 4205     		slli	a0,a0,16
+ 254 000c 4181     		srli	a0,a0,16
+ 255              	.LVL10:
+ 160:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 161:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     return data;
+ 256              		.loc 1 161 5 is_stmt 1
+ 162:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 257              		.loc 1 162 1 is_stmt 0
+ 258 000e 8280     		ret
+ 259              	.LVL11:
+ 260              	.L26:
+ 159:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 261              		.loc 1 159 9 is_stmt 1
+ 159:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 262              		.loc 1 159 26 is_stmt 0
+ 263 0010 03A50743 		lw	a0,1072(a5)
+ 264              	.LVL12:
+ 265 0014 DDBF     		j	.L28
+ 266              		.cfi_endproc
+ 267              	.LFE9:
+ 269              		.section	.text.dac_data_set,"ax",@progbits
+ 270              		.align	1
+ 271              		.globl	dac_data_set
+ 273              	dac_data_set:
+ 274              	.LFB10:
+ 163:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 164:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 165:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      set the DAC specified data holding register value
+ 166:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 167:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_align: data alignment
+ 168:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****                 only one parameter can be selected which is shown as below:
+ 169:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_ALIGN_8B_R: data right 8 bit alignment
+ 170:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_ALIGN_12B_R: data right 12 bit alignment
+ 171:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_ALIGN_12B_L: data left 12 bit alignment
+ 172:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  data: data to be loaded
+ 173:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 174:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 175:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 176:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_data_set(uint32_t dac_periph, uint32_t dac_align, uint16_t data)
+ 177:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 275              		.loc 1 177 1 is_stmt 1
+ 276              		.cfi_startproc
+ 277              	.LVL13:
+ 178:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 278              		.loc 1 178 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 9
+
+
+ 179:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         switch(dac_align){
+ 279              		.loc 1 179 9 is_stmt 0
+ 280 0000 8547     		li	a5,1
+ 178:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 281              		.loc 1 178 7
+ 282 0002 1DE5     		bne	a0,zero,.L30
+ 283              		.loc 1 179 9 is_stmt 1
+ 284 0004 638CF500 		beq	a1,a5,.L31
+ 285 0008 89C5     		beq	a1,zero,.L32
+ 286 000a 8947     		li	a5,2
+ 287 000c 638DF500 		beq	a1,a5,.L33
+ 288 0010 8280     		ret
+ 289              	.L32:
+ 180:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* data right 12 bit alignment */
+ 181:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         case DAC_ALIGN_12B_R:
+ 182:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             DAC0_R12DH = data;
+ 290              		.loc 1 182 13
+ 291              		.loc 1 182 24 is_stmt 0
+ 292 0012 B7770040 		li	a5,1073770496
+ 293 0016 23A4C740 		sw	a2,1032(a5)
+ 183:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             break;
+ 294              		.loc 1 183 13 is_stmt 1
+ 295 001a 8280     		ret
+ 296              	.L31:
+ 184:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* data left 12 bit alignment */
+ 185:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         case DAC_ALIGN_12B_L:
+ 186:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             DAC0_L12DH = data;
+ 297              		.loc 1 186 13
+ 298              		.loc 1 186 24 is_stmt 0
+ 299 001c B7770040 		li	a5,1073770496
+ 300 0020 23A6C740 		sw	a2,1036(a5)
+ 187:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             break;
+ 301              		.loc 1 187 13 is_stmt 1
+ 302 0024 8280     		ret
+ 303              	.L33:
+ 188:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* data right 8 bit alignment */
+ 189:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         case DAC_ALIGN_8B_R:
+ 190:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             DAC0_R8DH = data;
+ 304              		.loc 1 190 13
+ 305              		.loc 1 190 23 is_stmt 0
+ 306 0026 B7770040 		li	a5,1073770496
+ 307 002a 23A8C740 		sw	a2,1040(a5)
+ 191:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             break;
+ 308              		.loc 1 191 13 is_stmt 1
+ 309 002e 8280     		ret
+ 310              	.L30:
+ 192:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         default:
+ 193:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             break;
+ 194:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         }
+ 195:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 196:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         switch(dac_align){
+ 311              		.loc 1 196 9
+ 312 0030 638CF500 		beq	a1,a5,.L35
+ 313 0034 89C5     		beq	a1,zero,.L36
+ 314 0036 8947     		li	a5,2
+ 315 0038 638DF500 		beq	a1,a5,.L37
+ 316 003c 8280     		ret
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 10
+
+
+ 317              	.L36:
+ 197:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* data right 12 bit alignment */
+ 198:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         case DAC_ALIGN_12B_R:
+ 199:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             DAC1_R12DH = data;
+ 318              		.loc 1 199 13
+ 319              		.loc 1 199 24 is_stmt 0
+ 320 003e B7770040 		li	a5,1073770496
+ 321 0042 23AAC740 		sw	a2,1044(a5)
+ 200:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             break;
+ 322              		.loc 1 200 13 is_stmt 1
+ 323 0046 8280     		ret
+ 324              	.L35:
+ 201:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* data left 12 bit alignment */
+ 202:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         case DAC_ALIGN_12B_L:
+ 203:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             DAC1_L12DH = data;
+ 325              		.loc 1 203 13
+ 326              		.loc 1 203 24 is_stmt 0
+ 327 0048 B7770040 		li	a5,1073770496
+ 328 004c 23ACC740 		sw	a2,1048(a5)
+ 204:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             break;
+ 329              		.loc 1 204 13 is_stmt 1
+ 330 0050 8280     		ret
+ 331              	.L37:
+ 205:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* data right 8 bit alignment */
+ 206:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         case DAC_ALIGN_8B_R:
+ 207:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             DAC1_R8DH = data;
+ 332              		.loc 1 207 13
+ 333              		.loc 1 207 23 is_stmt 0
+ 334 0052 B7770040 		li	a5,1073770496
+ 335 0056 23AEC740 		sw	a2,1052(a5)
+ 208:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             break;
+ 336              		.loc 1 208 13 is_stmt 1
+ 209:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         default:
+ 210:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****             break;
+ 211:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         }
+ 212:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 213:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 337              		.loc 1 213 1 is_stmt 0
+ 338 005a 8280     		ret
+ 339              		.cfi_endproc
+ 340              	.LFE10:
+ 342              		.section	.text.dac_trigger_enable,"ax",@progbits
+ 343              		.align	1
+ 344              		.globl	dac_trigger_enable
+ 346              	dac_trigger_enable:
+ 347              	.LFB11:
+ 214:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 215:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 216:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      enable DAC trigger
+ 217:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 218:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 219:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 220:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 221:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_trigger_enable(uint32_t dac_periph)
+ 222:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 348              		.loc 1 222 1 is_stmt 1
+ 349              		.cfi_startproc
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 11
+
+
+ 350              	.LVL14:
+ 223:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 351              		.loc 1 223 5
+ 224:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DTEN0;
+ 352              		.loc 1 224 17 is_stmt 0
+ 353 0000 37770040 		li	a4,1073770496
+ 354 0004 83270740 		lw	a5,1024(a4)
+ 223:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 355              		.loc 1 223 7
+ 356 0008 11E5     		bne	a0,zero,.L39
+ 357              		.loc 1 224 9 is_stmt 1
+ 358              		.loc 1 224 17 is_stmt 0
+ 359 000a 93E74700 		ori	a5,a5,4
+ 360              	.L41:
+ 225:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 226:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DTEN1;
+ 361              		.loc 1 226 17
+ 362 000e 2320F740 		sw	a5,1024(a4)
+ 227:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 228:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 363              		.loc 1 228 1
+ 364 0012 8280     		ret
+ 365              	.L39:
+ 226:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 366              		.loc 1 226 9 is_stmt 1
+ 226:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 367              		.loc 1 226 17 is_stmt 0
+ 368 0014 B7060400 		li	a3,262144
+ 369 0018 D58F     		or	a5,a5,a3
+ 370 001a D5BF     		j	.L41
+ 371              		.cfi_endproc
+ 372              	.LFE11:
+ 374              		.section	.text.dac_trigger_disable,"ax",@progbits
+ 375              		.align	1
+ 376              		.globl	dac_trigger_disable
+ 378              	dac_trigger_disable:
+ 379              	.LFB12:
+ 229:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 230:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 231:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      disable DAC trigger
+ 232:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 233:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 234:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 235:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 236:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_trigger_disable(uint32_t dac_periph)
+ 237:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 380              		.loc 1 237 1 is_stmt 1
+ 381              		.cfi_startproc
+ 382              	.LVL15:
+ 238:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 383              		.loc 1 238 5
+ 384              		.loc 1 238 7 is_stmt 0
+ 385 0000 09E9     		bne	a0,zero,.L43
+ 239:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DTEN0;
+ 386              		.loc 1 239 9 is_stmt 1
+ 387              		.loc 1 239 17 is_stmt 0
+ 388 0002 37770040 		li	a4,1073770496
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 12
+
+
+ 389 0006 83270740 		lw	a5,1024(a4)
+ 390 000a ED9B     		andi	a5,a5,-5
+ 391 000c 2320F740 		sw	a5,1024(a4)
+ 392 0010 8280     		ret
+ 393              	.L43:
+ 240:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 241:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DTEN1;
+ 394              		.loc 1 241 9 is_stmt 1
+ 395              		.loc 1 241 17 is_stmt 0
+ 396 0012 B7760040 		li	a3,1073770496
+ 397 0016 83A70640 		lw	a5,1024(a3)
+ 398 001a 3707FCFF 		li	a4,-262144
+ 399 001e 7D17     		addi	a4,a4,-1
+ 400 0020 F98F     		and	a5,a5,a4
+ 401 0022 23A0F640 		sw	a5,1024(a3)
+ 242:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 243:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 402              		.loc 1 243 1
+ 403 0026 8280     		ret
+ 404              		.cfi_endproc
+ 405              	.LFE12:
+ 407              		.section	.text.dac_trigger_source_config,"ax",@progbits
+ 408              		.align	1
+ 409              		.globl	dac_trigger_source_config
+ 411              	dac_trigger_source_config:
+ 412              	.LFB13:
+ 244:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 245:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 246:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      set DAC trigger source
+ 247:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 248:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  triggersource: external triggers of DAC
+ 249:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****                 only one parameter can be selected which is shown as below:
+ 250:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIGGER_T1_TRGO: TIMER1 TRGO
+ 251:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIGGER_T2_TRGO: TIMER2 TRGO
+ 252:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIGGER_T3_TRGO: TIMER3 TRGO
+ 253:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIGGER_T4_TRGO: TIMER4 TRGO
+ 254:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIGGER_T5_TRGO: TIMER5 TRGO
+ 255:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIGGER_T6_TRGO: TIMER6 TRGO
+ 256:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIGGER_EXTI_9: EXTI interrupt line9 event
+ 257:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIGGER_SOFTWARE: software trigger
+ 258:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 259:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 260:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 261:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_trigger_source_config(uint32_t dac_periph,uint32_t triggersource)
+ 262:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 413              		.loc 1 262 1 is_stmt 1
+ 414              		.cfi_startproc
+ 415              	.LVL16:
+ 263:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 416              		.loc 1 263 5
+ 264:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC0 trigger source */
+ 265:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DTSEL0;
+ 417              		.loc 1 265 17 is_stmt 0
+ 418 0000 B7770040 		li	a5,1073770496
+ 419 0004 03A70740 		lw	a4,1024(a5)
+ 263:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 420              		.loc 1 263 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 13
+
+
+ 421 0008 19E9     		bne	a0,zero,.L46
+ 422              		.loc 1 265 9 is_stmt 1
+ 423              		.loc 1 265 17 is_stmt 0
+ 424 000a 137777FC 		andi	a4,a4,-57
+ 425 000e 23A0E740 		sw	a4,1024(a5)
+ 266:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= triggersource;
+ 426              		.loc 1 266 9 is_stmt 1
+ 427              		.loc 1 266 17 is_stmt 0
+ 428 0012 03A70740 		lw	a4,1024(a5)
+ 429              	.LVL17:
+ 430              	.L48:
+ 267:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 268:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC1 trigger source */
+ 269:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DTSEL1;
+ 270:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (triggersource << DAC1_REG_OFFSET);
+ 431              		.loc 1 270 17
+ 432 0016 D98D     		or	a1,a1,a4
+ 433 0018 23A0B740 		sw	a1,1024(a5)
+ 271:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 272:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 434              		.loc 1 272 1
+ 435 001c 8280     		ret
+ 436              	.LVL18:
+ 437              	.L46:
+ 269:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (triggersource << DAC1_REG_OFFSET);
+ 438              		.loc 1 269 9 is_stmt 1
+ 269:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (triggersource << DAC1_REG_OFFSET);
+ 439              		.loc 1 269 17 is_stmt 0
+ 440 001e B706C8FF 		li	a3,-3670016
+ 441 0022 FD16     		addi	a3,a3,-1
+ 442 0024 758F     		and	a4,a4,a3
+ 443 0026 23A0E740 		sw	a4,1024(a5)
+ 270:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 444              		.loc 1 270 9 is_stmt 1
+ 270:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 445              		.loc 1 270 17 is_stmt 0
+ 446 002a 03A70740 		lw	a4,1024(a5)
+ 270:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 447              		.loc 1 270 35
+ 448 002e C205     		slli	a1,a1,16
+ 449              	.LVL19:
+ 450 0030 DDB7     		j	.L48
+ 451              		.cfi_endproc
+ 452              	.LFE13:
+ 454              		.section	.text.dac_software_trigger_enable,"ax",@progbits
+ 455              		.align	1
+ 456              		.globl	dac_software_trigger_enable
+ 458              	dac_software_trigger_enable:
+ 459              	.LFB14:
+ 273:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 274:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 275:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      enable DAC software trigger
+ 276:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 277:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 278:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 279:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_software_trigger_enable(uint32_t dac_periph)
+ 280:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 14
+
+
+ 460              		.loc 1 280 1 is_stmt 1
+ 461              		.cfi_startproc
+ 462              	.LVL20:
+ 281:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 463              		.loc 1 281 5
+ 282:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_SWT |= DAC_SWT_SWTR0;
+ 464              		.loc 1 282 17 is_stmt 0
+ 465 0000 37770040 		li	a4,1073770496
+ 466 0004 83274740 		lw	a5,1028(a4)
+ 281:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 467              		.loc 1 281 7
+ 468 0008 11E5     		bne	a0,zero,.L50
+ 469              		.loc 1 282 9 is_stmt 1
+ 470              		.loc 1 282 17 is_stmt 0
+ 471 000a 93E71700 		ori	a5,a5,1
+ 472              	.L52:
+ 283:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 284:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_SWT |= DAC_SWT_SWTR1;
+ 473              		.loc 1 284 17
+ 474 000e 2322F740 		sw	a5,1028(a4)
+ 285:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 286:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 475              		.loc 1 286 1
+ 476 0012 8280     		ret
+ 477              	.L50:
+ 284:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 478              		.loc 1 284 9 is_stmt 1
+ 284:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 479              		.loc 1 284 17 is_stmt 0
+ 480 0014 93E72700 		ori	a5,a5,2
+ 481 0018 DDBF     		j	.L52
+ 482              		.cfi_endproc
+ 483              	.LFE14:
+ 485              		.section	.text.dac_software_trigger_disable,"ax",@progbits
+ 486              		.align	1
+ 487              		.globl	dac_software_trigger_disable
+ 489              	dac_software_trigger_disable:
+ 490              	.LFB15:
+ 287:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 288:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 289:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      disable DAC software trigger
+ 290:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 291:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 292:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 293:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 294:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_software_trigger_disable(uint32_t dac_periph)
+ 295:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 491              		.loc 1 295 1 is_stmt 1
+ 492              		.cfi_startproc
+ 493              	.LVL21:
+ 296:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 494              		.loc 1 296 5
+ 297:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_SWT &= ~DAC_SWT_SWTR0;
+ 495              		.loc 1 297 17 is_stmt 0
+ 496 0000 37770040 		li	a4,1073770496
+ 497 0004 83274740 		lw	a5,1028(a4)
+ 296:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 15
+
+
+ 498              		.loc 1 296 7
+ 499 0008 09E5     		bne	a0,zero,.L54
+ 500              		.loc 1 297 9 is_stmt 1
+ 501              		.loc 1 297 17 is_stmt 0
+ 502 000a F99B     		andi	a5,a5,-2
+ 503              	.L56:
+ 298:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 299:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_SWT &= ~DAC_SWT_SWTR1;
+ 504              		.loc 1 299 17
+ 505 000c 2322F740 		sw	a5,1028(a4)
+ 300:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 301:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 506              		.loc 1 301 1
+ 507 0010 8280     		ret
+ 508              	.L54:
+ 299:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 509              		.loc 1 299 9 is_stmt 1
+ 299:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 510              		.loc 1 299 17 is_stmt 0
+ 511 0012 F59B     		andi	a5,a5,-3
+ 512 0014 E5BF     		j	.L56
+ 513              		.cfi_endproc
+ 514              	.LFE15:
+ 516              		.section	.text.dac_wave_mode_config,"ax",@progbits
+ 517              		.align	1
+ 518              		.globl	dac_wave_mode_config
+ 520              	dac_wave_mode_config:
+ 521              	.LFB16:
+ 302:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 303:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 304:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      configure DAC wave mode
+ 305:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 306:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  wave_mode: noise wave mode
+ 307:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****                 only one parameter can be selected which is shown as below:
+ 308:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_DISABLE: wave disable
+ 309:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_MODE_LFSR: LFSR noise mode
+ 310:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_MODE_TRIANGLE: triangle noise mode
+ 311:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 312:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 313:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 314:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_wave_mode_config(uint32_t dac_periph, uint32_t wave_mode)
+ 315:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 522              		.loc 1 315 1 is_stmt 1
+ 523              		.cfi_startproc
+ 524              	.LVL22:
+ 316:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 525              		.loc 1 316 5
+ 317:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC0 wave mode */
+ 318:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DWM0;
+ 526              		.loc 1 318 17 is_stmt 0
+ 527 0000 B7770040 		li	a5,1073770496
+ 528 0004 03A70740 		lw	a4,1024(a5)
+ 316:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 529              		.loc 1 316 7
+ 530 0008 19E9     		bne	a0,zero,.L58
+ 531              		.loc 1 318 9 is_stmt 1
+ 532              		.loc 1 318 17 is_stmt 0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 16
+
+
+ 533 000a 1377F7F3 		andi	a4,a4,-193
+ 534 000e 23A0E740 		sw	a4,1024(a5)
+ 319:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= wave_mode;
+ 535              		.loc 1 319 9 is_stmt 1
+ 536              		.loc 1 319 17 is_stmt 0
+ 537 0012 03A70740 		lw	a4,1024(a5)
+ 538              	.LVL23:
+ 539              	.L60:
+ 320:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 321:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC1 wave mode */
+ 322:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DWM1;
+ 323:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (wave_mode << DAC1_REG_OFFSET);
+ 540              		.loc 1 323 17
+ 541 0016 D98D     		or	a1,a1,a4
+ 542 0018 23A0B740 		sw	a1,1024(a5)
+ 324:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 325:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 543              		.loc 1 325 1
+ 544 001c 8280     		ret
+ 545              	.LVL24:
+ 546              	.L58:
+ 322:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (wave_mode << DAC1_REG_OFFSET);
+ 547              		.loc 1 322 9 is_stmt 1
+ 322:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (wave_mode << DAC1_REG_OFFSET);
+ 548              		.loc 1 322 17 is_stmt 0
+ 549 001e B70640FF 		li	a3,-12582912
+ 550 0022 FD16     		addi	a3,a3,-1
+ 551 0024 758F     		and	a4,a4,a3
+ 552 0026 23A0E740 		sw	a4,1024(a5)
+ 323:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 553              		.loc 1 323 9 is_stmt 1
+ 323:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 554              		.loc 1 323 17 is_stmt 0
+ 555 002a 03A70740 		lw	a4,1024(a5)
+ 323:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 556              		.loc 1 323 31
+ 557 002e C205     		slli	a1,a1,16
+ 558              	.LVL25:
+ 559 0030 DDB7     		j	.L60
+ 560              		.cfi_endproc
+ 561              	.LFE16:
+ 563              		.section	.text.dac_wave_bit_width_config,"ax",@progbits
+ 564              		.align	1
+ 565              		.globl	dac_wave_bit_width_config
+ 567              	dac_wave_bit_width_config:
+ 568              	.LFB17:
+ 326:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 327:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 328:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      configure DAC wave bit width
+ 329:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 330:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  bit_width: noise wave bit width
+ 331:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****                 only one parameter can be selected which is shown as below:
+ 332:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_1: bit width of the wave signal is 1
+ 333:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_2: bit width of the wave signal is 2
+ 334:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_3: bit width of the wave signal is 3
+ 335:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_4: bit width of the wave signal is 4
+ 336:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_5: bit width of the wave signal is 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 17
+
+
+ 337:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_6: bit width of the wave signal is 6
+ 338:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_7: bit width of the wave signal is 7
+ 339:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_8: bit width of the wave signal is 8
+ 340:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_9: bit width of the wave signal is 9
+ 341:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_10: bit width of the wave signal is 10
+ 342:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_11: bit width of the wave signal is 11
+ 343:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_12: bit width of the wave signal is 12
+ 344:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 345:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 346:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 347:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_wave_bit_width_config(uint32_t dac_periph, uint32_t bit_width)
+ 348:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 569              		.loc 1 348 1 is_stmt 1
+ 570              		.cfi_startproc
+ 571              	.LVL26:
+ 349:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 572              		.loc 1 349 5
+ 350:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC0 wave bit width */
+ 351:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW0;
+ 573              		.loc 1 351 17 is_stmt 0
+ 574 0000 B7770040 		li	a5,1073770496
+ 575 0004 03A70740 		lw	a4,1024(a5)
+ 349:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 576              		.loc 1 349 7
+ 577 0008 09ED     		bne	a0,zero,.L62
+ 578              		.loc 1 351 9 is_stmt 1
+ 579              		.loc 1 351 17 is_stmt 0
+ 580 000a FD76     		li	a3,-4096
+ 581 000c 9386F60F 		addi	a3,a3,255
+ 582 0010 758F     		and	a4,a4,a3
+ 583 0012 23A0E740 		sw	a4,1024(a5)
+ 352:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= bit_width;
+ 584              		.loc 1 352 9 is_stmt 1
+ 585              		.loc 1 352 17 is_stmt 0
+ 586 0016 03A70740 		lw	a4,1024(a5)
+ 587              	.LVL27:
+ 588              	.L64:
+ 353:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 354:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC1 wave bit width */
+ 355:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW1;
+ 356:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (bit_width << DAC1_REG_OFFSET);
+ 589              		.loc 1 356 17
+ 590 001a D98D     		or	a1,a1,a4
+ 591 001c 23A0B740 		sw	a1,1024(a5)
+ 357:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 358:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 592              		.loc 1 358 1
+ 593 0020 8280     		ret
+ 594              	.LVL28:
+ 595              	.L62:
+ 355:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (bit_width << DAC1_REG_OFFSET);
+ 596              		.loc 1 355 9 is_stmt 1
+ 355:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (bit_width << DAC1_REG_OFFSET);
+ 597              		.loc 1 355 17 is_stmt 0
+ 598 0022 B70600F1 		li	a3,-251658240
+ 599 0026 FD16     		addi	a3,a3,-1
+ 600 0028 758F     		and	a4,a4,a3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 18
+
+
+ 601 002a 23A0E740 		sw	a4,1024(a5)
+ 356:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 602              		.loc 1 356 9 is_stmt 1
+ 356:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 603              		.loc 1 356 17 is_stmt 0
+ 604 002e 03A70740 		lw	a4,1024(a5)
+ 356:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 605              		.loc 1 356 31
+ 606 0032 C205     		slli	a1,a1,16
+ 607              	.LVL29:
+ 608 0034 DDB7     		j	.L64
+ 609              		.cfi_endproc
+ 610              	.LFE17:
+ 612              		.section	.text.dac_lfsr_noise_config,"ax",@progbits
+ 613              		.align	1
+ 614              		.globl	dac_lfsr_noise_config
+ 616              	dac_lfsr_noise_config:
+ 617              	.LFB28:
+ 618              		.cfi_startproc
+ 619 0000 17030000 		tail	dac_wave_bit_width_config
+ 619      67000300 
+ 620              		.cfi_endproc
+ 621              	.LFE28:
+ 623              		.section	.text.dac_triangle_noise_config,"ax",@progbits
+ 624              		.align	1
+ 625              		.globl	dac_triangle_noise_config
+ 627              	dac_triangle_noise_config:
+ 628              	.LFB30:
+ 629              		.cfi_startproc
+ 630 0000 17030000 		tail	dac_wave_bit_width_config
+ 630      67000300 
+ 631              		.cfi_endproc
+ 632              	.LFE30:
+ 634              		.section	.text.dac_concurrent_enable,"ax",@progbits
+ 635              		.align	1
+ 636              		.globl	dac_concurrent_enable
+ 638              	dac_concurrent_enable:
+ 639              	.LFB20:
+ 359:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 360:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 361:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      configure DAC LFSR noise mode
+ 362:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 363:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  unmask_bits: unmask LFSR bits in DAC LFSR noise mode
+ 364:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****                 only one parameter can be selected which is shown as below:
+ 365:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BIT0: unmask the LFSR bit0
+ 366:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS1_0: unmask the LFSR bits[1:0]
+ 367:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS2_0: unmask the LFSR bits[2:0]
+ 368:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS3_0: unmask the LFSR bits[3:0]
+ 369:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS4_0: unmask the LFSR bits[4:0]
+ 370:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS5_0: unmask the LFSR bits[5:0]
+ 371:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS6_0: unmask the LFSR bits[6:0]
+ 372:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS7_0: unmask the LFSR bits[7:0]
+ 373:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS8_0: unmask the LFSR bits[8:0]
+ 374:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS9_0: unmask the LFSR bits[9:0]
+ 375:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS10_0: unmask the LFSR bits[10:0]
+ 376:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS11_0: unmask the LFSR bits[11:0]
+ 377:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 19
+
+
+ 378:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 379:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 380:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_lfsr_noise_config(uint32_t dac_periph, uint32_t unmask_bits)
+ 381:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 382:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 383:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC0 LFSR noise mode */
+ 384:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW0;
+ 385:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= unmask_bits;
+ 386:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 387:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC1 LFSR noise mode */
+ 388:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW1;
+ 389:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (unmask_bits << DAC1_REG_OFFSET);
+ 390:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 391:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 392:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 393:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 394:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      configure DAC triangle noise mode
+ 395:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
+ 396:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  amplitude: triangle amplitude in DAC triangle noise mode
+ 397:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****                 only one parameter can be selected which is shown as below:
+ 398:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_1: triangle amplitude is 1
+ 399:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_3: triangle amplitude is 3
+ 400:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_7: triangle amplitude is 7
+ 401:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_15: triangle amplitude is 15
+ 402:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_31: triangle amplitude is 31
+ 403:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_63: triangle amplitude is 63
+ 404:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_127: triangle amplitude is 127
+ 405:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_255: triangle amplitude is 255
+ 406:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_511: triangle amplitude is 511
+ 407:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_1023: triangle amplitude is 1023
+ 408:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_2047: triangle amplitude is 2047
+ 409:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_4095: triangle amplitude is 4095
+ 410:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 411:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 412:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 413:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_triangle_noise_config(uint32_t dac_periph, uint32_t amplitude)
+ 414:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 415:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
+ 416:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC0 triangle noise mode */
+ 417:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW0;
+ 418:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= amplitude;
+ 419:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }else{
+ 420:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         /* configure DAC1 triangle noise mode */
+ 421:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW1;
+ 422:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= (amplitude << DAC1_REG_OFFSET);
+ 423:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+ 424:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 425:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 426:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 427:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      enable DAC concurrent mode
+ 428:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  none
+ 429:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 430:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 431:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 432:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_enable(void)
+ 433:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 640              		.loc 1 433 1 is_stmt 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 20
+
+
+ 641              		.cfi_startproc
+ 434:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     uint32_t ctl = 0U;
+ 642              		.loc 1 434 5
+ 643              	.LVL30:
+ 435:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     ctl = DAC_CTL_DEN0 | DAC_CTL_DEN1;
+ 644              		.loc 1 435 5
+ 436:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     DAC_CTL |= (ctl);
+ 645              		.loc 1 436 5
+ 646              		.loc 1 436 13 is_stmt 0
+ 647 0000 B7760040 		li	a3,1073770496
+ 648 0004 83A70640 		lw	a5,1024(a3)
+ 649 0008 4167     		li	a4,65536
+ 650 000a 0507     		addi	a4,a4,1
+ 651 000c D98F     		or	a5,a5,a4
+ 652 000e 23A0F640 		sw	a5,1024(a3)
+ 437:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 653              		.loc 1 437 1
+ 654 0012 8280     		ret
+ 655              		.cfi_endproc
+ 656              	.LFE20:
+ 658              		.section	.text.dac_concurrent_disable,"ax",@progbits
+ 659              		.align	1
+ 660              		.globl	dac_concurrent_disable
+ 662              	dac_concurrent_disable:
+ 663              	.LFB21:
+ 438:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 439:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 440:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      disable DAC concurrent mode
+ 441:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  none
+ 442:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 443:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 444:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 445:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_disable(void)
+ 446:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 664              		.loc 1 446 1 is_stmt 1
+ 665              		.cfi_startproc
+ 447:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     uint32_t ctl = 0U;
+ 666              		.loc 1 447 5
+ 667              	.LVL31:
+ 448:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     ctl = DAC_CTL_DEN0 | DAC_CTL_DEN1;
+ 668              		.loc 1 448 5
+ 449:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     DAC_CTL &= (~ctl);
+ 669              		.loc 1 449 5
+ 670              		.loc 1 449 13 is_stmt 0
+ 671 0000 B7760040 		li	a3,1073770496
+ 672 0004 83A70640 		lw	a5,1024(a3)
+ 673 0008 4177     		li	a4,-65536
+ 674 000a 7917     		addi	a4,a4,-2
+ 675 000c F98F     		and	a5,a5,a4
+ 676 000e 23A0F640 		sw	a5,1024(a3)
+ 450:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 677              		.loc 1 450 1
+ 678 0012 8280     		ret
+ 679              		.cfi_endproc
+ 680              	.LFE21:
+ 682              		.section	.text.dac_concurrent_software_trigger_enable,"ax",@progbits
+ 683              		.align	1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 21
+
+
+ 684              		.globl	dac_concurrent_software_trigger_enable
+ 686              	dac_concurrent_software_trigger_enable:
+ 687              	.LFB22:
+ 451:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 452:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 453:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      enable DAC concurrent software trigger function
+ 454:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  none
+ 455:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 456:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 457:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 458:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_software_trigger_enable(void)
+ 459:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 688              		.loc 1 459 1 is_stmt 1
+ 689              		.cfi_startproc
+ 460:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     uint32_t swt = 0U;
+ 690              		.loc 1 460 5
+ 691              	.LVL32:
+ 461:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     swt = DAC_SWT_SWTR0 | DAC_SWT_SWTR1;
+ 692              		.loc 1 461 5
+ 462:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     DAC_SWT |= (swt); 
+ 693              		.loc 1 462 5
+ 694              		.loc 1 462 13 is_stmt 0
+ 695 0000 37770040 		li	a4,1073770496
+ 696 0004 83274740 		lw	a5,1028(a4)
+ 697 0008 93E73700 		ori	a5,a5,3
+ 698 000c 2322F740 		sw	a5,1028(a4)
+ 463:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 699              		.loc 1 463 1
+ 700 0010 8280     		ret
+ 701              		.cfi_endproc
+ 702              	.LFE22:
+ 704              		.section	.text.dac_concurrent_software_trigger_disable,"ax",@progbits
+ 705              		.align	1
+ 706              		.globl	dac_concurrent_software_trigger_disable
+ 708              	dac_concurrent_software_trigger_disable:
+ 709              	.LFB23:
+ 464:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 465:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 466:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      disable DAC concurrent software trigger function
+ 467:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  none
+ 468:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 469:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 470:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 471:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_software_trigger_disable(void)
+ 472:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 710              		.loc 1 472 1 is_stmt 1
+ 711              		.cfi_startproc
+ 473:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     uint32_t swt = 0U;
+ 712              		.loc 1 473 5
+ 713              	.LVL33:
+ 474:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     swt = DAC_SWT_SWTR0 | DAC_SWT_SWTR1;
+ 714              		.loc 1 474 5
+ 475:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     DAC_SWT &= (~swt);
+ 715              		.loc 1 475 5
+ 716              		.loc 1 475 13 is_stmt 0
+ 717 0000 37770040 		li	a4,1073770496
+ 718 0004 83274740 		lw	a5,1028(a4)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 22
+
+
+ 719 0008 F19B     		andi	a5,a5,-4
+ 720 000a 2322F740 		sw	a5,1028(a4)
+ 476:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 721              		.loc 1 476 1
+ 722 000e 8280     		ret
+ 723              		.cfi_endproc
+ 724              	.LFE23:
+ 726              		.section	.text.dac_concurrent_output_buffer_enable,"ax",@progbits
+ 727              		.align	1
+ 728              		.globl	dac_concurrent_output_buffer_enable
+ 730              	dac_concurrent_output_buffer_enable:
+ 731              	.LFB24:
+ 477:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 478:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 479:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      enable DAC concurrent buffer function
+ 480:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  none
+ 481:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 482:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 483:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 484:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_output_buffer_enable(void)
+ 485:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 732              		.loc 1 485 1 is_stmt 1
+ 733              		.cfi_startproc
+ 486:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     uint32_t ctl = 0U;
+ 734              		.loc 1 486 5
+ 735              	.LVL34:
+ 487:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     ctl = DAC_CTL_DBOFF0 | DAC_CTL_DBOFF1;
+ 736              		.loc 1 487 5
+ 488:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     DAC_CTL &= (~ctl);
+ 737              		.loc 1 488 5
+ 738              		.loc 1 488 13 is_stmt 0
+ 739 0000 B7760040 		li	a3,1073770496
+ 740 0004 83A70640 		lw	a5,1024(a3)
+ 741 0008 0177     		li	a4,-131072
+ 742 000a 7517     		addi	a4,a4,-3
+ 743 000c F98F     		and	a5,a5,a4
+ 744 000e 23A0F640 		sw	a5,1024(a3)
+ 489:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 745              		.loc 1 489 1
+ 746 0012 8280     		ret
+ 747              		.cfi_endproc
+ 748              	.LFE24:
+ 750              		.section	.text.dac_concurrent_output_buffer_disable,"ax",@progbits
+ 751              		.align	1
+ 752              		.globl	dac_concurrent_output_buffer_disable
+ 754              	dac_concurrent_output_buffer_disable:
+ 755              	.LFB25:
+ 490:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 491:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 492:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      disable DAC concurrent buffer function
+ 493:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  none
+ 494:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 495:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 496:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 497:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_output_buffer_disable(void)
+ 498:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 756              		.loc 1 498 1 is_stmt 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 23
+
+
+ 757              		.cfi_startproc
+ 499:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     uint32_t ctl = 0U;
+ 758              		.loc 1 499 5
+ 759              	.LVL35:
+ 500:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     ctl = DAC_CTL_DBOFF0 | DAC_CTL_DBOFF1;
+ 760              		.loc 1 500 5
+ 501:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     DAC_CTL |= (ctl);
+ 761              		.loc 1 501 5
+ 762              		.loc 1 501 13 is_stmt 0
+ 763 0000 B7760040 		li	a3,1073770496
+ 764 0004 83A70640 		lw	a5,1024(a3)
+ 765 0008 37070200 		li	a4,131072
+ 766 000c 0907     		addi	a4,a4,2
+ 767 000e D98F     		or	a5,a5,a4
+ 768 0010 23A0F640 		sw	a5,1024(a3)
+ 502:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 769              		.loc 1 502 1
+ 770 0014 8280     		ret
+ 771              		.cfi_endproc
+ 772              	.LFE25:
+ 774              		.section	.text.dac_concurrent_data_set,"ax",@progbits
+ 775              		.align	1
+ 776              		.globl	dac_concurrent_data_set
+ 778              	dac_concurrent_data_set:
+ 779              	.LFB26:
+ 503:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
+ 504:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
+ 505:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      set DAC concurrent mode data holding register value
+ 506:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_align: data alignment
+ 507:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****                 only one parameter can be selected which is shown as below:
+ 508:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_ALIGN_8B_R: data right 8b alignment
+ 509:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_ALIGN_12B_R: data right 12b alignment
+ 510:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_ALIGN_12B_L: data left 12b alignment
+ 511:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  data0: data to be loaded
+ 512:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  data1: data to be loaded
+ 513:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
+ 514:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
+ 515:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
+ 516:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_data_set(uint32_t dac_align, uint16_t data0, uint16_t data1)
+ 517:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
+ 780              		.loc 1 517 1 is_stmt 1
+ 781              		.cfi_startproc
+ 782              	.LVL36:
+ 518:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     uint32_t data = 0U;
+ 783              		.loc 1 518 5
+ 519:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     switch(dac_align){
+ 784              		.loc 1 519 5
+ 785 0000 8547     		li	a5,1
+ 786 0002 630EF500 		beq	a0,a5,.L74
+ 787 0006 09C5     		beq	a0,zero,.L75
+ 788 0008 8947     		li	a5,2
+ 789 000a 6301F502 		beq	a0,a5,.L76
+ 790 000e 8280     		ret
+ 791              	.L75:
+ 520:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     /* data right 12b alignment */
+ 521:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     case DAC_ALIGN_12B_R:
+ 522:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         data = ((uint32_t)data1 << DH_12BIT_OFFSET) | data0;
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 24
+
+
+ 792              		.loc 1 522 9
+ 793              		.loc 1 522 33 is_stmt 0
+ 794 0010 4206     		slli	a2,a2,16
+ 795              	.LVL37:
+ 796              		.loc 1 522 14
+ 797 0012 4D8E     		or	a2,a2,a1
+ 798              	.LVL38:
+ 523:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DACC_R12DH = data;
+ 799              		.loc 1 523 9 is_stmt 1
+ 800              		.loc 1 523 20 is_stmt 0
+ 801 0014 B7770040 		li	a5,1073770496
+ 802 0018 23A0C742 		sw	a2,1056(a5)
+ 524:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         break;
+ 803              		.loc 1 524 9 is_stmt 1
+ 804 001c 8280     		ret
+ 805              	.LVL39:
+ 806              	.L74:
+ 525:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     /* data left 12b alignment */
+ 526:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     case DAC_ALIGN_12B_L:
+ 527:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         data = ((uint32_t)data1 << DH_12BIT_OFFSET) | data0;
+ 807              		.loc 1 527 9
+ 808              		.loc 1 527 33 is_stmt 0
+ 809 001e 4206     		slli	a2,a2,16
+ 810              	.LVL40:
+ 811              		.loc 1 527 14
+ 812 0020 4D8E     		or	a2,a2,a1
+ 813              	.LVL41:
+ 528:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DACC_L12DH = data;
+ 814              		.loc 1 528 9 is_stmt 1
+ 815              		.loc 1 528 20 is_stmt 0
+ 816 0022 B7770040 		li	a5,1073770496
+ 817 0026 23A2C742 		sw	a2,1060(a5)
+ 529:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         break;
+ 818              		.loc 1 529 9 is_stmt 1
+ 819 002a 8280     		ret
+ 820              	.LVL42:
+ 821              	.L76:
+ 530:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     /* data right 8b alignment */
+ 531:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     case DAC_ALIGN_8B_R:
+ 532:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         data = ((uint32_t)data1 << DH_8BIT_OFFSET) | data0;
+ 822              		.loc 1 532 9
+ 823              		.loc 1 532 33 is_stmt 0
+ 824 002c 2206     		slli	a2,a2,8
+ 825              	.LVL43:
+ 826              		.loc 1 532 14
+ 827 002e 4D8E     		or	a2,a2,a1
+ 828              	.LVL44:
+ 533:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DACC_R8DH = data;
+ 829              		.loc 1 533 9 is_stmt 1
+ 830              		.loc 1 533 19 is_stmt 0
+ 831 0030 B7770040 		li	a5,1073770496
+ 832 0034 23A4C742 		sw	a2,1064(a5)
+ 534:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         break;
+ 833              		.loc 1 534 9 is_stmt 1
+ 535:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     default:
+ 536:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         break;
+ 537:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 25
+
+
+ 538:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
+ 834              		.loc 1 538 1 is_stmt 0
+ 835 0038 8280     		ret
+ 836              		.cfi_endproc
+ 837              	.LFE26:
+ 839              		.text
+ 840              	.Letext0:
+ 841              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 842              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 843              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
+ 844              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 26
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_dac.c
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:13     .text.dac_deinit:0000000000000000 dac_deinit
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:17     .text.dac_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:18     .text.dac_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:19     .text.dac_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:20     .text.dac_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:22     .text.dac_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:24     .text.dac_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:26     .text.dac_deinit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:27     .text.dac_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:29     .text.dac_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:32     .text.dac_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:33     .text.dac_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:34     .text.dac_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:36     .text.dac_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:38     .text.dac_deinit:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:40     .text.dac_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:42     .text.dac_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:44     .text.dac_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:51     .text.dac_enable:0000000000000000 dac_enable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:54     .text.dac_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:56     .text.dac_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:57     .text.dac_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:58     .text.dac_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:61     .text.dac_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:63     .text.dac_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:64     .text.dac_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:67     .text.dac_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:69     .text.dac_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:72     .text.dac_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:73     .text.dac_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:76     .text.dac_enable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:83     .text.dac_disable:0000000000000000 dac_disable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:86     .text.dac_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:88     .text.dac_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:89     .text.dac_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:90     .text.dac_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:92     .text.dac_disable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:93     .text.dac_disable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:100    .text.dac_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:101    .text.dac_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:108    .text.dac_disable:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:109    .text.dac_disable:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:116    .text.dac_dma_enable:0000000000000000 dac_dma_enable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:119    .text.dac_dma_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:121    .text.dac_dma_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:122    .text.dac_dma_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:123    .text.dac_dma_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:127    .text.dac_dma_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:129    .text.dac_dma_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:130    .text.dac_dma_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:135    .text.dac_dma_enable:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:136    .text.dac_dma_enable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:143    .text.dac_dma_disable:0000000000000000 dac_dma_disable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:146    .text.dac_dma_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:148    .text.dac_dma_disable:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 27
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:149    .text.dac_dma_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:150    .text.dac_dma_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:154    .text.dac_dma_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:156    .text.dac_dma_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:157    .text.dac_dma_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:163    .text.dac_dma_disable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:164    .text.dac_dma_disable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:171    .text.dac_output_buffer_enable:0000000000000000 dac_output_buffer_enable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:174    .text.dac_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:176    .text.dac_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:177    .text.dac_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:178    .text.dac_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:180    .text.dac_output_buffer_enable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:181    .text.dac_output_buffer_enable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:188    .text.dac_output_buffer_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:189    .text.dac_output_buffer_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:196    .text.dac_output_buffer_enable:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:197    .text.dac_output_buffer_enable:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:204    .text.dac_output_buffer_disable:0000000000000000 dac_output_buffer_disable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:207    .text.dac_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:209    .text.dac_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:210    .text.dac_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:211    .text.dac_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:214    .text.dac_output_buffer_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:216    .text.dac_output_buffer_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:217    .text.dac_output_buffer_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:220    .text.dac_output_buffer_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:222    .text.dac_output_buffer_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:225    .text.dac_output_buffer_disable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:226    .text.dac_output_buffer_disable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:229    .text.dac_output_buffer_disable:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:236    .text.dac_output_value_get:0000000000000000 dac_output_value_get
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:239    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:241    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:242    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:243    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:244    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:246    .text.dac_output_value_get:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:248    .text.dac_output_value_get:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:249    .text.dac_output_value_get:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:253    .text.dac_output_value_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:257    .text.dac_output_value_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:258    .text.dac_output_value_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:262    .text.dac_output_value_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:263    .text.dac_output_value_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:266    .text.dac_output_value_get:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:273    .text.dac_data_set:0000000000000000 dac_data_set
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:276    .text.dac_data_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:278    .text.dac_data_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:279    .text.dac_data_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:280    .text.dac_data_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:282    .text.dac_data_set:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:284    .text.dac_data_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:291    .text.dac_data_set:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:292    .text.dac_data_set:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:295    .text.dac_data_set:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:298    .text.dac_data_set:000000000000001c .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 28
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:299    .text.dac_data_set:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:302    .text.dac_data_set:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:305    .text.dac_data_set:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:306    .text.dac_data_set:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:309    .text.dac_data_set:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:312    .text.dac_data_set:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:319    .text.dac_data_set:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:320    .text.dac_data_set:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:323    .text.dac_data_set:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:326    .text.dac_data_set:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:327    .text.dac_data_set:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:330    .text.dac_data_set:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:333    .text.dac_data_set:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:334    .text.dac_data_set:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:337    .text.dac_data_set:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:338    .text.dac_data_set:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:339    .text.dac_data_set:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:346    .text.dac_trigger_enable:0000000000000000 dac_trigger_enable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:349    .text.dac_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:351    .text.dac_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:352    .text.dac_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:353    .text.dac_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:356    .text.dac_trigger_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:358    .text.dac_trigger_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:359    .text.dac_trigger_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:362    .text.dac_trigger_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:364    .text.dac_trigger_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:367    .text.dac_trigger_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:368    .text.dac_trigger_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:371    .text.dac_trigger_enable:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:378    .text.dac_trigger_disable:0000000000000000 dac_trigger_disable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:381    .text.dac_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:383    .text.dac_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:384    .text.dac_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:385    .text.dac_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:387    .text.dac_trigger_disable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:388    .text.dac_trigger_disable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:395    .text.dac_trigger_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:396    .text.dac_trigger_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:403    .text.dac_trigger_disable:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:404    .text.dac_trigger_disable:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:411    .text.dac_trigger_source_config:0000000000000000 dac_trigger_source_config
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:414    .text.dac_trigger_source_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:416    .text.dac_trigger_source_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:417    .text.dac_trigger_source_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:418    .text.dac_trigger_source_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:421    .text.dac_trigger_source_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:423    .text.dac_trigger_source_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:424    .text.dac_trigger_source_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:427    .text.dac_trigger_source_config:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:428    .text.dac_trigger_source_config:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:432    .text.dac_trigger_source_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:435    .text.dac_trigger_source_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:439    .text.dac_trigger_source_config:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:440    .text.dac_trigger_source_config:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:445    .text.dac_trigger_source_config:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:446    .text.dac_trigger_source_config:000000000000002a .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 29
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:448    .text.dac_trigger_source_config:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:451    .text.dac_trigger_source_config:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:458    .text.dac_software_trigger_enable:0000000000000000 dac_software_trigger_enable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:461    .text.dac_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:463    .text.dac_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:464    .text.dac_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:465    .text.dac_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:468    .text.dac_software_trigger_enable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:470    .text.dac_software_trigger_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:471    .text.dac_software_trigger_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:474    .text.dac_software_trigger_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:476    .text.dac_software_trigger_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:479    .text.dac_software_trigger_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:480    .text.dac_software_trigger_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:482    .text.dac_software_trigger_enable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:489    .text.dac_software_trigger_disable:0000000000000000 dac_software_trigger_disable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:492    .text.dac_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:494    .text.dac_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:495    .text.dac_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:496    .text.dac_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:499    .text.dac_software_trigger_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:501    .text.dac_software_trigger_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:502    .text.dac_software_trigger_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:505    .text.dac_software_trigger_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:507    .text.dac_software_trigger_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:510    .text.dac_software_trigger_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:511    .text.dac_software_trigger_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:513    .text.dac_software_trigger_disable:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:520    .text.dac_wave_mode_config:0000000000000000 dac_wave_mode_config
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:523    .text.dac_wave_mode_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:525    .text.dac_wave_mode_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:526    .text.dac_wave_mode_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:527    .text.dac_wave_mode_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:530    .text.dac_wave_mode_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:532    .text.dac_wave_mode_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:533    .text.dac_wave_mode_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:536    .text.dac_wave_mode_config:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:537    .text.dac_wave_mode_config:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:541    .text.dac_wave_mode_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:544    .text.dac_wave_mode_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:548    .text.dac_wave_mode_config:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:549    .text.dac_wave_mode_config:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:554    .text.dac_wave_mode_config:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:555    .text.dac_wave_mode_config:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:557    .text.dac_wave_mode_config:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:560    .text.dac_wave_mode_config:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:567    .text.dac_wave_bit_width_config:0000000000000000 dac_wave_bit_width_config
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:570    .text.dac_wave_bit_width_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:572    .text.dac_wave_bit_width_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:573    .text.dac_wave_bit_width_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:574    .text.dac_wave_bit_width_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:577    .text.dac_wave_bit_width_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:579    .text.dac_wave_bit_width_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:580    .text.dac_wave_bit_width_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:585    .text.dac_wave_bit_width_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:586    .text.dac_wave_bit_width_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:590    .text.dac_wave_bit_width_config:000000000000001a .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 30
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:593    .text.dac_wave_bit_width_config:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:597    .text.dac_wave_bit_width_config:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:598    .text.dac_wave_bit_width_config:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:603    .text.dac_wave_bit_width_config:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:604    .text.dac_wave_bit_width_config:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:606    .text.dac_wave_bit_width_config:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:609    .text.dac_wave_bit_width_config:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:616    .text.dac_lfsr_noise_config:0000000000000000 dac_lfsr_noise_config
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:618    .text.dac_lfsr_noise_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:620    .text.dac_lfsr_noise_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:627    .text.dac_triangle_noise_config:0000000000000000 dac_triangle_noise_config
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:629    .text.dac_triangle_noise_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:631    .text.dac_triangle_noise_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:638    .text.dac_concurrent_enable:0000000000000000 dac_concurrent_enable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:641    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:642    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:644    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:645    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:646    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:647    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:654    .text.dac_concurrent_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:655    .text.dac_concurrent_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:662    .text.dac_concurrent_disable:0000000000000000 dac_concurrent_disable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:665    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:666    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:668    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:669    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:670    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:671    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:678    .text.dac_concurrent_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:679    .text.dac_concurrent_disable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:686    .text.dac_concurrent_software_trigger_enable:0000000000000000 dac_concurrent_software_trigger_enable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:689    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:690    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:692    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:693    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:694    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:695    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:700    .text.dac_concurrent_software_trigger_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:701    .text.dac_concurrent_software_trigger_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:708    .text.dac_concurrent_software_trigger_disable:0000000000000000 dac_concurrent_software_trigger_disable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:711    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:712    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:714    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:715    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:716    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:717    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:722    .text.dac_concurrent_software_trigger_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:723    .text.dac_concurrent_software_trigger_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:730    .text.dac_concurrent_output_buffer_enable:0000000000000000 dac_concurrent_output_buffer_enable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:733    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:734    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:736    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:737    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:738    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:739    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:746    .text.dac_concurrent_output_buffer_enable:0000000000000012 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 31
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:747    .text.dac_concurrent_output_buffer_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:754    .text.dac_concurrent_output_buffer_disable:0000000000000000 dac_concurrent_output_buffer_disable
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:757    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:758    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:760    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:761    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:762    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:763    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:770    .text.dac_concurrent_output_buffer_disable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:771    .text.dac_concurrent_output_buffer_disable:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:778    .text.dac_concurrent_data_set:0000000000000000 dac_concurrent_data_set
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:781    .text.dac_concurrent_data_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:783    .text.dac_concurrent_data_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:784    .text.dac_concurrent_data_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:785    .text.dac_concurrent_data_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:793    .text.dac_concurrent_data_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:794    .text.dac_concurrent_data_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:797    .text.dac_concurrent_data_set:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:800    .text.dac_concurrent_data_set:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:801    .text.dac_concurrent_data_set:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:804    .text.dac_concurrent_data_set:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:808    .text.dac_concurrent_data_set:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:809    .text.dac_concurrent_data_set:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:812    .text.dac_concurrent_data_set:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:815    .text.dac_concurrent_data_set:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:816    .text.dac_concurrent_data_set:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:819    .text.dac_concurrent_data_set:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:823    .text.dac_concurrent_data_set:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:824    .text.dac_concurrent_data_set:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:827    .text.dac_concurrent_data_set:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:830    .text.dac_concurrent_data_set:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:831    .text.dac_concurrent_data_set:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:834    .text.dac_concurrent_data_set:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:835    .text.dac_concurrent_data_set:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:836    .text.dac_concurrent_data_set:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:47     .text.dac_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:79     .text.dac_enable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:112    .text.dac_disable:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:139    .text.dac_dma_enable:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:167    .text.dac_dma_disable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:200    .text.dac_output_buffer_enable:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:232    .text.dac_output_buffer_disable:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:269    .text.dac_output_value_get:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:342    .text.dac_data_set:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:374    .text.dac_trigger_enable:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:407    .text.dac_trigger_disable:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:454    .text.dac_trigger_source_config:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:485    .text.dac_software_trigger_enable:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:516    .text.dac_software_trigger_disable:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:563    .text.dac_wave_mode_config:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:612    .text.dac_wave_bit_width_config:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:658    .text.dac_concurrent_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:682    .text.dac_concurrent_disable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:704    .text.dac_concurrent_software_trigger_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:726    .text.dac_concurrent_software_trigger_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:750    .text.dac_concurrent_output_buffer_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:774    .text.dac_concurrent_output_buffer_disable:0000000000000016 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 32
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:839    .text.dac_concurrent_data_set:000000000000003a .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:70     .text.dac_enable:0000000000000014 .L4
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:65     .text.dac_enable:000000000000000e .L6
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:98     .text.dac_disable:0000000000000012 .L8
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:131    .text.dac_dma_enable:0000000000000010 .L13
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:158    .text.dac_dma_disable:0000000000000010 .L17
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:186    .text.dac_output_buffer_enable:0000000000000012 .L19
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:223    .text.dac_output_buffer_disable:0000000000000014 .L22
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:218    .text.dac_output_buffer_disable:000000000000000e .L24
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:260    .text.dac_output_value_get:0000000000000010 .L26
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:251    .text.dac_output_value_get:000000000000000a .L28
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:310    .text.dac_data_set:0000000000000030 .L30
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:296    .text.dac_data_set:000000000000001c .L31
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:289    .text.dac_data_set:0000000000000012 .L32
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:303    .text.dac_data_set:0000000000000026 .L33
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:324    .text.dac_data_set:0000000000000048 .L35
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:317    .text.dac_data_set:000000000000003e .L36
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:331    .text.dac_data_set:0000000000000052 .L37
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:365    .text.dac_trigger_enable:0000000000000014 .L39
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:360    .text.dac_trigger_enable:000000000000000e .L41
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:393    .text.dac_trigger_disable:0000000000000012 .L43
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:437    .text.dac_trigger_source_config:000000000000001e .L46
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:430    .text.dac_trigger_source_config:0000000000000016 .L48
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:477    .text.dac_software_trigger_enable:0000000000000014 .L50
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:472    .text.dac_software_trigger_enable:000000000000000e .L52
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:508    .text.dac_software_trigger_disable:0000000000000012 .L54
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:503    .text.dac_software_trigger_disable:000000000000000c .L56
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:546    .text.dac_wave_mode_config:000000000000001e .L58
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:539    .text.dac_wave_mode_config:0000000000000016 .L60
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:595    .text.dac_wave_bit_width_config:0000000000000022 .L62
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:588    .text.dac_wave_bit_width_config:000000000000001a .L64
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:806    .text.dac_concurrent_data_set:000000000000001e .L74
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:791    .text.dac_concurrent_data_set:0000000000000010 .L75
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:821    .text.dac_concurrent_data_set:000000000000002c .L76
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:1702   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2453   .debug_str:000000000000000e .LASF82
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2493   .debug_str:00000000000001d4 .LASF83
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2543   .debug_str:0000000000000368 .LASF84
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2399   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2449   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2539   .debug_str:0000000000000352 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2527   .debug_str:0000000000000302 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2513   .debug_str:0000000000000291 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2467   .debug_str:00000000000000e2 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2483   .debug_str:0000000000000175 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2549   .debug_str:00000000000003e7 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2501   .debug_str:0000000000000241 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2463   .debug_str:00000000000000c9 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2571   .debug_str:00000000000004b2 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2499   .debug_str:0000000000000233 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2531   .debug_str:0000000000000319 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2541   .debug_str:000000000000035f .LASF11
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2535   .debug_str:000000000000033d .LASF12
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2563   .debug_str:0000000000000479 .LASF85
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2455   .debug_str:0000000000000096 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2557   .debug_str:0000000000000447 .LASF14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 33
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2599   .debug_str:000000000000058c .LASF15
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2481   .debug_str:0000000000000167 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2509   .debug_str:000000000000026a .LASF17
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2561   .debug_str:000000000000046b .LASF18
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2609   .debug_str:00000000000005ca .LASF19
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2623   .debug_str:0000000000000663 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2475   .debug_str:0000000000000137 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2503   .debug_str:000000000000024a .LASF22
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2567   .debug_str:000000000000048e .LASF23
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2621   .debug_str:0000000000000655 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2579   .debug_str:0000000000000500 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2457   .debug_str:00000000000000a3 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2585   .debug_str:0000000000000524 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2581   .debug_str:000000000000050d .LASF28
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2461   .debug_str:00000000000000bd .LASF29
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2497   .debug_str:0000000000000227 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2471   .debug_str:0000000000000106 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2583   .debug_str:0000000000000519 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2529   .debug_str:000000000000030e .LASF33
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2521   .debug_str:00000000000002cc .LASF34
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2533   .debug_str:0000000000000330 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2575   .debug_str:00000000000004de .LASF36
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2459   .debug_str:00000000000000b0 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2495   .debug_str:000000000000021a .LASF38
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2545   .debug_str:00000000000003ce .LASF39
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2547   .debug_str:00000000000003db .LASF40
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2589   .debug_str:000000000000054a .LASF41
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2451   .debug_str:0000000000000000 .LASF42
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2595   .debug_str:000000000000056b .LASF43
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2515   .debug_str:000000000000029f .LASF44
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2517   .debug_str:00000000000002ad .LASF45
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2487   .debug_str:00000000000001a7 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:779    .text.dac_concurrent_data_set:0000000000000000 .LFB26
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:837    .text.dac_concurrent_data_set:000000000000003a .LFE26
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2505   .debug_str:0000000000000256 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2601   .debug_str:000000000000059a .LASF47
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2603   .debug_str:00000000000005a0 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2141   .debug_loc:0000000000000000 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2565   .debug_str:0000000000000489 .LASF51
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2177   .debug_loc:0000000000000053 .LLST7
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2473   .debug_str:0000000000000112 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:755    .text.dac_concurrent_output_buffer_disable:0000000000000000 .LFB25
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:772    .text.dac_concurrent_output_buffer_disable:0000000000000016 .LFE25
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2611   .debug_str:00000000000005d8 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:731    .text.dac_concurrent_output_buffer_enable:0000000000000000 .LFB24
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:748    .text.dac_concurrent_output_buffer_enable:0000000000000014 .LFE24
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2615   .debug_str:000000000000060c .LASF53
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:709    .text.dac_concurrent_software_trigger_disable:0000000000000000 .LFB23
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:724    .text.dac_concurrent_software_trigger_disable:0000000000000010 .LFE23
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2485   .debug_str:0000000000000180 .LASF54
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:687    .text.dac_concurrent_software_trigger_enable:0000000000000000 .LFB22
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:702    .text.dac_concurrent_software_trigger_enable:0000000000000012 .LFE22
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2555   .debug_str:0000000000000430 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:663    .text.dac_concurrent_disable:0000000000000000 .LFB21
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:680    .text.dac_concurrent_disable:0000000000000014 .LFE21
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2559   .debug_str:0000000000000455 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:639    .text.dac_concurrent_enable:0000000000000000 .LFB20
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 34
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:656    .text.dac_concurrent_enable:0000000000000014 .LFE20
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2587   .debug_str:0000000000000530 .LASF59
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2491   .debug_str:00000000000001c9 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2507   .debug_str:0000000000000260 .LASF58
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2569   .debug_str:000000000000049c .LASF60
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2605   .debug_str:00000000000005a6 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2553   .debug_str:0000000000000416 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:568    .text.dac_wave_bit_width_config:0000000000000000 .LFB17
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:610    .text.dac_wave_bit_width_config:0000000000000036 .LFE17
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2489   .debug_str:00000000000001bf .LASF63
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2207   .debug_loc:00000000000000a0 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2577   .debug_str:00000000000004eb .LASF64
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:521    .text.dac_wave_mode_config:0000000000000000 .LFB16
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:561    .text.dac_wave_mode_config:0000000000000032 .LFE16
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2593   .debug_str:0000000000000561 .LASF65
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2232   .debug_loc:00000000000000da .LLST4
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2525   .debug_str:00000000000002e5 .LASF66
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:490    .text.dac_software_trigger_disable:0000000000000000 .LFB15
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:514    .text.dac_software_trigger_disable:0000000000000016 .LFE15
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2551   .debug_str:00000000000003fa .LASF67
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:459    .text.dac_software_trigger_enable:0000000000000000 .LFB14
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:483    .text.dac_software_trigger_enable:000000000000001a .LFE14
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2573   .debug_str:00000000000004c4 .LASF68
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:412    .text.dac_trigger_source_config:0000000000000000 .LFB13
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:452    .text.dac_trigger_source_config:0000000000000032 .LFE13
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2465   .debug_str:00000000000000d4 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2257   .debug_loc:0000000000000114 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2619   .debug_str:0000000000000641 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:379    .text.dac_trigger_disable:0000000000000000 .LFB12
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:405    .text.dac_trigger_disable:0000000000000028 .LFE12
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2519   .debug_str:00000000000002b9 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:347    .text.dac_trigger_enable:0000000000000000 .LFB11
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:372    .text.dac_trigger_enable:000000000000001c .LFE11
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2617   .debug_str:0000000000000634 .LASF72
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:274    .text.dac_data_set:0000000000000000 .LFB10
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:340    .text.dac_data_set:000000000000005c .LFE10
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2597   .debug_str:0000000000000577 .LASF86
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:237    .text.dac_output_value_get:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:267    .text.dac_output_value_get:0000000000000016 .LFE9
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2282   .debug_loc:000000000000014e .LLST1
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2307   .debug_loc:0000000000000188 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2469   .debug_str:00000000000000ec .LASF73
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:205    .text.dac_output_buffer_disable:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:230    .text.dac_output_buffer_disable:000000000000001c .LFE8
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2511   .debug_str:0000000000000278 .LASF74
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:172    .text.dac_output_buffer_enable:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:198    .text.dac_output_buffer_enable:0000000000000026 .LFE7
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2613   .debug_str:00000000000005fc .LASF75
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:144    .text.dac_dma_disable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:165    .text.dac_dma_disable:000000000000001a .LFE6
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2523   .debug_str:00000000000002d6 .LASF76
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:117    .text.dac_dma_enable:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:137    .text.dac_dma_enable:0000000000000018 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2537   .debug_str:0000000000000346 .LASF77
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:84     .text.dac_disable:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:110    .text.dac_disable:0000000000000026 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2591   .debug_str:0000000000000556 .LASF78
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s 			page 35
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:52     .text.dac_enable:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:77     .text.dac_enable:000000000000001a .LFE3
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2479   .debug_str:000000000000015c .LASF79
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:14     .text.dac_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:45     .text.dac_deinit:0000000000000020 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2324   .debug_loc:00000000000001b3 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:30     .text.dac_deinit:0000000000000010 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:43     .text.dac_deinit:0000000000000020 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2607   .debug_str:00000000000005b2 .LASF80
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:2477   .debug_str:0000000000000143 .LASF81
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:782    .text.dac_concurrent_data_set:0000000000000000 .LVL36
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:795    .text.dac_concurrent_data_set:0000000000000012 .LVL37
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:805    .text.dac_concurrent_data_set:000000000000001e .LVL39
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:810    .text.dac_concurrent_data_set:0000000000000020 .LVL40
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:820    .text.dac_concurrent_data_set:000000000000002c .LVL42
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:825    .text.dac_concurrent_data_set:000000000000002e .LVL43
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:798    .text.dac_concurrent_data_set:0000000000000014 .LVL38
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:813    .text.dac_concurrent_data_set:0000000000000022 .LVL41
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:828    .text.dac_concurrent_data_set:0000000000000030 .LVL44
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:571    .text.dac_wave_bit_width_config:0000000000000000 .LVL26
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:587    .text.dac_wave_bit_width_config:000000000000001a .LVL27
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:594    .text.dac_wave_bit_width_config:0000000000000022 .LVL28
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:607    .text.dac_wave_bit_width_config:0000000000000034 .LVL29
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:524    .text.dac_wave_mode_config:0000000000000000 .LVL22
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:538    .text.dac_wave_mode_config:0000000000000016 .LVL23
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:545    .text.dac_wave_mode_config:000000000000001e .LVL24
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:558    .text.dac_wave_mode_config:0000000000000030 .LVL25
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:415    .text.dac_trigger_source_config:0000000000000000 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:429    .text.dac_trigger_source_config:0000000000000016 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:436    .text.dac_trigger_source_config:000000000000001e .LVL18
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:449    .text.dac_trigger_source_config:0000000000000030 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:240    .text.dac_output_value_get:0000000000000000 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:250    .text.dac_output_value_get:000000000000000a .LVL9
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:259    .text.dac_output_value_get:0000000000000010 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:264    .text.dac_output_value_get:0000000000000014 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:255    .text.dac_output_value_get:000000000000000e .LVL10
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:21     .text.dac_deinit:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:39     .text.dac_deinit:0000000000000018 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\cc4jhM8g.s:846    .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

@@ -1,0 +1,593 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 1
+
+
+   1              		.file	"gd32vf103_wwdgt.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.wwdgt_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	wwdgt_deinit
+  13              	wwdgt_deinit:
+  14              	.LFB2:
+  15              		.file 1 "./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c"
+   1:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*!
+   2:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \file    gd32vf103_wwdgt.c
+   3:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \brief   WWDGT driver
+   4:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     
+   5:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \version 2019-06-05, V1.0.0, firmware for GD32VF103
+   6:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \version 2020-08-04, V1.1.0, firmware for GD32VF103
+   7:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+   8:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+   9:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*
+  10:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     Copyright (c) 2020, GigaDevice Semiconductor Inc.
+  11:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  12:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  13:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** are permitted provided that the following conditions are met:
+  14:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  15:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  16:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****        list of conditions and the following disclaimer.
+  17:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  18:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****        this list of conditions and the following disclaimer in the documentation 
+  19:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****        and/or other materials provided with the distribution.
+  20:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  21:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****        may be used to endorse or promote products derived from this software without 
+  22:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****        specific prior written permission.
+  23:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  24:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  25:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  26:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  27:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  28:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  29:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  30:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  31:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  32:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  33:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** OF SUCH DAMAGE.
+  34:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+  35:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  36:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** #include "gd32vf103_wwdgt.h"
+  37:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  38:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /* write value to WWDGT_CTL_CNT bit field */
+  39:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** #define CTL_CNT(regval)             (BITS(0,6) & ((uint32_t)(regval) << 0))
+  40:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /* write value to WWDGT_CFG_WIN bit field */
+  41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** #define CFG_WIN(regval)             (BITS(0,6) & ((uint32_t)(regval) << 0))
+  42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*!
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 2
+
+
+  44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \brief      reset the window watchdog timer configuration
+  45:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  none
+  46:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[out] none
+  47:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \retval     none
+  48:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+  49:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** void wwdgt_deinit(void)
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** {
+  16              		.loc 1 50 1
+  17              		.cfi_startproc
+  51:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     rcu_periph_reset_enable(RCU_WWDGTRST);
+  18              		.loc 1 51 5
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     rcu_periph_reset_enable(RCU_WWDGTRST);
+  19              		.loc 1 50 1 is_stmt 0
+  20 0000 4111     		addi	sp,sp,-16
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 16
+  23              		.loc 1 51 5
+  24 0002 1305B040 		li	a0,1035
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     rcu_periph_reset_enable(RCU_WWDGTRST);
+  25              		.loc 1 50 1
+  26 0006 06C6     		sw	ra,12(sp)
+  27              		.cfi_offset 1, -4
+  28              		.loc 1 51 5
+  29 0008 97000000 		call	rcu_periph_reset_enable
+  29      E7800000 
+  30              	.LVL0:
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     rcu_periph_reset_disable(RCU_WWDGTRST);
+  31              		.loc 1 52 5 is_stmt 1
+  53:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** }
+  32              		.loc 1 53 1 is_stmt 0
+  33 0010 B240     		lw	ra,12(sp)
+  34              		.cfi_restore 1
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     rcu_periph_reset_disable(RCU_WWDGTRST);
+  35              		.loc 1 52 5
+  36 0012 1305B040 		li	a0,1035
+  37              		.loc 1 53 1
+  38 0016 4101     		addi	sp,sp,16
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_offset 0
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     rcu_periph_reset_disable(RCU_WWDGTRST);
+  41              		.loc 1 52 5
+  42 0018 17030000 		tail	rcu_periph_reset_disable
+  42      67000300 
+  43              	.LVL1:
+  44              		.cfi_endproc
+  45              	.LFE2:
+  47              		.section	.text.wwdgt_enable,"ax",@progbits
+  48              		.align	1
+  49              		.globl	wwdgt_enable
+  51              	wwdgt_enable:
+  52              	.LFB3:
+  54:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  55:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*!
+  56:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \brief      start the window watchdog timer counter
+  57:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  none
+  58:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[out] none
+  59:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \retval     none
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 3
+
+
+  60:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+  61:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** void wwdgt_enable(void)
+  62:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** {
+  53              		.loc 1 62 1 is_stmt 1
+  54              		.cfi_startproc
+  63:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     WWDGT_CTL |= WWDGT_CTL_WDGTEN;
+  55              		.loc 1 63 5
+  56              		.loc 1 63 15 is_stmt 0
+  57 0000 37370040 		li	a4,1073754112
+  58 0004 832707C0 		lw	a5,-1024(a4)
+  59 0008 93E70708 		ori	a5,a5,128
+  60 000c 2320F7C0 		sw	a5,-1024(a4)
+  64:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** }
+  61              		.loc 1 64 1
+  62 0010 8280     		ret
+  63              		.cfi_endproc
+  64              	.LFE3:
+  66              		.section	.text.wwdgt_counter_update,"ax",@progbits
+  67              		.align	1
+  68              		.globl	wwdgt_counter_update
+  70              	wwdgt_counter_update:
+  71              	.LFB4:
+  65:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*!
+  67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \brief      configure the window watchdog timer counter value
+  68:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  counter_value: 0x00 - 0x7F
+  69:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[out] none
+  70:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \retval     none
+  71:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+  72:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** void wwdgt_counter_update(uint16_t counter_value)
+  73:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** {
+  72              		.loc 1 73 1 is_stmt 1
+  73              		.cfi_startproc
+  74              	.LVL2:
+  74:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     uint32_t reg = 0U;
+  75              		.loc 1 74 5
+  75:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     
+  76:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg = (WWDGT_CTL & (~WWDGT_CTL_CNT));
+  76              		.loc 1 76 5
+  77              		.loc 1 76 12 is_stmt 0
+  78 0000 37370040 		li	a4,1073754112
+  79 0004 832707C0 		lw	a5,-1024(a4)
+  77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg |= CTL_CNT(counter_value);
+  80              		.loc 1 77 12
+  81 0008 1375F507 		andi	a0,a0,127
+  82              	.LVL3:
+  76:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg |= CTL_CNT(counter_value);
+  83              		.loc 1 76 9
+  84 000c 93F707F8 		andi	a5,a5,-128
+  85              	.LVL4:
+  86              		.loc 1 77 5 is_stmt 1
+  87              		.loc 1 77 9 is_stmt 0
+  88 0010 5D8D     		or	a0,a0,a5
+  89              	.LVL5:
+  78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     WWDGT_CTL = reg;
+  90              		.loc 1 79 5 is_stmt 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 4
+
+
+  91              		.loc 1 79 15 is_stmt 0
+  92 0012 2320A7C0 		sw	a0,-1024(a4)
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** }
+  93              		.loc 1 80 1
+  94 0016 8280     		ret
+  95              		.cfi_endproc
+  96              	.LFE4:
+  98              		.section	.text.wwdgt_config,"ax",@progbits
+  99              		.align	1
+ 100              		.globl	wwdgt_config
+ 102              	wwdgt_config:
+ 103              	.LFB5:
+  81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*!
+  83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \brief      configure counter value, window value, and prescaler divider value  
+  84:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  counter: 0x00 - 0x7F   
+  85:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  window: 0x00 - 0x7F
+  86:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  prescaler: wwdgt prescaler value
+  87:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****                 only one parameter can be selected which is shown as below:
+  88:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****       \arg        WWDGT_CFG_PSC_DIV1: the time base of window watchdog counter = (PCLK1/4096)/1
+  89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****       \arg        WWDGT_CFG_PSC_DIV2: the time base of window watchdog counter = (PCLK1/4096)/2
+  90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****       \arg        WWDGT_CFG_PSC_DIV4: the time base of window watchdog counter = (PCLK1/4096)/4
+  91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****       \arg        WWDGT_CFG_PSC_DIV8: the time base of window watchdog counter = (PCLK1/4096)/8
+  92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[out] none
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \retval     none
+  94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** void wwdgt_config(uint16_t counter, uint16_t window, uint32_t prescaler)
+  96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** {
+ 104              		.loc 1 96 1 is_stmt 1
+ 105              		.cfi_startproc
+ 106              	.LVL6:
+  97:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     uint32_t reg_cfg = 0U, reg_ctl = 0U;
+ 107              		.loc 1 97 5
+  98:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+  99:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     /* clear WIN and PSC bits, clear CNT bit */
+ 100:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_cfg = (WWDGT_CFG &(~(WWDGT_CFG_WIN|WWDGT_CFG_PSC)));
+ 108              		.loc 1 100 5
+ 109              		.loc 1 100 16 is_stmt 0
+ 110 0000 37370040 		li	a4,1073754112
+ 111 0004 832747C0 		lw	a5,-1020(a4)
+ 112              	.LVL7:
+ 101:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_ctl = (WWDGT_CTL &(~WWDGT_CTL_CNT));
+ 113              		.loc 1 101 5 is_stmt 1
+ 114              		.loc 1 101 16 is_stmt 0
+ 115 0008 832607C0 		lw	a3,-1024(a4)
+ 102:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****   
+ 103:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     /* configure WIN and PSC bits, configure CNT bit */
+ 104:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_cfg |= CFG_WIN(window);
+ 105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_cfg |= prescaler;
+ 106:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_ctl |= CTL_CNT(counter);
+ 116              		.loc 1 106 16
+ 117 000c 1375F507 		andi	a0,a0,127
+ 118              	.LVL8:
+ 100:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_ctl = (WWDGT_CTL &(~WWDGT_CTL_CNT));
+ 119              		.loc 1 100 13
+ 120 0010 93F707E0 		andi	a5,a5,-512
+ 121              	.LVL9:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 5
+
+
+ 101:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_ctl = (WWDGT_CTL &(~WWDGT_CTL_CNT));
+ 122              		.loc 1 101 13
+ 123 0014 93F606F8 		andi	a3,a3,-128
+ 124              	.LVL10:
+ 104:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_cfg |= prescaler;
+ 125              		.loc 1 104 5 is_stmt 1
+ 126 0018 5D8E     		or	a2,a5,a2
+ 127              	.LVL11:
+ 105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_ctl |= CTL_CNT(counter);
+ 128              		.loc 1 105 5
+ 129              		.loc 1 106 13 is_stmt 0
+ 130 001a 558D     		or	a0,a0,a3
+ 104:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_cfg |= prescaler;
+ 131              		.loc 1 104 16
+ 132 001c 93F7F507 		andi	a5,a1,127
+ 105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     reg_ctl |= CTL_CNT(counter);
+ 133              		.loc 1 105 13
+ 134 0020 D18F     		or	a5,a5,a2
+ 135              	.LVL12:
+ 136              		.loc 1 106 5 is_stmt 1
+ 107:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     WWDGT_CTL = reg_ctl;
+ 137              		.loc 1 108 5
+ 138              		.loc 1 108 15 is_stmt 0
+ 139 0022 2320A7C0 		sw	a0,-1024(a4)
+ 109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     WWDGT_CFG = reg_cfg;
+ 140              		.loc 1 109 5 is_stmt 1
+ 141              		.loc 1 109 15 is_stmt 0
+ 142 0026 2322F7C0 		sw	a5,-1020(a4)
+ 110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** }
+ 143              		.loc 1 110 1
+ 144 002a 8280     		ret
+ 145              		.cfi_endproc
+ 146              	.LFE5:
+ 148              		.section	.text.wwdgt_interrupt_enable,"ax",@progbits
+ 149              		.align	1
+ 150              		.globl	wwdgt_interrupt_enable
+ 152              	wwdgt_interrupt_enable:
+ 153              	.LFB6:
+ 111:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+ 112:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*!
+ 113:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \brief      enable early wakeup interrupt of WWDGT
+ 114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  none
+ 115:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[out] none
+ 116:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \retval     none
+ 117:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+ 118:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** void wwdgt_interrupt_enable(void)
+ 119:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** {
+ 154              		.loc 1 119 1 is_stmt 1
+ 155              		.cfi_startproc
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     WWDGT_CFG |= WWDGT_CFG_EWIE;
+ 156              		.loc 1 120 5
+ 157              		.loc 1 120 15 is_stmt 0
+ 158 0000 37370040 		li	a4,1073754112
+ 159 0004 832747C0 		lw	a5,-1020(a4)
+ 160 0008 93E70720 		ori	a5,a5,512
+ 161 000c 2322F7C0 		sw	a5,-1020(a4)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 6
+
+
+ 121:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** }
+ 162              		.loc 1 121 1
+ 163 0010 8280     		ret
+ 164              		.cfi_endproc
+ 165              	.LFE6:
+ 167              		.section	.text.wwdgt_flag_get,"ax",@progbits
+ 168              		.align	1
+ 169              		.globl	wwdgt_flag_get
+ 171              	wwdgt_flag_get:
+ 172              	.LFB7:
+ 122:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*!
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \brief      check early wakeup interrupt state of WWDGT
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  none
+ 126:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[out] none
+ 127:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \retval     FlagStatus: SET or RESET
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** FlagStatus wwdgt_flag_get(void)
+ 130:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** {
+ 173              		.loc 1 130 1 is_stmt 1
+ 174              		.cfi_startproc
+ 131:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     if(WWDGT_STAT & WWDGT_STAT_EWIF){
+ 175              		.loc 1 131 5
+ 176              		.loc 1 131 8 is_stmt 0
+ 177 0000 B7370040 		li	a5,1073754112
+ 178 0004 03A587C0 		lw	a0,-1016(a5)
+ 132:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****         return SET;
+ 133:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     }
+ 134:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+ 135:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     return RESET;
+ 136:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** }
+ 179              		.loc 1 136 1
+ 180 0008 0589     		andi	a0,a0,1
+ 181 000a 8280     		ret
+ 182              		.cfi_endproc
+ 183              	.LFE7:
+ 185              		.section	.text.wwdgt_flag_clear,"ax",@progbits
+ 186              		.align	1
+ 187              		.globl	wwdgt_flag_clear
+ 189              	wwdgt_flag_clear:
+ 190              	.LFB8:
+ 137:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** 
+ 138:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** /*!
+ 139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \brief      clear early wakeup interrupt state of WWDGT
+ 140:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[in]  none
+ 141:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \param[out] none
+ 142:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     \retval     none
+ 143:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** */
+ 144:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** void wwdgt_flag_clear(void)
+ 145:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** {
+ 191              		.loc 1 145 1 is_stmt 1
+ 192              		.cfi_startproc
+ 146:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c ****     WWDGT_STAT &= (~WWDGT_STAT_EWIF);
+ 193              		.loc 1 146 5
+ 194              		.loc 1 146 16 is_stmt 0
+ 195 0000 37370040 		li	a4,1073754112
+ 196 0004 832787C0 		lw	a5,-1016(a4)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 7
+
+
+ 197 0008 F99B     		andi	a5,a5,-2
+ 198 000a 2324F7C0 		sw	a5,-1016(a4)
+ 147:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c **** }
+ 199              		.loc 1 147 1
+ 200 000e 8280     		ret
+ 201              		.cfi_endproc
+ 202              	.LFE8:
+ 204              		.text
+ 205              	.Letext0:
+ 206              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 207              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 208              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
+ 209              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
+ 210              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_wwdgt.c
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:13     .text.wwdgt_deinit:0000000000000000 wwdgt_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:17     .text.wwdgt_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:18     .text.wwdgt_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:19     .text.wwdgt_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:20     .text.wwdgt_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:22     .text.wwdgt_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:24     .text.wwdgt_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:26     .text.wwdgt_deinit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:27     .text.wwdgt_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:29     .text.wwdgt_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:32     .text.wwdgt_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:33     .text.wwdgt_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:34     .text.wwdgt_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:36     .text.wwdgt_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:38     .text.wwdgt_deinit:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:40     .text.wwdgt_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:42     .text.wwdgt_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:44     .text.wwdgt_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:51     .text.wwdgt_enable:0000000000000000 wwdgt_enable
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:54     .text.wwdgt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:55     .text.wwdgt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:56     .text.wwdgt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:57     .text.wwdgt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:62     .text.wwdgt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:63     .text.wwdgt_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:70     .text.wwdgt_counter_update:0000000000000000 wwdgt_counter_update
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:73     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:75     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:76     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:77     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:78     .text.wwdgt_counter_update:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:81     .text.wwdgt_counter_update:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:84     .text.wwdgt_counter_update:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:87     .text.wwdgt_counter_update:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:88     .text.wwdgt_counter_update:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:91     .text.wwdgt_counter_update:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:92     .text.wwdgt_counter_update:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:94     .text.wwdgt_counter_update:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:95     .text.wwdgt_counter_update:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:102    .text.wwdgt_config:0000000000000000 wwdgt_config
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:105    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:107    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:108    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:109    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:110    .text.wwdgt_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:114    .text.wwdgt_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:115    .text.wwdgt_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:117    .text.wwdgt_config:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:120    .text.wwdgt_config:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:123    .text.wwdgt_config:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:126    .text.wwdgt_config:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:129    .text.wwdgt_config:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:130    .text.wwdgt_config:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:132    .text.wwdgt_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:134    .text.wwdgt_config:0000000000000020 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 9
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:137    .text.wwdgt_config:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:138    .text.wwdgt_config:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:139    .text.wwdgt_config:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:141    .text.wwdgt_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:142    .text.wwdgt_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:144    .text.wwdgt_config:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:145    .text.wwdgt_config:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:152    .text.wwdgt_interrupt_enable:0000000000000000 wwdgt_interrupt_enable
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:155    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:156    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:157    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:158    .text.wwdgt_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:163    .text.wwdgt_interrupt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:164    .text.wwdgt_interrupt_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:171    .text.wwdgt_flag_get:0000000000000000 wwdgt_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:174    .text.wwdgt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:175    .text.wwdgt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:176    .text.wwdgt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:177    .text.wwdgt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:180    .text.wwdgt_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:182    .text.wwdgt_flag_get:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:189    .text.wwdgt_flag_clear:0000000000000000 wwdgt_flag_clear
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:192    .text.wwdgt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:193    .text.wwdgt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:194    .text.wwdgt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:195    .text.wwdgt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:200    .text.wwdgt_flag_clear:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:201    .text.wwdgt_flag_clear:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:47     .text.wwdgt_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:66     .text.wwdgt_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:98     .text.wwdgt_counter_update:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:148    .text.wwdgt_config:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:167    .text.wwdgt_interrupt_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:185    .text.wwdgt_flag_get:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:204    .text.wwdgt_flag_clear:0000000000000010 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:614    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1148   .debug_str:000000000000000e .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1264   .debug_str:00000000000003d5 .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1218   .debug_str:0000000000000254 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1126   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1144   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1214   .debug_str:000000000000023e .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1204   .debug_str:00000000000001fa .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1198   .debug_str:00000000000001da .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1176   .debug_str:000000000000014a .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1172   .debug_str:0000000000000128 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1226   .debug_str:00000000000002dd .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1188   .debug_str:000000000000019d .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1168   .debug_str:000000000000010f .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1240   .debug_str:000000000000034a .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1186   .debug_str:000000000000018f .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1208   .debug_str:0000000000000211 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1216   .debug_str:000000000000024b .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1212   .debug_str:0000000000000235 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1234   .debug_str:000000000000031d .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1250   .debug_str:000000000000038d .LASF13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 10
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1272   .debug_str:0000000000000451 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1150   .debug_str:0000000000000096 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1230   .debug_str:0000000000000301 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1262   .debug_str:00000000000003c7 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1170   .debug_str:000000000000011a .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1192   .debug_str:00000000000001b2 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1232   .debug_str:000000000000030f .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1268   .debug_str:0000000000000435 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1278   .debug_str:0000000000000476 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1164   .debug_str:00000000000000ea .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1190   .debug_str:00000000000001a6 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1238   .debug_str:000000000000033c .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1276   .debug_str:0000000000000468 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1242   .debug_str:000000000000035c .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1152   .debug_str:00000000000000a3 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1274   .debug_str:000000000000045c .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1246   .debug_str:0000000000000376 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1158   .debug_str:00000000000000ca .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1184   .debug_str:0000000000000183 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1162   .debug_str:00000000000000de .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1248   .debug_str:0000000000000382 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1206   .debug_str:0000000000000206 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1200   .debug_str:00000000000001e8 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1210   .debug_str:0000000000000228 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1244   .debug_str:0000000000000369 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1156   .debug_str:00000000000000bd .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1182   .debug_str:0000000000000176 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1220   .debug_str:00000000000002ba .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1222   .debug_str:00000000000002c7 .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1254   .debug_str:00000000000003a0 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1146   .debug_str:0000000000000000 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1260   .debug_str:00000000000003bb .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1194   .debug_str:00000000000001c0 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1196   .debug_str:00000000000001ce .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1228   .debug_str:00000000000002f0 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:190    .text.wwdgt_flag_clear:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:202    .text.wwdgt_flag_clear:0000000000000010 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1236   .debug_str:000000000000032d .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:172    .text.wwdgt_flag_get:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:183    .text.wwdgt_flag_get:000000000000000c .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1174   .debug_str:0000000000000133 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:153    .text.wwdgt_interrupt_enable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:165    .text.wwdgt_interrupt_enable:0000000000000012 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1180   .debug_str:0000000000000169 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:103    .text.wwdgt_config:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:146    .text.wwdgt_config:000000000000002c .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1202   .debug_str:00000000000001f2 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:984    .debug_loc:0000000000000000 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1258   .debug_str:00000000000003b4 .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1224   .debug_str:00000000000002d3 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:998    .debug_loc:0000000000000021 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1160   .debug_str:00000000000000d6 .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1012   .debug_loc:0000000000000042 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1256   .debug_str:00000000000003ac .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1037   .debug_loc:000000000000007d .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1178   .debug_str:0000000000000154 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:71     .text.wwdgt_counter_update:0000000000000000 .LFB4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s 			page 11
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:96     .text.wwdgt_counter_update:0000000000000018 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1270   .debug_str:0000000000000443 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1053   .debug_loc:00000000000000a7 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1067   .debug_loc:00000000000000c8 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1154   .debug_str:00000000000000b0 .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:52     .text.wwdgt_enable:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:64     .text.wwdgt_enable:0000000000000012 .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1252   .debug_str:0000000000000393 .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:14     .text.wwdgt_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:45     .text.wwdgt_deinit:0000000000000020 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1083   .debug_loc:00000000000000f2 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:30     .text.wwdgt_deinit:0000000000000010 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:43     .text.wwdgt_deinit:0000000000000020 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1266   .debug_str:000000000000041d .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:1166   .debug_str:00000000000000f6 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:106    .text.wwdgt_config:0000000000000000 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:118    .text.wwdgt_config:0000000000000010 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:127    .text.wwdgt_config:000000000000001a .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:112    .text.wwdgt_config:0000000000000008 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:121    .text.wwdgt_config:0000000000000014 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:135    .text.wwdgt_config:0000000000000022 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:124    .text.wwdgt_config:0000000000000018 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:74     .text.wwdgt_counter_update:0000000000000000 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:82     .text.wwdgt_counter_update:000000000000000c .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:85     .text.wwdgt_counter_update:0000000000000010 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:89     .text.wwdgt_counter_update:0000000000000012 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:21     .text.wwdgt_deinit:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:39     .text.wwdgt_deinit:0000000000000018 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccv98zTk.s:212    .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

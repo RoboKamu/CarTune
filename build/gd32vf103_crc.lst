@@ -1,0 +1,470 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 1
+
+
+   1              		.file	"gd32vf103_crc.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.crc_deinit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	crc_deinit
+  13              	crc_deinit:
+  14              	.LFB2:
+  15              		.file 1 "./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c"
+   1:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
+   2:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \file    gd32vf103_crc.c
+   3:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief   CRC driver
+   4:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+   5:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \version 2019-06-05, V1.0.0, firmware for GD32VF103
+   6:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \version 2020-08-04, V1.1.0, firmware for GD32VF103
+   7:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+   8:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+   9:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*
+  10:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     Copyright (c) 2020, GigaDevice Semiconductor Inc.
+  11:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  12:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     Redistribution and use in source and binary forms, with or without modification,
+  13:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** are permitted provided that the following conditions are met:
+  14:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  15:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     1. Redistributions of source code must retain the above copyright notice, this
+  16:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****        list of conditions and the following disclaimer.
+  17:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     2. Redistributions in binary form must reproduce the above copyright notice,
+  18:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****        this list of conditions and the following disclaimer in the documentation
+  19:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****        and/or other materials provided with the distribution.
+  20:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     3. Neither the name of the copyright holder nor the names of its contributors
+  21:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****        may be used to endorse or promote products derived from this software without
+  22:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****        specific prior written permission.
+  23:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  24:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  26:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+  27:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+  28:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+  29:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  30:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  31:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  32:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  33:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** OF SUCH DAMAGE.
+  34:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+  35:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  36:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** #include "gd32vf103_crc.h"
+  37:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  38:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** #define CRC_DATA_RESET_VALUE      ((uint32_t)0xFFFFFFFFU)
+  39:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** #define CRC_FDATA_RESET_VALUE     ((uint32_t)0x00000000U)
+  40:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
+  42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief      deinit CRC calculation unit
+  43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  none
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 2
+
+
+  44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[out] none
+  45:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \retval     none
+  46:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+  47:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** void crc_deinit(void)
+  48:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** {
+  16              		.loc 1 48 1
+  17              		.cfi_startproc
+  49:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     CRC_DATA = CRC_DATA_RESET_VALUE;
+  18              		.loc 1 49 5
+  19              		.loc 1 49 14 is_stmt 0
+  20 0000 B7370240 		li	a5,1073885184
+  21 0004 7D57     		li	a4,-1
+  22 0006 98C3     		sw	a4,0(a5)
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     CRC_FDATA = CRC_FDATA_RESET_VALUE;
+  23              		.loc 1 50 5 is_stmt 1
+  24              		.loc 1 50 15 is_stmt 0
+  25 0008 23A20700 		sw	zero,4(a5)
+  51:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     CRC_CTL = (uint32_t)CRC_CTL_RST;
+  26              		.loc 1 51 5 is_stmt 1
+  27              		.loc 1 51 13 is_stmt 0
+  28 000c 0547     		li	a4,1
+  29 000e 98C7     		sw	a4,8(a5)
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** }
+  30              		.loc 1 52 1
+  31 0010 8280     		ret
+  32              		.cfi_endproc
+  33              	.LFE2:
+  35              		.section	.text.crc_data_register_reset,"ax",@progbits
+  36              		.align	1
+  37              		.globl	crc_data_register_reset
+  39              	crc_data_register_reset:
+  40              	.LFB3:
+  53:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  54:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
+  55:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief      reset data register(CRC_DATA) to the value of 0xFFFFFFFF
+  56:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  none
+  57:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[out] none
+  58:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \retval     none
+  59:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+  60:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** void crc_data_register_reset(void)
+  61:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** {
+  41              		.loc 1 61 1 is_stmt 1
+  42              		.cfi_startproc
+  62:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     CRC_CTL |= (uint32_t)CRC_CTL_RST;
+  43              		.loc 1 62 5
+  44              		.loc 1 62 13 is_stmt 0
+  45 0000 37370240 		li	a4,1073885184
+  46 0004 1C47     		lw	a5,8(a4)
+  47 0006 93E71700 		ori	a5,a5,1
+  48 000a 1CC7     		sw	a5,8(a4)
+  63:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** }
+  49              		.loc 1 63 1
+  50 000c 8280     		ret
+  51              		.cfi_endproc
+  52              	.LFE3:
+  54              		.section	.text.crc_data_register_read,"ax",@progbits
+  55              		.align	1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 3
+
+
+  56              		.globl	crc_data_register_read
+  58              	crc_data_register_read:
+  59              	.LFB4:
+  64:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  65:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
+  66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief      read the value of the data register
+  67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  none
+  68:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[out] none
+  69:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \retval     32-bit value of the data register
+  70:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+  71:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** uint32_t crc_data_register_read(void)
+  72:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** {
+  60              		.loc 1 72 1 is_stmt 1
+  61              		.cfi_startproc
+  73:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     uint32_t data;
+  62              		.loc 1 73 5
+  74:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     data = CRC_DATA;
+  63              		.loc 1 74 5
+  64              		.loc 1 74 10 is_stmt 0
+  65 0000 B7370240 		li	a5,1073885184
+  66 0004 8843     		lw	a0,0(a5)
+  67              	.LVL0:
+  75:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     return (data);
+  68              		.loc 1 75 5 is_stmt 1
+  76:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** }
+  69              		.loc 1 76 1 is_stmt 0
+  70 0006 8280     		ret
+  71              		.cfi_endproc
+  72              	.LFE4:
+  74              		.section	.text.crc_free_data_register_read,"ax",@progbits
+  75              		.align	1
+  76              		.globl	crc_free_data_register_read
+  78              	crc_free_data_register_read:
+  79              	.LFB5:
+  77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief      read the value of the free data register
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  none
+  81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[out] none
+  82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \retval     8-bit value of the free data register
+  83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+  84:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** uint8_t crc_free_data_register_read(void)
+  85:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** {
+  80              		.loc 1 85 1 is_stmt 1
+  81              		.cfi_startproc
+  86:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     uint8_t fdata;
+  82              		.loc 1 86 5
+  87:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     fdata = (uint8_t)CRC_FDATA;
+  83              		.loc 1 87 5
+  84              		.loc 1 87 22 is_stmt 0
+  85 0000 B7370240 		li	a5,1073885184
+  86 0004 C843     		lw	a0,4(a5)
+  87              	.LVL1:
+  88:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     return (fdata);
+  88              		.loc 1 88 5 is_stmt 1
+  89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** }
+  89              		.loc 1 89 1 is_stmt 0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 4
+
+
+  90 0006 1375F50F 		andi	a0,a0,0xff
+  91 000a 8280     		ret
+  92              		.cfi_endproc
+  93              	.LFE5:
+  95              		.section	.text.crc_free_data_register_write,"ax",@progbits
+  96              		.align	1
+  97              		.globl	crc_free_data_register_write
+  99              	crc_free_data_register_write:
+ 100              	.LFB6:
+  90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+  91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
+  92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief      write data to the free data register
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  free_data: specified 8-bit data
+  94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[out] none
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \retval     none
+  96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+  97:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** void crc_free_data_register_write(uint8_t free_data)
+  98:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** {
+ 101              		.loc 1 98 1 is_stmt 1
+ 102              		.cfi_startproc
+ 103              	.LVL2:
+  99:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     CRC_FDATA = (uint32_t)free_data;
+ 104              		.loc 1 99 5
+ 105              		.loc 1 99 15 is_stmt 0
+ 106 0000 B7370240 		li	a5,1073885184
+ 107 0004 C8C3     		sw	a0,4(a5)
+ 100:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** }
+ 108              		.loc 1 100 1
+ 109 0006 8280     		ret
+ 110              		.cfi_endproc
+ 111              	.LFE6:
+ 113              		.section	.text.crc_single_data_calculate,"ax",@progbits
+ 114              		.align	1
+ 115              		.globl	crc_single_data_calculate
+ 117              	crc_single_data_calculate:
+ 118              	.LFB7:
+ 101:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+ 102:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
+ 103:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief      calculate the CRC value of a 32-bit data
+ 104:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  sdata: specified 32-bit data
+ 105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[out] none
+ 106:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \retval     32-bit value calculated by CRC
+ 107:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** uint32_t crc_single_data_calculate(uint32_t sdata)
+ 109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** {
+ 119              		.loc 1 109 1 is_stmt 1
+ 120              		.cfi_startproc
+ 121              	.LVL3:
+ 110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     CRC_DATA = sdata;
+ 122              		.loc 1 110 5
+ 123              		.loc 1 110 14 is_stmt 0
+ 124 0000 B7370240 		li	a5,1073885184
+ 125 0004 88C3     		sw	a0,0(a5)
+ 111:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     return (CRC_DATA);
+ 126              		.loc 1 111 5 is_stmt 1
+ 127              		.loc 1 111 13 is_stmt 0
+ 128 0006 8843     		lw	a0,0(a5)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 5
+
+
+ 129              	.LVL4:
+ 112:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** }
+ 130              		.loc 1 112 1
+ 131 0008 8280     		ret
+ 132              		.cfi_endproc
+ 133              	.LFE7:
+ 135              		.section	.text.crc_block_data_calculate,"ax",@progbits
+ 136              		.align	1
+ 137              		.globl	crc_block_data_calculate
+ 139              	crc_block_data_calculate:
+ 140              	.LFB8:
+ 113:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** 
+ 114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** /*!
+ 115:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \brief      calculate the CRC value of an array of 32-bit values
+ 116:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  array: pointer to an array of 32-bit values
+ 117:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[in]  size: size of the array
+ 118:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \param[out] none
+ 119:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     \retval     32-bit value calculated by CRC
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** */
+ 121:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** uint32_t crc_block_data_calculate(uint32_t array[], uint32_t size)
+ 122:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** {
+ 141              		.loc 1 122 1 is_stmt 1
+ 142              		.cfi_startproc
+ 143              	.LVL5:
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     uint32_t index;
+ 144              		.loc 1 123 5
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     for(index = 0U; index < size; index++){
+ 145              		.loc 1 124 5
+ 146              		.loc 1 124 15 is_stmt 0
+ 147 0000 8147     		li	a5,0
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****         CRC_DATA = array[index];
+ 148              		.loc 1 125 18
+ 149 0002 B7360240 		li	a3,1073885184
+ 150              	.LVL6:
+ 151              	.L8:
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     for(index = 0U; index < size; index++){
+ 152              		.loc 1 124 5 discriminator 1
+ 153 0006 6396B700 		bne	a5,a1,.L9
+ 126:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     }
+ 127:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     return (CRC_DATA);
+ 154              		.loc 1 127 5 is_stmt 1
+ 155              		.loc 1 127 13 is_stmt 0
+ 156 000a B7370240 		li	a5,1073885184
+ 157              	.LVL7:
+ 158 000e 8843     		lw	a0,0(a5)
+ 159              	.LVL8:
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c **** }
+ 160              		.loc 1 128 1
+ 161 0010 8280     		ret
+ 162              	.LVL9:
+ 163              	.L9:
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****         CRC_DATA = array[index];
+ 164              		.loc 1 125 9 is_stmt 1 discriminator 3
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****         CRC_DATA = array[index];
+ 165              		.loc 1 125 25 is_stmt 0 discriminator 3
+ 166 0012 13972700 		slli	a4,a5,2
+ 167 0016 2A97     		add	a4,a0,a4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 6
+
+
+ 168 0018 1843     		lw	a4,0(a4)
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****         CRC_DATA = array[index];
+ 169              		.loc 1 124 40 discriminator 3
+ 170 001a 8507     		addi	a5,a5,1
+ 171              	.LVL10:
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_crc.c ****     }
+ 172              		.loc 1 125 18 discriminator 3
+ 173 001c 98C2     		sw	a4,0(a3)
+ 174 001e E5B7     		j	.L8
+ 175              		.cfi_endproc
+ 176              	.LFE8:
+ 178              		.text
+ 179              	.Letext0:
+ 180              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 181              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 182              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_crc.c
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:13     .text.crc_deinit:0000000000000000 crc_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:17     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:18     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:19     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:20     .text.crc_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:24     .text.crc_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:25     .text.crc_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:27     .text.crc_deinit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:28     .text.crc_deinit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:31     .text.crc_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:32     .text.crc_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:39     .text.crc_data_register_reset:0000000000000000 crc_data_register_reset
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:42     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:43     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:44     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:45     .text.crc_data_register_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:50     .text.crc_data_register_reset:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:51     .text.crc_data_register_reset:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:58     .text.crc_data_register_read:0000000000000000 crc_data_register_read
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:61     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:62     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:63     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:64     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:65     .text.crc_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:69     .text.crc_data_register_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:70     .text.crc_data_register_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:71     .text.crc_data_register_read:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:78     .text.crc_free_data_register_read:0000000000000000 crc_free_data_register_read
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:81     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:82     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:83     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:84     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:85     .text.crc_free_data_register_read:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:89     .text.crc_free_data_register_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:90     .text.crc_free_data_register_read:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:92     .text.crc_free_data_register_read:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:99     .text.crc_free_data_register_write:0000000000000000 crc_free_data_register_write
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:102    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:104    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:105    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:106    .text.crc_free_data_register_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:109    .text.crc_free_data_register_write:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:110    .text.crc_free_data_register_write:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:117    .text.crc_single_data_calculate:0000000000000000 crc_single_data_calculate
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:120    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:122    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:123    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:124    .text.crc_single_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:127    .text.crc_single_data_calculate:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:128    .text.crc_single_data_calculate:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:131    .text.crc_single_data_calculate:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:132    .text.crc_single_data_calculate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:139    .text.crc_block_data_calculate:0000000000000000 crc_block_data_calculate
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:142    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:144    .text.crc_block_data_calculate:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 8
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:145    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:146    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:147    .text.crc_block_data_calculate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:149    .text.crc_block_data_calculate:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:153    .text.crc_block_data_calculate:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:155    .text.crc_block_data_calculate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:156    .text.crc_block_data_calculate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:161    .text.crc_block_data_calculate:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:165    .text.crc_block_data_calculate:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:166    .text.crc_block_data_calculate:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:170    .text.crc_block_data_calculate:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:173    .text.crc_block_data_calculate:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:175    .text.crc_block_data_calculate:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:35     .text.crc_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:54     .text.crc_data_register_reset:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:74     .text.crc_data_register_read:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:95     .text.crc_free_data_register_read:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:113    .text.crc_free_data_register_write:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:135    .text.crc_single_data_calculate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:178    .text.crc_block_data_calculate:0000000000000020 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:163    .text.crc_block_data_calculate:0000000000000012 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:151    .text.crc_block_data_calculate:0000000000000006 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:437    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:815    .debug_str:00000000000001df .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:803    .debug_str:0000000000000153 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:777    .debug_str:0000000000000040 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:747    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:765    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:787    .debug_str:00000000000000e1 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:823    .debug_str:0000000000000285 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:767    .debug_str:0000000000000000 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:781    .debug_str:00000000000000ac .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:813    .debug_str:00000000000001d5 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:825    .debug_str:0000000000000291 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:819    .debug_str:0000000000000270 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:785    .debug_str:00000000000000d6 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:775    .debug_str:000000000000002e .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:805    .debug_str:0000000000000199 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:793    .debug_str:00000000000000fe .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:795    .debug_str:0000000000000115 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:817    .debug_str:0000000000000267 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:807    .debug_str:00000000000001a7 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:821    .debug_str:0000000000000279 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:801    .debug_str:000000000000013a .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:140    .text.crc_block_data_calculate:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:176    .text.crc_block_data_calculate:0000000000000020 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:779    .debug_str:00000000000000a6 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:676    .debug_loc:0000000000000000 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:773    .debug_str:0000000000000029 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:809    .debug_str:00000000000001b7 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:694    .debug_loc:000000000000002c .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:769    .debug_str:000000000000000a .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:118    .text.crc_single_data_calculate:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:133    .text.crc_single_data_calculate:000000000000000a .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:797    .debug_str:000000000000011d .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:710    .debug_loc:0000000000000056 .LLST0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s 			page 9
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:829    .debug_str:00000000000002af .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:100    .text.crc_free_data_register_write:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:111    .text.crc_free_data_register_write:0000000000000008 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:789    .debug_str:00000000000000ee .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:783    .debug_str:00000000000000ba .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:79     .text.crc_free_data_register_read:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:93     .text.crc_free_data_register_read:000000000000000c .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:791    .debug_str:00000000000000f8 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:799    .debug_str:0000000000000123 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:59     .text.crc_data_register_read:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:72     .text.crc_data_register_read:0000000000000008 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:771    .debug_str:0000000000000024 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:811    .debug_str:00000000000001bd .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:40     .text.crc_data_register_reset:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:52     .text.crc_data_register_reset:000000000000000e .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:827    .debug_str:00000000000002a4 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:14     .text.crc_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:33     .text.crc_deinit:0000000000000012 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:143    .text.crc_block_data_calculate:0000000000000000 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:159    .text.crc_block_data_calculate:0000000000000010 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:162    .text.crc_block_data_calculate:0000000000000012 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:150    .text.crc_block_data_calculate:0000000000000006 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:157    .text.crc_block_data_calculate:000000000000000e .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:121    .text.crc_single_data_calculate:0000000000000000 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:129    .text.crc_single_data_calculate:0000000000000008 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccb0TSlf.s:184    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS
