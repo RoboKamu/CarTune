@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 1
 
 
    1              		.file	"system_gd32vf103.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /* system frequency define */
   42:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define __IRC8M           (IRC8M_VALUE)            /* internal 8 MHz RC oscillator frequency */
   43:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define __HXTAL           (HXTAL_VALUE)            /* high speed crystal oscillator frequency */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #define __SYS_OSC_CLK     (__IRC8M)                /* main oscillator frequency */
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
   98:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_96M_PLL_HXTAL;
   99:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** static void system_clock_96m_hxtal(void);
  100:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_108M_PLL_HXTAL)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 3
 
 
  101:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK_108M_PLL_HXTAL;
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  153:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* enable IRC8M */
  154:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL |= RCU_CTL_IRC8MEN;
   18              		.loc 1 154 5
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 4
 
 
   19              		.loc 1 154 13 is_stmt 0
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
   56 003c 23A60702 		sw	zero,44(a5)
  171:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  172:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* Reset HXTALEN, CKMEN, PLLEN, PLL1EN and PLL2EN bits */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 5
 
 
  173:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CTL &= ~(RCU_CTL_PLLEN | RCU_CTL_PLL1EN | RCU_CTL_PLL2EN | RCU_CTL_CKMEN | RCU_CTL_HXTALEN)
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  210:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             pllsel = (RCU_CFG0 & RCU_CFG0_PLLSEL);
  211:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  212:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 6
 
 
  213:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****             if(RCU_PLLSRC_IRC8M_DIV2 == pllsel){
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  267:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
  268:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
  269:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 7
 
 
  270:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  324:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
  325:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
  326:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 8
 
 
  327:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  381:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[in]  none
  382:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \param[out] none
  383:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     \retval     none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 9
 
 
  384:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** */
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  438:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
  439:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  440:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* select PLL as system clock */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 10
 
 
  441:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  495:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         RCU_CTL |= RCU_CTL_PLL1EN;
  496:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         /* wait till PLL1 is ready */
  497:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         while((RCU_CTL & RCU_CTL_PLL1STB) == 0){
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 11
 
 
  498:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         }
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  552:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
  553:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB2 = AHB/1 */
  554:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 12
 
 
  555:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* APB1 = AHB/2 */
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  609:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  610:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
  611:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     do{
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 13
 
 
  612:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****         timeout++;
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  666:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** }
  667:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  668:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** #elif defined (__SYSTEM_CLOCK_96M_PLL_HXTAL)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 14
 
 
  669:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** /*!
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  723:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 &= ~(RCU_CFG1_PREDV0SEL | RCU_CFG1_PREDV1 | RCU_CFG1_PLL1MF | RCU_CFG1_PREDV0);
  724:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CFG1 |= (RCU_PREDV0SRC_HXTAL | RCU_PREDV0_DIV2 );
  725:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     }
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 15
 
 
  726:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
   88              		.loc 1 761 9
   89              		.loc 1 762 9
   90              		.loc 1 762 22 is_stmt 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 16
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 16
 
 
   91 0062 1443     		lw	a3,0(a4)
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  124              		.loc 1 775 14 is_stmt 0
  125 008a D843     		lw	a4,4(a5)
  126 008c D8C3     		sw	a4,4(a5)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 17
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 17
 
 
  777:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  802:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  803:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		/* enable PLL1 */
  804:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 		RCU_CTL |= RCU_CTL_PLL1EN;
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 18
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 18
 
 
  158              		.loc 1 804 3 is_stmt 1
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  195 00f2 98C3     		sw	a4,0(a5)
  818:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  819:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     /* wait until PLL is stable */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 19
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 19
 
 
  820:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
@@ -1138,7 +1138,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  235              		.section	.text.SystemCoreClockUpdate,"ax",@progbits
  236              		.align	1
  237              		.globl	SystemCoreClockUpdate
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 20
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 20
 
 
  239              	SystemCoreClockUpdate:
@@ -1198,7 +1198,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  210:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  278              		.loc 1 210 23 is_stmt 0
  279 002c 5C43     		lw	a5,4(a4)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 21
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 21
 
 
  280              	.LVL9:
@@ -1258,7 +1258,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  316              		.loc 1 226 23 is_stmt 0
  317 0056 C547     		li	a5,17
  318 0058 6313F700 		bne	a4,a5,.L25
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 22
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 22
 
 
  227:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                     }
@@ -1318,7 +1318,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  236:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c **** 
  358              		.loc 1 236 19
  359 008a 3D8B     		andi	a4,a4,15
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 23
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 23
 
 
  360              	.LVL21:
@@ -1378,7 +1378,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  242:./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.c ****                 pllmf += 1U;
  400              		.loc 1 242 15 is_stmt 0
  401 00b2 BD46     		li	a3,15
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 24
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 24
 
 
  402 00b4 E300D7FE 		beq	a4,a3,.L27
@@ -1423,300 +1423,300 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 1
  435              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  436              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  437              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 25
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_gd32vf103.c
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:13     .text.SystemInit:0000000000000000 SystemInit
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:17     .text.SystemInit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:18     .text.SystemInit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:19     .text.SystemInit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:20     .text.SystemInit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:23     .text.SystemInit:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:26     .text.SystemInit:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:29     .text.SystemInit:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:30     .text.SystemInit:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:34     .text.SystemInit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:35     .text.SystemInit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:41     .text.SystemInit:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:42     .text.SystemInit:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:48     .text.SystemInit:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:49     .text.SystemInit:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:55     .text.SystemInit:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:56     .text.SystemInit:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:58     .text.SystemInit:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:59     .text.SystemInit:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:65     .text.SystemInit:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:66     .text.SystemInit:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:69     .text.SystemInit:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:73     .text.SystemInit:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:75     .text.SystemInit:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:76     .text.SystemInit:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:77     .text.SystemInit:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:78     .text.SystemInit:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:84     .text.SystemInit:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:88     .text.SystemInit:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:89     .text.SystemInit:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:90     .text.SystemInit:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:91     .text.SystemInit:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:94     .text.SystemInit:0000000000000064 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:99     .text.SystemInit:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:103    .text.SystemInit:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:104    .text.SystemInit:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:107    .text.SystemInit:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:112    .text.SystemInit:000000000000007e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:113    .text.SystemInit:000000000000007e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:116    .text.SystemInit:0000000000000080 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:117    .text.SystemInit:0000000000000080 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:119    .text.SystemInit:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:122    .text.SystemInit:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:124    .text.SystemInit:000000000000008a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:125    .text.SystemInit:000000000000008a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:128    .text.SystemInit:000000000000008e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:129    .text.SystemInit:000000000000008e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:133    .text.SystemInit:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:134    .text.SystemInit:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:138    .text.SystemInit:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:139    .text.SystemInit:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:144    .text.SystemInit:00000000000000a6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:145    .text.SystemInit:00000000000000a6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:146    .text.SystemInit:00000000000000a6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:147    .text.SystemInit:00000000000000a6 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 26
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:13     .text.SystemInit:0000000000000000 SystemInit
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:17     .text.SystemInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:18     .text.SystemInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:19     .text.SystemInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:20     .text.SystemInit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:23     .text.SystemInit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:26     .text.SystemInit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:29     .text.SystemInit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:30     .text.SystemInit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:34     .text.SystemInit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:35     .text.SystemInit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:41     .text.SystemInit:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:42     .text.SystemInit:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:48     .text.SystemInit:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:49     .text.SystemInit:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:55     .text.SystemInit:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:56     .text.SystemInit:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:58     .text.SystemInit:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:59     .text.SystemInit:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:65     .text.SystemInit:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:66     .text.SystemInit:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:69     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:73     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:75     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:76     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:77     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:78     .text.SystemInit:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:84     .text.SystemInit:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:88     .text.SystemInit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:89     .text.SystemInit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:90     .text.SystemInit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:91     .text.SystemInit:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:94     .text.SystemInit:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:99     .text.SystemInit:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:103    .text.SystemInit:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:104    .text.SystemInit:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:107    .text.SystemInit:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:112    .text.SystemInit:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:113    .text.SystemInit:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:116    .text.SystemInit:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:117    .text.SystemInit:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:119    .text.SystemInit:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:122    .text.SystemInit:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:124    .text.SystemInit:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:125    .text.SystemInit:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:128    .text.SystemInit:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:129    .text.SystemInit:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:133    .text.SystemInit:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:134    .text.SystemInit:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:138    .text.SystemInit:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:139    .text.SystemInit:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:144    .text.SystemInit:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:145    .text.SystemInit:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:146    .text.SystemInit:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:147    .text.SystemInit:00000000000000a6 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 26
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:152    .text.SystemInit:00000000000000ae .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:153    .text.SystemInit:00000000000000ae .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:159    .text.SystemInit:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:160    .text.SystemInit:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:165    .text.SystemInit:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:166    .text.SystemInit:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:169    .text.SystemInit:00000000000000c8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:170    .text.SystemInit:00000000000000c8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:172    .text.SystemInit:00000000000000ca .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:175    .text.SystemInit:00000000000000d2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:176    .text.SystemInit:00000000000000d2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:181    .text.SystemInit:00000000000000dc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:182    .text.SystemInit:00000000000000dc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:185    .text.SystemInit:00000000000000e0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:186    .text.SystemInit:00000000000000e0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:188    .text.SystemInit:00000000000000e2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:191    .text.SystemInit:00000000000000ea .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:192    .text.SystemInit:00000000000000ea .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:197    .text.SystemInit:00000000000000f4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:198    .text.SystemInit:00000000000000f4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:201    .text.SystemInit:00000000000000f8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:202    .text.SystemInit:00000000000000f8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:204    .text.SystemInit:00000000000000fa .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:207    .text.SystemInit:0000000000000102 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:208    .text.SystemInit:0000000000000102 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:212    .text.SystemInit:0000000000000108 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:213    .text.SystemInit:0000000000000108 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:217    .text.SystemInit:0000000000000110 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:218    .text.SystemInit:0000000000000110 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:221    .text.SystemInit:0000000000000114 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:222    .text.SystemInit:0000000000000114 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:224    .text.SystemInit:0000000000000116 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:226    .text.SystemInit:0000000000000118 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:231    .text.SystemInit:000000000000011a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:232    .text.SystemInit:000000000000011c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:239    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:242    .text.SystemCoreClockUpdate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:243    .text.SystemCoreClockUpdate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:244    .text.SystemCoreClockUpdate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:245    .text.SystemCoreClockUpdate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:246    .text.SystemCoreClockUpdate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:247    .text.SystemCoreClockUpdate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:248    .text.SystemCoreClockUpdate:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:252    .text.SystemCoreClockUpdate:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:254    .text.SystemCoreClockUpdate:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:256    .text.SystemCoreClockUpdate:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:259    .text.SystemCoreClockUpdate:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:266    .text.SystemCoreClockUpdate:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:267    .text.SystemCoreClockUpdate:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:272    .text.SystemCoreClockUpdate:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:274    .text.SystemCoreClockUpdate:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:278    .text.SystemCoreClockUpdate:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:279    .text.SystemCoreClockUpdate:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:282    .text.SystemCoreClockUpdate:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:283    .text.SystemCoreClockUpdate:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:287    .text.SystemCoreClockUpdate:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:288    .text.SystemCoreClockUpdate:0000000000000036 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 27
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:152    .text.SystemInit:00000000000000ae .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:153    .text.SystemInit:00000000000000ae .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:159    .text.SystemInit:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:160    .text.SystemInit:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:165    .text.SystemInit:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:166    .text.SystemInit:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:169    .text.SystemInit:00000000000000c8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:170    .text.SystemInit:00000000000000c8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:172    .text.SystemInit:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:175    .text.SystemInit:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:176    .text.SystemInit:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:181    .text.SystemInit:00000000000000dc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:182    .text.SystemInit:00000000000000dc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:185    .text.SystemInit:00000000000000e0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:186    .text.SystemInit:00000000000000e0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:188    .text.SystemInit:00000000000000e2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:191    .text.SystemInit:00000000000000ea .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:192    .text.SystemInit:00000000000000ea .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:197    .text.SystemInit:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:198    .text.SystemInit:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:201    .text.SystemInit:00000000000000f8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:202    .text.SystemInit:00000000000000f8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:204    .text.SystemInit:00000000000000fa .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:207    .text.SystemInit:0000000000000102 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:208    .text.SystemInit:0000000000000102 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:212    .text.SystemInit:0000000000000108 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:213    .text.SystemInit:0000000000000108 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:217    .text.SystemInit:0000000000000110 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:218    .text.SystemInit:0000000000000110 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:221    .text.SystemInit:0000000000000114 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:222    .text.SystemInit:0000000000000114 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:224    .text.SystemInit:0000000000000116 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:226    .text.SystemInit:0000000000000118 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:231    .text.SystemInit:000000000000011a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:232    .text.SystemInit:000000000000011c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:239    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:242    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:243    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:244    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:245    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:246    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:247    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:248    .text.SystemCoreClockUpdate:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:252    .text.SystemCoreClockUpdate:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:254    .text.SystemCoreClockUpdate:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:256    .text.SystemCoreClockUpdate:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:259    .text.SystemCoreClockUpdate:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:266    .text.SystemCoreClockUpdate:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:267    .text.SystemCoreClockUpdate:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:272    .text.SystemCoreClockUpdate:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:274    .text.SystemCoreClockUpdate:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:278    .text.SystemCoreClockUpdate:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:279    .text.SystemCoreClockUpdate:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:282    .text.SystemCoreClockUpdate:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:283    .text.SystemCoreClockUpdate:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:287    .text.SystemCoreClockUpdate:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:288    .text.SystemCoreClockUpdate:0000000000000036 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 27
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:289    .text.SystemCoreClockUpdate:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:292    .text.SystemCoreClockUpdate:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:293    .text.SystemCoreClockUpdate:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:296    .text.SystemCoreClockUpdate:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:297    .text.SystemCoreClockUpdate:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:300    .text.SystemCoreClockUpdate:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:302    .text.SystemCoreClockUpdate:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:305    .text.SystemCoreClockUpdate:0000000000000048 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:307    .text.SystemCoreClockUpdate:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:310    .text.SystemCoreClockUpdate:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:311    .text.SystemCoreClockUpdate:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:313    .text.SystemCoreClockUpdate:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:316    .text.SystemCoreClockUpdate:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:317    .text.SystemCoreClockUpdate:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:320    .text.SystemCoreClockUpdate:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:324    .text.SystemCoreClockUpdate:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:325    .text.SystemCoreClockUpdate:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:329    .text.SystemCoreClockUpdate:000000000000006a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:333    .text.SystemCoreClockUpdate:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:334    .text.SystemCoreClockUpdate:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:338    .text.SystemCoreClockUpdate:0000000000000074 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:339    .text.SystemCoreClockUpdate:0000000000000074 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:342    .text.SystemCoreClockUpdate:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:345    .text.SystemCoreClockUpdate:0000000000000078 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:349    .text.SystemCoreClockUpdate:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:350    .text.SystemCoreClockUpdate:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:353    .text.SystemCoreClockUpdate:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:355    .text.SystemCoreClockUpdate:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:357    .text.SystemCoreClockUpdate:0000000000000086 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:359    .text.SystemCoreClockUpdate:000000000000008a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:362    .text.SystemCoreClockUpdate:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:363    .text.SystemCoreClockUpdate:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:365    .text.SystemCoreClockUpdate:0000000000000090 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:366    .text.SystemCoreClockUpdate:0000000000000090 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:370    .text.SystemCoreClockUpdate:0000000000000094 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:371    .text.SystemCoreClockUpdate:0000000000000094 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:372    .text.SystemCoreClockUpdate:0000000000000094 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:375    .text.SystemCoreClockUpdate:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:377    .text.SystemCoreClockUpdate:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:378    .text.SystemCoreClockUpdate:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:381    .text.SystemCoreClockUpdate:000000000000009a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:386    .text.SystemCoreClockUpdate:000000000000009e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:393    .text.SystemCoreClockUpdate:00000000000000a8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:400    .text.SystemCoreClockUpdate:00000000000000b2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:401    .text.SystemCoreClockUpdate:00000000000000b2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:404    .text.SystemCoreClockUpdate:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:405    .text.SystemCoreClockUpdate:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:408    .text.SystemCoreClockUpdate:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:409    .text.SystemCoreClockUpdate:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:410    .text.SystemCoreClockUpdate:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:412    .text.SystemCoreClockUpdate:00000000000000be .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:413    .text.SystemCoreClockUpdate:00000000000000be .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:417    .text.SystemCoreClockUpdate:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:420    .text.SystemCoreClockUpdate:00000000000000c6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:422    .text.SystemCoreClockUpdate:00000000000000ca .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:431    .sdata.SystemCoreClock:0000000000000000 SystemCoreClock
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:428    .sdata.SystemCoreClock:0000000000000000 .LANCHOR0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 28
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:289    .text.SystemCoreClockUpdate:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:292    .text.SystemCoreClockUpdate:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:293    .text.SystemCoreClockUpdate:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:296    .text.SystemCoreClockUpdate:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:297    .text.SystemCoreClockUpdate:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:300    .text.SystemCoreClockUpdate:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:302    .text.SystemCoreClockUpdate:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:305    .text.SystemCoreClockUpdate:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:307    .text.SystemCoreClockUpdate:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:310    .text.SystemCoreClockUpdate:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:311    .text.SystemCoreClockUpdate:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:313    .text.SystemCoreClockUpdate:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:316    .text.SystemCoreClockUpdate:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:317    .text.SystemCoreClockUpdate:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:320    .text.SystemCoreClockUpdate:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:324    .text.SystemCoreClockUpdate:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:325    .text.SystemCoreClockUpdate:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:329    .text.SystemCoreClockUpdate:000000000000006a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:333    .text.SystemCoreClockUpdate:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:334    .text.SystemCoreClockUpdate:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:338    .text.SystemCoreClockUpdate:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:339    .text.SystemCoreClockUpdate:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:342    .text.SystemCoreClockUpdate:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:345    .text.SystemCoreClockUpdate:0000000000000078 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:349    .text.SystemCoreClockUpdate:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:350    .text.SystemCoreClockUpdate:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:353    .text.SystemCoreClockUpdate:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:355    .text.SystemCoreClockUpdate:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:357    .text.SystemCoreClockUpdate:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:359    .text.SystemCoreClockUpdate:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:362    .text.SystemCoreClockUpdate:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:363    .text.SystemCoreClockUpdate:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:365    .text.SystemCoreClockUpdate:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:366    .text.SystemCoreClockUpdate:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:370    .text.SystemCoreClockUpdate:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:371    .text.SystemCoreClockUpdate:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:372    .text.SystemCoreClockUpdate:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:375    .text.SystemCoreClockUpdate:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:377    .text.SystemCoreClockUpdate:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:378    .text.SystemCoreClockUpdate:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:381    .text.SystemCoreClockUpdate:000000000000009a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:386    .text.SystemCoreClockUpdate:000000000000009e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:393    .text.SystemCoreClockUpdate:00000000000000a8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:400    .text.SystemCoreClockUpdate:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:401    .text.SystemCoreClockUpdate:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:404    .text.SystemCoreClockUpdate:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:405    .text.SystemCoreClockUpdate:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:408    .text.SystemCoreClockUpdate:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:409    .text.SystemCoreClockUpdate:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:410    .text.SystemCoreClockUpdate:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:412    .text.SystemCoreClockUpdate:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:413    .text.SystemCoreClockUpdate:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:417    .text.SystemCoreClockUpdate:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:420    .text.SystemCoreClockUpdate:00000000000000c6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:422    .text.SystemCoreClockUpdate:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:431    .sdata.SystemCoreClock:0000000000000000 SystemCoreClock
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:428    .sdata.SystemCoreClock:0000000000000000 .LANCHOR0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 28
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:235    .text.SystemInit:000000000000011c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:426    .text.SystemCoreClockUpdate:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:235    .text.SystemInit:000000000000011c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:426    .text.SystemCoreClockUpdate:00000000000000ca .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:101    .text.SystemInit:0000000000000070 .L2
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:86     .text.SystemInit:0000000000000062 .L3
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:114    .text.SystemInit:0000000000000080 .L4
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:110    .text.SystemInit:000000000000007e .L5
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:167    .text.SystemInit:00000000000000c8 .L6
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:183    .text.SystemInit:00000000000000e0 .L7
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:199    .text.SystemInit:00000000000000f8 .L8
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:219    .text.SystemInit:0000000000000114 .L9
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:264    .text.SystemCoreClockUpdate:0000000000000020 .L20
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:276    .text.SystemCoreClockUpdate:000000000000002c .L21
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:391    .text.SystemCoreClockUpdate:00000000000000a8 .L31
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:384    .text.SystemCoreClockUpdate:000000000000009e .L32
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:322    .text.SystemCoreClockUpdate:000000000000005e .L25
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:398    .text.SystemCoreClockUpdate:00000000000000b2 .L26
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:331    .text.SystemCoreClockUpdate:000000000000006e .L24
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:347    .text.SystemCoreClockUpdate:000000000000007c .L23
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:369    .text.SystemCoreClockUpdate:0000000000000094 .L27
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:376    .text.SystemCoreClockUpdate:0000000000000096 .L29
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:270    .text.SystemCoreClockUpdate:0000000000000028 .L36
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:691    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1165   .debug_str:00000000000001e9 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1125   .debug_str:000000000000005e .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1129   .debug_str:00000000000000b2 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1099   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1107   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1139   .debug_str:0000000000000143 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1175   .debug_str:0000000000000295 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1109   .debug_str:0000000000000000 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1133   .debug_str:0000000000000123 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1157   .debug_str:00000000000001bb .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1135   .debug_str:0000000000000131 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1119   .debug_str:0000000000000029 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1169   .debug_str:000000000000027a .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1131   .debug_str:0000000000000118 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1127   .debug_str:00000000000000a0 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1149   .debug_str:000000000000017f .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1141   .debug_str:0000000000000150 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1143   .debug_str:0000000000000167 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1161   .debug_str:00000000000001cc .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1167   .debug_str:0000000000000271 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1153   .debug_str:0000000000000195 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1173   .debug_str:0000000000000289 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1123   .debug_str:0000000000000046 .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1151   .debug_str:000000000000018d .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1121   .debug_str:000000000000003c .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1155   .debug_str:00000000000001a5 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:240    .text.SystemCoreClockUpdate:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:423    .text.SystemCoreClockUpdate:00000000000000ca .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1145   .debug_str:000000000000016f .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:917    .debug_loc:0000000000000000 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1159   .debug_str:00000000000001c5 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:928    .debug_loc:000000000000001e .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1111   .debug_str:000000000000000a .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:951    .debug_loc:0000000000000048 .LLST4
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s 			page 29
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:101    .text.SystemInit:0000000000000070 .L2
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:86     .text.SystemInit:0000000000000062 .L3
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:114    .text.SystemInit:0000000000000080 .L4
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:110    .text.SystemInit:000000000000007e .L5
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:167    .text.SystemInit:00000000000000c8 .L6
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:183    .text.SystemInit:00000000000000e0 .L7
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:199    .text.SystemInit:00000000000000f8 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:219    .text.SystemInit:0000000000000114 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:264    .text.SystemCoreClockUpdate:0000000000000020 .L20
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:276    .text.SystemCoreClockUpdate:000000000000002c .L21
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:391    .text.SystemCoreClockUpdate:00000000000000a8 .L31
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:384    .text.SystemCoreClockUpdate:000000000000009e .L32
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:322    .text.SystemCoreClockUpdate:000000000000005e .L25
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:398    .text.SystemCoreClockUpdate:00000000000000b2 .L26
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:331    .text.SystemCoreClockUpdate:000000000000006e .L24
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:347    .text.SystemCoreClockUpdate:000000000000007c .L23
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:369    .text.SystemCoreClockUpdate:0000000000000094 .L27
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:376    .text.SystemCoreClockUpdate:0000000000000096 .L29
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:270    .text.SystemCoreClockUpdate:0000000000000028 .L36
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:691    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1165   .debug_str:00000000000001e9 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1125   .debug_str:000000000000005e .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1129   .debug_str:00000000000000b2 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1099   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1107   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1139   .debug_str:0000000000000143 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1175   .debug_str:0000000000000295 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1109   .debug_str:0000000000000000 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1133   .debug_str:0000000000000123 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1157   .debug_str:00000000000001bb .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1135   .debug_str:0000000000000131 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1119   .debug_str:0000000000000029 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1169   .debug_str:000000000000027a .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1131   .debug_str:0000000000000118 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1127   .debug_str:00000000000000a0 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1149   .debug_str:000000000000017f .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1141   .debug_str:0000000000000150 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1143   .debug_str:0000000000000167 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1161   .debug_str:00000000000001cc .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1167   .debug_str:0000000000000271 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1153   .debug_str:0000000000000195 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1173   .debug_str:0000000000000289 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1123   .debug_str:0000000000000046 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1151   .debug_str:000000000000018d .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1121   .debug_str:000000000000003c .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1155   .debug_str:00000000000001a5 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:240    .text.SystemCoreClockUpdate:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:423    .text.SystemCoreClockUpdate:00000000000000ca .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1145   .debug_str:000000000000016f .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:917    .debug_loc:0000000000000000 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1159   .debug_str:00000000000001c5 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:928    .debug_loc:000000000000001e .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1111   .debug_str:000000000000000a .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:951    .debug_loc:0000000000000048 .LLST4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s 			page 29
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1171   .debug_str:0000000000000283 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:974    .debug_loc:0000000000000072 .LLST5
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1137   .debug_str:000000000000013c .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:985    .debug_loc:0000000000000090 .LLST6
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1113   .debug_str:0000000000000014 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1008   .debug_loc:00000000000000ce .LLST7
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1115   .debug_str:000000000000001b .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1025   .debug_loc:00000000000000f2 .LLST8
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1117   .debug_str:0000000000000022 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1032   .debug_loc:0000000000000105 .LLST9
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1147   .debug_str:0000000000000174 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:14     .text.SystemInit:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:233    .text.SystemInit:000000000000011c .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:70     .text.SystemInit:0000000000000052 .LBB8
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:229    .text.SystemInit:000000000000011a .LBE8
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:71     .text.SystemInit:0000000000000052 .LBB9
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:228    .text.SystemInit:000000000000011a .LBE9
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:72     .text.SystemInit:0000000000000052 .LBB10
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:227    .text.SystemInit:000000000000011a .LBE10
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1039   .debug_loc:0000000000000118 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1066   .debug_loc:000000000000014e .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:1163   .debug_str:00000000000001d5 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:257    .text.SystemCoreClockUpdate:0000000000000010 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:268    .text.SystemCoreClockUpdate:0000000000000024 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:275    .text.SystemCoreClockUpdate:000000000000002c .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:280    .text.SystemCoreClockUpdate:000000000000002e .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:290    .text.SystemCoreClockUpdate:0000000000000038 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:390    .text.SystemCoreClockUpdate:00000000000000a8 .LVL27
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:394    .text.SystemCoreClockUpdate:00000000000000ac .LVL28
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:298    .text.SystemCoreClockUpdate:0000000000000042 .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:383    .text.SystemCoreClockUpdate:000000000000009e .LVL25
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:387    .text.SystemCoreClockUpdate:00000000000000a2 .LVL26
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:360    .text.SystemCoreClockUpdate:000000000000008c .LVL21
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:379    .text.SystemCoreClockUpdate:000000000000009a .LVL24
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:397    .text.SystemCoreClockUpdate:00000000000000b2 .LVL29
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:414    .text.SystemCoreClockUpdate:00000000000000c0 .LVL31
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:286    .text.SystemCoreClockUpdate:0000000000000036 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:330    .text.SystemCoreClockUpdate:000000000000006e .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:418    .text.SystemCoreClockUpdate:00000000000000c6 .LVL32
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:336    .text.SystemCoreClockUpdate:0000000000000074 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:340    .text.SystemCoreClockUpdate:0000000000000076 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:343    .text.SystemCoreClockUpdate:0000000000000078 .LVL19
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:346    .text.SystemCoreClockUpdate:000000000000007c .LVL20
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:308    .text.SystemCoreClockUpdate:000000000000004e .LVL13
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:314    .text.SystemCoreClockUpdate:0000000000000056 .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:74     .text.SystemInit:0000000000000052 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:85     .text.SystemInit:0000000000000062 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:97     .text.SystemInit:000000000000006e .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:100    .text.SystemInit:0000000000000070 .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:92     .text.SystemInit:0000000000000064 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:108    .text.SystemInit:000000000000007a .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccxUhuux.s:439    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1171   .debug_str:0000000000000283 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:974    .debug_loc:0000000000000072 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1137   .debug_str:000000000000013c .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:985    .debug_loc:0000000000000090 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1113   .debug_str:0000000000000014 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1008   .debug_loc:00000000000000ce .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1115   .debug_str:000000000000001b .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1025   .debug_loc:00000000000000f2 .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1117   .debug_str:0000000000000022 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1032   .debug_loc:0000000000000105 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1147   .debug_str:0000000000000174 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:14     .text.SystemInit:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:233    .text.SystemInit:000000000000011c .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:70     .text.SystemInit:0000000000000052 .LBB8
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:229    .text.SystemInit:000000000000011a .LBE8
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:71     .text.SystemInit:0000000000000052 .LBB9
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:228    .text.SystemInit:000000000000011a .LBE9
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:72     .text.SystemInit:0000000000000052 .LBB10
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:227    .text.SystemInit:000000000000011a .LBE10
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1039   .debug_loc:0000000000000118 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1066   .debug_loc:000000000000014e .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:1163   .debug_str:00000000000001d5 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:257    .text.SystemCoreClockUpdate:0000000000000010 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:268    .text.SystemCoreClockUpdate:0000000000000024 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:275    .text.SystemCoreClockUpdate:000000000000002c .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:280    .text.SystemCoreClockUpdate:000000000000002e .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:290    .text.SystemCoreClockUpdate:0000000000000038 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:390    .text.SystemCoreClockUpdate:00000000000000a8 .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:394    .text.SystemCoreClockUpdate:00000000000000ac .LVL28
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:298    .text.SystemCoreClockUpdate:0000000000000042 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:383    .text.SystemCoreClockUpdate:000000000000009e .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:387    .text.SystemCoreClockUpdate:00000000000000a2 .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:360    .text.SystemCoreClockUpdate:000000000000008c .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:379    .text.SystemCoreClockUpdate:000000000000009a .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:397    .text.SystemCoreClockUpdate:00000000000000b2 .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:414    .text.SystemCoreClockUpdate:00000000000000c0 .LVL31
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:286    .text.SystemCoreClockUpdate:0000000000000036 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:330    .text.SystemCoreClockUpdate:000000000000006e .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:418    .text.SystemCoreClockUpdate:00000000000000c6 .LVL32
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:336    .text.SystemCoreClockUpdate:0000000000000074 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:340    .text.SystemCoreClockUpdate:0000000000000076 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:343    .text.SystemCoreClockUpdate:0000000000000078 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:346    .text.SystemCoreClockUpdate:000000000000007c .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:308    .text.SystemCoreClockUpdate:000000000000004e .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:314    .text.SystemCoreClockUpdate:0000000000000056 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:74     .text.SystemInit:0000000000000052 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:85     .text.SystemInit:0000000000000062 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:97     .text.SystemInit:000000000000006e .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:100    .text.SystemInit:0000000000000070 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:92     .text.SystemInit:0000000000000064 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:108    .text.SystemInit:000000000000007a .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccw6jl4e.s:439    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

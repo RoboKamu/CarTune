@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "gd32v_mpu6500_if.h": "c"
   }
 }

@@ -33,11 +33,13 @@ OF SUCH DAMAGE.
 #include "gd32vf103.h"
 #include "drivers.h"
 #include "lcd.h"
-#include "delay.h"
 #include "gd32v_mpu6500_if.h"
+#include "butt.h"
 #include <math.h>
 
-#define MARGIN 104                 // margin for movement to turn pskiva on (current ~70% )  
+#define MARGIN            104                 // margin for movement to turn pskiva on (current ~70% )  
+#define INITIAL_HOUR      12
+#define INITAL_MIN        0
 
 void handle_imu();
 
@@ -51,17 +53,18 @@ int main(void){
       to change is MPU6500_WHO_AM_I_ID from 0x11 to 0x70. */
   mpu6500_install(I2C0);
   
-  t5omsi();                       // initialize timer5 1kHz
-  /* Initialize LCD */
-  Lcd_SetType(LCD_INVERTED);
-  Lcd_Init();
-  LCD_Clear(BLACK);
+  // initialize timer and LCD
+  init_pskiva();
   
   // The related data structure for the IMU, contains a vector of x, y, z floats
   mpu_vector_t vec, vec_temp;
 
-  // counter variables  
+  // counter variables 
   int c=0, ms=0, s=0; 
+  // display variables
+  int hour = INITIAL_HOUR;
+  int min = INITAL_MIN;
+
   // vector scales 
   int32_t v, v_temp;
 
@@ -78,17 +81,17 @@ int main(void){
 
       if (!(ms%100))                                       // every 100 ms..
         handle_imu(&vec, &vec_temp, &v, &v_temp, &c);      // ..handle imu
-      // if (ms%150){                                      // every 150 ms..
-      //   //handle_buttons();                             // ..handle buttons
-      // }
+      if (!(ms%150)){                                      // every 150 ms..
+        butt(&hour, &min);                                 // ..handle buttons..
+        displayTime(hour, min);                            // ..and display time
+      }
       if (ms == 1000){
         s++;
         ms = 0;
         // tick();
         if (s==15){
           // determine car motion 
-          //c > MARGIN ? pskiva(1) : pskiva(0);
-          (c > MARGIN) ? LCD_ShowString(10, 30, "On ", RED) : LCD_ShowString(10, 30, "Off", GREEN);
+          (c > MARGIN) ?  LCD_ShowStr(10, 50, "ON ", GREEN, OPAQUE) : LCD_ShowStr(10, 50, "Off", RED, OPAQUE);
           c=0; s=0;
         }
       }
