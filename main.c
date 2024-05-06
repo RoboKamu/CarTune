@@ -1,6 +1,6 @@
 /*!
   \file  main.c
-  \brief USB CDC ACM device
+  \brief IMU, LCD & button integration for MCU
 */
 
 /*
@@ -37,15 +37,11 @@ OF SUCH DAMAGE.
 #include "gd32v_mpu6500_if.h"
 #include <math.h>
 
-#define GRAPH_HEIGHT    30
+#define MARGIN 104                 // margin for movement to turn pskiva on (current ~70% )  
 
+void handle_imu();
 
 int main(void){
-  /* The related data structure for the IMU, contains a vector of x, y, z floats*/
-  mpu_vector_t vec, vec_temp;
-  /* for lcd */
-  uint16_t line_color;
-
   /* Initialize pins for I2C */
   rcu_periph_clock_enable(RCU_GPIOB);
   rcu_periph_clock_enable(RCU_I2C0);
@@ -55,53 +51,62 @@ int main(void){
       to change is MPU6500_WHO_AM_I_ID from 0x11 to 0x70. */
   mpu6500_install(I2C0);
   
+  t5omsi();                       // initialize timer5 1kHz
   /* Initialize LCD */
   Lcd_SetType(LCD_INVERTED);
   Lcd_Init();
   LCD_Clear(BLACK);
   
-  mpu6500_getAccel(&vec_temp);
-  int c=0, idle=0; 
+  // The related data structure for the IMU, contains a vector of x, y, z floats
+  mpu_vector_t vec, vec_temp;
+
+  // counter variables  
+  int c=0, ms=0, s=0; 
+  // vector scales 
   int32_t v, v_temp;
 
+  // inital vector resp. vecotr magnitude
+  mpu6500_getAccel(&vec_temp);
+  v_temp = sqrtf((vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z));
+
   while(1){
-    // display the conditional counter
-    LCD_ShowNum(10, 50, c, 3, WHITE);
+    // display vector counter
+    LCD_ShowNum(10, 10, c, 3, WHITE);
 
-    /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
-    mpu6500_getAccel(&vec_temp);
-    // calc vector magnitude
-    v_temp = sqrtf((vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z));
-    // and display it
-    LCD_ShowNum(10, 10, v, 4, WHITE);
-    // wait 100 ms
-    delay_1ms(100);
-    idle++;
+    if (t5expq){
+      ms++;
 
-    /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
-    mpu6500_getAccel(&vec);                                         
-    // calc another vec magnitude 
-    v = sqrtf((vec.x*vec.x + vec.y*vec.y + vec.z*vec.z));
-
-    // change between intervall? --> c++; 
-    if (v_temp <= v+50 && v_temp >= v-50) c++;
-    // after 15 seconds chech if c is true ~65% of the time 
-    if (idle >= 150){
-      if (c>=98)
-        LCD_ShowString(10, 30, "On ", RED);
-      else 
-        LCD_ShowString(10, 30, "Off", GREEN);
-      
-      // wait for the LCD to finish draw then wait 1 second
-      LCD_Wait_On_Queue();
-      delay_1ms(1000);
-      // reset variables
-      c=0; idle=0;
+      if (!(ms%100))                                       // every 100 ms..
+        handle_imu(&vec, &vec_temp, &v, &v_temp, &c);      // ..handle imu
+      // if (ms%150){                                      // every 150 ms..
+      //   //handle_buttons();                             // ..handle buttons
+      // }
+      if (ms == 1000){
+        s++;
+        ms = 0;
+        // tick();
+        if (s==15){
+          // determine car motion 
+          //c > MARGIN ? pskiva(1) : pskiva(0);
+          (c > MARGIN) ? LCD_ShowString(10, 30, "On ", RED) : LCD_ShowString(10, 30, "Off", GREEN);
+          c=0; s=0;
+        }
+      }
     }
-    /* Store the last vector so it can be erased */
-    vec_temp = vec;
     /* Wait for LCD to finish drawing */
     LCD_Wait_On_Queue();    
   }
 }
 
+void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC){
+  /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
+  mpu6500_getAccel(pVec);
+  // calc vector magnitude
+  (*pV) = sqrtf((pVec->x*pVec->x + pVec->y*pVec->y + pVec->z*pVec->z));
+  
+  // note if there is a change in magnitude withing an interval 
+  if ( (*pV_temp) <= (*pV)+50 && (*pV_temp) >= (*pV)-50 ) (*pC)++;
+  /* Store the last vector so it can be erased */
+  (*pVec_temp) = (*pVec);
+  (*pV_temp) = (*pV);
+}
