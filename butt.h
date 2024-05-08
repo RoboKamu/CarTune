@@ -47,4 +47,4 @@ void butt(int* pHour, int* pMin);
   @param      hours: hours to show on clock display 
   @param      mins: minutes to show on clock display
 */
-void displayTime(int hours, int mins);
+void displayClock(int hours, int mins);

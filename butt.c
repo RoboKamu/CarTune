@@ -34,6 +34,7 @@ OF SUCH DAMAGE.
 #include "drivers.h"
 #include "lcd.h"
 #include "delay.h"
+#include "butt.h"
 #include <stdio.h>
 
 #define BUTTON1 GPIO_PIN_4    // closest to mcu on breadboard
@@ -112,7 +113,7 @@ void butt(int* pHour, int* pMin){
   }
 }
 
-void displayTime(int hour, int mins){
+void displayClock(int hour, int mins){
   // Update LCD display with the new time
   char timeStr[10];
   sprintf(timeStr, "CLOCK: %02d:%02d", hour, mins);

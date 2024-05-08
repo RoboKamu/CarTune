@@ -32,9 +32,11 @@ OF SUCH DAMAGE.
 
 #include "gd32vf103.h"
 #include "drivers.h"
-#include "lcd.h"
 #include "gd32v_mpu6500_if.h"
+#include "lcd.h"
 #include "butt.h"
+#include "clock.h"
+#include "delay.h"
 #include <math.h>
 
 #define MARGIN            104                 // margin for movement to turn pskiva on (current ~70% )  
@@ -77,23 +79,26 @@ int main(void){
     LCD_ShowNum(10, 10, c, 3, WHITE);
 
     if (t5expq){
-      ms++;
+      ms++;                            
 
-      if (!(ms%100))                                       // every 100 ms..
-        handle_imu(&vec, &vec_temp, &v, &v_temp, &c);      // ..handle imu
-      if (!(ms%150)){                                      // every 150 ms..
-        butt(&hour, &min);                                 // ..handle buttons..
-        displayTime(hour, min);                            // ..and display time
+      if (!(ms%100))                                      // every 100 ms..
+        handle_imu(&vec, &vec_temp, &v, &v_temp, &c);     // ..handle imu
+      if (!(ms%150)){                                     // every 150 ms..
+        butt(&hour, &min);                                // ..handle buttons..
+        displayClock(hour, min);                          // ..and display time
       }
-      if (ms == 1000){
-        s++;
-        ms = 0;
-        // tick();
-        if (s==15){
+      if (ms==1000){                                    // every second..
+        ms=0; s++;
+        if (!(s%15)) {
           // determine car motion 
           (c > MARGIN) ?  LCD_ShowStr(10, 50, "ON ", GREEN, OPAQUE) : LCD_ShowStr(10, 50, "Off", RED, OPAQUE);
-          c=0; s=0;
+          c=0;
         }
+        if (s==60) {
+          incrementClock(&hour, &min);
+          s=0;
+        }
+        LCD_ShowNum(50, 50, s, 2, YELLOW);
       }
     }
     /* Wait for LCD to finish drawing */
@@ -101,6 +106,12 @@ int main(void){
   }
 }
 
+/// @brief handles calculations for accelerometer & destroys old so it can be updated
+/// @param pVec 
+/// @param pVec_temp 
+/// @param pV 
+/// @param pV_temp 
+/// @param pC 
 void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC){
   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
   mpu6500_getAccel(pVec);
