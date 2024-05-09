@@ -64,5 +64,3 @@ void delay_until_1us(uint32_t time);
  * If time has run out return 1, else zero.
  */
 int delay_finished();
-
-void reset_delay();

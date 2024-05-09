@@ -31,11 +31,13 @@ OF SUCH DAMAGE.
 */
 
 #include "gd32vf103.h"
+#include "system_gd32vf103.h"
 #include "drivers.h"
 #include "gd32v_mpu6500_if.h"
 #include "lcd.h"
 #include "butt.h"
 #include "clock.h"
+#include "gd32vf103_rtc.h"
 #include "delay.h"
 #include <math.h>
 
@@ -54,15 +56,57 @@ int main(void){
       ICM-20600 is mostly register compatible with MPU6500, if MPU6500 is used only thing that needs 
       to change is MPU6500_WHO_AM_I_ID from 0x11 to 0x70. */
   mpu6500_install(I2C0);
-  
+
   // initialize timer and LCD
   init_pskiva();
-  
+
+  /* ----------- REAL TIME CLOCK  ------------ 
+
+  // enable power management unit
+  rcu_periph_clock_enable(RCU_PMU);
+  // enable write access to backup domain registers
+  pmu_backup_write_enable();
+  rtc_register_sync_wait();
+  // enable backup domain
+  rcu_periph_clock_enable(RCU_BKPI);
+  // reset backup domain regiser
+  bkp_deinit();
+
+  int cc=0;
+  //        SETUP
+  while(1){
+    LCD_ShowNum(10, 10, cc, 4, WHITE);
+    LCD_ShowNum(10, 30, rtc_counter_get(), 6, WHITE);
+    // enable external low-speed crystal oscillator (XO)
+    if (rcu_osci_stab_wait(RCU_HXTAL)){
+      // use external low speed oscillator {i.e 32.768 kHz}
+      rcu_rtc_clock_config(RCU_RTCSRC_HXTAL_DIV_128); 
+      rcu_periph_clock_enable(RCU_RTC);
+      // wait until shadow register are synced from the backup domain over the APB bus
+      rtc_register_sync_wait();
+      // wait for the changes are synced
+      rtc_lwoff_wait();
+      // prescale to 1 second
+      cc++;
+      rtc_prescaler_set(108); 
+      rtc_lwoff_wait();
+      rtc_interrupt_enable(RTC_INT_SECOND);
+      rtc_lwoff_wait();
+    }
+    eclic_global_interrupt_enable();
+    // ECLIC configure 
+    eclic_priority_group_set(ECLIC_PRIGROUP_LEVEL1_PRIO3);
+    eclic_irq_enable(RTC_IRQn, 1, 0);
+  }
+  ------------------- END ----------------- */  
+
+  int clk = 0;
+
   // The related data structure for the IMU, contains a vector of x, y, z floats
   mpu_vector_t vec, vec_temp;
 
   // counter variables 
-  int c=0, ms=0, s=0; 
+  int c=0, tenmilli=0, s=0; 
   // display variables
   int hour = INITIAL_HOUR;
   int min = INITAL_MIN;
@@ -74,35 +118,40 @@ int main(void){
   mpu6500_getAccel(&vec_temp);
   v_temp = sqrtf((vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z));
 
+  //delay_until_1ms(1000);
+
   while(1){
+    delay_until_1ms(10);              // 1 iteration takes 10 ms
+
     // display vector counter
-    LCD_ShowNum(10, 10, c, 3, WHITE);
+    LCD_ShowNum(10, 10, c, 3, WHITE);                           
+    //LCD_ShowNum(50, 10, (get_timer_value()%3600)%60, 8, WHITE);                           
+    tenmilli++;
 
-    if (t5expq){
-      ms++;                            
+    if (!(tenmilli%10))                                          // every 100 ms..
+      handle_imu(&vec, &vec_temp, &v, &v_temp, &c);        // ..handle imu
 
-      if (!(ms%100))                                      // every 100 ms..
-        handle_imu(&vec, &vec_temp, &v, &v_temp, &c);     // ..handle imu
-      if (!(ms%150)){                                     // every 150 ms..
-        butt(&hour, &min);                                // ..handle buttons..
-        displayClock(hour, min);                          // ..and display time
+    if (!(tenmilli%15)){                                        // every 150 ms..
+      butt(&hour, &min);                                  // ..handle buttons..
+      displayClock(hour, min);                            // ..and display time
+    }
+
+    if (tenmilli > 99){
+      tenmilli=0;
+      s++;
+      LCD_ShowNum(50, 50, s, 2, YELLOW);              // show seconds on clock
+      if (!(s%15)) {
+        // determine car motion 
+        (c > MARGIN) ?  LCD_ShowStr(10, 50, "ON ", GREEN, OPAQUE) : LCD_ShowStr(10, 50, "Off", RED, OPAQUE);
+        c=0;
       }
-      if (ms==1000){                                    // every second..
-        ms=0; s++;
-        if (!(s%15)) {
-          // determine car motion 
-          (c > MARGIN) ?  LCD_ShowStr(10, 50, "ON ", GREEN, OPAQUE) : LCD_ShowStr(10, 50, "Off", RED, OPAQUE);
-          c=0;
-        }
-        if (s==60) {
-          incrementClock(&hour, &min);
-          s=0;
-        }
-        LCD_ShowNum(50, 50, s, 2, YELLOW);
+      if (s>59){
+        s=0;
+        incrementClock(&hour, &min);                  // increase clock by 1 minute
       }
     }
-    /* Wait for LCD to finish drawing */
-    LCD_Wait_On_Queue();    
+    LCD_Wait_On_Queue();
+    while (!delay_finished());    // wait until iteration done
   }
 }
 
@@ -115,7 +164,7 @@ int main(void){
 void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC){
   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
   mpu6500_getAccel(pVec);
-  // calc vector magnitude
+  // calc vector magnitude (ALT. could use fixed point)
   (*pV) = sqrtf((pVec->x*pVec->x + pVec->y*pVec->y + pVec->z*pVec->z));
   
   // note if there is a change in magnitude withing an interval 

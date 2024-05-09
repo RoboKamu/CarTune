@@ -76,22 +76,18 @@ uint64_t delay_until = 0;
 void delay_until_1us(uint32_t time){
     uint64_t current_time;
     current_time = get_timer_value();
-    delay_until = (time * (SystemCoreClock/4000)) + current_time;
+    delay_until = (time * (SystemCoreClock/4000000)) + current_time;
 }
 
 void delay_until_1ms(uint32_t time){
     uint64_t current_time;
     current_time = get_timer_value();
-    delay_until = (time * (SystemCoreClock/4000000)) + current_time;
+    delay_until = (time*(SystemCoreClock/4000)) + current_time;
 }
 
 int delay_finished(){
     uint64_t time;
     time = get_timer_value();
-    if(time < delay_until) return 1;
-    return 0;
-}
-
-void reset_delay(){
-    delay_until = 0;
+    if(time < delay_until) return 0;
+    else {delay_until = 0; return 1;}
 }

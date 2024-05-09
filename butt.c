@@ -49,7 +49,7 @@ OF SUCH DAMAGE.
                                (x) == 3 ? BUTTON4 : -1)   // return -1 if none of the buttons reached
 
 void init_pskiva(){
-  t5omsi();                                         // Initialize timer5 1kHz
+  //t5omsi();                                         // Initialize timer5 1kHz
   Lcd_SetType(LCD_INVERTED);                        // or use LCD_INVERTED!
   Lcd_Init();
   LCD_Clear(BLACK);
