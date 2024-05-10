@@ -1,6 +1,6 @@
 /*!
   \file  main.c
-  \brief IMU, LCD & button integration for MCU
+  \brief IMU, LCD & button integration for GD32VF103 MCU
 */
 
 /*
@@ -32,9 +32,10 @@ OF SUCH DAMAGE.
 
 #include "gd32vf103.h"
 #include "drivers.h"
-#include "lcd.h"
 #include "gd32v_mpu6500_if.h"
 #include "butt.h"
+#include "clock.h"
+#include "delay.h"
 #include <math.h>
 
 #define MARGIN            104                 // margin for movement to turn pskiva on (current ~70% )  
@@ -52,18 +53,23 @@ int main(void){
       ICM-20600 is mostly register compatible with MPU6500, if MPU6500 is used only thing that needs 
       to change is MPU6500_WHO_AM_I_ID from 0x11 to 0x70. */
   mpu6500_install(I2C0);
-  
-  // initialize timer and LCD
-  init_pskiva();
-  
+
+  // initialize LCD and buttons
+  init_butt();
+  init_clock_display();
+
   // The related data structure for the IMU, contains a vector of x, y, z floats
   mpu_vector_t vec, vec_temp;
 
   // counter variables 
-  int c=0, ms=0, s=0; 
+  uint16_t c=0;
+  int8_t hunmilli=0, s=0; 
+  
   // display variables
-  int hour = INITIAL_HOUR;
-  int min = INITAL_MIN;
+  int8_t hour = INITIAL_HOUR;
+  int8_t min = INITAL_MIN;
+  // initial clock
+  displayClock(hour, min);
 
   // vector scales 
   int32_t v, v_temp;
@@ -73,38 +79,41 @@ int main(void){
   v_temp = sqrtf((vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z));
 
   while(1){
-    // display vector counter
-    LCD_ShowNum(10, 10, c, 3, WHITE);
+    delay_until_1ms(100);              // 1 iteration takes 100 ms
+    hunmilli++;
 
-    if (t5expq){
-      ms++;
-
-      if (!(ms%100))                                       // every 100 ms..
-        handle_imu(&vec, &vec_temp, &v, &v_temp, &c);      // ..handle imu
-      if (!(ms%150)){                                      // every 150 ms..
-        butt(&hour, &min);                                 // ..handle buttons..
-        displayTime(hour, min);                            // ..and display time
+    handle_imu(&vec, &vec_temp, &v, &v_temp, &c);         // handle imu..
+    butt(&hour, &min, &hunmilli, &s);                     // ..button presses..
+    
+    if (hunmilli > 9){                                    // after 1 second..
+      hunmilli=0;                                         // ..reset hunmilli and..
+      s++;                                                // ..increment seconds
+      LCD_ShowNum(50, 50, s, 2, YELLOW);                  
+      if (!(s%15)) {                                      
+        // determine car motion every 15 seconds
+        (c > MARGIN) ? pskiva(1, hour, min) : pskiva(0, hour, min);
+        c=0;
       }
-      if (ms == 1000){
-        s++;
-        ms = 0;
-        // tick();
-        if (s==15){
-          // determine car motion 
-          (c > MARGIN) ?  LCD_ShowStr(10, 50, "ON ", GREEN, OPAQUE) : LCD_ShowStr(10, 50, "Off", RED, OPAQUE);
-          c=0; s=0;
-        }
+      if (s>59){                                      // after 60 seconds..
+        s=0;                                          // ..reset seconds counter..
+        incrementClock(&hour, &min);                  // ..and increase clock by 1 minute!
       }
     }
-    /* Wait for LCD to finish drawing */
-    LCD_Wait_On_Queue();    
+    LCD_Wait_On_Queue();
+    while (!delay_finished());         // wait until iteration done
   }
 }
 
+/// @brief handles calculations for accelerometer & destroys old so it can be updated
+/// @param pVec 
+/// @param pVec_temp 
+/// @param pV 
+/// @param pV_temp 
+/// @param pC 
 void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC){
   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
   mpu6500_getAccel(pVec);
-  // calc vector magnitude
+  // calc vector magnitude (ALT. could use fixed point)
   (*pV) = sqrtf((pVec->x*pVec->x + pVec->y*pVec->y + pVec->z*pVec->z));
   
   // note if there is a change in magnitude withing an interval 

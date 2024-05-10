@@ -32,19 +32,21 @@ OF SUCH DAMAGE.
 
 #pragma once
 
+#include <stdint.h>
+#include "gd32vf103.h"
+#include "drivers.h"
+#include "clock.h"
+#include "delay.h"
+#include <stdio.h>
+
 /// @brief    initialize buttons and LCD
-void init_pskiva();
+void init_butt();
 
 /*!
   @brief    reads and executes button presses
   @param    pHour: pointer to initial hour
   @param    pMin: pointer to initial minute
+  @param    pCounter: pointer to counter
+  @param    pS: poiter to second counter (accelerometer)
 */ 
-void butt(int* pHour, int* pMin);
-
-/*!
-  @brief      displays the clock time on LCD display
-  @param      hours: hours to show on clock display 
-  @param      mins: minutes to show on clock display
-*/
-void displayTime(int hours, int mins);
+void butt(int8_t* pHour, int8_t* pMin, uint8_t* pCounter, uint8_t* pS);
