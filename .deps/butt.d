@@ -26,7 +26,7 @@ build/butt.o: butt.c butt.h \
  ../../firmware/RISCV/drivers/n200_func.h \
  ../../firmware/RISCV/drivers/n200_timer.h \
  ../../firmware/RISCV/drivers/n200_eclic.h \
- ../../firmware/RISCV/drivers/riscv_const.h drivers.h clock.h lcd.h \
+ ../../firmware/RISCV/drivers/riscv_const.h drivers.h clock.h lio_lcd.h \
  delay.h
 
 butt.h:
@@ -91,6 +91,6 @@ drivers.h:
 
 clock.h:
 
-lcd.h:
+lio_lcd.h:
 
 delay.h:

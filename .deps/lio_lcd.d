@@ -1,4 +1,4 @@
-build/clock.o: clock.c clock.h lio_lcd.h \
+build/lio_lcd.o: lio_lcd.c lio_lcd.h \
  ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h \
  ../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h \
  ../../firmware/GD32VF103_standard_peripheral/gd32vf103_libopt.h \
@@ -26,9 +26,7 @@ build/clock.o: clock.c clock.h lio_lcd.h \
  ../../firmware/RISCV/drivers/n200_func.h \
  ../../firmware/RISCV/drivers/n200_timer.h \
  ../../firmware/RISCV/drivers/n200_eclic.h \
- ../../firmware/RISCV/drivers/riscv_const.h
-
-clock.h:
+ ../../firmware/RISCV/drivers/riscv_const.h lio_lcd_regs.h lio_font.h
 
 lio_lcd.h:
 
@@ -87,3 +85,7 @@ lio_lcd.h:
 ../../firmware/RISCV/drivers/n200_eclic.h:
 
 ../../firmware/RISCV/drivers/riscv_const.h:
+
+lio_lcd_regs.h:
+
+lio_font.h:

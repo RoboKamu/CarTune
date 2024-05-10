@@ -1,10 +1,14 @@
 #include "clock.h"
 
+#define BITMASK   0xFFFFFFF8
+#define RED 	    0xF800
+#define GREEN	    0x07E0
+#define BLUE	    0x001F
+
 void init_clock_display(){
-  //t5omsi();                                         // Initialize timer5 1kHz
-  Lcd_SetType(LCD_INVERTED);                          // or use LCD_INVERTED!
-  Lcd_Init();
-  LCD_Clear(BLACK);
+  lio_lcd_config_t lcd_conf = {0x00, 160, 80, 0, 24};
+	lio_lcd_init(lcd_conf);
+	lio_lcd_clear(0);
 }
 void incrementClock(int8_t *pHour, int8_t *pMinute) {
   (*pMinute)++;
@@ -38,26 +42,23 @@ void tick(int *pMs, int8_t *pHour, int8_t *pMinute) {
 
 void displayClock(int8_t hour, int8_t mins){
   // Update LCD display with the new time
-  char timeStr[10];
-  sprintf(timeStr, "CLOCK: %02d:%02d", hour, mins);
-  LCD_ShowStr(10, 30, timeStr, WHITE, OPAQUE);
+  lio_lcd_printf_scaled(15, 15, 0xFFFF, 3, "%02d:%02d", hour, mins);
 }
 
-void pskiva(uint8_t enable, int8_t hour, int8_t min){
-  if (enable){
-    // pskiva on
-    LCD_ShowStr(10, 50, "ON ", GREEN, OPAQUE);
-    //char tmpStr[10];
-    
-    if (min+30 > 60) {                                    // if the coming half hour includes a new hour 
-      displayClock(hour+1, 0);     // show minutes as 0 and hour as the coming hour (+1)
+void pskiva(uint8_t state, int8_t hour, int8_t min, uint8_t* pEnable){
+  // update time only if there is a change in state, not when its already on
+  if ((*pEnable) > 0 && state > 0) return; 
+  
+  if (state){                         // pskiva on
+    (*pEnable) = 1;                   // note enabled
+    if (min+30 > 60) {                // if the coming half hour includes a new hour 
+      displayClock(hour+1, 0);        // show minutes as 0 and hour as the coming hour (+1)
     } else {
-      displayClock(hour, 30);      // otherwise keep hour and set min to 30
+      displayClock(hour, 30);         // otherwise keep hour and set min to 30
     }
-    //displayClock(tmpStr[8], tmpStr[9]);                   // dislay pskiva
-    return;
+    return; 
   }
   // otherwise..pskiva off
-  LCD_ShowStr(10, 50, "OFF", GREEN, OPAQUE);
   displayClock(hour, min);
+  (*pEnable) = 0;
 }
