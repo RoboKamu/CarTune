@@ -1,0 +1,1099 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 1
+
+
+   1              		.file	"gd32vf103_rtc.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.rtc_configuration_mode_enter,"ax",@progbits
+  10              		.align	1
+  11              		.globl	rtc_configuration_mode_enter
+  13              	rtc_configuration_mode_enter:
+  14              	.LFB2:
+  15              		.file 1 "./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c"
+   1:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+   2:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \file    gd32vf103_rtc.c
+   3:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief   RTC driver
+   4:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     
+   5:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \version 2019-06-05, V1.0.0, firmware for GD32VF103
+   6:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \version 2020-08-04, V1.1.0, firmware for GD32VF103
+   7:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+   8:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+   9:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*
+  10:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     Copyright (c) 2020, GigaDevice Semiconductor Inc.
+  11:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  12:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  13:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** are permitted provided that the following conditions are met:
+  14:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  15:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  16:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****        list of conditions and the following disclaimer.
+  17:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  18:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****        this list of conditions and the following disclaimer in the documentation 
+  19:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****        and/or other materials provided with the distribution.
+  20:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  21:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****        may be used to endorse or promote products derived from this software without 
+  22:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****        specific prior written permission.
+  23:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  24:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  25:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  26:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  27:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  28:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  29:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  30:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  31:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  32:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  33:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** OF SUCH DAMAGE.
+  34:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+  35:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  36:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** #include "gd32vf103_rtc.h"
+  37:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  38:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /* RTC register high / low bits mask */
+  39:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** #define RTC_HIGH_BITS_MASK         ((uint32_t)0x000F0000U)  /* RTC high bits mask */
+  40:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** #define RTC_LOW_BITS_MASK          ((uint32_t)0x0000FFFFU)  /* RTC low bits mask */
+  41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /* RTC register high bits offset */
+  43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** #define RTC_HIGH_BITS_OFFSET       ((uint32_t)16U)
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 2
+
+
+  44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  45:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+  46:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      enter RTC configuration mode
+  47:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  none
+  48:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+  49:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+  50:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+  51:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_configuration_mode_enter(void)
+  52:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+  16              		.loc 1 52 1
+  17              		.cfi_startproc
+  53:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_CTL |= RTC_CTL_CMF;
+  18              		.loc 1 53 5
+  19              		.loc 1 53 13 is_stmt 0
+  20 0000 37370040 		li	a4,1073754112
+  21 0004 83274780 		lw	a5,-2044(a4)
+  22 0008 93E70701 		ori	a5,a5,16
+  23 000c 2322F780 		sw	a5,-2044(a4)
+  54:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+  24              		.loc 1 54 1
+  25 0010 8280     		ret
+  26              		.cfi_endproc
+  27              	.LFE2:
+  29              		.section	.text.rtc_configuration_mode_exit,"ax",@progbits
+  30              		.align	1
+  31              		.globl	rtc_configuration_mode_exit
+  33              	rtc_configuration_mode_exit:
+  34              	.LFB3:
+  55:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  56:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+  57:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      exit RTC configuration mode
+  58:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  none
+  59:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+  60:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+  61:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+  62:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_configuration_mode_exit(void)
+  63:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+  35              		.loc 1 63 1 is_stmt 1
+  36              		.cfi_startproc
+  64:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_CTL &= ~RTC_CTL_CMF;
+  37              		.loc 1 64 5
+  38              		.loc 1 64 13 is_stmt 0
+  39 0000 37370040 		li	a4,1073754112
+  40 0004 83274780 		lw	a5,-2044(a4)
+  41 0008 BD9B     		andi	a5,a5,-17
+  42 000a 2322F780 		sw	a5,-2044(a4)
+  65:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+  43              		.loc 1 65 1
+  44 000e 8280     		ret
+  45              		.cfi_endproc
+  46              	.LFE3:
+  48              		.section	.text.rtc_counter_set,"ax",@progbits
+  49              		.align	1
+  50              		.globl	rtc_counter_set
+  52              	rtc_counter_set:
+  53              	.LFB4:
+  66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 3
+
+
+  67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+  68:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      set RTC counter value
+  69:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  cnt: RTC counter value
+  70:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+  71:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+  72:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+  73:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_counter_set(uint32_t cnt)
+  74:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+  54              		.loc 1 74 1 is_stmt 1
+  55              		.cfi_startproc
+  56              	.LVL0:
+  75:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+  57              		.loc 1 75 5
+  74:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+  58              		.loc 1 74 1 is_stmt 0
+  59 0000 0111     		addi	sp,sp,-32
+  60              	.LCFI0:
+  61              		.cfi_def_cfa_offset 32
+  62 0002 06CE     		sw	ra,28(sp)
+  63              		.cfi_offset 1, -4
+  74:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+  64              		.loc 1 74 1
+  65 0004 2AC6     		sw	a0,12(sp)
+  66              		.loc 1 75 5
+  67 0006 97000000 		call	rtc_configuration_mode_enter
+  67      E7800000 
+  68              	.LVL1:
+  76:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC counter high bits */
+  77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_CNTH = (cnt >> RTC_HIGH_BITS_OFFSET);
+  69              		.loc 1 77 5 is_stmt 1
+  70              		.loc 1 77 21 is_stmt 0
+  71 000e 3245     		lw	a0,12(sp)
+  72              		.loc 1 77 14
+  73 0010 B7370040 		li	a5,1073754112
+  78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC counter low bits */
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_CNTL = (cnt & RTC_LOW_BITS_MASK);
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+  81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+  74              		.loc 1 81 1
+  75 0014 F240     		lw	ra,28(sp)
+  76              		.cfi_restore 1
+  77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC counter low bits */
+  77              		.loc 1 77 21
+  78 0016 13570501 		srli	a4,a0,16
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+  79              		.loc 1 79 21
+  80 001a 4205     		slli	a0,a0,16
+  77:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC counter low bits */
+  81              		.loc 1 77 14
+  82 001c 23ACE780 		sw	a4,-2024(a5)
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+  83              		.loc 1 79 5 is_stmt 1
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+  84              		.loc 1 79 21 is_stmt 0
+  85 0020 4181     		srli	a0,a0,16
+  79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+  86              		.loc 1 79 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 4
+
+
+  87 0022 23AEA780 		sw	a0,-2020(a5)
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+  88              		.loc 1 80 5 is_stmt 1
+  89              		.loc 1 81 1 is_stmt 0
+  90 0026 0561     		addi	sp,sp,32
+  91              	.LCFI1:
+  92              		.cfi_def_cfa_offset 0
+  93              	.LVL2:
+  80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+  94              		.loc 1 80 5
+  95 0028 17030000 		tail	rtc_configuration_mode_exit
+  95      67000300 
+  96              	.LVL3:
+  97              		.cfi_endproc
+  98              	.LFE4:
+ 100              		.section	.text.rtc_prescaler_set,"ax",@progbits
+ 101              		.align	1
+ 102              		.globl	rtc_prescaler_set
+ 104              	rtc_prescaler_set:
+ 105              	.LFB5:
+  82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+  84:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      set RTC prescaler value
+  85:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  psc: RTC prescaler value
+  86:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+  87:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+  88:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+  89:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_prescaler_set(uint32_t psc)
+  90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 106              		.loc 1 90 1 is_stmt 1
+ 107              		.cfi_startproc
+ 108              	.LVL4:
+  91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+ 109              		.loc 1 91 5
+  90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+ 110              		.loc 1 90 1 is_stmt 0
+ 111 0000 0111     		addi	sp,sp,-32
+ 112              	.LCFI2:
+ 113              		.cfi_def_cfa_offset 32
+ 114 0002 06CE     		sw	ra,28(sp)
+ 115              		.cfi_offset 1, -4
+  90:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+ 116              		.loc 1 90 1
+ 117 0004 2AC6     		sw	a0,12(sp)
+ 118              		.loc 1 91 5
+ 119 0006 97000000 		call	rtc_configuration_mode_enter
+ 119      E7800000 
+ 120              	.LVL5:
+  92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC prescaler high bits */
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_PSCH = ((psc & RTC_HIGH_BITS_MASK) >> RTC_HIGH_BITS_OFFSET);
+ 121              		.loc 1 93 5 is_stmt 1
+ 122              		.loc 1 93 44 is_stmt 0
+ 123 000e 3245     		lw	a0,12(sp)
+ 124              		.loc 1 93 14
+ 125 0010 37370040 		li	a4,1073754112
+  94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC prescaler low bits */
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_PSCL = (psc & RTC_LOW_BITS_MASK);
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 5
+
+
+  96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+  97:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 126              		.loc 1 97 1
+ 127 0014 F240     		lw	ra,28(sp)
+ 128              		.cfi_restore 1
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC prescaler low bits */
+ 129              		.loc 1 93 44
+ 130 0016 93570501 		srli	a5,a0,16
+ 131 001a BD8B     		andi	a5,a5,15
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 132              		.loc 1 95 21
+ 133 001c 4205     		slli	a0,a0,16
+  93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the RTC prescaler low bits */
+ 134              		.loc 1 93 14
+ 135 001e 2324F780 		sw	a5,-2040(a4)
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 136              		.loc 1 95 5 is_stmt 1
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 137              		.loc 1 95 21 is_stmt 0
+ 138 0022 4181     		srli	a0,a0,16
+  95:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 139              		.loc 1 95 14
+ 140 0024 2326A780 		sw	a0,-2036(a4)
+  96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 141              		.loc 1 96 5 is_stmt 1
+ 142              		.loc 1 97 1 is_stmt 0
+ 143 0028 0561     		addi	sp,sp,32
+ 144              	.LCFI3:
+ 145              		.cfi_def_cfa_offset 0
+ 146              	.LVL6:
+  96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 147              		.loc 1 96 5
+ 148 002a 17030000 		tail	rtc_configuration_mode_exit
+ 148      67000300 
+ 149              	.LVL7:
+ 150              		.cfi_endproc
+ 151              	.LFE5:
+ 153              		.section	.text.rtc_lwoff_wait,"ax",@progbits
+ 154              		.align	1
+ 155              		.globl	rtc_lwoff_wait
+ 157              	rtc_lwoff_wait:
+ 158              	.LFB6:
+  98:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+  99:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 100:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      wait RTC last write operation finished flag set
+ 101:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  none
+ 102:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 103:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+ 104:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_lwoff_wait(void)
+ 106:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 159              		.loc 1 106 1 is_stmt 1
+ 160              		.cfi_startproc
+ 107:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* loop until LWOFF flag is set */
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     while(RESET == (RTC_CTL & RTC_CTL_LWOFF)){
+ 161              		.loc 1 108 5
+ 162              		.loc 1 108 21 is_stmt 0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 6
+
+
+ 163 0000 37370040 		li	a4,1073754112
+ 164              	.L8:
+ 109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 165              		.loc 1 109 5 is_stmt 1 discriminator 1
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 166              		.loc 1 108 21 is_stmt 0 discriminator 1
+ 167 0004 83274780 		lw	a5,-2044(a4)
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 168              		.loc 1 108 29 discriminator 1
+ 169 0008 93F70702 		andi	a5,a5,32
+ 108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 170              		.loc 1 108 10 discriminator 1
+ 171 000c E5DF     		beq	a5,zero,.L8
+ 110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 172              		.loc 1 110 1
+ 173 000e 8280     		ret
+ 174              		.cfi_endproc
+ 175              	.LFE6:
+ 177              		.section	.text.rtc_register_sync_wait,"ax",@progbits
+ 178              		.align	1
+ 179              		.globl	rtc_register_sync_wait
+ 181              	rtc_register_sync_wait:
+ 182              	.LFB7:
+ 111:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 112:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 113:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      wait RTC registers synchronized flag set
+ 114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  none
+ 115:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 116:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+ 117:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 118:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_register_sync_wait(void)
+ 119:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 183              		.loc 1 119 1 is_stmt 1
+ 184              		.cfi_startproc
+ 120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* clear RSYNF flag */
+ 121:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_CTL &= ~RTC_CTL_RSYNF;
+ 185              		.loc 1 121 5
+ 186              		.loc 1 121 13 is_stmt 0
+ 187 0000 37370040 		li	a4,1073754112
+ 188 0004 83274780 		lw	a5,-2044(a4)
+ 189 0008 DD9B     		andi	a5,a5,-9
+ 190 000a 2322F780 		sw	a5,-2044(a4)
+ 122:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* loop until RSYNF flag is set */
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     while(RESET == (RTC_CTL & RTC_CTL_RSYNF)){
+ 191              		.loc 1 123 5 is_stmt 1
+ 192              	.L12:
+ 124:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 193              		.loc 1 124 5 discriminator 1
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 194              		.loc 1 123 21 is_stmt 0 discriminator 1
+ 195 000e 83274780 		lw	a5,-2044(a4)
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 196              		.loc 1 123 29 discriminator 1
+ 197 0012 A18B     		andi	a5,a5,8
+ 123:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 198              		.loc 1 123 10 discriminator 1
+ 199 0014 EDDF     		beq	a5,zero,.L12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 7
+
+
+ 125:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 200              		.loc 1 125 1
+ 201 0016 8280     		ret
+ 202              		.cfi_endproc
+ 203              	.LFE7:
+ 205              		.section	.text.rtc_alarm_config,"ax",@progbits
+ 206              		.align	1
+ 207              		.globl	rtc_alarm_config
+ 209              	rtc_alarm_config:
+ 210              	.LFB8:
+ 126:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 127:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 128:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      set RTC alarm value
+ 129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  alarm: RTC alarm value
+ 130:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 131:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+ 132:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 133:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_alarm_config(uint32_t alarm)
+ 134:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 211              		.loc 1 134 1 is_stmt 1
+ 212              		.cfi_startproc
+ 213              	.LVL8:
+ 135:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+ 214              		.loc 1 135 5
+ 134:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+ 215              		.loc 1 134 1 is_stmt 0
+ 216 0000 0111     		addi	sp,sp,-32
+ 217              	.LCFI4:
+ 218              		.cfi_def_cfa_offset 32
+ 219 0002 06CE     		sw	ra,28(sp)
+ 220              		.cfi_offset 1, -4
+ 134:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_enter();
+ 221              		.loc 1 134 1
+ 222 0004 2AC6     		sw	a0,12(sp)
+ 223              		.loc 1 135 5
+ 224 0006 97000000 		call	rtc_configuration_mode_enter
+ 224      E7800000 
+ 225              	.LVL9:
+ 136:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the alarm high bits */
+ 137:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_ALRMH = (alarm >> RTC_HIGH_BITS_OFFSET);
+ 226              		.loc 1 137 5 is_stmt 1
+ 227              		.loc 1 137 24 is_stmt 0
+ 228 000e 3245     		lw	a0,12(sp)
+ 229              		.loc 1 137 15
+ 230 0010 B7370040 		li	a5,1073754112
+ 138:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the alarm low bits */
+ 139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_ALRML = (alarm & RTC_LOW_BITS_MASK);
+ 140:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 141:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 231              		.loc 1 141 1
+ 232 0014 F240     		lw	ra,28(sp)
+ 233              		.cfi_restore 1
+ 137:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the alarm low bits */
+ 234              		.loc 1 137 24
+ 235 0016 13570501 		srli	a4,a0,16
+ 139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 236              		.loc 1 139 24
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 8
+
+
+ 237 001a 4205     		slli	a0,a0,16
+ 137:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* set the alarm low bits */
+ 238              		.loc 1 137 15
+ 239 001c 23A0E782 		sw	a4,-2016(a5)
+ 139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 240              		.loc 1 139 5 is_stmt 1
+ 139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 241              		.loc 1 139 24 is_stmt 0
+ 242 0020 4181     		srli	a0,a0,16
+ 139:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     rtc_configuration_mode_exit();
+ 243              		.loc 1 139 15
+ 244 0022 23A2A782 		sw	a0,-2012(a5)
+ 140:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 245              		.loc 1 140 5 is_stmt 1
+ 246              		.loc 1 141 1 is_stmt 0
+ 247 0026 0561     		addi	sp,sp,32
+ 248              	.LCFI5:
+ 249              		.cfi_def_cfa_offset 0
+ 250              	.LVL10:
+ 140:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 251              		.loc 1 140 5
+ 252 0028 17030000 		tail	rtc_configuration_mode_exit
+ 252      67000300 
+ 253              	.LVL11:
+ 254              		.cfi_endproc
+ 255              	.LFE8:
+ 257              		.section	.text.rtc_counter_get,"ax",@progbits
+ 258              		.align	1
+ 259              		.globl	rtc_counter_get
+ 261              	rtc_counter_get:
+ 262              	.LFB9:
+ 142:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 143:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 144:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      get RTC counter value
+ 145:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  none
+ 146:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 147:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     RTC counter value
+ 148:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 149:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** uint32_t rtc_counter_get(void)
+ 150:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 263              		.loc 1 150 1 is_stmt 1
+ 264              		.cfi_startproc
+ 151:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     uint32_t temp = 0x0U;
+ 265              		.loc 1 151 5
+ 266              	.LVL12:
+ 152:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     
+ 153:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     temp = RTC_CNTL;
+ 267              		.loc 1 153 5
+ 268              		.loc 1 153 10 is_stmt 0
+ 269 0000 B7370040 		li	a5,1073754112
+ 270 0004 03A5C781 		lw	a0,-2020(a5)
+ 271              	.LVL13:
+ 154:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     temp |= (RTC_CNTH << RTC_HIGH_BITS_OFFSET);
+ 272              		.loc 1 154 5 is_stmt 1
+ 273              		.loc 1 154 14 is_stmt 0
+ 274 0008 83A78781 		lw	a5,-2024(a5)
+ 275              	.LVL14:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 9
+
+
+ 155:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     return temp;
+ 276              		.loc 1 155 5 is_stmt 1
+ 154:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     temp |= (RTC_CNTH << RTC_HIGH_BITS_OFFSET);
+ 277              		.loc 1 154 23 is_stmt 0
+ 278 000c C207     		slli	a5,a5,16
+ 279              	.LVL15:
+ 156:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 280              		.loc 1 156 1
+ 281 000e 5D8D     		or	a0,a5,a0
+ 282              	.LVL16:
+ 283 0010 8280     		ret
+ 284              		.cfi_endproc
+ 285              	.LFE9:
+ 287              		.section	.text.rtc_divider_get,"ax",@progbits
+ 288              		.align	1
+ 289              		.globl	rtc_divider_get
+ 291              	rtc_divider_get:
+ 292              	.LFB10:
+ 157:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 158:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 159:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      get RTC divider value
+ 160:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  none
+ 161:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 162:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     RTC divider value
+ 163:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 164:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** uint32_t rtc_divider_get(void)
+ 165:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 293              		.loc 1 165 1 is_stmt 1
+ 294              		.cfi_startproc
+ 166:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     uint32_t temp = 0x00U;
+ 295              		.loc 1 166 5
+ 296              	.LVL17:
+ 167:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     
+ 168:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     temp = ((RTC_DIVH & RTC_DIVH_DIV) << RTC_HIGH_BITS_OFFSET);
+ 297              		.loc 1 168 5
+ 298              		.loc 1 168 14 is_stmt 0
+ 299 0000 37370040 		li	a4,1073754112
+ 300 0004 83270781 		lw	a5,-2032(a4)
+ 301              		.loc 1 168 10
+ 302 0008 37050F00 		li	a0,983040
+ 303              		.loc 1 168 39
+ 304 000c C207     		slli	a5,a5,16
+ 305              		.loc 1 168 10
+ 306 000e E98F     		and	a5,a5,a0
+ 307              	.LVL18:
+ 169:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     temp |= RTC_DIVL;
+ 308              		.loc 1 169 5 is_stmt 1
+ 309              		.loc 1 169 13 is_stmt 0
+ 310 0010 03254781 		lw	a0,-2028(a4)
+ 311              	.LVL19:
+ 170:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     return temp;
+ 312              		.loc 1 170 5 is_stmt 1
+ 171:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 313              		.loc 1 171 1 is_stmt 0
+ 314 0014 5D8D     		or	a0,a5,a0
+ 315              	.LVL20:
+ 316 0016 8280     		ret
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 10
+
+
+ 317              		.cfi_endproc
+ 318              	.LFE10:
+ 320              		.section	.text.rtc_flag_get,"ax",@progbits
+ 321              		.align	1
+ 322              		.globl	rtc_flag_get
+ 324              	rtc_flag_get:
+ 325              	.LFB11:
+ 172:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 173:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 174:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      get RTC flag status 
+ 175:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to get
+ 176:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****                 only one parameter can be selected which is shown as below:
+ 177:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_SECOND: second interrupt flag
+ 178:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_ALARM: alarm interrupt flag
+ 179:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_OVERFLOW: overflow interrupt flag
+ 180:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_RSYN: registers synchronized flag
+ 181:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_LWOF: last write operation finished flag
+ 182:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 183:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     SET or RESET
+ 184:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 185:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** FlagStatus rtc_flag_get(uint32_t flag)
+ 186:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 326              		.loc 1 186 1 is_stmt 1
+ 327              		.cfi_startproc
+ 328              	.LVL21:
+ 187:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     if(RESET != (RTC_CTL & flag)){
+ 329              		.loc 1 187 5
+ 330              		.loc 1 187 18 is_stmt 0
+ 331 0000 B7370040 		li	a5,1073754112
+ 332 0004 83A74780 		lw	a5,-2044(a5)
+ 333              		.loc 1 187 26
+ 334 0008 7D8D     		and	a0,a5,a0
+ 335              	.LVL22:
+ 188:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****         return SET;
+ 189:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }else{
+ 190:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****         return RESET;
+ 191:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 192:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 336              		.loc 1 192 1
+ 337 000a 3335A000 		snez	a0,a0
+ 338 000e 8280     		ret
+ 339              		.cfi_endproc
+ 340              	.LFE11:
+ 342              		.section	.text.rtc_flag_clear,"ax",@progbits
+ 343              		.align	1
+ 344              		.globl	rtc_flag_clear
+ 346              	rtc_flag_clear:
+ 347              	.LFB12:
+ 193:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 194:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 195:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      clear RTC flag status
+ 196:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to clear
+ 197:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
+ 198:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_SECOND: second interrupt flag
+ 199:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_ALARM: alarm interrupt flag
+ 200:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_OVERFLOW: overflow interrupt flag
+ 201:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_FLAG_RSYN: registers synchronized flag
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 11
+
+
+ 202:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 203:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+ 204:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 205:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_flag_clear(uint32_t flag)
+ 206:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 348              		.loc 1 206 1 is_stmt 1
+ 349              		.cfi_startproc
+ 350              	.LVL23:
+ 207:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* clear RTC flag */
+ 208:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_CTL &= ~flag;
+ 351              		.loc 1 208 5
+ 352              		.loc 1 208 13 is_stmt 0
+ 353 0000 B7370040 		li	a5,1073754112
+ 354 0004 03A74780 		lw	a4,-2044(a5)
+ 355              		.loc 1 208 16
+ 356 0008 1345F5FF 		not	a0,a0
+ 357              	.LVL24:
+ 358              		.loc 1 208 13
+ 359 000c 798D     		and	a0,a0,a4
+ 360              	.LVL25:
+ 361 000e 23A2A780 		sw	a0,-2044(a5)
+ 209:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 362              		.loc 1 209 1
+ 363 0012 8280     		ret
+ 364              		.cfi_endproc
+ 365              	.LFE12:
+ 367              		.section	.text.rtc_interrupt_flag_get,"ax",@progbits
+ 368              		.align	1
+ 369              		.globl	rtc_interrupt_flag_get
+ 371              	rtc_interrupt_flag_get:
+ 372              	.LFB18:
+ 373              		.cfi_startproc
+ 374 0000 17030000 		tail	rtc_flag_get
+ 374      67000300 
+ 375              		.cfi_endproc
+ 376              	.LFE18:
+ 378              		.section	.text.rtc_interrupt_flag_clear,"ax",@progbits
+ 379              		.align	1
+ 380              		.globl	rtc_interrupt_flag_clear
+ 382              	rtc_interrupt_flag_clear:
+ 383              	.LFB20:
+ 384              		.cfi_startproc
+ 385 0000 17030000 		tail	rtc_flag_clear
+ 385      67000300 
+ 386              		.cfi_endproc
+ 387              	.LFE20:
+ 389              		.section	.text.rtc_interrupt_enable,"ax",@progbits
+ 390              		.align	1
+ 391              		.globl	rtc_interrupt_enable
+ 393              	rtc_interrupt_enable:
+ 394              	.LFB15:
+ 210:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 211:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 212:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      get RTC interrupt flag status 
+ 213:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to get
+ 214:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****                 only one parameter can be selected which is shown as below:
+ 215:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_SECOND: second interrupt flag
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 12
+
+
+ 216:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_ALARM: alarm interrupt flag
+ 217:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_OVERFLOW: overflow interrupt flag
+ 218:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 219:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     SET or RESET
+ 220:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 221:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** FlagStatus rtc_interrupt_flag_get(uint32_t flag)
+ 222:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 223:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     if(RESET != (RTC_CTL & flag)){
+ 224:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****         return SET;
+ 225:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }else{
+ 226:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****         return RESET;
+ 227:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     }
+ 228:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 229:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 230:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 231:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      clear RTC interrupt flag status
+ 232:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  flag: specify which flag status to clear
+ 233:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
+ 234:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_SECOND: second interrupt flag
+ 235:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_ALARM: alarm interrupt flag
+ 236:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_FLAG_OVERFLOW: overflow interrupt flag
+ 237:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 238:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+ 239:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 240:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_interrupt_flag_clear(uint32_t flag)
+ 241:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 242:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     /* clear RTC interrupt flag */
+ 243:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_CTL &= ~flag;
+ 244:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 245:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 246:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 247:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      enable RTC interrupt
+ 248:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  interrupt: specify which interrupt to enbale
+ 249:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
+ 250:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_SECOND: second interrupt
+ 251:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_ALARM: alarm interrupt
+ 252:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_OVERFLOW: overflow interrupt
+ 253:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 254:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+ 255:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 256:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_interrupt_enable(uint32_t interrupt)
+ 257:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 395              		.loc 1 257 1 is_stmt 1
+ 396              		.cfi_startproc
+ 397              	.LVL26:
+ 258:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_INTEN |= interrupt;
+ 398              		.loc 1 258 5
+ 399              		.loc 1 258 15 is_stmt 0
+ 400 0000 37370040 		li	a4,1073754112
+ 401 0004 83270780 		lw	a5,-2048(a4)
+ 402 0008 5D8D     		or	a0,a5,a0
+ 403              	.LVL27:
+ 404 000a 2320A780 		sw	a0,-2048(a4)
+ 259:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 405              		.loc 1 259 1
+ 406 000e 8280     		ret
+ 407              		.cfi_endproc
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 13
+
+
+ 408              	.LFE15:
+ 410              		.section	.text.rtc_interrupt_disable,"ax",@progbits
+ 411              		.align	1
+ 412              		.globl	rtc_interrupt_disable
+ 414              	rtc_interrupt_disable:
+ 415              	.LFB16:
+ 260:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** 
+ 261:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** /*!
+ 262:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \brief      disable RTC interrupt
+ 263:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[in]  interrupt: specify which interrupt to disbale
+ 264:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****                 one or more parameters can be selected which are shown as below:
+ 265:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_SECOND: second interrupt
+ 266:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_ALARM: alarm interrupt
+ 267:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****       \arg        RTC_INT_OVERFLOW: overflow interrupt
+ 268:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \param[out] none
+ 269:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     \retval     none
+ 270:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** */
+ 271:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** void rtc_interrupt_disable(uint32_t interrupt)
+ 272:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** {
+ 416              		.loc 1 272 1 is_stmt 1
+ 417              		.cfi_startproc
+ 418              	.LVL28:
+ 273:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c ****     RTC_INTEN &= ~interrupt;
+ 419              		.loc 1 273 5
+ 420              		.loc 1 273 15 is_stmt 0
+ 421 0000 B7370040 		li	a5,1073754112
+ 422 0004 03A70780 		lw	a4,-2048(a5)
+ 423              		.loc 1 273 18
+ 424 0008 1345F5FF 		not	a0,a0
+ 425              	.LVL29:
+ 426              		.loc 1 273 15
+ 427 000c 798D     		and	a0,a0,a4
+ 428              	.LVL30:
+ 429 000e 23A0A780 		sw	a0,-2048(a5)
+ 274:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_rtc.c **** }
+ 430              		.loc 1 274 1
+ 431 0012 8280     		ret
+ 432              		.cfi_endproc
+ 433              	.LFE16:
+ 435              		.text
+ 436              	.Letext0:
+ 437              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 438              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 439              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
+ 440              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32vf103_rtc.c
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:13     .text.rtc_configuration_mode_enter:0000000000000000 rtc_configuration_mode_enter
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:17     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:18     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:19     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:20     .text.rtc_configuration_mode_enter:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:25     .text.rtc_configuration_mode_enter:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:26     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:33     .text.rtc_configuration_mode_exit:0000000000000000 rtc_configuration_mode_exit
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:36     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:37     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:38     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:39     .text.rtc_configuration_mode_exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:44     .text.rtc_configuration_mode_exit:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:45     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:52     .text.rtc_counter_set:0000000000000000 rtc_counter_set
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:55     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:57     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:58     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:59     .text.rtc_counter_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:61     .text.rtc_counter_set:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:63     .text.rtc_counter_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:65     .text.rtc_counter_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:67     .text.rtc_counter_set:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:70     .text.rtc_counter_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:71     .text.rtc_counter_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:73     .text.rtc_counter_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:75     .text.rtc_counter_set:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:76     .text.rtc_counter_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:78     .text.rtc_counter_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:80     .text.rtc_counter_set:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:82     .text.rtc_counter_set:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:84     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:85     .text.rtc_counter_set:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:87     .text.rtc_counter_set:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:89     .text.rtc_counter_set:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:90     .text.rtc_counter_set:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:92     .text.rtc_counter_set:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:95     .text.rtc_counter_set:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:97     .text.rtc_counter_set:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:104    .text.rtc_prescaler_set:0000000000000000 rtc_prescaler_set
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:107    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:109    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:110    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:111    .text.rtc_prescaler_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:113    .text.rtc_prescaler_set:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:115    .text.rtc_prescaler_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:117    .text.rtc_prescaler_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:119    .text.rtc_prescaler_set:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:122    .text.rtc_prescaler_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:123    .text.rtc_prescaler_set:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:125    .text.rtc_prescaler_set:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:127    .text.rtc_prescaler_set:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:128    .text.rtc_prescaler_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:130    .text.rtc_prescaler_set:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:133    .text.rtc_prescaler_set:000000000000001c .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 15
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:135    .text.rtc_prescaler_set:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:137    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:138    .text.rtc_prescaler_set:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:140    .text.rtc_prescaler_set:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:142    .text.rtc_prescaler_set:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:143    .text.rtc_prescaler_set:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:145    .text.rtc_prescaler_set:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:148    .text.rtc_prescaler_set:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:150    .text.rtc_prescaler_set:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:157    .text.rtc_lwoff_wait:0000000000000000 rtc_lwoff_wait
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:160    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:161    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:162    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:163    .text.rtc_lwoff_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:166    .text.rtc_lwoff_wait:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:167    .text.rtc_lwoff_wait:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:169    .text.rtc_lwoff_wait:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:171    .text.rtc_lwoff_wait:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:173    .text.rtc_lwoff_wait:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:174    .text.rtc_lwoff_wait:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:181    .text.rtc_register_sync_wait:0000000000000000 rtc_register_sync_wait
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:184    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:185    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:186    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:187    .text.rtc_register_sync_wait:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:193    .text.rtc_register_sync_wait:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:194    .text.rtc_register_sync_wait:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:195    .text.rtc_register_sync_wait:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:197    .text.rtc_register_sync_wait:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:199    .text.rtc_register_sync_wait:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:201    .text.rtc_register_sync_wait:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:202    .text.rtc_register_sync_wait:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:209    .text.rtc_alarm_config:0000000000000000 rtc_alarm_config
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:212    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:214    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:215    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:216    .text.rtc_alarm_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:218    .text.rtc_alarm_config:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:220    .text.rtc_alarm_config:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:222    .text.rtc_alarm_config:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:224    .text.rtc_alarm_config:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:227    .text.rtc_alarm_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:228    .text.rtc_alarm_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:230    .text.rtc_alarm_config:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:232    .text.rtc_alarm_config:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:233    .text.rtc_alarm_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:235    .text.rtc_alarm_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:237    .text.rtc_alarm_config:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:239    .text.rtc_alarm_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:241    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:242    .text.rtc_alarm_config:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:244    .text.rtc_alarm_config:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:246    .text.rtc_alarm_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:247    .text.rtc_alarm_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:249    .text.rtc_alarm_config:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:252    .text.rtc_alarm_config:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:254    .text.rtc_alarm_config:0000000000000030 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 16
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:261    .text.rtc_counter_get:0000000000000000 rtc_counter_get
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:264    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:265    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:267    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:268    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:269    .text.rtc_counter_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:273    .text.rtc_counter_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:274    .text.rtc_counter_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:277    .text.rtc_counter_get:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:278    .text.rtc_counter_get:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:281    .text.rtc_counter_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:284    .text.rtc_counter_get:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:291    .text.rtc_divider_get:0000000000000000 rtc_divider_get
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:294    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:295    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:297    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:298    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:299    .text.rtc_divider_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:302    .text.rtc_divider_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:304    .text.rtc_divider_get:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:306    .text.rtc_divider_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:309    .text.rtc_divider_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:310    .text.rtc_divider_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:313    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:314    .text.rtc_divider_get:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:317    .text.rtc_divider_get:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:324    .text.rtc_flag_get:0000000000000000 rtc_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:327    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:329    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:330    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:331    .text.rtc_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:334    .text.rtc_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:337    .text.rtc_flag_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:339    .text.rtc_flag_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:346    .text.rtc_flag_clear:0000000000000000 rtc_flag_clear
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:349    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:351    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:352    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:353    .text.rtc_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:356    .text.rtc_flag_clear:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:359    .text.rtc_flag_clear:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:363    .text.rtc_flag_clear:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:364    .text.rtc_flag_clear:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:371    .text.rtc_interrupt_flag_get:0000000000000000 rtc_interrupt_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:373    .text.rtc_interrupt_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:375    .text.rtc_interrupt_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:382    .text.rtc_interrupt_flag_clear:0000000000000000 rtc_interrupt_flag_clear
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:384    .text.rtc_interrupt_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:386    .text.rtc_interrupt_flag_clear:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:393    .text.rtc_interrupt_enable:0000000000000000 rtc_interrupt_enable
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:396    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:398    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:399    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:400    .text.rtc_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:406    .text.rtc_interrupt_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:407    .text.rtc_interrupt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:414    .text.rtc_interrupt_disable:0000000000000000 rtc_interrupt_disable
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 17
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:417    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:419    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:420    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:421    .text.rtc_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:424    .text.rtc_interrupt_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:427    .text.rtc_interrupt_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:431    .text.rtc_interrupt_disable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:432    .text.rtc_interrupt_disable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:29     .text.rtc_configuration_mode_enter:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:48     .text.rtc_configuration_mode_exit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:100    .text.rtc_counter_set:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:153    .text.rtc_prescaler_set:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:177    .text.rtc_lwoff_wait:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:205    .text.rtc_register_sync_wait:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:257    .text.rtc_alarm_config:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:287    .text.rtc_counter_get:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:320    .text.rtc_divider_get:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:342    .text.rtc_flag_get:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:367    .text.rtc_flag_clear:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:410    .text.rtc_interrupt_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:435    .text.rtc_interrupt_disable:0000000000000014 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:164    .text.rtc_lwoff_wait:0000000000000004 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:192    .text.rtc_register_sync_wait:000000000000000e .L12
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:842    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1592   .debug_str:000000000000025b .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1572   .debug_str:0000000000000184 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1568   .debug_str:0000000000000110 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1502   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1532   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1580   .debug_str:00000000000001ea .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1600   .debug_str:0000000000000301 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1570   .debug_str:0000000000000176 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1590   .debug_str:0000000000000251 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1552   .debug_str:000000000000008f .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1596   .debug_str:00000000000002ec .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1576   .debug_str:00000000000001da .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1564   .debug_str:00000000000000f9 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1554   .debug_str:00000000000000a2 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1582   .debug_str:00000000000001f7 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1594   .debug_str:00000000000002e3 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1588   .debug_str:0000000000000241 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1604   .debug_str:0000000000000326 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1558   .debug_str:00000000000000ba .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1598   .debug_str:00000000000002f5 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1542   .debug_str:0000000000000041 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:415    .text.rtc_interrupt_disable:0000000000000000 .LFB16
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:433    .text.rtc_interrupt_disable:0000000000000014 .LFE16
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1556   .debug_str:00000000000000b0 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1238   .debug_loc:0000000000000000 .LLST11
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1548   .debug_str:000000000000006a .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:394    .text.rtc_interrupt_enable:0000000000000000 .LFB15
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:408    .text.rtc_interrupt_enable:0000000000000010 .LFE15
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1259   .debug_loc:000000000000002f .LLST10
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1602   .debug_str:000000000000030d .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1578   .debug_str:00000000000001e5 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1560   .debug_str:00000000000000c5 .LASF36
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 18
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1536   .debug_str:0000000000000011 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:347    .text.rtc_flag_clear:0000000000000000 .LFB12
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:365    .text.rtc_flag_clear:0000000000000014 .LFE12
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1273   .debug_loc:0000000000000050 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1546   .debug_str:000000000000005d .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:325    .text.rtc_flag_get:0000000000000000 .LFB11
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:340    .text.rtc_flag_get:0000000000000010 .LFE11
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1294   .debug_loc:000000000000007f .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1574   .debug_str:00000000000001ca .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:292    .text.rtc_divider_get:0000000000000000 .LFB10
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:318    .text.rtc_divider_get:0000000000000018 .LFE10
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1566   .debug_str:000000000000010b .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1308   .debug_loc:00000000000000a0 .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1606   .debug_str:000000000000032c .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:262    .text.rtc_counter_get:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:285    .text.rtc_counter_get:0000000000000012 .LFE9
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1333   .debug_loc:00000000000000da .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1534   .debug_str:0000000000000000 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:210    .text.rtc_alarm_config:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:255    .text.rtc_alarm_config:0000000000000030 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1360   .debug_loc:0000000000000116 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1544   .debug_str:0000000000000057 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1378   .debug_loc:0000000000000142 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:225    .text.rtc_alarm_config:000000000000000e .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:253    .text.rtc_alarm_config:0000000000000030 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1586   .debug_str:000000000000022a .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:182    .text.rtc_register_sync_wait:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:203    .text.rtc_register_sync_wait:0000000000000018 .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1538   .debug_str:0000000000000020 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:158    .text.rtc_lwoff_wait:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:175    .text.rtc_lwoff_wait:0000000000000010 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1540   .debug_str:000000000000002f .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:105    .text.rtc_prescaler_set:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:151    .text.rtc_prescaler_set:0000000000000032 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1395   .debug_loc:000000000000016d .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1413   .debug_loc:0000000000000199 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:120    .text.rtc_prescaler_set:000000000000000e .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:149    .text.rtc_prescaler_set:0000000000000032 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1550   .debug_str:000000000000007f .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:53     .text.rtc_counter_set:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:98     .text.rtc_counter_set:0000000000000030 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1430   .debug_loc:00000000000001c4 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1448   .debug_loc:00000000000001f0 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:68     .text.rtc_counter_set:000000000000000e .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:96     .text.rtc_counter_set:0000000000000030 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1584   .debug_str:000000000000020e .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:34     .text.rtc_configuration_mode_exit:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:46     .text.rtc_configuration_mode_exit:0000000000000010 .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:1562   .debug_str:00000000000000dc .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:14     .text.rtc_configuration_mode_enter:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:27     .text.rtc_configuration_mode_enter:0000000000000012 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:418    .text.rtc_interrupt_disable:0000000000000000 .LVL28
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:425    .text.rtc_interrupt_disable:000000000000000c .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:428    .text.rtc_interrupt_disable:000000000000000e .LVL30
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:397    .text.rtc_interrupt_enable:0000000000000000 .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:403    .text.rtc_interrupt_enable:000000000000000a .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:350    .text.rtc_flag_clear:0000000000000000 .LVL23
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s 			page 19
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:357    .text.rtc_flag_clear:000000000000000c .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:360    .text.rtc_flag_clear:000000000000000e .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:328    .text.rtc_flag_get:0000000000000000 .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:335    .text.rtc_flag_get:000000000000000a .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:296    .text.rtc_divider_get:0000000000000000 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:307    .text.rtc_divider_get:0000000000000010 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:311    .text.rtc_divider_get:0000000000000014 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:315    .text.rtc_divider_get:0000000000000016 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:266    .text.rtc_counter_get:0000000000000000 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:271    .text.rtc_counter_get:0000000000000008 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:275    .text.rtc_counter_get:000000000000000c .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:279    .text.rtc_counter_get:000000000000000e .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:282    .text.rtc_counter_get:0000000000000010 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:217    .text.rtc_alarm_config:0000000000000002 .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:248    .text.rtc_alarm_config:0000000000000028 .LCFI5
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:213    .text.rtc_alarm_config:0000000000000000 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:250    .text.rtc_alarm_config:0000000000000028 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:112    .text.rtc_prescaler_set:0000000000000002 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:144    .text.rtc_prescaler_set:000000000000002a .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:108    .text.rtc_prescaler_set:0000000000000000 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:146    .text.rtc_prescaler_set:000000000000002a .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:60     .text.rtc_counter_set:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:91     .text.rtc_counter_set:0000000000000028 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:56     .text.rtc_counter_set:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:93     .text.rtc_counter_set:0000000000000028 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccCsnsLT.s:442    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS

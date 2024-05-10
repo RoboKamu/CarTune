@@ -1,0 +1,192 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s 			page 1
+
+
+   1              		.file	"_exit.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._exit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	_exit
+  13              	_exit:
+  14              	.LFB1:
+  15              		.file 1 "./../../firmware/RISCV/stubs/_exit.c"
+   1:./../../firmware/RISCV/stubs/_exit.c **** /* See LICENSE of license details. */
+   2:./../../firmware/RISCV/stubs/_exit.c **** 
+   3:./../../firmware/RISCV/stubs/_exit.c **** #include <unistd.h>
+   4:./../../firmware/RISCV/stubs/_exit.c **** 
+   5:./../../firmware/RISCV/stubs/_exit.c **** #include "stub.h"
+   6:./../../firmware/RISCV/stubs/_exit.c **** 
+   7:./../../firmware/RISCV/stubs/_exit.c **** 
+   8:./../../firmware/RISCV/stubs/_exit.c **** void _exit(int code)
+   9:./../../firmware/RISCV/stubs/_exit.c **** {
+  16              		.loc 1 9 1
+  17              		.cfi_startproc
+  18              	.LVL0:
+  10:./../../firmware/RISCV/stubs/_exit.c ****   const char message[] = "\nProgram has exited with code:";
+  19              		.loc 1 10 3
+   9:./../../firmware/RISCV/stubs/_exit.c ****   const char message[] = "\nProgram has exited with code:";
+  20              		.loc 1 9 1 is_stmt 0
+  21 0000 7971     		addi	sp,sp,-48
+  22              	.LCFI0:
+  23              		.cfi_def_cfa_offset 48
+  24              		.loc 1 10 14
+  25 0002 B7050000 		lui	a1,%hi(.LC0)
+   9:./../../firmware/RISCV/stubs/_exit.c ****   const char message[] = "\nProgram has exited with code:";
+  26              		.loc 1 9 1
+  27 0006 22D4     		sw	s0,40(sp)
+  28              		.loc 1 10 14
+  29 0008 7D46     		li	a2,31
+  30              		.cfi_offset 8, -8
+   9:./../../firmware/RISCV/stubs/_exit.c ****   const char message[] = "\nProgram has exited with code:";
+  31              		.loc 1 9 1
+  32 000a 2A84     		mv	s0,a0
+  33              		.loc 1 10 14
+  34 000c 93850500 		addi	a1,a1,%lo(.LC0)
+  35 0010 0A85     		mv	a0,sp
+  36              	.LVL1:
+   9:./../../firmware/RISCV/stubs/_exit.c ****   const char message[] = "\nProgram has exited with code:";
+  37              		.loc 1 9 1
+  38 0012 06D6     		sw	ra,44(sp)
+  39              		.cfi_offset 1, -4
+  40              		.loc 1 10 14
+  41 0014 97000000 		call	memcpy
+  41      E7800000 
+  42              	.LVL2:
+  11:./../../firmware/RISCV/stubs/_exit.c **** 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s 			page 2
+
+
+  12:./../../firmware/RISCV/stubs/_exit.c ****   write(STDERR_FILENO, message, sizeof(message) - 1);
+  43              		.loc 1 12 3 is_stmt 1
+  44 001c 7946     		li	a2,30
+  45 001e 8A85     		mv	a1,sp
+  46 0020 0945     		li	a0,2
+  47 0022 97000000 		call	write
+  47      E7800000 
+  48              	.LVL3:
+  13:./../../firmware/RISCV/stubs/_exit.c ****   write_hex(STDERR_FILENO, code);
+  49              		.loc 1 13 3
+  50 002a A285     		mv	a1,s0
+  51 002c 0945     		li	a0,2
+  52 002e 97000000 		call	write_hex
+  52      E7800000 
+  53              	.LVL4:
+  14:./../../firmware/RISCV/stubs/_exit.c ****   write(STDERR_FILENO, "\n", 1);
+  54              		.loc 1 14 3
+  55 0036 B7050000 		lui	a1,%hi(.LC1)
+  56 003a 0546     		li	a2,1
+  57 003c 93850500 		addi	a1,a1,%lo(.LC1)
+  58 0040 0945     		li	a0,2
+  59 0042 97000000 		call	write
+  59      E7800000 
+  60              	.LVL5:
+  61              	.L2:
+  15:./../../firmware/RISCV/stubs/_exit.c **** 
+  16:./../../firmware/RISCV/stubs/_exit.c ****   for (;;);
+  62              		.loc 1 16 3 discriminator 1
+  63              		.loc 1 16 11 discriminator 1
+  64 004a 01A0     		j	.L2
+  65              		.cfi_endproc
+  66              	.LFE1:
+  68              		.section	.rodata._exit.str1.4,"aMS",@progbits,1
+  69              		.align	2
+  70              	.LC1:
+  71 0000 0A00     		.string	"\n"
+  72 0002 0000     		.zero	2
+  73              	.LC0:
+  74 0004 0A50726F 		.string	"\nProgram has exited with code:"
+  74      6772616D 
+  74      20686173 
+  74      20657869 
+  74      74656420 
+  75              		.text
+  76              	.Letext0:
+  77              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+  78              		.file 3 "./../../firmware/RISCV/stubs/stub.h"
+  79              		.file 4 "<built-in>"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 _exit.c
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:13     .text._exit:0000000000000000 _exit
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:17     .text._exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:19     .text._exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:20     .text._exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:21     .text._exit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:23     .text._exit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:25     .text._exit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:27     .text._exit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:29     .text._exit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:30     .text._exit:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:32     .text._exit:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:34     .text._exit:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:38     .text._exit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:39     .text._exit:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:41     .text._exit:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:44     .text._exit:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:50     .text._exit:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:55     .text._exit:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:63     .text._exit:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:64     .text._exit:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:65     .text._exit:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:68     .text._exit:000000000000004c .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:73     .rodata._exit.str1.4:0000000000000004 .LC0
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:70     .rodata._exit.str1.4:0000000000000000 .LC1
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:61     .text._exit:000000000000004a .L2
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:342    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:649    .debug_str:0000000000000111 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:667    .debug_str:00000000000001eb .LASF20
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:645    .debug_str:00000000000000a4 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:607    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:613    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:653    .debug_str:00000000000001ac .LASF0
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:639    .debug_str:0000000000000088 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:661    .debug_str:00000000000001d4 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:651    .debug_str:0000000000000199 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:643    .debug_str:000000000000009b .LASF4
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:629    .debug_str:0000000000000049 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:615    .debug_str:0000000000000000 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:631    .debug_str:000000000000005b .LASF7
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:621    .debug_str:0000000000000026 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:641    .debug_str:0000000000000096 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:657    .debug_str:00000000000001c1 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:663    .debug_str:00000000000001de .LASF11
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:659    .debug_str:00000000000001cd .LASF12
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:625    .debug_str:000000000000003b .LASF13
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:627    .debug_str:0000000000000042 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:617    .debug_str:000000000000000e .LASF15
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:655    .debug_str:00000000000001b8 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:637    .debug_str:0000000000000082 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:14     .text._exit:0000000000000000 .LFB1
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:66     .text._exit:000000000000004c .LFE1
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:570    .debug_loc:0000000000000000 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:665    .debug_str:00000000000001e6 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:583    .debug_loc:0000000000000020 .LLST1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s 			page 4
+
+
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:623    .debug_str:0000000000000033 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:42     .text._exit:000000000000001c .LVL2
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:48     .text._exit:000000000000002a .LVL3
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:53     .text._exit:0000000000000036 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:60     .text._exit:000000000000004a .LVL5
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:647    .debug_str:000000000000010a .LASF25
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:619    .debug_str:0000000000000015 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:635    .debug_str:000000000000007c .LASF17
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:633    .debug_str:0000000000000072 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:22     .text._exit:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:18     .text._exit:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:36     .text._exit:0000000000000012 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\cc6mtAu5.s:81     .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+memcpy
+write
+write_hex

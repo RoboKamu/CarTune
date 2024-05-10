@@ -1,0 +1,315 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s 			page 1
+
+
+   1              		.file	"write_hex.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.write_hex,"ax",@progbits
+  10              		.align	1
+  11              		.globl	write_hex
+  13              	write_hex:
+  14              	.LFB0:
+  15              		.file 1 "./../../firmware/RISCV/stubs/write_hex.c"
+   1:./../../firmware/RISCV/stubs/write_hex.c **** /* See LICENSE of license details. */
+   2:./../../firmware/RISCV/stubs/write_hex.c **** 
+   3:./../../firmware/RISCV/stubs/write_hex.c **** #include <stdint.h>
+   4:./../../firmware/RISCV/stubs/write_hex.c **** #include <unistd.h>
+   5:./../../firmware/RISCV/stubs/write_hex.c **** 
+   6:./../../firmware/RISCV/stubs/write_hex.c **** void write_hex(int fd, unsigned long int hex)
+   7:./../../firmware/RISCV/stubs/write_hex.c **** {
+  16              		.loc 1 7 1
+  17              		.cfi_startproc
+  18              	.LVL0:
+   8:./../../firmware/RISCV/stubs/write_hex.c ****   uint8_t ii;
+  19              		.loc 1 8 3
+   9:./../../firmware/RISCV/stubs/write_hex.c ****   uint8_t jj;
+  20              		.loc 1 9 3
+  10:./../../firmware/RISCV/stubs/write_hex.c ****   char towrite;
+  21              		.loc 1 10 3
+  11:./../../firmware/RISCV/stubs/write_hex.c ****   write(fd , "0x", 2);
+  22              		.loc 1 11 3
+   7:./../../firmware/RISCV/stubs/write_hex.c ****   uint8_t ii;
+  23              		.loc 1 7 1 is_stmt 0
+  24 0000 7971     		addi	sp,sp,-48
+  25              	.LCFI0:
+  26              		.cfi_def_cfa_offset 48
+  27 0002 4ECE     		sw	s3,28(sp)
+  28              		.cfi_offset 19, -20
+  29 0004 AE89     		mv	s3,a1
+  30              		.loc 1 11 3
+  31 0006 B7050000 		lui	a1,%hi(.LC0)
+  32              	.LVL1:
+  33 000a 0946     		li	a2,2
+  34 000c 93850500 		addi	a1,a1,%lo(.LC0)
+   7:./../../firmware/RISCV/stubs/write_hex.c ****   uint8_t ii;
+  35              		.loc 1 7 1
+  36 0010 22D4     		sw	s0,40(sp)
+  37 0012 26D2     		sw	s1,36(sp)
+  38 0014 4AD0     		sw	s2,32(sp)
+  39 0016 52CC     		sw	s4,24(sp)
+  40 0018 56CA     		sw	s5,20(sp)
+  41 001a 06D6     		sw	ra,44(sp)
+  42              		.cfi_offset 8, -8
+  43              		.cfi_offset 9, -12
+  44              		.cfi_offset 18, -16
+  45              		.cfi_offset 20, -24
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s 			page 2
+
+
+  46              		.cfi_offset 21, -28
+  47              		.cfi_offset 1, -4
+   7:./../../firmware/RISCV/stubs/write_hex.c ****   uint8_t ii;
+  48              		.loc 1 7 1
+  49 001c 2A89     		mv	s2,a0
+  50              		.loc 1 11 3
+  51 001e 7144     		li	s0,28
+  52 0020 97000000 		call	write
+  52      E7800000 
+  53              	.LVL2:
+  12:./../../firmware/RISCV/stubs/write_hex.c ****   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
+  54              		.loc 1 12 3 is_stmt 1
+  55              	.LBB2:
+  13:./../../firmware/RISCV/stubs/write_hex.c ****     jj = ii - 1;
+  14:./../../firmware/RISCV/stubs/write_hex.c ****     uint8_t digit = ((hex & (0xF << (jj*4))) >> (jj*4));
+  56              		.loc 1 14 34 is_stmt 0
+  57 0028 3D4A     		li	s4,15
+  15:./../../firmware/RISCV/stubs/write_hex.c ****     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
+  58              		.loc 1 15 13
+  59 002a A54A     		li	s5,9
+  60              	.LBE2:
+  12:./../../firmware/RISCV/stubs/write_hex.c ****   for (ii = sizeof(unsigned long int) * 2 ; ii > 0; ii--) {
+  61              		.loc 1 12 3
+  62 002c F154     		li	s1,-4
+  63              	.LVL3:
+  64              	.L4:
+  65              	.LBB3:
+  13:./../../firmware/RISCV/stubs/write_hex.c ****     jj = ii - 1;
+  66              		.loc 1 13 5 is_stmt 1
+  14:./../../firmware/RISCV/stubs/write_hex.c ****     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
+  67              		.loc 1 14 5
+  14:./../../firmware/RISCV/stubs/write_hex.c ****     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
+  68              		.loc 1 14 34 is_stmt 0
+  69 002e B3178A00 		sll	a5,s4,s0
+  14:./../../firmware/RISCV/stubs/write_hex.c ****     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
+  70              		.loc 1 14 27
+  71 0032 B3F73701 		and	a5,a5,s3
+  14:./../../firmware/RISCV/stubs/write_hex.c ****     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
+  72              		.loc 1 14 46
+  73 0036 B3D78700 		srl	a5,a5,s0
+  14:./../../firmware/RISCV/stubs/write_hex.c ****     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
+  74              		.loc 1 14 13
+  75 003a 93F7F70F 		andi	a5,a5,0xff
+  76              	.LVL4:
+  77              		.loc 1 15 5 is_stmt 1
+  78              		.loc 1 15 13 is_stmt 0
+  79 003e 63ECFA02 		bgtu	a5,s5,.L2
+  80              		.loc 1 15 13 discriminator 1
+  81 0042 93870703 		addi	a5,a5,48
+  82              	.LVL5:
+  83              	.L7:
+  84              		.loc 1 15 13 discriminator 2
+  85 0046 93F7F70F 		andi	a5,a5,0xff
+  16:./../../firmware/RISCV/stubs/write_hex.c ****     write(fd, &towrite, 1);
+  86              		.loc 1 16 5 discriminator 2
+  87 004a 0546     		li	a2,1
+  88 004c 9305F100 		addi	a1,sp,15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s 			page 3
+
+
+  89 0050 4A85     		mv	a0,s2
+  90 0052 7114     		addi	s0,s0,-4
+  91              	.LVL6:
+  15:./../../firmware/RISCV/stubs/write_hex.c ****     towrite = digit < 0xA ? ('0' + digit) : ('A' +  (digit - 0xA));
+  92              		.loc 1 15 13 discriminator 2
+  93 0054 A307F100 		sb	a5,15(sp)
+  94              		.loc 1 16 5 is_stmt 1 discriminator 2
+  95 0058 97000000 		call	write
+  95      E7800000 
+  96              	.LVL7:
+  97              	.LBE3:
+  12:./../../firmware/RISCV/stubs/write_hex.c ****     jj = ii - 1;
+  98              		.loc 1 12 3 is_stmt 0 discriminator 2
+  99 0060 E31794FC 		bne	s0,s1,.L4
+  17:./../../firmware/RISCV/stubs/write_hex.c ****   }
+  18:./../../firmware/RISCV/stubs/write_hex.c **** }
+ 100              		.loc 1 18 1
+ 101 0064 B250     		lw	ra,44(sp)
+ 102              		.cfi_remember_state
+ 103              		.cfi_restore 1
+ 104 0066 2254     		lw	s0,40(sp)
+ 105              		.cfi_restore 8
+ 106 0068 9254     		lw	s1,36(sp)
+ 107              		.cfi_restore 9
+ 108 006a 0259     		lw	s2,32(sp)
+ 109              		.cfi_restore 18
+ 110              	.LVL8:
+ 111 006c F249     		lw	s3,28(sp)
+ 112              		.cfi_restore 19
+ 113              	.LVL9:
+ 114 006e 624A     		lw	s4,24(sp)
+ 115              		.cfi_restore 20
+ 116 0070 D24A     		lw	s5,20(sp)
+ 117              		.cfi_restore 21
+ 118 0072 4561     		addi	sp,sp,48
+ 119              	.LCFI1:
+ 120              		.cfi_def_cfa_offset 0
+ 121 0074 8280     		jr	ra
+ 122              	.LVL10:
+ 123              	.L2:
+ 124              	.LCFI2:
+ 125              		.cfi_restore_state
+ 126              	.LBB4:
+  15:./../../firmware/RISCV/stubs/write_hex.c ****     write(fd, &towrite, 1);
+ 127              		.loc 1 15 13 discriminator 2
+ 128 0076 93877703 		addi	a5,a5,55
+ 129              	.LVL11:
+ 130 007a F1B7     		j	.L7
+ 131              	.LBE4:
+ 132              		.cfi_endproc
+ 133              	.LFE0:
+ 135              		.section	.rodata.write_hex.str1.4,"aMS",@progbits,1
+ 136              		.align	2
+ 137              	.LC0:
+ 138 0000 307800   		.string	"0x"
+ 139              		.text
+ 140              	.Letext0:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s 			page 4
+
+
+ 141              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 142              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 143              		.file 4 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 write_hex.c
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:13     .text.write_hex:0000000000000000 write_hex
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:17     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:19     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:20     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:21     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:22     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:23     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:24     .text.write_hex:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:26     .text.write_hex:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:28     .text.write_hex:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:31     .text.write_hex:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:36     .text.write_hex:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:42     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:43     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:44     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:45     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:46     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:47     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:49     .text.write_hex:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:51     .text.write_hex:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:56     .text.write_hex:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:57     .text.write_hex:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:59     .text.write_hex:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:62     .text.write_hex:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:67     .text.write_hex:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:68     .text.write_hex:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:69     .text.write_hex:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:71     .text.write_hex:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:73     .text.write_hex:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:75     .text.write_hex:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:78     .text.write_hex:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:79     .text.write_hex:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:81     .text.write_hex:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:85     .text.write_hex:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:87     .text.write_hex:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:93     .text.write_hex:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:95     .text.write_hex:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:99     .text.write_hex:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:101    .text.write_hex:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:102    .text.write_hex:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:103    .text.write_hex:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:105    .text.write_hex:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:107    .text.write_hex:000000000000006a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:109    .text.write_hex:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:112    .text.write_hex:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:115    .text.write_hex:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:117    .text.write_hex:0000000000000072 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:120    .text.write_hex:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:125    .text.write_hex:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:128    .text.write_hex:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:132    .text.write_hex:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:135    .text.write_hex:000000000000007c .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:137    .rodata.write_hex.str1.4:0000000000000000 .LC0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:123    .text.write_hex:0000000000000076 .L2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s 			page 6
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:64     .text.write_hex:000000000000002e .L4
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:83     .text.write_hex:0000000000000046 .L7
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:385    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:817    .debug_str:0000000000000160 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:791    .debug_str:00000000000000c3 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:779    .debug_str:0000000000000019 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:757    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:771    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:823    .debug_str:00000000000001fd .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:773    .debug_str:0000000000000000 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:783    .debug_str:0000000000000089 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:813    .debug_str:000000000000014e .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:789    .debug_str:00000000000000b0 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:819    .debug_str:00000000000001e8 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:787    .debug_str:000000000000009e .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:809    .debug_str:000000000000013b .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:803    .debug_str:0000000000000115 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:797    .debug_str:00000000000000fb .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:805    .debug_str:000000000000012c .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:811    .debug_str:0000000000000149 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:821    .debug_str:00000000000001f1 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:815    .debug_str:0000000000000158 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:799    .debug_str:0000000000000108 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:785    .debug_str:0000000000000097 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:777    .debug_str:0000000000000012 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:807    .debug_str:0000000000000134 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:793    .debug_str:00000000000000ec .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:781    .debug_str:000000000000007f .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:14     .text.write_hex:0000000000000000 .LFB0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:133    .text.write_hex:000000000000007c .LFE0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:631    .debug_loc:0000000000000000 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:654    .debug_loc:0000000000000038 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:676    .debug_loc:000000000000006f .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:698    .debug_loc:00000000000000a6 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:775    .debug_str:000000000000000a .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:801    .debug_str:000000000000010f .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:706    .debug_loc:00000000000000ba .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:96     .text.write_hex:0000000000000060 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:53     .text.write_hex:0000000000000028 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:795    .debug_str:00000000000000f5 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:25     .text.write_hex:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:119    .text.write_hex:0000000000000074 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:124    .text.write_hex:0000000000000076 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:18     .text.write_hex:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:110    .text.write_hex:000000000000006c .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:122    .text.write_hex:0000000000000076 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:32     .text.write_hex:000000000000000a .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:113    .text.write_hex:000000000000006e .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:63     .text.write_hex:000000000000002e .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:76     .text.write_hex:000000000000003e .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:82     .text.write_hex:0000000000000046 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:91     .text.write_hex:0000000000000054 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:129    .text.write_hex:000000000000007a .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:145    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:55     .text.write_hex:0000000000000028 .LBB2
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:60     .text.write_hex:000000000000002c .LBE2
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:65     .text.write_hex:000000000000002e .LBB3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s 			page 7
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:97     .text.write_hex:0000000000000060 .LBE3
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:126    .text.write_hex:0000000000000076 .LBB4
+C:\Users\Karzan\AppData\Local\Temp\ccBGeD2f.s:131    .text.write_hex:000000000000007c .LBE4
+
+UNDEFINED SYMBOLS
+write
