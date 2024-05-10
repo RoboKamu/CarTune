@@ -128,7 +128,7 @@ debug: CFLAGS += -DUSE_SOFTWARE_DEBUGGER #-Xlinker --defsym=__dbg_stack_size=409
 LDSCRIPT = $(FIRMWARE_DIR)/RISCV/env_Eclipse/GD32VF103xB.lds
 
 # libraries
-#LIBS = -lc_nano -lm
+LIBS = -lm
 LIBDIR = 
 LDFLAGS =  
 #Debugger relies on "-Wl,--no-relax" since an uncorrupted global pointer register is not guaranteed

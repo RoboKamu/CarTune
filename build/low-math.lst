@@ -1,0 +1,541 @@
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 1
+
+
+   1              		.file	"low-math.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.globl	__gesf2
+  10              		.section	.text.toPos,"ax",@progbits
+  11              		.align	1
+  12              		.globl	toPos
+  14              	toPos:
+  15              	.LFB2:
+  16              		.file 1 "low-math.c"
+   1:low-math.c    **** #include "low-math.h"
+   2:low-math.c    **** 
+   3:low-math.c    **** // Absolute value return as float
+   4:low-math.c    **** float toPos(float x){
+  17              		.loc 1 4 21
+  18              		.cfi_startproc
+  19              	.LVL0:
+   5:low-math.c    ****   if (x>=0) return x;
+  20              		.loc 1 5 3
+   4:low-math.c    ****   if (x>=0) return x;
+  21              		.loc 1 4 21 is_stmt 0
+  22 0000 4111     		addi	sp,sp,-16
+  23              	.LCFI0:
+  24              		.cfi_def_cfa_offset 16
+  25              		.loc 1 5 6
+  26 0002 93050000 		mv	a1,zero
+   4:low-math.c    ****   if (x>=0) return x;
+  27              		.loc 1 4 21
+  28 0006 22C4     		sw	s0,8(sp)
+  29 0008 06C6     		sw	ra,12(sp)
+  30              		.cfi_offset 8, -8
+  31              		.cfi_offset 1, -4
+   4:low-math.c    ****   if (x>=0) return x;
+  32              		.loc 1 4 21
+  33 000a 2A84     		mv	s0,a0
+  34              		.loc 1 5 6
+  35 000c 97000000 		call	__gesf2
+  35      E7800000 
+  36              	.LVL1:
+  37 0014 63550500 		bge	a0,zero,.L2
+   6:low-math.c    ****   return x*(-1);
+  38              		.loc 1 6 3 is_stmt 1
+  39              		.loc 1 6 11 is_stmt 0
+  40 0018 B7070080 		li	a5,-2147483648
+  41 001c 3D8C     		xor	s0,a5,s0
+  42              	.LVL2:
+  43              	.L2:
+   7:low-math.c    **** }
+  44              		.loc 1 7 1
+  45 001e 2285     		mv	a0,s0
+  46 0020 B240     		lw	ra,12(sp)
+  47              		.cfi_restore 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 2
+
+
+  48 0022 2244     		lw	s0,8(sp)
+  49              		.cfi_restore 8
+  50 0024 4101     		addi	sp,sp,16
+  51              	.LCFI1:
+  52              		.cfi_def_cfa_offset 0
+  53 0026 8280     		jr	ra
+  54              		.cfi_endproc
+  55              	.LFE2:
+  57              		.globl	__ltsf2
+  58              		.globl	__mulsf3
+  59              		.globl	__divsf3
+  60              		.globl	__addsf3
+  61              		.section	.text.newtonSqrt,"ax",@progbits
+  62              		.align	1
+  63              		.globl	newtonSqrt
+  65              	newtonSqrt:
+  66              	.LFB3:
+   8:low-math.c    **** 
+   9:low-math.c    **** /*!
+  10:low-math.c    ****   \brief        calculate the Newton–Raphson method with 3 steps
+  11:low-math.c    ****   \param[in]    x: 'a' in Newton–Raphson formula ( number to be rooted )
+  12:low-math.c    ****   \attention    formula: x_(n+1) = (1/2)(x_(n) + a/x_(n)) {15 iteration->accuracy ~10^8}
+  13:low-math.c    ****   \param[out]   x(n+1): approximated value of square root (result)
+  14:low-math.c    ****   \retval       float
+  15:low-math.c    **** */
+  16:low-math.c    **** float newtonSqrt(float x){
+  67              		.loc 1 16 26 is_stmt 1
+  68              		.cfi_startproc
+  69              	.LVL3:
+  17:low-math.c    ****   float val;                          // x0 -> guess baes on conditions..
+  70              		.loc 1 17 3
+  18:low-math.c    ****   if (x<0) return 0;                  // ..1. only real numbers..
+  71              		.loc 1 18 3
+  16:low-math.c    ****   float val;                          // x0 -> guess baes on conditions..
+  72              		.loc 1 16 26 is_stmt 0
+  73 0000 0111     		addi	sp,sp,-32
+  74              	.LCFI2:
+  75              		.cfi_def_cfa_offset 32
+  76              		.loc 1 18 6
+  77 0002 93050000 		mv	a1,zero
+  16:low-math.c    ****   float val;                          // x0 -> guess baes on conditions..
+  78              		.loc 1 16 26
+  79 0006 22CC     		sw	s0,24(sp)
+  80 0008 4AC8     		sw	s2,16(sp)
+  81 000a 06CE     		sw	ra,28(sp)
+  82 000c 26CA     		sw	s1,20(sp)
+  83 000e 4EC6     		sw	s3,12(sp)
+  84              		.cfi_offset 8, -8
+  85              		.cfi_offset 18, -16
+  86              		.cfi_offset 1, -4
+  87              		.cfi_offset 9, -12
+  88              		.cfi_offset 19, -20
+  16:low-math.c    ****   float val;                          // x0 -> guess baes on conditions..
+  89              		.loc 1 16 26
+  90 0010 2A89     		mv	s2,a0
+  91              		.loc 1 18 6
+  92 0012 97000000 		call	__ltsf2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 3
+
+
+  92      E7800000 
+  93              	.LVL4:
+  94              		.loc 1 18 19
+  95 001a 13040000 		mv	s0,zero
+  96              		.loc 1 18 6
+  97 001e 634D0504 		blt	a0,zero,.L4
+  19:low-math.c    ****   else if (x < 1) val = 0.99;         // ..2. guess less than 1 if root term also less than 1
+  98              		.loc 1 19 8 is_stmt 1
+  99              		.loc 1 19 11 is_stmt 0
+ 100 0022 B7070000 		lui	a5,%hi(.LC1)
+ 101 0026 83A50700 		lw	a1,%lo(.LC1)(a5)
+ 102 002a 4A85     		mv	a0,s2
+ 103 002c B7090000 		lui	s3,%hi(.LC2)
+ 104 0030 97000000 		call	__ltsf2
+ 104      E7800000 
+ 105              	.LVL5:
+ 106 0038 63480504 		blt	a0,zero,.L9
+  20:low-math.c    ****   else val = x/2.0;                   // ..3. if larger, guess half..
+ 107              		.loc 1 20 8 is_stmt 1
+ 108              		.loc 1 20 12 is_stmt 0
+ 109 003c 83A50900 		lw	a1,%lo(.LC2)(s3)
+ 110 0040 4A85     		mv	a0,s2
+ 111 0042 97000000 		call	__mulsf3
+ 111      E7800000 
+ 112              	.LVL6:
+ 113 004a 2A84     		mv	s0,a0
+ 114              	.LVL7:
+ 115              	.L6:
+ 116              	.LBB2:
+  21:low-math.c    **** 
+  22:low-math.c    ****   // calculate the Newton–Raphson method with 15 iterations { accurate upto ~10^8}
+  23:low-math.c    ****   for (int i=0; i<15; i++){
+  24:low-math.c    ****     val = 1.0/2.0 * (val + x/val);
+ 117              		.loc 1 24 9 discriminator 3
+ 118 004c 83A90900 		lw	s3,%lo(.LC2)(s3)
+ 119              	.LBE2:
+  19:low-math.c    ****   else val = x/2.0;                   // ..3. if larger, guess half..
+ 120              		.loc 1 19 23 discriminator 3
+ 121 0050 BD44     		li	s1,15
+ 122              	.L7:
+ 123              	.LVL8:
+ 124              	.LBB3:
+ 125              		.loc 1 24 5 is_stmt 1 discriminator 3
+ 126              		.loc 1 24 29 is_stmt 0 discriminator 3
+ 127 0052 A285     		mv	a1,s0
+ 128 0054 4A85     		mv	a0,s2
+ 129 0056 97000000 		call	__divsf3
+ 129      E7800000 
+ 130              	.LVL9:
+ 131              		.loc 1 24 26 discriminator 3
+ 132 005e A285     		mv	a1,s0
+ 133 0060 97000000 		call	__addsf3
+ 133      E7800000 
+ 134              	.LVL10:
+ 135              		.loc 1 24 9 discriminator 3
+ 136 0068 CE85     		mv	a1,s3
+ 137 006a 97000000 		call	__mulsf3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 4
+
+
+ 137      E7800000 
+ 138              	.LVL11:
+ 139 0072 FD14     		addi	s1,s1,-1
+ 140              	.LVL12:
+ 141 0074 2A84     		mv	s0,a0
+ 142              	.LVL13:
+  23:low-math.c    ****     val = 1.0/2.0 * (val + x/val);
+ 143              		.loc 1 23 3 discriminator 3
+ 144 0076 F1FC     		bne	s1,zero,.L7
+ 145              	.LVL14:
+ 146              	.L4:
+ 147              	.LBE3:
+  25:low-math.c    ****   }
+  26:low-math.c    ****   return val;
+  27:low-math.c    **** }
+ 148              		.loc 1 27 1
+ 149 0078 2285     		mv	a0,s0
+ 150 007a F240     		lw	ra,28(sp)
+ 151              		.cfi_remember_state
+ 152              		.cfi_restore 1
+ 153 007c 6244     		lw	s0,24(sp)
+ 154              		.cfi_restore 8
+ 155 007e D244     		lw	s1,20(sp)
+ 156              		.cfi_restore 9
+ 157 0080 4249     		lw	s2,16(sp)
+ 158              		.cfi_restore 18
+ 159              	.LVL15:
+ 160 0082 B249     		lw	s3,12(sp)
+ 161              		.cfi_restore 19
+ 162 0084 0561     		addi	sp,sp,32
+ 163              	.LCFI3:
+ 164              		.cfi_def_cfa_offset 0
+ 165 0086 8280     		jr	ra
+ 166              	.LVL16:
+ 167              	.L9:
+ 168              	.LCFI4:
+ 169              		.cfi_restore_state
+  19:low-math.c    ****   else val = x/2.0;                   // ..3. if larger, guess half..
+ 170              		.loc 1 19 23
+ 171 0088 B7070000 		lui	a5,%hi(.LC0)
+ 172 008c 03A40700 		lw	s0,%lo(.LC0)(a5)
+ 173 0090 75BF     		j	.L6
+ 174              		.cfi_endproc
+ 175              	.LFE3:
+ 177              		.section	.text.ssqrt,"ax",@progbits
+ 178              		.align	1
+ 179              		.globl	ssqrt
+ 181              	ssqrt:
+ 182              	.LFB4:
+  28:low-math.c    **** 
+  29:low-math.c    **** int32_t ssqrt(int32_t n) {
+ 183              		.loc 1 29 26 is_stmt 1
+ 184              		.cfi_startproc
+ 185              	.LVL17:
+  30:low-math.c    ****   int64_t val = n << 10;
+ 186              		.loc 1 30 3
+ 187              		.loc 1 30 19 is_stmt 0
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 5
+
+
+ 188 0000 1317A500 		slli	a4,a0,10
+ 189              		.loc 1 30 11
+ 190 0004 9355F741 		srai	a1,a4,31
+ 191              	.LVL18:
+  31:low-math.c    ****   unsigned long temp, g=0, b = 0x8000, bshft = 15;
+ 192              		.loc 1 31 3 is_stmt 1
+ 193              		.loc 1 31 40 is_stmt 0
+ 194 0008 BD46     		li	a3,15
+ 195              		.loc 1 31 28
+ 196 000a 2166     		li	a2,32768
+ 197              		.loc 1 31 23
+ 198 000c 0145     		li	a0,0
+ 199              	.LVL19:
+  32:low-math.c    ****   do {
+  33:low-math.c    ****     if (val >= (temp = (((g << 1) + b)<<bshft--))) {
+ 200              		.loc 1 33 22
+ 201 000e 0143     		li	t1,0
+  34:low-math.c    ****       g += b;
+  35:low-math.c    ****       val -= temp;
+  36:low-math.c    ****     }
+  37:low-math.c    ****   } while (b >>= 1);
+ 202              		.loc 1 37 3
+ 203 0010 7D58     		li	a6,-1
+ 204              	.LVL20:
+ 205              	.L15:
+  32:low-math.c    ****   do {
+ 206              		.loc 1 32 3 is_stmt 1
+  33:low-math.c    ****       g += b;
+ 207              		.loc 1 33 5
+  33:low-math.c    ****       g += b;
+ 208              		.loc 1 33 29 is_stmt 0
+ 209 0012 93171500 		slli	a5,a0,1
+  33:low-math.c    ****       g += b;
+ 210              		.loc 1 33 35
+ 211 0016 B297     		add	a5,a5,a2
+  33:low-math.c    ****       g += b;
+ 212              		.loc 1 33 46
+ 213 0018 9388F6FF 		addi	a7,a3,-1
+ 214              	.LVL21:
+  33:low-math.c    ****       g += b;
+ 215              		.loc 1 33 22
+ 216 001c B397D700 		sll	a5,a5,a3
+  33:low-math.c    ****       g += b;
+ 217              		.loc 1 33 8
+ 218 0020 63CC6500 		bgt	t1,a1,.L13
+ 219 0024 99E1     		bne	a1,zero,.L16
+ 220 0026 6369F700 		bgtu	a5,a4,.L13
+ 221              	.L16:
+  34:low-math.c    ****       g += b;
+ 222              		.loc 1 34 7 is_stmt 1
+  35:low-math.c    ****     }
+ 223              		.loc 1 35 11 is_stmt 0
+ 224 002a B307F740 		sub	a5,a4,a5
+ 225 002e B336F700 		sgtu	a3,a5,a4
+ 226              	.LVL22:
+  34:low-math.c    ****       g += b;
+ 227              		.loc 1 34 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 6
+
+
+ 228 0032 3295     		add	a0,a0,a2
+ 229              	.LVL23:
+  35:low-math.c    ****     }
+ 230              		.loc 1 35 7 is_stmt 1
+  35:low-math.c    ****     }
+ 231              		.loc 1 35 11 is_stmt 0
+ 232 0034 3E87     		mv	a4,a5
+ 233              	.LVL24:
+ 234 0036 958D     		sub	a1,a1,a3
+ 235              	.LVL25:
+ 236              	.L13:
+ 237              		.loc 1 37 14
+ 238 0038 0582     		srli	a2,a2,1
+ 239              	.LVL26:
+ 240 003a C686     		mv	a3,a7
+ 241              		.loc 1 37 3
+ 242 003c E39B08FD 		bne	a7,a6,.L15
+ 243              	.LVL27:
+  38:low-math.c    ****   return g;
+  39:low-math.c    **** }...
+ 244              		.loc 1 39 1
+ 245 0040 8280     		ret
+ 246              		.cfi_endproc
+ 247              	.LFE4:
+ 249              		.section	.rodata.newtonSqrt.cst4,"aM",@progbits,4
+ 250              		.align	2
+ 251              	.LC0:
+ 252 0000 A4707D3F 		.word	1065185444
+ 253              	.LC1:
+ 254 0004 0000803F 		.word	1065353216
+ 255              	.LC2:
+ 256 0008 0000003F 		.word	1056964608
+ 257              		.text
+ 258              	.Letext0:
+ 259              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 260              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 261              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 low-math.c
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:14     .text.toPos:0000000000000000 toPos
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:18     .text.toPos:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:20     .text.toPos:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:21     .text.toPos:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:22     .text.toPos:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:24     .text.toPos:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:26     .text.toPos:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:28     .text.toPos:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:30     .text.toPos:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:31     .text.toPos:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:33     .text.toPos:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:35     .text.toPos:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:39     .text.toPos:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:40     .text.toPos:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:45     .text.toPos:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:47     .text.toPos:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:49     .text.toPos:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:52     .text.toPos:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:54     .text.toPos:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:65     .text.newtonSqrt:0000000000000000 newtonSqrt
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:68     .text.newtonSqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:70     .text.newtonSqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:71     .text.newtonSqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:72     .text.newtonSqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:73     .text.newtonSqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:75     .text.newtonSqrt:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:77     .text.newtonSqrt:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:79     .text.newtonSqrt:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:84     .text.newtonSqrt:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:85     .text.newtonSqrt:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:86     .text.newtonSqrt:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:87     .text.newtonSqrt:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:88     .text.newtonSqrt:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:90     .text.newtonSqrt:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:92     .text.newtonSqrt:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:95     .text.newtonSqrt:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:97     .text.newtonSqrt:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:99     .text.newtonSqrt:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:100    .text.newtonSqrt:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:108    .text.newtonSqrt:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:109    .text.newtonSqrt:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:118    .text.newtonSqrt:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:121    .text.newtonSqrt:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:126    .text.newtonSqrt:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:127    .text.newtonSqrt:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:132    .text.newtonSqrt:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:136    .text.newtonSqrt:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:144    .text.newtonSqrt:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:149    .text.newtonSqrt:0000000000000078 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:151    .text.newtonSqrt:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:152    .text.newtonSqrt:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:154    .text.newtonSqrt:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:156    .text.newtonSqrt:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:158    .text.newtonSqrt:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:161    .text.newtonSqrt:0000000000000084 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 8
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:164    .text.newtonSqrt:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:169    .text.newtonSqrt:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:171    .text.newtonSqrt:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:174    .text.newtonSqrt:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:181    .text.ssqrt:0000000000000000 ssqrt
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:184    .text.ssqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:186    .text.ssqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:187    .text.ssqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:188    .text.ssqrt:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:190    .text.ssqrt:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:193    .text.ssqrt:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:194    .text.ssqrt:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:196    .text.ssqrt:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:198    .text.ssqrt:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:201    .text.ssqrt:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:203    .text.ssqrt:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:207    .text.ssqrt:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:208    .text.ssqrt:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:209    .text.ssqrt:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:211    .text.ssqrt:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:213    .text.ssqrt:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:216    .text.ssqrt:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:218    .text.ssqrt:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:223    .text.ssqrt:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:224    .text.ssqrt:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:228    .text.ssqrt:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:231    .text.ssqrt:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:232    .text.ssqrt:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:238    .text.ssqrt:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:242    .text.ssqrt:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:245    .text.ssqrt:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:246    .text.ssqrt:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:61     .text.toPos:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:177    .text.newtonSqrt:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:249    .text.ssqrt:0000000000000042 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:43     .text.toPos:000000000000001e .L2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:253    .rodata.newtonSqrt.cst4:0000000000000004 .LC1
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:255    .rodata.newtonSqrt.cst4:0000000000000008 .LC2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:251    .rodata.newtonSqrt.cst4:0000000000000000 .LC0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:146    .text.newtonSqrt:0000000000000078 .L4
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:167    .text.newtonSqrt:0000000000000088 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:122    .text.newtonSqrt:0000000000000052 .L7
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:115    .text.newtonSqrt:000000000000004c .L6
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:236    .text.ssqrt:0000000000000038 .L13
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:221    .text.ssqrt:000000000000002a .L16
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:205    .text.ssqrt:0000000000000012 .L15
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:487    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1006   .debug_str:0000000000000134 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1012   .debug_str:00000000000001ce .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:982    .debug_str:0000000000000050 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:950    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:966    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:972    .debug_str:0000000000000012 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:990    .debug_str:00000000000000cf .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1016   .debug_str:00000000000001e5 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:974    .debug_str:0000000000000018 .LASF3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 9
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1002   .debug_str:0000000000000124 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:980    .debug_str:000000000000003d .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:970    .debug_str:0000000000000008 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1010   .debug_str:00000000000001c5 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:988    .debug_str:00000000000000c4 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:976    .debug_str:0000000000000026 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:984    .debug_str:00000000000000b4 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:996    .debug_str:00000000000000fb .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:992    .debug_str:00000000000000dc .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:994    .debug_str:00000000000000f3 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1008   .debug_str:00000000000001bc .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:968    .debug_str:0000000000000000 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:998    .debug_str:0000000000000109 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1014   .debug_str:00000000000001d9 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:986    .debug_str:00000000000000be .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:182    .text.ssqrt:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:247    .text.ssqrt:0000000000000042 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:711    .debug_loc:0000000000000000 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:725    .debug_loc:0000000000000021 .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:978    .debug_str:0000000000000038 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:746    .debug_loc:0000000000000049 .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:777    .debug_loc:000000000000007b .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:789    .debug_loc:000000000000009a .LLST10
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1018   .debug_str:00000000000001f1 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:802    .debug_loc:00000000000000bb .LLST11
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1000   .debug_str:0000000000000119 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:66     .text.newtonSqrt:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:175    .text.newtonSqrt:0000000000000092 .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:822    .debug_loc:00000000000000f0 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:845    .debug_loc:0000000000000128 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:869    .debug_loc:0000000000000161 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:876    .debug_loc:0000000000000174 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:1004   .debug_str:000000000000012e .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:15     .text.toPos:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:55     .text.toPos:0000000000000028 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:895    .debug_loc:000000000000019a .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:913    .debug_loc:00000000000001c6 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:185    .text.ssqrt:0000000000000000 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:199    .text.ssqrt:000000000000000e .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:191    .text.ssqrt:0000000000000008 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:233    .text.ssqrt:0000000000000036 .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:235    .text.ssqrt:0000000000000038 .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:214    .text.ssqrt:000000000000001c .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:226    .text.ssqrt:0000000000000032 .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:229    .text.ssqrt:0000000000000034 .LVL23
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:204    .text.ssqrt:0000000000000012 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:243    .text.ssqrt:0000000000000040 .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:74     .text.newtonSqrt:0000000000000002 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:163    .text.newtonSqrt:0000000000000086 .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:168    .text.newtonSqrt:0000000000000088 .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:69     .text.newtonSqrt:0000000000000000 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:93     .text.newtonSqrt:000000000000001a .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:159    .text.newtonSqrt:0000000000000082 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:166    .text.newtonSqrt:0000000000000088 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:123    .text.newtonSqrt:0000000000000052 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:145    .text.newtonSqrt:0000000000000078 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:140    .text.newtonSqrt:0000000000000074 .LVL12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s 			page 10
+
+
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:142    .text.newtonSqrt:0000000000000076 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:23     .text.toPos:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:51     .text.toPos:0000000000000026 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:19     .text.toPos:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:36     .text.toPos:0000000000000014 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:42     .text.toPos:000000000000001e .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:263    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:116    .text.newtonSqrt:000000000000004c .LBB2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:119    .text.newtonSqrt:0000000000000050 .LBE2
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:124    .text.newtonSqrt:0000000000000052 .LBB3
+C:\Users\Karzan\AppData\Local\Temp\ccZbxv8g.s:147    .text.newtonSqrt:0000000000000078 .LBE3
+
+UNDEFINED SYMBOLS
+__gesf2
+__ltsf2
+__mulsf3
+__divsf3
+__addsf3

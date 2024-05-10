@@ -25,3 +25,15 @@ float newtonSqrt(float x){
   }
   return val;
 }
+
+int32_t ssqrt(int32_t n) {
+  int64_t val = n << 10;
+  unsigned long temp, g=0, b = 0x8000, bshft = 15;
+  do {
+    if (val >= (temp = (((g << 1) + b)<<bshft--))) {
+      g += b;
+      val -= temp;
+    }
+  } while (b >>= 1);
+  return g;
+}

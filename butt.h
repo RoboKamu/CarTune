@@ -1,8 +1,6 @@
 /*!
-    \file  systick.h
-    \brief the header file of systick
-
-    \version 2019-6-5, V1.0.0, firmware for GD32VF103
+  \file     butt.c
+  \brief    integrating push buttons with MCU to change clock
 */
 
 /*
@@ -34,33 +32,19 @@ OF SUCH DAMAGE.
 
 #pragma once
 
-#include <stdint.h>
-/** 
- * Delay one millisecond * count
- * @param count miliseconds to delay for
+/// @brief    initialize buttons and LCD
+void init_pskiva();
+
+/*!
+  @brief    reads and executes button presses
+  @param    pHour: pointer to initial hour
+  @param    pMin: pointer to initial minute
+*/ 
+void butt(int* pHour, int* pMin);
+
+/*!
+  @brief      displays the clock time on LCD display
+  @param      hours: hours to show on clock display 
+  @param      mins: minutes to show on clock display
 */
-void delay_1ms(uint32_t count);
-
-/** 
- * Delay one microsecond * count
- * @param count microseconds to delay for
-*/
-void delay_1us(uint32_t count);
-
-
-/** 
- * Non blocking timer start 1ms * time after call, use with delay_finished()
- * @param time miliseconds to delay for
-*/
-void delay_until_1ms(uint32_t time);
-
-/** 
- * Non blocking timer start 1ms * time after call, use with delay_finished()
- * @param time microseconds to delay for
-*/
-void delay_until_1us(uint32_t time);
-
-/**
- * If time has run out return 1, else zero.
- */
-int delay_finished();
+void displayTime(int hours, int mins);

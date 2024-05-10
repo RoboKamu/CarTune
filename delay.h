@@ -1,6 +1,6 @@
 /*!
-    \file  systick.c
-    \brief the systick configuration file
+    \file  systick.h
+    \brief the header file of systick
 
     \version 2019-6-5, V1.0.0, firmware for GD32VF103
 */
@@ -32,62 +32,37 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
-#include "gd32vf103.h"
-#include "delay.h"
+#pragma once
 
-/*!
-    \brief      delay a time in milliseconds
-    \param[in]  count: count in milliseconds
-    \param[out] none
-    \retval     none
+#include <stdint.h>
+/** 
+ * Delay one millisecond * count
+ * @param count miliseconds to delay for
 */
-void delay_1ms(uint32_t count)
-{
-	uint64_t start_mtime, delta_mtime;
+void delay_1ms(uint32_t count);
 
-	// Don't start measuruing until we see an mtime tick
-	uint64_t tmp = get_timer_value();
-	do {
-	start_mtime = get_timer_value();
-	} while (start_mtime == tmp);
+/** 
+ * Delay one microsecond * count
+ * @param count microseconds to delay for
+*/
+void delay_1us(uint32_t count);
 
-	do {
-	delta_mtime = get_timer_value() - start_mtime;
-	}while(delta_mtime <(SystemCoreClock/4000.0 *count ));
-}
 
-void delay_1us(uint32_t count)
-{
-	uint64_t start_mtime, delta_mtime;
+/** 
+ * Non blocking timer start 1ms * time after call, use with delay_finished()
+ * @param time miliseconds to delay for
+*/
+void delay_until_1ms(uint32_t time);
 
-	// Don't start measuruing until we see an mtime tick
-	uint64_t tmp = get_timer_value();
-	do {
-	start_mtime = get_timer_value();
-	} while (start_mtime == tmp);
+/** 
+ * Non blocking timer start 1ms * time after call, use with delay_finished()
+ * @param time microseconds to delay for
+*/
+void delay_until_1us(uint32_t time);
 
-	do {
-	delta_mtime = get_timer_value() - start_mtime;
-	}while(delta_mtime <(SystemCoreClock/4000000.0 *count ));
-}
+/**
+ * If time has run out return 1, else zero.
+ */
+int delay_finished();
 
-uint64_t delay_until = 0;
-
-void delay_until_1us(uint32_t time){
-    uint64_t current_time;
-    current_time = get_timer_value();
-    delay_until = (time * (SystemCoreClock/4000)) + current_time;
-}
-
-void delay_until_1ms(uint32_t time){
-    uint64_t current_time;
-    current_time = get_timer_value();
-    delay_until = (time * (SystemCoreClock/4000000)) + current_time;
-}
-
-int delay_finished(){
-    uint64_t time;
-    time = get_timer_value();
-    if(time < delay_until) return 1;
-    else delay_until = 0; return 0;
-}
+void reset_delay();

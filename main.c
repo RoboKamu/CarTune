@@ -1,6 +1,6 @@
 /*!
   \file  main.c
-  \brief USB CDC ACM device
+  \brief IMU, LCD & button integration for MCU
 */
 
 /*
@@ -30,22 +30,20 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
-#include "low-math.h"
 #include "gd32vf103.h"
 #include "drivers.h"
 #include "lcd.h"
-#include "library/delay/include/delay.h"
 #include "gd32v_mpu6500_if.h"
+#include "butt.h"
+#include <math.h>
 
-#define GRAPH_HEIGHT    30
+#define MARGIN            104                 // margin for movement to turn pskiva on (current ~70% )  
+#define INITIAL_HOUR      12
+#define INITAL_MIN        0
 
+void handle_imu();
 
 int main(void){
-  /* The related data structure for the IMU, contains a vector of x, y, z floats*/
-  mpu_vector_t vec, vec_temp;
-  /* for lcd */
-  uint16_t line_color;
-
   /* Initialize pins for I2C */
   rcu_periph_clock_enable(RCU_GPIOB);
   rcu_periph_clock_enable(RCU_I2C0);
@@ -55,55 +53,63 @@ int main(void){
       to change is MPU6500_WHO_AM_I_ID from 0x11 to 0x70. */
   mpu6500_install(I2C0);
   
-  /* Initialize LCD */
-  Lcd_SetType(LCD_INVERTED);
-  Lcd_Init();
-  LCD_Clear(BLACK);
+  // initialize timer and LCD
+  init_pskiva();
   
-  t5omsi();                                 // Initialize timer5 1kHz
+  // The related data structure for the IMU, contains a vector of x, y, z floats
+  mpu_vector_t vec, vec_temp;
 
+  // counter variables 
+  int c=0, ms=0, s=0; 
+  // display variables
+  int hour = INITIAL_HOUR;
+  int min = INITAL_MIN;
+
+  // vector scales 
+  int32_t v, v_temp;
+
+  // inital vector resp. vecotr magnitude
   mpu6500_getAccel(&vec_temp);
-  int s=0, c=0, v, v_temp;
-  float abs_x, abs_y, abs_z;
+  v_temp = sqrtf((vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z));
+
   while(1){
-    /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
-    mpu6500_getAccel(&vec);
-    
-    // calculate the temporary vector magnitude
-    v_temp = newtonSqrt(vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z);
+    // display vector counter
+    LCD_ShowNum(10, 10, c, 3, WHITE);
 
-    /* Do some fancy math to make a nice display */
+    if (t5expq){
+      ms++;
 
-    /* Green if pointing up, red if down */
-    //line_color = (vec.z < 0) ? RED : GREEN;
-    ///* Draw a unit circle (1G) */
-    //Draw_Circle(160/2, 80/2, 28, BLUE);
-    ///* Erase last line */
-    //LCD_DrawLine(160/2, 80/2, (160/2)+(vec_temp.y)/(4096/28), (80/2)+(vec_temp.x/(4096/28)),BLACK);
-    ///* Draw new line, scaled to the unit circle */
-    //LCD_DrawLine(160/2, 80/2, (160/2)+(vec.y)/(4096/28), (80/2)+(vec.x/(4096/28)),line_color);
-
-    if (t5expq()){
-      s++; 
-      if (s%10==0){                                                      // every 10th ms..
-        v = newtonSqrt(vec.x*vec.x + vec.y*vec.y + vec.z*vec.z);         // ..calculate the magnitude of 3 vectors..
-        LCD_ShowNum1(1, 1, v, 7, RED);                                   // ..and display size!
-        //LCD_ShowNum1(10, 10, newtonSqrt(100000000), 8, WHITE);
-        if (v_temp <= v+10 && v_temp >= v-10) c++;                       // increment counter c if the magnitude change is within 10 units   
+      if (!(ms%100))                                       // every 100 ms..
+        handle_imu(&vec, &vec_temp, &v, &v_temp, &c);      // ..handle imu
+      if (!(ms%150)){                                      // every 150 ms..
+        butt(&hour, &min);                                 // ..handle buttons..
+        displayTime(hour, min);                            // ..and display time
       }
-      if (s==1000){                                                      // once 1 seconds has passed, check status
-        if (c >= 60)                                                    // if 60% of time there is negligible movement..  
-          LCD_ShowString(1, 21, "ON ", YELLOW);                          // ..set status to on.. 
-        else LCD_ShowString(1, 21, "OFF", YELLOW);                       // ..otherwise off! 
-        c=0; s=0;                                                       
+      if (ms == 1000){
+        s++;
+        ms = 0;
+        // tick();
+        if (s==15){
+          // determine car motion 
+          (c > MARGIN) ?  LCD_ShowStr(10, 50, "ON ", GREEN, OPAQUE) : LCD_ShowStr(10, 50, "Off", RED, OPAQUE);
+          c=0; s=0;
+        }
       }
-      LCD_ShowNum(1, 41, c, 3, WHITE);                                                
     }
-
-    /* Store the last vector so it can be erased */
-    vec_temp = vec;
     /* Wait for LCD to finish drawing */
-    LCD_Wait_On_Queue();
+    LCD_Wait_On_Queue();    
   }
 }
 
+void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC){
+  /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
+  mpu6500_getAccel(pVec);
+  // calc vector magnitude
+  (*pV) = sqrtf((pVec->x*pVec->x + pVec->y*pVec->y + pVec->z*pVec->z));
+  
+  // note if there is a change in magnitude withing an interval 
+  if ( (*pV_temp) <= (*pV)+50 && (*pV_temp) >= (*pV)-50 ) (*pC)++;
+  /* Store the last vector so it can be erased */
+  (*pVec_temp) = (*pVec);
+  (*pV_temp) = (*pV);
+}

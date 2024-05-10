@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 1
 
 
    1              		.file	"gd32v_mpu6500_if.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
   30              		.cfi_def_cfa_offset 48
   31 0002 4AD0     		sw	s2,32(sp)
   32 0004 4ECE     		sw	s3,28(sp)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 2
 
 
   33 0006 5AC8     		sw	s6,16(sp)
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
   77              	.LVL5:
   78 0042 83A94700 		lw	s3,%lo(.LC0+4)(a5)
   79 0046 B70B0000 		lui	s7,%hi(SystemCoreClock)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 3
 
 
   80              	.L4:
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  124 00a0 2A86     		mv	a2,a0
  125 00a2 AE86     		mv	a3,a1
  126 00a4 5285     		mv	a0,s4
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 4
 
 
  127 00a6 D685     		mv	a1,s5
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  176              		.cfi_def_cfa_offset 32
  177 0002 22CC     		sw	s0,24(sp)
  178              		.cfi_offset 8, -8
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 5
 
 
  179              		.loc 1 37 20
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  217              		.loc 1 48 38 is_stmt 0
  218 0032 8604     		slli	s1,s1,1
  219              		.loc 1 48 5
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 6
 
 
  220 0034 7956     		li	a2,-2
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  259 007c 93057050 		li	a1,1287
  260 0080 2285     		mv	a0,s0
  261 0082 97000000 		call	i2c_flag_get
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 7
 
 
  261      E7800000 
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  301 00d2 8545     		li	a1,1
  302 00d4 2285     		mv	a0,s0
  303 00d6 97000000 		call	i2c_ack_config
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 8
 
 
  303      E7800000 
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  343              		.cfi_restore 19
  344 0104 224A     		lw	s4,8(sp)
  345              		.cfi_restore 20
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 9
 
 
  346 0106 0561     		addi	sp,sp,32
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  387              	.LFE8:
  389              		.section	.text.i2c_master_write_register,"ax",@progbits
  390              		.align	1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 10
 
 
  391              		.globl	i2c_master_write_register
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  433              		.loc 1 88 10 discriminator 1
  434 0026 6DF9     		bne	a0,zero,.L36
   89:gd32v_mpu6500_if.c **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 11
 
 
   90:gd32v_mpu6500_if.c ****     /* send a start condition to I2C bus */
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  473              		.loc 1 100 12 is_stmt 0 discriminator 1
  474 0070 93057050 		li	a1,1287
  475 0074 2285     		mv	a0,s0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 12
 
 
  476 0076 97000000 		call	i2c_flag_get
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  513 00ae 93F70720 		andi	a5,a5,512
  514              		.loc 1 113 10 discriminator 1
  515 00b2 EDFF     		bne	a5,zero,.L44
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 13
 
 
  114:gd32v_mpu6500_if.c **** }...
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  561              	.LBE5:
  562              		.cfi_endproc
  563              	.LFE9:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 14
 
 
  565              		.section	.text.i2c_master_init,"ax",@progbits
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  608              	.LFE6:
  610              		.section	.text.mpu6500_install,"ax",@progbits
  611              		.align	1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 15
 
 
  612              		.globl	mpu6500_install
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  653 0036 4101     		addi	sp,sp,16
  654              	.LCFI11:
  655              		.cfi_def_cfa_offset 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 16
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 16
 
 
   12:gd32v_mpu6500_if.c **** 	mpu6500_init(&i2c_master_read_register, &i2c_master_write_register, &mpu_delay, (void*)&i2c_port);
@@ -926,614 +926,614 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 1
  677              		.file 9 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_i2c.h"
  678              		.file 10 "./../../firmware/RISCV/drivers/n200_func.h"
  679              		.file 11 "mpu6500_driver.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 17
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32v_mpu6500_if.c
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:19     .text.mpu_delay:0000000000000000 mpu_delay
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:23     .text.mpu_delay:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:25     .text.mpu_delay:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:26     .text.mpu_delay:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:27     .text.mpu_delay:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:28     .text.mpu_delay:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:30     .text.mpu_delay:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:42     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:43     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:44     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:45     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:46     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:47     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:48     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:49     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:50     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:51     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:52     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:54     .text.mpu_delay:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:56     .text.mpu_delay:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:63     .text.mpu_delay:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:64     .text.mpu_delay:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:65     .text.mpu_delay:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:71     .text.mpu_delay:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:75     .text.mpu_delay:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:82     .text.mpu_delay:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:83     .text.mpu_delay:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:84     .text.mpu_delay:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:88     .text.mpu_delay:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:94     .text.mpu_delay:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:99     .text.mpu_delay:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:101    .text.mpu_delay:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:103    .text.mpu_delay:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:111    .text.mpu_delay:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:113    .text.mpu_delay:0000000000000086 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:115    .text.mpu_delay:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:124    .text.mpu_delay:00000000000000a0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:132    .text.mpu_delay:00000000000000b4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:133    .text.mpu_delay:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:135    .text.mpu_delay:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:138    .text.mpu_delay:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:140    .text.mpu_delay:00000000000000bc .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:142    .text.mpu_delay:00000000000000be .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:144    .text.mpu_delay:00000000000000c0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:146    .text.mpu_delay:00000000000000c2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:148    .text.mpu_delay:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:151    .text.mpu_delay:00000000000000c6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:153    .text.mpu_delay:00000000000000c8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:155    .text.mpu_delay:00000000000000ca .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:158    .text.mpu_delay:00000000000000cc .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:160    .text.mpu_delay:00000000000000ce .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:167    .text.i2c_master_read_register:0000000000000000 i2c_master_read_register
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:170    .text.i2c_master_read_register:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:172    .text.i2c_master_read_register:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:173    .text.i2c_master_read_register:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 18
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:19     .text.mpu_delay:0000000000000000 mpu_delay
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:23     .text.mpu_delay:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:25     .text.mpu_delay:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:26     .text.mpu_delay:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:27     .text.mpu_delay:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:28     .text.mpu_delay:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:30     .text.mpu_delay:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:42     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:43     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:44     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:45     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:46     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:47     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:48     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:49     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:50     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:51     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:52     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:54     .text.mpu_delay:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:56     .text.mpu_delay:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:63     .text.mpu_delay:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:64     .text.mpu_delay:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:65     .text.mpu_delay:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:71     .text.mpu_delay:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:75     .text.mpu_delay:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:82     .text.mpu_delay:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:83     .text.mpu_delay:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:84     .text.mpu_delay:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:88     .text.mpu_delay:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:94     .text.mpu_delay:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:99     .text.mpu_delay:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:101    .text.mpu_delay:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:103    .text.mpu_delay:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:111    .text.mpu_delay:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:113    .text.mpu_delay:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:115    .text.mpu_delay:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:124    .text.mpu_delay:00000000000000a0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:132    .text.mpu_delay:00000000000000b4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:133    .text.mpu_delay:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:135    .text.mpu_delay:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:138    .text.mpu_delay:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:140    .text.mpu_delay:00000000000000bc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:142    .text.mpu_delay:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:144    .text.mpu_delay:00000000000000c0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:146    .text.mpu_delay:00000000000000c2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:148    .text.mpu_delay:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:151    .text.mpu_delay:00000000000000c6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:153    .text.mpu_delay:00000000000000c8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:155    .text.mpu_delay:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:158    .text.mpu_delay:00000000000000cc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:160    .text.mpu_delay:00000000000000ce .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:167    .text.i2c_master_read_register:0000000000000000 i2c_master_read_register
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:170    .text.i2c_master_read_register:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:172    .text.i2c_master_read_register:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:173    .text.i2c_master_read_register:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 18
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:174    .text.i2c_master_read_register:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:176    .text.i2c_master_read_register:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:178    .text.i2c_master_read_register:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:180    .text.i2c_master_read_register:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:183    .text.i2c_master_read_register:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:184    .text.i2c_master_read_register:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:187    .text.i2c_master_read_register:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:190    .text.i2c_master_read_register:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:193    .text.i2c_master_read_register:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:194    .text.i2c_master_read_register:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:195    .text.i2c_master_read_register:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:196    .text.i2c_master_read_register:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:197    .text.i2c_master_read_register:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:199    .text.i2c_master_read_register:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:204    .text.i2c_master_read_register:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:208    .text.i2c_master_read_register:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:209    .text.i2c_master_read_register:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:210    .text.i2c_master_read_register:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:215    .text.i2c_master_read_register:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:217    .text.i2c_master_read_register:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:218    .text.i2c_master_read_register:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:220    .text.i2c_master_read_register:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:227    .text.i2c_master_read_register:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:228    .text.i2c_master_read_register:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:229    .text.i2c_master_read_register:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:234    .text.i2c_master_read_register:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:236    .text.i2c_master_read_register:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:242    .text.i2c_master_read_register:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:243    .text.i2c_master_read_register:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:244    .text.i2c_master_read_register:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:249    .text.i2c_master_read_register:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:251    .text.i2c_master_read_register:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:257    .text.i2c_master_read_register:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:258    .text.i2c_master_read_register:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:259    .text.i2c_master_read_register:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:264    .text.i2c_master_read_register:000000000000008a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:266    .text.i2c_master_read_register:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:271    .text.i2c_master_read_register:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:272    .text.i2c_master_read_register:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:273    .text.i2c_master_read_register:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:278    .text.i2c_master_read_register:00000000000000a4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:280    .text.i2c_master_read_register:00000000000000a6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:287    .text.i2c_master_read_register:00000000000000b4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:288    .text.i2c_master_read_register:00000000000000b4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:289    .text.i2c_master_read_register:00000000000000b4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:294    .text.i2c_master_read_register:00000000000000c2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:296    .text.i2c_master_read_register:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:301    .text.i2c_master_read_register:00000000000000d2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:307    .text.i2c_master_read_register:00000000000000de .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:308    .text.i2c_master_read_register:00000000000000de .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:309    .text.i2c_master_read_register:00000000000000de .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:311    .text.i2c_master_read_register:00000000000000e0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:315    .text.i2c_master_read_register:00000000000000e4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:318    .text.i2c_master_read_register:00000000000000e8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:323    .text.i2c_master_read_register:00000000000000f2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:324    .text.i2c_master_read_register:00000000000000f2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:325    .text.i2c_master_read_register:00000000000000f2 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 19
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:174    .text.i2c_master_read_register:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:176    .text.i2c_master_read_register:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:178    .text.i2c_master_read_register:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:180    .text.i2c_master_read_register:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:183    .text.i2c_master_read_register:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:184    .text.i2c_master_read_register:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:187    .text.i2c_master_read_register:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:190    .text.i2c_master_read_register:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:193    .text.i2c_master_read_register:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:194    .text.i2c_master_read_register:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:195    .text.i2c_master_read_register:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:196    .text.i2c_master_read_register:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:197    .text.i2c_master_read_register:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:199    .text.i2c_master_read_register:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:204    .text.i2c_master_read_register:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:208    .text.i2c_master_read_register:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:209    .text.i2c_master_read_register:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:210    .text.i2c_master_read_register:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:215    .text.i2c_master_read_register:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:217    .text.i2c_master_read_register:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:218    .text.i2c_master_read_register:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:220    .text.i2c_master_read_register:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:227    .text.i2c_master_read_register:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:228    .text.i2c_master_read_register:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:229    .text.i2c_master_read_register:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:234    .text.i2c_master_read_register:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:236    .text.i2c_master_read_register:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:242    .text.i2c_master_read_register:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:243    .text.i2c_master_read_register:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:244    .text.i2c_master_read_register:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:249    .text.i2c_master_read_register:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:251    .text.i2c_master_read_register:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:257    .text.i2c_master_read_register:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:258    .text.i2c_master_read_register:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:259    .text.i2c_master_read_register:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:264    .text.i2c_master_read_register:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:266    .text.i2c_master_read_register:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:271    .text.i2c_master_read_register:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:272    .text.i2c_master_read_register:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:273    .text.i2c_master_read_register:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:278    .text.i2c_master_read_register:00000000000000a4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:280    .text.i2c_master_read_register:00000000000000a6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:287    .text.i2c_master_read_register:00000000000000b4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:288    .text.i2c_master_read_register:00000000000000b4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:289    .text.i2c_master_read_register:00000000000000b4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:294    .text.i2c_master_read_register:00000000000000c2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:296    .text.i2c_master_read_register:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:301    .text.i2c_master_read_register:00000000000000d2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:307    .text.i2c_master_read_register:00000000000000de .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:308    .text.i2c_master_read_register:00000000000000de .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:309    .text.i2c_master_read_register:00000000000000de .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:311    .text.i2c_master_read_register:00000000000000e0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:315    .text.i2c_master_read_register:00000000000000e4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:318    .text.i2c_master_read_register:00000000000000e8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:323    .text.i2c_master_read_register:00000000000000f2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:324    .text.i2c_master_read_register:00000000000000f2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:325    .text.i2c_master_read_register:00000000000000f2 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 19
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:327    .text.i2c_master_read_register:00000000000000f4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:329    .text.i2c_master_read_register:00000000000000f8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:331    .text.i2c_master_read_register:00000000000000fa .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:332    .text.i2c_master_read_register:00000000000000fc .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:333    .text.i2c_master_read_register:00000000000000fc .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:335    .text.i2c_master_read_register:00000000000000fe .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:338    .text.i2c_master_read_register:0000000000000100 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:341    .text.i2c_master_read_register:0000000000000102 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:343    .text.i2c_master_read_register:0000000000000104 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:345    .text.i2c_master_read_register:0000000000000106 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:348    .text.i2c_master_read_register:0000000000000108 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:353    .text.i2c_master_read_register:000000000000010a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:356    .text.i2c_master_read_register:000000000000010a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:357    .text.i2c_master_read_register:000000000000010a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:359    .text.i2c_master_read_register:000000000000010e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:365    .text.i2c_master_read_register:000000000000011a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:366    .text.i2c_master_read_register:000000000000011a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:371    .text.i2c_master_read_register:0000000000000128 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:374    .text.i2c_master_read_register:000000000000012a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:375    .text.i2c_master_read_register:000000000000012a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:379    .text.i2c_master_read_register:0000000000000134 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:382    .text.i2c_master_read_register:000000000000013c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:386    .text.i2c_master_read_register:0000000000000140 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:393    .text.i2c_master_write_register:0000000000000000 i2c_master_write_register
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:396    .text.i2c_master_write_register:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:398    .text.i2c_master_write_register:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:399    .text.i2c_master_write_register:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:400    .text.i2c_master_write_register:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:402    .text.i2c_master_write_register:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:404    .text.i2c_master_write_register:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:406    .text.i2c_master_write_register:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:409    .text.i2c_master_write_register:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:410    .text.i2c_master_write_register:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:415    .text.i2c_master_write_register:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:416    .text.i2c_master_write_register:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:417    .text.i2c_master_write_register:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:418    .text.i2c_master_write_register:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:419    .text.i2c_master_write_register:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:421    .text.i2c_master_write_register:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:428    .text.i2c_master_write_register:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:429    .text.i2c_master_write_register:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:434    .text.i2c_master_write_register:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:436    .text.i2c_master_write_register:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:441    .text.i2c_master_write_register:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:442    .text.i2c_master_write_register:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:443    .text.i2c_master_write_register:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:448    .text.i2c_master_write_register:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:450    .text.i2c_master_write_register:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:457    .text.i2c_master_write_register:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:458    .text.i2c_master_write_register:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:459    .text.i2c_master_write_register:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:464    .text.i2c_master_write_register:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:466    .text.i2c_master_write_register:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:472    .text.i2c_master_write_register:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:473    .text.i2c_master_write_register:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:474    .text.i2c_master_write_register:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:479    .text.i2c_master_write_register:000000000000007e .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 20
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:327    .text.i2c_master_read_register:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:329    .text.i2c_master_read_register:00000000000000f8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:331    .text.i2c_master_read_register:00000000000000fa .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:332    .text.i2c_master_read_register:00000000000000fc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:333    .text.i2c_master_read_register:00000000000000fc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:335    .text.i2c_master_read_register:00000000000000fe .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:338    .text.i2c_master_read_register:0000000000000100 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:341    .text.i2c_master_read_register:0000000000000102 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:343    .text.i2c_master_read_register:0000000000000104 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:345    .text.i2c_master_read_register:0000000000000106 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:348    .text.i2c_master_read_register:0000000000000108 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:353    .text.i2c_master_read_register:000000000000010a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:356    .text.i2c_master_read_register:000000000000010a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:357    .text.i2c_master_read_register:000000000000010a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:359    .text.i2c_master_read_register:000000000000010e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:365    .text.i2c_master_read_register:000000000000011a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:366    .text.i2c_master_read_register:000000000000011a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:371    .text.i2c_master_read_register:0000000000000128 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:374    .text.i2c_master_read_register:000000000000012a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:375    .text.i2c_master_read_register:000000000000012a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:379    .text.i2c_master_read_register:0000000000000134 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:382    .text.i2c_master_read_register:000000000000013c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:386    .text.i2c_master_read_register:0000000000000140 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:393    .text.i2c_master_write_register:0000000000000000 i2c_master_write_register
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:396    .text.i2c_master_write_register:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:398    .text.i2c_master_write_register:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:399    .text.i2c_master_write_register:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:400    .text.i2c_master_write_register:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:402    .text.i2c_master_write_register:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:404    .text.i2c_master_write_register:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:406    .text.i2c_master_write_register:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:409    .text.i2c_master_write_register:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:410    .text.i2c_master_write_register:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:415    .text.i2c_master_write_register:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:416    .text.i2c_master_write_register:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:417    .text.i2c_master_write_register:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:418    .text.i2c_master_write_register:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:419    .text.i2c_master_write_register:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:421    .text.i2c_master_write_register:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:428    .text.i2c_master_write_register:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:429    .text.i2c_master_write_register:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:434    .text.i2c_master_write_register:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:436    .text.i2c_master_write_register:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:441    .text.i2c_master_write_register:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:442    .text.i2c_master_write_register:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:443    .text.i2c_master_write_register:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:448    .text.i2c_master_write_register:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:450    .text.i2c_master_write_register:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:457    .text.i2c_master_write_register:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:458    .text.i2c_master_write_register:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:459    .text.i2c_master_write_register:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:464    .text.i2c_master_write_register:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:466    .text.i2c_master_write_register:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:472    .text.i2c_master_write_register:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:473    .text.i2c_master_write_register:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:474    .text.i2c_master_write_register:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:479    .text.i2c_master_write_register:000000000000007e .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 20
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:481    .text.i2c_master_write_register:0000000000000080 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:487    .text.i2c_master_write_register:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:488    .text.i2c_master_write_register:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:489    .text.i2c_master_write_register:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:494    .text.i2c_master_write_register:000000000000009a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:497    .text.i2c_master_write_register:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:501    .text.i2c_master_write_register:000000000000009e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:504    .text.i2c_master_write_register:00000000000000a2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:509    .text.i2c_master_write_register:00000000000000ac .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:510    .text.i2c_master_write_register:00000000000000ac .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:511    .text.i2c_master_write_register:00000000000000ac .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:513    .text.i2c_master_write_register:00000000000000ae .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:515    .text.i2c_master_write_register:00000000000000b2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:517    .text.i2c_master_write_register:00000000000000b4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:518    .text.i2c_master_write_register:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:519    .text.i2c_master_write_register:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:521    .text.i2c_master_write_register:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:524    .text.i2c_master_write_register:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:527    .text.i2c_master_write_register:00000000000000bc .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:529    .text.i2c_master_write_register:00000000000000be .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:531    .text.i2c_master_write_register:00000000000000c0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:534    .text.i2c_master_write_register:00000000000000c2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:539    .text.i2c_master_write_register:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:542    .text.i2c_master_write_register:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:549    .text.i2c_master_write_register:00000000000000d6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:550    .text.i2c_master_write_register:00000000000000d6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:551    .text.i2c_master_write_register:00000000000000d6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:556    .text.i2c_master_write_register:00000000000000e4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:558    .text.i2c_master_write_register:00000000000000e6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:562    .text.i2c_master_write_register:00000000000000ea .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:569    .text.i2c_master_init:0000000000000000 i2c_master_init
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:572    .text.i2c_master_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:574    .text.i2c_master_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:575    .text.i2c_master_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:577    .text.i2c_master_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:579    .text.i2c_master_init:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:581    .text.i2c_master_init:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:584    .text.i2c_master_init:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:586    .text.i2c_master_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:587    .text.i2c_master_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:589    .text.i2c_master_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:591    .text.i2c_master_init:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:594    .text.i2c_master_init:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:596    .text.i2c_master_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:597    .text.i2c_master_init:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:600    .text.i2c_master_init:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:603    .text.i2c_master_init:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:605    .text.i2c_master_init:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:607    .text.i2c_master_init:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:614    .text.mpu6500_install:0000000000000000 mpu6500_install
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:617    .text.mpu6500_install:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:619    .text.mpu6500_install:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:620    .text.mpu6500_install:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:621    .text.mpu6500_install:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:623    .text.mpu6500_install:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:625    .text.mpu6500_install:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:481    .text.i2c_master_write_register:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:487    .text.i2c_master_write_register:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:488    .text.i2c_master_write_register:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:489    .text.i2c_master_write_register:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:494    .text.i2c_master_write_register:000000000000009a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:497    .text.i2c_master_write_register:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:501    .text.i2c_master_write_register:000000000000009e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:504    .text.i2c_master_write_register:00000000000000a2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:509    .text.i2c_master_write_register:00000000000000ac .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:510    .text.i2c_master_write_register:00000000000000ac .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:511    .text.i2c_master_write_register:00000000000000ac .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:513    .text.i2c_master_write_register:00000000000000ae .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:515    .text.i2c_master_write_register:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:517    .text.i2c_master_write_register:00000000000000b4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:518    .text.i2c_master_write_register:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:519    .text.i2c_master_write_register:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:521    .text.i2c_master_write_register:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:524    .text.i2c_master_write_register:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:527    .text.i2c_master_write_register:00000000000000bc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:529    .text.i2c_master_write_register:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:531    .text.i2c_master_write_register:00000000000000c0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:534    .text.i2c_master_write_register:00000000000000c2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:539    .text.i2c_master_write_register:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:542    .text.i2c_master_write_register:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:549    .text.i2c_master_write_register:00000000000000d6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:550    .text.i2c_master_write_register:00000000000000d6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:551    .text.i2c_master_write_register:00000000000000d6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:556    .text.i2c_master_write_register:00000000000000e4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:558    .text.i2c_master_write_register:00000000000000e6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:562    .text.i2c_master_write_register:00000000000000ea .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:569    .text.i2c_master_init:0000000000000000 i2c_master_init
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:572    .text.i2c_master_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:574    .text.i2c_master_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:575    .text.i2c_master_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:577    .text.i2c_master_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:579    .text.i2c_master_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:581    .text.i2c_master_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:584    .text.i2c_master_init:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:586    .text.i2c_master_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:587    .text.i2c_master_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:589    .text.i2c_master_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:591    .text.i2c_master_init:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:594    .text.i2c_master_init:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:596    .text.i2c_master_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:597    .text.i2c_master_init:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:600    .text.i2c_master_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:603    .text.i2c_master_init:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:605    .text.i2c_master_init:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:607    .text.i2c_master_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:614    .text.mpu6500_install:0000000000000000 mpu6500_install
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:617    .text.mpu6500_install:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:619    .text.mpu6500_install:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:620    .text.mpu6500_install:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:621    .text.mpu6500_install:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:623    .text.mpu6500_install:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:625    .text.mpu6500_install:0000000000000004 .L0 
                             *COM*:0000000000000004 i2c_port
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 21
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 21
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:627    .text.mpu6500_install:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:629    .text.mpu6500_install:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:630    .text.mpu6500_install:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:632    .text.mpu6500_install:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:634    .text.mpu6500_install:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:637    .text.mpu6500_install:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:639    .text.mpu6500_install:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:640    .text.mpu6500_install:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:642    .text.mpu6500_install:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:644    .text.mpu6500_install:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:648    .text.mpu6500_install:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:649    .text.mpu6500_install:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:653    .text.mpu6500_install:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:655    .text.mpu6500_install:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:657    .text.mpu6500_install:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:659    .text.mpu6500_install:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:163    .text.mpu_delay:00000000000000ce .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:389    .text.i2c_master_read_register:0000000000000140 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:565    .text.i2c_master_write_register:00000000000000ea .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:610    .text.i2c_master_init:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:663    .text.mpu6500_install:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:627    .text.mpu6500_install:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:629    .text.mpu6500_install:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:630    .text.mpu6500_install:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:632    .text.mpu6500_install:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:634    .text.mpu6500_install:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:637    .text.mpu6500_install:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:639    .text.mpu6500_install:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:640    .text.mpu6500_install:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:642    .text.mpu6500_install:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:644    .text.mpu6500_install:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:648    .text.mpu6500_install:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:649    .text.mpu6500_install:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:653    .text.mpu6500_install:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:655    .text.mpu6500_install:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:657    .text.mpu6500_install:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:659    .text.mpu6500_install:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:163    .text.mpu_delay:00000000000000ce .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:389    .text.i2c_master_read_register:0000000000000140 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:565    .text.i2c_master_write_register:00000000000000ea .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:610    .text.i2c_master_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:663    .text.mpu6500_install:0000000000000040 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:665    .rodata.mpu_delay.cst8:0000000000000000 .LC0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:73     .text.mpu_delay:000000000000003a .L3
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:61     .text.mpu_delay:0000000000000026 .L2
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:80     .text.mpu_delay:000000000000004a .L4
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:207    .text.i2c_master_read_register:0000000000000022 .L8
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:226    .text.i2c_master_read_register:0000000000000042 .L9
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:241    .text.i2c_master_read_register:0000000000000060 .L10
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:256    .text.i2c_master_read_register:000000000000007c .L11
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:270    .text.i2c_master_read_register:0000000000000096 .L12
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:286    .text.i2c_master_read_register:00000000000000b4 .L13
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:351    .text.i2c_master_read_register:000000000000010a .L17
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:322    .text.i2c_master_read_register:00000000000000f2 .L18
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:363    .text.i2c_master_read_register:000000000000011a .L16
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:313    .text.i2c_master_read_register:00000000000000e4 .L14
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:426    .text.i2c_master_write_register:0000000000000018 .L36
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:440    .text.i2c_master_write_register:0000000000000032 .L37
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:456    .text.i2c_master_write_register:0000000000000052 .L38
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:471    .text.i2c_master_write_register:0000000000000070 .L39
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:486    .text.i2c_master_write_register:000000000000008c .L40
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:537    .text.i2c_master_write_register:00000000000000c4 .L43
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:508    .text.i2c_master_write_register:00000000000000ac .L44
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:548    .text.i2c_master_write_register:00000000000000d6 .L42
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:499    .text.i2c_master_write_register:000000000000009e .L41
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3087   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4558   .debug_str:00000000000006cd .LASF176
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4386   .debug_str:00000000000002e4 .LASF177
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4416   .debug_str:0000000000000377 .LASF178
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4224   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4250   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4306   .debug_str:0000000000000149 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4268   .debug_str:0000000000000061 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4476   .debug_str:000000000000053b .LASF1
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4254   .debug_str:000000000000000c .LASF2
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4564   .debug_str:000000000000076f .LASF3
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4294   .debug_str:0000000000000104 .LASF5
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 22
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:665    .rodata.mpu_delay.cst8:0000000000000000 .LC0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:73     .text.mpu_delay:000000000000003a .L3
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:61     .text.mpu_delay:0000000000000026 .L2
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:80     .text.mpu_delay:000000000000004a .L4
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:207    .text.i2c_master_read_register:0000000000000022 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:226    .text.i2c_master_read_register:0000000000000042 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:241    .text.i2c_master_read_register:0000000000000060 .L10
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:256    .text.i2c_master_read_register:000000000000007c .L11
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:270    .text.i2c_master_read_register:0000000000000096 .L12
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:286    .text.i2c_master_read_register:00000000000000b4 .L13
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:351    .text.i2c_master_read_register:000000000000010a .L17
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:322    .text.i2c_master_read_register:00000000000000f2 .L18
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:363    .text.i2c_master_read_register:000000000000011a .L16
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:313    .text.i2c_master_read_register:00000000000000e4 .L14
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:426    .text.i2c_master_write_register:0000000000000018 .L36
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:440    .text.i2c_master_write_register:0000000000000032 .L37
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:456    .text.i2c_master_write_register:0000000000000052 .L38
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:471    .text.i2c_master_write_register:0000000000000070 .L39
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:486    .text.i2c_master_write_register:000000000000008c .L40
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:537    .text.i2c_master_write_register:00000000000000c4 .L43
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:508    .text.i2c_master_write_register:00000000000000ac .L44
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:548    .text.i2c_master_write_register:00000000000000d6 .L42
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:499    .text.i2c_master_write_register:000000000000009e .L41
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3087   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4558   .debug_str:00000000000006cd .LASF176
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4386   .debug_str:00000000000002e4 .LASF177
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4416   .debug_str:0000000000000377 .LASF178
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4224   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4250   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4306   .debug_str:0000000000000149 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4268   .debug_str:0000000000000061 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4476   .debug_str:000000000000053b .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4254   .debug_str:000000000000000c .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4564   .debug_str:000000000000076f .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4294   .debug_str:0000000000000104 .LASF5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 22
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4326   .debug_str:00000000000001a9 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4350   .debug_str:0000000000000221 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4378   .debug_str:00000000000002ad .LASF8
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4338   .debug_str:00000000000001df .LASF9
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4454   .debug_str:00000000000004ae .LASF10
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4282   .debug_str:00000000000000bf .LASF11
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4546   .debug_str:0000000000000693 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4534   .debug_str:000000000000065e .LASF13
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4520   .debug_str:0000000000000615 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4430   .debug_str:000000000000041e .LASF15
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4532   .debug_str:0000000000000656 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4586   .debug_str:00000000000007f6 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4406   .debug_str:0000000000000353 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4370   .debug_str:0000000000000286 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4522   .debug_str:000000000000061c .LASF20
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4524   .debug_str:0000000000000624 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4464   .debug_str:00000000000004e8 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4428   .debug_str:0000000000000416 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4466   .debug_str:00000000000004f3 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4484   .debug_str:0000000000000566 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4360   .debug_str:0000000000000253 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4552   .debug_str:00000000000006ae .LASF26
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4514   .debug_str:0000000000000600 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4550   .debug_str:00000000000006a8 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4580   .debug_str:00000000000007d8 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4368   .debug_str:0000000000000281 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4300   .debug_str:000000000000012b .LASF32
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4566   .debug_str:0000000000000782 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4314   .debug_str:000000000000016c .LASF34
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4612   .debug_str:0000000000000873 .LASF35
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4442   .debug_str:0000000000000469 .LASF36
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4422   .debug_str:00000000000003f2 .LASF37
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4528   .debug_str:0000000000000632 .LASF38
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4486   .debug_str:000000000000056f .LASF39
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4598   .debug_str:0000000000000828 .LASF40
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4318   .debug_str:000000000000017b .LASF41
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4258   .debug_str:0000000000000026 .LASF42
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4252   .debug_str:0000000000000000 .LASF43
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4560   .debug_str:0000000000000755 .LASF44
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4332   .debug_str:00000000000001c6 .LASF45
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4444   .debug_str:0000000000000472 .LASF46
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4504   .debug_str:00000000000005c6 .LASF47
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4348   .debug_str:000000000000021c .LASF48
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4488   .debug_str:0000000000000579 .LASF49
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4312   .debug_str:0000000000000166 .LASF50
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4544   .debug_str:000000000000068d .LASF51
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4494   .debug_str:000000000000058f .LASF52
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4330   .debug_str:00000000000001bf .LASF53
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4380   .debug_str:00000000000002bf .LASF54
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4284   .debug_str:00000000000000d6 .LASF55
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4320   .debug_str:0000000000000189 .LASF56
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4366   .debug_str:000000000000027b .LASF57
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4420   .debug_str:00000000000003eb .LASF58
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4526   .debug_str:000000000000062c .LASF59
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4304   .debug_str:0000000000000142 .LASF60
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4308   .debug_str:0000000000000155 .LASF61
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4592   .debug_str:0000000000000813 .LASF62
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 23
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4326   .debug_str:00000000000001a9 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4350   .debug_str:0000000000000221 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4378   .debug_str:00000000000002ad .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4338   .debug_str:00000000000001df .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4454   .debug_str:00000000000004ae .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4282   .debug_str:00000000000000bf .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4546   .debug_str:0000000000000693 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4534   .debug_str:000000000000065e .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4520   .debug_str:0000000000000615 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4430   .debug_str:000000000000041e .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4532   .debug_str:0000000000000656 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4586   .debug_str:00000000000007f6 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4406   .debug_str:0000000000000353 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4370   .debug_str:0000000000000286 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4522   .debug_str:000000000000061c .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4524   .debug_str:0000000000000624 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4464   .debug_str:00000000000004e8 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4428   .debug_str:0000000000000416 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4466   .debug_str:00000000000004f3 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4484   .debug_str:0000000000000566 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4360   .debug_str:0000000000000253 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4552   .debug_str:00000000000006ae .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4514   .debug_str:0000000000000600 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4550   .debug_str:00000000000006a8 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4580   .debug_str:00000000000007d8 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4368   .debug_str:0000000000000281 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4300   .debug_str:000000000000012b .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4566   .debug_str:0000000000000782 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4314   .debug_str:000000000000016c .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4612   .debug_str:0000000000000873 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4442   .debug_str:0000000000000469 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4422   .debug_str:00000000000003f2 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4528   .debug_str:0000000000000632 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4486   .debug_str:000000000000056f .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4598   .debug_str:0000000000000828 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4318   .debug_str:000000000000017b .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4258   .debug_str:0000000000000026 .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4252   .debug_str:0000000000000000 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4560   .debug_str:0000000000000755 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4332   .debug_str:00000000000001c6 .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4444   .debug_str:0000000000000472 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4504   .debug_str:00000000000005c6 .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4348   .debug_str:000000000000021c .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4488   .debug_str:0000000000000579 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4312   .debug_str:0000000000000166 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4544   .debug_str:000000000000068d .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4494   .debug_str:000000000000058f .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4330   .debug_str:00000000000001bf .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4380   .debug_str:00000000000002bf .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4284   .debug_str:00000000000000d6 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4320   .debug_str:0000000000000189 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4366   .debug_str:000000000000027b .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4420   .debug_str:00000000000003eb .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4526   .debug_str:000000000000062c .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4304   .debug_str:0000000000000142 .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4308   .debug_str:0000000000000155 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4592   .debug_str:0000000000000813 .LASF62
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 23
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4542   .debug_str:0000000000000684 .LASF63
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4342   .debug_str:00000000000001f5 .LASF64
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4388   .debug_str:00000000000002f7 .LASF65
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4410   .debug_str:000000000000035e .LASF66
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4496   .debug_str:0000000000000597 .LASF67
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4490   .debug_str:0000000000000580 .LASF68
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4516   .debug_str:0000000000000608 .LASF69
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4538   .debug_str:0000000000000678 .LASF70
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4334   .debug_str:00000000000001ce .LASF71
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4374   .debug_str:000000000000029d .LASF72
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4358   .debug_str:000000000000024b .LASF73
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4502   .debug_str:00000000000005c1 .LASF74
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4264   .debug_str:0000000000000045 .LASF75
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4510   .debug_str:00000000000005dd .LASF76
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4506   .debug_str:00000000000005cb .LASF77
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4446   .debug_str:000000000000047a .LASF78
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4508   .debug_str:00000000000005d3 .LASF79
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4404   .debug_str:000000000000034b .LASF80
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4336   .debug_str:00000000000001d5 .LASF81
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4608   .debug_str:000000000000085e .LASF82
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4462   .debug_str:00000000000004de .LASF83
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4376   .debug_str:00000000000002a5 .LASF84
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4340   .debug_str:00000000000001ed .LASF85
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4408   .debug_str:0000000000000359 .LASF86
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4274   .debug_str:000000000000008a .LASF87
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4590   .debug_str:0000000000000809 .LASF88
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4324   .debug_str:00000000000001a1 .LASF89
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4316   .debug_str:0000000000000176 .LASF90
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4540   .debug_str:000000000000067f .LASF91
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4492   .debug_str:0000000000000588 .LASF92
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4582   .debug_str:00000000000007dd .LASF93
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4390   .debug_str:00000000000002fd .LASF94
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4478   .debug_str:0000000000000549 .LASF95
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4260   .debug_str:000000000000002e .LASF96
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4518   .debug_str:000000000000060f .LASF97
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4412   .debug_str:0000000000000364 .LASF98
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4568   .debug_str:000000000000078b .LASF99
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4578   .debug_str:00000000000007cb .LASF100
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4554   .debug_str:00000000000006b4 .LASF101
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4400   .debug_str:0000000000000339 .LASF102
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4600   .debug_str:0000000000000833 .LASF103
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4448   .debug_str:0000000000000485 .LASF104
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4396   .debug_str:0000000000000322 .LASF105
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4604   .debug_str:000000000000084b .LASF106
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4470   .debug_str:0000000000000516 .LASF107
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4606   .debug_str:0000000000000850 .LASF108
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4298   .debug_str:000000000000011d .LASF109
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4588   .debug_str:00000000000007ff .LASF110
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4398   .debug_str:000000000000032d .LASF111
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4272   .debug_str:000000000000007d .LASF112
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4346   .debug_str:000000000000020e .LASF113
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4296   .debug_str:000000000000010e .LASF114
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4344   .debug_str:00000000000001fd .LASF115
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4278   .debug_str:000000000000009f .LASF116
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4280   .debug_str:00000000000000ae .LASF117
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4482   .debug_str:000000000000055d .LASF118
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4436   .debug_str:0000000000000444 .LASF119
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 24
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4542   .debug_str:0000000000000684 .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4342   .debug_str:00000000000001f5 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4388   .debug_str:00000000000002f7 .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4410   .debug_str:000000000000035e .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4496   .debug_str:0000000000000597 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4490   .debug_str:0000000000000580 .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4516   .debug_str:0000000000000608 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4538   .debug_str:0000000000000678 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4334   .debug_str:00000000000001ce .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4374   .debug_str:000000000000029d .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4358   .debug_str:000000000000024b .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4502   .debug_str:00000000000005c1 .LASF74
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4264   .debug_str:0000000000000045 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4510   .debug_str:00000000000005dd .LASF76
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4506   .debug_str:00000000000005cb .LASF77
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4446   .debug_str:000000000000047a .LASF78
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4508   .debug_str:00000000000005d3 .LASF79
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4404   .debug_str:000000000000034b .LASF80
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4336   .debug_str:00000000000001d5 .LASF81
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4608   .debug_str:000000000000085e .LASF82
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4462   .debug_str:00000000000004de .LASF83
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4376   .debug_str:00000000000002a5 .LASF84
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4340   .debug_str:00000000000001ed .LASF85
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4408   .debug_str:0000000000000359 .LASF86
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4274   .debug_str:000000000000008a .LASF87
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4590   .debug_str:0000000000000809 .LASF88
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4324   .debug_str:00000000000001a1 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4316   .debug_str:0000000000000176 .LASF90
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4540   .debug_str:000000000000067f .LASF91
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4492   .debug_str:0000000000000588 .LASF92
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4582   .debug_str:00000000000007dd .LASF93
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4390   .debug_str:00000000000002fd .LASF94
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4478   .debug_str:0000000000000549 .LASF95
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4260   .debug_str:000000000000002e .LASF96
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4518   .debug_str:000000000000060f .LASF97
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4412   .debug_str:0000000000000364 .LASF98
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4568   .debug_str:000000000000078b .LASF99
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4578   .debug_str:00000000000007cb .LASF100
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4554   .debug_str:00000000000006b4 .LASF101
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4400   .debug_str:0000000000000339 .LASF102
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4600   .debug_str:0000000000000833 .LASF103
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4448   .debug_str:0000000000000485 .LASF104
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4396   .debug_str:0000000000000322 .LASF105
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4604   .debug_str:000000000000084b .LASF106
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4470   .debug_str:0000000000000516 .LASF107
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4606   .debug_str:0000000000000850 .LASF108
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4298   .debug_str:000000000000011d .LASF109
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4588   .debug_str:00000000000007ff .LASF110
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4398   .debug_str:000000000000032d .LASF111
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4272   .debug_str:000000000000007d .LASF112
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4346   .debug_str:000000000000020e .LASF113
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4296   .debug_str:000000000000010e .LASF114
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4344   .debug_str:00000000000001fd .LASF115
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4278   .debug_str:000000000000009f .LASF116
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4280   .debug_str:00000000000000ae .LASF117
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4482   .debug_str:000000000000055d .LASF118
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4436   .debug_str:0000000000000444 .LASF119
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 24
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4426   .debug_str:000000000000040d .LASF120
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4594   .debug_str:0000000000000819 .LASF121
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4292   .debug_str:00000000000000f9 .LASF179
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4356   .debug_str:000000000000023f .LASF122
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4574   .debug_str:00000000000007af .LASF123
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4548   .debug_str:00000000000006a0 .LASF124
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4474   .debug_str:0000000000000533 .LASF125
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4576   .debug_str:00000000000007c2 .LASF126
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4432   .debug_str:0000000000000425 .LASF127
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4456   .debug_str:00000000000004b9 .LASF128
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4372   .debug_str:000000000000028d .LASF129
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4256   .debug_str:0000000000000016 .LASF130
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4266   .debug_str:0000000000000050 .LASF131
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4328   .debug_str:00000000000001b2 .LASF132
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4584   .debug_str:00000000000007e3 .LASF133
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4498   .debug_str:00000000000005a0 .LASF134
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4480   .debug_str:000000000000054f .LASF135
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4450   .debug_str:0000000000000494 .LASF136
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4302   .debug_str:0000000000000134 .LASF137
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4562   .debug_str:000000000000075e .LASF138
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4438   .debug_str:000000000000044b .LASF139
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4572   .debug_str:00000000000007a0 .LASF140
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4440   .debug_str:0000000000000459 .LASF141
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4262   .debug_str:0000000000000036 .LASF142
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4362   .debug_str:000000000000025b .LASF143
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4322   .debug_str:0000000000000191 .LASF144
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4570   .debug_str:0000000000000790 .LASF145
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4354   .debug_str:0000000000000233 .LASF146
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4536   .debug_str:000000000000066a .LASF147
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4472   .debug_str:0000000000000523 .LASF148
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4364   .debug_str:000000000000026b .LASF149
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4418   .debug_str:00000000000003db .LASF150
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4602   .debug_str:0000000000000842 .LASF151
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4530   .debug_str:000000000000063c .LASF157
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:394    .text.i2c_master_write_register:0000000000000000 .LFB9
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:563    .text.i2c_master_write_register:00000000000000ea .LFE9
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3775   .debug_loc:0000000000000000 .LLST12
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4596   .debug_str:0000000000000821 .LASF152
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3798   .debug_loc:0000000000000038 .LLST13
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4286   .debug_str:00000000000000df .LASF153
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3812   .debug_loc:0000000000000059 .LLST14
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3826   .debug_loc:000000000000007a .LLST15
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4394   .debug_str:000000000000031d .LASF154
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3840   .debug_loc:000000000000009b .LLST16
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4288   .debug_str:00000000000000e4 .LASF155
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3854   .debug_loc:00000000000000bc .LLST17
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4402   .debug_str:0000000000000346 .LASF156
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3894   .debug_loc:000000000000010c .LLST18
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3905   .debug_loc:000000000000012a .LLST19
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:546    .text.i2c_master_write_register:00000000000000d6 .LVL61
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:554    .text.i2c_master_write_register:00000000000000e4 .LVL62
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:432    .text.i2c_master_write_register:0000000000000026 .LVL47
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:438    .text.i2c_master_write_register:0000000000000032 .LVL48
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:446    .text.i2c_master_write_register:0000000000000040 .LVL49
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:454    .text.i2c_master_write_register:0000000000000052 .LVL50
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:462    .text.i2c_master_write_register:0000000000000060 .LVL51
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:469    .text.i2c_master_write_register:0000000000000070 .LVL52
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 25
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4426   .debug_str:000000000000040d .LASF120
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4594   .debug_str:0000000000000819 .LASF121
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4292   .debug_str:00000000000000f9 .LASF179
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4356   .debug_str:000000000000023f .LASF122
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4574   .debug_str:00000000000007af .LASF123
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4548   .debug_str:00000000000006a0 .LASF124
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4474   .debug_str:0000000000000533 .LASF125
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4576   .debug_str:00000000000007c2 .LASF126
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4432   .debug_str:0000000000000425 .LASF127
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4456   .debug_str:00000000000004b9 .LASF128
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4372   .debug_str:000000000000028d .LASF129
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4256   .debug_str:0000000000000016 .LASF130
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4266   .debug_str:0000000000000050 .LASF131
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4328   .debug_str:00000000000001b2 .LASF132
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4584   .debug_str:00000000000007e3 .LASF133
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4498   .debug_str:00000000000005a0 .LASF134
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4480   .debug_str:000000000000054f .LASF135
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4450   .debug_str:0000000000000494 .LASF136
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4302   .debug_str:0000000000000134 .LASF137
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4562   .debug_str:000000000000075e .LASF138
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4438   .debug_str:000000000000044b .LASF139
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4572   .debug_str:00000000000007a0 .LASF140
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4440   .debug_str:0000000000000459 .LASF141
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4262   .debug_str:0000000000000036 .LASF142
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4362   .debug_str:000000000000025b .LASF143
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4322   .debug_str:0000000000000191 .LASF144
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4570   .debug_str:0000000000000790 .LASF145
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4354   .debug_str:0000000000000233 .LASF146
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4536   .debug_str:000000000000066a .LASF147
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4472   .debug_str:0000000000000523 .LASF148
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4364   .debug_str:000000000000026b .LASF149
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4418   .debug_str:00000000000003db .LASF150
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4602   .debug_str:0000000000000842 .LASF151
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4530   .debug_str:000000000000063c .LASF157
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:394    .text.i2c_master_write_register:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:563    .text.i2c_master_write_register:00000000000000ea .LFE9
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3775   .debug_loc:0000000000000000 .LLST12
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4596   .debug_str:0000000000000821 .LASF152
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3798   .debug_loc:0000000000000038 .LLST13
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4286   .debug_str:00000000000000df .LASF153
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3812   .debug_loc:0000000000000059 .LLST14
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3826   .debug_loc:000000000000007a .LLST15
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4394   .debug_str:000000000000031d .LASF154
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3840   .debug_loc:000000000000009b .LLST16
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4288   .debug_str:00000000000000e4 .LASF155
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3854   .debug_loc:00000000000000bc .LLST17
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4402   .debug_str:0000000000000346 .LASF156
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3894   .debug_loc:000000000000010c .LLST18
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3905   .debug_loc:000000000000012a .LLST19
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:546    .text.i2c_master_write_register:00000000000000d6 .LVL61
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:554    .text.i2c_master_write_register:00000000000000e4 .LVL62
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:432    .text.i2c_master_write_register:0000000000000026 .LVL47
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:438    .text.i2c_master_write_register:0000000000000032 .LVL48
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:446    .text.i2c_master_write_register:0000000000000040 .LVL49
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:454    .text.i2c_master_write_register:0000000000000052 .LVL50
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:462    .text.i2c_master_write_register:0000000000000060 .LVL51
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:469    .text.i2c_master_write_register:0000000000000070 .LVL52
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 25
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:477    .text.i2c_master_write_register:000000000000007e .LVL53
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:484    .text.i2c_master_write_register:000000000000008c .LVL54
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:492    .text.i2c_master_write_register:000000000000009a .LVL55
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:506    .text.i2c_master_write_register:00000000000000ac .LVL57
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4392   .debug_str:0000000000000304 .LASF158
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:168    .text.i2c_master_read_register:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:387    .text.i2c_master_read_register:0000000000000140 .LFE8
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3916   .debug_loc:0000000000000148 .LLST4
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3939   .debug_loc:0000000000000180 .LLST5
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3953   .debug_loc:00000000000001a1 .LLST6
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3967   .debug_loc:00000000000001c2 .LLST7
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3981   .debug_loc:00000000000001e3 .LLST8
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:3995   .debug_loc:0000000000000204 .LLST9
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4044   .debug_loc:0000000000000264 .LLST10
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4055   .debug_loc:0000000000000282 .LLST11
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:362    .text.i2c_master_read_register:000000000000011a .LVL39
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:369    .text.i2c_master_read_register:0000000000000128 .LVL40
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:377    .text.i2c_master_read_register:0000000000000134 .LVL42
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:205    .text.i2c_master_read_register:0000000000000022 .LVL20
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:213    .text.i2c_master_read_register:0000000000000030 .LVL21
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:224    .text.i2c_master_read_register:0000000000000042 .LVL22
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:232    .text.i2c_master_read_register:0000000000000050 .LVL23
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:239    .text.i2c_master_read_register:0000000000000060 .LVL24
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:247    .text.i2c_master_read_register:000000000000006e .LVL25
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:254    .text.i2c_master_read_register:000000000000007c .LVL26
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:262    .text.i2c_master_read_register:000000000000008a .LVL27
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:268    .text.i2c_master_read_register:0000000000000096 .LVL28
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:276    .text.i2c_master_read_register:00000000000000a4 .LVL29
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:284    .text.i2c_master_read_register:00000000000000b4 .LVL30
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:292    .text.i2c_master_read_register:00000000000000c2 .LVL31
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:299    .text.i2c_master_read_register:00000000000000d2 .LVL32
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:304    .text.i2c_master_read_register:00000000000000de .LVL33
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:320    .text.i2c_master_read_register:00000000000000f2 .LVL35
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4512   .debug_str:00000000000005f6 .LASF159
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:20     .text.mpu_delay:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:161    .text.mpu_delay:00000000000000ce .LFE7
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4071   .debug_loc:00000000000002ac .LLST0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4352   .debug_str:000000000000022c .LASF160
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4089   .debug_loc:00000000000002d8 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4556   .debug_str:00000000000006c1 .LASF161
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4107   .debug_loc:0000000000000304 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4276   .debug_str:0000000000000093 .LASF180
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4119   .debug_loc:000000000000031c .LLST3
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:57     .text.mpu_delay:0000000000000022 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:66     .text.mpu_delay:000000000000002e .LVL3
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:85     .text.mpu_delay:0000000000000052 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4458   .debug_str:00000000000004bf .LASF162
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:570    .text.i2c_master_init:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:608    .text.i2c_master_init:0000000000000028 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4131   .debug_loc:0000000000000334 .LLST20
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4149   .debug_loc:0000000000000360 .LLST21
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:592    .text.i2c_master_init:0000000000000018 .LVL65
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:606    .text.i2c_master_init:0000000000000028 .LVL67
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4384   .debug_str:00000000000002d4 .LASF163
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:615    .text.mpu6500_install:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:660    .text.mpu6500_install:0000000000000040 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4171   .debug_loc:0000000000000397 .LLST22
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 26
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:477    .text.i2c_master_write_register:000000000000007e .LVL53
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:484    .text.i2c_master_write_register:000000000000008c .LVL54
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:492    .text.i2c_master_write_register:000000000000009a .LVL55
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:506    .text.i2c_master_write_register:00000000000000ac .LVL57
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4392   .debug_str:0000000000000304 .LASF158
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:168    .text.i2c_master_read_register:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:387    .text.i2c_master_read_register:0000000000000140 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3916   .debug_loc:0000000000000148 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3939   .debug_loc:0000000000000180 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3953   .debug_loc:00000000000001a1 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3967   .debug_loc:00000000000001c2 .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3981   .debug_loc:00000000000001e3 .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:3995   .debug_loc:0000000000000204 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4044   .debug_loc:0000000000000264 .LLST10
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4055   .debug_loc:0000000000000282 .LLST11
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:362    .text.i2c_master_read_register:000000000000011a .LVL39
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:369    .text.i2c_master_read_register:0000000000000128 .LVL40
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:377    .text.i2c_master_read_register:0000000000000134 .LVL42
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:205    .text.i2c_master_read_register:0000000000000022 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:213    .text.i2c_master_read_register:0000000000000030 .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:224    .text.i2c_master_read_register:0000000000000042 .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:232    .text.i2c_master_read_register:0000000000000050 .LVL23
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:239    .text.i2c_master_read_register:0000000000000060 .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:247    .text.i2c_master_read_register:000000000000006e .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:254    .text.i2c_master_read_register:000000000000007c .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:262    .text.i2c_master_read_register:000000000000008a .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:268    .text.i2c_master_read_register:0000000000000096 .LVL28
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:276    .text.i2c_master_read_register:00000000000000a4 .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:284    .text.i2c_master_read_register:00000000000000b4 .LVL30
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:292    .text.i2c_master_read_register:00000000000000c2 .LVL31
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:299    .text.i2c_master_read_register:00000000000000d2 .LVL32
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:304    .text.i2c_master_read_register:00000000000000de .LVL33
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:320    .text.i2c_master_read_register:00000000000000f2 .LVL35
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4512   .debug_str:00000000000005f6 .LASF159
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:20     .text.mpu_delay:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:161    .text.mpu_delay:00000000000000ce .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4071   .debug_loc:00000000000002ac .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4352   .debug_str:000000000000022c .LASF160
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4089   .debug_loc:00000000000002d8 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4556   .debug_str:00000000000006c1 .LASF161
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4107   .debug_loc:0000000000000304 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4276   .debug_str:0000000000000093 .LASF180
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4119   .debug_loc:000000000000031c .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:57     .text.mpu_delay:0000000000000022 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:66     .text.mpu_delay:000000000000002e .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:85     .text.mpu_delay:0000000000000052 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4458   .debug_str:00000000000004bf .LASF162
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:570    .text.i2c_master_init:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:608    .text.i2c_master_init:0000000000000028 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4131   .debug_loc:0000000000000334 .LLST20
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4149   .debug_loc:0000000000000360 .LLST21
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:592    .text.i2c_master_init:0000000000000018 .LVL65
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:606    .text.i2c_master_init:0000000000000028 .LVL67
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4384   .debug_str:00000000000002d4 .LASF163
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:615    .text.mpu6500_install:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:660    .text.mpu6500_install:0000000000000040 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4171   .debug_loc:0000000000000397 .LLST22
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 26
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4189   .debug_loc:00000000000003c3 .LLST23
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:635    .text.mpu6500_install:0000000000000016 .LVL69
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:658    .text.mpu6500_install:0000000000000040 .LVL70
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4270   .debug_str:000000000000006b .LASF164
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4452   .debug_str:00000000000004a1 .LASF165
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4468   .debug_str:0000000000000505 .LASF166
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4434   .debug_str:000000000000042e .LASF167
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4460   .debug_str:00000000000004cf .LASF168
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4610   .debug_str:0000000000000863 .LASF169
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4382   .debug_str:00000000000002c5 .LASF170
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4500   .debug_str:00000000000005b0 .LASF171
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4290   .debug_str:00000000000000e9 .LASF172
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4424   .debug_str:00000000000003fc .LASF173
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4310   .debug_str:000000000000015b .LASF174
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:4414   .debug_str:000000000000036a .LASF175
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:401    .text.i2c_master_write_register:0000000000000002 .LCFI5
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:533    .text.i2c_master_write_register:00000000000000c2 .LCFI6
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:538    .text.i2c_master_write_register:00000000000000c4 .LCFI7
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:397    .text.i2c_master_write_register:0000000000000000 .LVL44
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:425    .text.i2c_master_write_register:0000000000000018 .LVL46
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:498    .text.i2c_master_write_register:000000000000009e .LVL56
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:525    .text.i2c_master_write_register:00000000000000ba .LVL59
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:536    .text.i2c_master_write_register:00000000000000c4 .LVL60
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:559    .text.i2c_master_write_register:00000000000000e8 .LVL63
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:407    .text.i2c_master_write_register:0000000000000006 .LVL45
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:522    .text.i2c_master_write_register:00000000000000b8 .LVL58
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:175    .text.i2c_master_read_register:0000000000000002 .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:347    .text.i2c_master_read_register:0000000000000108 .LCFI3
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:352    .text.i2c_master_read_register:000000000000010a .LCFI4
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:171    .text.i2c_master_read_register:0000000000000000 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:188    .text.i2c_master_read_register:000000000000000c .LVL19
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:312    .text.i2c_master_read_register:00000000000000e4 .LVL34
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:339    .text.i2c_master_read_register:0000000000000100 .LVL37
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:350    .text.i2c_master_read_register:000000000000010a .LVL38
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:373    .text.i2c_master_read_register:000000000000012a .LVL41
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:383    .text.i2c_master_read_register:000000000000013e .LVL43
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:181    .text.i2c_master_read_register:0000000000000006 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:336    .text.i2c_master_read_register:00000000000000fe .LVL36
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:29     .text.mpu_delay:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:157    .text.mpu_delay:00000000000000cc .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:24     .text.mpu_delay:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:149    .text.mpu_delay:00000000000000c4 .LVL16
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:69     .text.mpu_delay:0000000000000032 .LVL4
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:136    .text.mpu_delay:00000000000000b8 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:60     .text.mpu_delay:0000000000000026 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:77     .text.mpu_delay:0000000000000042 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:578    .text.i2c_master_init:0000000000000004 .LCFI8
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:602    .text.i2c_master_init:0000000000000020 .LCFI9
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:573    .text.i2c_master_init:0000000000000000 .LVL64
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:598    .text.i2c_master_init:000000000000001c .LVL66
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:622    .text.mpu6500_install:0000000000000002 .LCFI10
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:654    .text.mpu6500_install:0000000000000038 .LCFI11
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:618    .text.mpu6500_install:0000000000000000 .LVL68
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:681    .debug_info:0000000000000000 .Ldebug_info0
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:306    .text.i2c_master_read_register:00000000000000de .LBB2
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:316    .text.i2c_master_read_register:00000000000000e8 .LBE2
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:354    .text.i2c_master_read_register:000000000000010a .LBB3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s 			page 27
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4189   .debug_loc:00000000000003c3 .LLST23
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:635    .text.mpu6500_install:0000000000000016 .LVL69
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:658    .text.mpu6500_install:0000000000000040 .LVL70
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4270   .debug_str:000000000000006b .LASF164
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4452   .debug_str:00000000000004a1 .LASF165
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4468   .debug_str:0000000000000505 .LASF166
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4434   .debug_str:000000000000042e .LASF167
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4460   .debug_str:00000000000004cf .LASF168
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4610   .debug_str:0000000000000863 .LASF169
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4382   .debug_str:00000000000002c5 .LASF170
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4500   .debug_str:00000000000005b0 .LASF171
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4290   .debug_str:00000000000000e9 .LASF172
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4424   .debug_str:00000000000003fc .LASF173
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4310   .debug_str:000000000000015b .LASF174
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:4414   .debug_str:000000000000036a .LASF175
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:401    .text.i2c_master_write_register:0000000000000002 .LCFI5
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:533    .text.i2c_master_write_register:00000000000000c2 .LCFI6
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:538    .text.i2c_master_write_register:00000000000000c4 .LCFI7
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:397    .text.i2c_master_write_register:0000000000000000 .LVL44
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:425    .text.i2c_master_write_register:0000000000000018 .LVL46
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:498    .text.i2c_master_write_register:000000000000009e .LVL56
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:525    .text.i2c_master_write_register:00000000000000ba .LVL59
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:536    .text.i2c_master_write_register:00000000000000c4 .LVL60
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:559    .text.i2c_master_write_register:00000000000000e8 .LVL63
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:407    .text.i2c_master_write_register:0000000000000006 .LVL45
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:522    .text.i2c_master_write_register:00000000000000b8 .LVL58
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:175    .text.i2c_master_read_register:0000000000000002 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:347    .text.i2c_master_read_register:0000000000000108 .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:352    .text.i2c_master_read_register:000000000000010a .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:171    .text.i2c_master_read_register:0000000000000000 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:188    .text.i2c_master_read_register:000000000000000c .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:312    .text.i2c_master_read_register:00000000000000e4 .LVL34
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:339    .text.i2c_master_read_register:0000000000000100 .LVL37
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:350    .text.i2c_master_read_register:000000000000010a .LVL38
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:373    .text.i2c_master_read_register:000000000000012a .LVL41
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:383    .text.i2c_master_read_register:000000000000013e .LVL43
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:181    .text.i2c_master_read_register:0000000000000006 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:336    .text.i2c_master_read_register:00000000000000fe .LVL36
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:29     .text.mpu_delay:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:157    .text.mpu_delay:00000000000000cc .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:24     .text.mpu_delay:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:149    .text.mpu_delay:00000000000000c4 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:69     .text.mpu_delay:0000000000000032 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:136    .text.mpu_delay:00000000000000b8 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:60     .text.mpu_delay:0000000000000026 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:77     .text.mpu_delay:0000000000000042 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:578    .text.i2c_master_init:0000000000000004 .LCFI8
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:602    .text.i2c_master_init:0000000000000020 .LCFI9
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:573    .text.i2c_master_init:0000000000000000 .LVL64
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:598    .text.i2c_master_init:000000000000001c .LVL66
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:622    .text.mpu6500_install:0000000000000002 .LCFI10
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:654    .text.mpu6500_install:0000000000000038 .LCFI11
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:618    .text.mpu6500_install:0000000000000000 .LVL68
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:681    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:306    .text.i2c_master_read_register:00000000000000de .LBB2
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:316    .text.i2c_master_read_register:00000000000000e8 .LBE2
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:354    .text.i2c_master_read_register:000000000000010a .LBB3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s 			page 27
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:385    .text.i2c_master_read_register:0000000000000140 .LBE3
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:495    .text.i2c_master_write_register:000000000000009c .LBB4
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:502    .text.i2c_master_write_register:00000000000000a2 .LBE4
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:540    .text.i2c_master_write_register:00000000000000c4 .LBB5
-C:\Users\Karzan\AppData\Local\Temp\cc4gtxbN.s:561    .text.i2c_master_write_register:00000000000000ea .LBE5
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:385    .text.i2c_master_read_register:0000000000000140 .LBE3
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:495    .text.i2c_master_write_register:000000000000009c .LBB4
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:502    .text.i2c_master_write_register:00000000000000a2 .LBE4
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:540    .text.i2c_master_write_register:00000000000000c4 .LBB5
+C:\Users\Karzan\AppData\Local\Temp\ccvvApQU.s:561    .text.i2c_master_write_register:00000000000000ea .LBE5
 
 UNDEFINED SYMBOLS
 __floatundidf

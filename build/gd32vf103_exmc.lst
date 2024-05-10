@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 1
 
 
    1              		.file	"gd32vf103_exmc.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /* EXMC register bit offset */
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNCTL_NRMUX_OFFSET                ((uint32_t)1U)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** #define SNCTL_WREN_OFFSET                 ((uint32_t)12U)
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
   48              	exmc_norsram_struct_para_init:
   49              	.LFB3:
   68:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 3
 
 
   69:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** /*!
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
   83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->nwait_signal = ENABLE;
   76              		.loc 1 83 5 is_stmt 1
   84:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     exmc_norsram_init_struct->asyn_wait = DISABLE;
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 4
 
 
   77              		.loc 1 84 5
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
  109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** void exmc_norsram_init(exmc_norsram_parameter_struct* exmc_norsram_init_struct)
  110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** {
  108              		.loc 1 110 1 is_stmt 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 5
 
 
  109              		.cfi_startproc
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
  140 0020 D58F     		or	a5,a5,a3
  120:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                         exmc_norsram_init_struct->memory_type |
  141              		.loc 1 120 14
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 6
 
 
  142 0022 544D     		lw	a3,28(a0)
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
  181              		.loc 1 130 123
  182 0050 B3F61601 		and	a3,a3,a7
  129:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****                        (((exmc_norsram_init_struct->read_write_timing->asyn_data_setuptime - 1U ) <
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 7
 
 
  183              		.loc 1 129 125
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
  222 0084 B70600A0 		li	a3,-1610612736
  223 0088 9106     		addi	a3,a3,4
  224 008a 8E07     		slli	a5,a5,3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 8
 
 
  225 008c B697     		add	a5,a5,a3
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
  160:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c ****     \retval     none
  161:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** */
  162:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** void exmc_norsram_disable(uint32_t norsram_region)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 9
 
 
  163:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_exmc.c **** {
@@ -508,217 +508,217 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 1
  286              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
  287              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_exmc.h"
  288              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_exmc.c
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:13     .text.exmc_norsram_deinit:0000000000000000 exmc_norsram_deinit
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:17     .text.exmc_norsram_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:19     .text.exmc_norsram_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:20     .text.exmc_norsram_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:21     .text.exmc_norsram_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:23     .text.exmc_norsram_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:24     .text.exmc_norsram_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:30     .text.exmc_norsram_deinit:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:36     .text.exmc_norsram_deinit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:40     .text.exmc_norsram_deinit:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:41     .text.exmc_norsram_deinit:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:48     .text.exmc_norsram_struct_para_init:0000000000000000 exmc_norsram_struct_para_init
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:51     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:53     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:54     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:55     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:58     .text.exmc_norsram_struct_para_init:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:60     .text.exmc_norsram_struct_para_init:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:62     .text.exmc_norsram_struct_para_init:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:64     .text.exmc_norsram_struct_para_init:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:67     .text.exmc_norsram_struct_para_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:69     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:70     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:71     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:73     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:74     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:75     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:77     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:78     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:79     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:80     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:82     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:83     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:85     .text.exmc_norsram_struct_para_init:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:87     .text.exmc_norsram_struct_para_init:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:89     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:90     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:92     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:93     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:95     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:96     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:98     .text.exmc_norsram_struct_para_init:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:99     .text.exmc_norsram_struct_para_init:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:106    .text.exmc_norsram_init:0000000000000000 exmc_norsram_init
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:109    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:111    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:112    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:113    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:114    .text.exmc_norsram_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:117    .text.exmc_norsram_init:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:119    .text.exmc_norsram_init:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:122    .text.exmc_norsram_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:125    .text.exmc_norsram_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:126    .text.exmc_norsram_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:128    .text.exmc_norsram_init:0000000000000012 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 11
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:13     .text.exmc_norsram_deinit:0000000000000000 exmc_norsram_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:17     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:19     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:20     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:21     .text.exmc_norsram_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:23     .text.exmc_norsram_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:24     .text.exmc_norsram_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:30     .text.exmc_norsram_deinit:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:36     .text.exmc_norsram_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:40     .text.exmc_norsram_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:41     .text.exmc_norsram_deinit:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:48     .text.exmc_norsram_struct_para_init:0000000000000000 exmc_norsram_struct_para_init
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:51     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:53     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:54     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:55     .text.exmc_norsram_struct_para_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:58     .text.exmc_norsram_struct_para_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:60     .text.exmc_norsram_struct_para_init:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:62     .text.exmc_norsram_struct_para_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:64     .text.exmc_norsram_struct_para_init:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:67     .text.exmc_norsram_struct_para_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:69     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:70     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:71     .text.exmc_norsram_struct_para_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:73     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:74     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:75     .text.exmc_norsram_struct_para_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:77     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:78     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:79     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:80     .text.exmc_norsram_struct_para_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:82     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:83     .text.exmc_norsram_struct_para_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:85     .text.exmc_norsram_struct_para_init:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:87     .text.exmc_norsram_struct_para_init:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:89     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:90     .text.exmc_norsram_struct_para_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:92     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:93     .text.exmc_norsram_struct_para_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:95     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:96     .text.exmc_norsram_struct_para_init:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:98     .text.exmc_norsram_struct_para_init:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:99     .text.exmc_norsram_struct_para_init:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:106    .text.exmc_norsram_init:0000000000000000 exmc_norsram_init
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:109    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:111    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:112    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:113    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:114    .text.exmc_norsram_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:117    .text.exmc_norsram_init:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:119    .text.exmc_norsram_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:122    .text.exmc_norsram_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:125    .text.exmc_norsram_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:126    .text.exmc_norsram_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:128    .text.exmc_norsram_init:0000000000000012 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 11
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:130    .text.exmc_norsram_init:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:133    .text.exmc_norsram_init:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:134    .text.exmc_norsram_init:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:137    .text.exmc_norsram_init:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:139    .text.exmc_norsram_init:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:142    .text.exmc_norsram_init:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:144    .text.exmc_norsram_init:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:147    .text.exmc_norsram_init:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:149    .text.exmc_norsram_init:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:151    .text.exmc_norsram_init:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:154    .text.exmc_norsram_init:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:156    .text.exmc_norsram_init:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:159    .text.exmc_norsram_init:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:161    .text.exmc_norsram_init:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:164    .text.exmc_norsram_init:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:166    .text.exmc_norsram_init:000000000000003e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:169    .text.exmc_norsram_init:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:170    .text.exmc_norsram_init:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:172    .text.exmc_norsram_init:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:174    .text.exmc_norsram_init:0000000000000048 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:176    .text.exmc_norsram_init:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:178    .text.exmc_norsram_init:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:180    .text.exmc_norsram_init:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:182    .text.exmc_norsram_init:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:184    .text.exmc_norsram_init:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:186    .text.exmc_norsram_init:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:188    .text.exmc_norsram_init:000000000000005a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:191    .text.exmc_norsram_init:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:193    .text.exmc_norsram_init:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:195    .text.exmc_norsram_init:0000000000000064 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:197    .text.exmc_norsram_init:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:199    .text.exmc_norsram_init:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:201    .text.exmc_norsram_init:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:203    .text.exmc_norsram_init:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:205    .text.exmc_norsram_init:0000000000000074 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:208    .text.exmc_norsram_init:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:209    .text.exmc_norsram_init:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:212    .text.exmc_norsram_init:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:213    .text.exmc_norsram_init:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:217    .text.exmc_norsram_init:0000000000000080 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:218    .text.exmc_norsram_init:0000000000000080 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:220    .text.exmc_norsram_init:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:227    .text.exmc_norsram_init:000000000000008e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:230    .text.exmc_norsram_init:0000000000000090 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:231    .text.exmc_norsram_init:0000000000000092 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:238    .text.exmc_norsram_enable:0000000000000000 exmc_norsram_enable
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:241    .text.exmc_norsram_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:243    .text.exmc_norsram_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:244    .text.exmc_norsram_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:245    .text.exmc_norsram_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:254    .text.exmc_norsram_enable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:255    .text.exmc_norsram_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:262    .text.exmc_norsram_disable:0000000000000000 exmc_norsram_disable
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:265    .text.exmc_norsram_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:267    .text.exmc_norsram_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:268    .text.exmc_norsram_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:269    .text.exmc_norsram_disable:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 12
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:130    .text.exmc_norsram_init:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:133    .text.exmc_norsram_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:134    .text.exmc_norsram_init:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:137    .text.exmc_norsram_init:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:139    .text.exmc_norsram_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:142    .text.exmc_norsram_init:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:144    .text.exmc_norsram_init:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:147    .text.exmc_norsram_init:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:149    .text.exmc_norsram_init:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:151    .text.exmc_norsram_init:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:154    .text.exmc_norsram_init:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:156    .text.exmc_norsram_init:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:159    .text.exmc_norsram_init:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:161    .text.exmc_norsram_init:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:164    .text.exmc_norsram_init:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:166    .text.exmc_norsram_init:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:169    .text.exmc_norsram_init:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:170    .text.exmc_norsram_init:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:172    .text.exmc_norsram_init:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:174    .text.exmc_norsram_init:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:176    .text.exmc_norsram_init:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:178    .text.exmc_norsram_init:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:180    .text.exmc_norsram_init:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:182    .text.exmc_norsram_init:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:184    .text.exmc_norsram_init:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:186    .text.exmc_norsram_init:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:188    .text.exmc_norsram_init:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:191    .text.exmc_norsram_init:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:193    .text.exmc_norsram_init:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:195    .text.exmc_norsram_init:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:197    .text.exmc_norsram_init:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:199    .text.exmc_norsram_init:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:201    .text.exmc_norsram_init:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:203    .text.exmc_norsram_init:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:205    .text.exmc_norsram_init:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:208    .text.exmc_norsram_init:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:209    .text.exmc_norsram_init:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:212    .text.exmc_norsram_init:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:213    .text.exmc_norsram_init:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:217    .text.exmc_norsram_init:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:218    .text.exmc_norsram_init:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:220    .text.exmc_norsram_init:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:227    .text.exmc_norsram_init:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:230    .text.exmc_norsram_init:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:231    .text.exmc_norsram_init:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:238    .text.exmc_norsram_enable:0000000000000000 exmc_norsram_enable
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:241    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:243    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:244    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:245    .text.exmc_norsram_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:254    .text.exmc_norsram_enable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:255    .text.exmc_norsram_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:262    .text.exmc_norsram_disable:0000000000000000 exmc_norsram_disable
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:265    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:267    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:268    .text.exmc_norsram_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:269    .text.exmc_norsram_disable:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 12
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:278    .text.exmc_norsram_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:279    .text.exmc_norsram_disable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:44     .text.exmc_norsram_deinit:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:102    .text.exmc_norsram_struct_para_init:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:234    .text.exmc_norsram_init:0000000000000092 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:258    .text.exmc_norsram_enable:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:282    .text.exmc_norsram_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:278    .text.exmc_norsram_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:279    .text.exmc_norsram_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:44     .text.exmc_norsram_deinit:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:102    .text.exmc_norsram_struct_para_init:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:234    .text.exmc_norsram_init:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:258    .text.exmc_norsram_enable:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:282    .text.exmc_norsram_disable:0000000000000010 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:28     .text.exmc_norsram_deinit:000000000000000e .L2
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:215    .text.exmc_norsram_init:0000000000000080 .L5
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:665    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1112   .debug_str:00000000000002c5 .LASF37
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1058   .debug_str:00000000000000bf .LASF38
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1048   .debug_str:000000000000000e .LASF39
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1030   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1044   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1086   .debug_str:00000000000001c4 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1064   .debug_str:000000000000011c .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1066   .debug_str:0000000000000128 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1108   .debug_str:00000000000002a4 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1072   .debug_str:000000000000015c .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1116   .debug_str:0000000000000356 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1080   .debug_str:00000000000001a6 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1068   .debug_str:0000000000000136 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1046   .debug_str:0000000000000000 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1088   .debug_str:00000000000001d1 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1114   .debug_str:000000000000034d .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1102   .debug_str:0000000000000260 .LASF40
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1124   .debug_str:0000000000000383 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1062   .debug_str:0000000000000115 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1126   .debug_str:000000000000038b .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1122   .debug_str:0000000000000377 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1090   .debug_str:00000000000001e8 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1098   .debug_str:0000000000000240 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1106   .debug_str:000000000000028e .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1110   .debug_str:00000000000002ae .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1094   .debug_str:0000000000000209 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1060   .debug_str:0000000000000106 .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1076   .debug_str:0000000000000183 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1082   .debug_str:00000000000001b1 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1128   .debug_str:0000000000000399 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1052   .debug_str:0000000000000090 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1056   .debug_str:00000000000000b1 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1100   .debug_str:0000000000000254 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1120   .debug_str:0000000000000366 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1054   .debug_str:000000000000009f .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1104   .debug_str:0000000000000270 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1092   .debug_str:00000000000001f4 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:263    .text.exmc_norsram_disable:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:280    .text.exmc_norsram_disable:0000000000000010 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:918    .debug_loc:0000000000000000 .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1074   .debug_str:000000000000016f .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:239    .text.exmc_norsram_enable:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:256    .text.exmc_norsram_enable:0000000000000012 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:938    .debug_loc:0000000000000032 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1096   .debug_str:000000000000022e .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:107    .text.exmc_norsram_init:0000000000000000 .LFB4
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s 			page 13
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:28     .text.exmc_norsram_deinit:000000000000000e .L2
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:215    .text.exmc_norsram_init:0000000000000080 .L5
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:665    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1112   .debug_str:00000000000002c5 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1058   .debug_str:00000000000000bf .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1048   .debug_str:000000000000000e .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1030   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1044   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1086   .debug_str:00000000000001c4 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1064   .debug_str:000000000000011c .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1066   .debug_str:0000000000000128 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1108   .debug_str:00000000000002a4 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1072   .debug_str:000000000000015c .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1116   .debug_str:0000000000000356 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1080   .debug_str:00000000000001a6 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1068   .debug_str:0000000000000136 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1046   .debug_str:0000000000000000 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1088   .debug_str:00000000000001d1 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1114   .debug_str:000000000000034d .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1102   .debug_str:0000000000000260 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1124   .debug_str:0000000000000383 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1062   .debug_str:0000000000000115 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1126   .debug_str:000000000000038b .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1122   .debug_str:0000000000000377 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1090   .debug_str:00000000000001e8 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1098   .debug_str:0000000000000240 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1106   .debug_str:000000000000028e .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1110   .debug_str:00000000000002ae .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1094   .debug_str:0000000000000209 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1060   .debug_str:0000000000000106 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1076   .debug_str:0000000000000183 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1082   .debug_str:00000000000001b1 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1128   .debug_str:0000000000000399 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1052   .debug_str:0000000000000090 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1056   .debug_str:00000000000000b1 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1100   .debug_str:0000000000000254 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1120   .debug_str:0000000000000366 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1054   .debug_str:000000000000009f .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1104   .debug_str:0000000000000270 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1092   .debug_str:00000000000001f4 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:263    .text.exmc_norsram_disable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:280    .text.exmc_norsram_disable:0000000000000010 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:918    .debug_loc:0000000000000000 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1074   .debug_str:000000000000016f .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:239    .text.exmc_norsram_enable:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:256    .text.exmc_norsram_enable:0000000000000012 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:938    .debug_loc:0000000000000032 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1096   .debug_str:000000000000022e .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:107    .text.exmc_norsram_init:0000000000000000 .LFB4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s 			page 13
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:232    .text.exmc_norsram_init:0000000000000092 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1078   .debug_str:000000000000018d .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1084   .debug_str:00000000000001be .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:958    .debug_loc:0000000000000064 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1118   .debug_str:000000000000035f .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:983    .debug_loc:00000000000000a5 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1050   .debug_str:0000000000000072 .LASF36
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:49     .text.exmc_norsram_struct_para_init:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:100    .text.exmc_norsram_struct_para_init:000000000000002e .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:1070   .debug_str:0000000000000148 .LASF41
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:14     .text.exmc_norsram_deinit:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:42     .text.exmc_norsram_deinit:0000000000000022 .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:995    .debug_loc:00000000000000c4 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:266    .text.exmc_norsram_disable:0000000000000000 .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:271    .text.exmc_norsram_disable:0000000000000006 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:273    .text.exmc_norsram_disable:0000000000000008 .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:242    .text.exmc_norsram_enable:0000000000000000 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:247    .text.exmc_norsram_enable:0000000000000006 .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:249    .text.exmc_norsram_enable:0000000000000008 .LVL13
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:110    .text.exmc_norsram_init:0000000000000000 .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:123    .text.exmc_norsram_init:000000000000000e .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:131    .text.exmc_norsram_init:0000000000000016 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:167    .text.exmc_norsram_init:0000000000000040 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:221    .text.exmc_norsram_init:0000000000000084 .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:228    .text.exmc_norsram_init:0000000000000090 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:206    .text.exmc_norsram_init:0000000000000076 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:18     .text.exmc_norsram_deinit:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:33     .text.exmc_norsram_deinit:0000000000000016 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccWR69Ly.s:290    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:232    .text.exmc_norsram_init:0000000000000092 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1078   .debug_str:000000000000018d .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1084   .debug_str:00000000000001be .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:958    .debug_loc:0000000000000064 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1118   .debug_str:000000000000035f .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:983    .debug_loc:00000000000000a5 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1050   .debug_str:0000000000000072 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:49     .text.exmc_norsram_struct_para_init:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:100    .text.exmc_norsram_struct_para_init:000000000000002e .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:1070   .debug_str:0000000000000148 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:14     .text.exmc_norsram_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:42     .text.exmc_norsram_deinit:0000000000000022 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:995    .debug_loc:00000000000000c4 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:266    .text.exmc_norsram_disable:0000000000000000 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:271    .text.exmc_norsram_disable:0000000000000006 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:273    .text.exmc_norsram_disable:0000000000000008 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:242    .text.exmc_norsram_enable:0000000000000000 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:247    .text.exmc_norsram_enable:0000000000000006 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:249    .text.exmc_norsram_enable:0000000000000008 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:110    .text.exmc_norsram_init:0000000000000000 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:123    .text.exmc_norsram_init:000000000000000e .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:131    .text.exmc_norsram_init:0000000000000016 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:167    .text.exmc_norsram_init:0000000000000040 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:221    .text.exmc_norsram_init:0000000000000084 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:228    .text.exmc_norsram_init:0000000000000090 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:206    .text.exmc_norsram_init:0000000000000076 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:18     .text.exmc_norsram_deinit:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:33     .text.exmc_norsram_deinit:0000000000000016 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccjZf1I5.s:290    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

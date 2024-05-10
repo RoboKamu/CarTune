@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 1
 
 
    1              		.file	"gd32vf103_eclic.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c **** 
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c **** /*!
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c ****     \brief      enable the global interrupt
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c ****     \param[in]  none
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 1
   64              	}
   51              		csrrc a5, mstatus, 8
   52              	# 0 "" 2
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 3
 
 
   53              	.LVL1:
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 1
   91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c **** {
   83              		.loc 1 91 1
   84              		.cfi_startproc
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 4
 
 
   85              	.LVL4:
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 1
  129              		.align	1
  130              		.globl	eclic_irq_disable
  132              	eclic_irq_disable:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 5
 
 
  133              	.LFB6:
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 1
  166              		.section	.text.eclic_send_event,"ax",@progbits
  167              		.align	1
  168              		.globl	eclic_send_event
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 6
 
 
  170              	eclic_send_event:
@@ -340,170 +340,170 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 1
  195              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  196              		.file 4 "./../../firmware/RISCV/drivers/n200_func.h"
  197              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_eclic.c
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:13     .text.eclic_global_interrupt_enable:0000000000000000 eclic_global_interrupt_enable
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:17     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:18     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:20     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:21     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:22     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:13     .text.eclic_global_interrupt_enable:0000000000000000 eclic_global_interrupt_enable
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:17     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:18     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:20     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:21     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:22     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c:51     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:31     .text.eclic_global_interrupt_enable:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:32     .text.eclic_global_interrupt_enable:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:33     .text.eclic_global_interrupt_enable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:40     .text.eclic_global_interrupt_disable:0000000000000000 eclic_global_interrupt_disable
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:43     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:44     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:46     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:47     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:48     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:31     .text.eclic_global_interrupt_enable:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:32     .text.eclic_global_interrupt_enable:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:33     .text.eclic_global_interrupt_enable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:40     .text.eclic_global_interrupt_disable:0000000000000000 eclic_global_interrupt_disable
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:43     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:44     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:46     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:47     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:48     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c:63     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:57     .text.eclic_global_interrupt_disable:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:58     .text.eclic_global_interrupt_disable:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:59     .text.eclic_global_interrupt_disable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:66     .text.eclic_priority_group_set:0000000000000000 eclic_priority_group_set
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:69     .text.eclic_priority_group_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:71     .text.eclic_priority_group_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:72     .text.eclic_priority_group_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:74     .text.eclic_priority_group_set:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:81     .text.eclic_irq_enable:0000000000000000 eclic_irq_enable
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:84     .text.eclic_irq_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:86     .text.eclic_irq_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:87     .text.eclic_irq_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:88     .text.eclic_irq_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:90     .text.eclic_irq_enable:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:93     .text.eclic_irq_enable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:94     .text.eclic_irq_enable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:96     .text.eclic_irq_enable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:100    .text.eclic_irq_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:103    .text.eclic_irq_enable:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:108    .text.eclic_irq_enable:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:111    .text.eclic_irq_enable:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:112    .text.eclic_irq_enable:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:115    .text.eclic_irq_enable:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:117    .text.eclic_irq_enable:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:119    .text.eclic_irq_enable:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:121    .text.eclic_irq_enable:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:123    .text.eclic_irq_enable:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:125    .text.eclic_irq_enable:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:132    .text.eclic_irq_disable:0000000000000000 eclic_irq_disable
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:135    .text.eclic_irq_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:137    .text.eclic_irq_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:138    .text.eclic_irq_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:140    .text.eclic_irq_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:147    .text.eclic_system_reset:0000000000000000 eclic_system_reset
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:150    .text.eclic_system_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:151    .text.eclic_system_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:152    .text.eclic_system_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:153    .text.eclic_system_reset:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 8
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:57     .text.eclic_global_interrupt_disable:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:58     .text.eclic_global_interrupt_disable:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:59     .text.eclic_global_interrupt_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:66     .text.eclic_priority_group_set:0000000000000000 eclic_priority_group_set
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:69     .text.eclic_priority_group_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:71     .text.eclic_priority_group_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:72     .text.eclic_priority_group_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:74     .text.eclic_priority_group_set:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:81     .text.eclic_irq_enable:0000000000000000 eclic_irq_enable
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:84     .text.eclic_irq_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:86     .text.eclic_irq_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:87     .text.eclic_irq_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:88     .text.eclic_irq_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:90     .text.eclic_irq_enable:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:93     .text.eclic_irq_enable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:94     .text.eclic_irq_enable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:96     .text.eclic_irq_enable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:100    .text.eclic_irq_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:103    .text.eclic_irq_enable:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:108    .text.eclic_irq_enable:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:111    .text.eclic_irq_enable:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:112    .text.eclic_irq_enable:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:115    .text.eclic_irq_enable:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:117    .text.eclic_irq_enable:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:119    .text.eclic_irq_enable:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:121    .text.eclic_irq_enable:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:123    .text.eclic_irq_enable:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:125    .text.eclic_irq_enable:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:132    .text.eclic_irq_disable:0000000000000000 eclic_irq_disable
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:135    .text.eclic_irq_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:137    .text.eclic_irq_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:138    .text.eclic_irq_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:140    .text.eclic_irq_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:147    .text.eclic_system_reset:0000000000000000 eclic_system_reset
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:150    .text.eclic_system_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:151    .text.eclic_system_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:152    .text.eclic_system_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:153    .text.eclic_system_reset:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 8
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:158    .text.eclic_system_reset:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:159    .text.eclic_system_reset:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:162    .text.eclic_system_reset:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:163    .text.eclic_system_reset:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:170    .text.eclic_send_event:0000000000000000 eclic_send_event
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:173    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:174    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:176    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:177    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:178    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:158    .text.eclic_system_reset:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:159    .text.eclic_system_reset:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:162    .text.eclic_system_reset:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:163    .text.eclic_system_reset:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:170    .text.eclic_send_event:0000000000000000 eclic_send_event
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:173    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:174    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:176    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:177    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:178    .text.eclic_send_event:0000000000000000 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c:128    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:187    .text.eclic_send_event:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:188    .text.eclic_send_event:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:189    .text.eclic_send_event:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:36     .text.eclic_global_interrupt_enable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:62     .text.eclic_global_interrupt_disable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:77     .text.eclic_priority_group_set:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:128    .text.eclic_irq_enable:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:143    .text.eclic_irq_disable:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:166    .text.eclic_system_reset:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:192    .text.eclic_send_event:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:187    .text.eclic_send_event:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:188    .text.eclic_send_event:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:189    .text.eclic_send_event:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:36     .text.eclic_global_interrupt_enable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:62     .text.eclic_global_interrupt_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:77     .text.eclic_priority_group_set:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:128    .text.eclic_irq_enable:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:143    .text.eclic_irq_disable:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:166    .text.eclic_system_reset:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:192    .text.eclic_send_event:0000000000000006 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:563    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1020   .debug_str:0000000000000212 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1026   .debug_str:00000000000002ac .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:968    .debug_str:000000000000000e .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:946    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:964    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:998    .debug_str:000000000000015c .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1030   .debug_str:0000000000000300 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:972    .debug_str:0000000000000090 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:984    .debug_str:00000000000000fe .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1014   .debug_str:00000000000001e0 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:988    .debug_str:000000000000011e .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1024   .debug_str:00000000000002a3 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:996    .debug_str:0000000000000151 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:986    .debug_str:000000000000010c .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:966    .debug_str:0000000000000000 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1002   .debug_str:0000000000000181 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1004   .debug_str:0000000000000198 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1022   .debug_str:000000000000029a .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1010   .debug_str:00000000000001b7 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1028   .debug_str:00000000000002f4 .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1006   .debug_str:00000000000001a0 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:171    .text.eclic_send_event:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:190    .text.eclic_send_event:0000000000000006 .LFE8
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:175    .text.eclic_send_event:0000000000000000 .LBB4
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:186    .text.eclic_send_event:0000000000000004 .LBE4
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:994    .debug_str:000000000000014b .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:974    .debug_str:000000000000009a .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:148    .text.eclic_system_reset:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:164    .text.eclic_system_reset:0000000000000014 .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:980    .debug_str:00000000000000e3 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:133    .text.eclic_irq_disable:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:141    .text.eclic_irq_disable:0000000000000008 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1032   .debug_str:000000000000030c .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:825    .debug_loc:0000000000000000 .LLST5
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s 			page 9
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:563    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1020   .debug_str:0000000000000212 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1026   .debug_str:00000000000002ac .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:968    .debug_str:000000000000000e .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:946    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:964    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:998    .debug_str:000000000000015c .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1030   .debug_str:0000000000000300 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:972    .debug_str:0000000000000090 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:984    .debug_str:00000000000000fe .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1014   .debug_str:00000000000001e0 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:988    .debug_str:000000000000011e .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1024   .debug_str:00000000000002a3 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:996    .debug_str:0000000000000151 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:986    .debug_str:000000000000010c .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:966    .debug_str:0000000000000000 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1002   .debug_str:0000000000000181 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1004   .debug_str:0000000000000198 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1022   .debug_str:000000000000029a .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1010   .debug_str:00000000000001b7 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1028   .debug_str:00000000000002f4 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1006   .debug_str:00000000000001a0 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:171    .text.eclic_send_event:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:190    .text.eclic_send_event:0000000000000006 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:175    .text.eclic_send_event:0000000000000000 .LBB4
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:186    .text.eclic_send_event:0000000000000004 .LBE4
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:994    .debug_str:000000000000014b .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:974    .debug_str:000000000000009a .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:148    .text.eclic_system_reset:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:164    .text.eclic_system_reset:0000000000000014 .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:980    .debug_str:00000000000000e3 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:133    .text.eclic_irq_disable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:141    .text.eclic_irq_disable:0000000000000008 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1032   .debug_str:000000000000030c .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:825    .debug_loc:0000000000000000 .LLST5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s 			page 9
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:139    .text.eclic_irq_disable:0000000000000008 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:992    .debug_str:000000000000013a .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:82     .text.eclic_irq_enable:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:126    .text.eclic_irq_enable:0000000000000034 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:839    .debug_loc:0000000000000021 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:857    .debug_loc:000000000000004d .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1008   .debug_str:00000000000001b1 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:879    .debug_loc:0000000000000084 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:990    .debug_str:0000000000000131 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:893    .debug_loc:00000000000000a5 .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:101    .text.eclic_irq_enable:0000000000000014 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:106    .text.eclic_irq_enable:0000000000000020 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:124    .text.eclic_irq_enable:0000000000000034 .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1012   .debug_str:00000000000001c7 .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:67     .text.eclic_priority_group_set:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:75     .text.eclic_priority_group_set:0000000000000008 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:982    .debug_str:00000000000000f5 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:907    .debug_loc:00000000000000c6 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:73     .text.eclic_priority_group_set:0000000000000008 .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:978    .debug_str:00000000000000c4 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:41     .text.eclic_global_interrupt_disable:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:60     .text.eclic_global_interrupt_disable:0000000000000006 .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:45     .text.eclic_global_interrupt_disable:0000000000000000 .LBB3
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:56     .text.eclic_global_interrupt_disable:0000000000000004 .LBE3
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:970    .debug_str:0000000000000072 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:14     .text.eclic_global_interrupt_enable:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:34     .text.eclic_global_interrupt_enable:0000000000000006 .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:19     .text.eclic_global_interrupt_enable:0000000000000000 .LBB2
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:30     .text.eclic_global_interrupt_enable:0000000000000004 .LBE2
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1000   .debug_str:0000000000000169 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:976    .debug_str:00000000000000ad .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1034   .debug_str:0000000000000313 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1016   .debug_str:00000000000001ea .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:1018   .debug_str:0000000000000201 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:136    .text.eclic_irq_disable:0000000000000000 .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:89     .text.eclic_irq_enable:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:120    .text.eclic_irq_enable:000000000000002c .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:85     .text.eclic_irq_enable:0000000000000000 .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:113    .text.eclic_irq_enable:0000000000000026 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:70     .text.eclic_priority_group_set:0000000000000000 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccKpIqIb.s:199    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:139    .text.eclic_irq_disable:0000000000000008 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:992    .debug_str:000000000000013a .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:82     .text.eclic_irq_enable:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:126    .text.eclic_irq_enable:0000000000000034 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:839    .debug_loc:0000000000000021 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:857    .debug_loc:000000000000004d .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1008   .debug_str:00000000000001b1 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:879    .debug_loc:0000000000000084 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:990    .debug_str:0000000000000131 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:893    .debug_loc:00000000000000a5 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:101    .text.eclic_irq_enable:0000000000000014 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:106    .text.eclic_irq_enable:0000000000000020 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:124    .text.eclic_irq_enable:0000000000000034 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1012   .debug_str:00000000000001c7 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:67     .text.eclic_priority_group_set:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:75     .text.eclic_priority_group_set:0000000000000008 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:982    .debug_str:00000000000000f5 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:907    .debug_loc:00000000000000c6 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:73     .text.eclic_priority_group_set:0000000000000008 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:978    .debug_str:00000000000000c4 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:41     .text.eclic_global_interrupt_disable:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:60     .text.eclic_global_interrupt_disable:0000000000000006 .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:45     .text.eclic_global_interrupt_disable:0000000000000000 .LBB3
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:56     .text.eclic_global_interrupt_disable:0000000000000004 .LBE3
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:970    .debug_str:0000000000000072 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:14     .text.eclic_global_interrupt_enable:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:34     .text.eclic_global_interrupt_enable:0000000000000006 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:19     .text.eclic_global_interrupt_enable:0000000000000000 .LBB2
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:30     .text.eclic_global_interrupt_enable:0000000000000004 .LBE2
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1000   .debug_str:0000000000000169 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:976    .debug_str:00000000000000ad .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1034   .debug_str:0000000000000313 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1016   .debug_str:00000000000001ea .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:1018   .debug_str:0000000000000201 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:136    .text.eclic_irq_disable:0000000000000000 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:89     .text.eclic_irq_enable:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:120    .text.eclic_irq_enable:000000000000002c .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:85     .text.eclic_irq_enable:0000000000000000 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:113    .text.eclic_irq_enable:0000000000000026 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:70     .text.eclic_priority_group_set:0000000000000000 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccPFtF5I.s:199    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 eclic_set_nlbits

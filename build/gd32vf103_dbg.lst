@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s 			page 1
 
 
    1              		.file	"gd32vf103_dbg.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[out] none
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \retval     DBG_ID code
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** uint32_t dbg_id_get(void)
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 1
   64:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c **** /*!
   65:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \brief      disable low power behavior when the mcu is in debug mode
   66:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****     \param[in]  dbg_low_power:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s 			page 3
 
 
   67:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c ****                 one or more parameters can be selected which are shown as below:
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 1
   83              		.loc 1 93 13 is_stmt 0
   84 0000 372704E0 		li	a4,-536600576
   85 0004 5C43     		lw	a5,4(a4)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s 			page 4
 
 
   86 0006 5D8D     		or	a0,a5,a0
@@ -235,126 +235,126 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 1
  122              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  123              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_dbg.h"
  124              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_dbg.c
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:13     .text.dbg_id_get:0000000000000000 dbg_id_get
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:17     .text.dbg_id_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:18     .text.dbg_id_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:19     .text.dbg_id_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:20     .text.dbg_id_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:23     .text.dbg_id_get:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:24     .text.dbg_id_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:31     .text.dbg_low_power_enable:0000000000000000 dbg_low_power_enable
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:34     .text.dbg_low_power_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:36     .text.dbg_low_power_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:37     .text.dbg_low_power_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:38     .text.dbg_low_power_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:44     .text.dbg_low_power_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:45     .text.dbg_low_power_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:52     .text.dbg_low_power_disable:0000000000000000 dbg_low_power_disable
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:55     .text.dbg_low_power_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:57     .text.dbg_low_power_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:58     .text.dbg_low_power_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:59     .text.dbg_low_power_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:62     .text.dbg_low_power_disable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:65     .text.dbg_low_power_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:69     .text.dbg_low_power_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:70     .text.dbg_low_power_disable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:77     .text.dbg_periph_enable:0000000000000000 dbg_periph_enable
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:80     .text.dbg_periph_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:82     .text.dbg_periph_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:83     .text.dbg_periph_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:84     .text.dbg_periph_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:90     .text.dbg_periph_enable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:91     .text.dbg_periph_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:98     .text.dbg_periph_disable:0000000000000000 dbg_periph_disable
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:101    .text.dbg_periph_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:103    .text.dbg_periph_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:104    .text.dbg_periph_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:105    .text.dbg_periph_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:108    .text.dbg_periph_disable:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:111    .text.dbg_periph_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:115    .text.dbg_periph_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:116    .text.dbg_periph_disable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:27     .text.dbg_id_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:48     .text.dbg_low_power_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:73     .text.dbg_low_power_disable:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:94     .text.dbg_periph_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:119    .text.dbg_periph_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:13     .text.dbg_id_get:0000000000000000 dbg_id_get
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:17     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:18     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:19     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:20     .text.dbg_id_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:23     .text.dbg_id_get:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:24     .text.dbg_id_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:31     .text.dbg_low_power_enable:0000000000000000 dbg_low_power_enable
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:34     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:36     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:37     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:38     .text.dbg_low_power_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:44     .text.dbg_low_power_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:45     .text.dbg_low_power_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:52     .text.dbg_low_power_disable:0000000000000000 dbg_low_power_disable
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:55     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:57     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:58     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:59     .text.dbg_low_power_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:62     .text.dbg_low_power_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:65     .text.dbg_low_power_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:69     .text.dbg_low_power_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:70     .text.dbg_low_power_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:77     .text.dbg_periph_enable:0000000000000000 dbg_periph_enable
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:80     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:82     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:83     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:84     .text.dbg_periph_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:90     .text.dbg_periph_enable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:91     .text.dbg_periph_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:98     .text.dbg_periph_disable:0000000000000000 dbg_periph_disable
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:101    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:103    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:104    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:105    .text.dbg_periph_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:108    .text.dbg_periph_disable:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:111    .text.dbg_periph_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:115    .text.dbg_periph_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:116    .text.dbg_periph_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:27     .text.dbg_id_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:48     .text.dbg_low_power_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:73     .text.dbg_low_power_disable:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:94     .text.dbg_periph_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:119    .text.dbg_periph_disable:0000000000000010 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:362    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:714    .debug_str:00000000000001fc .LASF32
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:726    .debug_str:00000000000002c8 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:660    .debug_str:000000000000000b .LASF34
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:642    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:656    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:698    .debug_str:0000000000000182 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:722    .debug_str:00000000000002ac .LASF1
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:680    .debug_str:00000000000000f3 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:712    .debug_str:00000000000001f2 .LASF3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 6
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:362    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:714    .debug_str:00000000000001fc .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:726    .debug_str:00000000000002c8 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:660    .debug_str:000000000000000b .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:642    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:656    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:698    .debug_str:0000000000000182 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:722    .debug_str:00000000000002ac .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:680    .debug_str:00000000000000f3 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:712    .debug_str:00000000000001f2 .LASF3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s 			page 6
 
 
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:686    .debug_str:0000000000000121 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:668    .debug_str:0000000000000098 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:692    .debug_str:0000000000000154 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:684    .debug_str:000000000000010f .LASF6
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:708    .debug_str:00000000000001d4 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:702    .debug_str:000000000000019d .LASF8
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:716    .debug_str:0000000000000284 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:710    .debug_str:00000000000001e2 .LASF35
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:720    .debug_str:00000000000002a0 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:678    .debug_str:00000000000000e4 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:670    .debug_str:00000000000000a1 .LASF13
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:724    .debug_str:00000000000002b8 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:690    .debug_str:0000000000000144 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:706    .debug_str:00000000000001c4 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:662    .debug_str:000000000000006f .LASF17
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:666    .debug_str:000000000000008a .LASF18
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:672    .debug_str:00000000000000b0 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:700    .debug_str:000000000000018f .LASF20
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:688    .debug_str:0000000000000134 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:704    .debug_str:00000000000001b4 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:728    .debug_str:000000000000030e .LASF23
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:682    .debug_str:0000000000000101 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:674    .debug_str:00000000000000be .LASF25
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:718    .debug_str:000000000000028d .LASF26
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:99     .text.dbg_periph_disable:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:117    .text.dbg_periph_disable:0000000000000010 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:658    .debug_str:0000000000000000 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:551    .debug_loc:0000000000000000 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:730    .debug_str:000000000000031e .LASF27
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:78     .text.dbg_periph_enable:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:92     .text.dbg_periph_enable:000000000000000c .LFE5
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:572    .debug_loc:000000000000002f .LLST2
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:676    .debug_str:00000000000000ce .LASF29
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:53     .text.dbg_low_power_disable:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:71     .text.dbg_low_power_disable:0000000000000010 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:696    .debug_str:0000000000000174 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:586    .debug_loc:0000000000000050 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:694    .debug_str:000000000000015f .LASF31
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:32     .text.dbg_low_power_enable:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:46     .text.dbg_low_power_enable:000000000000000c .LFE3
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:607    .debug_loc:000000000000007f .LLST0
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:664    .debug_str:000000000000007f .LASF36
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:14     .text.dbg_id_get:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:25     .text.dbg_id_get:0000000000000008 .LFE2
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:102    .text.dbg_periph_disable:0000000000000000 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:109    .text.dbg_periph_disable:000000000000000a .LVL8
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:112    .text.dbg_periph_disable:000000000000000c .LVL9
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:81     .text.dbg_periph_enable:0000000000000000 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:87     .text.dbg_periph_enable:0000000000000008 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:56     .text.dbg_low_power_disable:0000000000000000 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:63     .text.dbg_low_power_disable:000000000000000a .LVL3
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:66     .text.dbg_low_power_disable:000000000000000c .LVL4
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:35     .text.dbg_low_power_enable:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:41     .text.dbg_low_power_enable:0000000000000008 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s:126    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:686    .debug_str:0000000000000121 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:668    .debug_str:0000000000000098 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:692    .debug_str:0000000000000154 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:684    .debug_str:000000000000010f .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:708    .debug_str:00000000000001d4 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:702    .debug_str:000000000000019d .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:716    .debug_str:0000000000000284 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:710    .debug_str:00000000000001e2 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:720    .debug_str:00000000000002a0 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:678    .debug_str:00000000000000e4 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:670    .debug_str:00000000000000a1 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:724    .debug_str:00000000000002b8 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:690    .debug_str:0000000000000144 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:706    .debug_str:00000000000001c4 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:662    .debug_str:000000000000006f .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:666    .debug_str:000000000000008a .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:672    .debug_str:00000000000000b0 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:700    .debug_str:000000000000018f .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:688    .debug_str:0000000000000134 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:704    .debug_str:00000000000001b4 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:728    .debug_str:000000000000030e .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:682    .debug_str:0000000000000101 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:674    .debug_str:00000000000000be .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:718    .debug_str:000000000000028d .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:99     .text.dbg_periph_disable:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:117    .text.dbg_periph_disable:0000000000000010 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:658    .debug_str:0000000000000000 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:551    .debug_loc:0000000000000000 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:730    .debug_str:000000000000031e .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:78     .text.dbg_periph_enable:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:92     .text.dbg_periph_enable:000000000000000c .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:572    .debug_loc:000000000000002f .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:676    .debug_str:00000000000000ce .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:53     .text.dbg_low_power_disable:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:71     .text.dbg_low_power_disable:0000000000000010 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:696    .debug_str:0000000000000174 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:586    .debug_loc:0000000000000050 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:694    .debug_str:000000000000015f .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:32     .text.dbg_low_power_enable:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:46     .text.dbg_low_power_enable:000000000000000c .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:607    .debug_loc:000000000000007f .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:664    .debug_str:000000000000007f .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:14     .text.dbg_id_get:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:25     .text.dbg_id_get:0000000000000008 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:102    .text.dbg_periph_disable:0000000000000000 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:109    .text.dbg_periph_disable:000000000000000a .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:112    .text.dbg_periph_disable:000000000000000c .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:81     .text.dbg_periph_enable:0000000000000000 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:87     .text.dbg_periph_enable:0000000000000008 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:56     .text.dbg_low_power_disable:0000000000000000 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:63     .text.dbg_low_power_disable:000000000000000a .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:66     .text.dbg_low_power_disable:000000000000000c .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:35     .text.dbg_low_power_enable:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:41     .text.dbg_low_power_enable:0000000000000008 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s:126    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc6Ba47d.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccccU39B.s 			page 7
 
 

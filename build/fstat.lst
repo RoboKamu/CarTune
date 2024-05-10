@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s 			page 1
 
 
    1              		.file	"fstat.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s 			page 1
   40 0016 DCC1     		sw	a5,4(a1)
   41              		.loc 1 12 5 is_stmt 1
   42              	.L1:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s 			page 2
 
 
   13:./../../firmware/RISCV/stubs/fstat.c ****   }
@@ -98,239 +98,239 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s 			page 1
   73              		.file 11 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compil
   74              		.file 12 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compil
   75              		.file 13 "./../../firmware/RISCV/stubs/stub.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 fstat.c
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:13     .text._fstat:0000000000000000 _fstat
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:17     .text._fstat:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:19     .text._fstat:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:20     .text._fstat:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:21     .text._fstat:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:23     .text._fstat:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:25     .text._fstat:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:27     .text._fstat:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:29     .text._fstat:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:32     .text._fstat:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:34     .text._fstat:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:35     .text._fstat:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:38     .text._fstat:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:40     .text._fstat:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:43     .text._fstat:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:44     .text._fstat:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:45     .text._fstat:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:46     .text._fstat:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:49     .text._fstat:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:55     .text._fstat:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:57     .text._fstat:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:59     .text._fstat:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:62     .text._fstat:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:13     .text._fstat:0000000000000000 _fstat
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:17     .text._fstat:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:19     .text._fstat:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:20     .text._fstat:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:21     .text._fstat:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:23     .text._fstat:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:25     .text._fstat:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:27     .text._fstat:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:29     .text._fstat:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:32     .text._fstat:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:34     .text._fstat:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:35     .text._fstat:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:38     .text._fstat:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:40     .text._fstat:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:43     .text._fstat:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:44     .text._fstat:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:45     .text._fstat:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:46     .text._fstat:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:49     .text._fstat:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:55     .text._fstat:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:57     .text._fstat:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:59     .text._fstat:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:62     .text._fstat:0000000000000022 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:53     .text._fstat:000000000000001e .L3
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:42     .text._fstat:0000000000000018 .L1
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:1932   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2842   .debug_str:00000000000005d0 .LASF170
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2736   .debug_str:00000000000003da .LASF171
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2716   .debug_str:000000000000032a .LASF172
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2536   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2542   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2672   .debug_str:0000000000000264 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2694   .debug_str:00000000000002c3 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2594   .debug_str:0000000000000100 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2730   .debug_str:00000000000003c0 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2708   .debug_str:000000000000030e .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2596   .debug_str:000000000000010e .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2758   .debug_str:000000000000045f .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2766   .debug_str:0000000000000482 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2616   .debug_str:0000000000000167 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2648   .debug_str:00000000000001fa .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2682   .debug_str:0000000000000291 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2572   .debug_str:0000000000000082 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2584   .debug_str:00000000000000cc .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2614   .debug_str:000000000000015c .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2742   .debug_str:0000000000000410 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2744   .debug_str:000000000000041c .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2660   .debug_str:0000000000000233 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2834   .debug_str:00000000000005ad .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2548   .debug_str:0000000000000014 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2806   .debug_str:0000000000000540 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2600   .debug_str:0000000000000120 .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2546   .debug_str:000000000000000c .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2818   .debug_str:0000000000000570 .LASF22
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s 			page 4
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:53     .text._fstat:000000000000001e .L3
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:42     .text._fstat:0000000000000018 .L1
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:1932   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2842   .debug_str:00000000000005d0 .LASF170
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2736   .debug_str:00000000000003da .LASF171
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2716   .debug_str:000000000000032a .LASF172
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2536   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2542   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2672   .debug_str:0000000000000264 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2694   .debug_str:00000000000002c3 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2594   .debug_str:0000000000000100 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2730   .debug_str:00000000000003c0 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2708   .debug_str:000000000000030e .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2596   .debug_str:000000000000010e .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2758   .debug_str:000000000000045f .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2766   .debug_str:0000000000000482 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2616   .debug_str:0000000000000167 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2648   .debug_str:00000000000001fa .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2682   .debug_str:0000000000000291 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2572   .debug_str:0000000000000082 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2584   .debug_str:00000000000000cc .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2614   .debug_str:000000000000015c .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2742   .debug_str:0000000000000410 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2744   .debug_str:000000000000041c .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2660   .debug_str:0000000000000233 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2834   .debug_str:00000000000005ad .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2548   .debug_str:0000000000000014 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2806   .debug_str:0000000000000540 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2600   .debug_str:0000000000000120 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2546   .debug_str:000000000000000c .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2818   .debug_str:0000000000000570 .LASF22
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s 			page 4
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2862   .debug_str:00000000000006b0 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2704   .debug_str:0000000000000300 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2674   .debug_str:0000000000000271 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2810   .debug_str:000000000000054e .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2812   .debug_str:0000000000000556 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2778   .debug_str:00000000000004b5 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2890   .debug_str:000000000000072d .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2848   .debug_str:0000000000000666 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2754   .debug_str:0000000000000444 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2652   .debug_str:000000000000020b .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2656   .debug_str:000000000000021c .LASF37
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2836   .debug_str:00000000000005b5 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2802   .debug_str:0000000000000531 .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2650   .debug_str:0000000000000205 .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2856   .debug_str:000000000000069b .LASF36
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2670   .debug_str:000000000000025f .LASF38
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2590   .debug_str:00000000000000f2 .LASF39
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2828   .debug_str:0000000000000597 .LASF40
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2604   .debug_str:000000000000012f .LASF41
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2894   .debug_str:0000000000000740 .LASF42
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2738   .debug_str:00000000000003ff .LASF43
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2724   .debug_str:00000000000003a6 .LASF44
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2858   .debug_str:00000000000006a0 .LASF45
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2768   .debug_str:000000000000048c .LASF46
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2874   .debug_str:00000000000006e5 .LASF47
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2608   .debug_str:000000000000013e .LASF48
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2642   .debug_str:00000000000001e7 .LASF49
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2544   .debug_str:0000000000000000 .LASF50
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2844   .debug_str:0000000000000658 .LASF51
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2622   .debug_str:0000000000000181 .LASF52
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2740   .debug_str:0000000000000408 .LASF53
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2794   .debug_str:0000000000000501 .LASF54
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2644   .debug_str:00000000000001ef .LASF55
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2770   .debug_str:0000000000000496 .LASF56
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2602   .debug_str:0000000000000129 .LASF57
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2550   .debug_str:000000000000001c .LASF58
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2780   .debug_str:00000000000004c0 .LASF59
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2620   .debug_str:000000000000017a .LASF60
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2684   .debug_str:00000000000002a3 .LASF61
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2576   .debug_str:00000000000000a3 .LASF62
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2610   .debug_str:000000000000014c .LASF63
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2662   .debug_str:000000000000023b .LASF64
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2722   .debug_str:000000000000039f .LASF65
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2814   .debug_str:000000000000055e .LASF66
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2878   .debug_str:00000000000006ff .LASF67
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2598   .debug_str:000000000000011a .LASF68
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2870   .debug_str:00000000000006d7 .LASF69
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2628   .debug_str:0000000000000197 .LASF70
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2636   .debug_str:00000000000001c0 .LASF71
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2566   .debug_str:000000000000005c .LASF72
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2710   .debug_str:0000000000000315 .LASF73
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2784   .debug_str:00000000000004d2 .LASF74
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2714   .debug_str:0000000000000322 .LASF75
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2804   .debug_str:0000000000000539 .LASF76
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2822   .debug_str:0000000000000581 .LASF77
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2624   .debug_str:0000000000000189 .LASF78
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2676   .debug_str:0000000000000278 .LASF79
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s 			page 5
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2862   .debug_str:00000000000006b0 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2704   .debug_str:0000000000000300 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2674   .debug_str:0000000000000271 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2810   .debug_str:000000000000054e .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2812   .debug_str:0000000000000556 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2778   .debug_str:00000000000004b5 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2890   .debug_str:000000000000072d .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2848   .debug_str:0000000000000666 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2754   .debug_str:0000000000000444 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2652   .debug_str:000000000000020b .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2656   .debug_str:000000000000021c .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2836   .debug_str:00000000000005b5 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2802   .debug_str:0000000000000531 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2650   .debug_str:0000000000000205 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2856   .debug_str:000000000000069b .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2670   .debug_str:000000000000025f .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2590   .debug_str:00000000000000f2 .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2828   .debug_str:0000000000000597 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2604   .debug_str:000000000000012f .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2894   .debug_str:0000000000000740 .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2738   .debug_str:00000000000003ff .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2724   .debug_str:00000000000003a6 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2858   .debug_str:00000000000006a0 .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2768   .debug_str:000000000000048c .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2874   .debug_str:00000000000006e5 .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2608   .debug_str:000000000000013e .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2642   .debug_str:00000000000001e7 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2544   .debug_str:0000000000000000 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2844   .debug_str:0000000000000658 .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2622   .debug_str:0000000000000181 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2740   .debug_str:0000000000000408 .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2794   .debug_str:0000000000000501 .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2644   .debug_str:00000000000001ef .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2770   .debug_str:0000000000000496 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2602   .debug_str:0000000000000129 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2550   .debug_str:000000000000001c .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2780   .debug_str:00000000000004c0 .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2620   .debug_str:000000000000017a .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2684   .debug_str:00000000000002a3 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2576   .debug_str:00000000000000a3 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2610   .debug_str:000000000000014c .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2662   .debug_str:000000000000023b .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2722   .debug_str:000000000000039f .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2814   .debug_str:000000000000055e .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2878   .debug_str:00000000000006ff .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2598   .debug_str:000000000000011a .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2870   .debug_str:00000000000006d7 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2628   .debug_str:0000000000000197 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2636   .debug_str:00000000000001c0 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2566   .debug_str:000000000000005c .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2710   .debug_str:0000000000000315 .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2784   .debug_str:00000000000004d2 .LASF74
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2714   .debug_str:0000000000000322 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2804   .debug_str:0000000000000539 .LASF76
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2822   .debug_str:0000000000000581 .LASF77
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2624   .debug_str:0000000000000189 .LASF78
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2676   .debug_str:0000000000000278 .LASF79
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s 			page 5
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2654   .debug_str:0000000000000214 .LASF80
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2792   .debug_str:00000000000004fc .LASF81
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2558   .debug_str:0000000000000039 .LASF82
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2800   .debug_str:0000000000000518 .LASF83
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2796   .debug_str:0000000000000506 .LASF84
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2630   .debug_str:00000000000001a0 .LASF85
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2798   .debug_str:000000000000050e .LASF86
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2702   .debug_str:00000000000002f8 .LASF87
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2664   .debug_str:0000000000000241 .LASF88
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2888   .debug_str:0000000000000728 .LASF89
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2750   .debug_str:0000000000000430 .LASF90
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2680   .debug_str:0000000000000289 .LASF91
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2634   .debug_str:00000000000001b8 .LASF92
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2760   .debug_str:000000000000046d .LASF93
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2696   .debug_str:00000000000002d6 .LASF94
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2866   .debug_str:00000000000006c3 .LASF95
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2612   .debug_str:0000000000000154 .LASF96
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2606   .debug_str:0000000000000139 .LASF97
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2824   .debug_str:0000000000000588 .LASF98
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2776   .debug_str:00000000000004ae .LASF99
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2860   .debug_str:00000000000006aa .LASF100
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2690   .debug_str:00000000000002b6 .LASF101
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2774   .debug_str:00000000000004a8 .LASF102
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2554   .debug_str:000000000000002a .LASF103
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2808   .debug_str:0000000000000548 .LASF104
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2832   .debug_str:00000000000005a7 .LASF105
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2846   .debug_str:0000000000000661 .LASF106
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2854   .debug_str:000000000000068e .LASF107
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2838   .debug_str:00000000000005bb .LASF108
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2700   .debug_str:00000000000002eb .LASF109
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2876   .debug_str:00000000000006f0 .LASF110
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2658   .debug_str:0000000000000224 .LASF111
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2786   .debug_str:00000000000004db .LASF112
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2880   .debug_str:0000000000000706 .LASF113
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2790   .debug_str:00000000000004ef .LASF114
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2886   .debug_str:000000000000071a .LASF115
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2588   .debug_str:00000000000000e4 .LASF116
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2864   .debug_str:00000000000006b9 .LASF117
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2698   .debug_str:00000000000002df .LASF118
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2850   .debug_str:000000000000066e .LASF119
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2640   .debug_str:00000000000001d9 .LASF120
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2582   .debug_str:00000000000000bd .LASF121
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2638   .debug_str:00000000000001c8 .LASF122
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2568   .debug_str:0000000000000062 .LASF123
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2570   .debug_str:0000000000000071 .LASF124
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2764   .debug_str:0000000000000479 .LASF125
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2734   .debug_str:00000000000003d3 .LASF126
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2726   .debug_str:00000000000003b0 .LASF127
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2872   .debug_str:00000000000006dd .LASF128
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2578   .debug_str:00000000000000ac .LASF173
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2816   .debug_str:0000000000000564 .LASF129
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2852   .debug_str:000000000000067b .LASF130
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2632   .debug_str:00000000000001ab .LASF131
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2782   .debug_str:00000000000004c8 .LASF132
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2748   .debug_str:0000000000000429 .LASF133
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2678   .debug_str:0000000000000280 .LASF134
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2868   .debug_str:00000000000006cd .LASF135
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s 			page 6
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2654   .debug_str:0000000000000214 .LASF80
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2792   .debug_str:00000000000004fc .LASF81
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2558   .debug_str:0000000000000039 .LASF82
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2800   .debug_str:0000000000000518 .LASF83
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2796   .debug_str:0000000000000506 .LASF84
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2630   .debug_str:00000000000001a0 .LASF85
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2798   .debug_str:000000000000050e .LASF86
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2702   .debug_str:00000000000002f8 .LASF87
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2664   .debug_str:0000000000000241 .LASF88
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2888   .debug_str:0000000000000728 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2750   .debug_str:0000000000000430 .LASF90
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2680   .debug_str:0000000000000289 .LASF91
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2634   .debug_str:00000000000001b8 .LASF92
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2760   .debug_str:000000000000046d .LASF93
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2696   .debug_str:00000000000002d6 .LASF94
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2866   .debug_str:00000000000006c3 .LASF95
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2612   .debug_str:0000000000000154 .LASF96
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2606   .debug_str:0000000000000139 .LASF97
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2824   .debug_str:0000000000000588 .LASF98
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2776   .debug_str:00000000000004ae .LASF99
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2860   .debug_str:00000000000006aa .LASF100
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2690   .debug_str:00000000000002b6 .LASF101
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2774   .debug_str:00000000000004a8 .LASF102
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2554   .debug_str:000000000000002a .LASF103
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2808   .debug_str:0000000000000548 .LASF104
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2832   .debug_str:00000000000005a7 .LASF105
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2846   .debug_str:0000000000000661 .LASF106
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2854   .debug_str:000000000000068e .LASF107
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2838   .debug_str:00000000000005bb .LASF108
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2700   .debug_str:00000000000002eb .LASF109
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2876   .debug_str:00000000000006f0 .LASF110
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2658   .debug_str:0000000000000224 .LASF111
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2786   .debug_str:00000000000004db .LASF112
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2880   .debug_str:0000000000000706 .LASF113
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2790   .debug_str:00000000000004ef .LASF114
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2886   .debug_str:000000000000071a .LASF115
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2588   .debug_str:00000000000000e4 .LASF116
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2864   .debug_str:00000000000006b9 .LASF117
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2698   .debug_str:00000000000002df .LASF118
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2850   .debug_str:000000000000066e .LASF119
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2640   .debug_str:00000000000001d9 .LASF120
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2582   .debug_str:00000000000000bd .LASF121
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2638   .debug_str:00000000000001c8 .LASF122
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2568   .debug_str:0000000000000062 .LASF123
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2570   .debug_str:0000000000000071 .LASF124
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2764   .debug_str:0000000000000479 .LASF125
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2734   .debug_str:00000000000003d3 .LASF126
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2726   .debug_str:00000000000003b0 .LASF127
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2872   .debug_str:00000000000006dd .LASF128
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2578   .debug_str:00000000000000ac .LASF173
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2816   .debug_str:0000000000000564 .LASF129
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2852   .debug_str:000000000000067b .LASF130
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2632   .debug_str:00000000000001ab .LASF131
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2782   .debug_str:00000000000004c8 .LASF132
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2748   .debug_str:0000000000000429 .LASF133
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2678   .debug_str:0000000000000280 .LASF134
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2868   .debug_str:00000000000006cd .LASF135
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s 			page 6
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2896   .debug_str:000000000000074a .LASF136
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2686   .debug_str:00000000000002a9 .LASF137
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2746   .debug_str:0000000000000423 .LASF138
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2692   .debug_str:00000000000002bd .LASF139
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2646   .debug_str:00000000000001f4 .LASF140
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2556   .debug_str:0000000000000032 .LASF141
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2552   .debug_str:0000000000000022 .LASF142
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2706   .debug_str:0000000000000306 .LASF143
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2728   .debug_str:00000000000003b9 .LASF144
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2732   .debug_str:00000000000003cc .LASF145
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2830   .debug_str:00000000000005a0 .LASF146
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2882   .debug_str:000000000000070b .LASF147
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2720   .debug_str:0000000000000396 .LASF148
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2752   .debug_str:000000000000043a .LASF149
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2560   .debug_str:0000000000000044 .LASF150
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2586   .debug_str:00000000000000dc .LASF151
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2592   .debug_str:00000000000000fb .LASF152
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2562   .debug_str:000000000000004e .LASF153
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2762   .debug_str:0000000000000472 .LASF154
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2840   .debug_str:00000000000005c8 .LASF155
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2756   .debug_str:0000000000000456 .LASF156
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2688   .debug_str:00000000000002af .LASF157
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2564   .debug_str:0000000000000055 .LASF158
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2884   .debug_str:0000000000000712 .LASF159
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2718   .debug_str:000000000000038e .LASF160
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2820   .debug_str:0000000000000578 .LASF161
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2666   .debug_str:000000000000024b .LASF162
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2892   .debug_str:0000000000000737 .LASF163
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2668   .debug_str:0000000000000255 .LASF164
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2788   .debug_str:00000000000004e6 .LASF165
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2618   .debug_str:0000000000000170 .LASF166
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2772   .debug_str:000000000000049d .LASF167
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2574   .debug_str:0000000000000099 .LASF168
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2826   .debug_str:000000000000058d .LASF169
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2626   .debug_str:0000000000000190 .LASF174
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:14     .text._fstat:0000000000000000 .LFB1
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:60     .text._fstat:0000000000000022 .LFE1
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2464   .debug_loc:0000000000000000 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2487   .debug_loc:0000000000000038 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2501   .debug_loc:0000000000000059 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:30     .text._fstat:000000000000000e .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2580   .debug_str:00000000000000b7 .LASF175
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:2712   .debug_str:000000000000031b .LASF176
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:22     .text._fstat:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:48     .text._fstat:000000000000001c .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:54     .text._fstat:000000000000001e .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:18     .text._fstat:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:50     .text._fstat:000000000000001c .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:52     .text._fstat:000000000000001e .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccQTAd6v.s:77     .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2896   .debug_str:000000000000074a .LASF136
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2686   .debug_str:00000000000002a9 .LASF137
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2746   .debug_str:0000000000000423 .LASF138
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2692   .debug_str:00000000000002bd .LASF139
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2646   .debug_str:00000000000001f4 .LASF140
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2556   .debug_str:0000000000000032 .LASF141
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2552   .debug_str:0000000000000022 .LASF142
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2706   .debug_str:0000000000000306 .LASF143
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2728   .debug_str:00000000000003b9 .LASF144
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2732   .debug_str:00000000000003cc .LASF145
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2830   .debug_str:00000000000005a0 .LASF146
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2882   .debug_str:000000000000070b .LASF147
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2720   .debug_str:0000000000000396 .LASF148
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2752   .debug_str:000000000000043a .LASF149
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2560   .debug_str:0000000000000044 .LASF150
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2586   .debug_str:00000000000000dc .LASF151
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2592   .debug_str:00000000000000fb .LASF152
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2562   .debug_str:000000000000004e .LASF153
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2762   .debug_str:0000000000000472 .LASF154
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2840   .debug_str:00000000000005c8 .LASF155
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2756   .debug_str:0000000000000456 .LASF156
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2688   .debug_str:00000000000002af .LASF157
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2564   .debug_str:0000000000000055 .LASF158
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2884   .debug_str:0000000000000712 .LASF159
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2718   .debug_str:000000000000038e .LASF160
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2820   .debug_str:0000000000000578 .LASF161
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2666   .debug_str:000000000000024b .LASF162
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2892   .debug_str:0000000000000737 .LASF163
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2668   .debug_str:0000000000000255 .LASF164
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2788   .debug_str:00000000000004e6 .LASF165
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2618   .debug_str:0000000000000170 .LASF166
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2772   .debug_str:000000000000049d .LASF167
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2574   .debug_str:0000000000000099 .LASF168
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2826   .debug_str:000000000000058d .LASF169
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2626   .debug_str:0000000000000190 .LASF174
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:14     .text._fstat:0000000000000000 .LFB1
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:60     .text._fstat:0000000000000022 .LFE1
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2464   .debug_loc:0000000000000000 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2487   .debug_loc:0000000000000038 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2501   .debug_loc:0000000000000059 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:30     .text._fstat:000000000000000e .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2580   .debug_str:00000000000000b7 .LASF175
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:2712   .debug_str:000000000000031b .LASF176
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:22     .text._fstat:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:48     .text._fstat:000000000000001c .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:54     .text._fstat:000000000000001e .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:18     .text._fstat:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:50     .text._fstat:000000000000001c .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:52     .text._fstat:000000000000001e .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccsxv5ak.s:77     .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 isatty
