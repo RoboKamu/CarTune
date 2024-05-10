@@ -1,9 +1,4 @@
 #  README
-**AKTUELLT** <br />
-Based on init-pskiva code. <br/>
-The butt.c file is used for using init-pskiva branch main code (change time on display) but with buttons on a breadboard. <br/>
-first main.c commit is based on simply wiring the imu to the breadboard, same code as imu-pskiva branch.
-
 ## GUIDE (TEMP)
 Guide delen är bara hjälpmedel för processen, tas bort sen.
 <br />
