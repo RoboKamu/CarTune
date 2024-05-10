@@ -1,6 +1,11 @@
 {
   "files.associations": {
     "stdio.h": "c",
-    "gd32v_mpu6500_if.h": "c"
+    "gd32v_mpu6500_if.h": "c",
+    "gd32vf103_rtc.h": "c",
+    "rtc.h": "c",
+    "lcd.h": "c",
+    "oledfont.h": "c",
+    "gd32vf103.h": "c"
   }
 }

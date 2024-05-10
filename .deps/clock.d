@@ -1,4 +1,5 @@
-build/butt.o: butt.c butt.h \
+build/clock.o: clock.c clock.h lcd.h \
+ ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h \
  ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h \
  ../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h \
  ../../firmware/GD32VF103_standard_peripheral/gd32vf103_libopt.h \
@@ -12,7 +13,6 @@ build/butt.o: butt.c butt.h \
  ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_exmc.h \
  ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_exti.h \
  ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_fmc.h \
- ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h \
  ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_i2c.h \
  ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_fwdgt.h \
  ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_dbg.h \
@@ -26,10 +26,13 @@ build/butt.o: butt.c butt.h \
  ../../firmware/RISCV/drivers/n200_func.h \
  ../../firmware/RISCV/drivers/n200_timer.h \
  ../../firmware/RISCV/drivers/n200_eclic.h \
- ../../firmware/RISCV/drivers/riscv_const.h drivers.h clock.h lcd.h \
- delay.h
+ ../../firmware/RISCV/drivers/riscv_const.h
 
-butt.h:
+clock.h:
+
+lcd.h:
+
+../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h:
 
 ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h:
 
@@ -56,8 +59,6 @@ butt.h:
 ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_exti.h:
 
 ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_fmc.h:
-
-../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h:
 
 ../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_i2c.h:
 
@@ -86,11 +87,3 @@ butt.h:
 ../../firmware/RISCV/drivers/n200_eclic.h:
 
 ../../firmware/RISCV/drivers/riscv_const.h:
-
-drivers.h:
-
-clock.h:
-
-lcd.h:
-
-delay.h:

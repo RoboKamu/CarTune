@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 1
 
 
    1              		.file	"gd32vf103_pmu.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     \param[in]  none
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     \param[out] none
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     \retval     none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c **** */
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
   57:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****       \arg        PMU_LVDT_1: voltage threshold is 2.3V
   58:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****       \arg        PMU_LVDT_2: voltage threshold is 2.4V
   59:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****       \arg        PMU_LVDT_3: voltage threshold is 2.5V
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 3
 
 
   60:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****       \arg        PMU_LVDT_4: voltage threshold is 2.6V
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
   80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     \brief      disable PMU lvd
   81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     \param[in]  none
   82:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     \param[out] none
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 4
 
 
   83:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     \retval     none
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  122              	 #NO_APP
  123              	.LBE31:
  105:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     /* select WFI or WFE command to enter sleep mode */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 5
 
 
  106:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     if(WFI_CMD == sleepmodecmd){
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
   46:./../../firmware/RISCV/drivers/n200_func.h **** void eclic_set_intctrl (uint32_t source, uint8_t intctrl);
   47:./../../firmware/RISCV/drivers/n200_func.h **** uint8_t eclic_get_intctrl  (uint32_t source);
   48:./../../firmware/RISCV/drivers/n200_func.h **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 6
 
 
   49:./../../firmware/RISCV/drivers/n200_func.h **** void eclic_set_intattr (uint32_t source, uint8_t intattr);
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****         clear_csr(mstatus, MSTATUS_MIE);
  141              		.loc 1 109 9 discriminator 1
  142              	.LBB34:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 7
 
 
  143              		.loc 1 109 9 discriminator 1
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  189              	 #NO_APP
  190              	.LBE38:
  191              		.loc 1 113 9 discriminator 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 8
 
 
  192              	.LBB39:
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  225              		.loc 1 135 13 is_stmt 0
  226 000a 9843     		lw	a4,0(a5)
  227 000c 598D     		or	a0,a4,a0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 9
 
 
  228              	.LVL11:
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  265              		csrrc a5, 0x811U, 1
  266              	# 0 "" 2
  267              	.LVL13:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 10
 
 
  149:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     clear_csr(0x811U, 0x1U);
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  309              	.LBE47:
  310              	.LBE46:
  145:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****         set_csr(mstatus, MSTATUS_MIE);
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 11
 
 
  311              		.loc 1 145 9 discriminator 1
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  162:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c **** {
  347              		.loc 1 162 1
  348              		.cfi_startproc
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 12
 
 
  349              	.LVL18:
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  175:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     }else{
  176:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****         clear_csr(mstatus, MSTATUS_MIE);
  177:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****         set_csr(0x810U, 0x1U);
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 13
 
 
  178:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****         __WFI();
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  427              	.LVL22:
  177:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****         __WFI();
  428              		.loc 1 177 9 discriminator 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 14
 
 
  429              	 #NO_APP
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  472              		.section	.text.pmu_wakeup_pin_enable,"ax",@progbits
  473              		.align	1
  474              		.globl	pmu_wakeup_pin_enable
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 15
 
 
  476              	pmu_wakeup_pin_enable:
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  511              		.align	1
  512              		.globl	pmu_backup_write_enable
  514              	pmu_backup_write_enable:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 16
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 16
 
 
  515              	.LFB10:
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  550              		.globl	pmu_flag_get
  552              	pmu_flag_get:
  553              	.LFB12:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 17
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 17
 
 
  228:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c **** 
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  259:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c ****     switch(flag_reset){
  579              		.loc 1 259 5
  580 0000 09C5     		beq	a0,zero,.L20
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 18
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 18
 
 
  581 0002 8547     		li	a5,1
@@ -1066,427 +1066,427 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 1
  610              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
  611              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
  612              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 19
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_pmu.c
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:13     .text.pmu_deinit:0000000000000000 pmu_deinit
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:17     .text.pmu_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:18     .text.pmu_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:19     .text.pmu_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:20     .text.pmu_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:22     .text.pmu_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:24     .text.pmu_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:26     .text.pmu_deinit:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:27     .text.pmu_deinit:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:29     .text.pmu_deinit:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:32     .text.pmu_deinit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:33     .text.pmu_deinit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:34     .text.pmu_deinit:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:36     .text.pmu_deinit:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:38     .text.pmu_deinit:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:40     .text.pmu_deinit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:42     .text.pmu_deinit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:44     .text.pmu_deinit:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:51     .text.pmu_lvd_select:0000000000000000 pmu_lvd_select
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:54     .text.pmu_lvd_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:56     .text.pmu_lvd_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:57     .text.pmu_lvd_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:58     .text.pmu_lvd_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:63     .text.pmu_lvd_select:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:64     .text.pmu_lvd_select:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:68     .text.pmu_lvd_select:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:69     .text.pmu_lvd_select:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:74     .text.pmu_lvd_select:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:75     .text.pmu_lvd_select:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:79     .text.pmu_lvd_select:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:80     .text.pmu_lvd_select:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:87     .text.pmu_lvd_disable:0000000000000000 pmu_lvd_disable
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:90     .text.pmu_lvd_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:91     .text.pmu_lvd_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:92     .text.pmu_lvd_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:93     .text.pmu_lvd_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:98     .text.pmu_lvd_disable:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:99     .text.pmu_lvd_disable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:106    .text.pmu_to_sleepmode:0000000000000000 pmu_to_sleepmode
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:109    .text.pmu_to_sleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:111    .text.pmu_to_sleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:113    .text.pmu_to_sleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:114    .text.pmu_to_sleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:115    .text.pmu_to_sleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:13     .text.pmu_deinit:0000000000000000 pmu_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:17     .text.pmu_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:18     .text.pmu_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:19     .text.pmu_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:20     .text.pmu_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:22     .text.pmu_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:24     .text.pmu_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:26     .text.pmu_deinit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:27     .text.pmu_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:29     .text.pmu_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:32     .text.pmu_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:33     .text.pmu_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:34     .text.pmu_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:36     .text.pmu_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:38     .text.pmu_deinit:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:40     .text.pmu_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:42     .text.pmu_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:44     .text.pmu_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:51     .text.pmu_lvd_select:0000000000000000 pmu_lvd_select
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:54     .text.pmu_lvd_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:56     .text.pmu_lvd_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:57     .text.pmu_lvd_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:58     .text.pmu_lvd_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:63     .text.pmu_lvd_select:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:64     .text.pmu_lvd_select:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:68     .text.pmu_lvd_select:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:69     .text.pmu_lvd_select:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:74     .text.pmu_lvd_select:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:75     .text.pmu_lvd_select:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:79     .text.pmu_lvd_select:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:80     .text.pmu_lvd_select:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:87     .text.pmu_lvd_disable:0000000000000000 pmu_lvd_disable
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:90     .text.pmu_lvd_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:91     .text.pmu_lvd_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:92     .text.pmu_lvd_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:93     .text.pmu_lvd_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:98     .text.pmu_lvd_disable:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:99     .text.pmu_lvd_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:106    .text.pmu_to_sleepmode:0000000000000000 pmu_to_sleepmode
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:109    .text.pmu_to_sleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:111    .text.pmu_to_sleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:113    .text.pmu_to_sleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:114    .text.pmu_to_sleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:115    .text.pmu_to_sleepmode:0000000000000000 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:103    .text.pmu_to_sleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:124    .text.pmu_to_sleepmode:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:125    .text.pmu_to_sleepmode:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:126    .text.pmu_to_sleepmode:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:131    .text.pmu_to_sleepmode:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:124    .text.pmu_to_sleepmode:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:125    .text.pmu_to_sleepmode:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:126    .text.pmu_to_sleepmode:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:131    .text.pmu_to_sleepmode:0000000000000006 .L0 
 ./../../firmware/RISCV/drivers/n200_func.h:90     .text.pmu_to_sleepmode:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:143    .text.pmu_to_sleepmode:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:144    .text.pmu_to_sleepmode:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:145    .text.pmu_to_sleepmode:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:143    .text.pmu_to_sleepmode:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:144    .text.pmu_to_sleepmode:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:145    .text.pmu_to_sleepmode:000000000000000c .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:109    .text.pmu_to_sleepmode:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:154    .text.pmu_to_sleepmode:0000000000000010 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 20
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:154    .text.pmu_to_sleepmode:0000000000000010 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 20
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:156    .text.pmu_to_sleepmode:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:157    .text.pmu_to_sleepmode:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:158    .text.pmu_to_sleepmode:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:156    .text.pmu_to_sleepmode:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:157    .text.pmu_to_sleepmode:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:158    .text.pmu_to_sleepmode:0000000000000010 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:110    .text.pmu_to_sleepmode:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:167    .text.pmu_to_sleepmode:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:170    .text.pmu_to_sleepmode:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:167    .text.pmu_to_sleepmode:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:170    .text.pmu_to_sleepmode:0000000000000014 .L0 
 ./../../firmware/RISCV/drivers/n200_func.h:90     .text.pmu_to_sleepmode:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:180    .text.pmu_to_sleepmode:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:181    .text.pmu_to_sleepmode:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:182    .text.pmu_to_sleepmode:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:180    .text.pmu_to_sleepmode:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:181    .text.pmu_to_sleepmode:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:182    .text.pmu_to_sleepmode:0000000000000018 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:112    .text.pmu_to_sleepmode:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:191    .text.pmu_to_sleepmode:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:193    .text.pmu_to_sleepmode:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:194    .text.pmu_to_sleepmode:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:195    .text.pmu_to_sleepmode:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:191    .text.pmu_to_sleepmode:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:193    .text.pmu_to_sleepmode:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:194    .text.pmu_to_sleepmode:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:195    .text.pmu_to_sleepmode:000000000000001c .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:113    .text.pmu_to_sleepmode:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:204    .text.pmu_to_sleepmode:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:205    .text.pmu_to_sleepmode:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:206    .text.pmu_to_sleepmode:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:213    .text.pmu_to_deepsleepmode:0000000000000000 pmu_to_deepsleepmode
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:216    .text.pmu_to_deepsleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:218    .text.pmu_to_deepsleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:219    .text.pmu_to_deepsleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:220    .text.pmu_to_deepsleepmode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:225    .text.pmu_to_deepsleepmode:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:226    .text.pmu_to_deepsleepmode:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:232    .text.pmu_to_deepsleepmode:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:233    .text.pmu_to_deepsleepmode:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:234    .text.pmu_to_deepsleepmode:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:204    .text.pmu_to_sleepmode:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:205    .text.pmu_to_sleepmode:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:206    .text.pmu_to_sleepmode:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:213    .text.pmu_to_deepsleepmode:0000000000000000 pmu_to_deepsleepmode
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:216    .text.pmu_to_deepsleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:218    .text.pmu_to_deepsleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:219    .text.pmu_to_deepsleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:220    .text.pmu_to_deepsleepmode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:225    .text.pmu_to_deepsleepmode:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:226    .text.pmu_to_deepsleepmode:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:232    .text.pmu_to_deepsleepmode:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:233    .text.pmu_to_deepsleepmode:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:234    .text.pmu_to_deepsleepmode:0000000000000010 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:137    .text.pmu_to_deepsleepmode:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:243    .text.pmu_to_deepsleepmode:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:244    .text.pmu_to_deepsleepmode:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:245    .text.pmu_to_deepsleepmode:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:249    .text.pmu_to_deepsleepmode:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:243    .text.pmu_to_deepsleepmode:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:244    .text.pmu_to_deepsleepmode:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:245    .text.pmu_to_deepsleepmode:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:249    .text.pmu_to_deepsleepmode:0000000000000016 .L0 
 ./../../firmware/RISCV/drivers/n200_func.h:90     .text.pmu_to_deepsleepmode:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:260    .text.pmu_to_deepsleepmode:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:261    .text.pmu_to_deepsleepmode:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:262    .text.pmu_to_deepsleepmode:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:260    .text.pmu_to_deepsleepmode:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:261    .text.pmu_to_deepsleepmode:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:262    .text.pmu_to_deepsleepmode:000000000000001a .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:149    .text.pmu_to_deepsleepmode:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:271    .text.pmu_to_deepsleepmode:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:272    .text.pmu_to_deepsleepmode:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:276    .text.pmu_to_deepsleepmode:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:277    .text.pmu_to_deepsleepmode:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:278    .text.pmu_to_deepsleepmode:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:271    .text.pmu_to_deepsleepmode:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:272    .text.pmu_to_deepsleepmode:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:276    .text.pmu_to_deepsleepmode:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:277    .text.pmu_to_deepsleepmode:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:278    .text.pmu_to_deepsleepmode:0000000000000020 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:142    .text.pmu_to_deepsleepmode:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:287    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:289    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:290    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:291    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:287    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:289    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:290    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:291    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:143    .text.pmu_to_deepsleepmode:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:300    .text.pmu_to_deepsleepmode:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:303    .text.pmu_to_deepsleepmode:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:300    .text.pmu_to_deepsleepmode:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:303    .text.pmu_to_deepsleepmode:0000000000000028 .L0 
 ./../../firmware/RISCV/drivers/n200_func.h:90     .text.pmu_to_deepsleepmode:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:313    .text.pmu_to_deepsleepmode:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:314    .text.pmu_to_deepsleepmode:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:315    .text.pmu_to_deepsleepmode:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:313    .text.pmu_to_deepsleepmode:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:314    .text.pmu_to_deepsleepmode:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:315    .text.pmu_to_deepsleepmode:000000000000002c .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:145    .text.pmu_to_deepsleepmode:000000000000002c .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 21
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 21
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:324    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:326    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:327    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:328    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:324    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:326    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:327    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:328    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:146    .text.pmu_to_deepsleepmode:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:336    .text.pmu_to_deepsleepmode:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:338    .text.pmu_to_deepsleepmode:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:345    .text.pmu_to_standbymode:0000000000000000 pmu_to_standbymode
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:348    .text.pmu_to_standbymode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:350    .text.pmu_to_standbymode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:352    .text.pmu_to_standbymode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:353    .text.pmu_to_standbymode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:354    .text.pmu_to_standbymode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:336    .text.pmu_to_deepsleepmode:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:338    .text.pmu_to_deepsleepmode:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:345    .text.pmu_to_standbymode:0000000000000000 pmu_to_standbymode
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:348    .text.pmu_to_standbymode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:350    .text.pmu_to_standbymode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:352    .text.pmu_to_standbymode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:353    .text.pmu_to_standbymode:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:354    .text.pmu_to_standbymode:0000000000000000 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:164    .text.pmu_to_standbymode:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:363    .text.pmu_to_standbymode:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:364    .text.pmu_to_standbymode:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:365    .text.pmu_to_standbymode:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:370    .text.pmu_to_standbymode:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:371    .text.pmu_to_standbymode:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:375    .text.pmu_to_standbymode:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:376    .text.pmu_to_standbymode:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:380    .text.pmu_to_standbymode:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:363    .text.pmu_to_standbymode:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:364    .text.pmu_to_standbymode:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:365    .text.pmu_to_standbymode:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:370    .text.pmu_to_standbymode:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:371    .text.pmu_to_standbymode:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:375    .text.pmu_to_standbymode:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:376    .text.pmu_to_standbymode:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:380    .text.pmu_to_standbymode:000000000000001a .L0 
 ./../../firmware/RISCV/drivers/n200_func.h:90     .text.pmu_to_standbymode:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:391    .text.pmu_to_standbymode:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:392    .text.pmu_to_standbymode:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:393    .text.pmu_to_standbymode:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:391    .text.pmu_to_standbymode:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:392    .text.pmu_to_standbymode:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:393    .text.pmu_to_standbymode:000000000000001e .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:182    .text.pmu_to_standbymode:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:402    .text.pmu_to_standbymode:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:403    .text.pmu_to_standbymode:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:407    .text.pmu_to_standbymode:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:408    .text.pmu_to_standbymode:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:409    .text.pmu_to_standbymode:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:402    .text.pmu_to_standbymode:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:403    .text.pmu_to_standbymode:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:407    .text.pmu_to_standbymode:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:408    .text.pmu_to_standbymode:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:409    .text.pmu_to_standbymode:0000000000000024 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:176    .text.pmu_to_standbymode:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:418    .text.pmu_to_standbymode:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:420    .text.pmu_to_standbymode:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:421    .text.pmu_to_standbymode:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:422    .text.pmu_to_standbymode:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:418    .text.pmu_to_standbymode:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:420    .text.pmu_to_standbymode:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:421    .text.pmu_to_standbymode:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:422    .text.pmu_to_standbymode:0000000000000028 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:177    .text.pmu_to_standbymode:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:431    .text.pmu_to_standbymode:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:434    .text.pmu_to_standbymode:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:431    .text.pmu_to_standbymode:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:434    .text.pmu_to_standbymode:000000000000002c .L0 
 ./../../firmware/RISCV/drivers/n200_func.h:90     .text.pmu_to_standbymode:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:444    .text.pmu_to_standbymode:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:445    .text.pmu_to_standbymode:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:446    .text.pmu_to_standbymode:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:444    .text.pmu_to_standbymode:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:445    .text.pmu_to_standbymode:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:446    .text.pmu_to_standbymode:0000000000000030 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:179    .text.pmu_to_standbymode:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:455    .text.pmu_to_standbymode:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:457    .text.pmu_to_standbymode:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:458    .text.pmu_to_standbymode:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:459    .text.pmu_to_standbymode:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:455    .text.pmu_to_standbymode:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:457    .text.pmu_to_standbymode:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:458    .text.pmu_to_standbymode:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:459    .text.pmu_to_standbymode:0000000000000034 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c:180    .text.pmu_to_standbymode:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:467    .text.pmu_to_standbymode:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:469    .text.pmu_to_standbymode:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:476    .text.pmu_wakeup_pin_enable:0000000000000000 pmu_wakeup_pin_enable
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:479    .text.pmu_wakeup_pin_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:480    .text.pmu_wakeup_pin_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:481    .text.pmu_wakeup_pin_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:482    .text.pmu_wakeup_pin_enable:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 22
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:467    .text.pmu_to_standbymode:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:469    .text.pmu_to_standbymode:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:476    .text.pmu_wakeup_pin_enable:0000000000000000 pmu_wakeup_pin_enable
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:479    .text.pmu_wakeup_pin_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:480    .text.pmu_wakeup_pin_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:481    .text.pmu_wakeup_pin_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:482    .text.pmu_wakeup_pin_enable:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 22
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:487    .text.pmu_wakeup_pin_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:488    .text.pmu_wakeup_pin_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:495    .text.pmu_wakeup_pin_disable:0000000000000000 pmu_wakeup_pin_disable
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:498    .text.pmu_wakeup_pin_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:499    .text.pmu_wakeup_pin_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:500    .text.pmu_wakeup_pin_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:501    .text.pmu_wakeup_pin_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:506    .text.pmu_wakeup_pin_disable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:507    .text.pmu_wakeup_pin_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:514    .text.pmu_backup_write_enable:0000000000000000 pmu_backup_write_enable
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:517    .text.pmu_backup_write_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:518    .text.pmu_backup_write_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:519    .text.pmu_backup_write_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:520    .text.pmu_backup_write_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:525    .text.pmu_backup_write_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:526    .text.pmu_backup_write_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:533    .text.pmu_backup_write_disable:0000000000000000 pmu_backup_write_disable
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:536    .text.pmu_backup_write_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:537    .text.pmu_backup_write_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:538    .text.pmu_backup_write_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:539    .text.pmu_backup_write_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:544    .text.pmu_backup_write_disable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:545    .text.pmu_backup_write_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:552    .text.pmu_flag_get:0000000000000000 pmu_flag_get
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:555    .text.pmu_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:557    .text.pmu_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:558    .text.pmu_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:559    .text.pmu_flag_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:562    .text.pmu_flag_get:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:565    .text.pmu_flag_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:567    .text.pmu_flag_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:574    .text.pmu_flag_clear:0000000000000000 pmu_flag_clear
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:577    .text.pmu_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:579    .text.pmu_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:580    .text.pmu_flag_clear:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:586    .text.pmu_flag_clear:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:587    .text.pmu_flag_clear:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:592    .text.pmu_flag_clear:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:594    .text.pmu_flag_clear:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:595    .text.pmu_flag_clear:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:598    .text.pmu_flag_clear:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:599    .text.pmu_flag_clear:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:603    .text.pmu_flag_clear:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:47     .text.pmu_deinit:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:83     .text.pmu_lvd_select:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:102    .text.pmu_lvd_disable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:209    .text.pmu_to_sleepmode:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:341    .text.pmu_to_deepsleepmode:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:472    .text.pmu_to_standbymode:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:491    .text.pmu_wakeup_pin_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:510    .text.pmu_wakeup_pin_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:529    .text.pmu_backup_write_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:548    .text.pmu_backup_write_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:570    .text.pmu_flag_get:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:606    .text.pmu_flag_clear:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:487    .text.pmu_wakeup_pin_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:488    .text.pmu_wakeup_pin_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:495    .text.pmu_wakeup_pin_disable:0000000000000000 pmu_wakeup_pin_disable
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:498    .text.pmu_wakeup_pin_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:499    .text.pmu_wakeup_pin_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:500    .text.pmu_wakeup_pin_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:501    .text.pmu_wakeup_pin_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:506    .text.pmu_wakeup_pin_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:507    .text.pmu_wakeup_pin_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:514    .text.pmu_backup_write_enable:0000000000000000 pmu_backup_write_enable
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:517    .text.pmu_backup_write_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:518    .text.pmu_backup_write_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:519    .text.pmu_backup_write_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:520    .text.pmu_backup_write_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:525    .text.pmu_backup_write_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:526    .text.pmu_backup_write_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:533    .text.pmu_backup_write_disable:0000000000000000 pmu_backup_write_disable
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:536    .text.pmu_backup_write_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:537    .text.pmu_backup_write_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:538    .text.pmu_backup_write_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:539    .text.pmu_backup_write_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:544    .text.pmu_backup_write_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:545    .text.pmu_backup_write_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:552    .text.pmu_flag_get:0000000000000000 pmu_flag_get
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:555    .text.pmu_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:557    .text.pmu_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:558    .text.pmu_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:559    .text.pmu_flag_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:562    .text.pmu_flag_get:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:565    .text.pmu_flag_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:567    .text.pmu_flag_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:574    .text.pmu_flag_clear:0000000000000000 pmu_flag_clear
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:577    .text.pmu_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:579    .text.pmu_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:580    .text.pmu_flag_clear:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:586    .text.pmu_flag_clear:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:587    .text.pmu_flag_clear:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:592    .text.pmu_flag_clear:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:594    .text.pmu_flag_clear:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:595    .text.pmu_flag_clear:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:598    .text.pmu_flag_clear:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:599    .text.pmu_flag_clear:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:603    .text.pmu_flag_clear:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:47     .text.pmu_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:83     .text.pmu_lvd_select:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:102    .text.pmu_lvd_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:209    .text.pmu_to_sleepmode:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:341    .text.pmu_to_deepsleepmode:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:472    .text.pmu_to_standbymode:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:491    .text.pmu_wakeup_pin_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:510    .text.pmu_wakeup_pin_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:529    .text.pmu_backup_write_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:548    .text.pmu_backup_write_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:570    .text.pmu_flag_get:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:606    .text.pmu_flag_clear:0000000000000024 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:138    .text.pmu_to_sleepmode:000000000000000c .L6
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 23
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:138    .text.pmu_to_sleepmode:000000000000000c .L6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 23
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:273    .text.pmu_to_deepsleepmode:0000000000000020 .L9
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:255    .text.pmu_to_deepsleepmode:000000000000001a .L10
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:404    .text.pmu_to_standbymode:0000000000000024 .L12
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:386    .text.pmu_to_standbymode:000000000000001e .L13
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:584    .text.pmu_flag_clear:000000000000000a .L20
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:596    .text.pmu_flag_clear:0000000000000018 .L21
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:590    .text.pmu_flag_clear:0000000000000014 .L23
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1328   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1916   .debug_str:0000000000000027 .LASF68
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1924   .debug_str:00000000000000d8 .LASF69
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1996   .debug_str:00000000000002f1 .LASF70
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1882   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1910   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1994   .debug_str:00000000000002e4 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1984   .debug_str:00000000000002a0 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1968   .debug_str:0000000000000238 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1978   .debug_str:0000000000000275 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1944   .debug_str:0000000000000192 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2002   .debug_str:0000000000000370 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1962   .debug_str:0000000000000211 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1940   .debug_str:0000000000000179 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1964   .debug_str:000000000000021a .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1960   .debug_str:0000000000000203 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1988   .debug_str:00000000000002b7 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1950   .debug_str:00000000000001be .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1992   .debug_str:00000000000002db .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2010   .debug_str:00000000000003ac .LASF71
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2030   .debug_str:000000000000043a .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2050   .debug_str:00000000000004c1 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1920   .debug_str:00000000000000be .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2006   .debug_str:0000000000000390 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1954   .debug_str:00000000000001dc .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1942   .debug_str:0000000000000184 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1972   .debug_str:000000000000024d .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2008   .debug_str:000000000000039e .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2048   .debug_str:00000000000004b3 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2058   .debug_str:00000000000004f5 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1936   .debug_str:0000000000000154 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1966   .debug_str:000000000000022c .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2016   .debug_str:00000000000003e3 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2056   .debug_str:00000000000004e7 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2020   .debug_str:00000000000003f8 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1922   .debug_str:00000000000000cb .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2054   .debug_str:00000000000004db .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2024   .debug_str:0000000000000412 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1928   .debug_str:000000000000012b .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1958   .debug_str:00000000000001f7 .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1934   .debug_str:0000000000000148 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2026   .debug_str:000000000000041e .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1986   .debug_str:00000000000002ac .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1980   .debug_str:0000000000000283 .LASF36
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1990   .debug_str:00000000000002ce .LASF37
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2022   .debug_str:0000000000000405 .LASF38
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1926   .debug_str:000000000000011e .LASF39
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1956   .debug_str:00000000000001ea .LASF40
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1998   .debug_str:0000000000000357 .LASF41
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2000   .debug_str:0000000000000364 .LASF42
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 24
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:273    .text.pmu_to_deepsleepmode:0000000000000020 .L9
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:255    .text.pmu_to_deepsleepmode:000000000000001a .L10
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:404    .text.pmu_to_standbymode:0000000000000024 .L12
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:386    .text.pmu_to_standbymode:000000000000001e .L13
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:584    .text.pmu_flag_clear:000000000000000a .L20
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:596    .text.pmu_flag_clear:0000000000000018 .L21
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:590    .text.pmu_flag_clear:0000000000000014 .L23
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1328   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1916   .debug_str:0000000000000027 .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1924   .debug_str:00000000000000d8 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1996   .debug_str:00000000000002f1 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1882   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1910   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1994   .debug_str:00000000000002e4 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1984   .debug_str:00000000000002a0 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1968   .debug_str:0000000000000238 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1978   .debug_str:0000000000000275 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1944   .debug_str:0000000000000192 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2002   .debug_str:0000000000000370 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1962   .debug_str:0000000000000211 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1940   .debug_str:0000000000000179 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1964   .debug_str:000000000000021a .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1960   .debug_str:0000000000000203 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1988   .debug_str:00000000000002b7 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1950   .debug_str:00000000000001be .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1992   .debug_str:00000000000002db .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2010   .debug_str:00000000000003ac .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2030   .debug_str:000000000000043a .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2050   .debug_str:00000000000004c1 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1920   .debug_str:00000000000000be .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2006   .debug_str:0000000000000390 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1954   .debug_str:00000000000001dc .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1942   .debug_str:0000000000000184 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1972   .debug_str:000000000000024d .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2008   .debug_str:000000000000039e .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2048   .debug_str:00000000000004b3 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2058   .debug_str:00000000000004f5 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1936   .debug_str:0000000000000154 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1966   .debug_str:000000000000022c .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2016   .debug_str:00000000000003e3 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2056   .debug_str:00000000000004e7 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2020   .debug_str:00000000000003f8 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1922   .debug_str:00000000000000cb .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2054   .debug_str:00000000000004db .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2024   .debug_str:0000000000000412 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1928   .debug_str:000000000000012b .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1958   .debug_str:00000000000001f7 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1934   .debug_str:0000000000000148 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2026   .debug_str:000000000000041e .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1986   .debug_str:00000000000002ac .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1980   .debug_str:0000000000000283 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1990   .debug_str:00000000000002ce .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2022   .debug_str:0000000000000405 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1926   .debug_str:000000000000011e .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1956   .debug_str:00000000000001ea .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1998   .debug_str:0000000000000357 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2000   .debug_str:0000000000000364 .LASF42
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 24
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2032   .debug_str:0000000000000440 .LASF43
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1914   .debug_str:0000000000000019 .LASF44
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2036   .debug_str:0000000000000464 .LASF45
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1974   .debug_str:000000000000025b .LASF46
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1976   .debug_str:0000000000000269 .LASF47
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2052   .debug_str:00000000000004cc .LASF54
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:575    .text.pmu_flag_clear:0000000000000000 .LFB13
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:604    .text.pmu_flag_clear:0000000000000024 .LFE13
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1970   .debug_str:0000000000000242 .LASF48
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1946   .debug_str:000000000000019c .LASF72
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:553    .text.pmu_flag_get:0000000000000000 .LFB12
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:568    .text.pmu_flag_get:000000000000000e .LFE12
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2042   .debug_str:0000000000000487 .LASF49
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1787   .debug_loc:0000000000000000 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1912   .debug_str:0000000000000000 .LASF50
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:534    .text.pmu_backup_write_disable:0000000000000000 .LFB11
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:546    .text.pmu_backup_write_disable:000000000000000e .LFE11
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2034   .debug_str:000000000000044c .LASF51
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:515    .text.pmu_backup_write_enable:0000000000000000 .LFB10
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:527    .text.pmu_backup_write_enable:000000000000000e .LFE10
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2012   .debug_str:00000000000003bc .LASF52
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:496    .text.pmu_wakeup_pin_disable:0000000000000000 .LFB9
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:508    .text.pmu_wakeup_pin_disable:000000000000000e .LFE9
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1952   .debug_str:00000000000001c6 .LASF53
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:477    .text.pmu_wakeup_pin_enable:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:489    .text.pmu_wakeup_pin_enable:000000000000000e .LFE8
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1982   .debug_str:000000000000028d .LASF55
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:346    .text.pmu_to_standbymode:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:470    .text.pmu_to_standbymode:000000000000003a .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2044   .debug_str:000000000000048c .LASF56
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:351    .text.pmu_to_standbymode:0000000000000000 .LBB50
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:362    .text.pmu_to_standbymode:0000000000000004 .LBE50
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1932   .debug_str:0000000000000142 .LASF57
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:406    .text.pmu_to_standbymode:0000000000000024 .LBB54
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:417    .text.pmu_to_standbymode:0000000000000028 .LBE54
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:419    .text.pmu_to_standbymode:0000000000000028 .LBB55
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:430    .text.pmu_to_standbymode:000000000000002c .LBE55
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:443    .text.pmu_to_standbymode:0000000000000030 .LBB58
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:454    .text.pmu_to_standbymode:0000000000000034 .LBE58
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:456    .text.pmu_to_standbymode:0000000000000034 .LBB59
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:468    .text.pmu_to_standbymode:000000000000003a .LBE59
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:390    .text.pmu_to_standbymode:000000000000001e .LBB53
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:401    .text.pmu_to_standbymode:0000000000000022 .LBE53
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:378    .text.pmu_to_standbymode:000000000000001a .LBB51
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:388    .text.pmu_to_standbymode:000000000000001e .LBE51
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:432    .text.pmu_to_standbymode:000000000000002c .LBB56
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:441    .text.pmu_to_standbymode:0000000000000030 .LBE56
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1948   .debug_str:00000000000001a9 .LASF58
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:214    .text.pmu_to_deepsleepmode:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:339    .text.pmu_to_deepsleepmode:0000000000000036 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1801   .debug_loc:0000000000000021 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2038   .debug_str:0000000000000470 .LASF59
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:231    .text.pmu_to_deepsleepmode:0000000000000010 .LBB40
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:242    .text.pmu_to_deepsleepmode:0000000000000014 .LBE40
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:275    .text.pmu_to_deepsleepmode:0000000000000020 .LBB44
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:286    .text.pmu_to_deepsleepmode:0000000000000024 .LBE44
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:288    .text.pmu_to_deepsleepmode:0000000000000024 .LBB45
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 25
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2032   .debug_str:0000000000000440 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1914   .debug_str:0000000000000019 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2036   .debug_str:0000000000000464 .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1974   .debug_str:000000000000025b .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1976   .debug_str:0000000000000269 .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2052   .debug_str:00000000000004cc .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:575    .text.pmu_flag_clear:0000000000000000 .LFB13
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:604    .text.pmu_flag_clear:0000000000000024 .LFE13
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1970   .debug_str:0000000000000242 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1946   .debug_str:000000000000019c .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:553    .text.pmu_flag_get:0000000000000000 .LFB12
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:568    .text.pmu_flag_get:000000000000000e .LFE12
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2042   .debug_str:0000000000000487 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1787   .debug_loc:0000000000000000 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1912   .debug_str:0000000000000000 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:534    .text.pmu_backup_write_disable:0000000000000000 .LFB11
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:546    .text.pmu_backup_write_disable:000000000000000e .LFE11
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2034   .debug_str:000000000000044c .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:515    .text.pmu_backup_write_enable:0000000000000000 .LFB10
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:527    .text.pmu_backup_write_enable:000000000000000e .LFE10
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2012   .debug_str:00000000000003bc .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:496    .text.pmu_wakeup_pin_disable:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:508    .text.pmu_wakeup_pin_disable:000000000000000e .LFE9
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1952   .debug_str:00000000000001c6 .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:477    .text.pmu_wakeup_pin_enable:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:489    .text.pmu_wakeup_pin_enable:000000000000000e .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1982   .debug_str:000000000000028d .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:346    .text.pmu_to_standbymode:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:470    .text.pmu_to_standbymode:000000000000003a .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2044   .debug_str:000000000000048c .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:351    .text.pmu_to_standbymode:0000000000000000 .LBB50
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:362    .text.pmu_to_standbymode:0000000000000004 .LBE50
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1932   .debug_str:0000000000000142 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:406    .text.pmu_to_standbymode:0000000000000024 .LBB54
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:417    .text.pmu_to_standbymode:0000000000000028 .LBE54
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:419    .text.pmu_to_standbymode:0000000000000028 .LBB55
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:430    .text.pmu_to_standbymode:000000000000002c .LBE55
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:443    .text.pmu_to_standbymode:0000000000000030 .LBB58
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:454    .text.pmu_to_standbymode:0000000000000034 .LBE58
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:456    .text.pmu_to_standbymode:0000000000000034 .LBB59
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:468    .text.pmu_to_standbymode:000000000000003a .LBE59
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:390    .text.pmu_to_standbymode:000000000000001e .LBB53
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:401    .text.pmu_to_standbymode:0000000000000022 .LBE53
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:378    .text.pmu_to_standbymode:000000000000001a .LBB51
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:388    .text.pmu_to_standbymode:000000000000001e .LBE51
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:432    .text.pmu_to_standbymode:000000000000002c .LBB56
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:441    .text.pmu_to_standbymode:0000000000000030 .LBE56
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1948   .debug_str:00000000000001a9 .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:214    .text.pmu_to_deepsleepmode:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:339    .text.pmu_to_deepsleepmode:0000000000000036 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1801   .debug_loc:0000000000000021 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2038   .debug_str:0000000000000470 .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:231    .text.pmu_to_deepsleepmode:0000000000000010 .LBB40
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:242    .text.pmu_to_deepsleepmode:0000000000000014 .LBE40
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:275    .text.pmu_to_deepsleepmode:0000000000000020 .LBB44
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:286    .text.pmu_to_deepsleepmode:0000000000000024 .LBE44
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:288    .text.pmu_to_deepsleepmode:0000000000000024 .LBB45
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 25
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:299    .text.pmu_to_deepsleepmode:0000000000000028 .LBE45
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:312    .text.pmu_to_deepsleepmode:000000000000002c .LBB48
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:323    .text.pmu_to_deepsleepmode:0000000000000030 .LBE48
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:325    .text.pmu_to_deepsleepmode:0000000000000030 .LBB49
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:337    .text.pmu_to_deepsleepmode:0000000000000036 .LBE49
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:259    .text.pmu_to_deepsleepmode:000000000000001a .LBB43
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:270    .text.pmu_to_deepsleepmode:000000000000001e .LBE43
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:247    .text.pmu_to_deepsleepmode:0000000000000016 .LBB41
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:257    .text.pmu_to_deepsleepmode:000000000000001a .LBE41
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:301    .text.pmu_to_deepsleepmode:0000000000000028 .LBB46
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:310    .text.pmu_to_deepsleepmode:000000000000002c .LBE46
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2028   .debug_str:0000000000000429 .LASF60
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:107    .text.pmu_to_sleepmode:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:207    .text.pmu_to_sleepmode:0000000000000022 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2004   .debug_str:0000000000000383 .LASF61
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:112    .text.pmu_to_sleepmode:0000000000000000 .LBB31
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:123    .text.pmu_to_sleepmode:0000000000000004 .LBE31
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:142    .text.pmu_to_sleepmode:000000000000000c .LBB34
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:153    .text.pmu_to_sleepmode:0000000000000010 .LBE34
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:155    .text.pmu_to_sleepmode:0000000000000010 .LBB35
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:166    .text.pmu_to_sleepmode:0000000000000014 .LBE35
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:179    .text.pmu_to_sleepmode:0000000000000018 .LBB38
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:190    .text.pmu_to_sleepmode:000000000000001c .LBE38
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:192    .text.pmu_to_sleepmode:000000000000001c .LBB39
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:203    .text.pmu_to_sleepmode:0000000000000020 .LBE39
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:128    .text.pmu_to_sleepmode:0000000000000006 .LBB32
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:140    .text.pmu_to_sleepmode:000000000000000c .LBE32
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:168    .text.pmu_to_sleepmode:0000000000000014 .LBB36
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:177    .text.pmu_to_sleepmode:0000000000000018 .LBE36
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2014   .debug_str:00000000000003d3 .LASF62
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:88     .text.pmu_lvd_disable:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:100    .text.pmu_lvd_disable:000000000000000c .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1918   .debug_str:00000000000000af .LASF63
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:52     .text.pmu_lvd_select:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:81     .text.pmu_lvd_select:0000000000000022 .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2018   .debug_str:00000000000003f1 .LASF64
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1815   .debug_loc:0000000000000042 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1930   .debug_str:0000000000000137 .LASF65
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:14     .text.pmu_deinit:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:45     .text.pmu_deinit:0000000000000020 .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1829   .debug_loc:0000000000000063 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:30     .text.pmu_deinit:0000000000000010 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:43     .text.pmu_deinit:0000000000000020 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2040   .debug_str:0000000000000481 .LASF73
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:2046   .debug_str:000000000000049b .LASF66
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:1938   .debug_str:0000000000000160 .LASF67
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:556    .text.pmu_flag_get:0000000000000000 .LVL25
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:563    .text.pmu_flag_get:0000000000000008 .LVL26
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:217    .text.pmu_to_deepsleepmode:0000000000000000 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:228    .text.pmu_to_deepsleepmode:000000000000000e .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:55     .text.pmu_lvd_select:0000000000000000 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:71     .text.pmu_lvd_select:0000000000000016 .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:21     .text.pmu_deinit:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:39     .text.pmu_deinit:0000000000000018 .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s:614    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:299    .text.pmu_to_deepsleepmode:0000000000000028 .LBE45
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:312    .text.pmu_to_deepsleepmode:000000000000002c .LBB48
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:323    .text.pmu_to_deepsleepmode:0000000000000030 .LBE48
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:325    .text.pmu_to_deepsleepmode:0000000000000030 .LBB49
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:337    .text.pmu_to_deepsleepmode:0000000000000036 .LBE49
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:259    .text.pmu_to_deepsleepmode:000000000000001a .LBB43
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:270    .text.pmu_to_deepsleepmode:000000000000001e .LBE43
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:247    .text.pmu_to_deepsleepmode:0000000000000016 .LBB41
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:257    .text.pmu_to_deepsleepmode:000000000000001a .LBE41
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:301    .text.pmu_to_deepsleepmode:0000000000000028 .LBB46
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:310    .text.pmu_to_deepsleepmode:000000000000002c .LBE46
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2028   .debug_str:0000000000000429 .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:107    .text.pmu_to_sleepmode:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:207    .text.pmu_to_sleepmode:0000000000000022 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2004   .debug_str:0000000000000383 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:112    .text.pmu_to_sleepmode:0000000000000000 .LBB31
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:123    .text.pmu_to_sleepmode:0000000000000004 .LBE31
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:142    .text.pmu_to_sleepmode:000000000000000c .LBB34
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:153    .text.pmu_to_sleepmode:0000000000000010 .LBE34
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:155    .text.pmu_to_sleepmode:0000000000000010 .LBB35
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:166    .text.pmu_to_sleepmode:0000000000000014 .LBE35
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:179    .text.pmu_to_sleepmode:0000000000000018 .LBB38
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:190    .text.pmu_to_sleepmode:000000000000001c .LBE38
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:192    .text.pmu_to_sleepmode:000000000000001c .LBB39
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:203    .text.pmu_to_sleepmode:0000000000000020 .LBE39
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:128    .text.pmu_to_sleepmode:0000000000000006 .LBB32
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:140    .text.pmu_to_sleepmode:000000000000000c .LBE32
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:168    .text.pmu_to_sleepmode:0000000000000014 .LBB36
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:177    .text.pmu_to_sleepmode:0000000000000018 .LBE36
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2014   .debug_str:00000000000003d3 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:88     .text.pmu_lvd_disable:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:100    .text.pmu_lvd_disable:000000000000000c .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1918   .debug_str:00000000000000af .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:52     .text.pmu_lvd_select:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:81     .text.pmu_lvd_select:0000000000000022 .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2018   .debug_str:00000000000003f1 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1815   .debug_loc:0000000000000042 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1930   .debug_str:0000000000000137 .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:14     .text.pmu_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:45     .text.pmu_deinit:0000000000000020 .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1829   .debug_loc:0000000000000063 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:30     .text.pmu_deinit:0000000000000010 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:43     .text.pmu_deinit:0000000000000020 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2040   .debug_str:0000000000000481 .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:2046   .debug_str:000000000000049b .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:1938   .debug_str:0000000000000160 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:556    .text.pmu_flag_get:0000000000000000 .LVL25
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:563    .text.pmu_flag_get:0000000000000008 .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:217    .text.pmu_to_deepsleepmode:0000000000000000 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:228    .text.pmu_to_deepsleepmode:000000000000000e .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:55     .text.pmu_lvd_select:0000000000000000 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:71     .text.pmu_lvd_select:0000000000000016 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:21     .text.pmu_deinit:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:39     .text.pmu_deinit:0000000000000018 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s:614    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccFOZgoN.s 			page 26
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccMPl7gd.s 			page 26
 
 
 rcu_periph_reset_enable
