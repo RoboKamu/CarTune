@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 1
 
 
    1              		.file	"gd32vf103_gpio.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_POSITION_MASK                  ((uint32_t)0x000F0000U)  /*!< AFIO_PCF register position
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_SWJCFG_MASK                    ((uint32_t)0xF0FFFFFFU)  /*!< AFIO_PCF register SWJCFG m
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_LOCATION1_MASK                 ((uint32_t)0x00200000U)  /*!< AFIO_PCF register location
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_LOCATION2_MASK                 ((uint32_t)0x00100000U)  /*!< AFIO_PCF register location
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
   78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         /* reset GPIOE */
   79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOERST);
   80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 3
 
 
   81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         break;
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
   80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         break;
   77              		.loc 1 80 9
   78 0060 17030000 		tail	rcu_periph_reset_disable
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 4
 
 
   78      67000300 
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
   91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \retval     none
   92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** */
   93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** void gpio_afio_deinit(void)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 5
 
 
   94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** {
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  107:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_IPU: pull-up input mode
  108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_OUT_OD: GPIO output with open-drain
  109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_OUT_PP: GPIO output with push-pull
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 6
 
 
  110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_AF_OD: AFIO output with open-drain
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  126:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     uint16_t i;
  178              		.loc 1 126 1 is_stmt 0
  179 000e 8147     		li	a5,0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 7
 
 
  142:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  146:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
  209              		.loc 1 146 17
  210 0036 33785800 		and	a6,a6,t0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 8
 
 
  211              	.LVL22:
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  238              		.loc 1 175 16
  239 0054 130F8002 		li	t5,40
  176:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 9
 
 
  177:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  274              		.loc 1 175 13 is_stmt 1
  175:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
  275              		.loc 1 175 16 is_stmt 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 10
 
 
  276 0084 639CE501 		bne	a1,t5,.L20
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  312              		.section	.text.gpio_bit_set,"ax",@progbits
  313              		.align	1
  314              		.globl	gpio_bit_set
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 11
 
 
  316              	gpio_bit_set:
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  344              	.LFE6:
  346              		.section	.text.gpio_bit_write,"ax",@progbits
  347              		.align	1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 12
 
 
  348              		.globl	gpio_bit_write
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  245:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \retval     none
  246:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** */
  247:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** void gpio_port_write(uint32_t gpio_periph, uint16_t data)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 13
 
 
  248:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** {
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  414              	.LFB10:
  269:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** 
  270:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** /*!
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 14
 
 
  271:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \brief      get GPIO port input status
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  444              		.loc 1 297 1
  445 0004 3335A000 		snez	a0,a0
  446 0008 8280     		ret
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 15
 
 
  447              		.cfi_endproc
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  327:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_TIMER3_REMAP: TIMER3 remapping
  328:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_PARTIAL_REMAP: CAN0 partial remapping
  329:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_FULL_REMAP: CAN0 full remapping
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 16
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 16
 
 
  330:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_PD01_REMAP: PD01 remapping
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  355:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     remap1 = remap & LSB_16BIT_MASK;
  498              		.loc 1 355 12
  499 0016 4183     		srli	a4,a4,16
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 17
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 17
 
 
  500              	.LVL47:
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  376:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     if (AFIO_PCF1_FIELDS == (remap & AFIO_PCF1_FIELDS)) {
  535              		.loc 1 376 5 is_stmt 1
  377:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         /* set AFIO_PCF1 regiter value */
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 18
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 18
 
 
  378:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         AFIO_PCF1 = temp_reg;
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  575              		.loc 1 368 18 is_stmt 0
  576 006e B706000F 		li	a3,251658240
  577 0072 D58F     		or	a5,a5,a3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 19
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 19
 
 
  578              	.LVL58:
@@ -1138,7 +1138,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  400:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     uint32_t source = 0U;
  609              		.loc 1 400 5
  401:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     source = ((uint32_t) 0x0FU)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 20
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 20
 
 
  610              		.loc 1 401 5
@@ -1198,7 +1198,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  650              		.loc 1 414 9 is_stmt 1
  651              		.loc 1 414 22 is_stmt 0
  652 003c D847     		lw	a4,12(a5)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 21
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 21
 
 
  653 003e 598D     		or	a0,a4,a0
@@ -1258,7 +1258,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  692              		.globl	gpio_event_output_config
  694              	gpio_event_output_config:
  695              	.LFB15:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 22
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 22
 
 
  431:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** 
@@ -1318,7 +1318,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  720              		.loc 1 458 13 is_stmt 0
  721 0010 0CC3     		sw	a1,0(a4)
  459:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 23
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 23
 
 
  722              		.loc 1 459 1
@@ -1378,7 +1378,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  759 000a 1CC3     		sw	a5,0(a4)
  481:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
  760              		.loc 1 481 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 24
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 24
 
 
  761 000c 8280     		ret
@@ -1438,7 +1438,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  503:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
  796              		.loc 1 503 1
  797 000e 8280     		ret
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 25
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 25
 
 
  798              		.cfi_endproc
@@ -1451,637 +1451,637 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 1
  806              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
  807              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
  808              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 26
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 26
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_gpio.c
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:13     .text.gpio_deinit:0000000000000000 gpio_deinit
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:17     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:19     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:20     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:21     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:23     .text.gpio_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:25     .text.gpio_deinit:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:27     .text.gpio_deinit:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:36     .text.gpio_deinit:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:37     .text.gpio_deinit:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:38     .text.gpio_deinit:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:41     .text.gpio_deinit:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:45     .text.gpio_deinit:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:47     .text.gpio_deinit:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:53     .text.gpio_deinit:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:58     .text.gpio_deinit:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:63     .text.gpio_deinit:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:68     .text.gpio_deinit:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:71     .text.gpio_deinit:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:72     .text.gpio_deinit:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:73     .text.gpio_deinit:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:76     .text.gpio_deinit:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:78     .text.gpio_deinit:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:82     .text.gpio_deinit:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:84     .text.gpio_deinit:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:89     .text.gpio_deinit:0000000000000074 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:94     .text.gpio_deinit:000000000000007a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:99     .text.gpio_deinit:0000000000000086 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:104    .text.gpio_deinit:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:109    .text.gpio_deinit:0000000000000098 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:111    .text.gpio_deinit:000000000000009e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:118    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:121    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:122    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:123    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:124    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:126    .text.gpio_afio_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:128    .text.gpio_afio_deinit:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:130    .text.gpio_afio_deinit:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:131    .text.gpio_afio_deinit:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:133    .text.gpio_afio_deinit:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:136    .text.gpio_afio_deinit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:137    .text.gpio_afio_deinit:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:138    .text.gpio_afio_deinit:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:140    .text.gpio_afio_deinit:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:142    .text.gpio_afio_deinit:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:144    .text.gpio_afio_deinit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:146    .text.gpio_afio_deinit:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:148    .text.gpio_afio_deinit:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:155    .text.gpio_init:0000000000000000 gpio_init
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:158    .text.gpio_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:160    .text.gpio_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:161    .text.gpio_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:162    .text.gpio_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:163    .text.gpio_init:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 27
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:13     .text.gpio_deinit:0000000000000000 gpio_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:17     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:19     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:20     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:21     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:23     .text.gpio_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:25     .text.gpio_deinit:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:27     .text.gpio_deinit:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:36     .text.gpio_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:37     .text.gpio_deinit:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:38     .text.gpio_deinit:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:41     .text.gpio_deinit:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:45     .text.gpio_deinit:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:47     .text.gpio_deinit:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:53     .text.gpio_deinit:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:58     .text.gpio_deinit:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:63     .text.gpio_deinit:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:68     .text.gpio_deinit:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:71     .text.gpio_deinit:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:72     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:73     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:76     .text.gpio_deinit:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:78     .text.gpio_deinit:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:82     .text.gpio_deinit:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:84     .text.gpio_deinit:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:89     .text.gpio_deinit:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:94     .text.gpio_deinit:000000000000007a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:99     .text.gpio_deinit:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:104    .text.gpio_deinit:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:109    .text.gpio_deinit:0000000000000098 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:111    .text.gpio_deinit:000000000000009e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:118    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:121    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:122    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:123    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:124    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:126    .text.gpio_afio_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:128    .text.gpio_afio_deinit:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:130    .text.gpio_afio_deinit:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:131    .text.gpio_afio_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:133    .text.gpio_afio_deinit:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:136    .text.gpio_afio_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:137    .text.gpio_afio_deinit:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:138    .text.gpio_afio_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:140    .text.gpio_afio_deinit:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:142    .text.gpio_afio_deinit:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:144    .text.gpio_afio_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:146    .text.gpio_afio_deinit:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:148    .text.gpio_afio_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:155    .text.gpio_init:0000000000000000 gpio_init
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:158    .text.gpio_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:160    .text.gpio_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:161    .text.gpio_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:162    .text.gpio_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:163    .text.gpio_init:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 27
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:164    .text.gpio_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:165    .text.gpio_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:167    .text.gpio_init:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:170    .text.gpio_init:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:171    .text.gpio_init:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:173    .text.gpio_init:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:174    .text.gpio_init:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:178    .text.gpio_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:179    .text.gpio_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:181    .text.gpio_init:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:183    .text.gpio_init:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:185    .text.gpio_init:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:187    .text.gpio_init:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:189    .text.gpio_init:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:193    .text.gpio_init:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:194    .text.gpio_init:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:196    .text.gpio_init:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:198    .text.gpio_init:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:200    .text.gpio_init:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:202    .text.gpio_init:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:205    .text.gpio_init:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:206    .text.gpio_init:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:208    .text.gpio_init:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:210    .text.gpio_init:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:213    .text.gpio_init:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:214    .text.gpio_init:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:216    .text.gpio_init:000000000000003e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:219    .text.gpio_init:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:220    .text.gpio_init:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:222    .text.gpio_init:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:223    .text.gpio_init:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:226    .text.gpio_init:0000000000000048 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:227    .text.gpio_init:0000000000000048 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:233    .text.gpio_init:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:235    .text.gpio_init:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:237    .text.gpio_init:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:239    .text.gpio_init:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:241    .text.gpio_init:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:243    .text.gpio_init:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:247    .text.gpio_init:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:248    .text.gpio_init:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:250    .text.gpio_init:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:252    .text.gpio_init:0000000000000064 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:254    .text.gpio_init:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:255    .text.gpio_init:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:258    .text.gpio_init:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:261    .text.gpio_init:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:262    .text.gpio_init:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:264    .text.gpio_init:0000000000000074 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:266    .text.gpio_init:0000000000000078 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:269    .text.gpio_init:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:270    .text.gpio_init:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:272    .text.gpio_init:0000000000000080 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:275    .text.gpio_init:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:276    .text.gpio_init:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:278    .text.gpio_init:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:279    .text.gpio_init:0000000000000088 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 28
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:164    .text.gpio_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:165    .text.gpio_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:167    .text.gpio_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:170    .text.gpio_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:171    .text.gpio_init:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:173    .text.gpio_init:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:174    .text.gpio_init:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:178    .text.gpio_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:179    .text.gpio_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:181    .text.gpio_init:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:183    .text.gpio_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:185    .text.gpio_init:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:187    .text.gpio_init:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:189    .text.gpio_init:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:193    .text.gpio_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:194    .text.gpio_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:196    .text.gpio_init:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:198    .text.gpio_init:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:200    .text.gpio_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:202    .text.gpio_init:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:205    .text.gpio_init:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:206    .text.gpio_init:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:208    .text.gpio_init:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:210    .text.gpio_init:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:213    .text.gpio_init:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:214    .text.gpio_init:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:216    .text.gpio_init:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:219    .text.gpio_init:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:220    .text.gpio_init:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:222    .text.gpio_init:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:223    .text.gpio_init:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:226    .text.gpio_init:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:227    .text.gpio_init:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:233    .text.gpio_init:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:235    .text.gpio_init:0000000000000050 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:237    .text.gpio_init:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:239    .text.gpio_init:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:241    .text.gpio_init:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:243    .text.gpio_init:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:247    .text.gpio_init:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:248    .text.gpio_init:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:250    .text.gpio_init:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:252    .text.gpio_init:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:254    .text.gpio_init:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:255    .text.gpio_init:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:258    .text.gpio_init:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:261    .text.gpio_init:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:262    .text.gpio_init:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:264    .text.gpio_init:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:266    .text.gpio_init:0000000000000078 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:269    .text.gpio_init:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:270    .text.gpio_init:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:272    .text.gpio_init:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:275    .text.gpio_init:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:276    .text.gpio_init:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:278    .text.gpio_init:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:279    .text.gpio_init:0000000000000088 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 28
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:282    .text.gpio_init:000000000000008a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:283    .text.gpio_init:000000000000008a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:289    .text.gpio_init:000000000000008e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:291    .text.gpio_init:0000000000000092 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:295    .text.gpio_init:0000000000000094 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:296    .text.gpio_init:0000000000000094 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:298    .text.gpio_init:0000000000000098 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:299    .text.gpio_init:0000000000000098 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:303    .text.gpio_init:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:304    .text.gpio_init:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:306    .text.gpio_init:00000000000000a0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:307    .text.gpio_init:00000000000000a0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:309    .text.gpio_init:00000000000000a4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:316    .text.gpio_bit_set:0000000000000000 gpio_bit_set
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:319    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:321    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:322    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:323    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:325    .text.gpio_bit_set:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:326    .text.gpio_bit_set:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:333    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:336    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:338    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:339    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:340    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:342    .text.gpio_bit_reset:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:343    .text.gpio_bit_reset:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:350    .text.gpio_bit_write:0000000000000000 gpio_bit_write
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:353    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:355    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:356    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:357    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:359    .text.gpio_bit_write:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:360    .text.gpio_bit_write:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:364    .text.gpio_bit_write:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:365    .text.gpio_bit_write:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:367    .text.gpio_bit_write:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:368    .text.gpio_bit_write:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:375    .text.gpio_port_write:0000000000000000 gpio_port_write
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:378    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:380    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:381    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:382    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:384    .text.gpio_port_write:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:385    .text.gpio_port_write:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:392    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:395    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:397    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:398    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:399    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:402    .text.gpio_input_bit_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:404    .text.gpio_input_bit_get:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:406    .text.gpio_input_bit_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:413    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:416    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:418    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:419    .text.gpio_input_port_get:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 29
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:282    .text.gpio_init:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:283    .text.gpio_init:000000000000008a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:289    .text.gpio_init:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:291    .text.gpio_init:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:295    .text.gpio_init:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:296    .text.gpio_init:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:298    .text.gpio_init:0000000000000098 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:299    .text.gpio_init:0000000000000098 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:303    .text.gpio_init:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:304    .text.gpio_init:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:306    .text.gpio_init:00000000000000a0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:307    .text.gpio_init:00000000000000a0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:309    .text.gpio_init:00000000000000a4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:316    .text.gpio_bit_set:0000000000000000 gpio_bit_set
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:319    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:321    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:322    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:323    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:325    .text.gpio_bit_set:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:326    .text.gpio_bit_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:333    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:336    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:338    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:339    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:340    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:342    .text.gpio_bit_reset:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:343    .text.gpio_bit_reset:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:350    .text.gpio_bit_write:0000000000000000 gpio_bit_write
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:353    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:355    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:356    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:357    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:359    .text.gpio_bit_write:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:360    .text.gpio_bit_write:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:364    .text.gpio_bit_write:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:365    .text.gpio_bit_write:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:367    .text.gpio_bit_write:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:368    .text.gpio_bit_write:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:375    .text.gpio_port_write:0000000000000000 gpio_port_write
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:378    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:380    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:381    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:382    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:384    .text.gpio_port_write:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:385    .text.gpio_port_write:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:392    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:395    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:397    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:398    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:399    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:402    .text.gpio_input_bit_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:404    .text.gpio_input_bit_get:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:406    .text.gpio_input_bit_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:413    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:416    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:418    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:419    .text.gpio_input_port_get:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 29
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:420    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:423    .text.gpio_input_port_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:426    .text.gpio_input_port_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:433    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:436    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:438    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:439    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:440    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:443    .text.gpio_output_bit_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:445    .text.gpio_output_bit_get:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:447    .text.gpio_output_bit_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:454    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:457    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:459    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:460    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:461    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:464    .text.gpio_output_port_get:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:467    .text.gpio_output_port_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:474    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:477    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:479    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:480    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:481    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:482    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:484    .text.gpio_pin_remap_config:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:486    .text.gpio_pin_remap_config:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:487    .text.gpio_pin_remap_config:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:491    .text.gpio_pin_remap_config:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:492    .text.gpio_pin_remap_config:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:493    .text.gpio_pin_remap_config:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:495    .text.gpio_pin_remap_config:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:497    .text.gpio_pin_remap_config:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:499    .text.gpio_pin_remap_config:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:502    .text.gpio_pin_remap_config:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:503    .text.gpio_pin_remap_config:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:505    .text.gpio_pin_remap_config:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:506    .text.gpio_pin_remap_config:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:509    .text.gpio_pin_remap_config:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:511    .text.gpio_pin_remap_config:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:514    .text.gpio_pin_remap_config:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:515    .text.gpio_pin_remap_config:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:521    .text.gpio_pin_remap_config:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:522    .text.gpio_pin_remap_config:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:524    .text.gpio_pin_remap_config:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:525    .text.gpio_pin_remap_config:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:527    .text.gpio_pin_remap_config:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:529    .text.gpio_pin_remap_config:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:532    .text.gpio_pin_remap_config:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:536    .text.gpio_pin_remap_config:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:537    .text.gpio_pin_remap_config:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:539    .text.gpio_pin_remap_config:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:541    .text.gpio_pin_remap_config:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:542    .text.gpio_pin_remap_config:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:547    .text.gpio_pin_remap_config:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:548    .text.gpio_pin_remap_config:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:554    .text.gpio_pin_remap_config:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:555    .text.gpio_pin_remap_config:0000000000000052 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 30
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:420    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:423    .text.gpio_input_port_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:426    .text.gpio_input_port_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:433    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:436    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:438    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:439    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:440    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:443    .text.gpio_output_bit_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:445    .text.gpio_output_bit_get:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:447    .text.gpio_output_bit_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:454    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:457    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:459    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:460    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:461    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:464    .text.gpio_output_port_get:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:467    .text.gpio_output_port_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:474    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:477    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:479    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:480    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:481    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:482    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:484    .text.gpio_pin_remap_config:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:486    .text.gpio_pin_remap_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:487    .text.gpio_pin_remap_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:491    .text.gpio_pin_remap_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:492    .text.gpio_pin_remap_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:493    .text.gpio_pin_remap_config:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:495    .text.gpio_pin_remap_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:497    .text.gpio_pin_remap_config:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:499    .text.gpio_pin_remap_config:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:502    .text.gpio_pin_remap_config:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:503    .text.gpio_pin_remap_config:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:505    .text.gpio_pin_remap_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:506    .text.gpio_pin_remap_config:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:509    .text.gpio_pin_remap_config:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:511    .text.gpio_pin_remap_config:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:514    .text.gpio_pin_remap_config:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:515    .text.gpio_pin_remap_config:000000000000002a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:521    .text.gpio_pin_remap_config:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:522    .text.gpio_pin_remap_config:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:524    .text.gpio_pin_remap_config:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:525    .text.gpio_pin_remap_config:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:527    .text.gpio_pin_remap_config:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:529    .text.gpio_pin_remap_config:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:532    .text.gpio_pin_remap_config:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:536    .text.gpio_pin_remap_config:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:537    .text.gpio_pin_remap_config:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:539    .text.gpio_pin_remap_config:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:541    .text.gpio_pin_remap_config:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:542    .text.gpio_pin_remap_config:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:547    .text.gpio_pin_remap_config:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:548    .text.gpio_pin_remap_config:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:554    .text.gpio_pin_remap_config:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:555    .text.gpio_pin_remap_config:0000000000000052 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 30
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:559    .text.gpio_pin_remap_config:000000000000005a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:560    .text.gpio_pin_remap_config:000000000000005a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:561    .text.gpio_pin_remap_config:000000000000005a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:563    .text.gpio_pin_remap_config:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:565    .text.gpio_pin_remap_config:0000000000000062 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:570    .text.gpio_pin_remap_config:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:572    .text.gpio_pin_remap_config:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:575    .text.gpio_pin_remap_config:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:576    .text.gpio_pin_remap_config:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:583    .text.gpio_pin_remap_config:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:584    .text.gpio_pin_remap_config:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:586    .text.gpio_pin_remap_config:000000000000007a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:588    .text.gpio_pin_remap_config:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:593    .text.gpio_pin_remap_config:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:594    .text.gpio_pin_remap_config:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:596    .text.gpio_pin_remap_config:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:597    .text.gpio_pin_remap_config:0000000000000086 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:604    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:607    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:609    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:610    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:611    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:612    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:614    .text.gpio_exti_source_select:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:617    .text.gpio_exti_source_select:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:618    .text.gpio_exti_source_select:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:623    .text.gpio_exti_source_select:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:628    .text.gpio_exti_source_select:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:629    .text.gpio_exti_source_select:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:634    .text.gpio_exti_source_select:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:635    .text.gpio_exti_source_select:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:641    .text.gpio_exti_source_select:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:642    .text.gpio_exti_source_select:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:645    .text.gpio_exti_source_select:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:646    .text.gpio_exti_source_select:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:651    .text.gpio_exti_source_select:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:652    .text.gpio_exti_source_select:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:658    .text.gpio_exti_source_select:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:659    .text.gpio_exti_source_select:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:662    .text.gpio_exti_source_select:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:663    .text.gpio_exti_source_select:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:668    .text.gpio_exti_source_select:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:669    .text.gpio_exti_source_select:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:675    .text.gpio_exti_source_select:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:676    .text.gpio_exti_source_select:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:681    .text.gpio_exti_source_select:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:682    .text.gpio_exti_source_select:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:686    .text.gpio_exti_source_select:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:687    .text.gpio_exti_source_select:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:694    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:697    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:699    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:700    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:701    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:702    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:706    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:707    .text.gpio_event_output_config:0000000000000006 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 31
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:559    .text.gpio_pin_remap_config:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:560    .text.gpio_pin_remap_config:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:561    .text.gpio_pin_remap_config:000000000000005a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:563    .text.gpio_pin_remap_config:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:565    .text.gpio_pin_remap_config:0000000000000062 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:570    .text.gpio_pin_remap_config:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:572    .text.gpio_pin_remap_config:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:575    .text.gpio_pin_remap_config:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:576    .text.gpio_pin_remap_config:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:583    .text.gpio_pin_remap_config:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:584    .text.gpio_pin_remap_config:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:586    .text.gpio_pin_remap_config:000000000000007a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:588    .text.gpio_pin_remap_config:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:593    .text.gpio_pin_remap_config:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:594    .text.gpio_pin_remap_config:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:596    .text.gpio_pin_remap_config:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:597    .text.gpio_pin_remap_config:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:604    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:607    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:609    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:610    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:611    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:612    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:614    .text.gpio_exti_source_select:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:617    .text.gpio_exti_source_select:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:618    .text.gpio_exti_source_select:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:623    .text.gpio_exti_source_select:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:628    .text.gpio_exti_source_select:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:629    .text.gpio_exti_source_select:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:634    .text.gpio_exti_source_select:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:635    .text.gpio_exti_source_select:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:641    .text.gpio_exti_source_select:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:642    .text.gpio_exti_source_select:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:645    .text.gpio_exti_source_select:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:646    .text.gpio_exti_source_select:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:651    .text.gpio_exti_source_select:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:652    .text.gpio_exti_source_select:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:658    .text.gpio_exti_source_select:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:659    .text.gpio_exti_source_select:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:662    .text.gpio_exti_source_select:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:663    .text.gpio_exti_source_select:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:668    .text.gpio_exti_source_select:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:669    .text.gpio_exti_source_select:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:675    .text.gpio_exti_source_select:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:676    .text.gpio_exti_source_select:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:681    .text.gpio_exti_source_select:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:682    .text.gpio_exti_source_select:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:686    .text.gpio_exti_source_select:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:687    .text.gpio_exti_source_select:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:694    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:697    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:699    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:700    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:701    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:702    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:706    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:707    .text.gpio_event_output_config:0000000000000006 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 31
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:708    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:709    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:712    .text.gpio_event_output_config:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:717    .text.gpio_event_output_config:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:720    .text.gpio_event_output_config:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:721    .text.gpio_event_output_config:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:723    .text.gpio_event_output_config:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:724    .text.gpio_event_output_config:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:731    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:734    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:735    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:736    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:737    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:742    .text.gpio_event_output_enable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:743    .text.gpio_event_output_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:750    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:753    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:754    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:755    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:756    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:761    .text.gpio_event_output_disable:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:762    .text.gpio_event_output_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:769    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:772    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:774    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:775    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:776    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:777    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:781    .text.gpio_pin_lock:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:782    .text.gpio_pin_lock:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:784    .text.gpio_pin_lock:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:785    .text.gpio_pin_lock:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:787    .text.gpio_pin_lock:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:788    .text.gpio_pin_lock:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:790    .text.gpio_pin_lock:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:791    .text.gpio_pin_lock:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:794    .text.gpio_pin_lock:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:795    .text.gpio_pin_lock:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:797    .text.gpio_pin_lock:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:798    .text.gpio_pin_lock:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:114    .text.gpio_deinit:000000000000009e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:151    .text.gpio_afio_deinit:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:312    .text.gpio_init:00000000000000a4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:329    .text.gpio_bit_set:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:346    .text.gpio_bit_reset:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:371    .text.gpio_bit_write:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:388    .text.gpio_port_write:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:409    .text.gpio_input_bit_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:429    .text.gpio_input_port_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:450    .text.gpio_output_bit_get:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:470    .text.gpio_output_port_get:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:600    .text.gpio_pin_remap_config:0000000000000086 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:690    .text.gpio_exti_source_select:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:727    .text.gpio_event_output_config:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:746    .text.gpio_event_output_enable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:765    .text.gpio_event_output_disable:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:801    .text.gpio_pin_lock:0000000000000010 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 32
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:708    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:709    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:712    .text.gpio_event_output_config:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:717    .text.gpio_event_output_config:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:720    .text.gpio_event_output_config:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:721    .text.gpio_event_output_config:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:723    .text.gpio_event_output_config:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:724    .text.gpio_event_output_config:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:731    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:734    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:735    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:736    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:737    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:742    .text.gpio_event_output_enable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:743    .text.gpio_event_output_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:750    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:753    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:754    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:755    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:756    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:761    .text.gpio_event_output_disable:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:762    .text.gpio_event_output_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:769    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:772    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:774    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:775    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:776    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:777    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:781    .text.gpio_pin_lock:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:782    .text.gpio_pin_lock:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:784    .text.gpio_pin_lock:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:785    .text.gpio_pin_lock:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:787    .text.gpio_pin_lock:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:788    .text.gpio_pin_lock:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:790    .text.gpio_pin_lock:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:791    .text.gpio_pin_lock:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:794    .text.gpio_pin_lock:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:795    .text.gpio_pin_lock:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:797    .text.gpio_pin_lock:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:798    .text.gpio_pin_lock:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:114    .text.gpio_deinit:000000000000009e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:151    .text.gpio_afio_deinit:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:312    .text.gpio_init:00000000000000a4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:329    .text.gpio_bit_set:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:346    .text.gpio_bit_reset:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:371    .text.gpio_bit_write:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:388    .text.gpio_port_write:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:409    .text.gpio_input_bit_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:429    .text.gpio_input_port_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:450    .text.gpio_output_bit_get:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:470    .text.gpio_output_port_get:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:600    .text.gpio_pin_remap_config:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:690    .text.gpio_exti_source_select:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:727    .text.gpio_event_output_config:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:746    .text.gpio_event_output_enable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:765    .text.gpio_event_output_disable:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:801    .text.gpio_pin_lock:0000000000000010 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 32
 
 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:92     .text.gpio_deinit:000000000000007a .L2
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:43     .text.gpio_deinit:0000000000000026 .L3
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:61     .text.gpio_deinit:000000000000004c .L4
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:80     .text.gpio_deinit:0000000000000068 .L5
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:102    .text.gpio_deinit:000000000000008c .L7
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:34     .text.gpio_deinit:0000000000000020 .L1
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:69     .text.gpio_deinit:000000000000005c .L10
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:176    .text.gpio_init:000000000000000e .L14
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:229    .text.gpio_init:000000000000004a .L15
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:293    .text.gpio_init:0000000000000094 .L16
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:191    .text.gpio_init:000000000000001e .L18
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:285    .text.gpio_init:000000000000008c .L19
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:301    .text.gpio_init:000000000000009c .L20
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:244    .text.gpio_init:000000000000005e .L22
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:224    .text.gpio_init:0000000000000048 .L17
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:280    .text.gpio_init:000000000000008a .L21
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:362    .text.gpio_bit_write:0000000000000006 .L37
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:545    .text.gpio_pin_remap_config:000000000000004e .L45
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:552    .text.gpio_pin_remap_config:0000000000000052 .L47
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:534    .text.gpio_pin_remap_config:0000000000000042 .L50
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:591    .text.gpio_pin_remap_config:0000000000000082 .L51
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:489    .text.gpio_pin_remap_config:000000000000000a .L46
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:581    .text.gpio_pin_remap_config:0000000000000076 .L49
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:519    .text.gpio_pin_remap_config:0000000000000034 .L48
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:568    .text.gpio_pin_remap_config:0000000000000068 .L56
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:639    .text.gpio_exti_source_select:000000000000002c .L58
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:656    .text.gpio_exti_source_select:0000000000000044 .L60
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:673    .text.gpio_exti_source_select:000000000000005c .L61
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:1699   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2855   .debug_str:0000000000000021 .LASF89
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3019   .debug_str:0000000000000522 .LASF90
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2951   .debug_str:000000000000030e .LASF91
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2811   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2849   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2947   .debug_str:00000000000002f8 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2935   .debug_str:000000000000029e .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2911   .debug_str:0000000000000205 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2927   .debug_str:0000000000000262 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2889   .debug_str:0000000000000187 .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2883   .debug_str:0000000000000158 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2963   .debug_str:00000000000003af .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2905   .debug_str:00000000000001e4 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2875   .debug_str:0000000000000131 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2993   .debug_str:0000000000000481 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2903   .debug_str:00000000000001d6 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2939   .debug_str:00000000000002b5 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2891   .debug_str:0000000000000191 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2949   .debug_str:0000000000000305 .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2943   .debug_str:00000000000002d9 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2983   .debug_str:000000000000043b .LASF92
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2893   .debug_str:0000000000000199 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3031   .debug_str:00000000000005ad .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2969   .debug_str:00000000000003e4 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3009   .debug_str:00000000000004e9 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3027   .debug_str:0000000000000596 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2857   .debug_str:00000000000000a9 .LASF20
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 33
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:92     .text.gpio_deinit:000000000000007a .L2
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:43     .text.gpio_deinit:0000000000000026 .L3
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:61     .text.gpio_deinit:000000000000004c .L4
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:80     .text.gpio_deinit:0000000000000068 .L5
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:102    .text.gpio_deinit:000000000000008c .L7
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:34     .text.gpio_deinit:0000000000000020 .L1
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:69     .text.gpio_deinit:000000000000005c .L10
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:176    .text.gpio_init:000000000000000e .L14
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:229    .text.gpio_init:000000000000004a .L15
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:293    .text.gpio_init:0000000000000094 .L16
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:191    .text.gpio_init:000000000000001e .L18
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:285    .text.gpio_init:000000000000008c .L19
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:301    .text.gpio_init:000000000000009c .L20
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:244    .text.gpio_init:000000000000005e .L22
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:224    .text.gpio_init:0000000000000048 .L17
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:280    .text.gpio_init:000000000000008a .L21
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:362    .text.gpio_bit_write:0000000000000006 .L37
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:545    .text.gpio_pin_remap_config:000000000000004e .L45
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:552    .text.gpio_pin_remap_config:0000000000000052 .L47
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:534    .text.gpio_pin_remap_config:0000000000000042 .L50
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:591    .text.gpio_pin_remap_config:0000000000000082 .L51
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:489    .text.gpio_pin_remap_config:000000000000000a .L46
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:581    .text.gpio_pin_remap_config:0000000000000076 .L49
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:519    .text.gpio_pin_remap_config:0000000000000034 .L48
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:568    .text.gpio_pin_remap_config:0000000000000068 .L56
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:639    .text.gpio_exti_source_select:000000000000002c .L58
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:656    .text.gpio_exti_source_select:0000000000000044 .L60
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:673    .text.gpio_exti_source_select:000000000000005c .L61
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:1699   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2855   .debug_str:0000000000000021 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3019   .debug_str:0000000000000522 .LASF90
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2955   .debug_str:000000000000031e .LASF91
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2811   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2849   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2949   .debug_str:00000000000002fb .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2937   .debug_str:00000000000002a1 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2913   .debug_str:0000000000000210 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2929   .debug_str:0000000000000265 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2889   .debug_str:0000000000000187 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2883   .debug_str:0000000000000158 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2963   .debug_str:00000000000003ac .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2907   .debug_str:00000000000001ef .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2875   .debug_str:0000000000000131 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2993   .debug_str:000000000000047e .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2905   .debug_str:00000000000001e1 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2941   .debug_str:00000000000002b8 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2891   .debug_str:0000000000000191 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2951   .debug_str:0000000000000308 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2945   .debug_str:00000000000002dc .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2983   .debug_str:0000000000000438 .LASF92
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2893   .debug_str:0000000000000199 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3031   .debug_str:00000000000005ad .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2969   .debug_str:00000000000003e1 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3009   .debug_str:00000000000004e9 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3027   .debug_str:0000000000000596 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2857   .debug_str:00000000000000a9 .LASF20
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 33
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2971   .debug_str:00000000000003f2 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2895   .debug_str:00000000000001a1 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2919   .debug_str:000000000000022a .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2915   .debug_str:0000000000000216 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2981   .debug_str:000000000000042d .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3025   .debug_str:0000000000000588 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3035   .debug_str:00000000000005c2 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2869   .debug_str:00000000000000f3 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2909   .debug_str:00000000000001f9 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2989   .debug_str:000000000000045f .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3033   .debug_str:00000000000005b4 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2995   .debug_str:0000000000000493 .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2859   .debug_str:00000000000000b6 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3029   .debug_str:00000000000005a1 .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3003   .debug_str:00000000000004c8 .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2863   .debug_str:00000000000000d0 .LASF36
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2899   .debug_str:00000000000001bc .LASF37
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2867   .debug_str:00000000000000e7 .LASF38
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3005   .debug_str:00000000000004d4 .LASF39
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2937   .debug_str:00000000000002aa .LASF40
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2929   .debug_str:0000000000000270 .LASF41
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2941   .debug_str:00000000000002cc .LASF42
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2999   .debug_str:00000000000004b1 .LASF43
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2861   .debug_str:00000000000000c3 .LASF44
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2897   .debug_str:00000000000001af .LASF45
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2953   .debug_str:0000000000000374 .LASF46
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2959   .debug_str:000000000000038e .LASF47
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3011   .debug_str:00000000000004ef .LASF48
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2853   .debug_str:0000000000000013 .LASF49
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3015   .debug_str:0000000000000507 .LASF50
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2923   .debug_str:0000000000000248 .LASF51
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2925   .debug_str:0000000000000256 .LASF52
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2865   .debug_str:00000000000000dc .LASF53
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2901   .debug_str:00000000000001c8 .LASF57
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:770    .text.gpio_pin_lock:0000000000000000 .LFB18
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:799    .text.gpio_pin_lock:0000000000000010 .LFE18
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2931   .debug_str:000000000000027a .LASF54
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2979   .debug_str:0000000000000428 .LASF61
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2235   .debug_loc:0000000000000000 .LLST20
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2887   .debug_str:000000000000016d .LASF55
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:751    .text.gpio_event_output_disable:0000000000000000 .LFB17
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:763    .text.gpio_event_output_disable:000000000000000e .LFE17
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2873   .debug_str:0000000000000118 .LASF56
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:732    .text.gpio_event_output_enable:0000000000000000 .LFB16
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:744    .text.gpio_event_output_enable:000000000000000e .LFE16
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2967   .debug_str:00000000000003cb .LASF58
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:695    .text.gpio_event_output_config:0000000000000000 .LFB15
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:725    .text.gpio_event_output_config:0000000000000014 .LFE15
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2907   .debug_str:00000000000001ed .LASF59
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2249   .debug_loc:0000000000000021 .LLST17
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2973   .debug_str:0000000000000400 .LASF60
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2263   .debug_loc:0000000000000042 .LLST18
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2277   .debug_loc:0000000000000063 .LLST19
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2933   .debug_str:0000000000000286 .LASF62
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:605    .text.gpio_exti_source_select:0000000000000000 .LFB14
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:688    .text.gpio_exti_source_select:000000000000006e .LFE14
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2324   .debug_loc:00000000000000b3 .LLST15
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 34
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2971   .debug_str:00000000000003ef .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2895   .debug_str:00000000000001a1 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2921   .debug_str:0000000000000235 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2917   .debug_str:0000000000000221 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2981   .debug_str:000000000000042a .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3025   .debug_str:0000000000000588 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3035   .debug_str:00000000000005c2 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2869   .debug_str:00000000000000f3 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2911   .debug_str:0000000000000204 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2989   .debug_str:000000000000045c .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3033   .debug_str:00000000000005b4 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2995   .debug_str:0000000000000490 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2859   .debug_str:00000000000000b6 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3029   .debug_str:00000000000005a1 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3003   .debug_str:00000000000004c5 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2863   .debug_str:00000000000000d0 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2901   .debug_str:00000000000001c7 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2867   .debug_str:00000000000000e7 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2897   .debug_str:00000000000001af .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2939   .debug_str:00000000000002ad .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2931   .debug_str:0000000000000273 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2943   .debug_str:00000000000002cf .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2999   .debug_str:00000000000004ae .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2861   .debug_str:00000000000000c3 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2899   .debug_str:00000000000001ba .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2953   .debug_str:0000000000000311 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2959   .debug_str:000000000000038b .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3011   .debug_str:00000000000004ef .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2853   .debug_str:0000000000000013 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3015   .debug_str:0000000000000507 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3005   .debug_str:00000000000004d1 .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2927   .debug_str:0000000000000259 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2865   .debug_str:00000000000000dc .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2903   .debug_str:00000000000001d3 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:770    .text.gpio_pin_lock:0000000000000000 .LFB18
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:799    .text.gpio_pin_lock:0000000000000010 .LFE18
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2933   .debug_str:000000000000027d .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2979   .debug_str:0000000000000425 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2235   .debug_loc:0000000000000000 .LLST20
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2887   .debug_str:000000000000016d .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:751    .text.gpio_event_output_disable:0000000000000000 .LFB17
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:763    .text.gpio_event_output_disable:000000000000000e .LFE17
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2873   .debug_str:0000000000000118 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:732    .text.gpio_event_output_enable:0000000000000000 .LFB16
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:744    .text.gpio_event_output_enable:000000000000000e .LFE16
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2967   .debug_str:00000000000003c8 .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:695    .text.gpio_event_output_config:0000000000000000 .LFB15
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:725    .text.gpio_event_output_config:0000000000000014 .LFE15
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2909   .debug_str:00000000000001f8 .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2249   .debug_loc:0000000000000021 .LLST17
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2973   .debug_str:00000000000003fd .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2263   .debug_loc:0000000000000042 .LLST18
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2277   .debug_loc:0000000000000063 .LLST19
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2935   .debug_str:0000000000000289 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:605    .text.gpio_exti_source_select:0000000000000000 .LFB14
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:688    .text.gpio_exti_source_select:000000000000006e .LFE14
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2324   .debug_loc:00000000000000b3 .LLST15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 34
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2913   .debug_str:000000000000020f .LASF63
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2338   .debug_loc:00000000000000d4 .LLST16
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2945   .debug_str:00000000000002e2 .LASF64
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:475    .text.gpio_pin_remap_config:0000000000000000 .LFB13
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:598    .text.gpio_pin_remap_config:0000000000000086 .LFE13
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2917   .debug_str:0000000000000224 .LASF65
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2965   .debug_str:00000000000003c2 .LASF66
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3021   .debug_str:0000000000000569 .LASF67
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2366   .debug_loc:000000000000010a .LLST11
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2957   .debug_str:0000000000000387 .LASF68
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2407   .debug_loc:0000000000000162 .LLST12
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2975   .debug_str:000000000000040b .LASF69
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2437   .debug_loc:00000000000001a1 .LLST13
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3007   .debug_str:00000000000004df .LASF70
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2474   .debug_loc:0000000000000203 .LLST14
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2961   .debug_str:000000000000039a .LASF71
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:455    .text.gpio_output_port_get:0000000000000000 .LFB12
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:468    .text.gpio_output_port_get:0000000000000008 .LFE12
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2507   .debug_loc:0000000000000245 .LLST10
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2977   .debug_str:0000000000000414 .LASF72
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:434    .text.gpio_output_bit_get:0000000000000000 .LFB11
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:448    .text.gpio_output_bit_get:000000000000000a .LFE11
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2521   .debug_loc:0000000000000266 .LLST9
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2991   .debug_str:000000000000046d .LASF73
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:414    .text.gpio_input_port_get:0000000000000000 .LFB10
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:427    .text.gpio_input_port_get:0000000000000008 .LFE10
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2535   .debug_loc:0000000000000287 .LLST8
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2851   .debug_str:0000000000000000 .LASF74
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:393    .text.gpio_input_bit_get:0000000000000000 .LFB9
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:407    .text.gpio_input_bit_get:000000000000000a .LFE9
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2549   .debug_loc:00000000000002a8 .LLST7
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2921   .debug_str:0000000000000238 .LASF75
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:376    .text.gpio_port_write:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:386    .text.gpio_port_write:0000000000000004 .LFE8
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2987   .debug_str:000000000000045a .LASF76
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3017   .debug_str:0000000000000513 .LASF77
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:351    .text.gpio_bit_write:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:369    .text.gpio_bit_write:000000000000000a .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2885   .debug_str:0000000000000163 .LASF78
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2985   .debug_str:000000000000044b .LASF79
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:334    .text.gpio_bit_reset:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:344    .text.gpio_bit_reset:0000000000000004 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2877   .debug_str:000000000000013c .LASF80
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:317    .text.gpio_bit_set:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:327    .text.gpio_bit_set:0000000000000004 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3001   .debug_str:00000000000004be .LASF81
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:156    .text.gpio_init:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:310    .text.gpio_init:00000000000000a4 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2879   .debug_str:0000000000000149 .LASF82
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2955   .debug_str:0000000000000381 .LASF83
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2563   .debug_loc:00000000000002c9 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2577   .debug_loc:00000000000002ea .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2881   .debug_str:000000000000014e .LASF84
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2609   .debug_loc:0000000000000339 .LLST5
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2621   .debug_loc:0000000000000358 .LLST6
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2997   .debug_str:00000000000004a0 .LASF85
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:119    .text.gpio_afio_deinit:0000000000000000 .LFB3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 35
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2915   .debug_str:000000000000021a .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2338   .debug_loc:00000000000000d4 .LLST16
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2947   .debug_str:00000000000002e5 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:475    .text.gpio_pin_remap_config:0000000000000000 .LFB13
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:598    .text.gpio_pin_remap_config:0000000000000086 .LFE13
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2919   .debug_str:000000000000022f .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2965   .debug_str:00000000000003bf .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3021   .debug_str:0000000000000569 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2366   .debug_loc:000000000000010a .LLST11
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2957   .debug_str:0000000000000384 .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2407   .debug_loc:0000000000000162 .LLST12
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2975   .debug_str:0000000000000408 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2437   .debug_loc:00000000000001a1 .LLST13
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3007   .debug_str:00000000000004df .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2474   .debug_loc:0000000000000203 .LLST14
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2961   .debug_str:0000000000000397 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:455    .text.gpio_output_port_get:0000000000000000 .LFB12
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:468    .text.gpio_output_port_get:0000000000000008 .LFE12
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2507   .debug_loc:0000000000000245 .LLST10
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2977   .debug_str:0000000000000411 .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:434    .text.gpio_output_bit_get:0000000000000000 .LFB11
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:448    .text.gpio_output_bit_get:000000000000000a .LFE11
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2521   .debug_loc:0000000000000266 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2991   .debug_str:000000000000046a .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:414    .text.gpio_input_port_get:0000000000000000 .LFB10
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:427    .text.gpio_input_port_get:0000000000000008 .LFE10
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2535   .debug_loc:0000000000000287 .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2851   .debug_str:0000000000000000 .LASF74
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:393    .text.gpio_input_bit_get:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:407    .text.gpio_input_bit_get:000000000000000a .LFE9
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2549   .debug_loc:00000000000002a8 .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2923   .debug_str:0000000000000243 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:376    .text.gpio_port_write:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:386    .text.gpio_port_write:0000000000000004 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2987   .debug_str:0000000000000457 .LASF76
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3017   .debug_str:0000000000000513 .LASF77
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:351    .text.gpio_bit_write:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:369    .text.gpio_bit_write:000000000000000a .LFE7
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2885   .debug_str:0000000000000163 .LASF78
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2985   .debug_str:0000000000000448 .LASF79
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:334    .text.gpio_bit_reset:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:344    .text.gpio_bit_reset:0000000000000004 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2877   .debug_str:000000000000013c .LASF80
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:317    .text.gpio_bit_set:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:327    .text.gpio_bit_set:0000000000000004 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3001   .debug_str:00000000000004bb .LASF81
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:156    .text.gpio_init:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:310    .text.gpio_init:00000000000000a4 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2879   .debug_str:0000000000000149 .LASF82
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2925   .debug_str:0000000000000253 .LASF83
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2563   .debug_loc:00000000000002c9 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2577   .debug_loc:00000000000002ea .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2881   .debug_str:000000000000014e .LASF84
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2609   .debug_loc:0000000000000339 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2621   .debug_loc:0000000000000358 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2997   .debug_str:000000000000049d .LASF85
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:119    .text.gpio_afio_deinit:0000000000000000 .LFB3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 35
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:149    .text.gpio_afio_deinit:0000000000000020 .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2657   .debug_loc:00000000000003b9 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:134    .text.gpio_afio_deinit:0000000000000010 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:147    .text.gpio_afio_deinit:0000000000000020 .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3013   .debug_str:00000000000004fb .LASF86
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:14     .text.gpio_deinit:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:112    .text.gpio_deinit:000000000000009e .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2675   .debug_loc:00000000000003e5 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2708   .debug_loc:0000000000000435 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:56     .text.gpio_deinit:0000000000000046 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:66     .text.gpio_deinit:0000000000000058 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:79     .text.gpio_deinit:0000000000000068 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:87     .text.gpio_deinit:0000000000000074 .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:97     .text.gpio_deinit:0000000000000086 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:107    .text.gpio_deinit:0000000000000098 .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:3023   .debug_str:0000000000000570 .LASF87
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:2871   .debug_str:00000000000000ff .LASF88
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:773    .text.gpio_pin_lock:0000000000000000 .LVL71
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:779    .text.gpio_pin_lock:0000000000000004 .LVL72
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:792    .text.gpio_pin_lock:000000000000000c .LVL73
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:698    .text.gpio_event_output_config:0000000000000000 .LVL65
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:710    .text.gpio_event_output_config:0000000000000008 .LVL67
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:715    .text.gpio_event_output_config:000000000000000e .LVL69
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:704    .text.gpio_event_output_config:0000000000000006 .LVL66
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:713    .text.gpio_event_output_config:000000000000000c .LVL68
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:718    .text.gpio_event_output_config:0000000000000010 .LVL70
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:608    .text.gpio_exti_source_select:0000000000000000 .LVL61
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:621    .text.gpio_exti_source_select:0000000000000010 .LVL63
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:615    .text.gpio_exti_source_select:0000000000000006 .LVL62
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:624    .text.gpio_exti_source_select:0000000000000012 .LVL64
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:478    .text.gpio_pin_remap_config:0000000000000000 .LVL45
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:500    .text.gpio_pin_remap_config:0000000000000018 .LVL47
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:530    .text.gpio_pin_remap_config:0000000000000040 .LVL50
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:544    .text.gpio_pin_remap_config:000000000000004e .LVL52
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:551    .text.gpio_pin_remap_config:0000000000000052 .LVL54
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:590    .text.gpio_pin_remap_config:0000000000000082 .LVL60
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:518    .text.gpio_pin_remap_config:0000000000000034 .LVL49
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:558    .text.gpio_pin_remap_config:000000000000005a .LVL55
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:567    .text.gpio_pin_remap_config:0000000000000068 .LVL56
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:580    .text.gpio_pin_remap_config:0000000000000076 .LVL59
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:488    .text.gpio_pin_remap_config:000000000000000a .LVL46
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:512    .text.gpio_pin_remap_config:000000000000002a .LVL48
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:549    .text.gpio_pin_remap_config:0000000000000050 .LVL53
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:573    .text.gpio_pin_remap_config:000000000000006e .LVL57
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:458    .text.gpio_output_port_get:0000000000000000 .LVL43
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:462    .text.gpio_output_port_get:0000000000000002 .LVL44
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:437    .text.gpio_output_bit_get:0000000000000000 .LVL41
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:441    .text.gpio_output_bit_get:0000000000000002 .LVL42
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:417    .text.gpio_input_port_get:0000000000000000 .LVL39
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:421    .text.gpio_input_port_get:0000000000000002 .LVL40
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:396    .text.gpio_input_bit_get:0000000000000000 .LVL37
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:400    .text.gpio_input_bit_get:0000000000000002 .LVL38
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:159    .text.gpio_init:0000000000000000 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:190    .text.gpio_init:000000000000001e .LVL20
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:175    .text.gpio_init:000000000000000e .LVL19
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:228    .text.gpio_init:000000000000004a .LVL24
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:231    .text.gpio_init:000000000000004c .LVL25
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s 			page 36
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:149    .text.gpio_afio_deinit:0000000000000020 .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2657   .debug_loc:00000000000003b9 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:134    .text.gpio_afio_deinit:0000000000000010 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:147    .text.gpio_afio_deinit:0000000000000020 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3013   .debug_str:00000000000004fb .LASF86
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:14     .text.gpio_deinit:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:112    .text.gpio_deinit:000000000000009e .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2675   .debug_loc:00000000000003e5 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2708   .debug_loc:0000000000000435 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:56     .text.gpio_deinit:0000000000000046 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:66     .text.gpio_deinit:0000000000000058 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:79     .text.gpio_deinit:0000000000000068 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:87     .text.gpio_deinit:0000000000000074 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:97     .text.gpio_deinit:0000000000000086 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:107    .text.gpio_deinit:0000000000000098 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:3023   .debug_str:0000000000000570 .LASF87
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:2871   .debug_str:00000000000000ff .LASF88
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:773    .text.gpio_pin_lock:0000000000000000 .LVL71
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:779    .text.gpio_pin_lock:0000000000000004 .LVL72
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:792    .text.gpio_pin_lock:000000000000000c .LVL73
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:698    .text.gpio_event_output_config:0000000000000000 .LVL65
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:710    .text.gpio_event_output_config:0000000000000008 .LVL67
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:715    .text.gpio_event_output_config:000000000000000e .LVL69
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:704    .text.gpio_event_output_config:0000000000000006 .LVL66
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:713    .text.gpio_event_output_config:000000000000000c .LVL68
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:718    .text.gpio_event_output_config:0000000000000010 .LVL70
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:608    .text.gpio_exti_source_select:0000000000000000 .LVL61
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:621    .text.gpio_exti_source_select:0000000000000010 .LVL63
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:615    .text.gpio_exti_source_select:0000000000000006 .LVL62
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:624    .text.gpio_exti_source_select:0000000000000012 .LVL64
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:478    .text.gpio_pin_remap_config:0000000000000000 .LVL45
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:500    .text.gpio_pin_remap_config:0000000000000018 .LVL47
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:530    .text.gpio_pin_remap_config:0000000000000040 .LVL50
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:544    .text.gpio_pin_remap_config:000000000000004e .LVL52
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:551    .text.gpio_pin_remap_config:0000000000000052 .LVL54
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:590    .text.gpio_pin_remap_config:0000000000000082 .LVL60
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:518    .text.gpio_pin_remap_config:0000000000000034 .LVL49
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:558    .text.gpio_pin_remap_config:000000000000005a .LVL55
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:567    .text.gpio_pin_remap_config:0000000000000068 .LVL56
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:580    .text.gpio_pin_remap_config:0000000000000076 .LVL59
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:488    .text.gpio_pin_remap_config:000000000000000a .LVL46
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:512    .text.gpio_pin_remap_config:000000000000002a .LVL48
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:549    .text.gpio_pin_remap_config:0000000000000050 .LVL53
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:573    .text.gpio_pin_remap_config:000000000000006e .LVL57
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:458    .text.gpio_output_port_get:0000000000000000 .LVL43
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:462    .text.gpio_output_port_get:0000000000000002 .LVL44
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:437    .text.gpio_output_bit_get:0000000000000000 .LVL41
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:441    .text.gpio_output_bit_get:0000000000000002 .LVL42
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:417    .text.gpio_input_port_get:0000000000000000 .LVL39
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:421    .text.gpio_input_port_get:0000000000000002 .LVL40
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:396    .text.gpio_input_bit_get:0000000000000000 .LVL37
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:400    .text.gpio_input_bit_get:0000000000000002 .LVL38
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:159    .text.gpio_init:0000000000000000 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:190    .text.gpio_init:000000000000001e .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:175    .text.gpio_init:000000000000000e .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:228    .text.gpio_init:000000000000004a .LVL24
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:231    .text.gpio_init:000000000000004c .LVL25
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s 			page 36
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:245    .text.gpio_init:000000000000005e .LVL26
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:284    .text.gpio_init:000000000000008c .LVL30
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:287    .text.gpio_init:000000000000008e .LVL31
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:292    .text.gpio_init:0000000000000094 .LVL32
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:168    .text.gpio_init:0000000000000008 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:203    .text.gpio_init:000000000000002e .LVL21
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:211    .text.gpio_init:000000000000003a .LVL22
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:217    .text.gpio_init:0000000000000042 .LVL23
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:259    .text.gpio_init:0000000000000070 .LVL27
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:267    .text.gpio_init:000000000000007c .LVL28
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:273    .text.gpio_init:0000000000000084 .LVL29
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:125    .text.gpio_afio_deinit:0000000000000002 .LCFI5
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:143    .text.gpio_afio_deinit:0000000000000018 .LCFI6
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:22     .text.gpio_deinit:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:40     .text.gpio_deinit:0000000000000024 .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:44     .text.gpio_deinit:0000000000000026 .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:75     .text.gpio_deinit:0000000000000060 .LCFI3
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:81     .text.gpio_deinit:0000000000000068 .LCFI4
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:18     .text.gpio_deinit:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:54     .text.gpio_deinit:000000000000003e .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:60     .text.gpio_deinit:000000000000004c .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:64     .text.gpio_deinit:0000000000000050 .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:85     .text.gpio_deinit:000000000000006c .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:91     .text.gpio_deinit:000000000000007a .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:95     .text.gpio_deinit:000000000000007e .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:101    .text.gpio_deinit:000000000000008c .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:105    .text.gpio_deinit:0000000000000090 .LVL13
-C:\Users\Karzan\AppData\Local\Temp\ccDHPI5G.s:810    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:245    .text.gpio_init:000000000000005e .LVL26
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:284    .text.gpio_init:000000000000008c .LVL30
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:287    .text.gpio_init:000000000000008e .LVL31
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:292    .text.gpio_init:0000000000000094 .LVL32
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:168    .text.gpio_init:0000000000000008 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:203    .text.gpio_init:000000000000002e .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:211    .text.gpio_init:000000000000003a .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:217    .text.gpio_init:0000000000000042 .LVL23
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:259    .text.gpio_init:0000000000000070 .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:267    .text.gpio_init:000000000000007c .LVL28
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:273    .text.gpio_init:0000000000000084 .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:125    .text.gpio_afio_deinit:0000000000000002 .LCFI5
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:143    .text.gpio_afio_deinit:0000000000000018 .LCFI6
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:22     .text.gpio_deinit:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:40     .text.gpio_deinit:0000000000000024 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:44     .text.gpio_deinit:0000000000000026 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:75     .text.gpio_deinit:0000000000000060 .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:81     .text.gpio_deinit:0000000000000068 .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:18     .text.gpio_deinit:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:54     .text.gpio_deinit:000000000000003e .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:60     .text.gpio_deinit:000000000000004c .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:64     .text.gpio_deinit:0000000000000050 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:85     .text.gpio_deinit:000000000000006c .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:91     .text.gpio_deinit:000000000000007a .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:95     .text.gpio_deinit:000000000000007e .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:101    .text.gpio_deinit:000000000000008c .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:105    .text.gpio_deinit:0000000000000090 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccc4UztO.s:810    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

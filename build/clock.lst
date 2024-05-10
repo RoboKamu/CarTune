@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 1
 
 
    1              		.file	"clock.c"
@@ -17,844 +17,807 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 1
   15              		.file 1 "clock.c"
    1:clock.c       **** #include "clock.h"
    2:clock.c       **** 
-   3:clock.c       **** void init_clock_display(){
-  16              		.loc 1 3 26
+   3:clock.c       **** #define BITMASK   0xFFFFFFF8
+   4:clock.c       **** #define RED 	    0xF800
+   5:clock.c       **** #define GREEN	    0x07E0
+   6:clock.c       **** #define BLUE	    0x001F
+   7:clock.c       **** 
+   8:clock.c       **** void init_clock_display(){
+  16              		.loc 1 8 26
   17              		.cfi_startproc
-   4:clock.c       ****   //t5omsi();                                         // Initialize timer5 1kHz
-   5:clock.c       ****   Lcd_SetType(LCD_INVERTED);                          // or use LCD_INVERTED!
-  18              		.loc 1 5 3
-   3:clock.c       ****   //t5omsi();                                         // Initialize timer5 1kHz
-  19              		.loc 1 3 26 is_stmt 0
-  20 0000 4111     		addi	sp,sp,-16
+   9:clock.c       ****   lio_lcd_config_t lcd_conf = {0x00, 160, 80, 0, 24};
+  18              		.loc 1 9 3
+   8:clock.c       ****   lio_lcd_config_t lcd_conf = {0x00, 160, 80, 0, 24};
+  19              		.loc 1 8 26 is_stmt 0
+  20 0000 7971     		addi	sp,sp,-48
   21              	.LCFI0:
-  22              		.cfi_def_cfa_offset 16
-  23              		.loc 1 5 3
-  24 0002 0545     		li	a0,1
-   3:clock.c       ****   //t5omsi();                                         // Initialize timer5 1kHz
-  25              		.loc 1 3 26
-  26 0004 06C6     		sw	ra,12(sp)
-  27              		.cfi_offset 1, -4
-  28              		.loc 1 5 3
-  29 0006 97000000 		call	Lcd_SetType
-  29      E7800000 
-  30              	.LVL0:
-   6:clock.c       ****   Lcd_Init();
-  31              		.loc 1 6 3 is_stmt 1
-  32 000e 97000000 		call	Lcd_Init
-  32      E7800000 
-  33              	.LVL1:
-   7:clock.c       ****   LCD_Clear(BLACK);
-  34              		.loc 1 7 3
-   8:clock.c       **** }
-  35              		.loc 1 8 1 is_stmt 0
-  36 0016 B240     		lw	ra,12(sp)
-  37              		.cfi_restore 1
-   7:clock.c       ****   LCD_Clear(BLACK);
-  38              		.loc 1 7 3
-  39 0018 0145     		li	a0,0
-  40              		.loc 1 8 1
-  41 001a 4101     		addi	sp,sp,16
-  42              	.LCFI1:
-  43              		.cfi_def_cfa_offset 0
-   7:clock.c       ****   LCD_Clear(BLACK);
-  44              		.loc 1 7 3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 2
+  22              		.cfi_def_cfa_offset 48
+  23              		.loc 1 9 20
+  24 0002 02CA     		sw	zero,20(sp)
+  25 0004 9307000A 		li	a5,160
+  26 0008 02CC     		sw	zero,24(sp)
+  27 000a 231BF100 		sh	a5,22(sp)
+  28 000e 93070005 		li	a5,80
+  29 0012 02CE     		sw	zero,28(sp)
+  30 0014 231CF100 		sh	a5,24(sp)
+  10:clock.c       **** 	lio_lcd_init(lcd_conf);
+  31              		.loc 1 10 2
+  32 0018 4C08     		addi	a1,sp,20
+   9:clock.c       ****   lio_lcd_config_t lcd_conf = {0x00, 160, 80, 0, 24};
+  33              		.loc 1 9 20
+  34 001a E147     		li	a5,24
+  35              		.loc 1 10 2
+  36 001c 3146     		li	a2,12
+  37 001e 0A85     		mv	a0,sp
+   8:clock.c       ****   lio_lcd_config_t lcd_conf = {0x00, 160, 80, 0, 24};
+  38              		.loc 1 8 26
+  39 0020 06D6     		sw	ra,44(sp)
+  40              		.cfi_offset 1, -4
+   9:clock.c       ****   lio_lcd_config_t lcd_conf = {0x00, 160, 80, 0, 24};
+  41              		.loc 1 9 20
+  42 0022 231EF100 		sh	a5,28(sp)
+  43              		.loc 1 10 2 is_stmt 1
+  44 0026 97000000 		call	memcpy
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 2
 
 
-  45 001c 17030000 		tail	LCD_Clear
-  45      67000300 
-  46              	.LVL2:
-  47              		.cfi_endproc
-  48              	.LFE5:
-  50              		.section	.text.incrementClock,"ax",@progbits
-  51              		.align	1
-  52              		.globl	incrementClock
-  54              	incrementClock:
-  55              	.LFB6:
-   9:clock.c       **** void incrementClock(int8_t *pHour, int8_t *pMinute) {
-  56              		.loc 1 9 53 is_stmt 1
-  57              		.cfi_startproc
-  58              	.LVL3:
-  10:clock.c       ****   (*pMinute)++;
-  59              		.loc 1 10 3
-  60              		.loc 1 10 13 is_stmt 0
-  61 0000 83C70500 		lbu	a5,0(a1)
-  11:clock.c       ****   if ((*pMinute) == 60) {
-  62              		.loc 1 11 6
-  63 0004 1307C003 		li	a4,60
-  10:clock.c       ****   (*pMinute)++;
-  64              		.loc 1 10 13
-  65 0008 8507     		addi	a5,a5,1
-  66 000a E207     		slli	a5,a5,24
-  67 000c E187     		srai	a5,a5,24
-  68              		.loc 1 11 3 is_stmt 1
-  69              		.loc 1 11 6 is_stmt 0
-  70 000e 6385E700 		beq	a5,a4,.L4
-  10:clock.c       ****   (*pMinute)++;
-  71              		.loc 1 10 13
-  72 0012 2380F500 		sb	a5,0(a1)
-  73 0016 8280     		ret
-  74              	.L4:
-  75              	.LVL4:
-  76              	.LBB4:
-  77              	.LBB5:
-  12:clock.c       ****     (*pMinute) = 0;
-  78              		.loc 1 12 5 is_stmt 1
-  79              		.loc 1 12 16 is_stmt 0
-  80 0018 23800500 		sb	zero,0(a1)
-  13:clock.c       ****     (*pHour)++;
-  81              		.loc 1 13 5 is_stmt 1
-  82              		.loc 1 13 13 is_stmt 0
-  83 001c 83470500 		lbu	a5,0(a0)
-  14:clock.c       ****     if ((*pHour) == 24) {
-  84              		.loc 1 14 8
-  85 0020 6147     		li	a4,24
-  13:clock.c       ****     (*pHour)++;
-  86              		.loc 1 13 13
-  87 0022 8507     		addi	a5,a5,1
-  88 0024 E207     		slli	a5,a5,24
-  89 0026 E187     		srai	a5,a5,24
-  90              		.loc 1 14 5 is_stmt 1
-  91              		.loc 1 14 8 is_stmt 0
-  92 0028 6385E700 		beq	a5,a4,.L6
-  13:clock.c       ****     (*pHour)++;
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 3
+  44      E7800000 
+  45              	.LVL0:
+  46 002e 0A85     		mv	a0,sp
+  47 0030 97000000 		call	lio_lcd_init
+  47      E7800000 
+  48              	.LVL1:
+  11:clock.c       **** 	lio_lcd_clear(0);
+  49              		.loc 1 11 2
+  12:clock.c       **** }
+  50              		.loc 1 12 1 is_stmt 0
+  51 0038 B250     		lw	ra,44(sp)
+  52              		.cfi_restore 1
+  11:clock.c       **** 	lio_lcd_clear(0);
+  53              		.loc 1 11 2
+  54 003a 0145     		li	a0,0
+  55              		.loc 1 12 1
+  56 003c 4561     		addi	sp,sp,48
+  57              	.LCFI1:
+  58              		.cfi_def_cfa_offset 0
+  11:clock.c       **** 	lio_lcd_clear(0);
+  59              		.loc 1 11 2
+  60 003e 17030000 		tail	lio_lcd_clear
+  60      67000300 
+  61              	.LVL2:
+  62              		.cfi_endproc
+  63              	.LFE5:
+  65              		.section	.text.incrementClock,"ax",@progbits
+  66              		.align	1
+  67              		.globl	incrementClock
+  69              	incrementClock:
+  70              	.LFB6:
+  13:clock.c       **** void incrementClock(int8_t *pHour, int8_t *pMinute) {
+  71              		.loc 1 13 53 is_stmt 1
+  72              		.cfi_startproc
+  73              	.LVL3:
+  14:clock.c       ****   (*pMinute)++;
+  74              		.loc 1 14 3
+  75              		.loc 1 14 13 is_stmt 0
+  76 0000 83C70500 		lbu	a5,0(a1)
+  15:clock.c       ****   if ((*pMinute) == 60) {
+  77              		.loc 1 15 6
+  78 0004 1307C003 		li	a4,60
+  14:clock.c       ****   (*pMinute)++;
+  79              		.loc 1 14 13
+  80 0008 8507     		addi	a5,a5,1
+  81 000a E207     		slli	a5,a5,24
+  82 000c E187     		srai	a5,a5,24
+  83              		.loc 1 15 3 is_stmt 1
+  84              		.loc 1 15 6 is_stmt 0
+  85 000e 6385E700 		beq	a5,a4,.L4
+  14:clock.c       ****   (*pMinute)++;
+  86              		.loc 1 14 13
+  87 0012 2380F500 		sb	a5,0(a1)
+  88 0016 8280     		ret
+  89              	.L4:
+  90              	.LVL4:
+  91              	.LBB4:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 3
 
 
-  93              		.loc 1 13 13
-  94 002c 2300F500 		sb	a5,0(a0)
-  95 0030 8280     		ret
-  96              	.L6:
-  15:clock.c       ****       (*pHour) = 0;
-  97              		.loc 1 15 7 is_stmt 1
-  98              		.loc 1 15 16 is_stmt 0
-  99 0032 23000500 		sb	zero,0(a0)
- 100              	.LBE5:
- 101              	.LBE4:
-  16:clock.c       ****     }
-  17:clock.c       ****   }
-  18:clock.c       **** }
- 102              		.loc 1 18 1
- 103 0036 8280     		ret
- 104              		.cfi_endproc
- 105              	.LFE6:
- 107              		.section	.text.decrementClock,"ax",@progbits
- 108              		.align	1
- 109              		.globl	decrementClock
- 111              	decrementClock:
- 112              	.LFB7:
-  19:clock.c       **** 
-  20:clock.c       **** void decrementClock(int8_t *pHour, int8_t *pMinute) {
- 113              		.loc 1 20 53 is_stmt 1
- 114              		.cfi_startproc
- 115              	.LVL5:
-  21:clock.c       ****   (*pMinute)--;
- 116              		.loc 1 21 3
- 117              		.loc 1 21 13 is_stmt 0
- 118 0000 83C70500 		lbu	a5,0(a1)
-  22:clock.c       ****   if ((*pMinute) == -1) {
- 119              		.loc 1 22 6
- 120 0004 7D57     		li	a4,-1
-  21:clock.c       ****   (*pMinute)--;
- 121              		.loc 1 21 13
- 122 0006 FD17     		addi	a5,a5,-1
- 123 0008 E207     		slli	a5,a5,24
- 124 000a E187     		srai	a5,a5,24
- 125              		.loc 1 22 3 is_stmt 1
- 126              		.loc 1 22 6 is_stmt 0
- 127 000c 6385E700 		beq	a5,a4,.L9
-  21:clock.c       ****   (*pMinute)--;
- 128              		.loc 1 21 13
- 129 0010 2380F500 		sb	a5,0(a1)
- 130 0014 8280     		ret
- 131              	.L9:
-  23:clock.c       ****     (*pMinute) = 59;
- 132              		.loc 1 23 5 is_stmt 1
- 133              		.loc 1 23 16 is_stmt 0
- 134 0016 1307B003 		li	a4,59
- 135 001a 2380E500 		sb	a4,0(a1)
-  24:clock.c       ****     (*pHour)--;
- 136              		.loc 1 24 5 is_stmt 1
- 137              		.loc 1 24 13 is_stmt 0
- 138 001e 03470500 		lbu	a4,0(a0)
- 139 0022 7D17     		addi	a4,a4,-1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 4
+  92              	.LBB5:
+  16:clock.c       ****     (*pMinute) = 0;
+  93              		.loc 1 16 5 is_stmt 1
+  94              		.loc 1 16 16 is_stmt 0
+  95 0018 23800500 		sb	zero,0(a1)
+  17:clock.c       ****     (*pHour)++;
+  96              		.loc 1 17 5 is_stmt 1
+  97              		.loc 1 17 13 is_stmt 0
+  98 001c 83470500 		lbu	a5,0(a0)
+  18:clock.c       ****     if ((*pHour) == 24) {
+  99              		.loc 1 18 8
+ 100 0020 6147     		li	a4,24
+  17:clock.c       ****     (*pHour)++;
+ 101              		.loc 1 17 13
+ 102 0022 8507     		addi	a5,a5,1
+ 103 0024 E207     		slli	a5,a5,24
+ 104 0026 E187     		srai	a5,a5,24
+ 105              		.loc 1 18 5 is_stmt 1
+ 106              		.loc 1 18 8 is_stmt 0
+ 107 0028 6385E700 		beq	a5,a4,.L6
+  17:clock.c       ****     (*pHour)++;
+ 108              		.loc 1 17 13
+ 109 002c 2300F500 		sb	a5,0(a0)
+ 110 0030 8280     		ret
+ 111              	.L6:
+  19:clock.c       ****       (*pHour) = 0;
+ 112              		.loc 1 19 7 is_stmt 1
+ 113              		.loc 1 19 16 is_stmt 0
+ 114 0032 23000500 		sb	zero,0(a0)
+ 115              	.LBE5:
+ 116              	.LBE4:
+  20:clock.c       ****     }
+  21:clock.c       ****   }
+  22:clock.c       **** }
+ 117              		.loc 1 22 1
+ 118 0036 8280     		ret
+ 119              		.cfi_endproc
+ 120              	.LFE6:
+ 122              		.section	.text.decrementClock,"ax",@progbits
+ 123              		.align	1
+ 124              		.globl	decrementClock
+ 126              	decrementClock:
+ 127              	.LFB7:
+  23:clock.c       **** 
+  24:clock.c       **** void decrementClock(int8_t *pHour, int8_t *pMinute) {
+ 128              		.loc 1 24 53 is_stmt 1
+ 129              		.cfi_startproc
+ 130              	.LVL5:
+  25:clock.c       ****   (*pMinute)--;
+ 131              		.loc 1 25 3
+ 132              		.loc 1 25 13 is_stmt 0
+ 133 0000 83C70500 		lbu	a5,0(a1)
+  26:clock.c       ****   if ((*pMinute) == -1) {
+ 134              		.loc 1 26 6
+ 135 0004 7D57     		li	a4,-1
+  25:clock.c       ****   (*pMinute)--;
+ 136              		.loc 1 25 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 4
 
 
- 140 0024 6207     		slli	a4,a4,24
- 141 0026 6187     		srai	a4,a4,24
-  25:clock.c       ****     if ((*pHour) == -1) {
- 142              		.loc 1 25 5 is_stmt 1
- 143              		.loc 1 25 8 is_stmt 0
- 144 0028 6305F700 		beq	a4,a5,.L11
-  24:clock.c       ****     (*pHour)--;
- 145              		.loc 1 24 13
- 146 002c 2300E500 		sb	a4,0(a0)
- 147 0030 8280     		ret
- 148              	.L11:
-  26:clock.c       ****       (*pHour) = 23;
- 149              		.loc 1 26 7 is_stmt 1
- 150              		.loc 1 26 16 is_stmt 0
- 151 0032 DD47     		li	a5,23
- 152 0034 2300F500 		sb	a5,0(a0)
-  27:clock.c       ****     }
-  28:clock.c       ****   }
-  29:clock.c       **** }
- 153              		.loc 1 29 1
- 154 0038 8280     		ret
- 155              		.cfi_endproc
- 156              	.LFE7:
- 158              		.section	.text.tick,"ax",@progbits
- 159              		.align	1
- 160              		.globl	tick
- 162              	tick:
- 163              	.LFB8:
-  30:clock.c       **** 
-  31:clock.c       **** void tick(int *pMs, int8_t *pHour, int8_t *pMinute) {
- 164              		.loc 1 31 53 is_stmt 1
- 165              		.cfi_startproc
- 166              	.LVL6:
-  32:clock.c       ****   (*pMs)++;
- 167              		.loc 1 32 3
-  31:clock.c       ****   (*pMs)++;
- 168              		.loc 1 31 53 is_stmt 0
- 169 0000 2A87     		mv	a4,a0
- 170              		.loc 1 32 9
- 171 0002 1C43     		lw	a5,0(a4)
-  33:clock.c       ****   if ((*pMs) == 60000) {
- 172              		.loc 1 33 6
- 173 0004 BD66     		li	a3,61440
- 174 0006 938606A6 		addi	a3,a3,-1440
-  32:clock.c       ****   (*pMs)++;
- 175              		.loc 1 32 9
- 176 000a 8507     		addi	a5,a5,1
- 177              		.loc 1 33 3 is_stmt 1
-  31:clock.c       ****   (*pMs)++;
- 178              		.loc 1 31 53 is_stmt 0
- 179 000c 2E85     		mv	a0,a1
- 180              	.LVL7:
- 181              		.loc 1 33 6
- 182 000e 6384D700 		beq	a5,a3,.L14
-  32:clock.c       ****   (*pMs)++;
- 183              		.loc 1 32 9
- 184 0012 1CC3     		sw	a5,0(a4)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 5
+ 137 0006 FD17     		addi	a5,a5,-1
+ 138 0008 E207     		slli	a5,a5,24
+ 139 000a E187     		srai	a5,a5,24
+ 140              		.loc 1 26 3 is_stmt 1
+ 141              		.loc 1 26 6 is_stmt 0
+ 142 000c 6385E700 		beq	a5,a4,.L9
+  25:clock.c       ****   (*pMinute)--;
+ 143              		.loc 1 25 13
+ 144 0010 2380F500 		sb	a5,0(a1)
+ 145 0014 8280     		ret
+ 146              	.L9:
+  27:clock.c       ****     (*pMinute) = 59;
+ 147              		.loc 1 27 5 is_stmt 1
+ 148              		.loc 1 27 16 is_stmt 0
+ 149 0016 1307B003 		li	a4,59
+ 150 001a 2380E500 		sb	a4,0(a1)
+  28:clock.c       ****     (*pHour)--;
+ 151              		.loc 1 28 5 is_stmt 1
+ 152              		.loc 1 28 13 is_stmt 0
+ 153 001e 03470500 		lbu	a4,0(a0)
+ 154 0022 7D17     		addi	a4,a4,-1
+ 155 0024 6207     		slli	a4,a4,24
+ 156 0026 6187     		srai	a4,a4,24
+  29:clock.c       ****     if ((*pHour) == -1) {
+ 157              		.loc 1 29 5 is_stmt 1
+ 158              		.loc 1 29 8 is_stmt 0
+ 159 0028 6305F700 		beq	a4,a5,.L11
+  28:clock.c       ****     (*pHour)--;
+ 160              		.loc 1 28 13
+ 161 002c 2300E500 		sb	a4,0(a0)
+ 162 0030 8280     		ret
+ 163              	.L11:
+  30:clock.c       ****       (*pHour) = 23;
+ 164              		.loc 1 30 7 is_stmt 1
+ 165              		.loc 1 30 16 is_stmt 0
+ 166 0032 DD47     		li	a5,23
+ 167 0034 2300F500 		sb	a5,0(a0)
+  31:clock.c       ****     }
+  32:clock.c       ****   }
+  33:clock.c       **** }
+ 168              		.loc 1 33 1
+ 169 0038 8280     		ret
+ 170              		.cfi_endproc
+ 171              	.LFE7:
+ 173              		.section	.text.tick,"ax",@progbits
+ 174              		.align	1
+ 175              		.globl	tick
+ 177              	tick:
+ 178              	.LFB8:
+  34:clock.c       **** 
+  35:clock.c       **** void tick(int *pMs, int8_t *pHour, int8_t *pMinute) {
+ 179              		.loc 1 35 53 is_stmt 1
+ 180              		.cfi_startproc
+ 181              	.LVL6:
+  36:clock.c       ****   (*pMs)++;
+ 182              		.loc 1 36 3
+  35:clock.c       ****   (*pMs)++;
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 5
 
 
-  34:clock.c       ****     (*pMs) = 0;
-  35:clock.c       ****     incrementClock(pHour, pMinute);
-  36:clock.c       ****   }
-  37:clock.c       **** }
- 185              		.loc 1 37 1
- 186 0014 8280     		ret
- 187              	.L14:
-  34:clock.c       ****     (*pMs) = 0;
- 188              		.loc 1 34 5 is_stmt 1
-  34:clock.c       ****     (*pMs) = 0;
- 189              		.loc 1 34 12 is_stmt 0
- 190 0016 23200700 		sw	zero,0(a4)
-  35:clock.c       ****   }
- 191              		.loc 1 35 5 is_stmt 1
- 192 001a B285     		mv	a1,a2
- 193              	.LVL8:
- 194 001c 17030000 		tail	incrementClock
- 194      67000300 
- 195              	.LVL9:
- 196              		.cfi_endproc
- 197              	.LFE8:
- 199              		.section	.text.displayClock,"ax",@progbits
- 200              		.align	1
- 201              		.globl	displayClock
- 203              	displayClock:
- 204              	.LFB9:
-  38:clock.c       **** 
-  39:clock.c       **** void displayClock(int8_t hour, int8_t mins){
- 205              		.loc 1 39 44
- 206              		.cfi_startproc
- 207              	.LVL10:
-  40:clock.c       ****   // Update LCD display with the new time
-  41:clock.c       ****   char timeStr[10];
- 208              		.loc 1 41 3
-  42:clock.c       ****   sprintf(timeStr, "CLOCK: %02d:%02d", hour, mins);
- 209              		.loc 1 42 3
-  39:clock.c       ****   // Update LCD display with the new time
- 210              		.loc 1 39 44 is_stmt 0
- 211 0000 0111     		addi	sp,sp,-32
- 212              	.LCFI2:
- 213              		.cfi_def_cfa_offset 32
- 214              		.loc 1 42 3
- 215 0002 AE86     		mv	a3,a1
- 216 0004 B7050000 		lui	a1,%hi(.LC0)
- 217              	.LVL11:
- 218 0008 2A86     		mv	a2,a0
- 219 000a 93850500 		addi	a1,a1,%lo(.LC0)
- 220 000e 4800     		addi	a0,sp,4
- 221              	.LVL12:
-  39:clock.c       ****   // Update LCD display with the new time
- 222              		.loc 1 39 44
- 223 0010 06CE     		sw	ra,28(sp)
- 224              		.cfi_offset 1, -4
- 225              		.loc 1 42 3
- 226 0012 97000000 		call	sprintf
- 226      E7800000 
- 227              	.LVL13:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 6
+ 183              		.loc 1 35 53 is_stmt 0
+ 184 0000 2A87     		mv	a4,a0
+ 185              		.loc 1 36 9
+ 186 0002 1C43     		lw	a5,0(a4)
+  37:clock.c       ****   if ((*pMs) == 60000) {
+ 187              		.loc 1 37 6
+ 188 0004 BD66     		li	a3,61440
+ 189 0006 938606A6 		addi	a3,a3,-1440
+  36:clock.c       ****   (*pMs)++;
+ 190              		.loc 1 36 9
+ 191 000a 8507     		addi	a5,a5,1
+ 192              		.loc 1 37 3 is_stmt 1
+  35:clock.c       ****   (*pMs)++;
+ 193              		.loc 1 35 53 is_stmt 0
+ 194 000c 2E85     		mv	a0,a1
+ 195              	.LVL7:
+ 196              		.loc 1 37 6
+ 197 000e 6384D700 		beq	a5,a3,.L14
+  36:clock.c       ****   (*pMs)++;
+ 198              		.loc 1 36 9
+ 199 0012 1CC3     		sw	a5,0(a4)
+  38:clock.c       ****     (*pMs) = 0;
+  39:clock.c       ****     incrementClock(pHour, pMinute);
+  40:clock.c       ****   }
+  41:clock.c       **** }
+ 200              		.loc 1 41 1
+ 201 0014 8280     		ret
+ 202              	.L14:
+  38:clock.c       ****     (*pMs) = 0;
+ 203              		.loc 1 38 5 is_stmt 1
+  38:clock.c       ****     (*pMs) = 0;
+ 204              		.loc 1 38 12 is_stmt 0
+ 205 0016 23200700 		sw	zero,0(a4)
+  39:clock.c       ****   }
+ 206              		.loc 1 39 5 is_stmt 1
+ 207 001a B285     		mv	a1,a2
+ 208              	.LVL8:
+ 209 001c 17030000 		tail	incrementClock
+ 209      67000300 
+ 210              	.LVL9:
+ 211              		.cfi_endproc
+ 212              	.LFE8:
+ 214              		.section	.text.displayClock,"ax",@progbits
+ 215              		.align	1
+ 216              		.globl	displayClock
+ 218              	displayClock:
+ 219              	.LFB9:
+  42:clock.c       **** 
+  43:clock.c       **** void displayClock(int8_t hour, int8_t mins){
+ 220              		.loc 1 43 44
+ 221              		.cfi_startproc
+ 222              	.LVL10:
+  44:clock.c       ****   // Update LCD display with the new time
+  45:clock.c       ****   lio_lcd_printf_scaled(15, 15, 0xFFFF, 3, "%02d:%02d", hour, mins);
+ 223              		.loc 1 45 3
+ 224 0000 37070000 		lui	a4,%hi(.LC0)
+ 225 0004 4166     		li	a2,65536
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 6
 
 
-  43:clock.c       ****   LCD_ShowStr(10, 30, timeStr, WHITE, OPAQUE);
- 228              		.loc 1 43 3 is_stmt 1
- 229 001a C166     		li	a3,65536
- 230 001c 5000     		addi	a2,sp,4
- 231 001e 0147     		li	a4,0
- 232 0020 FD16     		addi	a3,a3,-1
- 233 0022 F945     		li	a1,30
- 234 0024 2945     		li	a0,10
- 235 0026 97000000 		call	LCD_ShowStr
- 235      E7800000 
- 236              	.LVL14:
-  44:clock.c       **** }
- 237              		.loc 1 44 1 is_stmt 0
- 238 002e F240     		lw	ra,28(sp)
- 239              		.cfi_restore 1
- 240 0030 0561     		addi	sp,sp,32
- 241              	.LCFI3:
- 242              		.cfi_def_cfa_offset 0
- 243 0032 8280     		jr	ra
- 244              		.cfi_endproc
- 245              	.LFE9:
- 247              		.section	.text.pskiva,"ax",@progbits
- 248              		.align	1
- 249              		.globl	pskiva
- 251              	pskiva:
- 252              	.LFB10:
-  45:clock.c       **** 
-  46:clock.c       **** void pskiva(uint8_t enable, int8_t hour, int8_t min){
- 253              		.loc 1 46 53 is_stmt 1
- 254              		.cfi_startproc
+ 226 0006 2E88     		mv	a6,a1
+ 227 0008 AA87     		mv	a5,a0
+ 228 000a 13070700 		addi	a4,a4,%lo(.LC0)
+ 229 000e 8D46     		li	a3,3
+ 230 0010 7D16     		addi	a2,a2,-1
+ 231 0012 BD45     		li	a1,15
+ 232              	.LVL11:
+ 233 0014 3D45     		li	a0,15
+ 234              	.LVL12:
+ 235 0016 17030000 		tail	lio_lcd_printf_scaled
+ 235      67000300 
+ 236              	.LVL13:
+ 237              		.cfi_endproc
+ 238              	.LFE9:
+ 240              		.section	.text.pskiva,"ax",@progbits
+ 241              		.align	1
+ 242              		.globl	pskiva
+ 244              	pskiva:
+ 245              	.LFB10:
+  46:clock.c       **** }
+  47:clock.c       **** 
+  48:clock.c       **** void pskiva(uint8_t state, int8_t hour, int8_t min, uint8_t* pEnable){
+ 246              		.loc 1 48 70
+ 247              		.cfi_startproc
+ 248              	.LVL14:
+  49:clock.c       ****   // update time only if there is a change in state, not when its already on
+  50:clock.c       ****   if ((*pEnable) > 0 && state > 0) return; 
+ 249              		.loc 1 50 3
+ 250              		.loc 1 50 6 is_stmt 0
+ 251 0000 03C70600 		lbu	a4,0(a3)
+  48:clock.c       ****   // update time only if there is a change in state, not when its already on
+ 252              		.loc 1 48 70
+ 253 0004 AA87     		mv	a5,a0
+ 254 0006 2E85     		mv	a0,a1
  255              	.LVL15:
-  47:clock.c       ****   if (enable){
- 256              		.loc 1 47 3
-  46:clock.c       ****   if (enable){
- 257              		.loc 1 46 53 is_stmt 0
- 258 0000 4111     		addi	sp,sp,-16
- 259              	.LCFI4:
- 260              		.cfi_def_cfa_offset 16
- 261 0002 22C4     		sw	s0,8(sp)
- 262 0004 26C2     		sw	s1,4(sp)
- 263 0006 06C6     		sw	ra,12(sp)
- 264              		.cfi_offset 8, -8
- 265              		.cfi_offset 9, -12
- 266              		.cfi_offset 1, -4
-  46:clock.c       ****   if (enable){
- 267              		.loc 1 46 53
- 268 0008 2E84     		mv	s0,a1
- 269 000a B284     		mv	s1,a2
-  48:clock.c       ****     // pskiva on
-  49:clock.c       ****     LCD_ShowStr(10, 50, "ON ", GREEN, OPAQUE);
- 270              		.loc 1 49 5
- 271 000c 0147     		li	a4,0
- 272 000e 9306007E 		li	a3,2016
-  47:clock.c       ****     // pskiva on
- 273              		.loc 1 47 6
- 274 0012 1DCD     		beq	a0,zero,.L20
- 275              		.loc 1 49 5 is_stmt 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 7
+ 256              		.loc 1 50 6
+ 257 0008 19C3     		beq	a4,zero,.L19
+ 258              		.loc 1 50 22 discriminator 1
+ 259 000a 95C3     		beq	a5,zero,.L21
+ 260 000c 8280     		ret
+ 261              	.L19:
+  51:clock.c       ****   
+  52:clock.c       ****   if (state){                         // pskiva on
+ 262              		.loc 1 52 3 is_stmt 1
+ 263              		.loc 1 52 6 is_stmt 0
+ 264 000e 85C3     		beq	a5,zero,.L21
+  53:clock.c       ****     (*pEnable) = 1;                   // note enabled
+ 265              		.loc 1 53 5 is_stmt 1
+ 266              		.loc 1 53 16 is_stmt 0
+ 267 0010 8547     		li	a5,1
+ 268 0012 2380F600 		sb	a5,0(a3)
+  54:clock.c       ****     if (min+30 > 60) {                // if the coming half hour includes a new hour 
+ 269              		.loc 1 54 5 is_stmt 1
+ 270              		.loc 1 54 8 is_stmt 0
+ 271 0016 F947     		li	a5,30
+  55:clock.c       ****       displayClock(hour+1, 0);        // show minutes as 0 and hour as the coming hour (+1)
+  56:clock.c       ****     } else {
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 7
 
 
- 276 0014 37060000 		lui	a2,%hi(.LC1)
- 277              	.LVL16:
- 278 0018 13060600 		addi	a2,a2,%lo(.LC1)
- 279 001c 93052003 		li	a1,50
- 280              	.LVL17:
- 281 0020 2945     		li	a0,10
- 282              	.LVL18:
- 283 0022 97000000 		call	LCD_ShowStr
- 283      E7800000 
- 284              	.LVL19:
-  50:clock.c       ****     //char tmpStr[10];
-  51:clock.c       ****     
-  52:clock.c       ****     if (min+30 > 60) {                                    // if the coming half hour includes a new
- 285              		.loc 1 52 5
- 286              		.loc 1 52 8 is_stmt 0
- 287 002a F947     		li	a5,30
- 288 002c 63DF9700 		ble	s1,a5,.L21
-  53:clock.c       ****       displayClock(hour+1, 0);     // show minutes as 0 and hour as the coming hour (+1)
- 289              		.loc 1 53 7 is_stmt 1
- 290              		.loc 1 53 24 is_stmt 0
- 291 0030 13051400 		addi	a0,s0,1
- 292              		.loc 1 53 7
- 293 0034 6205     		slli	a0,a0,24
- 294 0036 8145     		li	a1,0
- 295 0038 6185     		srai	a0,a0,24
- 296              	.L23:
-  54:clock.c       ****     } else {
-  55:clock.c       ****       displayClock(hour, 30);      // otherwise keep hour and set min to 30
-  56:clock.c       ****     }
-  57:clock.c       ****     //displayClock(tmpStr[8], tmpStr[9]);                   // dislay pskiva
-  58:clock.c       ****     return;
-  59:clock.c       ****   }
-  60:clock.c       ****   // otherwise..pskiva off
-  61:clock.c       ****   LCD_ShowStr(10, 50, "OFF", GREEN, OPAQUE);
+  57:clock.c       ****       displayClock(hour, 30);         // otherwise keep hour and set min to 30
+ 272              		.loc 1 57 7
+ 273 0018 F945     		li	a1,30
+ 274              	.LVL16:
+  54:clock.c       ****     if (min+30 > 60) {                // if the coming half hour includes a new hour 
+ 275              		.loc 1 54 8
+ 276 001a 63D6C700 		ble	a2,a5,.L29
+  55:clock.c       ****       displayClock(hour+1, 0);        // show minutes as 0 and hour as the coming hour (+1)
+ 277              		.loc 1 55 7 is_stmt 1
+  55:clock.c       ****       displayClock(hour+1, 0);        // show minutes as 0 and hour as the coming hour (+1)
+ 278              		.loc 1 55 24 is_stmt 0
+ 279 001e 0505     		addi	a0,a0,1
+  55:clock.c       ****       displayClock(hour+1, 0);        // show minutes as 0 and hour as the coming hour (+1)
+ 280              		.loc 1 55 7
+ 281 0020 6205     		slli	a0,a0,24
+ 282 0022 8145     		li	a1,0
+ 283 0024 6185     		srai	a0,a0,24
+ 284              	.L29:
+ 285              		.loc 1 57 7
+ 286 0026 17030000 		tail	displayClock
+ 286      67000300 
+ 287              	.LVL17:
+ 288              	.L21:
+  48:clock.c       ****   // update time only if there is a change in state, not when its already on
+ 289              		.loc 1 48 70
+ 290 002e 4111     		addi	sp,sp,-16
+ 291              	.LCFI2:
+ 292              		.cfi_def_cfa_offset 16
+ 293 0030 22C4     		sw	s0,8(sp)
+ 294 0032 B285     		mv	a1,a2
+ 295              	.LVL18:
+  58:clock.c       ****     }
+  59:clock.c       ****     return; 
+  60:clock.c       ****   }
+  61:clock.c       ****   // otherwise..pskiva off
   62:clock.c       ****   displayClock(hour, min);
-  63:clock.c       **** }
- 297              		.loc 1 63 1
- 298 003a 2244     		lw	s0,8(sp)
- 299              		.cfi_remember_state
- 300              		.cfi_restore 8
- 301 003c B240     		lw	ra,12(sp)
- 302              		.cfi_restore 1
- 303 003e 9244     		lw	s1,4(sp)
- 304              		.cfi_restore 9
- 305 0040 4101     		addi	sp,sp,16
- 306              	.LCFI5:
- 307              		.cfi_def_cfa_offset 0
-  62:clock.c       **** }
- 308              		.loc 1 62 3
- 309 0042 17030000 		tail	displayClock
- 309      67000300 
- 310              	.LVL20:
- 311              	.L21:
- 312              	.LCFI6:
- 313              		.cfi_restore_state
-  55:clock.c       ****     }
- 314              		.loc 1 55 7 is_stmt 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 8
+ 296              		.loc 1 62 3 is_stmt 1
+ 297              		.cfi_offset 8, -8
+ 298 0034 3684     		mv	s0,a3
+  48:clock.c       ****   // update time only if there is a change in state, not when its already on
+ 299              		.loc 1 48 70 is_stmt 0
+ 300 0036 06C6     		sw	ra,12(sp)
+ 301              		.cfi_offset 1, -4
+ 302              		.loc 1 62 3
+ 303 0038 97000000 		call	displayClock
+ 303      E7800000 
+ 304              	.LVL19:
+  63:clock.c       ****   (*pEnable) = 0;
+ 305              		.loc 1 63 3 is_stmt 1
+ 306              		.loc 1 63 14 is_stmt 0
+ 307 0040 23000400 		sb	zero,0(s0)
+  64:clock.c       **** }
+ 308              		.loc 1 64 1
+ 309 0044 B240     		lw	ra,12(sp)
+ 310              		.cfi_restore 1
+ 311 0046 2244     		lw	s0,8(sp)
+ 312              		.cfi_restore 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 8
 
 
- 315 004a F945     		li	a1,30
- 316              	.L24:
-  62:clock.c       **** }
- 317              		.loc 1 62 3 is_stmt 0
- 318 004c 2285     		mv	a0,s0
- 319 004e F5B7     		j	.L23
- 320              	.LVL21:
- 321              	.L20:
-  61:clock.c       ****   displayClock(hour, min);
- 322              		.loc 1 61 3 is_stmt 1
- 323 0050 37060000 		lui	a2,%hi(.LC2)
- 324              	.LVL22:
- 325 0054 93052003 		li	a1,50
- 326              	.LVL23:
- 327 0058 13060600 		addi	a2,a2,%lo(.LC2)
- 328 005c 2945     		li	a0,10
- 329              	.LVL24:
- 330 005e 97000000 		call	LCD_ShowStr
- 330      E7800000 
- 331              	.LVL25:
-  62:clock.c       **** }
- 332              		.loc 1 62 3
- 333 0066 A685     		mv	a1,s1
- 334 0068 D5B7     		j	.L24
- 335              		.cfi_endproc
- 336              	.LFE10:
- 338              		.section	.rodata.displayClock.str1.4,"aMS",@progbits,1
- 339              		.align	2
- 340              	.LC0:
- 341 0000 434C4F43 		.string	"CLOCK: %02d:%02d"
- 341      4B3A2025 
- 341      3032643A 
- 341      25303264 
- 341      00
- 342              		.section	.rodata.pskiva.str1.4,"aMS",@progbits,1
- 343              		.align	2
- 344              	.LC1:
- 345 0000 4F4E2000 		.string	"ON "
- 346              	.LC2:
- 347 0004 4F464600 		.string	"OFF"
- 348              		.text
- 349              	.Letext0:
- 350              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 351              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 352              		.file 4 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 353              		.file 5 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 354              		.file 6 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 355              		.file 7 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 356              		.file 8 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 357              		.file 9 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
- 358              		.file 10 "lcd.h"
- 359              		.file 11 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compil
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 9
+ 313              	.LVL20:
+ 314 0048 4101     		addi	sp,sp,16
+ 315              	.LCFI3:
+ 316              		.cfi_def_cfa_offset 0
+ 317 004a 8280     		jr	ra
+ 318              		.cfi_endproc
+ 319              	.LFE10:
+ 321              		.section	.rodata.displayClock.str1.4,"aMS",@progbits,1
+ 322              		.align	2
+ 323              	.LC0:
+ 324 0000 25303264 		.string	"%02d:%02d"
+ 324      3A253032 
+ 324      6400
+ 325              		.text
+ 326              	.Letext0:
+ 327              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 328              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 329              		.file 4 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 330              		.file 5 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 331              		.file 6 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 332              		.file 7 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 333              		.file 8 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+ 334              		.file 9 "lio_lcd.h"
+ 335              		.file 10 "<built-in>"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 clock.c
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:13     .text.init_clock_display:0000000000000000 init_clock_display
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:17     .text.init_clock_display:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:18     .text.init_clock_display:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:19     .text.init_clock_display:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:20     .text.init_clock_display:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:22     .text.init_clock_display:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:24     .text.init_clock_display:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:26     .text.init_clock_display:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:27     .text.init_clock_display:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:29     .text.init_clock_display:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:32     .text.init_clock_display:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:35     .text.init_clock_display:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:36     .text.init_clock_display:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:37     .text.init_clock_display:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:39     .text.init_clock_display:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:41     .text.init_clock_display:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:43     .text.init_clock_display:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:45     .text.init_clock_display:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:47     .text.init_clock_display:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:54     .text.incrementClock:0000000000000000 incrementClock
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:57     .text.incrementClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:59     .text.incrementClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:60     .text.incrementClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:61     .text.incrementClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:63     .text.incrementClock:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:65     .text.incrementClock:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:69     .text.incrementClock:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:70     .text.incrementClock:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:72     .text.incrementClock:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:79     .text.incrementClock:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:80     .text.incrementClock:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:82     .text.incrementClock:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:83     .text.incrementClock:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:85     .text.incrementClock:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:87     .text.incrementClock:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:91     .text.incrementClock:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:92     .text.incrementClock:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:94     .text.incrementClock:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:98     .text.incrementClock:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:99     .text.incrementClock:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:103    .text.incrementClock:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:104    .text.incrementClock:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:111    .text.decrementClock:0000000000000000 decrementClock
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:114    .text.decrementClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:116    .text.decrementClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:117    .text.decrementClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:118    .text.decrementClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:120    .text.decrementClock:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:122    .text.decrementClock:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:126    .text.decrementClock:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:127    .text.decrementClock:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:129    .text.decrementClock:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:133    .text.decrementClock:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:134    .text.decrementClock:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:137    .text.decrementClock:000000000000001e .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 10
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:13     .text.init_clock_display:0000000000000000 init_clock_display
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:17     .text.init_clock_display:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:18     .text.init_clock_display:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:19     .text.init_clock_display:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:20     .text.init_clock_display:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:22     .text.init_clock_display:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:24     .text.init_clock_display:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:32     .text.init_clock_display:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:34     .text.init_clock_display:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:36     .text.init_clock_display:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:39     .text.init_clock_display:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:40     .text.init_clock_display:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:42     .text.init_clock_display:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:44     .text.init_clock_display:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:50     .text.init_clock_display:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:51     .text.init_clock_display:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:52     .text.init_clock_display:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:54     .text.init_clock_display:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:56     .text.init_clock_display:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:58     .text.init_clock_display:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:60     .text.init_clock_display:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:62     .text.init_clock_display:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:69     .text.incrementClock:0000000000000000 incrementClock
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:72     .text.incrementClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:74     .text.incrementClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:75     .text.incrementClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:76     .text.incrementClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:78     .text.incrementClock:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:80     .text.incrementClock:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:84     .text.incrementClock:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:85     .text.incrementClock:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:87     .text.incrementClock:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:94     .text.incrementClock:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:95     .text.incrementClock:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:97     .text.incrementClock:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:98     .text.incrementClock:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:100    .text.incrementClock:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:102    .text.incrementClock:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:106    .text.incrementClock:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:107    .text.incrementClock:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:109    .text.incrementClock:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:113    .text.incrementClock:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:114    .text.incrementClock:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:118    .text.incrementClock:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:119    .text.incrementClock:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:126    .text.decrementClock:0000000000000000 decrementClock
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:129    .text.decrementClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:131    .text.decrementClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:132    .text.decrementClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:133    .text.decrementClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:135    .text.decrementClock:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:137    .text.decrementClock:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:141    .text.decrementClock:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:142    .text.decrementClock:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:144    .text.decrementClock:0000000000000010 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 10
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:138    .text.decrementClock:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:143    .text.decrementClock:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:144    .text.decrementClock:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:146    .text.decrementClock:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:150    .text.decrementClock:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:151    .text.decrementClock:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:154    .text.decrementClock:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:155    .text.decrementClock:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:162    .text.tick:0000000000000000 tick
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:165    .text.tick:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:167    .text.tick:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:168    .text.tick:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:169    .text.tick:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:171    .text.tick:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:173    .text.tick:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:176    .text.tick:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:178    .text.tick:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:179    .text.tick:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:182    .text.tick:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:184    .text.tick:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:186    .text.tick:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:189    .text.tick:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:190    .text.tick:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:192    .text.tick:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:196    .text.tick:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:203    .text.displayClock:0000000000000000 displayClock
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:206    .text.displayClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:208    .text.displayClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:209    .text.displayClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:210    .text.displayClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:211    .text.displayClock:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:213    .text.displayClock:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:215    .text.displayClock:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:223    .text.displayClock:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:224    .text.displayClock:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:226    .text.displayClock:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:229    .text.displayClock:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:238    .text.displayClock:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:239    .text.displayClock:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:242    .text.displayClock:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:244    .text.displayClock:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:251    .text.pskiva:0000000000000000 pskiva
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:254    .text.pskiva:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:256    .text.pskiva:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:257    .text.pskiva:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:258    .text.pskiva:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:260    .text.pskiva:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:264    .text.pskiva:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:265    .text.pskiva:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:266    .text.pskiva:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:268    .text.pskiva:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:271    .text.pskiva:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:274    .text.pskiva:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:276    .text.pskiva:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:286    .text.pskiva:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:287    .text.pskiva:000000000000002a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:290    .text.pskiva:0000000000000030 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 11
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:148    .text.decrementClock:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:149    .text.decrementClock:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:152    .text.decrementClock:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:153    .text.decrementClock:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:158    .text.decrementClock:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:159    .text.decrementClock:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:161    .text.decrementClock:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:165    .text.decrementClock:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:166    .text.decrementClock:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:169    .text.decrementClock:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:170    .text.decrementClock:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:177    .text.tick:0000000000000000 tick
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:180    .text.tick:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:182    .text.tick:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:183    .text.tick:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:184    .text.tick:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:186    .text.tick:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:188    .text.tick:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:191    .text.tick:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:193    .text.tick:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:194    .text.tick:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:197    .text.tick:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:199    .text.tick:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:201    .text.tick:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:204    .text.tick:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:205    .text.tick:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:207    .text.tick:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:211    .text.tick:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:218    .text.displayClock:0000000000000000 displayClock
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:221    .text.displayClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:223    .text.displayClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:224    .text.displayClock:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:237    .text.displayClock:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:244    .text.pskiva:0000000000000000 pskiva
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:247    .text.pskiva:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:249    .text.pskiva:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:250    .text.pskiva:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:251    .text.pskiva:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:253    .text.pskiva:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:257    .text.pskiva:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:259    .text.pskiva:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:263    .text.pskiva:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:264    .text.pskiva:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:266    .text.pskiva:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:267    .text.pskiva:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:270    .text.pskiva:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:271    .text.pskiva:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:273    .text.pskiva:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:276    .text.pskiva:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:278    .text.pskiva:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:279    .text.pskiva:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:281    .text.pskiva:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:286    .text.pskiva:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:290    .text.pskiva:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:292    .text.pskiva:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:297    .text.pskiva:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:298    .text.pskiva:0000000000000034 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 11
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:291    .text.pskiva:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:293    .text.pskiva:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:298    .text.pskiva:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:299    .text.pskiva:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:300    .text.pskiva:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:302    .text.pskiva:000000000000003e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:304    .text.pskiva:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:307    .text.pskiva:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:309    .text.pskiva:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:313    .text.pskiva:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:315    .text.pskiva:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:318    .text.pskiva:000000000000004c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:323    .text.pskiva:0000000000000050 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:333    .text.pskiva:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:335    .text.pskiva:000000000000006a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:50     .text.init_clock_display:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:107    .text.incrementClock:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:158    .text.decrementClock:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:199    .text.tick:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:247    .text.displayClock:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:338    .text.pskiva:000000000000006a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:300    .text.pskiva:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:301    .text.pskiva:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:303    .text.pskiva:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:306    .text.pskiva:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:307    .text.pskiva:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:309    .text.pskiva:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:310    .text.pskiva:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:312    .text.pskiva:0000000000000048 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:316    .text.pskiva:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:318    .text.pskiva:000000000000004c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:65     .text.init_clock_display:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:122    .text.incrementClock:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:173    .text.decrementClock:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:214    .text.tick:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:240    .text.displayClock:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:321    .text.pskiva:000000000000004c .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:74     .text.incrementClock:0000000000000018 .L4
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:96     .text.incrementClock:0000000000000032 .L6
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:131    .text.decrementClock:0000000000000016 .L9
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:148    .text.decrementClock:0000000000000032 .L11
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:187    .text.tick:0000000000000016 .L14
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:340    .rodata.displayClock.str1.4:0000000000000000 .LC0
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:344    .rodata.pskiva.str1.4:0000000000000000 .LC1
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:346    .rodata.pskiva.str1.4:0000000000000004 .LC2
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:321    .text.pskiva:0000000000000050 .L20
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:311    .text.pskiva:000000000000004a .L21
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:296    .text.pskiva:000000000000003a .L23
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:316    .text.pskiva:000000000000004c .L24
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:2214   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3441   .debug_str:00000000000004e9 .LASF143
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3435   .debug_str:00000000000004ce .LASF144
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3367   .debug_str:0000000000000334 .LASF145
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3177   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3193   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3223   .debug_str:00000000000000a0 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3235   .debug_str:00000000000000dd .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3207   .debug_str:0000000000000039 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3369   .debug_str:000000000000039a .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3197   .debug_str:000000000000000c .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3445   .debug_str:000000000000057a .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3211   .debug_str:000000000000004c .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3279   .debug_str:000000000000019f .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3305   .debug_str:000000000000020b .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3263   .debug_str:0000000000000151 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3217   .debug_str:0000000000000075 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3429   .debug_str:00000000000004a6 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3419   .debug_str:000000000000047f .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3357   .debug_str:00000000000002f5 .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3231   .debug_str:00000000000000cf .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3417   .debug_str:0000000000000477 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3465   .debug_str:00000000000005e2 .LASF16
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 12
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:89     .text.incrementClock:0000000000000018 .L4
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:111    .text.incrementClock:0000000000000032 .L6
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:146    .text.decrementClock:0000000000000016 .L9
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:163    .text.decrementClock:0000000000000032 .L11
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:202    .text.tick:0000000000000016 .L14
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:323    .rodata.displayClock.str1.4:0000000000000000 .LC0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:261    .text.pskiva:000000000000000e .L19
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:288    .text.pskiva:000000000000002e .L21
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:284    .text.pskiva:0000000000000026 .L29
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:2196   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3427   .debug_str:0000000000000545 .LASF149
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3421   .debug_str:000000000000052a .LASF150
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3323   .debug_str:00000000000002f9 .LASF151
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3147   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3163   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3191   .debug_str:0000000000000097 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3203   .debug_str:00000000000000d4 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3175   .debug_str:0000000000000030 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3347   .debug_str:00000000000003d7 .LASF3
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3167   .debug_str:000000000000000c .LASF4
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3411   .debug_str:00000000000004f6 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3431   .debug_str:00000000000005d6 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3223   .debug_str:0000000000000124 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3255   .debug_str:00000000000001cd .LASF8
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3283   .debug_str:000000000000024b .LASF9
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3235   .debug_str:000000000000015a .LASF10
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3185   .debug_str:000000000000006c .LASF11
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3231   .debug_str:0000000000000143 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3397   .debug_str:00000000000004bd .LASF13
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3339   .debug_str:00000000000003a5 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3199   .debug_str:00000000000000c6 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3395   .debug_str:00000000000004b5 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3451   .debug_str:000000000000063f .LASF17
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3301   .debug_str:00000000000002a2 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3273   .debug_str:000000000000021d .LASF19
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3387   .debug_str:0000000000000495 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3389   .debug_str:000000000000049d .LASF21
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3363   .debug_str:0000000000000422 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3435   .debug_str:00000000000005ee .LASF23
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3345   .debug_str:00000000000003c5 .LASF24
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 12
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3321   .debug_str:0000000000000260 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3297   .debug_str:00000000000001e4 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3409   .debug_str:0000000000000457 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3411   .debug_str:000000000000045f .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3385   .debug_str:00000000000003e5 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3449   .debug_str:0000000000000592 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3363   .debug_str:0000000000000315 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3375   .debug_str:00000000000003b7 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3289   .debug_str:00000000000001cc .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3437   .debug_str:00000000000004d6 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3403   .debug_str:0000000000000442 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3281   .debug_str:00000000000001aa .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3461   .debug_str:00000000000005d7 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3295   .debug_str:00000000000001df .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3229   .debug_str:00000000000000c6 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3481   .debug_str:0000000000000634 .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3241   .debug_str:00000000000000f5 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3493   .debug_str:0000000000000668 .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3345   .debug_str:00000000000002b9 .LASF35
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3339   .debug_str:000000000000029f .LASF36
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3415   .debug_str:000000000000046d .LASF37
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3491   .debug_str:000000000000065e .LASF38
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3477   .debug_str:000000000000061a .LASF39
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3245   .debug_str:0000000000000104 .LASF40
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3199   .debug_str:0000000000000016 .LASF41
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3195   .debug_str:0000000000000000 .LASF42
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3443   .debug_str:0000000000000571 .LASF43
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3257   .debug_str:0000000000000138 .LASF44
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3347   .debug_str:00000000000002c2 .LASF45
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3395   .debug_str:0000000000000412 .LASF46
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3277   .debug_str:000000000000019a .LASF47
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3379   .debug_str:00000000000003cf .LASF48
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3239   .debug_str:00000000000000ef .LASF49
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3427   .debug_str:00000000000004a0 .LASF50
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3387   .debug_str:00000000000003f0 .LASF51
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3255   .debug_str:0000000000000131 .LASF52
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3307   .debug_str:000000000000021d .LASF53
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3219   .debug_str:000000000000008c .LASF54
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3247   .debug_str:0000000000000112 .LASF55
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3293   .debug_str:00000000000001d9 .LASF56
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3337   .debug_str:0000000000000298 .LASF57
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3413   .debug_str:0000000000000467 .LASF58
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3233   .debug_str:00000000000000d6 .LASF59
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3237   .debug_str:00000000000000e9 .LASF60
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3473   .debug_str:000000000000060c .LASF61
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3425   .debug_str:0000000000000497 .LASF62
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3269   .debug_str:000000000000016e .LASF63
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3309   .debug_str:0000000000000223 .LASF64
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3329   .debug_str:000000000000027e .LASF65
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3389   .debug_str:00000000000003f8 .LASF66
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3381   .debug_str:00000000000003d6 .LASF67
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3405   .debug_str:000000000000044a .LASF68
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3421   .debug_str:000000000000048b .LASF69
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3259   .debug_str:0000000000000140 .LASF70
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3301   .debug_str:00000000000001fb .LASF71
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3287   .debug_str:00000000000001c4 .LASF72
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3393   .debug_str:000000000000040d .LASF73
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 13
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3353   .debug_str:00000000000003f4 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3263   .debug_str:00000000000001f2 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3423   .debug_str:0000000000000532 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3381   .debug_str:0000000000000480 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3257   .debug_str:00000000000001d8 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3447   .debug_str:0000000000000634 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3271   .debug_str:0000000000000218 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3197   .debug_str:00000000000000bd .LASF32
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3467   .debug_str:0000000000000691 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3209   .debug_str:00000000000000ec .LASF34
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3479   .debug_str:00000000000006c7 .LASF35
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3325   .debug_str:000000000000035f .LASF36
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3319   .debug_str:00000000000002e6 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3393   .debug_str:00000000000004ab .LASF38
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3475   .debug_str:00000000000006b2 .LASF39
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3463   .debug_str:0000000000000677 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3213   .debug_str:00000000000000fb .LASF41
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3415   .debug_str:0000000000000512 .LASF42
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3165   .debug_str:0000000000000000 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3429   .debug_str:00000000000005cd .LASF44
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3227   .debug_str:0000000000000134 .LASF45
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3331   .debug_str:000000000000037c .LASF46
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3373   .debug_str:0000000000000450 .LASF47
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3253   .debug_str:00000000000001c8 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3357   .debug_str:000000000000040c .LASF49
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3207   .debug_str:00000000000000e6 .LASF50
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3405   .debug_str:00000000000004de .LASF51
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3365   .debug_str:000000000000042d .LASF52
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3225   .debug_str:000000000000012d .LASF53
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3285   .debug_str:000000000000025d .LASF54
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3187   .debug_str:0000000000000083 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3215   .debug_str:0000000000000109 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3269   .debug_str:0000000000000212 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3317   .debug_str:00000000000002df .LASF58
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3391   .debug_str:00000000000004a5 .LASF59
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3201   .debug_str:00000000000000cd .LASF60
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3205   .debug_str:00000000000000e0 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3459   .debug_str:0000000000000669 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3403   .debug_str:00000000000004d5 .LASF63
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3243   .debug_str:000000000000017e .LASF64
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3287   .debug_str:0000000000000263 .LASF65
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3311   .debug_str:00000000000002cd .LASF66
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3367   .debug_str:0000000000000435 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3359   .debug_str:0000000000000413 .LASF68
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3383   .debug_str:0000000000000488 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3399   .debug_str:00000000000004c9 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3229   .debug_str:000000000000013c .LASF71
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3277   .debug_str:0000000000000234 .LASF72
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3261   .debug_str:00000000000001ea .LASF73
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3371   .debug_str:000000000000044b .LASF74
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3173   .debug_str:0000000000000025 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3379   .debug_str:0000000000000467 .LASF76
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3375   .debug_str:0000000000000455 .LASF77
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3335   .debug_str:000000000000038b .LASF78
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3377   .debug_str:000000000000045d .LASF79
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3299   .debug_str:000000000000029a .LASF80
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3233   .debug_str:0000000000000150 .LASF81
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 13
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3205   .debug_str:000000000000002e .LASF74
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3401   .debug_str:0000000000000429 .LASF75
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3397   .debug_str:0000000000000417 .LASF76
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3353   .debug_str:00000000000002db .LASF77
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3399   .debug_str:000000000000041f .LASF78
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3333   .debug_str:000000000000028a .LASF79
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3261   .debug_str:0000000000000147 .LASF80
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3489   .debug_str:0000000000000659 .LASF81
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3359   .debug_str:00000000000002fc .LASF82
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3303   .debug_str:0000000000000203 .LASF83
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3267   .debug_str:0000000000000166 .LASF84
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3327   .debug_str:0000000000000279 .LASF85
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3209   .debug_str:0000000000000043 .LASF86
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3469   .debug_str:00000000000005f5 .LASF87
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3249   .debug_str:000000000000011a .LASF88
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3243   .debug_str:00000000000000ff .LASF89
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3423   .debug_str:0000000000000492 .LASF90
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3383   .debug_str:00000000000003de .LASF91
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3463   .debug_str:00000000000005dc .LASF92
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3311   .debug_str:0000000000000229 .LASF93
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3371   .debug_str:00000000000003a8 .LASF94
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3203   .debug_str:0000000000000026 .LASF95
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3407   .debug_str:0000000000000451 .LASF96
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3331   .debug_str:0000000000000284 .LASF97
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3447   .debug_str:000000000000058d .LASF98
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3459   .debug_str:00000000000005ca .LASF99
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3439   .debug_str:00000000000004dc .LASF100
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3317   .debug_str:0000000000000247 .LASF101
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3479   .debug_str:0000000000000625 .LASF102
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3355   .debug_str:00000000000002e6 .LASF103
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3313   .debug_str:0000000000000230 .LASF104
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3483   .debug_str:000000000000063d .LASF105
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3365   .debug_str:0000000000000327 .LASF106
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3487   .debug_str:000000000000064b .LASF107
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3227   .debug_str:00000000000000b8 .LASF108
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3467   .debug_str:00000000000005eb .LASF109
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3315   .debug_str:000000000000023b .LASF110
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3453   .debug_str:00000000000005a1 .LASF111
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3273   .debug_str:0000000000000187 .LASF112
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3225   .debug_str:00000000000000a9 .LASF113
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3271   .debug_str:0000000000000176 .LASF114
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3213   .debug_str:0000000000000055 .LASF115
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3215   .debug_str:0000000000000064 .LASF116
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3373   .debug_str:00000000000003ae .LASF117
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3343   .debug_str:00000000000002b2 .LASF118
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3341   .debug_str:00000000000002a9 .LASF119
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3475   .debug_str:0000000000000612 .LASF120
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3221   .debug_str:0000000000000095 .LASF146
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3285   .debug_str:00000000000001b8 .LASF121
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3455   .debug_str:00000000000005ae .LASF122
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3451   .debug_str:000000000000059a .LASF123
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3433   .debug_str:00000000000004c6 .LASF124
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3457   .debug_str:00000000000005c1 .LASF125
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3349   .debug_str:00000000000002ca .LASF126
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3299   .debug_str:00000000000001eb .LASF127
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3325   .debug_str:000000000000026e .LASF128
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3351   .debug_str:00000000000002d4 .LASF131
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 14
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3473   .debug_str:00000000000006ad .LASF82
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3341   .debug_str:00000000000003ac .LASF83
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3281   .debug_str:0000000000000243 .LASF84
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3241   .debug_str:0000000000000176 .LASF85
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3307   .debug_str:00000000000002b7 .LASF86
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3177   .debug_str:000000000000003a .LASF87
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3455   .debug_str:0000000000000652 .LASF88
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3217   .debug_str:0000000000000111 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3211   .debug_str:00000000000000f6 .LASF90
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3401   .debug_str:00000000000004d0 .LASF91
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3361   .debug_str:000000000000041b .LASF92
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3449   .debug_str:0000000000000639 .LASF93
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3289   .debug_str:0000000000000269 .LASF94
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3349   .debug_str:00000000000003e5 .LASF95
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3171   .debug_str:000000000000001d .LASF96
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3385   .debug_str:000000000000048f .LASF97
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3313   .debug_str:00000000000002d3 .LASF98
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3433   .debug_str:00000000000005e9 .LASF99
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3249   .debug_str:00000000000001a5 .LASF100
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3425   .debug_str:0000000000000538 .LASF101
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3297   .debug_str:000000000000028d .LASF102
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3465   .debug_str:0000000000000682 .LASF103
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3337   .debug_str:0000000000000396 .LASF104
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3293   .debug_str:0000000000000276 .LASF105
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3469   .debug_str:000000000000069a .LASF106
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3369   .debug_str:000000000000043e .LASF107
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3471   .debug_str:000000000000069f .LASF108
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3195   .debug_str:00000000000000af .LASF109
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3453   .debug_str:0000000000000648 .LASF110
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3295   .debug_str:0000000000000281 .LASF111
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3439   .debug_str:00000000000005fd .LASF112
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3247   .debug_str:0000000000000197 .LASF113
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3193   .debug_str:00000000000000a0 .LASF114
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3245   .debug_str:0000000000000186 .LASF115
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3181   .debug_str:000000000000004c .LASF116
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3183   .debug_str:000000000000005b .LASF117
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3351   .debug_str:00000000000003eb .LASF118
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3327   .debug_str:0000000000000368 .LASF119
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3321   .debug_str:00000000000002f0 .LASF120
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3461   .debug_str:000000000000066f .LASF121
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3189   .debug_str:000000000000008c .LASF152
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3259   .debug_str:00000000000001de .LASF122
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3441   .debug_str:000000000000060a .LASF123
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3437   .debug_str:00000000000005f6 .LASF124
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3419   .debug_str:0000000000000522 .LASF125
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3239   .debug_str:000000000000016d .LASF126
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3443   .debug_str:000000000000061d .LASF127
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3275   .debug_str:0000000000000224 .LASF128
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3169   .debug_str:0000000000000016 .LASF129
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3291   .debug_str:0000000000000270 .LASF130
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3279   .debug_str:000000000000023c .LASF131
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3407   .debug_str:00000000000004e4 .LASF132
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3409   .debug_str:00000000000004ed .LASF133
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3477   .debug_str:00000000000006bc .LASF134
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3413   .debug_str:0000000000000501 .LASF135
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3333   .debug_str:0000000000000384 .LASF139
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:245    .text.pskiva:0000000000000000 .LFB10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 14
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:252    .text.pskiva:0000000000000000 .LFB10
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:336    .text.pskiva:000000000000006a .LFE10
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:2942   .debug_loc:0000000000000000 .LLST7
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3265   .debug_str:000000000000015f .LASF129
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:2965   .debug_loc:0000000000000038 .LLST8
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3291   .debug_str:00000000000001d4 .LASF130
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:2990   .debug_loc:0000000000000072 .LLST9
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3015   .debug_loc:00000000000000ac .LLST10
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:284    .text.pskiva:000000000000002a .LVL19
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:310    .text.pskiva:000000000000004a .LVL20
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:331    .text.pskiva:0000000000000066 .LVL25
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3471   .debug_str:00000000000005ff .LASF132
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:204    .text.displayClock:0000000000000000 .LFB9
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:245    .text.displayClock:0000000000000034 .LFE9
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3040   .debug_loc:00000000000000e6 .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3058   .debug_loc:0000000000000112 .LLST5
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3251   .debug_str:0000000000000122 .LASF133
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3072   .debug_loc:0000000000000133 .LLST6
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3283   .debug_str:00000000000001b0 .LASF147
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:227    .text.displayClock:000000000000001a .LVL13
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:236    .text.displayClock:000000000000002e .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3275   .debug_str:0000000000000195 .LASF134
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:163    .text.tick:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:197    .text.tick:0000000000000024 .LFE8
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3086   .debug_loc:0000000000000154 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3335   .debug_str:0000000000000292 .LASF135
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3104   .debug_loc:0000000000000180 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3323   .debug_str:0000000000000266 .LASF136
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3122   .debug_loc:00000000000001ac .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:195    .text.tick:0000000000000024 .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3361   .debug_str:0000000000000306 .LASF137
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:112    .text.decrementClock:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:156    .text.decrementClock:000000000000003a .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3377   .debug_str:00000000000003c0 .LASF148
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3431   .debug_str:00000000000004b3 .LASF149
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:14     .text.init_clock_display:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:48     .text.init_clock_display:0000000000000024 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3136   .debug_loc:00000000000001cd .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:30     .text.init_clock_display:000000000000000e .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:33     .text.init_clock_display:0000000000000016 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:46     .text.init_clock_display:0000000000000024 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:55     .text.incrementClock:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:105    .text.incrementClock:0000000000000038 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:76     .text.incrementClock:0000000000000018 .LBB4
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:101    .text.incrementClock:0000000000000036 .LBE4
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3319   .debug_str:0000000000000254 .LASF138
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3201   .debug_str:000000000000001e .LASF139
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3391   .debug_str:0000000000000401 .LASF140
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3485   .debug_str:0000000000000642 .LASF141
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:3253   .debug_str:0000000000000127 .LASF142
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:259    .text.pskiva:0000000000000002 .LCFI4
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:306    .text.pskiva:0000000000000042 .LCFI5
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:312    .text.pskiva:000000000000004a .LCFI6
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:255    .text.pskiva:0000000000000000 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:282    .text.pskiva:0000000000000022 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:320    .text.pskiva:0000000000000050 .LVL21
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:329    .text.pskiva:000000000000005e .LVL24
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccea949f.s 			page 15
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:319    .text.pskiva:000000000000004c .LFE10
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:2917   .debug_loc:0000000000000000 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3219   .debug_str:0000000000000119 .LASF136
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:2935   .debug_loc:000000000000002c .LLST7
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3265   .debug_str:00000000000001fa .LASF137
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:2949   .debug_loc:000000000000004d .LLST8
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:2974   .debug_loc:0000000000000087 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3417   .debug_str:000000000000051a .LASF138
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:2999   .debug_loc:00000000000000c1 .LLST10
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:287    .text.pskiva:000000000000002e .LVL17
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:304    .text.pskiva:0000000000000040 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3457   .debug_str:000000000000065c .LASF140
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:219    .text.displayClock:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:238    .text.displayClock:000000000000001e .LFE9
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3028   .debug_loc:0000000000000106 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3221   .debug_str:000000000000011f .LASF141
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3042   .debug_loc:0000000000000127 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:236    .text.displayClock:000000000000001e .LVL13
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3237   .debug_str:0000000000000168 .LASF142
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:178    .text.tick:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:212    .text.tick:0000000000000024 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3056   .debug_loc:0000000000000148 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3315   .debug_str:00000000000002d9 .LASF143
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3074   .debug_loc:0000000000000174 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3303   .debug_str:00000000000002a8 .LASF144
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3092   .debug_loc:00000000000001a0 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:210    .text.tick:0000000000000024 .LVL9
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3343   .debug_str:00000000000003b6 .LASF145
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:127    .text.decrementClock:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:171    .text.decrementClock:000000000000003a .LFE7
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3355   .debug_str:00000000000003fd .LASF153
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3267   .debug_str:00000000000001ff .LASF154
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:14     .text.init_clock_display:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:63     .text.init_clock_display:0000000000000046 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3106   .debug_loc:00000000000001c1 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3179   .debug_str:0000000000000043 .LASF155
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:45     .text.init_clock_display:000000000000002e .LVL0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:48     .text.init_clock_display:0000000000000038 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:61     .text.init_clock_display:0000000000000046 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:70     .text.incrementClock:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:120    .text.incrementClock:0000000000000038 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:91     .text.incrementClock:0000000000000018 .LBB4
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:116    .text.incrementClock:0000000000000036 .LBE4
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3251   .debug_str:00000000000001b2 .LASF146
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3305   .debug_str:00000000000002b0 .LASF156
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3309   .debug_str:00000000000002bc .LASF157
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3329   .debug_str:000000000000036f .LASF147
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:3445   .debug_str:0000000000000626 .LASF148
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:291    .text.pskiva:0000000000000030 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:315    .text.pskiva:000000000000004a .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:248    .text.pskiva:0000000000000000 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:255    .text.pskiva:0000000000000008 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:274    .text.pskiva:000000000000001a .LVL16
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:295    .text.pskiva:0000000000000034 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:313    .text.pskiva:0000000000000048 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:222    .text.displayClock:0000000000000000 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:234    .text.displayClock:0000000000000016 .LVL12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s 			page 15
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:280    .text.pskiva:0000000000000020 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:326    .text.pskiva:0000000000000058 .LVL23
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:277    .text.pskiva:0000000000000018 .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:324    .text.pskiva:0000000000000054 .LVL22
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:212    .text.displayClock:0000000000000002 .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:241    .text.displayClock:0000000000000032 .LCFI3
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:207    .text.displayClock:0000000000000000 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:221    .text.displayClock:0000000000000010 .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:217    .text.displayClock:0000000000000008 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:166    .text.tick:0000000000000000 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:180    .text.tick:000000000000000e .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:193    .text.tick:000000000000001c .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:21     .text.init_clock_display:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:42     .text.init_clock_display:000000000000001c .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccea949f.s:361    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:232    .text.displayClock:0000000000000014 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:181    .text.tick:0000000000000000 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:195    .text.tick:000000000000000e .LVL7
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:208    .text.tick:000000000000001c .LVL8
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:21     .text.init_clock_display:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:57     .text.init_clock_display:000000000000003e .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\cc85NXKe.s:337    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
-Lcd_SetType
-Lcd_Init
-LCD_Clear
-sprintf
-LCD_ShowStr
+memcpy
+lio_lcd_init
+lio_lcd_clear
+lio_lcd_printf_scaled

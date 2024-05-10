@@ -48,7 +48,7 @@ void init_butt(){
   gpio_init(GPIOA, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, BITS(4, 7));     // initialize GPIOA input pins from A4 to A7 
 }
 
-void butt(int8_t* pHour, int8_t* pMin, uint8_t* pCounter, uint8_t* pS){
+void butt(int8_t* pHour, int8_t* pMin, uint8_t* pCounter, uint8_t* pS, uint8_t* pEnable){
   int key = -1;
 
   // store all the button status in an array
@@ -93,5 +93,5 @@ void butt(int8_t* pHour, int8_t* pMin, uint8_t* pCounter, uint8_t* pS){
     default: return;                // no button pressed 
   }
   // if any button is pressed, update display
-  pskiva(0, (*pHour), (*pMin));  
+  pskiva(0, (*pHour), (*pMin), pEnable);  
 }

@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 1
 
 
    1              		.file	"main.c"
@@ -20,7 +20,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
   18              		.file 1 "main.c"
    1:main.c        **** /*!
    2:main.c        ****   \file  main.c
-   3:main.c        ****   \brief IMU, LCD & button integration for MCU
+   3:main.c        ****   \brief IMU, LCD & button integration for GD32VF103 MCU
    4:main.c        **** */
    5:main.c        **** 
    6:main.c        **** /*
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
   38:main.c        **** #include "delay.h"
   39:main.c        **** #include <math.h>
   40:main.c        **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 2
 
 
   41:main.c        **** #define MARGIN            104                 // margin for movement to turn pskiva on (current ~70
@@ -97,56 +97,54 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
   74:main.c        ****   // vector scales 
   75:main.c        ****   int32_t v, v_temp;
   76:main.c        **** 
-  77:main.c        ****   // inital vector resp. vecotr magnitude
+  77:main.c        ****   // inital vector resp. vecotr magnitude 
   78:main.c        ****   mpu6500_getAccel(&vec_temp);
   79:main.c        ****   v_temp = sqrtf((vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z));
   80:main.c        **** 
-  81:main.c        ****   //delay_until_1ms(1000);
-  82:main.c        **** 
+  81:main.c        ****   // on or off case for pskiva
+  82:main.c        ****   uint8_t enable = 0; 
   83:main.c        ****   while(1){
   84:main.c        ****     delay_until_1ms(100);              // 1 iteration takes 100 ms
   85:main.c        ****     hunmilli++;
   86:main.c        **** 
   87:main.c        ****     handle_imu(&vec, &vec_temp, &v, &v_temp, &c);         // handle imu..
-  88:main.c        ****     butt(&hour, &min, &hunmilli, &s);                     // ..button presses..
-  89:main.c        **** 
+  88:main.c        ****     butt(&hour, &min, &hunmilli, &s, &enable);                     // ..button presses..
+  89:main.c        ****     
   90:main.c        ****     if (hunmilli > 9){                                    // after 1 second..
-  91:main.c        ****       hunmilli=0;                                         // ..reset hunmilli..
-  92:main.c        ****       s++;                                                // ..increment seconds..
-  93:main.c        ****       LCD_ShowNum(50, 50, s, 2, YELLOW);                  
-  94:main.c        ****       if (!(s%15)) {                                    
-  95:main.c        ****         // determine car motion every 15 seconds
-  96:main.c        ****         (c > MARGIN) ? pskiva(1, hour, min) : pskiva(0, hour, min);
-  97:main.c        ****         c=0;
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 3
+  91:main.c        ****       hunmilli=0;                                         // ..reset hunmilli and..
+  92:main.c        ****       s++;                                                // ..increment seconds
+  93:main.c        ****       if (!(s%15)) {                                      
+  94:main.c        ****         // determine car motion every 15 seconds
+  95:main.c        ****         (c > MARGIN) ? pskiva(1, hour, min, &enable) : pskiva(0, hour, min, &enable);
+  96:main.c        ****         c=0;
+  97:main.c        ****       }
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 3
 
 
-  98:main.c        ****       }
-  99:main.c        ****       if (s>59){                                      // after 60 seconds..
- 100:main.c        ****         s=0;                                          // ..reset seconds counter..
- 101:main.c        ****         incrementClock(&hour, &min);                  // ..and increase clock by 1 minute!
- 102:main.c        ****       }
- 103:main.c        ****     }
- 104:main.c        ****     LCD_Wait_On_Queue();
- 105:main.c        ****     while (!delay_finished());         // wait until iteration done
- 106:main.c        ****   }
- 107:main.c        **** }
- 108:main.c        **** 
- 109:main.c        **** /// @brief handles calculations for accelerometer & destroys old so it can be updated
- 110:main.c        **** /// @param pVec 
- 111:main.c        **** /// @param pVec_temp 
- 112:main.c        **** /// @param pV 
- 113:main.c        **** /// @param pV_temp 
- 114:main.c        **** /// @param pC 
- 115:main.c        **** void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC
-  19              		.loc 1 115 101
+  98:main.c        ****       if (s>59){                                          // after 60 seconds..
+  99:main.c        ****         s=0;                                              // ..reset seconds counter..
+ 100:main.c        ****         incrementClock(&hour, &min);                      // ..and increase clock by 1 minute!
+ 101:main.c        ****       }
+ 102:main.c        ****     }
+ 103:main.c        ****     while (!delay_finished());         // wait until iteration done
+ 104:main.c        ****   }
+ 105:main.c        **** }
+ 106:main.c        **** 
+ 107:main.c        **** /// @brief    handles calculations for accelerometer & destroys old so it can be updated
+ 108:main.c        **** /// @param    pVec: pointer to vector struct
+ 109:main.c        **** /// @param    pVec_temp: pointer to temporary vector struct
+ 110:main.c        **** /// @param    pV: pointer to vectro magnitude
+ 111:main.c        **** /// @param    pV_temp: pointer to temp vector magnitude
+ 112:main.c        **** /// @param    pC: pointer to counter
+ 113:main.c        **** void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC
+  19              		.loc 1 113 101
   20              		.cfi_startproc
   21              	.LVL0:
- 116:main.c        ****   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z d
- 117:main.c        ****   mpu6500_getAccel(pVec);
-  22              		.loc 1 117 3
- 115:main.c        ****   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z d
-  23              		.loc 1 115 101 is_stmt 0
+ 114:main.c        ****   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z d
+ 115:main.c        ****   mpu6500_getAccel(pVec);
+  22              		.loc 1 115 3
+ 113:main.c        ****   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z d
+  23              		.loc 1 113 101 is_stmt 0
   24 0000 7971     		addi	sp,sp,-48
   25              	.LCFI0:
   26              		.cfi_def_cfa_offset 48
@@ -168,51 +166,51 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
   42              		.cfi_offset 19, -20
   43              		.cfi_offset 20, -24
   44              		.cfi_offset 21, -28
- 115:main.c        ****   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z d
-  45              		.loc 1 115 101
+ 113:main.c        ****   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z d
+  45              		.loc 1 113 101
   46 0018 AE89     		mv	s3,a1
-  47              		.loc 1 117 3
+  47              		.loc 1 115 3
   48 001a 97000000 		call	mpu6500_getAccel
   48      E7800000 
   49              	.LVL1:
- 118:main.c        ****   // calc vector magnitude (ALT. could use fixed point)
- 119:main.c        ****   (*pV) = sqrtf((pVec->x*pVec->x + pVec->y*pVec->y + pVec->z*pVec->z));
-  50              		.loc 1 119 3 is_stmt 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 4
-
-
-  51              		.loc 1 119 25 is_stmt 0
+ 116:main.c        ****   // calc vector magnitude (ALT. could use fixed point)
+ 117:main.c        ****   (*pV) = sqrtf((pVec->x*pVec->x + pVec->y*pVec->y + pVec->z*pVec->z));
+  50              		.loc 1 117 3 is_stmt 1
+  51              		.loc 1 117 25 is_stmt 0
   52 0022 8C40     		lw	a1,0(s1)
-  53              		.loc 1 119 40
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 4
+
+
+  53              		.loc 1 117 40
   54 0024 83AA4400 		lw	s5,4(s1)
-  55              		.loc 1 119 58
+  55              		.loc 1 117 58
   56 0028 03AA8400 		lw	s4,8(s1)
-  57              		.loc 1 119 25
+  57              		.loc 1 117 25
   58 002c 2E85     		mv	a0,a1
   59 002e 97000000 		call	__mulsf3
   59      E7800000 
   60              	.LVL2:
   61 0036 2A84     		mv	s0,a0
-  62              		.loc 1 119 43
+  62              		.loc 1 117 43
   63 0038 D685     		mv	a1,s5
   64 003a 5685     		mv	a0,s5
   65 003c 97000000 		call	__mulsf3
   65      E7800000 
   66              	.LVL3:
-  67              		.loc 1 119 34
+  67              		.loc 1 117 34
   68 0044 AA85     		mv	a1,a0
   69 0046 2285     		mv	a0,s0
   70 0048 97000000 		call	__addsf3
   70      E7800000 
   71              	.LVL4:
   72 0050 2A84     		mv	s0,a0
-  73              		.loc 1 119 61
+  73              		.loc 1 117 61
   74 0052 D285     		mv	a1,s4
   75 0054 5285     		mv	a0,s4
   76 0056 97000000 		call	__mulsf3
   76      E7800000 
   77              	.LVL5:
-  78              		.loc 1 119 11
+  78              		.loc 1 117 11
   79 005e AA85     		mv	a1,a0
   80 0060 2285     		mv	a0,s0
   81 0062 97000000 		call	__addsf3
@@ -221,59 +219,59 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
   83 006a 97000000 		call	sqrtf
   83      E7800000 
   84              	.LVL7:
-  85              		.loc 1 119 9
+  85              		.loc 1 117 9
   86 0072 97000000 		call	__fixsfsi
   86      E7800000 
   87              	.LVL8:
   88 007a 3246     		lw	a2,12(sp)
- 120:main.c        ****   
- 121:main.c        ****   // note if there is a change in magnitude withing an interval 
- 122:main.c        ****   if ( (*pV_temp) <= (*pV)+50 && (*pV_temp) >= (*pV)-50 ) (*pC)++;
-  89              		.loc 1 122 27
+ 118:main.c        ****   
+ 119:main.c        ****   // note if there is a change in magnitude withing an interval 
+ 120:main.c        ****   if ( (*pV_temp) <= (*pV)+50 && (*pV_temp) >= (*pV)-50 ) (*pC)++;
+  89              		.loc 1 120 27
   90 007c 93062503 		addi	a3,a0,50
- 119:main.c        ****   
-  91              		.loc 1 119 9
+ 117:main.c        ****   
+  91              		.loc 1 117 9
   92 0080 2A84     		mv	s0,a0
   93 0082 08C2     		sw	a0,0(a2)
-  94              		.loc 1 122 3 is_stmt 1
-  95              		.loc 1 122 9 is_stmt 0
+  94              		.loc 1 120 3 is_stmt 1
+  95              		.loc 1 120 9 is_stmt 0
   96 0084 83270900 		lw	a5,0(s2)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 5
-
-
-  97              		.loc 1 122 6
+  97              		.loc 1 120 6
   98 0088 63CAF600 		bgt	a5,a3,.L2
-  99              		.loc 1 122 53 discriminator 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 5
+
+
+  99              		.loc 1 120 53 discriminator 1
  100 008c 9306E5FC 		addi	a3,a0,-50
- 101              		.loc 1 122 31 discriminator 1
+ 101              		.loc 1 120 31 discriminator 1
  102 0090 63C6D700 		blt	a5,a3,.L2
- 103              		.loc 1 122 59 is_stmt 1 discriminator 2
- 104              		.loc 1 122 64 is_stmt 0 discriminator 2
+ 103              		.loc 1 120 59 is_stmt 1 discriminator 2
+ 104              		.loc 1 120 64 is_stmt 0 discriminator 2
  105 0094 2247     		lw	a4,8(sp)
  106 0096 1C43     		lw	a5,0(a4)
  107 0098 8507     		addi	a5,a5,1
  108 009a 1CC3     		sw	a5,0(a4)
  109              	.L2:
- 123:main.c        ****   /* Store the last vector so it can be erased */
- 124:main.c        ****   (*pVec_temp) = (*pVec);
- 110              		.loc 1 124 3 is_stmt 1
- 111              		.loc 1 124 16 is_stmt 0
+ 121:main.c        ****   /* Store the last vector so it can be erased */
+ 122:main.c        ****   (*pVec_temp) = (*pVec);
+ 110              		.loc 1 122 3 is_stmt 1
+ 111              		.loc 1 122 16 is_stmt 0
  112 009c A685     		mv	a1,s1
  113 009e 4E85     		mv	a0,s3
  114 00a0 3146     		li	a2,12
  115 00a2 97000000 		call	memcpy
  115      E7800000 
  116              	.LVL9:
- 125:main.c        ****   (*pV_temp) = (*pV);
- 117              		.loc 1 125 3 is_stmt 1
- 126:main.c        **** }
- 118              		.loc 1 126 1 is_stmt 0
+ 123:main.c        ****   (*pV_temp) = (*pV);
+ 117              		.loc 1 123 3 is_stmt 1
+ 124:main.c        **** }
+ 118              		.loc 1 124 1 is_stmt 0
  119 00aa B250     		lw	ra,44(sp)
  120              		.cfi_restore 1
- 125:main.c        ****   (*pV_temp) = (*pV);
- 121              		.loc 1 125 14
+ 123:main.c        ****   (*pV_temp) = (*pV);
+ 121              		.loc 1 123 14
  122 00ac 23208900 		sw	s0,0(s2)
- 123              		.loc 1 126 1
+ 123              		.loc 1 124 1
  124 00b0 2254     		lw	s0,40(sp)
  125              		.cfi_restore 8
  126 00b2 9254     		lw	s1,36(sp)
@@ -298,11 +296,11 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
  145              	.LFE6:
  147              		.section	.text.startup.main,"ax",@progbits
  148              		.align	1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 6
-
-
  149              		.globl	main
  151              	main:
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 6
+
+
  152              	.LFB5:
   47:main.c        ****   /* Initialize pins for I2C */
  153              		.loc 1 47 15 is_stmt 1
@@ -358,11 +356,11 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
  189              	.LVL18:
   59:main.c        **** 
  190              		.loc 1 59 3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 7
-
-
  191 004e 97000000 		call	init_clock_display
  191      E7800000 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 7
+
+
  192              	.LVL19:
   62:main.c        **** 
  193              		.loc 1 62 3
@@ -377,7 +375,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
  199 005a 3145     		li	a0,12
   69:main.c        ****   int8_t min = INITAL_MIN;
  200              		.loc 1 69 10
- 201 005c 2306F100 		sb	a5,12(sp)
+ 201 005c A305F100 		sb	a5,11(sp)
   65:main.c        ****   int8_t hunmilli=0, s=0; 
  202              		.loc 1 65 12
  203 0060 23170100 		sh	zero,14(sp)
@@ -385,17 +383,17 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
  204              		.loc 1 66 3 is_stmt 1
   66:main.c        ****   
  205              		.loc 1 66 10 is_stmt 0
- 206 0064 23050100 		sb	zero,10(sp)
+ 206 0064 A3040100 		sb	zero,9(sp)
   66:main.c        ****   
  207              		.loc 1 66 22
- 208 0068 A3050100 		sb	zero,11(sp)
+ 208 0068 23050100 		sb	zero,10(sp)
   69:main.c        ****   int8_t min = INITAL_MIN;
  209              		.loc 1 69 3 is_stmt 1
   70:main.c        ****   // initial clock
  210              		.loc 1 70 3
   70:main.c        ****   // initial clock
  211              		.loc 1 70 10 is_stmt 0
- 212 006c A3060100 		sb	zero,13(sp)
+ 212 006c 23060100 		sb	zero,12(sp)
   72:main.c        **** 
  213              		.loc 1 72 3 is_stmt 1
  214 0070 97000000 		call	displayClock
@@ -418,11 +416,11 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
  225 0086 97000000 		call	__mulsf3
  225      E7800000 
  226              	.LVL22:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 8
-
-
   79:main.c        **** 
  227              		.loc 1 79 53
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 8
+
+
  228 008e A255     		lw	a1,40(sp)
   79:main.c        **** 
  229              		.loc 1 79 29
@@ -468,623 +466,587 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 1
  256      E7800000 
  257              	.LVL28:
  258 00d2 2ACA     		sw	a0,20(sp)
- 259              	.L12:
+  82:main.c        ****   while(1){
+ 259              		.loc 1 82 3 is_stmt 1
+  82:main.c        ****   while(1){
+ 260              		.loc 1 82 11 is_stmt 0
+ 261 00d4 A3060100 		sb	zero,13(sp)
+ 262              	.L12:
   83:main.c        ****     delay_until_1ms(100);              // 1 iteration takes 100 ms
- 260              		.loc 1 83 3 is_stmt 1
+ 263              		.loc 1 83 3 is_stmt 1
   84:main.c        ****     hunmilli++;
- 261              		.loc 1 84 5
- 262 00d4 13054006 		li	a0,100
- 263 00d8 97000000 		call	delay_until_1ms
- 263      E7800000 
- 264              	.LVL29:
+ 264              		.loc 1 84 5
+ 265 00d8 13054006 		li	a0,100
+ 266 00dc 97000000 		call	delay_until_1ms
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 9
+
+
+ 266      E7800000 
+ 267              	.LVL29:
   85:main.c        **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 9
-
-
- 265              		.loc 1 85 5
+ 268              		.loc 1 85 5
   85:main.c        **** 
- 266              		.loc 1 85 13 is_stmt 0
- 267 00e0 8347A100 		lbu	a5,10(sp)
-  87:main.c        ****     butt(&hour, &min, &hunmilli, &s);                     // ..button presses..
- 268              		.loc 1 87 5
- 269 00e4 1307E100 		addi	a4,sp,14
- 270 00e8 5408     		addi	a3,sp,20
+ 269              		.loc 1 85 13 is_stmt 0
+ 270 00e4 83479100 		lbu	a5,9(sp)
+  87:main.c        ****     butt(&hour, &min, &hunmilli, &s, &enable);                     // ..button presses..
+ 271              		.loc 1 87 5
+ 272 00e8 1307E100 		addi	a4,sp,14
+ 273 00ec 5408     		addi	a3,sp,20
   85:main.c        **** 
- 271              		.loc 1 85 13
- 272 00ea 8507     		addi	a5,a5,1
-  87:main.c        ****     butt(&hour, &min, &hunmilli, &s);                     // ..button presses..
- 273              		.loc 1 87 5
- 274 00ec 1008     		addi	a2,sp,16
- 275 00ee 4C10     		addi	a1,sp,36
- 276 00f0 2808     		addi	a0,sp,24
+ 274              		.loc 1 85 13
+ 275 00ee 8507     		addi	a5,a5,1
+  87:main.c        ****     butt(&hour, &min, &hunmilli, &s, &enable);                     // ..button presses..
+ 276              		.loc 1 87 5
+ 277 00f0 1008     		addi	a2,sp,16
+ 278 00f2 4C10     		addi	a1,sp,36
+ 279 00f4 2808     		addi	a0,sp,24
   85:main.c        **** 
- 277              		.loc 1 85 13
- 278 00f2 2305F100 		sb	a5,10(sp)
-  87:main.c        ****     butt(&hour, &min, &hunmilli, &s);                     // ..button presses..
- 279              		.loc 1 87 5 is_stmt 1
- 280 00f6 97000000 		call	handle_imu
- 280      E7800000 
- 281              	.LVL30:
-  88:main.c        **** 
- 282              		.loc 1 88 5
- 283 00fe 9306B100 		addi	a3,sp,11
- 284 0102 1306A100 		addi	a2,sp,10
- 285 0106 9305D100 		addi	a1,sp,13
- 286 010a 6800     		addi	a0,sp,12
- 287 010c 97000000 		call	butt
- 287      E7800000 
- 288              	.LVL31:
-  90:main.c        ****       hunmilli=0;                                         // ..reset hunmilli..
- 289              		.loc 1 90 5
-  90:main.c        ****       hunmilli=0;                                         // ..reset hunmilli..
- 290              		.loc 1 90 8 is_stmt 0
- 291 0114 0307A100 		lb	a4,10(sp)
- 292 0118 A547     		li	a5,9
- 293 011a 63DDE706 		ble	a4,a5,.L6
-  91:main.c        ****       s++;                                                // ..increment seconds..
- 294              		.loc 1 91 7 is_stmt 1
-  92:main.c        ****       LCD_ShowNum(50, 50, s, 2, YELLOW);                  
- 295              		.loc 1 92 8 is_stmt 0
- 296 011e 0346B100 		lbu	a2,11(sp)
-  93:main.c        ****       if (!(s%15)) {                                    
- 297              		.loc 1 93 7
- 298 0122 4167     		li	a4,65536
- 299 0124 0117     		addi	a4,a4,-32
-  92:main.c        ****       LCD_ShowNum(50, 50, s, 2, YELLOW);                  
- 300              		.loc 1 92 8
- 301 0126 0506     		addi	a2,a2,1
- 302 0128 6206     		slli	a2,a2,24
- 303 012a 6186     		srai	a2,a2,24
-  93:main.c        ****       if (!(s%15)) {                                    
- 304              		.loc 1 93 7
- 305 012c 8946     		li	a3,2
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 10
+ 280              		.loc 1 85 13
+ 281 00f6 A304F100 		sb	a5,9(sp)
+  87:main.c        ****     butt(&hour, &min, &hunmilli, &s, &enable);                     // ..button presses..
+ 282              		.loc 1 87 5 is_stmt 1
+ 283 00fa 97000000 		call	handle_imu
+ 283      E7800000 
+ 284              	.LVL30:
+  88:main.c        ****     
+ 285              		.loc 1 88 5
+ 286 0102 1307D100 		addi	a4,sp,13
+ 287 0106 9306A100 		addi	a3,sp,10
+ 288 010a 13069100 		addi	a2,sp,9
+ 289 010e 6C00     		addi	a1,sp,12
+ 290 0110 1305B100 		addi	a0,sp,11
+ 291 0114 97000000 		call	butt
+ 291      E7800000 
+ 292              	.LVL31:
+  90:main.c        ****       hunmilli=0;                                         // ..reset hunmilli and..
+ 293              		.loc 1 90 5
+  90:main.c        ****       hunmilli=0;                                         // ..reset hunmilli and..
+ 294              		.loc 1 90 8 is_stmt 0
+ 295 011c 03079100 		lb	a4,9(sp)
+ 296 0120 A547     		li	a5,9
+ 297 0122 63D2E706 		ble	a4,a5,.L11
+  91:main.c        ****       s++;                                                // ..increment seconds
+ 298              		.loc 1 91 7 is_stmt 1
+  92:main.c        ****       if (!(s%15)) {                                      
+ 299              		.loc 1 92 8 is_stmt 0
+ 300 0126 8347A100 		lbu	a5,10(sp)
+  93:main.c        ****         // determine car motion every 15 seconds
+ 301              		.loc 1 93 10
+ 302 012a 3D47     		li	a4,15
+  91:main.c        ****       s++;                                                // ..increment seconds
+ 303              		.loc 1 91 15
+ 304 012c A3040100 		sb	zero,9(sp)
+  92:main.c        ****       if (!(s%15)) {                                      
+ 305              		.loc 1 92 7 is_stmt 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 10
 
 
- 306 012e 93052003 		li	a1,50
- 307 0132 13052003 		li	a0,50
-  91:main.c        ****       s++;                                                // ..increment seconds..
- 308              		.loc 1 91 15
- 309 0136 23050100 		sb	zero,10(sp)
-  92:main.c        ****       LCD_ShowNum(50, 50, s, 2, YELLOW);                  
- 310              		.loc 1 92 7 is_stmt 1
-  92:main.c        ****       LCD_ShowNum(50, 50, s, 2, YELLOW);                  
- 311              		.loc 1 92 8 is_stmt 0
- 312 013a A305C100 		sb	a2,11(sp)
-  93:main.c        ****       if (!(s%15)) {                                    
- 313              		.loc 1 93 7 is_stmt 1
- 314 013e 97000000 		call	LCD_ShowNum
- 314      E7800000 
- 315              	.LVL32:
-  94:main.c        ****         // determine car motion every 15 seconds
- 316              		.loc 1 94 7
-  94:main.c        ****         // determine car motion every 15 seconds
- 317              		.loc 1 94 11 is_stmt 0
- 318 0146 8307B100 		lb	a5,11(sp)
-  94:main.c        ****         // determine car motion every 15 seconds
- 319              		.loc 1 94 10
- 320 014a 3D47     		li	a4,15
- 321 014c B3E7E702 		rem	a5,a5,a4
- 322 0150 9DE3     		bne	a5,zero,.L7
-  96:main.c        ****         c=0;
- 323              		.loc 1 96 9 is_stmt 1
-  96:main.c        ****         c=0;
- 324              		.loc 1 96 45 is_stmt 0
- 325 0152 0357E100 		lhu	a4,14(sp)
- 326 0156 93078006 		li	a5,104
- 327 015a 8305C100 		lb	a1,12(sp)
- 328 015e 0306D100 		lb	a2,13(sp)
-  96:main.c        ****         c=0;
- 329              		.loc 1 96 24
- 330 0162 0545     		li	a0,1
-  96:main.c        ****         c=0;
- 331              		.loc 1 96 45
- 332 0164 63E3E700 		bgtu	a4,a5,.L16
-  96:main.c        ****         c=0;
- 333              		.loc 1 96 47 discriminator 2
- 334 0168 0145     		li	a0,0
- 335              	.L16:
- 336 016a 97000000 		call	pskiva
- 336      E7800000 
- 337              	.LVL33:
-  97:main.c        ****       }
- 338              		.loc 1 97 9 is_stmt 1 discriminator 2
-  97:main.c        ****       }
- 339              		.loc 1 97 10 is_stmt 0 discriminator 2
- 340 0172 23170100 		sh	zero,14(sp)
- 341              	.L7:
-  99:main.c        ****         s=0;                                          // ..reset seconds counter..
- 342              		.loc 1 99 7 is_stmt 1
-  99:main.c        ****         s=0;                                          // ..reset seconds counter..
- 343              		.loc 1 99 10 is_stmt 0
- 344 0176 0307B100 		lb	a4,11(sp)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 11
+  92:main.c        ****       if (!(s%15)) {                                      
+ 306              		.loc 1 92 8 is_stmt 0
+ 307 0130 8507     		addi	a5,a5,1
+ 308 0132 E207     		slli	a5,a5,24
+ 309 0134 E187     		srai	a5,a5,24
+ 310 0136 2305F100 		sb	a5,10(sp)
+  93:main.c        ****         // determine car motion every 15 seconds
+ 311              		.loc 1 93 7 is_stmt 1
+  93:main.c        ****         // determine car motion every 15 seconds
+ 312              		.loc 1 93 10 is_stmt 0
+ 313 013a B3E7E702 		rem	a5,a5,a4
+ 314 013e 8DE7     		bne	a5,zero,.L7
+  95:main.c        ****         c=0;
+ 315              		.loc 1 95 9 is_stmt 1
+  95:main.c        ****         c=0;
+ 316              		.loc 1 95 54 is_stmt 0
+ 317 0140 0357E100 		lhu	a4,14(sp)
+ 318 0144 93078006 		li	a5,104
+ 319 0148 8305B100 		lb	a1,11(sp)
+ 320 014c 0306C100 		lb	a2,12(sp)
+  95:main.c        ****         c=0;
+ 321              		.loc 1 95 24
+ 322 0150 9306D100 		addi	a3,sp,13
+ 323 0154 0545     		li	a0,1
+  95:main.c        ****         c=0;
+ 324              		.loc 1 95 54
+ 325 0156 63E3E700 		bgtu	a4,a5,.L16
+  95:main.c        ****         c=0;
+ 326              		.loc 1 95 56 discriminator 2
+ 327 015a 0145     		li	a0,0
+ 328              	.L16:
+ 329 015c 97000000 		call	pskiva
+ 329      E7800000 
+ 330              	.LVL32:
+  96:main.c        ****       }
+ 331              		.loc 1 96 9 is_stmt 1 discriminator 2
+  96:main.c        ****       }
+ 332              		.loc 1 96 10 is_stmt 0 discriminator 2
+ 333 0164 23170100 		sh	zero,14(sp)
+ 334              	.L7:
+  98:main.c        ****         s=0;                                              // ..reset seconds counter..
+ 335              		.loc 1 98 7 is_stmt 1
+  98:main.c        ****         s=0;                                              // ..reset seconds counter..
+ 336              		.loc 1 98 10 is_stmt 0
+ 337 0168 0307A100 		lb	a4,10(sp)
+ 338 016c 9307B003 		li	a5,59
+ 339 0170 63DBE700 		ble	a4,a5,.L11
+  99:main.c        ****         incrementClock(&hour, &min);                      // ..and increase clock by 1 minute!
+ 340              		.loc 1 99 9 is_stmt 1
+ 100:main.c        ****       }
+ 341              		.loc 1 100 9 is_stmt 0
+ 342 0174 6C00     		addi	a1,sp,12
+ 343 0176 1305B100 		addi	a0,sp,11
+  99:main.c        ****         incrementClock(&hour, &min);                      // ..and increase clock by 1 minute!
+ 344              		.loc 1 99 10
+ 345 017a 23050100 		sb	zero,10(sp)
+ 100:main.c        ****       }
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 11
 
 
- 345 017a 9307B003 		li	a5,59
- 346 017e 63DBE700 		ble	a4,a5,.L6
- 100:main.c        ****         incrementClock(&hour, &min);                  // ..and increase clock by 1 minute!
- 347              		.loc 1 100 9 is_stmt 1
- 101:main.c        ****       }
- 348              		.loc 1 101 9 is_stmt 0
- 349 0182 9305D100 		addi	a1,sp,13
- 350 0186 6800     		addi	a0,sp,12
- 100:main.c        ****         incrementClock(&hour, &min);                  // ..and increase clock by 1 minute!
- 351              		.loc 1 100 10
- 352 0188 A3050100 		sb	zero,11(sp)
- 101:main.c        ****       }
- 353              		.loc 1 101 9 is_stmt 1
- 354 018c 97000000 		call	incrementClock
- 354      E7800000 
- 355              	.LVL34:
- 356              	.L6:
- 104:main.c        ****     while (!delay_finished());         // wait until iteration done
- 357              		.loc 1 104 5
- 358 0194 97000000 		call	LCD_Wait_On_Queue
- 358      E7800000 
- 359              	.LVL35:
- 105:main.c        ****   }
- 360              		.loc 1 105 5
- 361              	.L11:
- 105:main.c        ****   }
- 362              		.loc 1 105 30 discriminator 1
- 105:main.c        ****   }
- 363              		.loc 1 105 13 is_stmt 0 discriminator 1
- 364 019c 97000000 		call	delay_finished
- 364      E7800000 
- 365              	.LVL36:
- 105:main.c        ****   }
- 366              		.loc 1 105 11 discriminator 1
- 367 01a4 65DD     		beq	a0,zero,.L11
- 368 01a6 3DB7     		j	.L12
- 369              		.cfi_endproc
- 370              	.LFE5:
- 372              		.text
- 373              	.Letext0:
- 374              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 375              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 376              		.file 4 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 377              		.file 5 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 378              		.file 6 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 379              		.file 7 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
- 380              		.file 8 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
- 381              		.file 9 "mpu6500_driver.h"
- 382              		.file 10 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compil
- 383              		.file 11 "lcd.h"
- 384              		.file 12 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compil
- 385              		.file 13 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
- 386              		.file 14 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
- 387              		.file 15 "gd32v_mpu6500_if.h"
- 388              		.file 16 "butt.h"
- 389              		.file 17 "clock.h"
- 390              		.file 18 "delay.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 12
-
-
- 391              		.file 19 "<built-in>"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 13
+ 346              		.loc 1 100 9 is_stmt 1
+ 347 017e 97000000 		call	incrementClock
+ 347      E7800000 
+ 348              	.LVL33:
+ 349              	.L11:
+ 103:main.c        ****   }
+ 350              		.loc 1 103 30 discriminator 1
+ 103:main.c        ****   }
+ 351              		.loc 1 103 13 is_stmt 0 discriminator 1
+ 352 0186 97000000 		call	delay_finished
+ 352      E7800000 
+ 353              	.LVL34:
+ 103:main.c        ****   }
+ 354              		.loc 1 103 11 discriminator 1
+ 355 018e 65DD     		beq	a0,zero,.L11
+ 356 0190 A1B7     		j	.L12
+ 357              		.cfi_endproc
+ 358              	.LFE5:
+ 360              		.text
+ 361              	.Letext0:
+ 362              		.file 2 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 363              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 364              		.file 4 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 365              		.file 5 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 366              		.file 6 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 367              		.file 7 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
+ 368              		.file 8 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+ 369              		.file 9 "mpu6500_driver.h"
+ 370              		.file 10 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compil
+ 371              		.file 11 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
+ 372              		.file 12 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
+ 373              		.file 13 "gd32v_mpu6500_if.h"
+ 374              		.file 14 "butt.h"
+ 375              		.file 15 "clock.h"
+ 376              		.file 16 "delay.h"
+ 377              		.file 17 "<built-in>"
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:16     .text.handle_imu:0000000000000000 handle_imu
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:20     .text.handle_imu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:22     .text.handle_imu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:23     .text.handle_imu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:24     .text.handle_imu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:26     .text.handle_imu:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:33     .text.handle_imu:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:34     .text.handle_imu:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:35     .text.handle_imu:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:36     .text.handle_imu:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:42     .text.handle_imu:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:43     .text.handle_imu:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:44     .text.handle_imu:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:46     .text.handle_imu:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:48     .text.handle_imu:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:51     .text.handle_imu:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:52     .text.handle_imu:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:54     .text.handle_imu:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:56     .text.handle_imu:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:58     .text.handle_imu:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:63     .text.handle_imu:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:68     .text.handle_imu:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:74     .text.handle_imu:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:79     .text.handle_imu:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:86     .text.handle_imu:0000000000000072 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:90     .text.handle_imu:000000000000007c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:92     .text.handle_imu:0000000000000080 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:95     .text.handle_imu:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:96     .text.handle_imu:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:98     .text.handle_imu:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:100    .text.handle_imu:000000000000008c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:102    .text.handle_imu:0000000000000090 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:104    .text.handle_imu:0000000000000094 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:105    .text.handle_imu:0000000000000094 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:111    .text.handle_imu:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:112    .text.handle_imu:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:118    .text.handle_imu:00000000000000aa .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:119    .text.handle_imu:00000000000000aa .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:120    .text.handle_imu:00000000000000ac .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:122    .text.handle_imu:00000000000000ac .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:124    .text.handle_imu:00000000000000b0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:125    .text.handle_imu:00000000000000b2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:127    .text.handle_imu:00000000000000b4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:130    .text.handle_imu:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:133    .text.handle_imu:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:136    .text.handle_imu:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:138    .text.handle_imu:00000000000000bc .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:141    .text.handle_imu:00000000000000be .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:144    .text.handle_imu:00000000000000c0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:151    .text.startup.main:0000000000000000 main
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:154    .text.startup.main:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:155    .text.startup.main:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:156    .text.startup.main:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:157    .text.startup.main:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:159    .text.startup.main:0000000000000002 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 14
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:16     .text.handle_imu:0000000000000000 handle_imu
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:20     .text.handle_imu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:22     .text.handle_imu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:23     .text.handle_imu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:24     .text.handle_imu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:26     .text.handle_imu:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:33     .text.handle_imu:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:34     .text.handle_imu:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:35     .text.handle_imu:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:36     .text.handle_imu:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:42     .text.handle_imu:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:43     .text.handle_imu:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:44     .text.handle_imu:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:46     .text.handle_imu:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:48     .text.handle_imu:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:51     .text.handle_imu:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:52     .text.handle_imu:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:54     .text.handle_imu:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:56     .text.handle_imu:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:58     .text.handle_imu:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:63     .text.handle_imu:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:68     .text.handle_imu:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:74     .text.handle_imu:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:79     .text.handle_imu:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:86     .text.handle_imu:0000000000000072 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:90     .text.handle_imu:000000000000007c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:92     .text.handle_imu:0000000000000080 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:95     .text.handle_imu:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:96     .text.handle_imu:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:98     .text.handle_imu:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:100    .text.handle_imu:000000000000008c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:102    .text.handle_imu:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:104    .text.handle_imu:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:105    .text.handle_imu:0000000000000094 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:111    .text.handle_imu:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:112    .text.handle_imu:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:118    .text.handle_imu:00000000000000aa .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:119    .text.handle_imu:00000000000000aa .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:120    .text.handle_imu:00000000000000ac .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:122    .text.handle_imu:00000000000000ac .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:124    .text.handle_imu:00000000000000b0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:125    .text.handle_imu:00000000000000b2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:127    .text.handle_imu:00000000000000b4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:130    .text.handle_imu:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:133    .text.handle_imu:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:136    .text.handle_imu:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:138    .text.handle_imu:00000000000000bc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:141    .text.handle_imu:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:144    .text.handle_imu:00000000000000c0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:151    .text.startup.main:0000000000000000 main
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:154    .text.startup.main:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:155    .text.startup.main:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:156    .text.startup.main:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:157    .text.startup.main:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:159    .text.startup.main:0000000000000002 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 13
 
 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:161    .text.startup.main:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:163    .text.startup.main:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:165    .text.startup.main:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:166    .text.startup.main:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:168    .text.startup.main:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:171    .text.startup.main:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:175    .text.startup.main:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:183    .text.startup.main:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:188    .text.startup.main:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:191    .text.startup.main:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:194    .text.startup.main:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:195    .text.startup.main:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:196    .text.startup.main:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:198    .text.startup.main:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:201    .text.startup.main:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:203    .text.startup.main:0000000000000060 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:205    .text.startup.main:0000000000000064 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:206    .text.startup.main:0000000000000064 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:208    .text.startup.main:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:210    .text.startup.main:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:211    .text.startup.main:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:212    .text.startup.main:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:214    .text.startup.main:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:217    .text.startup.main:0000000000000078 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:218    .text.startup.main:0000000000000078 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:222    .text.startup.main:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:223    .text.startup.main:0000000000000082 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:228    .text.startup.main:000000000000008e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:230    .text.startup.main:0000000000000090 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:232    .text.startup.main:0000000000000092 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:236    .text.startup.main:000000000000009c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:241    .text.startup.main:00000000000000a8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:243    .text.startup.main:00000000000000aa .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:245    .text.startup.main:00000000000000ac .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:249    .text.startup.main:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:256    .text.startup.main:00000000000000ca .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:261    .text.startup.main:00000000000000d4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:262    .text.startup.main:00000000000000d4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:266    .text.startup.main:00000000000000e0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:267    .text.startup.main:00000000000000e0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:269    .text.startup.main:00000000000000e4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:272    .text.startup.main:00000000000000ea .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:274    .text.startup.main:00000000000000ec .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:278    .text.startup.main:00000000000000f2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:280    .text.startup.main:00000000000000f6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:283    .text.startup.main:00000000000000fe .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:290    .text.startup.main:0000000000000114 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:291    .text.startup.main:0000000000000114 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:295    .text.startup.main:000000000000011e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:296    .text.startup.main:000000000000011e .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:298    .text.startup.main:0000000000000122 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:301    .text.startup.main:0000000000000126 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:305    .text.startup.main:000000000000012c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:309    .text.startup.main:0000000000000136 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:311    .text.startup.main:000000000000013a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:312    .text.startup.main:000000000000013a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:314    .text.startup.main:000000000000013e .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 15
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:161    .text.startup.main:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:163    .text.startup.main:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:165    .text.startup.main:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:166    .text.startup.main:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:168    .text.startup.main:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:171    .text.startup.main:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:175    .text.startup.main:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:183    .text.startup.main:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:188    .text.startup.main:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:191    .text.startup.main:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:194    .text.startup.main:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:195    .text.startup.main:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:196    .text.startup.main:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:198    .text.startup.main:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:201    .text.startup.main:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:203    .text.startup.main:0000000000000060 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:205    .text.startup.main:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:206    .text.startup.main:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:208    .text.startup.main:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:210    .text.startup.main:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:211    .text.startup.main:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:212    .text.startup.main:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:214    .text.startup.main:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:217    .text.startup.main:0000000000000078 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:218    .text.startup.main:0000000000000078 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:222    .text.startup.main:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:223    .text.startup.main:0000000000000082 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:228    .text.startup.main:000000000000008e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:230    .text.startup.main:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:232    .text.startup.main:0000000000000092 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:236    .text.startup.main:000000000000009c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:241    .text.startup.main:00000000000000a8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:243    .text.startup.main:00000000000000aa .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:245    .text.startup.main:00000000000000ac .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:249    .text.startup.main:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:256    .text.startup.main:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:260    .text.startup.main:00000000000000d4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:261    .text.startup.main:00000000000000d4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:264    .text.startup.main:00000000000000d8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:265    .text.startup.main:00000000000000d8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:269    .text.startup.main:00000000000000e4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:270    .text.startup.main:00000000000000e4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:272    .text.startup.main:00000000000000e8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:275    .text.startup.main:00000000000000ee .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:277    .text.startup.main:00000000000000f0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:281    .text.startup.main:00000000000000f6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:283    .text.startup.main:00000000000000fa .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:286    .text.startup.main:0000000000000102 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:294    .text.startup.main:000000000000011c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:295    .text.startup.main:000000000000011c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:299    .text.startup.main:0000000000000126 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:300    .text.startup.main:0000000000000126 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:302    .text.startup.main:000000000000012a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:304    .text.startup.main:000000000000012c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:306    .text.startup.main:0000000000000130 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:307    .text.startup.main:0000000000000130 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:312    .text.startup.main:000000000000013a .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 14
 
 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:317    .text.startup.main:0000000000000146 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:318    .text.startup.main:0000000000000146 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:320    .text.startup.main:000000000000014a .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:324    .text.startup.main:0000000000000152 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:325    .text.startup.main:0000000000000152 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:330    .text.startup.main:0000000000000162 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:332    .text.startup.main:0000000000000164 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:334    .text.startup.main:0000000000000168 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:339    .text.startup.main:0000000000000172 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:340    .text.startup.main:0000000000000172 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:343    .text.startup.main:0000000000000176 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:344    .text.startup.main:0000000000000176 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:348    .text.startup.main:0000000000000182 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:349    .text.startup.main:0000000000000182 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:352    .text.startup.main:0000000000000188 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:354    .text.startup.main:000000000000018c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:358    .text.startup.main:0000000000000194 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:362    .text.startup.main:000000000000019c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:363    .text.startup.main:000000000000019c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:364    .text.startup.main:000000000000019c .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:367    .text.startup.main:00000000000001a4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:369    .text.startup.main:00000000000001a8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:147    .text.handle_imu:00000000000000c0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:372    .text.startup.main:00000000000001a8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:313    .text.startup.main:000000000000013a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:316    .text.startup.main:0000000000000140 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:317    .text.startup.main:0000000000000140 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:322    .text.startup.main:0000000000000150 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:325    .text.startup.main:0000000000000156 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:327    .text.startup.main:000000000000015a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:332    .text.startup.main:0000000000000164 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:333    .text.startup.main:0000000000000164 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:336    .text.startup.main:0000000000000168 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:337    .text.startup.main:0000000000000168 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:341    .text.startup.main:0000000000000174 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:342    .text.startup.main:0000000000000174 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:345    .text.startup.main:000000000000017a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:347    .text.startup.main:000000000000017e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:351    .text.startup.main:0000000000000186 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:352    .text.startup.main:0000000000000186 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:355    .text.startup.main:000000000000018e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:357    .text.startup.main:0000000000000192 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:147    .text.handle_imu:00000000000000c0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:360    .text.startup.main:0000000000000192 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:109    .text.handle_imu:000000000000009c .L2
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:356    .text.startup.main:0000000000000194 .L6
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:341    .text.startup.main:0000000000000176 .L7
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:335    .text.startup.main:000000000000016a .L16
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:361    .text.startup.main:000000000000019c .L11
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:259    .text.startup.main:00000000000000d4 .L12
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:2601   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3790   .debug_str:00000000000006d0 .LASF198
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3630   .debug_str:0000000000000357 .LASF199
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3704   .debug_str:00000000000004e2 .LASF200
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3442   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3450   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3774   .debug_str:000000000000067e .LASF0
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3500   .debug_str:00000000000000f7 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3520   .debug_str:0000000000000162 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3470   .debug_str:000000000000004e .LASF3
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3708   .debug_str:0000000000000550 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3780   .debug_str:000000000000069f .LASF5
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3776   .debug_str:000000000000068b .LASF6
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3798   .debug_str:0000000000000776 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3642   .debug_str:0000000000000386 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3538   .debug_str:00000000000001b0 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3568   .debug_str:000000000000023e .LASF10
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3596   .debug_str:00000000000002b4 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3550   .debug_str:00000000000001e3 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3488   .debug_str:00000000000000ae .LASF13
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3804   .debug_str:0000000000000796 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3784   .debug_str:00000000000006b1 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3552   .debug_str:00000000000001f1 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3706   .debug_str:0000000000000548 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3860   .debug_str:00000000000008ba .LASF18
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3588   .debug_str:0000000000000288 .LASF165
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 16
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:109    .text.handle_imu:000000000000009c .L2
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:349    .text.startup.main:0000000000000186 .L11
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:334    .text.startup.main:0000000000000168 .L7
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:328    .text.startup.main:000000000000015c .L16
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:262    .text.startup.main:00000000000000d8 .L12
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:2533   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3703   .debug_str:00000000000006b0 .LASF195
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3545   .debug_str:000000000000034a .LASF196
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3573   .debug_str:00000000000003cf .LASF197
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3359   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3367   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3687   .debug_str:000000000000065e .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3415   .debug_str:00000000000000ec .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3435   .debug_str:0000000000000157 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3387   .debug_str:000000000000004e .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3621   .debug_str:0000000000000530 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3693   .debug_str:000000000000067f .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3689   .debug_str:000000000000066b .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3709   .debug_str:000000000000074a .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3559   .debug_str:0000000000000382 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3453   .debug_str:00000000000001a5 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3483   .debug_str:0000000000000231 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3511   .debug_str:00000000000002a7 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3465   .debug_str:00000000000001d8 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3403   .debug_str:00000000000000a3 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3715   .debug_str:000000000000076a .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3697   .debug_str:0000000000000691 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3549   .debug_str:0000000000000356 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3619   .debug_str:0000000000000528 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3771   .debug_str:000000000000088e .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3503   .debug_str:000000000000027b .LASF165
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3375   .debug_str:000000000000001e .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3437   .debug_str:0000000000000163 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3431   .debug_str:0000000000000148 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3691   .debug_str:0000000000000676 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3463   .debug_str:00000000000001ce .LASF23
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 15
 
 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3458   .debug_str:000000000000001e .LASF19
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3522   .debug_str:000000000000016e .LASF20
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3516   .debug_str:0000000000000153 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3778   .debug_str:0000000000000696 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3548   .debug_str:00000000000001d9 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3690   .debug_str:0000000000000495 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3692   .debug_str:00000000000004a0 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3694   .debug_str:00000000000004ab .LASF26
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3696   .debug_str:00000000000004b6 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3698   .debug_str:00000000000004c1 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3700   .debug_str:00000000000004cc .LASF29
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3788   .debug_str:00000000000006c6 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3456   .debug_str:0000000000000015 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3794   .debug_str:0000000000000761 .LASF32
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3668   .debug_str:000000000000042a .LASF33
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3670   .debug_str:0000000000000435 .LASF34
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3490   .debug_str:00000000000000c5 .LASF35
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3492   .debug_str:00000000000000cf .LASF36
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3834   .debug_str:0000000000000840 .LASF37
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3756   .debug_str:0000000000000633 .LASF38
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3564   .debug_str:0000000000000230 .LASF39
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3514   .debug_str:000000000000014a .LASF40
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3762   .debug_str:000000000000064e .LASF41
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3808   .debug_str:00000000000007aa .LASF42
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3614   .debug_str:000000000000030e .LASF43
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3606   .debug_str:00000000000002ee .LASF44
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3468   .debug_str:0000000000000047 .LASF45
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3496   .debug_str:00000000000000e2 .LASF46
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3590   .debug_str:0000000000000298 .LASF47
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3592   .debug_str:00000000000002a2 .LASF48
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3502   .debug_str:0000000000000100 .LASF49
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3506   .debug_str:000000000000011a .LASF50
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3602   .debug_str:00000000000002dc .LASF51
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3604   .debug_str:00000000000002e5 .LASF52
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3688   .debug_str:000000000000048a .LASF53
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3454   .debug_str:000000000000000c .LASF54
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3666   .debug_str:000000000000041f .LASF55
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3764   .debug_str:0000000000000657 .LASF56
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3682   .debug_str:0000000000000473 .LASF57
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3474   .debug_str:0000000000000061 .LASF58
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3760   .debug_str:0000000000000646 .LASF59
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3824   .debug_str:000000000000080f .LASF60
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3626   .debug_str:000000000000034a .LASF61
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3586   .debug_str:0000000000000281 .LASF62
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3750   .debug_str:000000000000061d .LASF63
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3752   .debug_str:0000000000000625 .LASF64
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3724   .debug_str:000000000000059b .LASF65
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3802   .debug_str:000000000000078e .LASF66
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3656   .debug_str:00000000000003d3 .LASF67
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3714   .debug_str:000000000000056d .LASF68
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3576   .debug_str:0000000000000263 .LASF73
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3580   .debug_str:0000000000000270 .LASF69
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3744   .debug_str:0000000000000608 .LASF70
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3570   .debug_str:0000000000000249 .LASF71
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3820   .debug_str:0000000000000804 .LASF72
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3584   .debug_str:000000000000027c .LASF74
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3512   .debug_str:0000000000000141 .LASF75
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 17
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3605   .debug_str:00000000000004db .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3607   .debug_str:00000000000004e6 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3609   .debug_str:00000000000004f1 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3611   .debug_str:00000000000004fc .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3613   .debug_str:0000000000000507 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3615   .debug_str:0000000000000512 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3701   .debug_str:00000000000006a6 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3373   .debug_str:0000000000000015 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3707   .debug_str:0000000000000741 .LASF32
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3585   .debug_str:000000000000047a .LASF33
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3587   .debug_str:0000000000000485 .LASF34
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3405   .debug_str:00000000000000ba .LASF35
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3407   .debug_str:00000000000000c4 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3745   .debug_str:0000000000000814 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3669   .debug_str:0000000000000613 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3479   .debug_str:0000000000000223 .LASF39
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3429   .debug_str:000000000000013f .LASF40
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3675   .debug_str:000000000000062e .LASF41
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3719   .debug_str:000000000000077e .LASF42
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3529   .debug_str:0000000000000301 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3521   .debug_str:00000000000002e1 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3385   .debug_str:0000000000000047 .LASF45
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3411   .debug_str:00000000000000d7 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3505   .debug_str:000000000000028b .LASF47
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3507   .debug_str:0000000000000295 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3417   .debug_str:00000000000000f5 .LASF49
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3421   .debug_str:000000000000010f .LASF50
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3517   .debug_str:00000000000002cf .LASF51
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3519   .debug_str:00000000000002d8 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3603   .debug_str:00000000000004d0 .LASF53
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3371   .debug_str:000000000000000c .LASF54
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3583   .debug_str:000000000000046f .LASF55
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3677   .debug_str:0000000000000637 .LASF56
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3597   .debug_str:00000000000004b9 .LASF57
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3391   .debug_str:0000000000000061 .LASF58
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3673   .debug_str:0000000000000626 .LASF59
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3735   .debug_str:00000000000007e3 .LASF60
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3541   .debug_str:000000000000033d .LASF61
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3501   .debug_str:0000000000000274 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3663   .debug_str:00000000000005fd .LASF63
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3665   .debug_str:0000000000000605 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3637   .debug_str:000000000000057b .LASF65
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3713   .debug_str:0000000000000762 .LASF66
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3575   .debug_str:0000000000000435 .LASF67
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3627   .debug_str:000000000000054d .LASF68
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3491   .debug_str:0000000000000256 .LASF73
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3495   .debug_str:0000000000000263 .LASF69
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3657   .debug_str:00000000000005e8 .LASF70
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3485   .debug_str:000000000000023c .LASF71
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3731   .debug_str:00000000000007d8 .LASF72
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3499   .debug_str:000000000000026f .LASF74
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3427   .debug_str:0000000000000136 .LASF75
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3755   .debug_str:0000000000000845 .LASF76
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3443   .debug_str:0000000000000178 .LASF77
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3773   .debug_str:0000000000000897 .LASF78
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3577   .debug_str:0000000000000447 .LASF79
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3569   .debug_str:00000000000003bc .LASF80
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 16
 
 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3844   .debug_str:0000000000000871 .LASF76
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3528   .debug_str:0000000000000183 .LASF77
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3862   .debug_str:00000000000008c3 .LASF78
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3660   .debug_str:00000000000003f7 .LASF79
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3652   .debug_str:00000000000003c0 .LASF80
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3758   .debug_str:000000000000063c .LASF81
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3854   .debug_str:00000000000008a1 .LASF82
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3840   .debug_str:0000000000000857 .LASF83
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3532   .debug_str:0000000000000192 .LASF84
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3462   .debug_str:000000000000002c .LASF85
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3452   .debug_str:0000000000000000 .LASF86
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3792   .debug_str:0000000000000758 .LASF87
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3542   .debug_str:00000000000001c0 .LASF88
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3672   .debug_str:0000000000000440 .LASF89
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3734   .debug_str:00000000000005c9 .LASF90
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3566   .debug_str:0000000000000239 .LASF91
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3718   .debug_str:0000000000000585 .LASF92
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3526   .debug_str:000000000000017d .LASF93
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3772   .debug_str:0000000000000678 .LASF94
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3726   .debug_str:00000000000005a6 .LASF95
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3540   .debug_str:00000000000001b9 .LASF96
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3598   .debug_str:00000000000002c6 .LASF97
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3494   .debug_str:00000000000000d9 .LASF98
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3534   .debug_str:00000000000001a0 .LASF99
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3582   .debug_str:0000000000000276 .LASF100
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3650   .debug_str:00000000000003b9 .LASF101
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3754   .debug_str:000000000000062d .LASF102
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3518   .debug_str:000000000000015b .LASF103
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3524   .debug_str:0000000000000177 .LASF104
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3836   .debug_str:0000000000000849 .LASF105
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3770   .debug_str:000000000000066f .LASF106
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3558   .debug_str:0000000000000209 .LASF107
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3608   .debug_str:00000000000002f6 .LASF108
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3636   .debug_str:0000000000000374 .LASF109
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3728   .debug_str:00000000000005ae .LASF110
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3720   .debug_str:000000000000058c .LASF111
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3746   .debug_str:0000000000000610 .LASF112
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3766   .debug_str:0000000000000663 .LASF113
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3544   .debug_str:00000000000001c8 .LASF114
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3782   .debug_str:00000000000006a9 .LASF115
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3574   .debug_str:000000000000025b .LASF116
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3732   .debug_str:00000000000005c4 .LASF117
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3466   .debug_str:000000000000003c .LASF118
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3740   .debug_str:00000000000005e0 .LASF119
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3736   .debug_str:00000000000005ce .LASF120
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3678   .debug_str:0000000000000459 .LASF121
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3738   .debug_str:00000000000005d6 .LASF122
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3624   .debug_str:0000000000000342 .LASF123
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3546   .debug_str:00000000000001cf .LASF124
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3852   .debug_str:000000000000089c .LASF125
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3686   .debug_str:0000000000000480 .LASF126
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3594   .debug_str:00000000000002ac .LASF127
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3556   .debug_str:0000000000000201 .LASF128
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3632   .debug_str:000000000000035e .LASF129
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3472   .debug_str:0000000000000058 .LASF130
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3830   .debug_str:0000000000000829 .LASF131
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3536   .debug_str:00000000000001a8 .LASF132
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 18
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3671   .debug_str:000000000000061c .LASF81
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3765   .debug_str:0000000000000875 .LASF82
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3751   .debug_str:000000000000082b .LASF83
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3447   .debug_str:0000000000000187 .LASF84
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3379   .debug_str:000000000000002c .LASF85
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3369   .debug_str:0000000000000000 .LASF86
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3705   .debug_str:0000000000000738 .LASF87
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3457   .debug_str:00000000000001b5 .LASF88
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3589   .debug_str:0000000000000490 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3647   .debug_str:00000000000005a9 .LASF90
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3481   .debug_str:000000000000022c .LASF91
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3631   .debug_str:0000000000000565 .LASF92
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3441   .debug_str:0000000000000172 .LASF93
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3685   .debug_str:0000000000000658 .LASF94
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3639   .debug_str:0000000000000586 .LASF95
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3455   .debug_str:00000000000001ae .LASF96
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3513   .debug_str:00000000000002b9 .LASF97
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3409   .debug_str:00000000000000ce .LASF98
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3449   .debug_str:0000000000000195 .LASF99
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3497   .debug_str:0000000000000269 .LASF100
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3567   .debug_str:00000000000003b5 .LASF101
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3667   .debug_str:000000000000060d .LASF102
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3433   .debug_str:0000000000000150 .LASF103
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3439   .debug_str:000000000000016c .LASF104
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3747   .debug_str:000000000000081d .LASF105
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3683   .debug_str:000000000000064f .LASF106
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3473   .debug_str:00000000000001fc .LASF107
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3523   .debug_str:00000000000002e9 .LASF108
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3553   .debug_str:0000000000000370 .LASF109
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3641   .debug_str:000000000000058e .LASF110
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3633   .debug_str:000000000000056c .LASF111
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3659   .debug_str:00000000000005f0 .LASF112
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3679   .debug_str:0000000000000643 .LASF113
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3459   .debug_str:00000000000001bd .LASF114
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3695   .debug_str:0000000000000689 .LASF115
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3489   .debug_str:000000000000024e .LASF116
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3645   .debug_str:00000000000005a4 .LASF117
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3383   .debug_str:000000000000003c .LASF118
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3653   .debug_str:00000000000005c0 .LASF119
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3649   .debug_str:00000000000005ae .LASF120
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3593   .debug_str:000000000000049f .LASF121
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3651   .debug_str:00000000000005b6 .LASF122
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3539   .debug_str:0000000000000335 .LASF123
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3461   .debug_str:00000000000001c4 .LASF124
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3763   .debug_str:0000000000000870 .LASF125
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3601   .debug_str:00000000000004c6 .LASF126
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3509   .debug_str:000000000000029f .LASF127
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3471   .debug_str:00000000000001f4 .LASF128
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3547   .debug_str:0000000000000351 .LASF129
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3389   .debug_str:0000000000000058 .LASF130
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3741   .debug_str:00000000000007fd .LASF131
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3451   .debug_str:000000000000019d .LASF132
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3445   .debug_str:0000000000000182 .LASF133
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3681   .debug_str:000000000000064a .LASF134
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3635   .debug_str:0000000000000574 .LASF135
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3733   .debug_str:00000000000007dd .LASF136
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3525   .debug_str:00000000000002ef .LASF137
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 17
 
 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3530   .debug_str:000000000000018d .LASF133
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3768   .debug_str:000000000000066a .LASF134
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3722   .debug_str:0000000000000594 .LASF135
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3822   .debug_str:0000000000000809 .LASF136
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3610   .debug_str:00000000000002fc .LASF137
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3710   .debug_str:000000000000055e .LASF138
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3464   .debug_str:0000000000000034 .LASF139
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3748   .debug_str:0000000000000617 .LASF140
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3638   .debug_str:000000000000037a .LASF141
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3800   .debug_str:0000000000000789 .LASF142
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3818   .debug_str:00000000000007f7 .LASF143
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3786   .debug_str:00000000000006b9 .LASF144
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3618   .debug_str:0000000000000322 .LASF145
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3842   .debug_str:0000000000000862 .LASF146
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3680   .debug_str:0000000000000464 .LASF147
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3612   .debug_str:0000000000000303 .LASF148
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3846   .debug_str:000000000000087a .LASF149
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3730   .debug_str:00000000000005b7 .LASF150
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3848   .debug_str:000000000000087f .LASF151
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3510   .debug_str:0000000000000133 .LASF152
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3826   .debug_str:0000000000000818 .LASF153
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3616   .debug_str:0000000000000316 .LASF154
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3806   .debug_str:000000000000079d .LASF155
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3562   .debug_str:0000000000000222 .LASF156
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3508   .debug_str:0000000000000124 .LASF157
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3560   .debug_str:0000000000000211 .LASF158
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3478   .debug_str:0000000000000075 .LASF159
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3482   .debug_str:0000000000000089 .LASF160
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3712   .debug_str:0000000000000564 .LASF161
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3664   .debug_str:0000000000000418 .LASF162
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3654   .debug_str:00000000000003ca .LASF163
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3838   .debug_str:000000000000084f .LASF164
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3498   .debug_str:00000000000000ec .LASF201
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3572   .debug_str:000000000000024f .LASF166
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3814   .debug_str:00000000000007d6 .LASF167
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3684   .debug_str:000000000000047a .LASF168
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3476   .debug_str:0000000000000068 .LASF169
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3674   .debug_str:0000000000000448 .LASF170
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3486   .debug_str:00000000000000a3 .LASF171
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3554   .debug_str:00000000000001fa .LASF172
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3810   .debug_str:00000000000007b2 .LASF202
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3816   .debug_str:00000000000007e9 .LASF173
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3742   .debug_str:00000000000005f9 .LASF174
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3504   .debug_str:000000000000010a .LASF175
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3702   .debug_str:00000000000004d7 .LASF203
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:17     .text.handle_imu:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:145    .text.handle_imu:00000000000000c0 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3308   .debug_loc:0000000000000000 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3480   .debug_str:0000000000000084 .LASF176
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3326   .debug_loc:000000000000002c .LLST1
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3622   .debug_str:0000000000000338 .LASF177
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3344   .debug_loc:0000000000000058 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3362   .debug_loc:0000000000000084 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3648   .debug_str:00000000000003b1 .LASF178
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3379   .debug_loc:00000000000000af .LLST4
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3397   .debug_loc:00000000000000db .LLST5
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:49     .text.handle_imu:0000000000000022 .LVL1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 19
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3623   .debug_str:000000000000053e .LASF138
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3381   .debug_str:0000000000000034 .LASF139
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3661   .debug_str:00000000000005f7 .LASF140
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3555   .debug_str:0000000000000376 .LASF141
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3711   .debug_str:000000000000075d .LASF142
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3729   .debug_str:00000000000007cb .LASF143
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3699   .debug_str:0000000000000699 .LASF144
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3533   .debug_str:0000000000000315 .LASF145
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3753   .debug_str:0000000000000836 .LASF146
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3595   .debug_str:00000000000004aa .LASF147
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3527   .debug_str:00000000000002f6 .LASF148
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3757   .debug_str:000000000000084e .LASF149
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3643   .debug_str:0000000000000597 .LASF150
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3759   .debug_str:0000000000000853 .LASF151
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3425   .debug_str:0000000000000128 .LASF152
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3737   .debug_str:00000000000007ec .LASF153
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3531   .debug_str:0000000000000309 .LASF154
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3717   .debug_str:0000000000000771 .LASF155
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3477   .debug_str:0000000000000215 .LASF156
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3423   .debug_str:0000000000000119 .LASF157
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3475   .debug_str:0000000000000204 .LASF158
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3395   .debug_str:0000000000000075 .LASF159
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3399   .debug_str:0000000000000089 .LASF160
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3625   .debug_str:0000000000000544 .LASF161
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3581   .debug_str:0000000000000468 .LASF162
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3571   .debug_str:00000000000003c6 .LASF163
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3749   .debug_str:0000000000000823 .LASF164
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3413   .debug_str:00000000000000e1 .LASF198
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3487   .debug_str:0000000000000242 .LASF166
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3725   .debug_str:00000000000007aa .LASF167
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3599   .debug_str:00000000000004c0 .LASF168
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3393   .debug_str:0000000000000068 .LASF169
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3469   .debug_str:00000000000001ed .LASF170
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3721   .debug_str:0000000000000786 .LASF199
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3727   .debug_str:00000000000007bd .LASF171
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3655   .debug_str:00000000000005d9 .LASF172
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3419   .debug_str:00000000000000ff .LASF173
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3617   .debug_str:000000000000051d .LASF200
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:17     .text.handle_imu:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:145    .text.handle_imu:00000000000000c0 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3225   .debug_loc:0000000000000000 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3397   .debug_str:0000000000000084 .LASF174
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3243   .debug_loc:000000000000002c .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3537   .debug_str:000000000000032b .LASF175
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3261   .debug_loc:0000000000000058 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3279   .debug_loc:0000000000000084 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3565   .debug_str:00000000000003ad .LASF176
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3296   .debug_loc:00000000000000af .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3314   .debug_loc:00000000000000db .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:49     .text.handle_imu:0000000000000022 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:84     .text.handle_imu:0000000000000072 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:116    .text.handle_imu:00000000000000aa .LVL9
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3767   .debug_str:000000000000087f .LASF201
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:152    .text.startup.main:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:358    .text.startup.main:0000000000000192 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3331   .debug_loc:0000000000000106 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3401   .debug_str:000000000000009a .LASF177
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 18
 
 
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:84     .text.handle_imu:0000000000000072 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:116    .text.handle_imu:00000000000000aa .LVL9
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3856   .debug_str:00000000000008ab .LASF204
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:152    .text.startup.main:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:370    .text.startup.main:00000000000001a8 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3414   .debug_loc:0000000000000106 .LLST6
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3484   .debug_str:000000000000009a .LASF179
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3620   .debug_str:000000000000032f .LASF180
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3578   .debug_str:000000000000026b .LASF181
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3828   .debug_str:0000000000000822 .LASF182
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:169    .text.startup.main:0000000000000012 .LVL14
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:173    .text.startup.main:000000000000001e .LVL15
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:181    .text.startup.main:0000000000000036 .LVL16
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:186    .text.startup.main:0000000000000046 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:189    .text.startup.main:000000000000004e .LVL18
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:192    .text.startup.main:0000000000000056 .LVL19
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:215    .text.startup.main:0000000000000078 .LVL20
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:220    .text.startup.main:0000000000000082 .LVL21
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:254    .text.startup.main:00000000000000ca .LVL27
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:264    .text.startup.main:00000000000000e0 .LVL29
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:281    .text.startup.main:00000000000000fe .LVL30
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:288    .text.startup.main:0000000000000114 .LVL31
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:315    .text.startup.main:0000000000000146 .LVL32
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:337    .text.startup.main:0000000000000172 .LVL33
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:355    .text.startup.main:0000000000000194 .LVL34
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:359    .text.startup.main:000000000000019c .LVL35
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:365    .text.startup.main:00000000000001a4 .LVL36
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3646   .debug_str:00000000000003a0 .LASF183
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3640   .debug_str:0000000000000380 .LASF184
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3628   .debug_str:0000000000000350 .LASF205
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3634   .debug_str:0000000000000363 .LASF206
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3662   .debug_str:0000000000000400 .LASF185
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3864   .debug_str:00000000000008cd .LASF186
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3600   .debug_str:00000000000002cc .LASF187
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3858   .debug_str:00000000000008b0 .LASF188
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3812   .debug_str:00000000000007c3 .LASF189
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3832   .debug_str:0000000000000833 .LASF190
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3644   .debug_str:0000000000000390 .LASF191
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3460   .debug_str:0000000000000027 .LASF192
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3796   .debug_str:000000000000076a .LASF193
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3676   .debug_str:0000000000000452 .LASF194
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3716   .debug_str:0000000000000576 .LASF195
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3658   .debug_str:00000000000003e5 .LASF196
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:3850   .debug_str:000000000000088d .LASF197
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:25     .text.handle_imu:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:140    .text.handle_imu:00000000000000be .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:21     .text.handle_imu:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:128    .text.handle_imu:00000000000000b4 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:134    .text.handle_imu:00000000000000b8 .LVL12
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:142    .text.handle_imu:00000000000000be .LVL13
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:131    .text.handle_imu:00000000000000b6 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:158    .text.startup.main:0000000000000002 .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s:393    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3535   .debug_str:0000000000000322 .LASF178
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3493   .debug_str:000000000000025e .LASF179
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3739   .debug_str:00000000000007f6 .LASF180
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3467   .debug_str:00000000000001e6 .LASF181
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:169    .text.startup.main:0000000000000012 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:173    .text.startup.main:000000000000001e .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:181    .text.startup.main:0000000000000036 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:186    .text.startup.main:0000000000000046 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:189    .text.startup.main:000000000000004e .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:192    .text.startup.main:0000000000000056 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:215    .text.startup.main:0000000000000078 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:220    .text.startup.main:0000000000000082 .LVL21
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:254    .text.startup.main:00000000000000ca .LVL27
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:267    .text.startup.main:00000000000000e4 .LVL29
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:284    .text.startup.main:0000000000000102 .LVL30
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:292    .text.startup.main:000000000000011c .LVL31
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:330    .text.startup.main:0000000000000164 .LVL32
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:348    .text.startup.main:0000000000000186 .LVL33
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:353    .text.startup.main:000000000000018e .LVL34
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3563   .debug_str:000000000000039c .LASF182
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3557   .debug_str:000000000000037c .LASF183
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3543   .debug_str:0000000000000343 .LASF202
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3551   .debug_str:000000000000035f .LASF203
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3579   .debug_str:0000000000000450 .LASF184
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3775   .debug_str:00000000000008a1 .LASF185
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3515   .debug_str:00000000000002bf .LASF186
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3769   .debug_str:0000000000000884 .LASF187
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3723   .debug_str:0000000000000797 .LASF188
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3743   .debug_str:0000000000000807 .LASF189
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3561   .debug_str:000000000000038c .LASF190
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3377   .debug_str:0000000000000027 .LASF191
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3591   .debug_str:0000000000000498 .LASF192
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3629   .debug_str:0000000000000556 .LASF193
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:3761   .debug_str:0000000000000861 .LASF194
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:25     .text.handle_imu:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:140    .text.handle_imu:00000000000000be .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:21     .text.handle_imu:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:128    .text.handle_imu:00000000000000b4 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:134    .text.handle_imu:00000000000000b8 .LVL12
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:142    .text.handle_imu:00000000000000be .LVL13
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:131    .text.handle_imu:00000000000000b6 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:158    .text.startup.main:0000000000000002 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s:379    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __mulsf3
 __addsf3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccy3Bcy.s 			page 20
-
-
 __fixsfsi
 mpu6500_getAccel
 sqrtf
@@ -1095,10 +1057,11 @@ mpu6500_install
 init_butt
 init_clock_display
 displayClock
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccWBNVNq.s 			page 19
+
+
 delay_until_1ms
 butt
-LCD_ShowNum
 pskiva
 incrementClock
-LCD_Wait_On_Queue
 delay_finished

@@ -74,42 +74,42 @@ int main(void){
   // vector scales 
   int32_t v, v_temp;
 
-  // inital vector resp. vecotr magnitude
+  // inital vector resp. vecotr magnitude 
   mpu6500_getAccel(&vec_temp);
   v_temp = sqrtf((vec_temp.x*vec_temp.x + vec_temp.y*vec_temp.y + vec_temp.z*vec_temp.z));
 
+  // on or off case for pskiva
+  uint8_t enable = 0; 
   while(1){
     delay_until_1ms(100);              // 1 iteration takes 100 ms
     hunmilli++;
 
     handle_imu(&vec, &vec_temp, &v, &v_temp, &c);         // handle imu..
-    butt(&hour, &min, &hunmilli, &s);                     // ..button presses..
+    butt(&hour, &min, &hunmilli, &s, &enable);            // ..button presses..
     
     if (hunmilli > 9){                                    // after 1 second..
       hunmilli=0;                                         // ..reset hunmilli and..
       s++;                                                // ..increment seconds
-      LCD_ShowNum(50, 50, s, 2, YELLOW);                  
       if (!(s%15)) {                                      
         // determine car motion every 15 seconds
-        (c > MARGIN) ? pskiva(1, hour, min) : pskiva(0, hour, min);
+        (c > MARGIN) ? pskiva(1, hour, min, &enable) : pskiva(0, hour, min, &enable);
         c=0;
       }
-      if (s>59){                                      // after 60 seconds..
-        s=0;                                          // ..reset seconds counter..
-        incrementClock(&hour, &min);                  // ..and increase clock by 1 minute!
+      if (s>59){                                          // after 60 seconds..
+        s=0;                                              // ..reset seconds counter..
+        incrementClock(&hour, &min);                      // ..and increase clock by 1 minute!
       }
     }
-    LCD_Wait_On_Queue();
     while (!delay_finished());         // wait until iteration done
   }
 }
 
-/// @brief handles calculations for accelerometer & destroys old so it can be updated
-/// @param pVec 
-/// @param pVec_temp 
-/// @param pV 
-/// @param pV_temp 
-/// @param pC 
+/// @brief    handles calculations for accelerometer & destroys old so it can be updated
+/// @param    pVec: pointer to vector struct
+/// @param    pVec_temp: pointer to temporary vector struct
+/// @param    pV: pointer to vectro magnitude
+/// @param    pV_temp: pointer to temp vector magnitude
+/// @param    pC: pointer to counter
 void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC){
   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
   mpu6500_getAccel(pVec);

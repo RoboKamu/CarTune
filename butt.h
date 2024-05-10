@@ -48,5 +48,6 @@ void init_butt();
   @param    pMin: pointer to initial minute
   @param    pCounter: pointer to counter
   @param    pS: poiter to second counter (accelerometer)
+  @param    pEnable: pointer to current pskiva status variable
 */ 
-void butt(int8_t* pHour, int8_t* pMin, uint8_t* pCounter, uint8_t* pS);
+void butt(int8_t* pHour, int8_t* pMin, uint8_t* pCounter, uint8_t* pS, uint8_t* pEnable);

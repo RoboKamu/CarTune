@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 1
 
 
    1              		.file	"delay.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
   36:delay.c       **** #include "delay.h"
   37:delay.c       **** 
   38:delay.c       **** /*!
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 2
 
 
   39:delay.c       ****     \brief      delay a time in milliseconds
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
   50:delay.c       **** 	do {
   61              		.loc 1 50 2 is_stmt 1 discriminator 1
   51:delay.c       **** 	start_mtime = get_timer_value();
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 3
 
 
   62              		.loc 1 51 2 discriminator 1
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  103              	.LVL10:
  104 0076 4A86     		mv	a2,s2
  105 0078 CE86     		mv	a3,s3
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 4
 
 
  106 007a 97000000 		call	__divdf3
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  155 00ca 4561     		addi	sp,sp,48
  156              	.LCFI1:
  157              		.cfi_def_cfa_offset 0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 5
 
 
  158 00cc 8280     		jr	ra
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  204 0022 AA89     		mv	s3,a0
  205 0024 2E89     		mv	s2,a1
  206              	.LVL19:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 6
 
 
  207              	.L8:
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  247 006c AE8A     		mv	s5,a1
  248              		.loc 1 71 38 discriminator 1
  249 006e 97000000 		call	__floatunsidf
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 7
 
 
  249      E7800000 
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  298 00c6 224C     		lw	s8,8(sp)
  299              		.cfi_restore 24
  300 00c8 924C     		lw	s9,4(sp)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 8
 
 
  301              		.cfi_restore 25
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  345 002a 13070700 		addi	a4,a4,%lo(.LANCHOR0)
   79:delay.c       ****     delay_until = (time * (SystemCoreClock/4000000)) + current_time;
  346              		.loc 1 79 25
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 9
 
 
  347 002e B3878702 		mul	a5,a5,s0
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  393              		.loc 1 85 41 is_stmt 0
  394 0010 B7070000 		lui	a5,%hi(SystemCoreClock)
  395 0014 83A70700 		lw	a5,%lo(SystemCoreClock)(a5)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 10
 
 
  396 0018 8566     		li	a3,4096
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  442              		.cfi_offset 1, -4
  443              		.loc 1 90 12
  444 0004 97000000 		call	get_timer_value
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 11
 
 
  444      E7800000 
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  495              		.align	3
  496              	.LC1:
  497 0000 00000000 		.word	0
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 12
 
 
  498 0004 80844E41 		.word	1095664768
@@ -674,321 +674,321 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 1
  509              		.file 3 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  510              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
  511              		.file 5 "./../../firmware/RISCV/drivers/n200_func.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 delay.c
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:18     .text.delay_1ms:0000000000000000 delay_1ms
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:22     .text.delay_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:24     .text.delay_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:25     .text.delay_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:26     .text.delay_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:27     .text.delay_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:29     .text.delay_1ms:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:41     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:42     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:43     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:44     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:45     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:46     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:47     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:48     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:49     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:50     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:51     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:53     .text.delay_1ms:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:55     .text.delay_1ms:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:62     .text.delay_1ms:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:63     .text.delay_1ms:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:64     .text.delay_1ms:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:70     .text.delay_1ms:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:74     .text.delay_1ms:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:81     .text.delay_1ms:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:82     .text.delay_1ms:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:83     .text.delay_1ms:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:87     .text.delay_1ms:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:93     .text.delay_1ms:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:98     .text.delay_1ms:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:100    .text.delay_1ms:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:102    .text.delay_1ms:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:110    .text.delay_1ms:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:112    .text.delay_1ms:0000000000000086 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:114    .text.delay_1ms:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:123    .text.delay_1ms:00000000000000a0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:131    .text.delay_1ms:00000000000000b4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:132    .text.delay_1ms:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:134    .text.delay_1ms:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:137    .text.delay_1ms:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:139    .text.delay_1ms:00000000000000bc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:141    .text.delay_1ms:00000000000000be .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:143    .text.delay_1ms:00000000000000c0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:145    .text.delay_1ms:00000000000000c2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:147    .text.delay_1ms:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:150    .text.delay_1ms:00000000000000c6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:152    .text.delay_1ms:00000000000000c8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:154    .text.delay_1ms:00000000000000ca .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:157    .text.delay_1ms:00000000000000cc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:159    .text.delay_1ms:00000000000000ce .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:166    .text.delay_1us:0000000000000000 delay_1us
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:169    .text.delay_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:171    .text.delay_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:172    .text.delay_1us:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 14
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:18     .text.delay_1ms:0000000000000000 delay_1ms
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:22     .text.delay_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:24     .text.delay_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:25     .text.delay_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:26     .text.delay_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:27     .text.delay_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:29     .text.delay_1ms:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:41     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:42     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:43     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:44     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:45     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:46     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:47     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:48     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:49     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:50     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:51     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:53     .text.delay_1ms:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:55     .text.delay_1ms:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:62     .text.delay_1ms:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:63     .text.delay_1ms:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:64     .text.delay_1ms:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:70     .text.delay_1ms:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:74     .text.delay_1ms:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:81     .text.delay_1ms:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:82     .text.delay_1ms:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:83     .text.delay_1ms:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:87     .text.delay_1ms:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:93     .text.delay_1ms:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:98     .text.delay_1ms:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:100    .text.delay_1ms:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:102    .text.delay_1ms:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:110    .text.delay_1ms:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:112    .text.delay_1ms:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:114    .text.delay_1ms:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:123    .text.delay_1ms:00000000000000a0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:131    .text.delay_1ms:00000000000000b4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:132    .text.delay_1ms:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:134    .text.delay_1ms:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:137    .text.delay_1ms:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:139    .text.delay_1ms:00000000000000bc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:141    .text.delay_1ms:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:143    .text.delay_1ms:00000000000000c0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:145    .text.delay_1ms:00000000000000c2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:147    .text.delay_1ms:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:150    .text.delay_1ms:00000000000000c6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:152    .text.delay_1ms:00000000000000c8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:154    .text.delay_1ms:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:157    .text.delay_1ms:00000000000000cc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:159    .text.delay_1ms:00000000000000ce .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:166    .text.delay_1us:0000000000000000 delay_1us
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:169    .text.delay_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:171    .text.delay_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:172    .text.delay_1us:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 14
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:173    .text.delay_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:174    .text.delay_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:176    .text.delay_1us:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:188    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:189    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:190    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:191    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:192    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:193    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:194    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:195    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:196    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:197    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:198    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:200    .text.delay_1us:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:202    .text.delay_1us:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:209    .text.delay_1us:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:210    .text.delay_1us:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:211    .text.delay_1us:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:217    .text.delay_1us:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:221    .text.delay_1us:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:228    .text.delay_1us:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:229    .text.delay_1us:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:230    .text.delay_1us:000000000000004a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:234    .text.delay_1us:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:240    .text.delay_1us:000000000000005c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:245    .text.delay_1us:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:247    .text.delay_1us:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:249    .text.delay_1us:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:257    .text.delay_1us:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:259    .text.delay_1us:0000000000000086 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:261    .text.delay_1us:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:270    .text.delay_1us:00000000000000a0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:278    .text.delay_1us:00000000000000b4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:279    .text.delay_1us:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:281    .text.delay_1us:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:284    .text.delay_1us:00000000000000ba .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:286    .text.delay_1us:00000000000000bc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:288    .text.delay_1us:00000000000000be .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:290    .text.delay_1us:00000000000000c0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:292    .text.delay_1us:00000000000000c2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:294    .text.delay_1us:00000000000000c4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:297    .text.delay_1us:00000000000000c6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:299    .text.delay_1us:00000000000000c8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:301    .text.delay_1us:00000000000000ca .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:304    .text.delay_1us:00000000000000cc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:306    .text.delay_1us:00000000000000ce .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:313    .text.delay_until_1us:0000000000000000 delay_until_1us
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:316    .text.delay_until_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:318    .text.delay_until_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:319    .text.delay_until_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:320    .text.delay_until_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:321    .text.delay_until_1us:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:323    .text.delay_until_1us:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:326    .text.delay_until_1us:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:327    .text.delay_until_1us:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:329    .text.delay_until_1us:0000000000000006 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 15
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:173    .text.delay_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:174    .text.delay_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:176    .text.delay_1us:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:188    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:189    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:190    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:191    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:192    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:193    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:194    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:195    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:196    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:197    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:198    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:200    .text.delay_1us:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:202    .text.delay_1us:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:209    .text.delay_1us:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:210    .text.delay_1us:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:211    .text.delay_1us:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:217    .text.delay_1us:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:221    .text.delay_1us:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:228    .text.delay_1us:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:229    .text.delay_1us:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:230    .text.delay_1us:000000000000004a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:234    .text.delay_1us:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:240    .text.delay_1us:000000000000005c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:245    .text.delay_1us:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:247    .text.delay_1us:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:249    .text.delay_1us:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:257    .text.delay_1us:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:259    .text.delay_1us:0000000000000086 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:261    .text.delay_1us:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:270    .text.delay_1us:00000000000000a0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:278    .text.delay_1us:00000000000000b4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:279    .text.delay_1us:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:281    .text.delay_1us:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:284    .text.delay_1us:00000000000000ba .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:286    .text.delay_1us:00000000000000bc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:288    .text.delay_1us:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:290    .text.delay_1us:00000000000000c0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:292    .text.delay_1us:00000000000000c2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:294    .text.delay_1us:00000000000000c4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:297    .text.delay_1us:00000000000000c6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:299    .text.delay_1us:00000000000000c8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:301    .text.delay_1us:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:304    .text.delay_1us:00000000000000cc .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:306    .text.delay_1us:00000000000000ce .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:313    .text.delay_until_1us:0000000000000000 delay_until_1us
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:316    .text.delay_until_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:318    .text.delay_until_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:319    .text.delay_until_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:320    .text.delay_until_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:321    .text.delay_until_1us:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:323    .text.delay_until_1us:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:326    .text.delay_until_1us:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:327    .text.delay_until_1us:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:329    .text.delay_until_1us:0000000000000006 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 15
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:331    .text.delay_until_1us:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:334    .text.delay_until_1us:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:335    .text.delay_until_1us:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:341    .text.delay_until_1us:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:342    .text.delay_until_1us:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:344    .text.delay_until_1us:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:347    .text.delay_until_1us:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:349    .text.delay_until_1us:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:350    .text.delay_until_1us:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:353    .text.delay_until_1us:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:358    .text.delay_until_1us:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:361    .text.delay_until_1us:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:363    .text.delay_until_1us:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:365    .text.delay_until_1us:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:372    .text.delay_until_1ms:0000000000000000 delay_until_1ms
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:375    .text.delay_until_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:377    .text.delay_until_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:378    .text.delay_until_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:379    .text.delay_until_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:380    .text.delay_until_1ms:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:382    .text.delay_until_1ms:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:385    .text.delay_until_1ms:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:386    .text.delay_until_1ms:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:388    .text.delay_until_1ms:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:390    .text.delay_until_1ms:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:393    .text.delay_until_1ms:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:394    .text.delay_until_1ms:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:400    .text.delay_until_1ms:0000000000000022 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:401    .text.delay_until_1ms:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:403    .text.delay_until_1ms:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:406    .text.delay_until_1ms:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:408    .text.delay_until_1ms:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:409    .text.delay_until_1ms:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:412    .text.delay_until_1ms:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:417    .text.delay_until_1ms:000000000000003a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:420    .text.delay_until_1ms:000000000000003e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:422    .text.delay_until_1ms:0000000000000040 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:424    .text.delay_until_1ms:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:431    .text.delay_finished:0000000000000000 delay_finished
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:434    .text.delay_finished:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:435    .text.delay_finished:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:436    .text.delay_finished:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:437    .text.delay_finished:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:438    .text.delay_finished:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:440    .text.delay_finished:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:442    .text.delay_finished:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:444    .text.delay_finished:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:447    .text.delay_finished:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:448    .text.delay_finished:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:451    .text.delay_finished:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:459    .text.delay_finished:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:460    .text.delay_finished:0000000000000028 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:465    .text.delay_finished:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:466    .text.delay_finished:0000000000000030 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:470    .text.delay_finished:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:471    .text.delay_finished:0000000000000034 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:472    .text.delay_finished:0000000000000034 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 16
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:331    .text.delay_until_1us:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:334    .text.delay_until_1us:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:335    .text.delay_until_1us:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:341    .text.delay_until_1us:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:342    .text.delay_until_1us:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:344    .text.delay_until_1us:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:347    .text.delay_until_1us:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:349    .text.delay_until_1us:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:350    .text.delay_until_1us:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:353    .text.delay_until_1us:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:358    .text.delay_until_1us:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:361    .text.delay_until_1us:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:363    .text.delay_until_1us:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:365    .text.delay_until_1us:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:372    .text.delay_until_1ms:0000000000000000 delay_until_1ms
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:375    .text.delay_until_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:377    .text.delay_until_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:378    .text.delay_until_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:379    .text.delay_until_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:380    .text.delay_until_1ms:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:382    .text.delay_until_1ms:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:385    .text.delay_until_1ms:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:386    .text.delay_until_1ms:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:388    .text.delay_until_1ms:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:390    .text.delay_until_1ms:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:393    .text.delay_until_1ms:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:394    .text.delay_until_1ms:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:400    .text.delay_until_1ms:0000000000000022 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:401    .text.delay_until_1ms:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:403    .text.delay_until_1ms:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:406    .text.delay_until_1ms:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:408    .text.delay_until_1ms:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:409    .text.delay_until_1ms:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:412    .text.delay_until_1ms:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:417    .text.delay_until_1ms:000000000000003a .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:420    .text.delay_until_1ms:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:422    .text.delay_until_1ms:0000000000000040 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:424    .text.delay_until_1ms:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:431    .text.delay_finished:0000000000000000 delay_finished
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:434    .text.delay_finished:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:435    .text.delay_finished:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:436    .text.delay_finished:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:437    .text.delay_finished:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:438    .text.delay_finished:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:440    .text.delay_finished:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:442    .text.delay_finished:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:444    .text.delay_finished:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:447    .text.delay_finished:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:448    .text.delay_finished:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:451    .text.delay_finished:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:459    .text.delay_finished:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:460    .text.delay_finished:0000000000000028 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:465    .text.delay_finished:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:466    .text.delay_finished:0000000000000030 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:470    .text.delay_finished:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:471    .text.delay_finished:0000000000000034 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:472    .text.delay_finished:0000000000000034 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 16
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:475    .text.delay_finished:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:480    .text.delay_finished:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:482    .text.delay_finished:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:485    .text.delay_finished:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:504    .sbss.delay_until:0000000000000000 delay_until
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:501    .sbss.delay_until:0000000000000000 .LANCHOR0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:162    .text.delay_1ms:00000000000000ce .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:309    .text.delay_1us:00000000000000ce .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:368    .text.delay_until_1us:0000000000000044 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:427    .text.delay_until_1ms:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:489    .text.delay_finished:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:475    .text.delay_finished:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:480    .text.delay_finished:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:482    .text.delay_finished:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:485    .text.delay_finished:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:504    .sbss.delay_until:0000000000000000 delay_until
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:501    .sbss.delay_until:0000000000000000 .LANCHOR0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:162    .text.delay_1ms:00000000000000ce .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:309    .text.delay_1us:00000000000000ce .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:368    .text.delay_until_1us:0000000000000044 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:427    .text.delay_until_1ms:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:489    .text.delay_finished:000000000000003c .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:491    .rodata.delay_1ms.cst8:0000000000000000 .LC0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:72     .text.delay_1ms:000000000000003a .L3
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:60     .text.delay_1ms:0000000000000026 .L2
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:79     .text.delay_1ms:000000000000004a .L4
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:496    .rodata.delay_1us.cst8:0000000000000000 .LC1
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:219    .text.delay_1us:000000000000003a .L9
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:207    .text.delay_1us:0000000000000026 .L8
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:226    .text.delay_1us:000000000000004a .L10
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:478    .text.delay_finished:0000000000000038 .L20
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:457    .text.delay_finished:0000000000000028 .L21
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:468    .text.delay_finished:0000000000000032 .L17
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:816    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1434   .debug_str:0000000000000178 .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1432   .debug_str:0000000000000170 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1406   .debug_str:0000000000000075 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1372   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1386   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1412   .debug_str:00000000000000f0 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1446   .debug_str:0000000000000234 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1390   .debug_str:000000000000000c .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1402   .debug_str:0000000000000055 .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1428   .debug_str:000000000000015b .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1398   .debug_str:0000000000000039 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1438   .debug_str:0000000000000209 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1410   .debug_str:00000000000000e5 .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1404   .debug_str:0000000000000063 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1424   .debug_str:000000000000013d .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1430   .debug_str:0000000000000165 .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1416   .debug_str:000000000000010d .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1418   .debug_str:0000000000000124 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1436   .debug_str:0000000000000200 .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1400   .debug_str:000000000000004c .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1426   .debug_str:000000000000014b .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1422   .debug_str:0000000000000131 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1388   .debug_str:0000000000000000 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1450   .debug_str:0000000000000250 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:432    .text.delay_finished:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:486    .text.delay_finished:000000000000003c .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1091   .debug_loc:0000000000000000 .LLST14
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1420   .debug_str:000000000000012c .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1114   .debug_loc:0000000000000038 .LLST15
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:445    .text.delay_finished:000000000000000c .LVL42
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1414   .debug_str:00000000000000fd .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:373    .text.delay_until_1ms:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:425    .text.delay_until_1ms:0000000000000042 .LFE5
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 17
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:491    .rodata.delay_1ms.cst8:0000000000000000 .LC0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:72     .text.delay_1ms:000000000000003a .L3
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:60     .text.delay_1ms:0000000000000026 .L2
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:79     .text.delay_1ms:000000000000004a .L4
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:496    .rodata.delay_1us.cst8:0000000000000000 .LC1
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:219    .text.delay_1us:000000000000003a .L9
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:207    .text.delay_1us:0000000000000026 .L8
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:226    .text.delay_1us:000000000000004a .L10
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:478    .text.delay_finished:0000000000000038 .L20
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:457    .text.delay_finished:0000000000000028 .L21
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:468    .text.delay_finished:0000000000000032 .L17
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:816    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1434   .debug_str:0000000000000178 .LASF28
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1432   .debug_str:0000000000000170 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1408   .debug_str:000000000000007f .LASF30
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1372   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1386   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1412   .debug_str:00000000000000f0 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1446   .debug_str:0000000000000234 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1390   .debug_str:000000000000000c .LASF6
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1400   .debug_str:0000000000000042 .LASF2
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1428   .debug_str:000000000000015b .LASF3
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1404   .debug_str:0000000000000062 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1438   .debug_str:0000000000000209 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1410   .debug_str:00000000000000e5 .LASF7
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1402   .debug_str:0000000000000050 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1424   .debug_str:000000000000013d .LASF9
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1430   .debug_str:0000000000000165 .LASF10
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1416   .debug_str:000000000000010d .LASF11
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1418   .debug_str:0000000000000124 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1436   .debug_str:0000000000000200 .LASF13
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1398   .debug_str:0000000000000039 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1426   .debug_str:000000000000014b .LASF16
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1422   .debug_str:0000000000000131 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1388   .debug_str:0000000000000000 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1450   .debug_str:0000000000000250 .LASF18
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:432    .text.delay_finished:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:486    .text.delay_finished:000000000000003c .LFE6
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1091   .debug_loc:0000000000000000 .LLST14
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1420   .debug_str:000000000000012c .LASF20
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1114   .debug_loc:0000000000000038 .LLST15
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:445    .text.delay_finished:000000000000000c .LVL42
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1414   .debug_str:00000000000000fd .LASF19
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:373    .text.delay_until_1ms:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:425    .text.delay_until_1ms:0000000000000042 .LFE5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 17
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1135   .debug_loc:0000000000000060 .LLST11
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1153   .debug_loc:000000000000008c .LLST12
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1392   .debug_str:0000000000000016 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1171   .debug_loc:00000000000000b8 .LLST13
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:391    .text.delay_until_1ms:0000000000000010 .LVL39
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1448   .debug_str:0000000000000240 .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:314    .text.delay_until_1us:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:366    .text.delay_until_1us:0000000000000044 .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1183   .debug_loc:00000000000000d0 .LLST8
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1201   .debug_loc:00000000000000fc .LLST9
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1219   .debug_loc:0000000000000128 .LLST10
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:332    .text.delay_until_1us:0000000000000010 .LVL35
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1444   .debug_str:000000000000022a .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:167    .text.delay_1us:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:307    .text.delay_1us:00000000000000ce .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1231   .debug_loc:0000000000000140 .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1396   .debug_str:0000000000000033 .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1249   .debug_loc:000000000000016c .LLST5
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1442   .debug_str:000000000000021e .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1267   .debug_loc:0000000000000198 .LLST6
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1440   .debug_str:0000000000000212 .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1279   .debug_loc:00000000000001b0 .LLST7
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:203    .text.delay_1us:0000000000000022 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:212    .text.delay_1us:000000000000002e .LVL20
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:231    .text.delay_1us:0000000000000052 .LVL23
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1408   .debug_str:00000000000000db .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:19     .text.delay_1ms:0000000000000000 .LFB2
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:160    .text.delay_1ms:00000000000000ce .LFE2
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1291   .debug_loc:00000000000001c8 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1309   .debug_loc:00000000000001f4 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1327   .debug_loc:0000000000000220 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1339   .debug_loc:0000000000000238 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:56     .text.delay_1ms:0000000000000022 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:65     .text.delay_1ms:000000000000002e .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:84     .text.delay_1ms:0000000000000052 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:1394   .debug_str:0000000000000023 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:439    .text.delay_finished:0000000000000002 .LCFI8
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:474    .text.delay_finished:0000000000000036 .LCFI9
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:479    .text.delay_finished:0000000000000038 .LCFI10
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:467    .text.delay_finished:0000000000000032 .LVL43
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:477    .text.delay_finished:0000000000000038 .LVL44
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:483    .text.delay_finished:000000000000003a .LVL45
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:381    .text.delay_until_1ms:0000000000000002 .LCFI6
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:421    .text.delay_until_1ms:0000000000000040 .LCFI7
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:376    .text.delay_until_1ms:0000000000000000 .LVL38
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:410    .text.delay_until_1ms:0000000000000032 .LVL40
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:413    .text.delay_until_1ms:0000000000000034 .LVL41
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:322    .text.delay_until_1us:0000000000000002 .LCFI4
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:362    .text.delay_until_1us:0000000000000042 .LCFI5
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:317    .text.delay_until_1us:0000000000000000 .LVL34
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:351    .text.delay_until_1us:0000000000000034 .LVL36
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:354    .text.delay_until_1us:0000000000000036 .LVL37
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:175    .text.delay_1us:0000000000000002 .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:303    .text.delay_1us:00000000000000cc .LCFI3
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:170    .text.delay_1us:0000000000000000 .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:295    .text.delay_1us:00000000000000c4 .LVL33
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:215    .text.delay_1us:0000000000000032 .LVL21
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s 			page 18
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1135   .debug_loc:0000000000000060 .LLST11
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1153   .debug_loc:000000000000008c .LLST12
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1392   .debug_str:0000000000000016 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1171   .debug_loc:00000000000000b8 .LLST13
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:391    .text.delay_until_1ms:0000000000000010 .LVL39
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1448   .debug_str:0000000000000240 .LASF22
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:314    .text.delay_until_1us:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:366    .text.delay_until_1us:0000000000000044 .LFE4
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1183   .debug_loc:00000000000000d0 .LLST8
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1201   .debug_loc:00000000000000fc .LLST9
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1219   .debug_loc:0000000000000128 .LLST10
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:332    .text.delay_until_1us:0000000000000010 .LVL35
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1444   .debug_str:000000000000022a .LASF23
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:167    .text.delay_1us:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:307    .text.delay_1us:00000000000000ce .LFE3
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1231   .debug_loc:0000000000000140 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1396   .debug_str:0000000000000033 .LASF24
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1249   .debug_loc:000000000000016c .LLST5
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1442   .debug_str:000000000000021e .LASF25
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1267   .debug_loc:0000000000000198 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1440   .debug_str:0000000000000212 .LASF27
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1279   .debug_loc:00000000000001b0 .LLST7
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:203    .text.delay_1us:0000000000000022 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:212    .text.delay_1us:000000000000002e .LVL20
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:231    .text.delay_1us:0000000000000052 .LVL23
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1406   .debug_str:0000000000000075 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:19     .text.delay_1ms:0000000000000000 .LFB2
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:160    .text.delay_1ms:00000000000000ce .LFE2
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1291   .debug_loc:00000000000001c8 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1309   .debug_loc:00000000000001f4 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1327   .debug_loc:0000000000000220 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1339   .debug_loc:0000000000000238 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:56     .text.delay_1ms:0000000000000022 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:65     .text.delay_1ms:000000000000002e .LVL3
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:84     .text.delay_1ms:0000000000000052 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:1394   .debug_str:0000000000000023 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:439    .text.delay_finished:0000000000000002 .LCFI8
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:474    .text.delay_finished:0000000000000036 .LCFI9
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:479    .text.delay_finished:0000000000000038 .LCFI10
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:467    .text.delay_finished:0000000000000032 .LVL43
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:477    .text.delay_finished:0000000000000038 .LVL44
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:483    .text.delay_finished:000000000000003a .LVL45
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:381    .text.delay_until_1ms:0000000000000002 .LCFI6
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:421    .text.delay_until_1ms:0000000000000040 .LCFI7
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:376    .text.delay_until_1ms:0000000000000000 .LVL38
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:410    .text.delay_until_1ms:0000000000000032 .LVL40
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:413    .text.delay_until_1ms:0000000000000034 .LVL41
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:322    .text.delay_until_1us:0000000000000002 .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:362    .text.delay_until_1us:0000000000000042 .LCFI5
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:317    .text.delay_until_1us:0000000000000000 .LVL34
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:351    .text.delay_until_1us:0000000000000034 .LVL36
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:354    .text.delay_until_1us:0000000000000036 .LVL37
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:175    .text.delay_1us:0000000000000002 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:303    .text.delay_1us:00000000000000cc .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:170    .text.delay_1us:0000000000000000 .LVL17
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:295    .text.delay_1us:00000000000000c4 .LVL33
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:215    .text.delay_1us:0000000000000032 .LVL21
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s 			page 18
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:282    .text.delay_1us:00000000000000b8 .LVL32
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:206    .text.delay_1us:0000000000000026 .LVL19
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:223    .text.delay_1us:0000000000000042 .LVL22
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:28     .text.delay_1ms:0000000000000002 .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:156    .text.delay_1ms:00000000000000cc .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:23     .text.delay_1ms:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:148    .text.delay_1ms:00000000000000c4 .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:68     .text.delay_1ms:0000000000000032 .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:135    .text.delay_1ms:00000000000000b8 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:59     .text.delay_1ms:0000000000000026 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:76     .text.delay_1ms:0000000000000042 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccfINONm.s:513    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:282    .text.delay_1us:00000000000000b8 .LVL32
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:206    .text.delay_1us:0000000000000026 .LVL19
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:223    .text.delay_1us:0000000000000042 .LVL22
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:28     .text.delay_1ms:0000000000000002 .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:156    .text.delay_1ms:00000000000000cc .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:23     .text.delay_1ms:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:148    .text.delay_1ms:00000000000000c4 .LVL16
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:68     .text.delay_1ms:0000000000000032 .LVL4
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:135    .text.delay_1ms:00000000000000b8 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:59     .text.delay_1ms:0000000000000026 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:76     .text.delay_1ms:0000000000000042 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\ccRcZsC0.s:513    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __floatundidf

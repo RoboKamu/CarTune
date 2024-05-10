@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 1
 
 
    1              		.file	"mpu6500_driver.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
   17:mpu6500_driver.c **** void write_mpu(uint8_t reg, uint8_t size, uint8_t* data){
   42              		.loc 1 17 57
   43              		.cfi_startproc
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 2
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 2
 
 
   44              	.LVL5:
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
   27:mpu6500_driver.c **** }
   88              		.loc 1 27 1 is_stmt 0
   89 000e 4205     		slli	a0,a0,16
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 3
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 3
 
 
   90 0010 4185     		srai	a0,a0,16
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
   40:mpu6500_driver.c **** 
   41:mpu6500_driver.c **** 
   42:mpu6500_driver.c **** 	read_mpu(MPU6500_WHO_AM_I, 1, read_buffer);
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 4
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 4
 
 
  132              		.loc 1 42 2 is_stmt 0
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
  173 0056 83078100 		lb	a5,8(sp)
  174 005a 63CD070A 		blt	a5,zero,.L8
   51:mpu6500_driver.c **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 5
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 5
 
 
   52:mpu6500_driver.c **** 	cb.delay(100);
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
  207 0090 7000     		addi	a2,sp,12
  208 0092 8545     		li	a1,1
  209 0094 6945     		li	a0,26
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 6
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 6
 
 
   60:mpu6500_driver.c **** 	write_mpu(MPU6500_CONFIG, 1, write_buffer);
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
  247      E7800000 
  248              	.LVL27:
   71:mpu6500_driver.c **** 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 7
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 7
 
 
   72:mpu6500_driver.c **** 	write_buffer[0] = MPU6500_LATCH_INT_EN | MPU6500_INT_ANYRD_2CLEAR | MPU6500_INT_BYPASS_EN;
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
   50:mpu6500_driver.c **** 
  290              		.loc 1 50 47 is_stmt 1 discriminator 2
  291 0114 3000     		addi	a2,sp,8
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 8
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 8
 
 
  292 0116 8545     		li	a1,1
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
   22:mpu6500_driver.c **** 	uint8_t temp = pByte[1];
  338              		.loc 1 22 2 is_stmt 1
   23:mpu6500_driver.c **** 	pByte[1] = pByte[0];
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 9
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 9
 
 
  339              		.loc 1 23 2
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
  378              	.LBE16:
  379              		.loc 1 86 14 is_stmt 0
  380 0042 03156100 		lh	a0,6(sp)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 10
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 10
 
 
  381 0046 97000000 		call	__floatsisf
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
  422 0074 8280     		jr	ra
  423              		.cfi_endproc
  424              	.LFE7:
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 11
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 11
 
 
  426              		.section	.text.mpu6500_getGyro,"ax",@progbits
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
  468              	.LVL53:
   25:mpu6500_driver.c **** 	return bt; 
  469              		.loc 1 25 2 is_stmt 1
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 12
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 12
 
 
   25:mpu6500_driver.c **** 	return bt; 
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
   95:mpu6500_driver.c **** 	pGyro->z = (float) flip_bytes(gyro.z);
  510              		.loc 1 95 13
  511 0052 48C0     		sw	a0,4(s0)
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 13
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 13
 
 
  512              		.loc 1 96 2 is_stmt 1
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
  100:mpu6500_driver.c **** int mpu6500_getGyroAccel(mpu_vector_t* pGyro, mpu_vector_t* pAccel){
  557              		.loc 1 100 68 is_stmt 1
  558              		.cfi_startproc
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 14
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 14
 
 
  559              	.LVL67:
@@ -835,572 +835,572 @@ GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 1
  603              		.file 6 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  604              		.file 7 "c:\\users\\karzan\\downloads\\toolchain-gd32v-v202-win\\toolchain-gd32v-v202-win\\compile
  605              		.file 8 "mpu6500_driver.h"
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 15
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 mpu6500_driver.c
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:13     .text.read_mpu:0000000000000000 read_mpu
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:17     .text.read_mpu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:19     .text.read_mpu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:13     .text.read_mpu:0000000000000000 read_mpu
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:17     .text.read_mpu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:19     .text.read_mpu:0000000000000000 .L0 
                             *COM*:0000000000000010 cb
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:20     .text.read_mpu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:33     .text.read_mpu:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:40     .text.write_mpu:0000000000000000 write_mpu
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:43     .text.write_mpu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:45     .text.write_mpu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:46     .text.write_mpu:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:59     .text.write_mpu:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:66     .text.flip_bytes:0000000000000000 flip_bytes
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:69     .text.flip_bytes:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:71     .text.flip_bytes:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:72     .text.flip_bytes:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:73     .text.flip_bytes:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:80     .text.flip_bytes:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:82     .text.flip_bytes:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:85     .text.flip_bytes:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:86     .text.flip_bytes:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:87     .text.flip_bytes:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:88     .text.flip_bytes:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:89     .text.flip_bytes:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:93     .text.flip_bytes:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:96     .text.flip_bytes:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:103    .text.mpu6500_init:0000000000000000 mpu6500_init
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:106    .text.mpu6500_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:108    .text.mpu6500_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:109    .text.mpu6500_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:110    .text.mpu6500_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:111    .text.mpu6500_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:112    .text.mpu6500_init:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:114    .text.mpu6500_init:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:116    .text.mpu6500_init:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:118    .text.mpu6500_init:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:121    .text.mpu6500_init:000000000000000c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:122    .text.mpu6500_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:124    .text.mpu6500_init:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:126    .text.mpu6500_init:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:127    .text.mpu6500_init:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:129    .text.mpu6500_init:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:130    .text.mpu6500_init:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:132    .text.mpu6500_init:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:133    .text.mpu6500_init:0000000000000014 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:140    .text.mpu6500_init:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:142    .text.mpu6500_init:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:145    .text.mpu6500_init:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:146    .text.mpu6500_init:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:149    .text.mpu6500_init:000000000000002c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:151    .text.mpu6500_init:000000000000002e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:153    .text.mpu6500_init:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:155    .text.mpu6500_init:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:159    .text.mpu6500_init:000000000000003e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:162    .text.mpu6500_init:0000000000000046 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:163    .text.mpu6500_init:0000000000000046 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 16
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:20     .text.read_mpu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:33     .text.read_mpu:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:40     .text.write_mpu:0000000000000000 write_mpu
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:43     .text.write_mpu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:45     .text.write_mpu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:46     .text.write_mpu:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:59     .text.write_mpu:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:66     .text.flip_bytes:0000000000000000 flip_bytes
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:69     .text.flip_bytes:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:71     .text.flip_bytes:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:72     .text.flip_bytes:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:73     .text.flip_bytes:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:80     .text.flip_bytes:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:82     .text.flip_bytes:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:85     .text.flip_bytes:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:86     .text.flip_bytes:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:87     .text.flip_bytes:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:88     .text.flip_bytes:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:89     .text.flip_bytes:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:93     .text.flip_bytes:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:96     .text.flip_bytes:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:103    .text.mpu6500_init:0000000000000000 mpu6500_init
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:106    .text.mpu6500_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:108    .text.mpu6500_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:109    .text.mpu6500_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:110    .text.mpu6500_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:111    .text.mpu6500_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:112    .text.mpu6500_init:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:114    .text.mpu6500_init:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:116    .text.mpu6500_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:118    .text.mpu6500_init:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:121    .text.mpu6500_init:000000000000000c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:122    .text.mpu6500_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:124    .text.mpu6500_init:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:126    .text.mpu6500_init:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:127    .text.mpu6500_init:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:129    .text.mpu6500_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:130    .text.mpu6500_init:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:132    .text.mpu6500_init:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:133    .text.mpu6500_init:0000000000000014 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:140    .text.mpu6500_init:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:142    .text.mpu6500_init:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:145    .text.mpu6500_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:146    .text.mpu6500_init:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:149    .text.mpu6500_init:000000000000002c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:151    .text.mpu6500_init:000000000000002e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:153    .text.mpu6500_init:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:155    .text.mpu6500_init:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:159    .text.mpu6500_init:000000000000003e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:162    .text.mpu6500_init:0000000000000046 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:163    .text.mpu6500_init:0000000000000046 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 16
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:166    .text.mpu6500_init:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:172    .text.mpu6500_init:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:173    .text.mpu6500_init:0000000000000056 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:176    .text.mpu6500_init:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:179    .text.mpu6500_init:0000000000000064 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:181    .text.mpu6500_init:0000000000000066 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:184    .text.mpu6500_init:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:185    .text.mpu6500_init:0000000000000068 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:187    .text.mpu6500_init:000000000000006a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:191    .text.mpu6500_init:0000000000000072 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:193    .text.mpu6500_init:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:196    .text.mpu6500_init:000000000000007e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:197    .text.mpu6500_init:000000000000007e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:201    .text.mpu6500_init:0000000000000084 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:203    .text.mpu6500_init:0000000000000088 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:206    .text.mpu6500_init:0000000000000090 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:207    .text.mpu6500_init:0000000000000090 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:211    .text.mpu6500_init:0000000000000096 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:213    .text.mpu6500_init:000000000000009a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:216    .text.mpu6500_init:00000000000000a2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:217    .text.mpu6500_init:00000000000000a2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:219    .text.mpu6500_init:00000000000000a4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:223    .text.mpu6500_init:00000000000000aa .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:225    .text.mpu6500_init:00000000000000ae .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:228    .text.mpu6500_init:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:229    .text.mpu6500_init:00000000000000b6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:231    .text.mpu6500_init:00000000000000b8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:235    .text.mpu6500_init:00000000000000be .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:237    .text.mpu6500_init:00000000000000c2 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:240    .text.mpu6500_init:00000000000000ca .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:241    .text.mpu6500_init:00000000000000ca .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:245    .text.mpu6500_init:00000000000000d0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:247    .text.mpu6500_init:00000000000000d4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:250    .text.mpu6500_init:00000000000000dc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:251    .text.mpu6500_init:00000000000000dc .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:253    .text.mpu6500_init:00000000000000e0 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:257    .text.mpu6500_init:00000000000000e8 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:259    .text.mpu6500_init:00000000000000ec .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:262    .text.mpu6500_init:00000000000000f4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:263    .text.mpu6500_init:00000000000000f4 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:265    .text.mpu6500_init:00000000000000f6 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:269    .text.mpu6500_init:00000000000000fe .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:271    .text.mpu6500_init:0000000000000102 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:274    .text.mpu6500_init:000000000000010a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:275    .text.mpu6500_init:000000000000010a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:278    .text.mpu6500_init:000000000000010c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:279    .text.mpu6500_init:000000000000010e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:280    .text.mpu6500_init:000000000000010e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:282    .text.mpu6500_init:0000000000000110 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:285    .text.mpu6500_init:0000000000000112 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:289    .text.mpu6500_init:0000000000000114 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:291    .text.mpu6500_init:0000000000000114 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:297    .text.mpu6500_init:0000000000000126 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:305    .text.mpu6500_getAccel:0000000000000000 mpu6500_getAccel
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:308    .text.mpu6500_getAccel:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:310    .text.mpu6500_getAccel:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:311    .text.mpu6500_getAccel:0000000000000000 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 17
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:166    .text.mpu6500_init:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:172    .text.mpu6500_init:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:173    .text.mpu6500_init:0000000000000056 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:176    .text.mpu6500_init:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:179    .text.mpu6500_init:0000000000000064 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:181    .text.mpu6500_init:0000000000000066 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:184    .text.mpu6500_init:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:185    .text.mpu6500_init:0000000000000068 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:187    .text.mpu6500_init:000000000000006a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:191    .text.mpu6500_init:0000000000000072 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:193    .text.mpu6500_init:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:196    .text.mpu6500_init:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:197    .text.mpu6500_init:000000000000007e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:201    .text.mpu6500_init:0000000000000084 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:203    .text.mpu6500_init:0000000000000088 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:206    .text.mpu6500_init:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:207    .text.mpu6500_init:0000000000000090 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:211    .text.mpu6500_init:0000000000000096 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:213    .text.mpu6500_init:000000000000009a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:216    .text.mpu6500_init:00000000000000a2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:217    .text.mpu6500_init:00000000000000a2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:219    .text.mpu6500_init:00000000000000a4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:223    .text.mpu6500_init:00000000000000aa .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:225    .text.mpu6500_init:00000000000000ae .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:228    .text.mpu6500_init:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:229    .text.mpu6500_init:00000000000000b6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:231    .text.mpu6500_init:00000000000000b8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:235    .text.mpu6500_init:00000000000000be .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:237    .text.mpu6500_init:00000000000000c2 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:240    .text.mpu6500_init:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:241    .text.mpu6500_init:00000000000000ca .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:245    .text.mpu6500_init:00000000000000d0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:247    .text.mpu6500_init:00000000000000d4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:250    .text.mpu6500_init:00000000000000dc .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:251    .text.mpu6500_init:00000000000000dc .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:253    .text.mpu6500_init:00000000000000e0 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:257    .text.mpu6500_init:00000000000000e8 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:259    .text.mpu6500_init:00000000000000ec .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:262    .text.mpu6500_init:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:263    .text.mpu6500_init:00000000000000f4 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:265    .text.mpu6500_init:00000000000000f6 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:269    .text.mpu6500_init:00000000000000fe .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:271    .text.mpu6500_init:0000000000000102 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:274    .text.mpu6500_init:000000000000010a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:275    .text.mpu6500_init:000000000000010a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:278    .text.mpu6500_init:000000000000010c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:279    .text.mpu6500_init:000000000000010e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:280    .text.mpu6500_init:000000000000010e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:282    .text.mpu6500_init:0000000000000110 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:285    .text.mpu6500_init:0000000000000112 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:289    .text.mpu6500_init:0000000000000114 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:291    .text.mpu6500_init:0000000000000114 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:297    .text.mpu6500_init:0000000000000126 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:305    .text.mpu6500_getAccel:0000000000000000 mpu6500_getAccel
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:308    .text.mpu6500_getAccel:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:310    .text.mpu6500_getAccel:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:311    .text.mpu6500_getAccel:0000000000000000 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 17
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:312    .text.mpu6500_getAccel:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:313    .text.mpu6500_getAccel:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:315    .text.mpu6500_getAccel:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:318    .text.mpu6500_getAccel:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:319    .text.mpu6500_getAccel:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:321    .text.mpu6500_getAccel:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:323    .text.mpu6500_getAccel:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:327    .text.mpu6500_getAccel:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:328    .text.mpu6500_getAccel:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:330    .text.mpu6500_getAccel:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:333    .text.mpu6500_getAccel:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:334    .text.mpu6500_getAccel:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:339    .text.mpu6500_getAccel:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:340    .text.mpu6500_getAccel:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:341    .text.mpu6500_getAccel:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:342    .text.mpu6500_getAccel:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:345    .text.mpu6500_getAccel:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:346    .text.mpu6500_getAccel:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:353    .text.mpu6500_getAccel:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:354    .text.mpu6500_getAccel:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:358    .text.mpu6500_getAccel:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:360    .text.mpu6500_getAccel:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:365    .text.mpu6500_getAccel:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:366    .text.mpu6500_getAccel:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:367    .text.mpu6500_getAccel:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:368    .text.mpu6500_getAccel:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:369    .text.mpu6500_getAccel:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:371    .text.mpu6500_getAccel:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:372    .text.mpu6500_getAccel:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:379    .text.mpu6500_getAccel:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:380    .text.mpu6500_getAccel:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:384    .text.mpu6500_getAccel:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:386    .text.mpu6500_getAccel:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:391    .text.mpu6500_getAccel:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:392    .text.mpu6500_getAccel:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:393    .text.mpu6500_getAccel:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:394    .text.mpu6500_getAccel:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:395    .text.mpu6500_getAccel:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:397    .text.mpu6500_getAccel:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:398    .text.mpu6500_getAccel:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:405    .text.mpu6500_getAccel:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:406    .text.mpu6500_getAccel:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:411    .text.mpu6500_getAccel:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:412    .text.mpu6500_getAccel:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:413    .text.mpu6500_getAccel:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:415    .text.mpu6500_getAccel:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:420    .text.mpu6500_getAccel:0000000000000074 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:423    .text.mpu6500_getAccel:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:430    .text.mpu6500_getGyro:0000000000000000 mpu6500_getGyro
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:433    .text.mpu6500_getGyro:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:435    .text.mpu6500_getGyro:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:436    .text.mpu6500_getGyro:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:437    .text.mpu6500_getGyro:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:438    .text.mpu6500_getGyro:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:440    .text.mpu6500_getGyro:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:443    .text.mpu6500_getGyro:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:444    .text.mpu6500_getGyro:0000000000000006 .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 18
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:312    .text.mpu6500_getAccel:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:313    .text.mpu6500_getAccel:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:315    .text.mpu6500_getAccel:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:318    .text.mpu6500_getAccel:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:319    .text.mpu6500_getAccel:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:321    .text.mpu6500_getAccel:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:323    .text.mpu6500_getAccel:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:327    .text.mpu6500_getAccel:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:328    .text.mpu6500_getAccel:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:330    .text.mpu6500_getAccel:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:333    .text.mpu6500_getAccel:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:334    .text.mpu6500_getAccel:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:339    .text.mpu6500_getAccel:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:340    .text.mpu6500_getAccel:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:341    .text.mpu6500_getAccel:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:342    .text.mpu6500_getAccel:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:345    .text.mpu6500_getAccel:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:346    .text.mpu6500_getAccel:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:353    .text.mpu6500_getAccel:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:354    .text.mpu6500_getAccel:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:358    .text.mpu6500_getAccel:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:360    .text.mpu6500_getAccel:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:365    .text.mpu6500_getAccel:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:366    .text.mpu6500_getAccel:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:367    .text.mpu6500_getAccel:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:368    .text.mpu6500_getAccel:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:369    .text.mpu6500_getAccel:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:371    .text.mpu6500_getAccel:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:372    .text.mpu6500_getAccel:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:379    .text.mpu6500_getAccel:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:380    .text.mpu6500_getAccel:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:384    .text.mpu6500_getAccel:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:386    .text.mpu6500_getAccel:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:391    .text.mpu6500_getAccel:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:392    .text.mpu6500_getAccel:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:393    .text.mpu6500_getAccel:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:394    .text.mpu6500_getAccel:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:395    .text.mpu6500_getAccel:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:397    .text.mpu6500_getAccel:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:398    .text.mpu6500_getAccel:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:405    .text.mpu6500_getAccel:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:406    .text.mpu6500_getAccel:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:411    .text.mpu6500_getAccel:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:412    .text.mpu6500_getAccel:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:413    .text.mpu6500_getAccel:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:415    .text.mpu6500_getAccel:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:420    .text.mpu6500_getAccel:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:423    .text.mpu6500_getAccel:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:430    .text.mpu6500_getGyro:0000000000000000 mpu6500_getGyro
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:433    .text.mpu6500_getGyro:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:435    .text.mpu6500_getGyro:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:436    .text.mpu6500_getGyro:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:437    .text.mpu6500_getGyro:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:438    .text.mpu6500_getGyro:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:440    .text.mpu6500_getGyro:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:443    .text.mpu6500_getGyro:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:444    .text.mpu6500_getGyro:0000000000000006 .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 18
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:446    .text.mpu6500_getGyro:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:448    .text.mpu6500_getGyro:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:452    .text.mpu6500_getGyro:000000000000000e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:453    .text.mpu6500_getGyro:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:455    .text.mpu6500_getGyro:0000000000000010 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:458    .text.mpu6500_getGyro:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:459    .text.mpu6500_getGyro:0000000000000018 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:464    .text.mpu6500_getGyro:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:465    .text.mpu6500_getGyro:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:466    .text.mpu6500_getGyro:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:467    .text.mpu6500_getGyro:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:470    .text.mpu6500_getGyro:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:471    .text.mpu6500_getGyro:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:478    .text.mpu6500_getGyro:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:479    .text.mpu6500_getGyro:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:483    .text.mpu6500_getGyro:0000000000000032 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:485    .text.mpu6500_getGyro:0000000000000036 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:490    .text.mpu6500_getGyro:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:491    .text.mpu6500_getGyro:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:492    .text.mpu6500_getGyro:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:493    .text.mpu6500_getGyro:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:494    .text.mpu6500_getGyro:0000000000000038 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:496    .text.mpu6500_getGyro:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:497    .text.mpu6500_getGyro:000000000000003c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:504    .text.mpu6500_getGyro:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:505    .text.mpu6500_getGyro:0000000000000042 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:509    .text.mpu6500_getGyro:000000000000004e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:511    .text.mpu6500_getGyro:0000000000000052 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:516    .text.mpu6500_getGyro:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:517    .text.mpu6500_getGyro:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:518    .text.mpu6500_getGyro:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:519    .text.mpu6500_getGyro:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:520    .text.mpu6500_getGyro:0000000000000054 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:522    .text.mpu6500_getGyro:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:523    .text.mpu6500_getGyro:0000000000000058 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:530    .text.mpu6500_getGyro:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:531    .text.mpu6500_getGyro:000000000000005e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:536    .text.mpu6500_getGyro:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:537    .text.mpu6500_getGyro:000000000000006c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:538    .text.mpu6500_getGyro:000000000000006e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:540    .text.mpu6500_getGyro:0000000000000070 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:545    .text.mpu6500_getGyro:0000000000000074 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:548    .text.mpu6500_getGyro:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:555    .text.mpu6500_getGyroAccel:0000000000000000 mpu6500_getGyroAccel
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:558    .text.mpu6500_getGyroAccel:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:560    .text.mpu6500_getGyroAccel:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:561    .text.mpu6500_getGyroAccel:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:562    .text.mpu6500_getGyroAccel:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:564    .text.mpu6500_getGyroAccel:0000000000000002 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:566    .text.mpu6500_getGyroAccel:0000000000000004 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:569    .text.mpu6500_getGyroAccel:0000000000000006 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:572    .text.mpu6500_getGyroAccel:0000000000000008 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:573    .text.mpu6500_getGyroAccel:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:575    .text.mpu6500_getGyroAccel:000000000000000a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:578    .text.mpu6500_getGyroAccel:0000000000000012 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:582    .text.mpu6500_getGyroAccel:000000000000001c .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:583    .text.mpu6500_getGyroAccel:000000000000001c .L0 
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 19
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:446    .text.mpu6500_getGyro:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:448    .text.mpu6500_getGyro:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:452    .text.mpu6500_getGyro:000000000000000e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:453    .text.mpu6500_getGyro:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:455    .text.mpu6500_getGyro:0000000000000010 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:458    .text.mpu6500_getGyro:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:459    .text.mpu6500_getGyro:0000000000000018 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:464    .text.mpu6500_getGyro:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:465    .text.mpu6500_getGyro:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:466    .text.mpu6500_getGyro:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:467    .text.mpu6500_getGyro:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:470    .text.mpu6500_getGyro:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:471    .text.mpu6500_getGyro:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:478    .text.mpu6500_getGyro:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:479    .text.mpu6500_getGyro:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:483    .text.mpu6500_getGyro:0000000000000032 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:485    .text.mpu6500_getGyro:0000000000000036 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:490    .text.mpu6500_getGyro:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:491    .text.mpu6500_getGyro:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:492    .text.mpu6500_getGyro:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:493    .text.mpu6500_getGyro:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:494    .text.mpu6500_getGyro:0000000000000038 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:496    .text.mpu6500_getGyro:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:497    .text.mpu6500_getGyro:000000000000003c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:504    .text.mpu6500_getGyro:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:505    .text.mpu6500_getGyro:0000000000000042 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:509    .text.mpu6500_getGyro:000000000000004e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:511    .text.mpu6500_getGyro:0000000000000052 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:516    .text.mpu6500_getGyro:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:517    .text.mpu6500_getGyro:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:518    .text.mpu6500_getGyro:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:519    .text.mpu6500_getGyro:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:520    .text.mpu6500_getGyro:0000000000000054 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:522    .text.mpu6500_getGyro:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:523    .text.mpu6500_getGyro:0000000000000058 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:530    .text.mpu6500_getGyro:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:531    .text.mpu6500_getGyro:000000000000005e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:536    .text.mpu6500_getGyro:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:537    .text.mpu6500_getGyro:000000000000006c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:538    .text.mpu6500_getGyro:000000000000006e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:540    .text.mpu6500_getGyro:0000000000000070 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:545    .text.mpu6500_getGyro:0000000000000074 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:548    .text.mpu6500_getGyro:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:555    .text.mpu6500_getGyroAccel:0000000000000000 mpu6500_getGyroAccel
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:558    .text.mpu6500_getGyroAccel:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:560    .text.mpu6500_getGyroAccel:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:561    .text.mpu6500_getGyroAccel:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:562    .text.mpu6500_getGyroAccel:0000000000000000 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:564    .text.mpu6500_getGyroAccel:0000000000000002 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:566    .text.mpu6500_getGyroAccel:0000000000000004 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:569    .text.mpu6500_getGyroAccel:0000000000000006 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:572    .text.mpu6500_getGyroAccel:0000000000000008 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:573    .text.mpu6500_getGyroAccel:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:575    .text.mpu6500_getGyroAccel:000000000000000a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:578    .text.mpu6500_getGyroAccel:0000000000000012 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:582    .text.mpu6500_getGyroAccel:000000000000001c .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:583    .text.mpu6500_getGyroAccel:000000000000001c .L0 
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 19
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:584    .text.mpu6500_getGyroAccel:000000000000001e .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:586    .text.mpu6500_getGyroAccel:0000000000000020 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:591    .text.mpu6500_getGyroAccel:0000000000000024 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:593    .text.mpu6500_getGyroAccel:0000000000000026 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:36     .text.read_mpu:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:62     .text.write_mpu:000000000000001a .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:99     .text.flip_bytes:0000000000000016 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:301    .text.mpu6500_init:0000000000000126 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:426    .text.mpu6500_getAccel:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:551    .text.mpu6500_getGyro:0000000000000076 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:597    .text.mpu6500_getGyroAccel:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:584    .text.mpu6500_getGyroAccel:000000000000001e .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:586    .text.mpu6500_getGyroAccel:0000000000000020 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:591    .text.mpu6500_getGyroAccel:0000000000000024 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:593    .text.mpu6500_getGyroAccel:0000000000000026 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:36     .text.read_mpu:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:62     .text.write_mpu:000000000000001a .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:99     .text.flip_bytes:0000000000000016 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:301    .text.mpu6500_init:0000000000000126 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:426    .text.mpu6500_getAccel:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:551    .text.mpu6500_getGyro:0000000000000076 .L0 
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:597    .text.mpu6500_getGyroAccel:0000000000000026 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:276    .text.mpu6500_init:000000000000010c .L5
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:287    .text.mpu6500_init:0000000000000114 .L8
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:171    .text.mpu6500_init:0000000000000056 .L7
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:2933   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4427   .debug_str:0000000000000520 .LASF151
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4473   .debug_str:000000000000067b .LASF152
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4351   .debug_str:000000000000036d .LASF153
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4151   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4169   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4211   .debug_str:00000000000000e1 .LASF0
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4181   .debug_str:000000000000002b .LASF2
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4353   .debug_str:00000000000003d3 .LASF1
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4257   .debug_str:00000000000001ac .LASF3
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4361   .debug_str:00000000000003f5 .LASF4
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4295   .debug_str:0000000000000256 .LASF5
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4231   .debug_str:0000000000000131 .LASF6
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4279   .debug_str:000000000000020e .LASF7
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4209   .debug_str:00000000000000d3 .LASF8
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4191   .debug_str:0000000000000068 .LASF9
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4271   .debug_str:00000000000001ea .LASF10
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4325   .debug_str:00000000000002f6 .LASF11
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4307   .debug_str:0000000000000299 .LASF12
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4337   .debug_str:000000000000032b .LASF13
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4411   .debug_str:00000000000004e2 .LASF14
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4451   .debug_str:0000000000000611 .LASF15
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4305   .debug_str:0000000000000293 .LASF16
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4273   .debug_str:00000000000001f7 .LASF17
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4401   .debug_str:00000000000004b9 .LASF18
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4403   .debug_str:00000000000004c1 .LASF19
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4373   .debug_str:0000000000000432 .LASF20
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4433   .debug_str:00000000000005b6 .LASF21
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4349   .debug_str:000000000000035b .LASF22
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4459   .debug_str:0000000000000639 .LASF23
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4261   .debug_str:00000000000001be .LASF28
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4423   .debug_str:000000000000050d .LASF24
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4395   .debug_str:00000000000004a4 .LASF25
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4255   .debug_str:00000000000001a6 .LASF26
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4445   .debug_str:00000000000005fc .LASF27
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4269   .debug_str:00000000000001e5 .LASF29
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4203   .debug_str:00000000000000b5 .LASF30
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4417   .debug_str:00000000000004f6 .LASF31
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4219   .debug_str:00000000000000ff .LASF32
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4481   .debug_str:00000000000006a4 .LASF33
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4331   .debug_str:000000000000030f .LASF34
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4321   .debug_str:00000000000002e3 .LASF35
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 20
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:276    .text.mpu6500_init:000000000000010c .L5
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:287    .text.mpu6500_init:0000000000000114 .L8
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:171    .text.mpu6500_init:0000000000000056 .L7
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:2933   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4425   .debug_str:0000000000000512 .LASF151
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4473   .debug_str:000000000000067b .LASF152
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4351   .debug_str:000000000000036d .LASF153
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4151   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4169   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4211   .debug_str:00000000000000e1 .LASF0
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4181   .debug_str:000000000000002b .LASF2
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4429   .debug_str:00000000000005a3 .LASF1
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4257   .debug_str:00000000000001ac .LASF3
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4359   .debug_str:00000000000003e7 .LASF4
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4295   .debug_str:0000000000000256 .LASF5
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4231   .debug_str:0000000000000131 .LASF6
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4279   .debug_str:000000000000020e .LASF7
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4209   .debug_str:00000000000000d3 .LASF8
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4191   .debug_str:0000000000000068 .LASF9
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4271   .debug_str:00000000000001ea .LASF10
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4325   .debug_str:00000000000002f6 .LASF11
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4307   .debug_str:0000000000000299 .LASF12
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4337   .debug_str:000000000000032b .LASF13
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4409   .debug_str:00000000000004d4 .LASF14
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4451   .debug_str:0000000000000611 .LASF15
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4305   .debug_str:0000000000000293 .LASF16
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4273   .debug_str:00000000000001f7 .LASF17
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4399   .debug_str:00000000000004ab .LASF18
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4401   .debug_str:00000000000004b3 .LASF19
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4371   .debug_str:0000000000000424 .LASF20
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4433   .debug_str:00000000000005b6 .LASF21
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4349   .debug_str:000000000000035b .LASF22
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4459   .debug_str:0000000000000639 .LASF23
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4261   .debug_str:00000000000001be .LASF28
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4421   .debug_str:00000000000004ff .LASF24
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4393   .debug_str:0000000000000496 .LASF25
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4255   .debug_str:00000000000001a6 .LASF26
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4445   .debug_str:00000000000005fc .LASF27
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4269   .debug_str:00000000000001e5 .LASF29
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4203   .debug_str:00000000000000b5 .LASF30
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4415   .debug_str:00000000000004e8 .LASF31
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4219   .debug_str:00000000000000ff .LASF32
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4481   .debug_str:00000000000006a4 .LASF33
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4331   .debug_str:000000000000030f .LASF34
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4321   .debug_str:00000000000002e3 .LASF35
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 20
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4447   .debug_str:0000000000000601 .LASF36
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4363   .debug_str:00000000000003ff .LASF37
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4469   .debug_str:0000000000000661 .LASF38
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4223   .debug_str:000000000000010e .LASF39
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4251   .debug_str:0000000000000199 .LASF40
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4171   .debug_str:0000000000000000 .LASF41
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4429   .debug_str:00000000000005a8 .LASF42
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4237   .debug_str:0000000000000152 .LASF43
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4333   .debug_str:0000000000000318 .LASF44
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4385   .debug_str:000000000000046b .LASF45
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4253   .debug_str:00000000000001a1 .LASF46
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4367   .debug_str:000000000000041e .LASF47
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4215   .debug_str:00000000000000f3 .LASF48
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4173   .debug_str:000000000000000c .LASF49
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4375   .debug_str:000000000000043d .LASF50
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4235   .debug_str:000000000000014b .LASF51
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4281   .debug_str:0000000000000220 .LASF52
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4193   .debug_str:000000000000007f .LASF53
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4225   .debug_str:000000000000011c .LASF54
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4265   .debug_str:00000000000001d5 .LASF55
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4319   .debug_str:00000000000002dc .LASF56
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4405   .debug_str:00000000000004c9 .LASF57
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4409   .debug_str:00000000000004db .LASF58
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4213   .debug_str:00000000000000ed .LASF59
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4463   .debug_str:000000000000064a .LASF60
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4241   .debug_str:0000000000000161 .LASF61
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4245   .debug_str:0000000000000172 .LASF62
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4183   .debug_str:0000000000000035 .LASF63
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4309   .debug_str:00000000000002a0 .LASF64
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4377   .debug_str:0000000000000445 .LASF65
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4313   .debug_str:00000000000002b6 .LASF66
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4397   .debug_str:00000000000004ac .LASF67
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4413   .debug_str:00000000000004ea .LASF68
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4239   .debug_str:000000000000015a .LASF69
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4275   .debug_str:00000000000001fe .LASF70
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4259   .debug_str:00000000000001b6 .LASF71
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4383   .debug_str:0000000000000466 .LASF72
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4177   .debug_str:000000000000001a .LASF73
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4393   .debug_str:000000000000048b .LASF74
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4389   .debug_str:0000000000000479 .LASF75
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4335   .debug_str:0000000000000320 .LASF76
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4391   .debug_str:0000000000000481 .LASF77
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4303   .debug_str:000000000000028b .LASF78
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4267   .debug_str:00000000000001db .LASF79
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4479   .debug_str:000000000000069f .LASF80
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4345   .debug_str:0000000000000345 .LASF81
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4277   .debug_str:0000000000000206 .LASF82
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4243   .debug_str:000000000000016a .LASF83
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4355   .debug_str:00000000000003e1 .LASF84
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4297   .debug_str:0000000000000269 .LASF85
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4457   .debug_str:000000000000062f .LASF86
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4227   .debug_str:0000000000000124 .LASF87
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4221   .debug_str:0000000000000109 .LASF88
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4415   .debug_str:00000000000004f1 .LASF89
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4371   .debug_str:000000000000042b .LASF90
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4449   .debug_str:000000000000060b .LASF91
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4287   .debug_str:000000000000023c .LASF92
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 21
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4447   .debug_str:0000000000000601 .LASF36
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4361   .debug_str:00000000000003f1 .LASF37
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4469   .debug_str:0000000000000661 .LASF38
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4223   .debug_str:000000000000010e .LASF39
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4251   .debug_str:0000000000000199 .LASF40
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4171   .debug_str:0000000000000000 .LASF41
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4427   .debug_str:000000000000059a .LASF42
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4237   .debug_str:0000000000000152 .LASF43
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4333   .debug_str:0000000000000318 .LASF44
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4383   .debug_str:000000000000045d .LASF45
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4253   .debug_str:00000000000001a1 .LASF46
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4365   .debug_str:0000000000000410 .LASF47
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4215   .debug_str:00000000000000f3 .LASF48
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4173   .debug_str:000000000000000c .LASF49
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4373   .debug_str:000000000000042f .LASF50
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4235   .debug_str:000000000000014b .LASF51
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4281   .debug_str:0000000000000220 .LASF52
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4193   .debug_str:000000000000007f .LASF53
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4225   .debug_str:000000000000011c .LASF54
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4265   .debug_str:00000000000001d5 .LASF55
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4319   .debug_str:00000000000002dc .LASF56
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4403   .debug_str:00000000000004bb .LASF57
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4407   .debug_str:00000000000004cd .LASF58
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4213   .debug_str:00000000000000ed .LASF59
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4463   .debug_str:000000000000064a .LASF60
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4241   .debug_str:0000000000000161 .LASF61
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4245   .debug_str:0000000000000172 .LASF62
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4183   .debug_str:0000000000000035 .LASF63
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4309   .debug_str:00000000000002a0 .LASF64
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4375   .debug_str:0000000000000437 .LASF65
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4313   .debug_str:00000000000002b6 .LASF66
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4395   .debug_str:000000000000049e .LASF67
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4411   .debug_str:00000000000004dc .LASF68
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4239   .debug_str:000000000000015a .LASF69
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4275   .debug_str:00000000000001fe .LASF70
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4259   .debug_str:00000000000001b6 .LASF71
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4381   .debug_str:0000000000000458 .LASF72
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4177   .debug_str:000000000000001a .LASF73
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4391   .debug_str:000000000000047d .LASF74
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4387   .debug_str:000000000000046b .LASF75
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4335   .debug_str:0000000000000320 .LASF76
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4389   .debug_str:0000000000000473 .LASF77
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4303   .debug_str:000000000000028b .LASF78
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4267   .debug_str:00000000000001db .LASF79
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4479   .debug_str:000000000000069f .LASF80
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4345   .debug_str:0000000000000345 .LASF81
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4277   .debug_str:0000000000000206 .LASF82
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4243   .debug_str:000000000000016a .LASF83
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4353   .debug_str:00000000000003d3 .LASF84
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4297   .debug_str:0000000000000269 .LASF85
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4457   .debug_str:000000000000062f .LASF86
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4227   .debug_str:0000000000000124 .LASF87
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4221   .debug_str:0000000000000109 .LASF88
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4413   .debug_str:00000000000004e3 .LASF89
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4369   .debug_str:000000000000041d .LASF90
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4449   .debug_str:000000000000060b .LASF91
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4287   .debug_str:000000000000023c .LASF92
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 21
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4369   .debug_str:0000000000000425 .LASF93
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4175   .debug_str:0000000000000012 .LASF94
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4399   .debug_str:00000000000004b3 .LASF95
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4421   .debug_str:0000000000000507 .LASF96
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4431   .debug_str:00000000000005b1 .LASF97
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4439   .debug_str:00000000000005de .LASF98
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4425   .debug_str:0000000000000513 .LASF99
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4301   .debug_str:000000000000027e .LASF100
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4471   .debug_str:000000000000066c .LASF101
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4263   .debug_str:00000000000001c6 .LASF102
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4379   .debug_str:000000000000044e .LASF103
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4475   .debug_str:000000000000068c .LASF104
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4381   .debug_str:0000000000000459 .LASF105
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4477   .debug_str:0000000000000691 .LASF106
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4201   .debug_str:00000000000000a7 .LASF107
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4453   .debug_str:000000000000061a .LASF108
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4299   .debug_str:0000000000000272 .LASF109
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4435   .debug_str:00000000000005be .LASF110
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4249   .debug_str:000000000000018b .LASF111
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4199   .debug_str:0000000000000098 .LASF112
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4247   .debug_str:000000000000017a .LASF113
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4187   .debug_str:0000000000000048 .LASF114
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4189   .debug_str:0000000000000057 .LASF115
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4359   .debug_str:00000000000003ec .LASF116
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4327   .debug_str:0000000000000302 .LASF117
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4323   .debug_str:00000000000002ed .LASF118
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4465   .debug_str:0000000000000650 .LASF119
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4195   .debug_str:0000000000000088 .LASF154
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4407   .debug_str:00000000000004cf .LASF120
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4437   .debug_str:00000000000005cb .LASF121
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4419   .debug_str:00000000000004ff .LASF122
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4205   .debug_str:00000000000000be .LASF123
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4341   .debug_str:0000000000000337 .LASF124
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4185   .debug_str:000000000000003b .LASF125
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4233   .debug_str:000000000000013a .LASF126
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4339   .debug_str:0000000000000332 .LASF127
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4179   .debug_str:0000000000000025 .LASF128
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4357   .debug_str:00000000000003e6 .LASF129
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4461   .debug_str:0000000000000642 .LASF130
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4311   .debug_str:00000000000002a6 .LASF131
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4365   .debug_str:0000000000000409 .LASF134
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:556    .text.mpu6500_getGyroAccel:0000000000000000 .LFB9
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:594    .text.mpu6500_getGyroAccel:0000000000000026 .LFE9
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3652   .debug_loc:0000000000000000 .LLST27
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4285   .debug_str:0000000000000236 .LASF132
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3670   .debug_loc:000000000000002c .LLST28
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4443   .debug_str:00000000000005f5 .LASF133
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3688   .debug_loc:0000000000000058 .LLST29
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:576    .text.mpu6500_getGyroAccel:0000000000000012 .LVL69
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:580    .text.mpu6500_getGyroAccel:000000000000001c .LVL70
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4283   .debug_str:0000000000000226 .LASF135
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:431    .text.mpu6500_getGyro:0000000000000000 .LFB8
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:549    .text.mpu6500_getGyro:0000000000000076 .LFE8
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3702   .debug_loc:0000000000000079 .LLST21
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3720   .debug_loc:00000000000000a5 .LLST22
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4197   .debug_str:0000000000000093 .LASF137
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:461    .text.mpu6500_getGyro:000000000000001c .LBB20
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 22
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4367   .debug_str:0000000000000417 .LASF93
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4175   .debug_str:0000000000000012 .LASF94
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4397   .debug_str:00000000000004a5 .LASF95
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4419   .debug_str:00000000000004f9 .LASF96
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4431   .debug_str:00000000000005b1 .LASF97
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4439   .debug_str:00000000000005de .LASF98
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4423   .debug_str:0000000000000505 .LASF99
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4301   .debug_str:000000000000027e .LASF100
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4471   .debug_str:000000000000066c .LASF101
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4263   .debug_str:00000000000001c6 .LASF102
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4377   .debug_str:0000000000000440 .LASF103
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4475   .debug_str:000000000000068c .LASF104
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4379   .debug_str:000000000000044b .LASF105
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4477   .debug_str:0000000000000691 .LASF106
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4201   .debug_str:00000000000000a7 .LASF107
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4453   .debug_str:000000000000061a .LASF108
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4299   .debug_str:0000000000000272 .LASF109
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4435   .debug_str:00000000000005be .LASF110
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4249   .debug_str:000000000000018b .LASF111
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4199   .debug_str:0000000000000098 .LASF112
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4247   .debug_str:000000000000017a .LASF113
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4187   .debug_str:0000000000000048 .LASF114
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4189   .debug_str:0000000000000057 .LASF115
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4357   .debug_str:00000000000003de .LASF116
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4327   .debug_str:0000000000000302 .LASF117
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4323   .debug_str:00000000000002ed .LASF118
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4465   .debug_str:0000000000000650 .LASF119
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4195   .debug_str:0000000000000088 .LASF154
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4405   .debug_str:00000000000004c1 .LASF120
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4437   .debug_str:00000000000005cb .LASF121
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4417   .debug_str:00000000000004f1 .LASF122
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4205   .debug_str:00000000000000be .LASF123
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4341   .debug_str:0000000000000337 .LASF124
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4185   .debug_str:000000000000003b .LASF125
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4233   .debug_str:000000000000013a .LASF126
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4339   .debug_str:0000000000000332 .LASF127
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4179   .debug_str:0000000000000025 .LASF128
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4355   .debug_str:00000000000003d8 .LASF129
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4461   .debug_str:0000000000000642 .LASF130
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4311   .debug_str:00000000000002a6 .LASF131
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4363   .debug_str:00000000000003fb .LASF134
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:556    .text.mpu6500_getGyroAccel:0000000000000000 .LFB9
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:594    .text.mpu6500_getGyroAccel:0000000000000026 .LFE9
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3652   .debug_loc:0000000000000000 .LLST27
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4285   .debug_str:0000000000000236 .LASF132
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3670   .debug_loc:000000000000002c .LLST28
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4443   .debug_str:00000000000005f5 .LASF133
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3688   .debug_loc:0000000000000058 .LLST29
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:576    .text.mpu6500_getGyroAccel:0000000000000012 .LVL69
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:580    .text.mpu6500_getGyroAccel:000000000000001c .LVL70
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4283   .debug_str:0000000000000226 .LASF135
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:431    .text.mpu6500_getGyro:0000000000000000 .LFB8
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:549    .text.mpu6500_getGyro:0000000000000076 .LFE8
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3702   .debug_loc:0000000000000079 .LLST21
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3720   .debug_loc:00000000000000a5 .LLST22
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4197   .debug_str:0000000000000093 .LASF137
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:461    .text.mpu6500_getGyro:000000000000001c .LBB20
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 22
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:477    .text.mpu6500_getGyro:0000000000000026 .LBE20
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3738   .debug_loc:00000000000000d1 .LLST23
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:462    .text.mpu6500_getGyro:000000000000001c .LBB21
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:476    .text.mpu6500_getGyro:0000000000000026 .LBE21
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3746   .debug_loc:00000000000000e5 .LLST24
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:488    .text.mpu6500_getGyro:0000000000000038 .LBB22
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:503    .text.mpu6500_getGyro:0000000000000042 .LBE22
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:489    .text.mpu6500_getGyro:0000000000000038 .LBB23
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:502    .text.mpu6500_getGyro:0000000000000042 .LBE23
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3761   .debug_loc:0000000000000107 .LLST25
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:514    .text.mpu6500_getGyro:0000000000000054 .LBB24
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:529    .text.mpu6500_getGyro:000000000000005e .LBE24
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:515    .text.mpu6500_getGyro:0000000000000054 .LBB25
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:528    .text.mpu6500_getGyro:000000000000005e .LBE25
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3776   .debug_loc:0000000000000129 .LLST26
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:456    .text.mpu6500_getGyro:0000000000000018 .LVL51
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4317   .debug_str:00000000000002cb .LASF136
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:306    .text.mpu6500_getAccel:0000000000000000 .LFB7
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:424    .text.mpu6500_getAccel:0000000000000076 .LFE7
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3791   .debug_loc:000000000000014b .LLST15
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3809   .debug_loc:0000000000000177 .LLST16
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4329   .debug_str:0000000000000309 .LASF138
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:336    .text.mpu6500_getAccel:000000000000001c .LBB14
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:352    .text.mpu6500_getAccel:0000000000000026 .LBE14
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3827   .debug_loc:00000000000001a3 .LLST17
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:337    .text.mpu6500_getAccel:000000000000001c .LBB15
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:351    .text.mpu6500_getAccel:0000000000000026 .LBE15
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3835   .debug_loc:00000000000001b7 .LLST18
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:363    .text.mpu6500_getAccel:0000000000000038 .LBB16
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:378    .text.mpu6500_getAccel:0000000000000042 .LBE16
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:364    .text.mpu6500_getAccel:0000000000000038 .LBB17
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:377    .text.mpu6500_getAccel:0000000000000042 .LBE17
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3850   .debug_loc:00000000000001d9 .LLST19
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:389    .text.mpu6500_getAccel:0000000000000054 .LBB18
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:404    .text.mpu6500_getAccel:000000000000005e .LBE18
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:390    .text.mpu6500_getAccel:0000000000000054 .LBB19
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:403    .text.mpu6500_getAccel:000000000000005e .LBE19
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3865   .debug_loc:00000000000001fb .LLST20
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:331    .text.mpu6500_getAccel:0000000000000018 .LVL33
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4315   .debug_str:00000000000002be .LASF139
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:104    .text.mpu6500_init:0000000000000000 .LFB6
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:298    .text.mpu6500_init:0000000000000126 .LFE6
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3880   .debug_loc:000000000000021d .LLST10
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4343   .debug_str:000000000000033d .LASF140
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3903   .debug_loc:0000000000000255 .LLST11
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4387   .debug_str:0000000000000470 .LASF141
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3922   .debug_loc:0000000000000285 .LLST12
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4289   .debug_str:0000000000000243 .LASF142
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3941   .debug_loc:00000000000002b5 .LLST13
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3960   .debug_loc:00000000000002e5 .LLST14
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4347   .debug_str:000000000000034f .LASF143
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4207   .debug_str:00000000000000c6 .LASF144
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:143    .text.mpu6500_init:0000000000000026 .LVL18
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:164    .text.mpu6500_init:000000000000004e .LVL19
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:169    .text.mpu6500_init:0000000000000056 .LVL20
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:182    .text.mpu6500_init:0000000000000068 .LVL21
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:194    .text.mpu6500_init:000000000000007e .LVL22
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 23
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:477    .text.mpu6500_getGyro:0000000000000026 .LBE20
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3738   .debug_loc:00000000000000d1 .LLST23
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:462    .text.mpu6500_getGyro:000000000000001c .LBB21
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:476    .text.mpu6500_getGyro:0000000000000026 .LBE21
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3746   .debug_loc:00000000000000e5 .LLST24
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:488    .text.mpu6500_getGyro:0000000000000038 .LBB22
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:503    .text.mpu6500_getGyro:0000000000000042 .LBE22
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:489    .text.mpu6500_getGyro:0000000000000038 .LBB23
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:502    .text.mpu6500_getGyro:0000000000000042 .LBE23
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3761   .debug_loc:0000000000000107 .LLST25
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:514    .text.mpu6500_getGyro:0000000000000054 .LBB24
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:529    .text.mpu6500_getGyro:000000000000005e .LBE24
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:515    .text.mpu6500_getGyro:0000000000000054 .LBB25
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:528    .text.mpu6500_getGyro:000000000000005e .LBE25
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3776   .debug_loc:0000000000000129 .LLST26
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:456    .text.mpu6500_getGyro:0000000000000018 .LVL51
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4317   .debug_str:00000000000002cb .LASF136
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:306    .text.mpu6500_getAccel:0000000000000000 .LFB7
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:424    .text.mpu6500_getAccel:0000000000000076 .LFE7
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3791   .debug_loc:000000000000014b .LLST15
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3809   .debug_loc:0000000000000177 .LLST16
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4329   .debug_str:0000000000000309 .LASF138
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:336    .text.mpu6500_getAccel:000000000000001c .LBB14
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:352    .text.mpu6500_getAccel:0000000000000026 .LBE14
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3827   .debug_loc:00000000000001a3 .LLST17
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:337    .text.mpu6500_getAccel:000000000000001c .LBB15
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:351    .text.mpu6500_getAccel:0000000000000026 .LBE15
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3835   .debug_loc:00000000000001b7 .LLST18
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:363    .text.mpu6500_getAccel:0000000000000038 .LBB16
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:378    .text.mpu6500_getAccel:0000000000000042 .LBE16
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:364    .text.mpu6500_getAccel:0000000000000038 .LBB17
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:377    .text.mpu6500_getAccel:0000000000000042 .LBE17
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3850   .debug_loc:00000000000001d9 .LLST19
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:389    .text.mpu6500_getAccel:0000000000000054 .LBB18
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:404    .text.mpu6500_getAccel:000000000000005e .LBE18
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:390    .text.mpu6500_getAccel:0000000000000054 .LBB19
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:403    .text.mpu6500_getAccel:000000000000005e .LBE19
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3865   .debug_loc:00000000000001fb .LLST20
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:331    .text.mpu6500_getAccel:0000000000000018 .LVL33
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4315   .debug_str:00000000000002be .LASF139
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:104    .text.mpu6500_init:0000000000000000 .LFB6
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:298    .text.mpu6500_init:0000000000000126 .LFE6
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3880   .debug_loc:000000000000021d .LLST10
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4343   .debug_str:000000000000033d .LASF140
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3903   .debug_loc:0000000000000255 .LLST11
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4385   .debug_str:0000000000000462 .LASF141
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3922   .debug_loc:0000000000000285 .LLST12
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4289   .debug_str:0000000000000243 .LASF142
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3941   .debug_loc:00000000000002b5 .LLST13
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3960   .debug_loc:00000000000002e5 .LLST14
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4347   .debug_str:000000000000034f .LASF143
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4207   .debug_str:00000000000000c6 .LASF144
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:143    .text.mpu6500_init:0000000000000026 .LVL18
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:164    .text.mpu6500_init:000000000000004e .LVL19
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:169    .text.mpu6500_init:0000000000000056 .LVL20
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:182    .text.mpu6500_init:0000000000000068 .LVL21
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:194    .text.mpu6500_init:000000000000007e .LVL22
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 23
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:204    .text.mpu6500_init:0000000000000090 .LVL23
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:214    .text.mpu6500_init:00000000000000a2 .LVL24
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:226    .text.mpu6500_init:00000000000000b6 .LVL25
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:238    .text.mpu6500_init:00000000000000ca .LVL26
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:248    .text.mpu6500_init:00000000000000dc .LVL27
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:260    .text.mpu6500_init:00000000000000f4 .LVL28
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:272    .text.mpu6500_init:000000000000010a .LVL29
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:295    .text.mpu6500_init:0000000000000124 .LVL30
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4455   .debug_str:0000000000000624 .LASF155
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4217   .debug_str:00000000000000f9 .LASF145
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4229   .debug_str:000000000000012c .LASF146
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4441   .debug_str:00000000000005eb .LASF149
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:41     .text.write_mpu:0000000000000000 .LFB4
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:60     .text.write_mpu:000000000000001a .LFE4
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3974   .debug_loc:0000000000000306 .LLST3
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4293   .debug_str:0000000000000251 .LASF147
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:3988   .debug_loc:0000000000000327 .LLST4
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4291   .debug_str:000000000000024c .LASF148
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4002   .debug_loc:0000000000000348 .LLST5
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:58     .text.write_mpu:000000000000001a .LVL9
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4467   .debug_str:0000000000000658 .LASF150
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:14     .text.read_mpu:0000000000000000 .LFB3
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:34     .text.read_mpu:000000000000001a .LFE3
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4020   .debug_loc:0000000000000374 .LLST0
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4034   .debug_loc:0000000000000395 .LLST1
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4048   .debug_loc:00000000000003b6 .LLST2
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:32     .text.read_mpu:000000000000001a .LVL4
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:67     .text.flip_bytes:0000000000000000 .LFB5
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:97     .text.flip_bytes:0000000000000016 .LFE5
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4066   .debug_loc:00000000000003e2 .LLST6
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4084   .debug_loc:000000000000040e .LLST7
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4098   .debug_loc:000000000000042f .LLST8
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:4113   .debug_loc:0000000000000451 .LLST9
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:563    .text.mpu6500_getGyroAccel:0000000000000002 .LCFI9
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:590    .text.mpu6500_getGyroAccel:0000000000000024 .LCFI10
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:559    .text.mpu6500_getGyroAccel:0000000000000000 .LVL67
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:570    .text.mpu6500_getGyroAccel:0000000000000008 .LVL68
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:587    .text.mpu6500_getGyroAccel:0000000000000020 .LVL71
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:439    .text.mpu6500_getGyro:0000000000000002 .LCFI7
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:544    .text.mpu6500_getGyro:0000000000000074 .LCFI8
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:434    .text.mpu6500_getGyro:0000000000000000 .LVL49
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:450    .text.mpu6500_getGyro:000000000000000e .LVL50
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:541    .text.mpu6500_getGyro:0000000000000070 .LVL65
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:460    .text.mpu6500_getGyro:000000000000001c .LVL52
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:468    .text.mpu6500_getGyro:0000000000000020 .LVL53
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:546    .text.mpu6500_getGyro:0000000000000074 .LVL66
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:487    .text.mpu6500_getGyro:0000000000000038 .LVL57
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:513    .text.mpu6500_getGyro:0000000000000054 .LVL61
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:314    .text.mpu6500_getAccel:0000000000000002 .LCFI5
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:419    .text.mpu6500_getAccel:0000000000000074 .LCFI6
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:309    .text.mpu6500_getAccel:0000000000000000 .LVL31
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:325    .text.mpu6500_getAccel:000000000000000e .LVL32
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:416    .text.mpu6500_getAccel:0000000000000070 .LVL47
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:335    .text.mpu6500_getAccel:000000000000001c .LVL34
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:343    .text.mpu6500_getAccel:0000000000000020 .LVL35
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:421    .text.mpu6500_getAccel:0000000000000074 .LVL48
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:362    .text.mpu6500_getAccel:0000000000000038 .LVL39
-GAS LISTING C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s 			page 24
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:204    .text.mpu6500_init:0000000000000090 .LVL23
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:214    .text.mpu6500_init:00000000000000a2 .LVL24
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:226    .text.mpu6500_init:00000000000000b6 .LVL25
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:238    .text.mpu6500_init:00000000000000ca .LVL26
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:248    .text.mpu6500_init:00000000000000dc .LVL27
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:260    .text.mpu6500_init:00000000000000f4 .LVL28
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:272    .text.mpu6500_init:000000000000010a .LVL29
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:295    .text.mpu6500_init:0000000000000124 .LVL30
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4455   .debug_str:0000000000000624 .LASF155
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4217   .debug_str:00000000000000f9 .LASF145
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4229   .debug_str:000000000000012c .LASF146
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4441   .debug_str:00000000000005eb .LASF149
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:41     .text.write_mpu:0000000000000000 .LFB4
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:60     .text.write_mpu:000000000000001a .LFE4
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3974   .debug_loc:0000000000000306 .LLST3
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4293   .debug_str:0000000000000251 .LASF147
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:3988   .debug_loc:0000000000000327 .LLST4
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4291   .debug_str:000000000000024c .LASF148
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4002   .debug_loc:0000000000000348 .LLST5
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:58     .text.write_mpu:000000000000001a .LVL9
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4467   .debug_str:0000000000000658 .LASF150
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:14     .text.read_mpu:0000000000000000 .LFB3
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:34     .text.read_mpu:000000000000001a .LFE3
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4020   .debug_loc:0000000000000374 .LLST0
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4034   .debug_loc:0000000000000395 .LLST1
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4048   .debug_loc:00000000000003b6 .LLST2
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:32     .text.read_mpu:000000000000001a .LVL4
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:67     .text.flip_bytes:0000000000000000 .LFB5
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:97     .text.flip_bytes:0000000000000016 .LFE5
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4066   .debug_loc:00000000000003e2 .LLST6
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4084   .debug_loc:000000000000040e .LLST7
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4098   .debug_loc:000000000000042f .LLST8
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:4113   .debug_loc:0000000000000451 .LLST9
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:563    .text.mpu6500_getGyroAccel:0000000000000002 .LCFI9
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:590    .text.mpu6500_getGyroAccel:0000000000000024 .LCFI10
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:559    .text.mpu6500_getGyroAccel:0000000000000000 .LVL67
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:570    .text.mpu6500_getGyroAccel:0000000000000008 .LVL68
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:587    .text.mpu6500_getGyroAccel:0000000000000020 .LVL71
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:439    .text.mpu6500_getGyro:0000000000000002 .LCFI7
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:544    .text.mpu6500_getGyro:0000000000000074 .LCFI8
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:434    .text.mpu6500_getGyro:0000000000000000 .LVL49
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:450    .text.mpu6500_getGyro:000000000000000e .LVL50
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:541    .text.mpu6500_getGyro:0000000000000070 .LVL65
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:460    .text.mpu6500_getGyro:000000000000001c .LVL52
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:468    .text.mpu6500_getGyro:0000000000000020 .LVL53
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:546    .text.mpu6500_getGyro:0000000000000074 .LVL66
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:487    .text.mpu6500_getGyro:0000000000000038 .LVL57
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:513    .text.mpu6500_getGyro:0000000000000054 .LVL61
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:314    .text.mpu6500_getAccel:0000000000000002 .LCFI5
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:419    .text.mpu6500_getAccel:0000000000000074 .LCFI6
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:309    .text.mpu6500_getAccel:0000000000000000 .LVL31
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:325    .text.mpu6500_getAccel:000000000000000e .LVL32
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:416    .text.mpu6500_getAccel:0000000000000070 .LVL47
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:335    .text.mpu6500_getAccel:000000000000001c .LVL34
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:343    .text.mpu6500_getAccel:0000000000000020 .LVL35
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:421    .text.mpu6500_getAccel:0000000000000074 .LVL48
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:362    .text.mpu6500_getAccel:0000000000000038 .LVL39
+GAS LISTING C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s 			page 24
 
 
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:388    .text.mpu6500_getAccel:0000000000000054 .LVL43
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:113    .text.mpu6500_init:0000000000000002 .LCFI2
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:284    .text.mpu6500_init:0000000000000112 .LCFI3
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:288    .text.mpu6500_init:0000000000000114 .LCFI4
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:107    .text.mpu6500_init:0000000000000000 .LVL14
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:134    .text.mpu6500_init:0000000000000018 .LVL15
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:138    .text.mpu6500_init:000000000000001c .LVL17
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:136    .text.mpu6500_init:000000000000001a .LVL16
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:44     .text.write_mpu:0000000000000000 .LVL5
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:53     .text.write_mpu:0000000000000012 .LVL7
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:56     .text.write_mpu:0000000000000018 .LVL8
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:51     .text.write_mpu:0000000000000010 .LVL6
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:18     .text.read_mpu:0000000000000000 .LVL0
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:27     .text.read_mpu:0000000000000012 .LVL2
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:30     .text.read_mpu:0000000000000018 .LVL3
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:25     .text.read_mpu:0000000000000010 .LVL1
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:81     .text.flip_bytes:000000000000000e .LCFI0
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:92     .text.flip_bytes:0000000000000014 .LCFI1
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:70     .text.flip_bytes:0000000000000000 .LVL10
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:75     .text.flip_bytes:0000000000000006 .LVL11
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:83     .text.flip_bytes:000000000000000e .LVL12
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:94     .text.flip_bytes:0000000000000014 .LVL13
-C:\Users\Karzan\AppData\Local\Temp\ccqtLz6P.s:607    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:388    .text.mpu6500_getAccel:0000000000000054 .LVL43
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:113    .text.mpu6500_init:0000000000000002 .LCFI2
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:284    .text.mpu6500_init:0000000000000112 .LCFI3
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:288    .text.mpu6500_init:0000000000000114 .LCFI4
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:107    .text.mpu6500_init:0000000000000000 .LVL14
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:134    .text.mpu6500_init:0000000000000018 .LVL15
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:138    .text.mpu6500_init:000000000000001c .LVL17
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:136    .text.mpu6500_init:000000000000001a .LVL16
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:44     .text.write_mpu:0000000000000000 .LVL5
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:53     .text.write_mpu:0000000000000012 .LVL7
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:56     .text.write_mpu:0000000000000018 .LVL8
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:51     .text.write_mpu:0000000000000010 .LVL6
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:18     .text.read_mpu:0000000000000000 .LVL0
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:27     .text.read_mpu:0000000000000012 .LVL2
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:30     .text.read_mpu:0000000000000018 .LVL3
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:25     .text.read_mpu:0000000000000010 .LVL1
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:81     .text.flip_bytes:000000000000000e .LCFI0
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:92     .text.flip_bytes:0000000000000014 .LCFI1
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:70     .text.flip_bytes:0000000000000000 .LVL10
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:75     .text.flip_bytes:0000000000000006 .LVL11
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:83     .text.flip_bytes:000000000000000e .LVL12
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:94     .text.flip_bytes:0000000000000014 .LVL13
+C:\Users\Karzan\AppData\Local\Temp\cccoKIaY.s:607    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __floatsisf
