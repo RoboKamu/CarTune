@@ -1,0 +1,1 @@
+Digital clock for the LCD display. Also changes the state of the clock on the 'pskiva' function which is turning the automatic-parking-card display on of off based on the 'enable' paramter. 

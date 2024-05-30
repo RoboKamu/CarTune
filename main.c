@@ -31,7 +31,6 @@ OF SUCH DAMAGE.
 */
 
 #include "gd32vf103.h"
-#include "drivers.h"
 #include "gd32v_mpu6500_if.h"
 #include "butt.h"
 #include "clock.h"
@@ -103,13 +102,14 @@ int main(void){
     while (!delay_finished());         // wait until iteration done
   }
 }
-
-/// @brief    handles calculations for accelerometer & destroys old so it can be updated
-/// @param    pVec: pointer to vector struct
-/// @param    pVec_temp: pointer to temporary vector struct
-/// @param    pV: pointer to vectro magnitude
-/// @param    pV_temp: pointer to temp vector magnitude
-/// @param    pC: pointer to counter
+/*!
+ @brief    handles calculations for accelerometer & destroys old so it can be updated
+ @param    pVec: pointer to vector struct
+ @param    pVec_temp: pointer to temporary vector struct
+ @param    pV: pointer to vectro magnitude
+ @param    pV_temp: pointer to temp vector magnitude
+ @param    pC: pointer to counter
+*/
 void handle_imu(mpu_vector_t* pVec, mpu_vector_t* pVec_temp, int32_t* pV, int32_t* pV_temp, int* pC){
   /* Get accelleration data (Note: Blocking read) puts a force vector with 1G = 4096 into x, y, z directions respectively */
   mpu6500_getAccel(pVec);
