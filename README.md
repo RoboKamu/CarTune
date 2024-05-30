@@ -2,7 +2,7 @@
 This is a first year electrical engineering project. This project includes an automatic parking disc and a bluetooth device paired with an FM transmitter in order to connect a mobile phone to car stereo. Made to improve the driver expirience for older cars (<2012). The project is split in 2 parts. The seconds part is pure hardware, and the first - automatic parking disc - nedded additional software for the components. This repository is focused on the first part.
 
 ## 🛠️Hardware
-Complete hardware diagram:
+Complete hardware diagram: <br\>
 ![Hardware Diagram Image](./resources/images/cartune-blockdiagram.jpg) <br/>
 Microcontroller: GD32VF103 RISC-V 32-bit MCU <br />
 Modules: <br />
@@ -34,7 +34,7 @@ pins from MCU directly to IMU: <br/>
 
 ## </>💻Software
 Drivers based on RISC-V ASM <br />
-Flowchart for the main code:
+Flowchart for the main code: <br />
 ![Flowchart Image](./resources/images/flowchart.jpg)
 The simplified green switch case is a simplification of the code that describes how to change the clock based on the button pressed. Button actions are respectively ↑HOUR-UP; ↓HOURS-DOWN; ↑MIN-UP; ↓MIN-DOWN; as mentioned in the hardware section. 
 <br /> 
