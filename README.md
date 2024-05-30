@@ -10,12 +10,12 @@ Modules: <br />
 - ICM-20600 accelerometer, code can apply for mpu6500 aswell 
 - RGB LCD Display 160x80px
 
-#### Buttons
+### Buttons
 4 buttons on breadboard with pull up resistor(10KΩ) to 3.3v. <br/>
 closest to MCU on closest pin (hence BUTTON1 on pin A4 and BUTTON4 on pin A7). <br/>
 Button actions are respectively  ↑HOUR-UP : ↓HOUR-DOWN : ↑MINUTE-UP : ↓MINUTE-DOWN <br/>
 
-#### LCD (TEMP)
+### LCD display
 The LCD screen used is the one that was already available on the IO card due to resource constraints. All its pins are also directly connected to the MCU. <br/>
 Pin connections from MCU to LCD:
 - PC13 – CS (chip select)
@@ -25,7 +25,7 @@ Pin connections from MCU to LCD:
 - GND - GND
 - VCC - 3.3v
 
-#### IMU 
+### IMU 
 pins from MCU directly to IMU: <br/>
 - VCC - 3.3v
 - GND - GND
