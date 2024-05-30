@@ -2,7 +2,7 @@
 This is a first year electrical engineering project. This project includes an automatic parking disc and a bluetooth device paired with an FM transmitter in order to connect a mobile phone to car stereo. Made to improve the driver expirience for older cars (<2012). The project is split in 2 parts. The seconds part is pure hardware, and the first - automatic parking disc - nedded additional software for the components. This repository is focused on the first part.
 
 ## 🛠️Hardware
-Complete hardware diagram: <br\>
+Complete hardware diagram: <br/>
 ![Hardware Diagram Image](./resources/images/cartune-blockdiagram.jpg) <br/>
 Microcontroller: GD32VF103 RISC-V 32-bit MCU <br />
 Modules: <br />
