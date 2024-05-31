@@ -6,7 +6,7 @@ Complete hardware diagram: <br/>
 ![Hardware Diagram Image](./resources/images/cartune-blockdiagram.jpg) <br/>
 Microcontroller: GD32VF103 RISC-V 32-bit MCU <br />
 Modules: <br />
-- 4 push button switches
+- 4 push button switches with a 10kΩ pull-up resistor
 - ICM-20600 accelerometer, code can apply for mpu6500 aswell 
 - RGB LCD Display 160x80px
 
